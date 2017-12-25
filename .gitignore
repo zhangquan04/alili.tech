@@ -1,0 +1,4 @@
+node_modules
+.deploy_git/
+sitemap.xml
+db.json
