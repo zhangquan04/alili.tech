@@ -1,5 +1,5 @@
 ---
-title: 一个没有界面的Chrome浏览器 ：puppeteer 尝鲜
+title: 一个没有界面的Chrome浏览器 ：puppeteer
 date: 2017-12-21T20:32:05.000Z
 tags: Nodejs
 ---
