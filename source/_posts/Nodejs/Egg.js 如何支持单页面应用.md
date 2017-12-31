@@ -1,5 +1,5 @@
 ---
-title: eggjs 如何支持单页面应用
+title: Egg.js 如何支持单页面应用
 date: 2017-12-01T22:30:05.000Z
 tags: Nodejs
 ---

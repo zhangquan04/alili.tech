@@ -1,5 +1,5 @@
 ---
-title: express设置CORS,让浏览器可以跨域访问你的服务器
+title: Express设置CORS,让浏览器可以跨域访问你的服务器
 date: 2017-02-18T21:32:05.000Z
 tags: Nodejs
 ---
