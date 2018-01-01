@@ -1,5 +1,5 @@
 ---
-title: 基于shipit-deploy实现的自动化多服务器部署方案
+title: 基于shipit-deploy实现的多服务器自动化部署方案
 date: 2017-12-17T20:32:05.000Z
 tags: Nodejs
 ---

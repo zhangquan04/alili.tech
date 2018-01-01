@@ -1,5 +1,5 @@
 ---
-title: 一个没有界面的Chrome浏览器 ：puppeteer
+title: 一个没有界面的Chrome浏览器：puppeteer
 date: 2017-12-21T20:32:05.000Z
 tags: Nodejs
 ---
@@ -15,7 +15,7 @@ Puppeteer是一个node库，提供了一组用来操纵Chrome的API。
 npm install puppeteer
 ```
 
-##使用
+## 使用
 
 ### 截屏
 ```javascript
