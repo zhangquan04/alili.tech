@@ -11,8 +11,7 @@ date: 2016-05-27T14:31:51.000Z
 
 # 个人信息
 
- - Fan/男/1992
- - 大专/计算机应用
+ - Fan/男/199
  - 工作年限：4年
  - 技术博客：http://alili.tech 
  - Github：https://github.com/Fantasy9527
@@ -35,7 +34,7 @@ date: 2016-05-27T14:31:51.000Z
 
 * 所有的代码文件,根据业务类型分类。
 
-* 基于Angular兼容了旧的Ractive.js
+* 基于Angularjs兼容了旧的Ractive.js
 
 * 基于 requirejs,Angularjs实现了按需加载。 并且实现了Angularjs官方没有实现的第三方模块热加载功能。不会因为Angularjs启动时就加载所有第三方模块，导致首页加载极慢。
 
