@@ -5,6 +5,11 @@
          "desc":"如果发现描述不对,或者错字,欢迎提交PR修改.期待你的参与!!"
       },
       {
+         "name":"lotusjs-cli",
+         "url":"https://fantasy9527.github.io/lotusjs-cli/",
+         "desc":"一个意外到让你尖叫的交互式前端通用脚手架管理工具"
+      },
+      {
          "name":"AliToSign",
          "url":"https://github.com/Fantasy9527/AliToSign",
          "desc":"基于nodejs的阿里云API签名生成工具"

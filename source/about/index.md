@@ -11,8 +11,8 @@ date: 2016-05-27T14:31:51.000Z
 
 # 个人信息
 
- - Fan/男/199
- - 工作年限：4年
+ - Fan/男/1992
+ - 工作年限：5年
  - 技术博客：http://alili.tech 
  - Github：https://github.com/Fantasy9527
  - 期望职位：高级Web前端开发工程师
@@ -21,6 +21,9 @@ date: 2016-05-27T14:31:51.000Z
 ---
 
 # 工作经历
+
+## 金诚集团 （ 2017年7月 ~ 现在 ）
+> 暂不公开
 
 ## 深圳市彩虹云宝网络有限公司 （ 2014年12月 ~ 2017年3月 ）
 > 负责公司前端规范的制定，组建前端团队。所有的前端项目核心代码的编写,以及项目工程化的相关工作。
@@ -125,6 +128,7 @@ npm start // 映射的是grunt serve
 
 ## 开源项目
 
+ - [lotusjs-cli](https://fantasy9527.github.io/lotusjs-cli/#/)：一个意外到让你尖叫的交互式前端通用脚手架管理工具 
  - [everygreen](https://github.com/Fantasy9527/everygreen)：Hack github contribution,让你的contribution面板一绿到底
  - [AliToSingn](https://github.com/Fantasy9527/AliToSign) :基于nodejs的阿里云API签名生成工具
 
@@ -134,20 +138,20 @@ npm start // 映射的是grunt serve
 
 - 前端框架：AngularJS/Angular2.0+/React/Vue
 - 前端工具：Bower/Grunt/Less/webpack/create-react-app/vue-cli/angular-cli
-- 后台框架：Express ,Egg.js
+- 后台框架：Express/Egg.js/Feather
 - 数据库 ：Mysql
 - 版本工具：Git
 
 ---
 ## 自我评价
 
-4年WEB前端开发经验,从事餐饮收银软件开发2年多。
+5年WEB前端开发经验。
 
 独自一人在上一家公司完成了12个项目的前端所有工作,期间独自踩过无数的坑。
 
 熟练掌握CSS3.0和W3C标准。并深刻了解移动端浏览器与PC主流浏览器之间的兼容性。
 
-熟悉原生JavaScript,Typescript以及Angularjs、React、Vue、jQuery、zepto等框架,
+熟悉JavaScript/ES2015+,Typescript以及Angularjs、React、Vue、jQuery、zepto等框架,
 
 Antd for React、NG-ZORRO、Angularstrap、vux、ElementUI、bootstrap,weUI, 等UI组件库的使用经验
 
@@ -155,14 +159,14 @@ create-react-app,vue-cli,Grunt,bower,RequireJs,LESS,Sass,webpack,Git等工具的
 
 熟悉HTML5最新规范。能熟练开发移动端WebAPP。
 
-有Express，Egg.js的后台开发经验,能够紧密的与后台人员进行对接。
+有Express，Egg.js,Feather的后台开发经验。
 
-能快速接手项目进行开发工作。
+Nodejs命令行工具，树莓派开发爱好者。
 
 喜欢逛Github,npmjs,stackoverflow等网站。
-业余时间喜欢研究Nodejs写点小工具，树莓派爱好者。
 
 ---
 
 # 致谢
-感谢您花时间阅读我的简历，期待能有机会和您共事。
+感谢您花时间阅读我的简历，暂时没有换工作的想法
+<!-- 期待能有机会和您共事。 -->
