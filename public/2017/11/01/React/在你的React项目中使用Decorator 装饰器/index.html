@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="wap-font-scale" content="no">
+    <meta name="description" content="使用装饰器 目前只支持Babel/Typescript两种预编译器  Babel:1npm install  babel-plugin-transform-decorators-legacy --save-dev 在你的 .babelrc配置文件中开启,没有 .babelrc文件的话,可以新建一个.1234567&amp;#123;  &amp;quot;presets&amp;quot;: [    &amp;quot;es2">
+<meta name="keywords" content="React">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在你的React项目中使用Decorator 装饰器">
+<meta property="og:url" content="alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/index.html">
+<meta property="og:site_name" content="Alili">
+<meta property="og:description" content="使用装饰器 目前只支持Babel/Typescript两种预编译器  Babel:1npm install  babel-plugin-transform-decorators-legacy --save-dev 在你的 .babelrc配置文件中开启,没有 .babelrc文件的话,可以新建一个.1234567&amp;#123;  &amp;quot;presets&amp;quot;: [    &amp;quot;es2">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-17T03:44:36.051Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在你的React项目中使用Decorator 装饰器">
+<meta name="twitter:description" content="使用装饰器 目前只支持Babel/Typescript两种预编译器  Babel:1npm install  babel-plugin-transform-decorators-legacy --save-dev 在你的 .babelrc配置文件中开启,没有 .babelrc文件的话,可以新建一个.1234567&amp;#123;  &amp;quot;presets&amp;quot;: [    &amp;quot;es2">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
+          
+        
+    
+    <!-- title -->
+    <title>在你的React项目中使用Decorator 装饰器 | 一个前端开发的踩坑小报告</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="http://github.com/Fantasy9527">Github</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/11/04/React/Redux先放一边,开启MobX的新玩法/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2017/09/10/Git/Git系列之关于add命令的一些事/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none">Previous post</span>
+      <span id="i-next" class="info" style="display:none">Next post</span>
+      <span id="i-top" class="info" style="display:none">Back to top</span>
+      <span id="i-share" class="info" style="display:none">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&text=在你的React项目中使用Decorator 装饰器"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&text=在你的React项目中使用Decorator 装饰器"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&title=在你的React项目中使用Decorator 装饰器"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&is_video=false&description=在你的React项目中使用Decorator 装饰器"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=在你的React项目中使用Decorator 装饰器&body=Check out this article: alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&title=在你的React项目中使用Decorator 装饰器"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&title=在你的React项目中使用Decorator 装饰器"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&title=在你的React项目中使用Decorator 装饰器"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&title=在你的React项目中使用Decorator 装饰器"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
+</ul>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用装饰器"><span class="toc-number">1.</span> <span class="toc-text">使用装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Babel"><span class="toc-number">1.1.</span> <span class="toc-text">Babel:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在create-react-app中使用装饰器"><span class="toc-number">2.</span> <span class="toc-text">在create-react-app中使用装饰器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TypeScript"><span class="toc-number">3.</span> <span class="toc-text">TypeScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在vscode-移除不支持decorator特性的语法警告提示"><span class="toc-number">4.</span> <span class="toc-text">在vscode 移除不支持decorator特性的语法警告提示</span></a></li></ol>
+    </div>
+  </span>
+</div>
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 class="posttitle" itemprop="name headline">
+        在你的React项目中使用Decorator 装饰器
+    </h1>
+    <div class="meta">
+      <div class="postdate">
+        <time datetime="2017-11-01T11:33:33.000Z" itemprop="datePublished">2017-11-01</time>
+    </div>
+      <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/React/">React</a>
+    </div>
+    </div>
+  </header>
+  
+  <div class="content" itemprop="articleBody">
+    <h2 id="使用装饰器"><a href="#使用装饰器" class="headerlink" title="使用装饰器"></a>使用装饰器</h2><blockquote>
+<p>目前只支持Babel/Typescript两种预编译器</p>
+</blockquote>
+<h3 id="Babel"><a href="#Babel" class="headerlink" title="Babel:"></a>Babel:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install  babel-plugin-transform-decorators-legacy --save-dev</span><br></pre></td></tr></table></figure>
+<p>在你的 .babelrc配置文件中开启,没有 .babelrc文件的话,可以新建一个.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;presets&quot;: [</span><br><span class="line">    &quot;es2015&quot;,</span><br><span class="line">    &quot;stage-1&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;plugins&quot;: [&quot;transform-decorators-legacy&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>插件的顺序千万要注意,非常重要：transform-decorators-legacy 应该放在插件的第一个。</p>
+<p>当使用react native的时候，下面这个预设可以代替 transform-decorators-legacy</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;presets&quot;: [&quot;stage-2&quot;, &quot;react-native-stage-0/decorator-support&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="在create-react-app中使用装饰器"><a href="#在create-react-app中使用装饰器" class="headerlink" title="在create-react-app中使用装饰器"></a>在create-react-app中使用装饰器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run eject</span><br></pre></td></tr></table></figure>
+<p>安装相关插件:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//针对react</span><br><span class="line">npm install babel-preset-stage-2 --save-dev</span><br><span class="line">npm install babel-preset-react-native-stage-0 --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>根目录下创建.babelrc<br>{<br>  “presets”: [“react-native-stage-0/decorator-support”]<br>}</p>
+<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><p>如果你的项目已经开始使用TypeScript,那我们只需要在tsconfig.json文件中的 experimentalDecorators 设置为 true</p>
+<p>这样,我们就可以使用ES7新特性装饰器了</p>
+<h2 id="在vscode-移除不支持decorator特性的语法警告提示"><a href="#在vscode-移除不支持decorator特性的语法警告提示" class="headerlink" title="在vscode 移除不支持decorator特性的语法警告提示"></a>在vscode 移除不支持decorator特性的语法警告提示</h2><p>在项目根目录创建tsconfig.json</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;compilerOptions&quot;: &#123;</span><br><span class="line">        &quot;experimentalDecorators&quot;: true,</span><br><span class="line">        &quot;allowJs&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>重启你的vscode,你会发现语法警告没有了.</p>
+  </div>
+</article>
+<div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="http://github.com/Fantasy9527">Github</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用装饰器"><span class="toc-number">1.</span> <span class="toc-text">使用装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Babel"><span class="toc-number">1.1.</span> <span class="toc-text">Babel:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在create-react-app中使用装饰器"><span class="toc-number">2.</span> <span class="toc-text">在create-react-app中使用装饰器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TypeScript"><span class="toc-number">3.</span> <span class="toc-text">TypeScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在vscode-移除不支持decorator特性的语法警告提示"><span class="toc-number">4.</span> <span class="toc-text">在vscode 移除不支持decorator特性的语法警告提示</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&text=在你的React项目中使用Decorator 装饰器"><i class="fa fa-weibo fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&text=在你的React项目中使用Decorator 装饰器"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&title=在你的React项目中使用Decorator 装饰器"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&is_video=false&description=在你的React项目中使用Decorator 装饰器"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=在你的React项目中使用Decorator 装饰器&body=Check out this article: alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&title=在你的React项目中使用Decorator 装饰器"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&title=在你的React项目中使用Decorator 装饰器"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&title=在你的React项目中使用Decorator 装饰器"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=alili.tech/2017/11/01/React/在你的React项目中使用Decorator 装饰器/&title=在你的React项目中使用Decorator 装饰器"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$(&quot;#share-footer&quot;).toggle();return false"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Fan  &  Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'alili-tech';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            if(window.location.host=="localhost:4000")return;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+</body>
+</html>
