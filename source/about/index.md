@@ -25,6 +25,7 @@ date: 2016-05-27T14:31:51.000Z
 ## 金诚集团 （ 2017年7月 ~ 现在 ）
 > 部门前端团队负责人.负责部门前端规范的制定，组建团队,提高团队工作效率,前端架构设计.
 内部系统的开发,以及公司的前端工具的基础建设.
+
 ### 金诚人后台管理系统 
 用于管理公司组织架构,人员信息,招聘,薪资,福利,绩效,考勤,股权管理等数据
 
@@ -35,10 +36,10 @@ date: 2016-05-27T14:31:51.000Z
 
 ### OTRS工单管理系统二次开发 (金诚助手)
 OTRS工单管理系统,多用于IT基础架构部门,IT运维部门的工单派发与统计.
-后用nodejs对该系统做了二次开发.
+后用Nodejs对该系统做了二次开发.
 
-后端技术概要: Perl + Nodejs (Egg)
-前端技术概要: Vue + Vuex 
+后端技术概要: Perl + Nodejs (Egg) + MySQL + Redis
+前端技术概要: Vue + Vuex
 
 
 ### 内部股权管理 (以太坊 区块链项目)
@@ -47,7 +48,7 @@ date: 2016-05-27T14:31:51.000Z
 
 ### 内部前端脚手架自动化管理工具
 基于Nodejs开发的命令行工具.
-结合内部私有npm服务器,用于管理公司React,Angular,Nodejs相关项目的脚手架.
+结合内部私有npm服务器,用于管理React,Angular,Nodejs相关项目的脚手架.
 
 ### 其他项目
 - 行政后台管理系统 
@@ -113,10 +114,9 @@ npm start // 映射的是grunt serve
 
 
 ### 食通宝微信(支付宝)点餐 （2015.12 ~ 2017.03）
-所有的前端功能的设计与开发 
+所有的前端功能的设计与开发
 
 应用类型:移动端 SPA 单页面应用
-
 
 这次项目我最满意地方是: 
 
@@ -150,16 +150,20 @@ npm start // 映射的是grunt serve
  
 ## 广西易谷网络科技有限公司 （ 2013年7月 ~ 2014年9月 ）
 
-### 大愿说法 佛经电子书 
-一款嵌入ios 的 web 电子书应用,主要开发任务为利用 Javascript,HTML5，css3特性,根据不同屏幕大小自动排版文字与图片
-
+### 大愿说法佛经电子书
+一款嵌入ios的web电子书应用,基于Javascript开发了一套文字图片高速自动排版引擎.
 
 ---
 
 
 ## 开源项目
 
- - [lotusjs-cli](https://fantasy9527.github.io/lotusjs-cli/#/)：一个意外到让你尖叫的交互式前端通用脚手架管理工具 
+ - [lotusjs-cli](https://fantasy9527.github.io/lotusjs-cli/#/)：前端通用脚手架管理工具
+ - [lotus-scaffold-micro-frontend-portal](https://github.com/Fantasy9527/lotus-scaffold-micro-frontend-portal) : 微前端动态模块加载器
+ - [micro-auto-config](https://github.com/Fantasy9527/micro-auto-config) : 微前端配置自动化
+ - [lotus-scaffold-micro-antd](https://github.com/Fantasy9527/lotus-scaffold-micro-antd) : 微前端 Antd脚手架
+ - [lotus-scaffold-micro-react](https://github.com/Fantasy9527/lotus-scaffold-micro-react) : 微前端 React脚手架
+ - [lotus-scaffold](https://github.com/Fantasy9527/lotus-scaffold) : 脚手架初始化工具
  - [everygreen](https://github.com/Fantasy9527/everygreen)：Hack github contribution,让你的contribution面板一绿到底
  - [AliToSingn](https://github.com/Fantasy9527/AliToSign) :基于nodejs的阿里云API签名生成工具
 
@@ -167,8 +171,9 @@ npm start // 映射的是grunt serve
 # 技能清单
 以下均为我熟练使用的技能
 
-- 前端框架：AngularJS/Angular2.0+/React/Vue
+- 前端框架：React/AngularJS/Angular2.0+/Vue
 - 前端工具：Bower/Grunt/Less/webpack/create-react-app/vue-cli/angular-cli
+- UI框架：Antd for React/NG-ZORRO/Angularstrap/vux/ElementUI/bootstrap/weUI
 - 后台框架：Express/Egg.js/Feather
 - 数据库 ：Mysql
 - 版本工具：Git
@@ -176,25 +181,21 @@ npm start // 映射的是grunt serve
 ---
 ## 自我评价
 
-5年WEB前端开发经验。
+5年WEB前端开发经验。3年团队管理经验.
 
-在上一家公司完成了12个项目的前端所有工作,期间独自踩过无数的坑。
+5年时间里带领团队完成众多项目,期间踩过无数技术坑与人员管理的坑.
 
-熟练掌握CSS3.0和W3C标准。并深刻了解移动端浏览器与PC主流浏览器之间的兼容性。
+近两三年来一直致力于项目的高度工程化,自动化的探索与实践.
 
-熟悉JavaScript/ES2015+,Typescript以及Angularjs、React、Vue、jQuery、zepto等框架,
+也在十几名前端开发人员同时开发的大型项目中,完成了前端微服务化架构的构想与落地.
 
-Antd for React、NG-ZORRO、Angularstrap、vux、ElementUI、bootstrap,weUI, 等UI组件库的使用经验
+进而摆脱了当前前端技术栈的限制. 解决了一个大项目多条产品线并行开发,部署的众多问题.
 
-create-react-app,vue-cli,Grunt,bower,RequireJs,LESS,Sass,webpack,Git等工具的使用经验。
+在金诚集团期间,从部门只有我一名前端,一直组建团队发展到14名前端开发人员.
 
-熟悉HTML5最新规范。能熟练开发移动端WebAPP。
+其中包括2名前端技术专家,与12名前端开发高级工程师.期间带领团队完成了众多高难度项目,解决了众多技术与开发效率的问题.
 
-有Express，Egg.js,Feather的后台开发经验。
-
-Nodejs命令行工具，树莓派开发爱好者。
-
-喜欢逛Github,npmjs,stackoverflow等网站。
+期间也参与了公司的区块链项目的开发.
 
 ---
 
