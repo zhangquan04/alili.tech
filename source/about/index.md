@@ -6,6 +6,7 @@ date: 2016-05-27T14:31:51.000Z
 # 联系方式
 
 - Email：incomparable9527@foxmail.com
+- 电  话：15658001769
 
 ---
 
@@ -15,7 +16,7 @@ date: 2016-05-27T14:31:51.000Z
  - 工作年限：5年
  - 技术博客：http://alili.tech 
  - Github：https://github.com/Fantasy9527
- - 期望职位：高级Web前端开发工程师
+ - 期望职位：前端开发工程师
  - 期望城市：杭州
 
 ---
@@ -23,8 +24,7 @@ date: 2016-05-27T14:31:51.000Z
 # 工作经历
 
 ## 金诚集团 （ 2017年7月 ~ 现在 ）
-> 部门前端团队负责人.负责部门前端规范的制定，组建团队,提高团队工作效率,前端架构设计.
-内部系统的开发,以及公司的前端工具的基础建设.
+> 部门前端团队负责人.负责部门前端规范的制定，组建团队,提高团队工作效率,前端架构设计.内部系统的开发,以及公司的前端工具的基础建设.
 
 ### 金诚人后台管理系统 
 用于管理公司组织架构,人员信息,招聘,薪资,福利,绩效,考勤,股权管理等数据
@@ -33,29 +33,60 @@ date: 2016-05-27T14:31:51.000Z
 
 前端技术概要: React + Ant Design of React + 微前端架构
 
+项目简介:
+该项目为公司重点项目,开发人数与产品线多,周期长.最终以微前端的形式开发该项目.
+微前端解决了以下难题:
+* 杜绝了代码量超多的日后成为巨无霸项目
+* 日后受限于最初技术选型
+* 项目只能选择单一的技术框架
+* 规避了多团队同时开发,部署产生相互影响
 
 ### OTRS工单管理系统二次开发 (金诚助手)
-OTRS工单管理系统,多用于IT基础架构部门,IT运维部门的工单派发与统计.
-后用Nodejs对该系统做了二次开发.
+OTRS工单管理系统,多用于内部服务部门的工单派发与统计.
+后在部门开发资源紧缺的情况下用Nodejs对该系统做了二次开发.
 
 后端技术概要: Perl + Nodejs (Egg) + MySQL + Redis
-前端技术概要: Vue + Vuex
+前端技术概要: Vue + Vuex + Hybrid
 
+项目简介:
+国内Perl开发者比较稀缺,信息技术部众多服务部门的工单管理依赖于OTRS工单管理系统.
+在开发资源极度紧缺的情况下,我用Nodejs对该系统做了二次开发.
+最终该系统做成了,公司IT运维部门,IT基础架构部门,人事部门,财务部门,法务部门,行政部门等等,面相员工的服务工单管理系统.
+前端页面以Hybrid的形式嵌在公司App中,方便所有公司员工使用.
 
-### 内部股权管理 (以太坊 区块链项目)
+### 内部股权管理 (基于以太坊开发的区块链项目)
 基于以太坊开发的股权管理项目.
-技术概要: Solidity + Nodejs (Egg)
+技术概要: Solidity + Nodejs (Egg) + Web3.js
+
+项目简介:
+为保证公司内部股权交易数据的安全性,所以用以太坊开发内部期权相关模块.
+最终选用Solidity开发以太坊智能合约,Nodejs与Web3.js为中间层与用户交互.
 
 ### 内部前端脚手架自动化管理工具
 基于Nodejs开发的命令行工具.
 结合内部私有npm服务器,用于管理React,Angular,Nodejs相关项目的脚手架.
+
+项目简介:
+部门有大量项目启动,为了快速启动项目所以开发了该工具.
+最终有利于所有项目的架构保持一致与统一.
+降低项目与项目之间人员调配后的后期学习成本.
+开发时可快速的生成代码模板,并且快速进入开发状态.
+
 
 ### 其他项目
 - 行政后台管理系统 
 - 招商采购后台管理系统 
 - 内部培训后台管理系统
 - 档案后台管理系统 
-- ESB企业服务总线
+- ESB企业服务总线的数据可视化
+
+### 基础建设与其他事项
+- 搭建公司内部私有Npm服务器
+- 搭建部门前端团队的博客
+- 每周组织前端高质量的分享学习活动
+- 搭建内部Mock系统
+- 成立了公司前端技术委员会(用于公司内部技术推广与公司技术大方向的制定)
+
 
 ## 深圳市彩虹云宝网络有限公司 （ 2014年12月 ~ 2017年3月 ）
 > 公司前端团队负责人,负责公司前端规范的制定，组建前端团队。所有的前端项目核心代码的编写,以及项目工程化的相关工作。
@@ -160,9 +191,9 @@ npm start // 映射的是grunt serve
 
  - [lotusjs-cli](https://fantasy9527.github.io/lotusjs-cli/#/)：前端通用脚手架管理工具
  - [lotus-scaffold-micro-frontend-portal](https://github.com/Fantasy9527/lotus-scaffold-micro-frontend-portal) : 微前端动态模块加载器
- - [micro-auto-config](https://github.com/Fantasy9527/micro-auto-config) : 微前端配置自动化
- - [lotus-scaffold-micro-antd](https://github.com/Fantasy9527/lotus-scaffold-micro-antd) : 微前端 Antd脚手架
- - [lotus-scaffold-micro-react](https://github.com/Fantasy9527/lotus-scaffold-micro-react) : 微前端 React脚手架
+ - [micro-auto-config](https://github.com/Fantasy9527/micro-auto-config) : 微前端配置自动化工具
+ - [lotus-scaffold-micro-antd](https://github.com/Fantasy9527/lotus-scaffold-micro-antd) : 微前端Antd脚手架
+ - [lotus-scaffold-micro-react](https://github.com/Fantasy9527/lotus-scaffold-micro-react) : 微前端React脚手架
  - [lotus-scaffold](https://github.com/Fantasy9527/lotus-scaffold) : 脚手架初始化工具
  - [everygreen](https://github.com/Fantasy9527/everygreen)：Hack github contribution,让你的contribution面板一绿到底
  - [AliToSingn](https://github.com/Fantasy9527/AliToSign) :基于nodejs的阿里云API签名生成工具
@@ -189,7 +220,7 @@ npm start // 映射的是grunt serve
 
 也在十几名前端开发人员同时开发的大型项目中,完成了前端微服务化架构的构想与落地.
 
-进而摆脱了当前前端技术栈的限制. 解决了一个大项目多条产品线并行开发,部署的众多问题.
+进而摆脱了当前前端技术栈的限制. 解决了大项目中多条产品线并行开发,部署的众多问题.
 
 在金诚集团期间,从部门只有我一名前端,一直组建团队发展到14名前端开发人员.
 
@@ -198,6 +229,10 @@ npm start // 映射的是grunt serve
 带领团队完成了众多高难度项目,解决了众多技术与开发效率的问题.
 
 期间也参与了公司的区块链项目的开发.
+
+并且在公司内部完成多次大型技术分享
+
+希望可以遇到更有挑战性的工作,经历更多有趣的事情.
 
 ---
 
