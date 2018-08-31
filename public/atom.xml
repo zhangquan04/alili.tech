@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="alili.tech/"/>
-  <updated>2018-08-31T06:53:05.932Z</updated>
+  <updated>2018-08-31T07:01:13.235Z</updated>
   <id>alili.tech/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="alili.tech/2018/08/31/Data%20analysis/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     <id>alili.tech/2018/08/31/Data analysis/浏览器用户数据分析/</id>
     <published>2018-08-31T11:33:33.000Z</published>
-    <updated>2018-08-31T06:53:05.932Z</updated>
+    <updated>2018-08-31T07:01:13.235Z</updated>
     
-    <content type="html"><![CDATA[<div id="echarts7429" style="width: 85%;height: 400px;margin: 0 auto"></div><script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script><script type="text/javascript">        // 基于准备好的dom，初始化echarts实例        var myChart = echarts.init(document.getElementById('echarts7429'));        // 指定图表的配置项和数据        var option = [object Object]        // 使用刚指定的配置项和数据显示图表。        myChart.setOption(option);</script>]]></content>
+    <content type="html"><![CDATA[<div id="echarts8888" style="width: 85%;height: 400px;margin: 0 auto"></div><script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script><script type="text/javascript">        // 基于准备好的dom，初始化echarts实例        var myChart = echarts.init(document.getElementById('echarts8888'));        // 指定图表的配置项和数据        var option = {    textStyle: {        color: '#fff'    },    title: {        text: '某站点用户访问来源',        subtext: '纯属虚构',        x: 'center',        textStyle: {            color: '#fff'        },    },    tooltip: {        trigger: 'item',        formatter: "{a} <br/>{b} : {c} ({d}%)"    },    legend: {        orient: 'vertical',        left: 'left',        data: [                "Chrome",                "IE 9.0",                "QQ",                "2345",                "IE 8.0",                "IE 11.0",                "搜狗高速",                "Safari",                "IE 7.0",                "其他"            ],        textStyle: {            color: '#fff'        },    },    series: [{        name: '访问来源',        type: 'pie',        radius: '55%',        center: ['50%', '60%'],        data: [{                value: 335,                name: 'Chrome'            },            {                value: 310,                name: '邮件营销'            },            {                value: 234,                name: '联盟广告'            },            {                value: 135,                name: '视频广告'            },            {                value: 1548,                name: '搜索引擎'            }        ],        itemStyle: {            emphasis: {                shadowBlur: 10,                shadowOffsetX: 0,                shadowColor: 'rgba(0, 0, 0, 0.5)'            }        }    }]}        // 使用刚指定的配置项和数据显示图表。        myChart.setOption(option);</script>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;div id=&quot;echarts7429&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
+        &lt;div id=&quot;echarts8888&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
 &lt;script src=&quot;http://echarts.baidu.com/dist/echarts.common.min.j
       
     
@@ -45,22 +45,22 @@
     <link href="alili.tech/2018/08/31/Data%20analysis/2018%E5%B9%B408%E6%9C%88%E5%9B%BD%E5%86%85%E6%B5%8F%E8%A7%88%E5%99%A8%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1/"/>
     <id>alili.tech/2018/08/31/Data analysis/2018年08月国内浏览器数据统计/</id>
     <published>2018-08-30T16:00:00.000Z</published>
-    <updated>2018-08-31T06:58:37.110Z</updated>
+    <updated>2018-08-31T07:04:10.242Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>{% echarts 400 '85%' %}    {"textStyle":{"color":"#fff"},"title":{"text":"2018年08月国内浏览器数据统计","subtext":"浏览器数据分析","x":"center","textStyle":{"color":"#fff"}},"tooltip":{"trigger":"item","formatter":"{a} <br>{b} : {c} ({d}%)"},"legend":{"orient":"vertical","left":"left","data":["Chrome","IE 9.0","QQ","2345","IE 8.0","IE 11.0","搜狗高速","Safari","IE 7.0","其他"],"textStyle":{"color":"#fff"}},"series":[{"name":"浏览器用户比例","type":"pie","radius":"55%","center":["50%","60%"],"data":[],"itemStyle":{"emphasis":{"shadowBlur":10,"shadowOffsetX":0,"shadowColor":"rgba(0, 0, 0, 0.5)"}}}]}    {% endecharts %}</code></pre>]]></content>
+    <content type="html"><![CDATA[<div id="echarts2223" style="width: 85%;height: 400px;margin: 0 auto"></div><script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script><script type="text/javascript">        // 基于准备好的dom，初始化echarts实例        var myChart = echarts.init(document.getElementById('echarts2223'));        // 指定图表的配置项和数据        var option = {"textStyle":{"color":"#fff"},"title":{"text":"2018年08月国内浏览器数据统计","subtext":"浏览器数据分析","x":"center","textStyle":{"color":"#fff"}},"tooltip":{"trigger":"item","formatter":"{a} <br/>{b} : {c} ({d}%)"},"legend":{"orient":"vertical","left":"left","data":["Chrome","IE 9.0","QQ","2345","IE 8.0","IE 11.0","搜狗高速","Safari","IE 7.0","其他"],"textStyle":{"color":"#fff"}},"series":[{"name":"浏览器用户比例","type":"pie","radius":"55%","center":["50%","60%"],"data":[],"itemStyle":{"emphasis":{"shadowBlur":10,"shadowOffsetX":0,"shadowColor":"rgba(0, 0, 0, 0.5)"}}}]}        // 使用刚指定的配置项和数据显示图表。        myChart.setOption(option);</script>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code&gt;{% echarts 400 &#39;85%&#39; %}
-    {&quot;textStyle&quot;:{&quot;color&quot;:&quot;#fff&quot;},&quot;title&quot;:{&quot;text&quot;:&quot;2018年08月国内浏览器数据统计&quot;,&quot;subtext&quot;:&quot;浏览器数据分析&quot;,&quot;x&quot;:&quot;center&quot;,&quot;t
+        &lt;div id=&quot;echarts2223&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;http://echarts.baidu.com/dist/echarts.common.min.j
       
     
     </summary>
     
     
-      <category term="Trending" scheme="alili.tech/tags/Trending/"/>
+      <category term="Data analysis" scheme="alili.tech/tags/Data-analysis/"/>
     
   </entry>
   
