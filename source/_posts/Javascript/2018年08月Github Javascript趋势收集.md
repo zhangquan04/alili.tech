@@ -1,6 +1,6 @@
 ---
 title: 2018年08月Github Javascript趋势收集 
-date: 2018-08-31 0:00:00
+date: 2018-08-09 0:00:00
 tags: Trending
 ---
 ![](/images/github_11.png)
