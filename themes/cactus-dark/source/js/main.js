@@ -81,3 +81,40 @@ $(document).ready(function(){
     });
   }
 });
+
+$(function () {
+  setTimeout(function(){
+    $.get("/data/shanbayToday.json",function(data){
+        console.log(data);
+          var data = data.data;
+          var str =data.content;        
+            print(data.content,".description .en",function(){
+              print(data.translation,".description .ch",function(){
+                print("---- "+data.author,".description .author",function(){
+                })
+              })
+            })
+        })
+    },1500);
+
+  function print(str,target,callback){
+      var content = "";
+      var index = 0;                  
+      setTimeout(function(){
+
+      var timer = setInterval(function () {
+          if (index >= str.length) {
+            clearInterval(timer);
+            $(target).html(content);
+            if (callback)callback();
+            return
+          }                
+          content += str[index];
+          index++;
+          $(target).html(content +"<span style='color:#2bbc8a'>▌</span>")
+      }, 10);
+
+      },200)
+
+  }
+})

@@ -1,5 +1,5 @@
 ---
-title: Linux安装nginx步骤
+title: Linux - 安装nginx步骤
 date: 2018-01-16T20:32:05.000Z
 tags: Linux
 ---
