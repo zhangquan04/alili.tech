@@ -106,3 +106,4 @@ export const unmount = [
 > 这就是 single-spa的简单使用,
 当我们的浏览器url的前缀有`/react`的时候,程序就可以正常渲染这个应用
 所以,所以我们这个react应用的所有路由前缀都得有`/react`
+未完待续 ...
