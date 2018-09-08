@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="wap-font-scale" content="no">
+    <meta name="description" content="技术选型经过各种技术调研我们最终选择的方案是基于 Single-SPA 来实现我们的前端微服务化. Single-SPA 一个用于前端微服务化的JavaScript前端解决方案   使用Single-SPA之后,你可以这样做:  (兼容各种技术栈)在同一个页面中使用多种技术框架(React, Vue, AngularJS, Angular, Ember等任意技术框架),并且不需要刷新页面. (无需">
+<meta name="keywords" content="前端架构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端单页应用微服务化解决方案2 - Single-SPA">
+<meta property="og:url" content="alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/index.html">
+<meta property="og:site_name" content="Alili">
+<meta property="og:description" content="技术选型经过各种技术调研我们最终选择的方案是基于 Single-SPA 来实现我们的前端微服务化. Single-SPA 一个用于前端微服务化的JavaScript前端解决方案   使用Single-SPA之后,你可以这样做:  (兼容各种技术栈)在同一个页面中使用多种技术框架(React, Vue, AngularJS, Angular, Ember等任意技术框架),并且不需要刷新页面. (无需">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://alili.tech/images/micro/current.png">
+<meta property="og:image" content="https://alili.tech/images/micro/mf.png">
+<meta property="og:updated_time" content="2018-09-04T21:20:01.920Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端单页应用微服务化解决方案2 - Single-SPA">
+<meta name="twitter:description" content="技术选型经过各种技术调研我们最终选择的方案是基于 Single-SPA 来实现我们的前端微服务化. Single-SPA 一个用于前端微服务化的JavaScript前端解决方案   使用Single-SPA之后,你可以这样做:  (兼容各种技术栈)在同一个页面中使用多种技术框架(React, Vue, AngularJS, Angular, Ember等任意技术框架),并且不需要刷新页面. (无需">
+<meta name="twitter:image" content="https://alili.tech/images/micro/current.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
+          
+        
+    
+    <!-- title -->
+    <title>前端单页应用微服务化解决方案2 - Single-SPA | 一个前端开发的踩坑小报告</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="http://github.com/Fantasy9527">Github</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2018/09/03/Architecture/前端单页应用微服务化解决方案3 - 模块加载器/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2018/09/01/Architecture/前端单页应用微服务化解决方案1 - 思考/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none">Previous post</span>
+      <span id="i-next" class="info" style="display:none">Next post</span>
+      <span id="i-top" class="info" style="display:none">Back to top</span>
+      <span id="i-share" class="info" style="display:none">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&text=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&text=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&title=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&is_video=false&description=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=前端单页应用微服务化解决方案2 - Single-SPA&body=Check out this article: alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&title=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&title=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&title=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&title=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
+</ul>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#技术选型"><span class="toc-number">1.</span> <span class="toc-text">技术选型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Single-SPA"><span class="toc-number">2.</span> <span class="toc-text">Single-SPA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#单体应用对比前端微服务化"><span class="toc-number">2.1.</span> <span class="toc-text">单体应用对比前端微服务化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通的前端单体应用"><span class="toc-number">2.1.1.</span> <span class="toc-text">普通的前端单体应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微前端架构"><span class="toc-number">2.1.2.</span> <span class="toc-text">微前端架构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Single-SPA的简单用法"><span class="toc-number">3.</span> <span class="toc-text">Single-SPA的简单用法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建一个HTML文件"><span class="toc-number">3.1.</span> <span class="toc-text">1.创建一个HTML文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-创建single-spa-config-js-文件"><span class="toc-number">3.2.</span> <span class="toc-text">2.创建single-spa-config.js 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#封装React项目的渲染出口文件"><span class="toc-number">3.3.</span> <span class="toc-text">封装React项目的渲染出口文件</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 class="posttitle" itemprop="name headline">
+        前端单页应用微服务化解决方案2 - Single-SPA
+    </h1>
+    <div class="meta">
+      <div class="postdate">
+        <time datetime="2018-09-02T14:17:36.000Z" itemprop="datePublished">2018-09-02</time>
+    </div>
+      <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/前端架构/">前端架构</a>
+    </div>
+    </div>
+  </header>
+  
+  <div class="content" itemprop="articleBody">
+    <h1 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h1><p>经过各种技术调研我们最终选择的方案是基于 <a href="https://single-spa.js.org/" target="_blank" rel="noopener">Single-SPA</a> 来实现我们的前端微服务化.</p>
+<h1 id="Single-SPA"><a href="#Single-SPA" class="headerlink" title="Single-SPA"></a>Single-SPA</h1><blockquote>
+<p>一个用于前端微服务化的JavaScript前端解决方案</p>
+</blockquote>
+<p> 使用Single-SPA之后,你可以这样做:</p>
+<ul>
+<li>(兼容各种技术栈)在同一个页面中使用多种技术框架(React, Vue, AngularJS, Angular, Ember等任意技术框架),并且不需要刷新页面.</li>
+<li>(无需重构现有代码)使用新的技术框架编写代码,现有项目中的代码无需重构.</li>
+<li>(更优的性能)每个独立模块的代码可做到按需加载,不浪费额外资源.</li>
+<li>每个独立模块可独立运行.</li>
+</ul>
+<p>下面是一个微前端的演示页面 (你可能需要科学的上网)<br> <a href="https://single-spa.surge.sh/" target="_blank" rel="noopener">https://single-spa.surge.sh/</a></p>
+<blockquote>
+<p>以上是官方例子,但是官方例子中并没有解决一个问题.就是各种技术栈的路由实现方式大相径庭,如何做到路由之间的协同?<br>后续文章会讲解,如何解决这样的问题.</p>
+</blockquote>
+<h2 id="单体应用对比前端微服务化"><a href="#单体应用对比前端微服务化" class="headerlink" title="单体应用对比前端微服务化"></a>单体应用对比前端微服务化</h2><h3 id="普通的前端单体应用"><a href="#普通的前端单体应用" class="headerlink" title="普通的前端单体应用"></a>普通的前端单体应用</h3><p><img src="https://alili.tech/images/micro/current.png" alt=""></p>
+<h3 id="微前端架构"><a href="#微前端架构" class="headerlink" title="微前端架构"></a>微前端架构</h3><p><img src="https://alili.tech/images/micro/mf.png" alt=""></p>
+<h1 id="Single-SPA的简单用法"><a href="#Single-SPA的简单用法" class="headerlink" title="Single-SPA的简单用法"></a>Single-SPA的简单用法</h1><h2 id="1-创建一个HTML文件"><a href="#1-创建一个HTML文件" class="headerlink" title="1.创建一个HTML文件"></a>1.创建一个HTML文件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"root"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"single-spa-config.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-创建single-spa-config-js-文件"><a href="#2-创建single-spa-config-js-文件" class="headerlink" title="2.创建single-spa-config.js 文件"></a>2.创建single-spa-config.js 文件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// single-spa-config.js</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> singleSpa <span class="keyword">from</span> <span class="string">'single-spa'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加载react 项目的入口js文件 (模块加载)</span></span><br><span class="line"><span class="keyword">const</span> loadingFunction = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./react/app.js'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当url前缀为 /react的时候.返回 true (底层路由)</span></span><br><span class="line"><span class="keyword">const</span> activityFunction = <span class="function"><span class="params">location</span> =&gt;</span> location.pathname.startsWith(<span class="string">'/react'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 注册应用 </span></span><br><span class="line">singleSpa.registerApplication(<span class="string">'react'</span>, loadingFunction, activityFunction);</span><br><span class="line"></span><br><span class="line"><span class="comment">//singleSpa 启动</span></span><br><span class="line">singleSpa.start();</span><br></pre></td></tr></table></figure>
+<h2 id="封装React项目的渲染出口文件"><a href="#封装React项目的渲染出口文件" class="headerlink" title="封装React项目的渲染出口文件"></a>封装React项目的渲染出口文件</h2><p>我们把渲染react的入口文件修改成这样,便可接入到single-spa</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> singleSpaReact <span class="keyword">from</span> <span class="string">'single-spa-react'</span></span><br><span class="line"><span class="keyword">import</span> RootComponent <span class="keyword">from</span> <span class="string">'./root.component'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">'development'</span>) &#123;</span><br><span class="line">  <span class="comment">// 开发环境直接渲染</span></span><br><span class="line">  ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">RootComponent</span> /&gt;</span>, document.getElementById('root'))</span></span><br><span class="line"><span class="xml">&#125;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">//创建生命周期实例</span></span><br><span class="line"><span class="xml">const reactLifecycles = singleSpaReact(&#123;</span></span><br><span class="line"><span class="xml">  React,</span></span><br><span class="line"><span class="xml">  ReactDOM,</span></span><br><span class="line"><span class="xml">  rootComponent: RootComponent</span></span><br><span class="line"><span class="xml">  domElementGetter: () =&gt; document.getElementById('root')</span></span><br><span class="line"><span class="xml">&#125;)</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">// 项目启动的钩子</span></span><br><span class="line"><span class="xml">export const bootstrap = [</span></span><br><span class="line"><span class="xml">  reactLifecycles.bootstrap,</span></span><br><span class="line"><span class="xml">]</span></span><br><span class="line"><span class="xml">// 项目启动后的钩子</span></span><br><span class="line"><span class="xml">export const mount = [</span></span><br><span class="line"><span class="xml">  reactLifecycles.mount,</span></span><br><span class="line"><span class="xml">]</span></span><br><span class="line"><span class="xml">// 项目卸载的钩子</span></span><br><span class="line"><span class="xml">export const unmount = [</span></span><br><span class="line"><span class="xml">  reactLifecycles.unmount,</span></span><br><span class="line"><span class="xml">]</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这就是 single-spa的简单使用,<br>当我们的浏览器url的前缀有<code>/react</code>的时候,程序就可以正常渲染这个应用<br>所以,所以我们这个react应用的所有路由前缀都得有<code>/react</code><br>未完待续 …</p>
+</blockquote>
+  </div>
+</article>
+<div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="http://github.com/Fantasy9527">Github</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#技术选型"><span class="toc-number">1.</span> <span class="toc-text">技术选型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Single-SPA"><span class="toc-number">2.</span> <span class="toc-text">Single-SPA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#单体应用对比前端微服务化"><span class="toc-number">2.1.</span> <span class="toc-text">单体应用对比前端微服务化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通的前端单体应用"><span class="toc-number">2.1.1.</span> <span class="toc-text">普通的前端单体应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微前端架构"><span class="toc-number">2.1.2.</span> <span class="toc-text">微前端架构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Single-SPA的简单用法"><span class="toc-number">3.</span> <span class="toc-text">Single-SPA的简单用法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建一个HTML文件"><span class="toc-number">3.1.</span> <span class="toc-text">1.创建一个HTML文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-创建single-spa-config-js-文件"><span class="toc-number">3.2.</span> <span class="toc-text">2.创建single-spa-config.js 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#封装React项目的渲染出口文件"><span class="toc-number">3.3.</span> <span class="toc-text">封装React项目的渲染出口文件</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&text=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-weibo fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&text=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&title=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&is_video=false&description=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=前端单页应用微服务化解决方案2 - Single-SPA&body=Check out this article: alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&title=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&title=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&title=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/&title=前端单页应用微服务化解决方案2 - Single-SPA"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$(&quot;#share-footer&quot;).toggle();return false"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Fan  &  Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'alili-tech';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            if(window.location.host=="localhost:4000")return;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+</body>
+</html>
