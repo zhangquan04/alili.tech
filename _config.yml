@@ -89,9 +89,8 @@ baidu_url_submit:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
 - type: git    #部署类型
-- type: baidu_url_submitter ## 这是新加的
-  bucket: alili.tech
   #repository: https://github.com/incomparable9527/incomparable9527.github.io.git  #部署的仓库的SSH
   repository: https://git.coding.net/incomparable9527/incomparable9527.coding.me.git  #部署的仓库的SSH
   branch: master   #部署分支,一般使用master主分支
-
+- type: baidu_url_submitter ## 这是新加的
+  bucket: alili.tech
