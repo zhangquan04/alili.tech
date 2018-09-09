@@ -7,6 +7,10 @@ tags: 微前端
 
 经过各种技术调研我们最终选择的方案是基于 [Single-SPA](https://single-spa.js.org/) 来实现我们的前端微服务化.
 
+<video src="https://alili.tech/data/video/Single-Spa%20Intro.mp4" controls="controls">
+你的浏览器不支持视频
+</video>
+
 # Single-SPA
 
 > 一个用于前端微服务化的JavaScript前端解决方案
@@ -115,3 +119,10 @@ export const unmount = [
 [前端单页应用微服务化解决方案4 - 消息总线](https://alili.tech/2018/09/03/Architecture/前端单页应用微服务化解决方案4 - 消息总线/)
 [前端单页应用微服务化解决方案5 - 路由分发](https://alili.tech/2018/09/04/Architecture/前端单页应用微服务化解决方案5 - 路由分发/)
 [前端单页应用微服务化解决方案6 - 构建与部署](https://alili.tech/2018/09/05/Architecture/前端单页应用微服务化解决方案6 - 构建与部署/)
+[前端单页应用微服务化解决方案7 - 静态数据共享](https://alili.tech/2018/09/06/Architecture/前端单页应用微服务化解决方案7 - 静态数据共享/)
+
+# Demo
+[微前端Demo](http://microfrontend.alili.tech/)
+[模块加载器](https://github.com/Fantasy9527/lotus-scaffold-micro-frontend-portal)
+[微前端 Base App 源码](https://github.com/Fantasy9527/microfrontend-base-demo)
+[微前端 子项目 源码](https://github.com/Fantasy9527/microfrontend-submodule-demo)
