@@ -1,7 +1,7 @@
 ---
 title: 前端单页应用微服务化解决方案2 - Single-SPA 
 date: 2018-09-02 22:17:36
-tags: 前端架构
+tags: 前端架构 微前端
 ---
 # 技术选型
 
@@ -107,3 +107,11 @@ export const unmount = [
 当我们的浏览器url的前缀有`/react`的时候,程序就可以正常渲染这个应用
 所以,所以我们这个react应用的所有路由前缀都得有`/react`
 未完待续 ...
+
+# 相关文章
+[前端单页应用微服务化解决方案1 - 思考](https://alili.tech/2018/09/01/Architecture/前端单页应用微服务化解决方案1 - 思考/)
+[前端单页应用微服务化解决方案2 - Single-SPA](https://alili.tech/2018/09/02/Architecture/前端单页应用微服务化解决方案2 - Single-SPA/)
+[前端单页应用微服务化解决方案3 - 模块加载器](https://alili.tech/2018/09/03/Architecture/前端单页应用微服务化解决方案3 - 模块加载器/)
+[前端单页应用微服务化解决方案4 - 消息总线](https://alili.tech/2018/09/03/Architecture/前端单页应用微服务化解决方案4 - 消息总线/)
+[前端单页应用微服务化解决方案5 - 路由分发](https://alili.tech/2018/09/04/Architecture/前端单页应用微服务化解决方案5 - 路由分发/)
+[前端单页应用微服务化解决方案6 - 构建与部署](https://alili.tech/2018/09/05/Architecture/前端单页应用微服务化解决方案6 - 构建与部署/)
