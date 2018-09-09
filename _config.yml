@@ -69,9 +69,9 @@ theme: cactus-dark
 
 # 自动生成sitemap
 sitemap:
-path: sitemap.xml
-#baidusitemap:
-#path: baidusitemap.xml
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 
 #压缩
@@ -92,5 +92,4 @@ deploy:
   #repository: https://github.com/incomparable9527/incomparable9527.github.io.git  #部署的仓库的SSH
   repository: https://git.coding.net/incomparable9527/incomparable9527.coding.me.git  #部署的仓库的SSH
   branch: master   #部署分支,一般使用master主分支
-- type: baidu_url_submitter ## 这是新加的
-  bucket: alili.tech
+- type: baidu_url_submitter # 百度
