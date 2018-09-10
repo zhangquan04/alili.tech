@@ -7,7 +7,7 @@ tags: 微前端
 
 经过各种技术调研我们最终选择的方案是基于 [Single-SPA](https://single-spa.js.org/) 来实现我们的前端微服务化.
 
-<video src="https://alili.tech/data/video/Single-Spa%20Intro.mp4" controls="controls">
+<video style="width:100%" src="https://alili.tech/data/video/Single-Spa%20Intro.mp4" controls="controls">
 你的浏览器不支持视频
 </video>
 
