@@ -10,9 +10,9 @@
          "desc":"一个意外到让你尖叫的交互式前端通用脚手架管理工具"
       },
       {
-         "name":"微前端Base App Demo",
+         "name":"微前端Base Demo",
          "url":"https://github.com/Fantasy9527/microfrontend-base-demo",
-         "desc":"微前端Base App的示例代码"
+         "desc":"微前端Base基础模块的示例代码"
       },
       {
          "name":"微前端Submodule",
