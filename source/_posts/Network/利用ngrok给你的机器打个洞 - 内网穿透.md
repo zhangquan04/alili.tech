@@ -17,7 +17,7 @@ tags: Network
 网上找过很多内网穿透的工具:
 * 花生壳
 * NAT
-* Frp
+* frp
 * ngrok
 * localtunnel
 
