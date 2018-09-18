@@ -1,7 +1,8 @@
 ---
-title: 2018年09月Github Javascript趋势收集 
-date: 2018-09-08 0:00:00
+title: 2018年09月Github Javascript趋势收集
 tags: Trending
+abbrlink: f2c7a3e5
+date: 2018-09-08 00:00:00
 ---
 ![](/images/github_16.png)
 ##   [felixrieseberg / windows95](https://github.com/felixrieseberg/windows95) : 

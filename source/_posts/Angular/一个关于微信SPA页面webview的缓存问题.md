@@ -1,7 +1,8 @@
 ---
 title: 一个关于微信SPA页面webview的缓存问题
-date: 2017-02-22 16:14:25
 tags: Angular
+abbrlink: 613bb601
+date: 2017-02-22 16:14:25
 ---
 
 ## 一个低级问题

@@ -1,7 +1,8 @@
 ---
 title: Nodejs之http模块的get与post请求
-date: 2017-02-16T20:32:05.000Z
 tags: Nodejs
+abbrlink: 59cf5417
+date: 2017-02-16 20:32:05
 ---
 
 在前端,经常要使用ajax获取,提交数据到服务端.

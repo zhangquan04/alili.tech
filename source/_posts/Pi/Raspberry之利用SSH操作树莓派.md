@@ -1,7 +1,8 @@
 ---
 title: Raspberry之利用SSH操作树莓派
-date: 2017-01-10T17:53:05.000Z
 tags: Raspberry Pi
+abbrlink: 467ebcb2
+date: 2017-01-10 17:53:05
 ---
 
 各种搜索,各种折腾之后,终于给我的小树莓派安装好了操作系统.

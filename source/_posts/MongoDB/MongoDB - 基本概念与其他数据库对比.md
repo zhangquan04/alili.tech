@@ -1,7 +1,8 @@
 ---
 title: MongoDB - 基本概念与其他数据库对比
-date: 2018-05-10 0:00:00
 tags: MongoDB
+abbrlink: 1f77f611
+date: 2018-05-10 00:00:00
 ---
 
 基本概念

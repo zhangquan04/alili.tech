@@ -1,7 +1,8 @@
 ---
 title: React系列之用create-react-native-app创建React Native应用
-date: 2017-07-30T19:33:33.000Z
 tags: React
+abbrlink: bb62bab9
+date: 2017-07-30 19:33:33
 ---
 之前在介绍create-react-app的时候稍微提了一下create-react-native-app.
 

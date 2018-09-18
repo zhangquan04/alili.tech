@@ -1,7 +1,8 @@
 ---
 title: Raspberry之开机启动pm2
-date: 2017-01-12T20:32:05.000Z
 tags: Raspberry Pi
+abbrlink: 9b723d04
+date: 2017-01-12 20:32:05
 ---
 
 我玩树莓派的过程简直可以用坎坷来形容,研究了十几个小时才安装上Nodejs.

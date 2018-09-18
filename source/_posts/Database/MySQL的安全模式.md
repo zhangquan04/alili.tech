@@ -1,7 +1,8 @@
 ---
 title: MySQL的安全模式
-date: 2017-08-26T23:36:00.000Z
 tags: Database
+abbrlink: 49f93461
+date: 2017-08-26 23:36:00
 ---
 
 今天delete一条数据的时候,出现了以下错误.

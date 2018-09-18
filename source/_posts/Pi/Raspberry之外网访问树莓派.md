@@ -1,7 +1,8 @@
 ---
 title: Raspberry之外网访问树莓派
-date: 2017-01-10T20:53:05.000Z
 tags: Raspberry Pi
+abbrlink: 8ad4a3a8
+date: 2017-01-10 20:53:05
 ---
 
 我想在公司的时候,也可以操作我家里的树莓派.

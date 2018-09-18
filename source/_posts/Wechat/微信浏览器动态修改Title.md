@@ -1,7 +1,8 @@
 ---
 title: 微信浏览器动态修改Title
-date: 2016-05-26T11:43:05.000Z
 tags: weChat
+abbrlink: 1e2d080b
+date: 2016-05-26 11:43:05
 ---
 
 ## 微信浏览器动态修改Title

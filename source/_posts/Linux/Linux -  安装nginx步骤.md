@@ -1,7 +1,8 @@
 ---
 title: Linux - 安装nginx步骤
-date: 2018-01-16T20:32:05.000Z
 tags: Linux
+abbrlink: d150fc3c
+date: 2018-01-16 20:32:05
 ---
 
 ###  安装nginx相关的依赖

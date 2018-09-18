@@ -1,7 +1,8 @@
 ---
-title: React系列之从一个脚手架开始说起:create-react-app
-date: 2017-07-12T19:33:33.000Z
+title: 'React系列之从一个脚手架开始说起:create-react-app'
 tags: React
+abbrlink: 7a6daf6e
+date: 2017-07-12 19:33:33
 ---
 
 React的全家桶实在太过于庞大。如果初学者想直接品味React的魅力，这里介绍一个官方的脚手架。使用方法特别简单。

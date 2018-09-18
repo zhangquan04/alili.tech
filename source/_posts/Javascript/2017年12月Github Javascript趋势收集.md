@@ -1,7 +1,8 @@
 ---
-title: 2017年12月Github Javascript趋势收集 
-date: 2017-12-08 0:00:00
+title: 2017年12月Github Javascript趋势收集
 tags: Trending
+abbrlink: 408ec5a5
+date: 2017-12-08 00:00:00
 ---
 ![](/images/github_37.png)
 ##   [thedaviddias / Front-End-Checklist](https://github.com/thedaviddias/Front-End-Checklist) : 

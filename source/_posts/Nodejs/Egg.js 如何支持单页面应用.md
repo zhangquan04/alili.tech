@@ -1,7 +1,8 @@
 ---
 title: Egg.js 如何支持单页面应用
-date: 2017-12-01T22:30:05.000Z
 tags: Nodejs
+abbrlink: 524de824
+date: 2017-12-01 22:30:05
 ---
 
  1. 在config/plugin.js 启用ejs //其他的模板引擎也行

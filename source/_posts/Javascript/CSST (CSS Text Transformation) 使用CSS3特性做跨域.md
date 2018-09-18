@@ -1,7 +1,8 @@
 ---
-title: 跨域还可以这样玩,使用CSS3特性做跨域
-date: 2017-06-20 16:14:25
+title: '跨域还可以这样玩,使用CSS3特性做跨域'
 tags: javascript
+abbrlink: b0bb249b
+date: 2017-06-20 16:14:25
 ---
 ## CSST (CSS Text Transformation)
 

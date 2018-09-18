@@ -1,7 +1,8 @@
 ---
 title: Visual Studio Code隐藏从ts生成的额外js与map文件
-date: 2017-11-22T20:32:05.000Z
 tags: Nodejs
+abbrlink: b36fefc7
+date: 2017-11-22 20:32:05
 ---
 
 打开【文件】>【首选项】>【工作区设置】，放入以下代码：

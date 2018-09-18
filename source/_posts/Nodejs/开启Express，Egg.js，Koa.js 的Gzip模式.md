@@ -1,7 +1,8 @@
 ---
 title: 开启Express，Egg.js，Koa.js 的Gzip模式
-date: 2017-12-13T20:32:05.000Z
 tags: Nodejs
+abbrlink: a8ce80b
+date: 2017-12-13 20:32:05
 ---
 为了缩小接口与静态文件的下载体积，在服务器资源可观的情况下我们可以开启Gzip。
 

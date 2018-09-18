@@ -1,7 +1,8 @@
 ---
 title: 聊聊HTTP的MIME
-date: 2017-07-26 16:14:25
 tags: HTTP
+abbrlink: 3b54e2d1
+date: 2017-07-26 16:14:25
 ---
 ## MIME是什么?
 MIME(Multipurpose Internet Mail Extensions)多用途互联网邮件扩展类型;

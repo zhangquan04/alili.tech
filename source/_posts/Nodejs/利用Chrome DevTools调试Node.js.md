@@ -1,7 +1,8 @@
 ---
 title: 利用Chrome DevTools调试Node.js
-date: 2017-08-08T00:04:05.000Z
 tags: Nodejs
+abbrlink: bd292cd9
+date: 2017-08-08 00:04:05
 ---
 
 ## 前提

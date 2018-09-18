@@ -1,7 +1,8 @@
 ---
 title: 让Nodejs像浏览器一样Fetch你想要的
-date: 2017-02-17T20:32:05.000Z
 tags: Nodejs
+abbrlink: 5bc12a97
+date: 2017-02-17 20:32:05
 ---
 
 上一篇简单的介绍了Nodejs http模块的get与post方式,

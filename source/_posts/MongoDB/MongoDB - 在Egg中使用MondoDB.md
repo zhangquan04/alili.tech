@@ -1,7 +1,8 @@
 ---
 title: MongoDB - 在Egg中使用MondoDB
-date: 2018-05-18 0:00:00
 tags: MongoDB
+abbrlink: c165a1d9
+date: 2018-05-18 00:00:00
 ---
 
  MongoDB官方有提供node操作数据库的 driver 及 API : [node-mongodb-native](https://github.com/mongodb/node-mongodb-native)

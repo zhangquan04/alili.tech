@@ -1,7 +1,8 @@
 ---
-title: Express设置CORS,让浏览器可以跨域访问你的服务器
-date: 2017-02-18T21:32:05.000Z
+title: 'Express设置CORS,让浏览器可以跨域访问你的服务器'
 tags: Nodejs
+abbrlink: e06698c9
+date: 2017-02-18 21:32:05
 ---
 说到前端跨域,确实让很多前端宝宝们捏了一把汗.
 

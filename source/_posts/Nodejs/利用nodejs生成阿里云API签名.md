@@ -1,7 +1,8 @@
 ---
 title: 利用Nodejs生成阿里云API签名
-date: 2017-02-13T21:32:05.000Z
 tags: Nodejs
+abbrlink: 7cafffa9
+date: 2017-02-13 21:32:05
 ---
 
 想要调用阿里云的云解析API,必须要生成阿里云所要求的签名.

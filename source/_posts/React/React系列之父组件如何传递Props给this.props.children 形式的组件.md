@@ -1,7 +1,8 @@
 ---
 title: React系列之父组件如何传递Props给this.props.children
-date: 2017-09-08T19:33:33.000Z
 tags: React
+abbrlink: 7aed82f9
+date: 2017-09-08 19:33:33
 ---
 
 ### 问题

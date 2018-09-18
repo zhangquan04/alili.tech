@@ -1,7 +1,8 @@
 ---
-title: 2018年04月Github Javascript趋势收集 
-date: 2018-04-08 0:00:00
+title: 2018年04月Github Javascript趋势收集
 tags: Trending
+abbrlink: 731af103
+date: 2018-04-08 00:00:00
 ---
 ![](/images/github_19.png)
 ##   [Meituan-Dianping / mpvue](https://github.com/Meituan-Dianping/mpvue) : 

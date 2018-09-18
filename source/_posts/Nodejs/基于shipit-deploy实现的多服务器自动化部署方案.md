@@ -1,7 +1,8 @@
 ---
 title: 基于shipit-deploy实现的多服务器自动化部署方案
-date: 2017-12-17T20:32:05.000Z
 tags: Nodejs
+abbrlink: fba46182
+date: 2017-12-17 20:32:05
 ---
 
 为什么要自动化部署，我这里就不多赘述了。

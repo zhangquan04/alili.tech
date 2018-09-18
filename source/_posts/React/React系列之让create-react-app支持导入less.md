@@ -1,7 +1,8 @@
 ---
 title: React系列之让create-react-app支持导入less
-date: 2017-07-14T19:33:33.000Z
 tags: React
+abbrlink: 3b5f5a23
+date: 2017-07-14 19:33:33
 ---
 
 目前来说,create-react-app并不支持直接导入LESS;

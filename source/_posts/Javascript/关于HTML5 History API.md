@@ -1,7 +1,8 @@
 ---
 title: 关于HTML5 History API
-date: 2016-06-06T23:52:35.000Z
 tags: javascript
+abbrlink: e8e7fab1
+date: 2016-06-06 23:52:35
 ---
 关于HTML5 History API
 

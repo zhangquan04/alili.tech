@@ -1,7 +1,8 @@
 ---
 title: Angular的按需加载(3)
-date: 2016-06-01T23:55:35.000Z
-tags: null
+abbrlink: f9c22b08
+date: 2016-06-01 23:55:35
+tags:
 ---
 
 上一篇大概的描述了一下Angular的启动过程,

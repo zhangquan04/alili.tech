@@ -1,7 +1,8 @@
 ---
 title: Linux -  使用ssh-copy-id命令实现ssh Linux免密码登陆
-date: 2017-12-16T20:32:05.000Z
 tags: Linux
+abbrlink: 5f4cf684
+date: 2017-12-16 20:32:05
 ---
 
 ### 1. 生成公钥和私钥

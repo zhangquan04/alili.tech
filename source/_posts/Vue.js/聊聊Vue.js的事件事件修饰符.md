@@ -1,7 +1,8 @@
 ---
 title: 聊聊Vue.js的事件修饰符
-date: 2017-05-25T19:33:33.000Z
 tags: Vue.js
+abbrlink: 9ca26edd
+date: 2017-05-25 19:33:33
 ---
 ## 事件修饰符
 说到vue的事件修饰符,相对angularJs来说,实在是太爽了,大大增加了可读性.

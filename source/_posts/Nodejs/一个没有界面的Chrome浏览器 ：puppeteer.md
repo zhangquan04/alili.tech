@@ -1,7 +1,8 @@
 ---
 title: 一个没有界面的Chrome浏览器：puppeteer
-date: 2017-12-21T20:32:05.000Z
 tags: Nodejs
+abbrlink: b9985e69
+date: 2017-12-21 20:32:05
 ---
 
 ## Puppeteer介绍

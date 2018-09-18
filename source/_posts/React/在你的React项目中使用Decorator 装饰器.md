@@ -1,7 +1,8 @@
 ---
 title: 在你的React项目中使用Decorator 装饰器
-date: 2017-11-01T19:33:33.000Z
 tags: React
+abbrlink: a280911b
+date: 2017-11-01 19:33:33
 ---
 
 ## 使用装饰器

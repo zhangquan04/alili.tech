@@ -1,7 +1,8 @@
 ---
 title: Javascript的运算符优先级
-date: 2016-08-25T11:33:33.000Z
 tags: Javascript
+abbrlink: '6e692504'
+date: 2016-08-25 11:33:33
 ---
 
 ## JavaScript 运算符

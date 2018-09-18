@@ -1,7 +1,8 @@
 ---
 title: Hexo的DTraceProviderBindings MODULE_NOT_FOUND问题
-date: 2017-02-19T21:32:05.000Z
 tags: Hexo
+abbrlink: e25431a8
+date: 2017-02-19 21:32:05
 ---
 
 最近在mac上安装Hexo,老是报错 DTraceProviderBindings MODULE_NOT_FOUND;

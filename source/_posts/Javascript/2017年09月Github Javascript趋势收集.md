@@ -1,7 +1,8 @@
 ---
-title: 2017年09月Github Javascript趋势收集 
-date: 2017-09-08 0:00:00
+title: 2017年09月Github Javascript趋势收集
 tags: Trending
+abbrlink: 53fea45f
+date: 2017-09-08 00:00:00
 ---
 ![](/images/github_44.png)
 ##   [GoogleChrome / puppeteer](https://github.com/GoogleChrome/puppeteer) : 

@@ -1,5 +1,6 @@
 ---
 title: 烦人的Angular注解 - grunt-ng-annotate的使用
+abbrlink: c38cfa0d
 date: 2015-06-12 23:15:00
 tags:
 ---

@@ -1,7 +1,8 @@
 ---
 title: MySQL的Access denied for user问题
-date: 2017-08-25T23:36:00.000Z
 tags: Database
+abbrlink: 78cba2eb
+date: 2017-08-25 23:36:00
 ---
 ## 问题
 在另一台服务器连接MySQL的时候,出现了 Access denied for user 'root'@'xxx.xxx.xxx.xxx' (using password: YES) 的报错提示.

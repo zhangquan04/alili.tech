@@ -1,8 +1,8 @@
-
 ---
 title: 我也写一个Canvas惊悚的粒子效果
-date: 2016-09-04T11:46:35.000Z
 tags: javascript
+abbrlink: 95852f7d
+date: 2016-09-04 11:46:35
 ---
 
 预览:

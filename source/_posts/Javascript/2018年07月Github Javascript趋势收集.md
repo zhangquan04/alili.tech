@@ -1,7 +1,8 @@
 ---
-title: 2018年07月Github Javascript趋势收集 
-date: 2018-07-08 0:00:00
+title: 2018年07月Github Javascript趋势收集
 tags: Trending
+abbrlink: 280d4016
+date: 2018-07-08 00:00:00
 ---
 ![](/images/github_31.png)
 ##   [vuejs / vue](https://github.com/vuejs/vue) : 

@@ -1,7 +1,8 @@
 ---
 title: HTTP的URI格式说明
-date: 2017-07-25 16:14:25
 tags: HTTP
+abbrlink: 84afbeeb
+date: 2017-07-25 16:14:25
 ---
 
 下面是URI的各个组成部分

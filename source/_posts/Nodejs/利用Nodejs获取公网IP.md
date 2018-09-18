@@ -1,7 +1,8 @@
 ---
 title: 利用Nodejs获取公网IP
-date: 2017-02-15T21:30:05.000Z
 tags: Nodejs
+abbrlink: cdd27771
+date: 2017-02-15 21:30:05
 ---
 
 因为树莓派放在家里,因为运营商的关系,公网ip是一直会变的.

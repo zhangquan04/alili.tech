@@ -1,7 +1,8 @@
 ---
 title: Object.defineProperty与Proxy的共同之处
-date: 2017-06-01T11:33:33.000Z
 tags: Javascript
+abbrlink: 4c861783
+date: 2017-06-01 11:33:33
 ---
 在看vue文档的时候发现一个有意思的地方.
 就是关于Object.defineProperty的利用与Proxy有相似之处.非常有意思.

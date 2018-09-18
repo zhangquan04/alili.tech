@@ -1,7 +1,8 @@
 ---
 title: MongoDB - 安装与启动
-date: 2018-05-09 0:00:00
 tags: MongoDB
+abbrlink: f82d8042
+date: 2018-05-09 00:00:00
 ---
 
 什么是MongoDB？

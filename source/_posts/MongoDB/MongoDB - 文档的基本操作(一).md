@@ -1,7 +1,8 @@
 ---
 title: MongoDB - 文档的基本操作 (一)
-date: 2018-05-12 0:00:00
 tags: MongoDB
+abbrlink: 9e29eec0
+date: 2018-05-12 00:00:00
 ---
 
 ## 文档增删

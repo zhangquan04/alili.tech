@@ -1,7 +1,8 @@
 ---
 title: Raspberry之系统安装
-date: 2017-01-10T12:43:05.000Z
 tags: Raspberry Pi
+abbrlink: 2a0d2aea
+date: 2017-01-10 12:43:05
 ---
 
 年过完了，某宝商家终于开始工作发货了。

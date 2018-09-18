@@ -1,7 +1,8 @@
 ---
-title: 2017年11月Github Javascript趋势收集 
-date: 2017-11-08 0:00:00
+title: 2017年11月Github Javascript趋势收集
 tags: Trending
+abbrlink: 1b9974b0
+date: 2017-11-08 00:00:00
 ---
 ![](/images/github_16.png)
 ##   [frappe / charts](https://github.com/frappe/charts) : 

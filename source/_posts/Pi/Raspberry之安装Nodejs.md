@@ -1,7 +1,8 @@
 ---
 title: Raspberry之安装Nodejs
-date: 2017-01-11T22:30:05.000Z
 tags: Raspberry Pi
+abbrlink: 58ab432d
+date: 2017-01-11 22:30:05
 ---
 
 我安装的树莓派系统是自带Nodejs的,但是版本非常的低.而且没有npm.

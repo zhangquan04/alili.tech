@@ -1,7 +1,8 @@
 ---
 title: MongoDB - 数据库与集合的基本操作
-date: 2018-05-11 0:00:00
 tags: MongoDB
+abbrlink: 3a26a4b
+date: 2018-05-11 00:00:00
 ---
 
 数据库基本操作

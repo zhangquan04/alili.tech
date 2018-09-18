@@ -1,7 +1,8 @@
 ---
 title: POST请求要比GET安全吗
-date: 2017-01-16T11:46:35.000Z
 tags: javascript
+abbrlink: b50a8cab
+date: 2017-01-16 11:46:35
 ---
 
 从学习发送请求的第一天,老师就告诉我们.

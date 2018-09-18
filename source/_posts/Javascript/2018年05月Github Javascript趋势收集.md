@@ -1,7 +1,8 @@
 ---
-title: 2018年05月Github Javascript趋势收集 
-date: 2018-05-08 0:00:00
+title: 2018年05月Github Javascript趋势收集
 tags: Trending
+abbrlink: 45e861f0
+date: 2018-05-08 00:00:00
 ---
 ![](/images/github_15.png)
 ##   [xx45 / dayjs](https://github.com/xx45/dayjs) : 

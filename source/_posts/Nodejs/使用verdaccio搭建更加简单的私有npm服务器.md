@@ -1,7 +1,8 @@
 ---
 title: 使用verdaccio搭建更加简单的私有npm服务器
-date: 2018-04-10T22:30:05.000Z
 tags: Nodejs
+abbrlink: '9713e794'
+date: 2018-04-10 22:30:05
 ---
  cnpm.org这种私有npm服务器搭建已经很简单了,
 但是相对于verdaccio的简单那是完全没有办法比的.

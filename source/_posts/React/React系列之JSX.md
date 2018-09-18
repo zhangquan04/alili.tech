@@ -1,7 +1,8 @@
 ---
 title: React系列之JSX
-date: 2017-07-13T19:33:33.000Z
 tags: React
+abbrlink: 10fba257
+date: 2017-07-13 19:33:33
 ---
 
 JSX是一个有趣的东西。它看似像一个模板语言，但是又具备javascript的所有能力。

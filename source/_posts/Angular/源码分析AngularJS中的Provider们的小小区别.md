@@ -1,7 +1,8 @@
 ---
 title: 源码分析AngularJS中的Provider们的小小区别
-date: 2016-02-22 16:14:25
 tags: Angular
+abbrlink: 41effd04
+date: 2016-02-22 16:14:25
 ---
 # AngularJS的provider
 

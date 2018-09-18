@@ -1,7 +1,8 @@
 ---
 title: Javascript的奇淫技巧
-date: 2016-05-25T11:33:33.000Z
 tags: Javascript
+abbrlink: 7807a0b7
+date: 2016-05-25 11:33:33
 ---
 
 ## 类型转换

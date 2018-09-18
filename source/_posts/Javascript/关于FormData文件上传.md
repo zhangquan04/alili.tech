@@ -1,7 +1,8 @@
 ---
 title: 关于FormData文件上传
-date: 2016-06-03T23:46:35.000Z
-tags: null
+abbrlink: 3f5c7ee8
+date: 2016-06-03 23:46:35
+tags:
 ---
 关于文件上传
 

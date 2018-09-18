@@ -1,7 +1,8 @@
 ---
-title: 2017年08月Github Javascript趋势收集 
-date: 2017-08-09 0:00:00
+title: 2017年08月Github Javascript趋势收集
 tags: Trending
+abbrlink: 650c34ac
+date: 2017-08-09 00:00:00
 ---
 ![](/images/github_1.png)
 ##   [denysdovhan / wtfjs](https://github.com/denysdovhan/wtfjs) : 

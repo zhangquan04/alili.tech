@@ -1,7 +1,8 @@
 ---
 title: 在自己搭建的cnpm发布公司私有代码
-date: 2017-11-25T22:30:05.000Z
 tags: Nodejs
+abbrlink: 7cb6734b
+date: 2017-11-25 22:30:05
 ---
 
 ### 配置

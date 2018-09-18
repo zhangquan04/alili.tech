@@ -1,7 +1,8 @@
 ---
 title: 基于Github与Coding等代码托管平台的自动化部署
-date: 2017-02-14T22:30:05.000Z
 tags: Nodejs
+abbrlink: ff76a1bd
+date: 2017-02-14 22:30:05
 ---
 
 自从玩起了树莓派,每天都要经常把代码更新到树莓派上.

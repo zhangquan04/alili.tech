@@ -1,7 +1,8 @@
 ---
 title: MongoDB - 文档的基本操作 (二)
-date: 2018-05-13 0:00:00
 tags: MongoDB
+abbrlink: 311875a2
+date: 2018-05-13 00:00:00
 ---
 
 ## 文档更新

@@ -1,7 +1,8 @@
 ---
 title: 让Visual Studio Code按照ESLint规则格式化你的代码
-date: 2017-11-05T19:33:33.000Z
 tags: React
+abbrlink: 153fb3f5
+date: 2017-11-05 19:33:33
 ---
 项目加入ESLint之后,大家的代码是工整了许多.
 但是因为刚刚不熟悉ESLint的规则,很多时候都在数进退多少空格,双引号还是单引号的删改切换.

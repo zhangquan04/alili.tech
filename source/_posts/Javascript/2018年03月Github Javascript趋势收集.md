@@ -1,7 +1,8 @@
 ---
-title: 2018年03月Github Javascript趋势收集 
-date: 2018-03-08 0:00:00
+title: 2018年03月Github Javascript趋势收集
 tags: Trending
+abbrlink: f3c703da
+date: 2018-03-08 00:00:00
 ---
 ![](/images/github_39.png)
 ##   [yangshun / front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook) : 
