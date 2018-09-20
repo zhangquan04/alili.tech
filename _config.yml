@@ -5,7 +5,7 @@
 # Site
 title: Alili
 subtitle: 一个前端开发的踩坑小报告
-description: 假装是一个前端 前端微服务化 微前端 微服务 一个前端开发的踩坑小报告 阿里里 阿哩哩 前端开发 html5 css3 react angular vue express nodejs npm sublime webstorm atom {F.A.N} 哒哒吉 嘿咻 
+description: 前端微服务化 微前端 微服务 树莓派 前端开发 nodejs html5 css3 react angular vue express nodejs npm{F.A.N} 哒哒吉 嘿咻 
 author: Fan
 language: zh-CN
 timezone:
@@ -87,6 +87,21 @@ baidu_url_submit:
   host: alili.tech ## 在百度站长平台中注册的域名
   token: QsL3LjB4I2GLWGbj ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
+
+pwa:
+  serviceWorker:
+    path: /sw.js
+    preload:
+      urls:
+        - /
+      posts: 5
+    opts:
+      networkTimeoutSeconds: 5
+    routes:
+      - pattern: !!js/regexp /.*\.(min.css|min.js|woff2|ttf|jpg|jpeg|png|gif)$/
+        strategy: cacheFirst
+  priority: 5  
 
 
 # Deployment  站点部署到github要配置这里, 非常重要
