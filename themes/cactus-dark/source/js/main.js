@@ -83,9 +83,9 @@ $(document).ready(function () {
 });
 
 $(function () {
+  if(location.pathname !=='/') return;
   setTimeout(function () {
     $.get("/data/shanbayToday.json", function (data) {
-      console.log(data);
       var data = data.data;
       var str = data.content;
       print(data.content, ".description .en", function () {
