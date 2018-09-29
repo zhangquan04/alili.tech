@@ -46,3 +46,8 @@ miscellaneous:
         fb_admins:
         twitter_id:
         google_plus:
+
+# # Recommended posts
+# # Dependency: https://github.com/huiwang/hexo-recommended-posts
+# recommended_posts:
+#   enabled: false

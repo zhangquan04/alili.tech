@@ -1,5 +1,5 @@
 ---
-title: Centos7环境下启动Upsource失败解决办法.md
+title: Centos7环境下启动Upsource失败解决办法
 tags: Upsource
 abbrlink: 66c1c154
 date: 2018-09-29 19:33:33

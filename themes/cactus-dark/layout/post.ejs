@@ -11,4 +11,17 @@
     <%- page.content %>
   </div>
 </article>
+
+<!-- <% var post_list = recommended_posts(page, site) %>
+<% if(post_list.length > 0) { %>
+    <div class="recommended_posts">
+        <h1><%= __('文章推荐') %></h1>
+        <ul>
+            <% post_list.forEach(function(link) { %>
+                <li><a href="<%= link.permalink %>"><%= link.title %></a></li>
+            <% }) %>
+        </ul>
+    </div>
+<% } %>  -->
+
 <%- partial('_partial/comments') %>
