@@ -3,6 +3,13 @@
     <%- partial('_partial/post/title', { post: page, index: false, class_name: 'posttitle' }) %>
     <div class="meta">
       <%- partial('_partial/post/date', { post: page, class_name: 'postdate' }) %>
+      <div class="article-tag">
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_container_page_pv">
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          </span>
+      </div>
       <%- partial('_partial/post/tag') %>
     </div>
   </header>
