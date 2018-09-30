@@ -99,22 +99,24 @@ $(function () {
   function print(str, target, callback) {
     var content = "";
     var index = 0;
-    setTimeout(function () {
-
-      var timer = setInterval(function () {
+    var timerLoop = function(){
+      var randomNum = parseInt(Math.random()*180+130);
+      var timer = setTimeout(function () {
         if (index >= str.length) {
           clearInterval(timer);
           $(target).html(content);
           if (callback) callback();
           return
+        }else{
+          timerLoop()
         }
         content += str[index];
         index++;
         $(target).html(content + "<span style='color:#2bbc8a'>▌</span>")
-      }, 10);
+      }, randomNum);
+    }
 
-    }, 200)
-
+    timerLoop()
   }
 });
 

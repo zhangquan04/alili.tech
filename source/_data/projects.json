@@ -1,32 +1,31 @@
- [
-      {
-         "name":"alili.tech源码",
-         "url":"https://github.com/Fantasy9527/alili.tech",
-         "desc":"如果发现描述不对,或者错字,欢迎提交PR修改.期待你的参与!!"
-      },
-      {
-         "name":"lotusjs-cli",
-         "url":"https://fantasy9527.github.io/lotusjs-cli/",
-         "desc":"一个意外到让你尖叫的交互式前端通用脚手架管理工具"
-      },
-      {
-         "name":"微前端Base Demo",
-         "url":"https://github.com/Fantasy9527/microfrontend-base-demo",
-         "desc":"微前端Base基础模块的示例代码"
-      },
-      {
-         "name":"微前端Submodule",
-         "url":"https://github.com/Fantasy9527/microfrontend-submodule-demo",
-         "desc":"微前端Submodule子模块示例代码"
-      },
-      {
-         "name":"AliToSign",
-         "url":"https://github.com/Fantasy9527/AliToSign",
-         "desc":"基于nodejs的阿里云API签名生成工具"
-      },
-      {
-         "name":"webhook-builder",
-         "url":"https://github.com/Fantasy9527/webhook-builder",
-         "desc":"根据webhook实现自动化部署的demo"
-      }
-  ]
+ [{
+ 		"name": "alili.tech源码",
+ 		"url": "https://github.com/Fantasy9527/alili.tech",
+ 		"desc": "如果发现描述不对,或者错字,欢迎提交PR修改.期待你的参与!!"
+ 	},
+ 	{
+ 		"name": "微前端Base Demo",
+ 		"url": "https://github.com/Fantasy9527/microfrontend-base-demo",
+ 		"desc": "微前端Base基础模块的示例代码"
+ 	},
+ 	{
+ 		"name": "微前端Submodule",
+ 		"url": "https://github.com/Fantasy9527/microfrontend-submodule-demo",
+ 		"desc": "微前端Submodule子模块示例代码"
+ 	},
+ 	{
+ 		"name": "AliToSign",
+ 		"url": "https://github.com/Fantasy9527/AliToSign",
+ 		"desc": "基于nodejs的阿里云API签名生成工具"
+ 	},
+ 	{
+ 		"name": "webhook-builder",
+ 		"url": "https://github.com/Fantasy9527/webhook-builder",
+ 		"desc": "webhook自动化部署"
+ 	},
+ 	{
+ 		"name": "lotusjs-cli",
+ 		"url": "https://fantasy9527.github.io/lotusjs-cli/",
+ 		"desc": "一个意外到让你尖叫的交互式前端通用脚手架管理工具"
+ 	}
+ ]
