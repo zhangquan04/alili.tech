@@ -94,13 +94,13 @@ $(function () {
         })
       })
     })
-  }, 1500);
+  }, 150);
 
   function print(str, target, callback) {
     var content = "";
     var index = 0;
     var timerLoop = function(){
-      var randomNum = parseInt(Math.random()*200+50);
+      var randomNum = parseInt(Math.random()*100+10);
       var timer = setTimeout(function () {
         if (index >= str.length) {
           clearInterval(timer);
