@@ -106,7 +106,7 @@ pwa:
 
 addlink:
   before_text: '> 本文链接：' # text before the post link
-  after_text: '<br/>转载请注明出处,欢迎转载哟' # text after the post link
+  after_text: '<br/> 转载请注明出处,欢迎转载哟' # text after the post link
 
 
 recommended_posts:
