@@ -2,6 +2,7 @@
 title: 以太坊开发之Solidity初学者的编辑器 -- remix-ide
 tags: 区块链
 abbrlink: ecce3d6
+keywords: 区块链,以太坊,remix-ide,Solidity,truffle
 date: 2018-04-20 19:33:33
 ---
 在以太坊应用的开发中智能合约的开发是避不开的.

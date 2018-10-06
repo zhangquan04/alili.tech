@@ -2,6 +2,7 @@
 title: 卸载mac上的输入法
 tags: mac
 abbrlink: 760c8e37
+keywords: Macbook,Pro,输入法,卸载,问题
 date: 2017-01-21 22:30:05
 ---
 

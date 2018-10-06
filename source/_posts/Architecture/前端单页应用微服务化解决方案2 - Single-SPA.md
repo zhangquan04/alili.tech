@@ -2,6 +2,7 @@
 title: 前端单页应用微服务化解决方案2 - Single-SPA
 tags: 微前端
 abbrlink: 11052bf4
+keywords: 微前端,前端微服务化,解决方案,前端难题
 date: 2018-09-02 22:17:36
 ---
 # 技术选型

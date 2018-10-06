@@ -2,6 +2,7 @@
 title: Raspberry之外网访问树莓派
 tags: Raspberry Pi
 abbrlink: 8ad4a3a8
+keywords: 树莓派,nodejs,ssh,前端,Raspberry,pi
 date: 2017-01-10 20:53:05
 ---
 

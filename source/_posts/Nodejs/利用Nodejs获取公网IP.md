@@ -2,6 +2,7 @@
 title: 利用Nodejs获取公网IP
 tags: Nodejs
 abbrlink: cdd27771
+keywords:  Nodejs,公网,ip,网络
 date: 2017-02-15 21:30:05
 ---
 

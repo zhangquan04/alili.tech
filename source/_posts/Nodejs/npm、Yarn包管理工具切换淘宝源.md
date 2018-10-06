@@ -2,6 +2,7 @@
 title: npm、yarn包管理工具切换淘宝源
 tags: Nodejs
 abbrlink: 99619c4e
+keywords:  Nodejs,npm,cnpm,yarn,淘宝源
 date: 2017-07-01 20:32:05
 ---
 因为一些特殊原因，npm、Yarn等包管理软件在国内下载总是有一点慢。

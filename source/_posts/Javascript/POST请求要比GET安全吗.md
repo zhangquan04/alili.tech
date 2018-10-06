@@ -2,6 +2,7 @@
 title: POST请求要比GET安全吗
 tags: javascript
 abbrlink: b50a8cab
+keywords: Javascript,css,技巧,浏览器,http,Proxy,get,post
 date: 2017-01-16 11:46:35
 ---
 

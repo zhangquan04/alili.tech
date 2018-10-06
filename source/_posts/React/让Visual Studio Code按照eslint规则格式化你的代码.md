@@ -2,6 +2,7 @@
 title: 让Visual Studio Code按照ESLint规则格式化你的代码
 tags: React
 abbrlink: 153fb3f5
+keywords: react,脚手架,mobx,装饰器,observable,ESLint
 date: 2017-11-05 19:33:33
 ---
 项目加入ESLint之后,大家的代码是工整了许多.

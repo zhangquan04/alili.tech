@@ -2,6 +2,7 @@
 title: 发布基于nodejs的阿里云API签名生成工具 -- AliToSing
 tags: Nodejs
 abbrlink: dd233b37
+keywords:  Nodejs,阿里云,签名
 date: 2017-07-16 00:04:05
 ---
 

@@ -1,7 +1,8 @@
 ---
-title: Angular 指令模版
+title: Angularjs 指令模版
 abbrlink: baa7d23b
-date: 2015-05-21 22:17:36
+date: 2015-05-21 22:17:36,
+keywords: Angularjs,指令,directive,模版
 tags:
 ---
 

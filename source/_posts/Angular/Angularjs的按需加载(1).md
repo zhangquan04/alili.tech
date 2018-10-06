@@ -1,7 +1,8 @@
 ---
-title: Angular的按需加载(1)
+title: Angularjs的按需加载(1)
 abbrlink: cbf4498a
 date: 2016-05-30 16:14:25
+keywords: Angularjs,按需加载,解决方案
 tags:
 ---
 今天来聊一聊一直困扰了我很久的问题.Angular的按需加载.

@@ -2,6 +2,7 @@
 title: React系列之用create-react-native-app创建React Native应用
 tags: React
 abbrlink: bb62bab9
+keywords: react,props,脚手架,React Native,rn,expo
 date: 2017-07-30 19:33:33
 ---
 之前在介绍create-react-app的时候稍微提了一下create-react-native-app.

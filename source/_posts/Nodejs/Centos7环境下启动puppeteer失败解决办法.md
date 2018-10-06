@@ -2,6 +2,7 @@
 title: Centos7环境下启动puppeteer失败解决办法
 tags: puppeteer
 abbrlink: e550825
+keywords: puppeteer,Centos7,安装,问题
 date: 2018-02-25 19:33:33
 ---
 

@@ -2,6 +2,7 @@
 title: 'Redux先放一边,开启MobX的新玩法'
 tags: React
 abbrlink: b3d50314
+keywords: react,脚手架,mobx,装饰器,observable
 date: 2017-11-04 19:33:33
 ---
 ## Mobx

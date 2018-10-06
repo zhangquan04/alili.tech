@@ -2,6 +2,7 @@
 title: Linux - vim vi学习笔记
 tags: Linux
 abbrlink: 7f7747d0
+keywords: Linux,Centos,vi,vim
 date: 2018-02-17 20:32:05
 ---
 很多时候在mac也好linux也好,因为经常要使用到,但是操作与其他的编辑器差别又很大,所以专门学习一下,在使用的时候也不至于非常多迷惑.在学习中要多练多用才会熟练于心.

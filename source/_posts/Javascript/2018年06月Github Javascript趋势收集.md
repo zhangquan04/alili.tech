@@ -2,6 +2,7 @@
 title: 2018年06月Github Javascript趋势收集
 tags: Trending
 abbrlink: 1effd0e5
+keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2018-06-08 00:00:00
 ---
 ![](/images/github_54.png)
