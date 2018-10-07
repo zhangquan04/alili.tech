@@ -14,8 +14,7 @@ title: 前端大收集
 |Web Design Weekly| http://web-design-weekly.com/ | 设计、技术、技巧、工具聚合|
 |UX Weekly|http://uxwkly.com/|用户体验、网页设计推送|
 |Web Tools Weekly|http://webtoolsweekly.com/|Js，工具推送|
-|RESPONSIVE DESIGN NEWSLETTER|http://re
-|sponsivedesignweekly.com/|每周推送一次响应式设计相关|
+|RESPONSIVE DESIGN NEWSLETTER|http://responsivedesignweekly.com/|每周推送一次响应式设计相关|
 |Tutorialzine|http://tutorialzine.com/|精品教程和资源推送|
 |Sidebar|http://sidebar.io/|每天、每半周、每周推送5条设计相关|
 |The Hacker News Newsletter|http://www.hackernewsletter.com/|HN 每周精选|
@@ -67,7 +66,7 @@ title: 前端大收集
 |[HTML5 Rocks](http://www.html5rocks.com/en/)| # |html5权威网站|
 |[A List Apart](http://alistapart.com/)| # |可以改变世界的文章|
 |[hakim](http://hakim.se/)| HAKIM EL HATTAB|ccs3,javascript|
-|[DailyJS](http://dailyjs.com/) |  |  | # | javascript |
+|[DailyJS](http://dailyjs.com/) | # | javascript |
 
 ## 活跃微博
 |ID |公司 | 简介 |
