@@ -5,8 +5,8 @@
 # Site
 title: Alili
 subtitle: 一个前端开发的踩坑小报告
-description: 一个分享各种技术,最佳实践的个人原创博客
-keywords: alili,踩坑小报告,前端技术分享,前端博客,微前端,树莓派,前端开发,区块链,网络技术,Mongodb学习,前端最佳实践
+description: 一个分享各种技术,最佳实践的个人原创博客.记录平时折腾的记录,帮助有缘人.
+keywords: alili,前端,js,es6,踩坑小报告,前端技术分享,前端博客,微前端,树莓派,前端开发,区块链,网络技术,Mongodb学习,前端最佳实践
 author: Fan
 language: zh-CN
 timezone:
