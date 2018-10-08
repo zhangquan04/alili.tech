@@ -1,2 +1,43 @@
-.blog-post-comments
-    margin-top: 4rem
+.blog-post-comments {
+    margin-top: 4rem;
+    &.v {
+        .power{
+            display: none;
+        }
+        * {
+            color: #c9cacc;
+        }
+
+        .vwrap {
+            background: #212326;
+            border: none;
+            .vheader {
+                .vinput {
+                    border-bottom: 1px #dedede double;
+                }
+            }
+        }
+        .vempty {
+            pre {
+                color: #555;
+            }
+        }
+        .vlist {
+            .vcard {
+                .vh .vmeta .vat{
+                    color: #1abc9c;
+                }
+    
+                .vhead {
+                    .vsys{
+                        background: none;
+                    }
+                    .vnick:hover {
+                        color: #1abc9c;
+                    }
+                }
+            }
+        }
+    }
+
+}
