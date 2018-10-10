@@ -33,6 +33,7 @@ hexo.extend.helper.register('meta', function (post) {
         }).filter(function (entity) {
             return entity;
         });
+        console.log('<meta ' + entityArray.join(' ') + ' />')
         return '<meta ' + entityArray.join(' ') + ' />';
     });
     return metaDOMArray.join('\n');

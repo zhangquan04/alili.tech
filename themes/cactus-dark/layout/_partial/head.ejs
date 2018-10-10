@@ -54,5 +54,15 @@
     <% } %>
     <!-- jquery -->
     <%- js('lib/jquery/jquery.min') %>
-    
+    <!-- 熊掌号  -->
+    <script type="application/ld+json">
+  {
+      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+      "@id": "<%- page.permalink %>",
+      "appid": "1613049289050283", 
+      "title": "<%- page.title ? page.title : (page.tag || config.title) %> | <%=config.subtitle %>", 
+      "images": [<%- page.image %>],
+      "pubDate": "<%- date(Date.now(), "YYYY-MM-DD\THH:mm:ss") %>"
+  } 
+</script>
 </head>
