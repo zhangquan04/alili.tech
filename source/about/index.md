@@ -13,7 +13,6 @@ date: 2016-05-27T14:31:51.000Z
 # 个人信息
 
  - Fan/男/1992
- <!-- - 工作年限：5年 -->
  - 技术博客：http://alili.tech 
  - Github：https://github.com/Fantasy9527
  - 期望职位：前端开发工程师
@@ -21,6 +20,6 @@ date: 2016-05-27T14:31:51.000Z
 
 ---
 
-# 工作经历
+# 友情链接
 
-> 暂不公布
+[在这里添加](https://github.com/Fantasy9527/alili.tech/blob/Blog/source/about/index.md)

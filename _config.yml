@@ -4,8 +4,8 @@
 
 # Site
 title: Alili
-subtitle: 一个前端开发的踩坑小报告
-description: 一个分享各种技术,最佳实践的个人原创博客.内容大多为平时折腾的记录.
+subtitle: 踩坑小报告
+description: 一个分享各种技术,最佳实践的个人原创博客.内容大多为平时折腾的记录.所以活着就是为了折腾.
 keywords: Alili,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js
 author: Fan
 language: zh-CN
@@ -112,12 +112,12 @@ addlink:
 recommended_posts:
   server: https://api.truelaurel.com #后端推荐服务器地址
   timeoutInMillis: 10000 #服务时长，超过此时长，则使用离线推荐模式
-  internalLinks: 4 #内部文章数量
+  internalLinks: 3 #内部文章数量
   externalLinks: 1 #外部文章数量
   fixedNumber: false
   autoDisplay: true  #自动在文章底部显示推荐文章
   excludePattern: []
-  titleHtml: <h1>其他推荐</h1> #自定义标题
+  titleHtml: <h1>相关文章</h1> #自定义标题
 
 # Deployment  站点部署到github要配置这里, 非常重要
 ## Docs: http://hexo.io/docs/deployment.html
