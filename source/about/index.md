@@ -15,7 +15,7 @@ date: 2016-05-27T14:31:51.000Z
  - Fan/男/1992
  - 技术博客：http://alili.tech 
  - Github：https://github.com/Fantasy9527
- - 期望职位：前端开发工程师
+ <!-- - 期望职位：前端开发工程师 -->
  - 城市：杭州
 
 ---
