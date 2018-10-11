@@ -1,5 +1,4 @@
 # alili.tech
-个人博客
+个人博客 踩坑小报告
 
-# 注意
 博客地址: [https://alili.tech](https://alili.tech) 
