@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/archive/884e3459/');
+  precacheUrls.push('/archive/d82a6654/');
 
   precacheUrls.push('/archive/153fb3f5/');
 

@@ -4,12 +4,31 @@
 
     
   <url>
-    <loc>https://alili.tech/archive/2e0bcb58/</loc>
-    <lastmod>2018-10-12T11:05:32.096Z</lastmod>
+    <loc>https://alili.tech/archive/dc884d5f/</loc>
+    <lastmod>2018-10-12T13:36:40.423Z</lastmod>
     <data>
         <display>
-        <title>2018年10月Alili Weekly 前端周刊</title>
+        <title>Alili Weekly 前端周刊 第二期</title>
         <pubTime>2018-10-11T16:00:00.000Z</pubTime>
+        
+        <tag>前端周刊</tag>
+         
+        <tag>Weekly</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://alili.tech/archive/ec9ea187/</loc>
+    <lastmod>2018-10-12T13:36:21.618Z</lastmod>
+    <data>
+        <display>
+        <title>Alili Weekly 前端周刊 第一期</title>
+        <pubTime>2018-10-04T16:00:00.000Z</pubTime>
         
         <tag>前端周刊</tag>
          
@@ -99,12 +118,12 @@
 
     
   <url>
-    <loc>https://alili.tech/archive/5e00e43d/</loc>
+    <loc>https://alili.tech/archive/ce685b9f/</loc>
     <lastmod>2018-10-12T10:21:17.803Z</lastmod>
     <data>
         <display>
-        <title>前端单页应用微服务化解决方案7 - 静态数据共享</title>
-        <pubTime>2018-09-05T17:00:00.000Z</pubTime>
+        <title>前端单页应用微服务化解决方案8 - 二次构建</title>
+        <pubTime>2018-09-06T17:00:00.000Z</pubTime>
         
         <tag>微前端</tag>
          
@@ -118,12 +137,12 @@
 
     
   <url>
-    <loc>https://alili.tech/archive/ce685b9f/</loc>
+    <loc>https://alili.tech/archive/5e00e43d/</loc>
     <lastmod>2018-10-12T10:21:17.803Z</lastmod>
     <data>
         <display>
-        <title>前端单页应用微服务化解决方案8 - 二次构建</title>
-        <pubTime>2018-09-06T17:00:00.000Z</pubTime>
+        <title>前端单页应用微服务化解决方案7 - 静态数据共享</title>
+        <pubTime>2018-09-05T17:00:00.000Z</pubTime>
         
         <tag>微前端</tag>
          
@@ -246,23 +265,6 @@
 
     
   <url>
-    <loc>https://alili.tech/archive/10fba257/</loc>
-    <lastmod>2018-10-06T23:29:13.556Z</lastmod>
-    <data>
-        <display>
-        <title>React系列之JSX</title>
-        <pubTime>2017-07-13T11:33:33.000Z</pubTime>
-        
-        <tag>React</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://alili.tech/archive/e25431a8/</loc>
     <lastmod>2018-10-06T23:29:13.556Z</lastmod>
     <data>
@@ -287,6 +289,23 @@
         <title>ECMAScript 6 之如何快速的做ES6练习</title>
         <pubTime>2015-07-15T11:02:36.000Z</pubTime>
         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://alili.tech/archive/10fba257/</loc>
+    <lastmod>2018-10-06T23:29:13.556Z</lastmod>
+    <data>
+        <display>
+        <title>React系列之JSX</title>
+        <pubTime>2017-07-13T11:33:33.000Z</pubTime>
+        
+        <tag>React</tag>
+         
          
            
         </display>
