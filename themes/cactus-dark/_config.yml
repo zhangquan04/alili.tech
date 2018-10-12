@@ -2,7 +2,7 @@ nav:
   Home: /  
   Archives: /archives/
   About: /about/
-  Collect: /collect/
+#   Collect: /collect/
   Github: http://github.com/Fantasy9527
 
 projects_url: http://github.com/Fantasy9527
