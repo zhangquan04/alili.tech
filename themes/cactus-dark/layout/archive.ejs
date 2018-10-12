@@ -1,3 +1,9 @@
+<% if (site.tags.length) { %>
+  <div class="tagcloud-wrap">
+    <%- tagcloud() %>
+  </div>
+<% } %>
+
 <div id="archive">
   <ul class="post-list">
     <% var year = 0 %>

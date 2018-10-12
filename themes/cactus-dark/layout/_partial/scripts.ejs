@@ -2,7 +2,7 @@
 <%- js('js/main') %>
 <!-- Disqus Comments -->
 <% if (theme.plugins.disqus_shortname){ %>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         var disqus_shortname = '<%= theme.plugins.disqus_shortname %>';
 
         (function(){
@@ -13,7 +13,7 @@
             if(window.location.host=="localhost:4000")return;
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         }());
-    </script>
+    </script> -->
 <% } %>
     <script>
     (function(){

@@ -100,7 +100,7 @@ $(function () {
     var content = "";
     var index = 0;
     var timerLoop = function(){
-      var randomNum = parseInt(Math.random()*100+10);
+      var randomNum = parseInt(Math.random()*30+10);
       var timer = setTimeout(function () {
         if (index >= str.length) {
           clearInterval(timer);
