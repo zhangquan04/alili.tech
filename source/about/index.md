@@ -17,8 +17,12 @@ date: 2016-05-27T14:31:51.000Z
  - Github：https://github.com/Fantasy9527
  - 职业：前端开发工程师
  - 城市：杭州
-
 ---
+
+# 个人简历
+
+[个人简历](/about/resume.html)
+
 
 # 友情链接
 
