@@ -1,8 +1,8 @@
 ---
 title: 一个关于微信SPA页面webview的缓存问题
-tags: Angular
+tags: Angularjs
 abbrlink: 613bb601
-keywords: SPA,缓存,angularjs
+keywords: SPA,缓存,Angularjs
 date: 2017-02-22 16:14:25
 ---
 

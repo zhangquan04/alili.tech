@@ -1,6 +1,6 @@
 ---
 title: 聊聊Vue.js的事件修饰符
-tags: Vue.js
+tags: Vue
 abbrlink: 9ca26edd
 keywords: vue,事件,修饰符
 date: 2017-05-25 19:33:33

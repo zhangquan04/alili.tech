@@ -3,9 +3,9 @@ title: Angularjs的按需加载(1)
 abbrlink: cbf4498a
 date: 2016-05-30 16:14:25
 keywords: Angularjs,按需加载,解决方案
-tags:
+tags: Angularjs
 ---
-今天来聊一聊一直困扰了我很久的问题.Angular的按需加载.
+今天来聊一聊一直困扰了我很久的问题.Angularjs的按需加载.
 
 angular的好处这里就不用多说,
 但是用久了你会发现,一个网站所有的 Controller, Service, Directive等等,全部加载完了,

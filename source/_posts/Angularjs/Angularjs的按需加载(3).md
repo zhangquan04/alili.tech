@@ -1,9 +1,9 @@
 ---
-title: Angular的按需加载(3)
+title: Angularjs的按需加载(3)
 abbrlink: f9c22b08
 date: 2016-06-01 23:55:35
 keywords: Angularjs,按需加载,解决方案
-tags:
+tags: Angularjs
 ---
 
 上一篇大概的描述了一下Angular的启动过程,

@@ -1,11 +1,11 @@
 ---
-title: Angular的按需加载(2)
+title: Angularjs的按需加载(2)
 abbrlink: e0d91a49
 date: 2016-05-31 20:34:35
 keywords: Angularjs,按需加载,解决方案
-tags:
+tags: Angularjs
 ---
-上一篇我们实现了最简单的Angular的按需加载,
+上一篇我们实现了最简单的Angularjs的按需加载,
 
 可以通过替换Angular的内部方法,再使用require.js配合$q完成了按需加载.
 
