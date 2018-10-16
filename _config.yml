@@ -124,7 +124,9 @@ recommended_posts:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
 - type: git    #部署类型
-  #repository: https://github.com/incomparable9527/incomparable9527.github.io.git  #部署的仓库的SSH
   repository: https://git.coding.net/incomparable9527/incomparable9527.coding.me.git  #部署的仓库的SSH
+  branch: master   #部署分支,一般使用master主分支
+- type: git    #部署类型
+  repository: https://gitee.com/Fantasy9527/alili.tech.git  #部署的仓库的SSH
   branch: master   #部署分支,一般使用master主分支
 - type: baidu_url_submitter # 百度
