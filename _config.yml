@@ -79,7 +79,6 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
-
 #压缩
 #neat_enable: true
 
@@ -119,6 +118,8 @@ recommended_posts:
   autoDisplay: true  #自动在文章底部显示推荐文章
   excludePattern: []
   titleHtml: <h1>相关文章</h1> #自定义标题
+
+
 
 # Deployment  站点部署到github要配置这里, 非常重要
 ## Docs: http://hexo.io/docs/deployment.html
