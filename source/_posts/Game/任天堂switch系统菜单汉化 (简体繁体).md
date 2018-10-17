@@ -72,6 +72,6 @@ SXOS (2.0, 2.0.1, 2.1) XCI游戏待机死机的问题如果你的游戏本身使
 文件拷贝不建议使用mac系统!!!
 
 
+# 参考资料 
 
-
-参考资料: https://www.91wii.com/forum.php?mod=viewthread&tid=96891&extra=page%3D1&page=1
+https://www.91wii.com/forum.php?mod=viewthread&tid=96891&extra=page%3D1&page=1
