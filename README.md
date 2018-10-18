@@ -1,6 +1,7 @@
 # alili.tech
-前端博客
-一个前端开发的踩坑小报告
+## 前端博客:
+
+前端大爆炸! - WEB BANG! BANG!! BANG!!!
 
 博客地址: [https://alili.tech](https://alili.tech) 
 
