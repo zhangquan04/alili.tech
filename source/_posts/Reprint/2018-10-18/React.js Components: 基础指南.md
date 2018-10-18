@@ -1,8 +1,9 @@
 ---
-title: React.js Components: 基础指南 
-date: 2018-10-18 0:00:00
+title: 'React.js Components: 基础指南 '
 reprint: true
 categories: reprint
+abbrlink: 67b05647
+date: 2018-10-18 00:00:00
 ---
 
 {% raw %}

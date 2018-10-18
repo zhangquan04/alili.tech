@@ -1,8 +1,9 @@
 ---
-title: Jest 23: 🔥 快速愉快的测试 
-date: 2018-10-18 0:00:00
+title: "Jest 23: \U0001F525 快速愉快的测试 "
 reprint: true
 categories: reprint
+abbrlink: 916cf636
+date: 2018-10-18 00:00:00
 ---
 
 {% raw %}

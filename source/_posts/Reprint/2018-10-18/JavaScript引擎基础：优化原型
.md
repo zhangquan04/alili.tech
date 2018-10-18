@@ -1,5 +1,5 @@
 ---
-title: JavaScript引擎基础：优化原型
+title: "JavaScript引擎基础：优化原型"
 reprint: true
 categories: reprint
 abbrlink: 44173d64
