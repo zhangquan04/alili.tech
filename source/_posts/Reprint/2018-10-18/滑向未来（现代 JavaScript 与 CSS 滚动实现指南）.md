@@ -2,6 +2,7 @@
 title: 滑向未来（现代 JavaScript 与 CSS 滚动实现指南）
 abbrlink: 8a174493
 reprint: true
+categories: reprint
 date: 2018-12-13 19:33:33
 ---
 {% raw %}
