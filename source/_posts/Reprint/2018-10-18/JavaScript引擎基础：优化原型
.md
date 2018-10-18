@@ -268,6 +268,7 @@ someObject.foo();
 
           
 {% endraw %}
+
 # 版权声明
 原文链接: [https://www.zcfy.cc/article/javascript-engine-fundamentals-optimizing-prototypes](https://www.zcfy.cc/article/javascript-engine-fundamentals-optimizing-prototypes)
 原文标题: JavaScript引擎基础：优化原型

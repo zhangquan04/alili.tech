@@ -76,6 +76,7 @@ canvas.style = { width: <span class="hljs-number">0</span>, height: <span class=
 
           
 {% endraw %}
+
 # 版权声明
 原文链接: [https://www.zcfy.cc/article/offscreencanvas-speed-up-your-canvas-operations-with-a-web-worker](https://www.zcfy.cc/article/offscreencanvas-speed-up-your-canvas-operations-with-a-web-worker)
 原文标题: 离屏Canvas — 使用Web Worker提高你的Canvas运行速度

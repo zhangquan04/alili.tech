@@ -1,26 +1,13 @@
 ---
 title: 滑向未来（现代 JavaScript 与 CSS 滚动实现指南）
-abbrlink: 8a174493
 reprint: true
 categories: reprint
-date: 2018-12-13 19:33:33
+abbrlink: 8a174493
+date: 2018-10-18 00:00:00
 ---
+
 {% raw %}
-<div class="uk-card-body uk-padding-remove-top">
-          
-          
-          <div class="uk-cover-container uk-height-medium">
-            <img src="https://p4.ssl.qhimg.com/t013bea140bd875db38.gif" alt="" uk-cover="" class="uk-cover" style="height: 572px; width: 724px;">
-          </div>
-          
-          <h2 class="detail-title uk-margin-medium-top">滑向未来（现代 JavaScript 与 CSS 滚动实现指南）</h2>
-          
-          <div class="original-source uk-padding uk-padding-remove-horizontal uk-padding-remove-top">
-            <span>原文链接：</span>
-            <a class="uk-link-muted orginal-source-url" href="https://evilmartians.com/chronicles/scroll-to-the-future-modern-javascript-css-scrolling-implementations" target="_blank">evilmartians.com</a>
-          </div>
-          
-          <div class="markdown-body">
+
             <p>一些（网站）滚动的效果是如此令人着迷但你却不知该如何实现，本文将为你揭开它们的神秘面纱。我们将基于最新的技术与规范为你介绍最新的 JavaScript 与 CSS 特性，（当你付诸实践时，）将使你的页面滚动更平滑、美观且性能更好。</p>
 <p>大多数的网页的内容都无法在一屏内全部展现，因而（页面）滚动对于用户而言是必不可少的。对于前端工程师与 UX 设计师而言，跨浏览器提供良好的滚动体验，同时符合设计（要求），无疑是一个挑战。尽管 web 标准的发展速度远超从前，但代码的实现往往是落后的。下文将为你介绍一些常见的关于滚动的案例，检查一下你所用的解决方案是否被更优雅的方案所代替。</p>
 <h2>消逝的滚动条</h2>
@@ -259,13 +246,12 @@ outer.appendChild(inner);
 <hr>
 <p>感谢阅读至此！查阅浏览器的更新日志，积极参与讨论，有助于 web 标准驶向正确的方向。祝大家一帆风顺，顺利滑（滚）向未来！</p>
 
-          </div>
-        </div>
+          
 {% endraw %}
+
 # 版权声明
 原文链接: [https://www.zcfy.cc/article/scroll-to-the-future](https://www.zcfy.cc/article/scroll-to-the-future)
-原文标题: 引言· 2018年前端开发工作手册
-
+原文标题: 滑向未来（现代 JavaScript 与 CSS 滚动实现指南）
 本文仅用于学习、研究和交流目的，欢迎非商业转载。转载请注明出处、完整链接。
 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，
 原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！
