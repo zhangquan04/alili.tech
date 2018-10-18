@@ -8,7 +8,7 @@
   <ul class="post-list">
     <% var year = 0 %>
     <% var change = false %>
-    <% page.posts.sort('date', 'desc').each(function(post) { %>
+    <% page.posts.filter(function(item){return !item.reprint}).sort('date', 'desc').each(function(post) { %>
       <% var itemYear = date(post.date, 'YYYY') - 0 %>
       <% change = year !== itemYear %>
       <% year = change ? itemYear : year %>
