@@ -8,7 +8,7 @@
   "scripts": {
     "start": "hexo server",
     "deploy": "hexo d -g;hexo clean",
-    "recommend": "hexo recommend"
+    "re": "hexo recommend"
   },
   "dependencies": {
     "hexo": "^3.7.1",
