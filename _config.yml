@@ -5,7 +5,7 @@
 # Site
 title: Alili
 subtitle: 前端大爆炸! - WEB BANG! BANG!! BANG!!!
-description: 一个分享各种技术,最佳实践的个人原创博客.为平时折腾的记录.以及一些个人学习的分享记录.
+description: 一个分享各种技术,最佳实践的个人博客.为平时折腾的记录.以及一些个人学习的分享记录.
 keywords: Alili,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js
 author: Fan
 language: zh-CN
@@ -121,7 +121,10 @@ recommended_posts:
   excludePattern: []
   titleHtml: <h1>相关文章</h1> #自定义标题
 
-
+nofollow:
+	enable: true
+	exclude:
+    - alili.tech
 
 # Deployment  站点部署到github要配置这里, 非常重要
 ## Docs: http://hexo.io/docs/deployment.html
