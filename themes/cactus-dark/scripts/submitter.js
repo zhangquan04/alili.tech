@@ -1,0 +1,1 @@
+hexo.extend.deployer.register('baidu_xz_url_submitter', require('../lib/xz_submitter'));
