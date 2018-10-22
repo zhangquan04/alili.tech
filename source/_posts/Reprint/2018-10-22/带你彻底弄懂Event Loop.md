@@ -41,7 +41,7 @@ date: 2018-10-22 00:00:00
 <p>（注：这里只针对浏览器和NodeJS）</p>
 <h2 id="articleHeader4">浏览器的Event Loop</h2>
 <p>我们先来看一张图，再看完这篇文章后，请返回来再仔细看一下这张图，相信你会有更深的理解。</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016278118?w=710&amp;h=749" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="browser-eventloop" title="browser-eventloop" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016278118?w=710&amp;h=749" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="browser-eventloop" title="browser-eventloop" style="cursor: pointer;"></span></p>
 <p>这张图将浏览器的Event Loop完整的描述了出来，我来讲执行一个JavaScript代码的具体流程：</p>
 <ol>
 <li>执行全局Script同步代码，这些同步代码有一些是同步语句，有一些是异步语句（比如setTimeout等）；</li>
@@ -420,10 +420,10 @@ setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;
 <h2 id="articleHeader5">NodeJS中的Event Loop</h2>
 <h3 id="articleHeader6">libuv</h3>
 <p>先来看一张libuv的结构图：</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016278119?w=800&amp;h=316" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="node-libuv" title="node-libuv" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016278119?w=800&amp;h=316" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="node-libuv" title="node-libuv" style="cursor: pointer;"></span></p>
 <h3 id="articleHeader7">NodeJS中的宏队列和微队列</h3>
 <p>NodeJS的Event Loop中，执行宏队列的回调任务有<strong>6个阶段</strong>，如下图：</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016278120?w=670&amp;h=339" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="node-eventloop-6phase" title="node-eventloop-6phase" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016278120?w=670&amp;h=339" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="node-eventloop-6phase" title="node-eventloop-6phase" style="cursor: pointer;"></span></p>
 <p>各个阶段执行的任务如下：</p>
 <ul>
 <li>
@@ -455,7 +455,7 @@ setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;
 </ol>
 <p>在浏览器中，也可以认为只有一个微队列，所有的microtask都会被加到这一个微队列中，但是在NodeJS中，不同的microtask会被放置在不同的微队列中。</p>
 <p>具体可以通过下图加深一下理解：</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016278121?w=951&amp;h=526" src="/img/remote/1460000016278121?w=951&amp;h=526" alt="node-eventloop" title="node-eventloop" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016278121?w=951&amp;h=526" src="https://static.alili.tech/img/remote/1460000016278121?w=951&amp;h=526" alt="node-eventloop" title="node-eventloop" style="cursor: pointer; display: inline;"></span></p>
 <p>大体解释一下NodeJS的Event Loop过程：</p>
 <ol>
 <li>执行全局Script的同步代码</li>
@@ -465,8 +465,8 @@ setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;
 <li>这就是Node的Event Loop</li>
 </ol>
 <p><strong>关于NodeJS的macrotask queue和microtask queue，我画了两张图，大家作为参考：</strong></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016278122?w=420&amp;h=433" src="/img/remote/1460000016278122?w=420&amp;h=433" alt="node-microtaskqueue" title="node-microtaskqueue" style="cursor: pointer; display: inline;"></span></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016278123?w=676&amp;h=449" src="/img/remote/1460000016278123?w=676&amp;h=449" alt="node-macrotaskqueue" title="node-macrotaskqueue" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016278122?w=420&amp;h=433" src="https://static.alili.tech/img/remote/1460000016278122?w=420&amp;h=433" alt="node-microtaskqueue" title="node-microtaskqueue" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016278123?w=676&amp;h=449" src="https://static.alili.tech/img/remote/1460000016278123?w=676&amp;h=449" alt="node-macrotaskqueue" title="node-macrotaskqueue" style="cursor: pointer; display: inline;"></span></p>
 <p>好啦，概念理解了我们通过几个例子来实战一下：</p>
 <p>第一个例子</p>
 <div class="widget-codetool" style="display:none;">

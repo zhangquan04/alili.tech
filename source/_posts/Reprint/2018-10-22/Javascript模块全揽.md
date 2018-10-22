@@ -10,7 +10,7 @@ date: 2018-10-22 00:00:00
 
                     
 <p>之前写的文章<a href="https://segmentfault.com/a/1190000016101940">急速Js全栈教程</a>得到了不错的阅读量，霸屏掘金头条3天，点赞过千，阅读近万，甚至还有人在评论区打广告，可见也是一个小小的生态了；）。看来和JS全栈有关的内容，还是有人颇有兴趣的。</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016219873?w=419&amp;h=221" src="/img/remote/1460000016219873?w=419&amp;h=221" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016219873?w=419&amp;h=221" src="https://static.alili.tech/img/remote/1460000016219873?w=419&amp;h=221" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>这次文章的内容，是JavaScript模块。JavaScript Module 真是很讨厌，但是不得不了解的话题。奇葩在于：</p>
 <ol>
 <li>它一个非常老的语言，并且使用非常广泛</li>

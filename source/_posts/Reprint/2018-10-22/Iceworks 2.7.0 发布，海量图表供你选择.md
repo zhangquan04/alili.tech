@@ -11,7 +11,7 @@ date: 2018-10-22 00:00:00
                     
 <h1 id="articleHeader0">Iceworks 2.7.0 发布，海量图表供你选择</h1>
 <blockquote>Iceworks，丰富模板一键创建，提供多种垂直领域模板，快速创建项目，支持风格切换，满足个性化需求；轻松操作页面管理，海量物料自由搭配，页面组合可视化操作更得心应手；开发调试一体化，集成运行环境零配置运行，开箱即用。</blockquote>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016223009?w=2848&amp;h=1408" src="/img/remote/1460000016223009?w=2848&amp;h=1408" alt="cover" title="cover" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016223009?w=2848&amp;h=1408" src="https://static.alili.tech/img/remote/1460000016223009?w=2848&amp;h=1408" alt="cover" title="cover" style="cursor: pointer; display: inline;"></span></p>
 <h2 id="articleHeader1">2.7.0 发布概览</h2>
 <ul>
 <li>特性：新增官方推荐物料集合，内置支持 Bizcharts 的所有图表</li>
@@ -34,9 +34,9 @@ date: 2018-10-22 00:00:00
 <li><a href="https://g.alicdn.com/bizcharts-material/scaffold-screen-demo/0.0.3/index.html#/" rel="nofollow noreferrer" target="_blank">可视化大屏</a></li>
 <li><a href="https://g.alicdn.com/bizcharts-material/scaffold-screen-demo/0.0.3/index.html#/" rel="nofollow noreferrer" target="_blank">监控预警大屏-折线图</a></li>
 </ul>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016223010?w=1908&amp;h=1368" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016223010?w=1908&amp;h=1368" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span></p>
 <h3 id="articleHeader4">丰富的图表类区块</h3>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016223011?w=1908&amp;h=1368" src="/img/remote/1460000016223011?w=1908&amp;h=1368" alt="image" title="image" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016223011?w=1908&amp;h=1368" src="https://static.alili.tech/img/remote/1460000016223011?w=1908&amp;h=1368" alt="image" title="image" style="cursor: pointer; display: inline;"></span></p>
 <hr>
 <h2 id="articleHeader5">其他物料源</h2>
 <p>除了增加对 React 物料源的支持，我们也增加对 Vue 和 Angular 的支持；可通过 Iceworks 直接创建 Vue 或者 Angular 项目，主要由社区进行维护。</p>
@@ -57,16 +57,16 @@ date: 2018-10-22 00:00:00
 <li>完善的全局系统控制</li>
 </ul>
 <p>D2 Admin 主要由社区 <a href="https://github.com/FairyEver" rel="nofollow noreferrer" target="_blank">FairyEver</a> 维护，为了方便开发者快速开发推出的 D2 Admin ICE 和完整版的 D2 Admin 有完全一致的系统功能。D2 Admin ICE 和其它分支同时更新。<a href="http://app.d3collection.cn/d2-admin-doc/lastest/zh/learn-guide/" rel="nofollow noreferrer" target="_blank">D2 Admin 中文文档 | 介绍</a></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016223012?w=1908&amp;h=1368" src="/img/remote/1460000016223012?w=1908&amp;h=1368" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016223012?w=1908&amp;h=1368" src="https://static.alili.tech/img/remote/1460000016223012?w=1908&amp;h=1368" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <h3 id="articleHeader7">Angular 模板</h3>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016223013?w=1908&amp;h=1368" src="/img/remote/1460000016223013?w=1908&amp;h=1368" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016223013?w=1908&amp;h=1368" src="https://static.alili.tech/img/remote/1460000016223013?w=1908&amp;h=1368" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <hr>
 <h2 id="articleHeader8">自定义编辑器启动脚本</h2>
 <p>Iceworks 默认内置了 VSCode、SublimeText、Atom、WebStorm 等，但很难覆盖所有用户的编辑器选择。</p>
 <p>因此在改版本中增加了自定义编辑器启动脚本的功能。</p>
 <p>例如启动 VSCode 的命令是 <code>code</code>，将脚本定义为 <code>code ${cwd}</code> 即可。</p>
 <p><code>${cwd}</code> 在执行时会被替换成当前的项目地址</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016223014" src="/img/remote/1460000016223014" alt="image" title="image" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016223014" src="https://static.alili.tech/img/remote/1460000016223014" alt="image" title="image" style="cursor: pointer; display: inline;"></span></p>
 <hr>
 <p>扩展信息</p>
 <ul><li>官方网站：[飞冰-让前端开发简单而友好</li></ul>

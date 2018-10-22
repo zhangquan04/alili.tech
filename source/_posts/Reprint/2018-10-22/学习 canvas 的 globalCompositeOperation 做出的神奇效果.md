@@ -28,70 +28,70 @@ date: 2018-10-22 00:00:00
 <tr>
 <td align="left">source-over</td>
 <td>默认。在目标图像上显示源图像。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214911?w=126&amp;h=106" src="/img/remote/1460000016214911?w=126&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214911?w=126&amp;h=106" src="https://static.alili.tech/img/remote/1460000016214911?w=126&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 <tr>
 <td align="left">source-atop</td>
 <td>在目标图像顶部显示源图像。源图像位于目标图像之外的部分是不可见的。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214912?w=126&amp;h=106" src="/img/remote/1460000016214912?w=126&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214912?w=126&amp;h=106" src="https://static.alili.tech/img/remote/1460000016214912?w=126&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 <tr>
 <td align="left">source-in</td>
 <td>在目标图像中显示源图像。只有目标图像内的源图像部分会显示，目标图像是透明的。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214913?w=127&amp;h=106" src="/img/remote/1460000016214913?w=127&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214913?w=127&amp;h=106" src="https://static.alili.tech/img/remote/1460000016214913?w=127&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 <tr>
 <td align="left">source-out</td>
 <td>在目标图像之外显示源图像。只会显示目标图像之外源图像部分，目标图像是透明的。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214914?w=126&amp;h=106" src="/img/remote/1460000016214914?w=126&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214914?w=126&amp;h=106" src="https://static.alili.tech/img/remote/1460000016214914?w=126&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 <tr>
 <td align="left">destination-over</td>
 <td>在源图像上方显示目标图像。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214915?w=126&amp;h=107" src="/img/remote/1460000016214915?w=126&amp;h=107" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214915?w=126&amp;h=107" src="https://static.alili.tech/img/remote/1460000016214915?w=126&amp;h=107" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 <tr>
 <td align="left">destination-atop</td>
 <td>在源图像顶部显示目标图像。源图像之外的目标图像部分不会被显示。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214916?w=126&amp;h=106" src="/img/remote/1460000016214916?w=126&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214916?w=126&amp;h=106" src="https://static.alili.tech/img/remote/1460000016214916?w=126&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 <tr>
 <td align="left">destination-in</td>
 <td>在源图像中显示目标图像。只有源图像内的目标图像部分会被显示，源图像是透明的。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214917?w=125&amp;h=105" src="/img/remote/1460000016214917?w=125&amp;h=105" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214917?w=125&amp;h=105" src="https://static.alili.tech/img/remote/1460000016214917?w=125&amp;h=105" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 <tr>
 <td align="left">destination-out</td>
 <td>在源图像外显示目标图像。只有源图像外的目标图像部分会被显示，源图像是透明的。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214918?w=125&amp;h=105" src="/img/remote/1460000016214918?w=125&amp;h=105" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214918?w=125&amp;h=105" src="https://static.alili.tech/img/remote/1460000016214918?w=125&amp;h=105" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 <tr>
 <td align="left">lighter</td>
 <td>显示源图像 + 目标图像。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214919?w=125&amp;h=105" src="/img/remote/1460000016214919?w=125&amp;h=105" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214919?w=125&amp;h=105" src="https://static.alili.tech/img/remote/1460000016214919?w=125&amp;h=105" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 <tr>
 <td align="left">copy</td>
 <td>显示源图像。忽略目标图像。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214920?w=126&amp;h=105" src="/img/remote/1460000016214920?w=126&amp;h=105" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214920?w=126&amp;h=105" src="https://static.alili.tech/img/remote/1460000016214920?w=126&amp;h=105" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 <tr>
 <td align="left">xor</td>
 <td>使用异或操作对源图像与目标图像进行组合。</td>
-<td><span class="img-wrap"><img data-src="/img/remote/1460000016214921?w=127&amp;h=106" src="/img/remote/1460000016214921?w=127&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
+<td><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214921?w=127&amp;h=106" src="https://static.alili.tech/img/remote/1460000016214921?w=127&amp;h=106" alt="" title="" style="cursor: pointer; display: inline;"></span></td>
 </tr>
 </tbody>
 </table>
-<p>好的，下来实现一个<a href="https://codepen.io/FEWY/pen/oPxbmj" rel="nofollow noreferrer" target="_blank">水滴扩散</a><button class="btn btn-xs btn-default ml10 preview" data-url="FEWY/pen/oPxbmj" data-typeid="3">点击预览</button>的效果    <br><strong>效果图</strong>    <br><span class="img-wrap"><img data-src="/img/remote/1460000016214922?w=404&amp;h=250" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p>好的，下来实现一个<a href="https://codepen.io/FEWY/pen/oPxbmj" rel="nofollow noreferrer" target="_blank">水滴扩散</a><button class="btn btn-xs btn-default ml10 preview" data-url="FEWY/pen/oPxbmj" data-typeid="3">点击预览</button>的效果    <br><strong>效果图</strong>    <br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214922?w=404&amp;h=250" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p><strong>实现思路</strong>  </p>
 <p>在一个 canvas 上先画出黑白色的图片，然后设置背景是一张彩色的图片，鼠标点击时，设置 canvas 的 <code>globalCompositeOperation</code> 属性值为 <code>destination-out</code>，根据鼠标在 canvas 中的 坐标，用一个不规则的图形逐渐增大，来擦除掉黑白色的图片，就可以慢慢显示彩色的背景了。</p>
 <p>也就是说我们需要三张图片 </p>
 <p><strong>黑白的图片</strong></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016214923?w=640&amp;h=360" src="/img/remote/1460000016214923?w=640&amp;h=360" alt="这里写图片描述" title="这里写图片描述" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214923?w=640&amp;h=360" src="https://static.alili.tech/img/remote/1460000016214923?w=640&amp;h=360" alt="这里写图片描述" title="这里写图片描述" style="cursor: pointer; display: inline;"></span></p>
 <p><strong>彩色的图片</strong>    </p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016214924?w=640&amp;h=360" src="/img/remote/1460000016214924?w=640&amp;h=360" alt="这里写图片描述" title="这里写图片描述" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214924?w=640&amp;h=360" src="https://static.alili.tech/img/remote/1460000016214924?w=640&amp;h=360" alt="这里写图片描述" title="这里写图片描述" style="cursor: pointer; display: inline;"></span></p>
 <p><strong>不规则形状的图片</strong></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016214925?w=100&amp;h=100" src="/img/remote/1460000016214925?w=100&amp;h=100" alt="这里写图片描述" title="这里写图片描述" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214925?w=100&amp;h=100" src="https://static.alili.tech/img/remote/1460000016214925?w=100&amp;h=100" alt="这里写图片描述" title="这里写图片描述" style="cursor: pointer; display: inline;"></span></p>
 <p><strong>代码</strong></p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
@@ -320,7 +320,7 @@ date: 2018-10-22 00:00:00
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
 <p>我们继续来实现一个刮刮卡的效果</p>
 <p><strong>效果图</strong></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016214926?w=403&amp;h=252" src="/img/remote/1460000016214926?w=403&amp;h=252" alt="这里写图片描述" title="这里写图片描述" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214926?w=403&amp;h=252" src="https://static.alili.tech/img/remote/1460000016214926?w=403&amp;h=252" alt="这里写图片描述" title="这里写图片描述" style="cursor: pointer; display: inline;"></span></p>
 <p><strong>刮刮卡效果实现的思路：</strong></p>
 <p>一个 canvas 上先画一层灰色，然后设置canvas的背景图，设置 canvas 的 <code>globalCompositeOperation</code>属性值为 <code>destination-out</code>，点击并移动时，根据移动点的坐标，擦除掉灰色，当擦掉一部分时，再自动擦除掉全部灰色，显示出背景来。</p>
 <p>刮刮卡的效果和水滴扩散的效果，在开始的时候几乎是一样的，不过水滴扩散效果，用的是一张不规则形状的图片来清除黑白图片，而刮刮卡效果，是通过画线的方式，线比较粗而已，来清除上面的灰色。<br>主要的不同是，刮刮卡效果最后需要自动擦除掉全部灰色，这里有两种方式。</p>
@@ -332,7 +332,7 @@ date: 2018-10-22 00:00:00
 <p>第二种方式，使用图片地址，不存在跨域的问题，但是不能很好的控制最后擦除全部灰色的时机。</p>
 <h3 id="articleHeader3">总结</h3>
 <p>文章中的效果主要是使用 <code>globalCompositeOperation</code>属性取值为 <code>destination-out</code> ，而取值为其他值的时候，同样也是可以制作出各种效果的，大家也可以发挥自己的想象力，去试试其它值，也许有新发现呢。</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000016248923?w=600&amp;h=342" src="/img/remote/1460000016248923?w=600&amp;h=342" alt="这里写图片描述" title="这里写图片描述" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016248923?w=600&amp;h=342" src="https://static.alili.tech/img/remote/1460000016248923?w=600&amp;h=342" alt="这里写图片描述" title="这里写图片描述" style="cursor: pointer; display: inline;"></span></p>
 
                 
 {% endraw %}
