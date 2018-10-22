@@ -34,7 +34,7 @@ date: 2017-08-08 00:04:05
 node --inspect app.js 
 ```
 
-![](https://alili.tech/images/debug.png)
+![](https://static.alili.tech/images/debug.png)
 
 复制控制台输出的:
 

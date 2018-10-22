@@ -32,12 +32,12 @@ date: 2018-09-02 22:17:36
 ## 单体应用对比前端微服务化
 
 ### 普通的前端单体应用
-![](https://alili.tech/images/micro/current.png)
+![](https://static.alili.tech/images/micro/current.png)
 
 
 ### 微前端架构
 
-![](https://alili.tech/images/micro/mf.png)
+![](https://static.alili.tech/images/micro/mf.png)
 
  # Single-SPA的简单用法
 
