@@ -5,7 +5,7 @@ abbrlink: f2c7a3e5
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2018-09-08 00:00:00
 ---
-![](/images/github_16.png)
+![](https://static.alili.tech/images/github_16.png)
 ##   [felixrieseberg / windows95](https://github.com/felixrieseberg/windows95) : 
  
 11,905 stars this month

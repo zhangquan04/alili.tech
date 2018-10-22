@@ -5,7 +5,7 @@ abbrlink: f3c703da
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2018-03-08 00:00:00
 ---
-![](/images/github_39.png)
+![](https://static.alili.tech/images/github_39.png)
 ##   [yangshun / front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook) : 
  
 10,617 stars this month

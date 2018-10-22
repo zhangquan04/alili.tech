@@ -5,7 +5,7 @@ abbrlink: c5359329
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2018-02-22 00:00:00
 ---
-![](/images/github_33.png)
+![](https://static.alili.tech/images/github_33.png)
 ##   [yangshun / front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook) : 
  
 7,459 stars this month

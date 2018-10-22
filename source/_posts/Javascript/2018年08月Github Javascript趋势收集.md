@@ -5,7 +5,7 @@ abbrlink: c4353316
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2018-08-09 00:00:00
 ---
-![](/images/github_11.png)
+![](https://static.alili.tech/images/github_11.png)
 ##   [felixrieseberg / windows95](https://github.com/felixrieseberg/windows95) : 
  
 10,485 stars this month

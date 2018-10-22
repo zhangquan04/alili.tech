@@ -5,7 +5,7 @@ abbrlink: 280d4016
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2018-07-08 00:00:00
 ---
-![](/images/github_31.png)
+![](https://static.alili.tech/images/github_31.png)
 ##   [vuejs / vue](https://github.com/vuejs/vue) : 
  
 10,466 stars this month

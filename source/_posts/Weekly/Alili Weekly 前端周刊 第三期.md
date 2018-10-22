@@ -6,7 +6,7 @@ tags:
 abbrlink: 9196ee0d
 date: 2018-10-19 00:00:00
 ---
-![Alili Weekly 前端周刊 第三期](/images/github_24.png)
+![Alili Weekly 前端周刊 第三期](https://static.alili.tech/images/github_24.png)
 ##   [大型网站的 HTTPS 实践：协议层以外的实践](https://mp.weixin.qq.com/s/hy0qauQ_hvAJNMYOHvnxLg)  
  
 “ HTTPS 的全站部署，给我们提供了能解决大部分问题的选项。能让一个做技术的人看到自己的努力解决了用户的问题，这就是最棒的收获。” 

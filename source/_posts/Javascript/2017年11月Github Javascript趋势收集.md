@@ -5,7 +5,7 @@ abbrlink: 1b9974b0
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2017-11-08 00:00:00
 ---
-![](/images/github_16.png)
+![](https://static.alili.tech/images/github_16.png)
 ##   [frappe / charts](https://github.com/frappe/charts) : 
  
 6,574 stars this month

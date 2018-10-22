@@ -5,7 +5,7 @@ abbrlink: 1effd0e5
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2018-06-08 00:00:00
 ---
-![](/images/github_54.png)
+![](https://static.alili.tech/images/github_54.png)
 ##   [trekhleb / javascript-algorithms](https://github.com/trekhleb/javascript-algorithms) : 
  
 20,629 stars this month

@@ -6,7 +6,7 @@ tags:
 abbrlink: dc884d5f
 date: 2018-10-12 00:00:00
 ---
-![Alili Weekly 前端周刊 第二期](/images/github_61.png)
+![Alili Weekly 前端周刊 第二期](https://static.alili.tech/images/github_61.png)
 ##   [JavaScript引擎基础：优化原型](https://www.zcfy.cc/article/javascript-engine-fundamentals-optimizing-prototypes)  
  
 本文对所有 JavaScript 引擎中常见的一些关键基础内容进行了介绍——这不仅仅局限于 V8 引擎( https://twitter.com/v8js ) 。。作为一名 JavaScript 开发者，深入了解 JavaScript 引擎是如何... 

@@ -6,7 +6,7 @@ tags:
 abbrlink: ec9ea187
 date: 2018-10-05 00:00:00
 ---
-![](/images/github_31.png)
+![](https://static.alili.tech/images/github_31.png)
 ##   [用微前端的方式搭建类单页应用](https://juejin.im/post/5b921b415188255c9031b0c3)  
  
 本文介绍了“微前端构建类单页应用”在美团 HR 系统中的实践。 

@@ -11,7 +11,7 @@ date: 2017-01-10 12:43:05
 
 昨天在某宝下单。今天就拿到了。我买的是Raspberry Pi3 Modle B。
 
-![](/images/pi-2.jpg)
+![](https://static.alili.tech/images/pi-2.jpg)
 <!-- more -->
 树莓派并没有自带硬盘，所以想要安装系统的话，要自己准备TF卡或者U盘。
 

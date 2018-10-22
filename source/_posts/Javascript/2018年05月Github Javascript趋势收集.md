@@ -5,7 +5,7 @@ abbrlink: 45e861f0
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2018-05-08 00:00:00
 ---
-![](/images/github_15.png)
+![](https://static.alili.tech/images/github_15.png)
 ##   [xx45 / dayjs](https://github.com/xx45/dayjs) : 
  
 7,739 stars this month

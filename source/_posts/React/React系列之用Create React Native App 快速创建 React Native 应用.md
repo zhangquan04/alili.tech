@@ -22,7 +22,7 @@ $ npm start
 ```
 安装 [Expo](https://expo.io) 这个APP在你的iphone或者安卓手机上. npm start 之后,控制台会出现一个二维码.用这个Expo 扫描这个二维码,就可以马上在你的手机上直接进行远程调试了.那是相当的方便啊.但是速度还是相对桌面模拟器调试慢一点.
 
-![](/images/expo-qrcode.png)
+![](https://static.alili.tech/images/expo-qrcode.png)
 
 
 # Expo的桌面开发工具 Expo XDE
@@ -33,4 +33,4 @@ $ npm start
 
 只不过我Mac的模拟器在安装expo的时候,花了好长的一段时间.如果大家有遇到类似的情况一定要耐心的等一等.
 
-![](/images/xde.png)
+![](https://static.alili.tech/images/xde.png)

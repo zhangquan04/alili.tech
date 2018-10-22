@@ -5,7 +5,7 @@ abbrlink: 731af103
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2018-04-08 00:00:00
 ---
-![](/images/github_19.png)
+![](https://static.alili.tech/images/github_19.png)
 ##   [Meituan-Dianping / mpvue](https://github.com/Meituan-Dianping/mpvue) : 
  
 7,052 stars this month

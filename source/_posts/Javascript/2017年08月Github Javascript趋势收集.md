@@ -5,7 +5,7 @@ abbrlink: 650c34ac
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2017-08-09 00:00:00
 ---
-![](/images/github_1.png)
+![](https://static.alili.tech/images/github_1.png)
 ##   [denysdovhan / wtfjs](https://github.com/denysdovhan/wtfjs) : 
  
 6,613 stars this month

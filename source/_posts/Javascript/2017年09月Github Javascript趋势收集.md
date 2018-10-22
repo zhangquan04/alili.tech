@@ -5,7 +5,7 @@ abbrlink: 53fea45f
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
 date: 2017-09-08 00:00:00
 ---
-![](/images/github_44.png)
+![](https://static.alili.tech/images/github_44.png)
 ##   [GoogleChrome / puppeteer](https://github.com/GoogleChrome/puppeteer) : 
  
 12,857 stars this month
