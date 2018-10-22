@@ -90,7 +90,7 @@ baidu_url_submit:
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
   xz_appid: '1613049289050283'
   xz_token: 'PEQAd9p3kMBAzNjY'
-  xz_count: 10
+  xz_count: 20
 
 pwa:
   serviceWorker:
