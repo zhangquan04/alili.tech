@@ -65,4 +65,12 @@
       "pubDate": "<%- date(Date.now(), "YYYY-MM-DD\THH:mm:ss") %>"
   } 
 </script>
+<script>
+  document.addEventListener("error", function (e) {
+    var elem = e.target;
+    if (elem.tagName.toLowerCase() == 'img') {
+      elem.style.display='none'
+    }
+  }, true);
+  </script>
 </head>

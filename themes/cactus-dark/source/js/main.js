@@ -8,6 +8,7 @@ if (!!$.prototype.justifiedGallery) { // if justifiedGallery method is defined
 }
 
 $(document).ready(function () {
+
   $("#menu-icon, #menu-icon-tablet").click(function () {
     if ($('#menu').css('visibility') == 'hidden') {
       $('#menu').css('visibility', 'visible');
@@ -134,3 +135,5 @@ var _mtac = {};
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(mta, s);
 })();
+
+
