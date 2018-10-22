@@ -133,6 +133,7 @@ var _mtac = {};
     mta.setAttribute("name", "MTAH5");
     mta.setAttribute("sid", "500643908");
     var s = document.getElementsByTagName("script")[0];
+    if(window.location.host=="localhost:4000")return;
     s.parentNode.insertBefore(mta, s);
 })();
 
