@@ -65,7 +65,7 @@ date: 2018-10-23 00:00:00
 <p><strong>TCP和UDP的区别？</strong></p>
 <p>仔细阅读上面传输层里写的内容，懂了吗？（不懂？不懂背下来啊，混蛋！）<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014434214?w=255&amp;h=255" src="https://static.alili.tech/img/remote/1460000014434214?w=255&amp;h=255" alt="举个例子" title="举个例子" style="cursor: pointer; display: inline;"></span></p>
 <p>我们微信聊天时候经常会有这种情况。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014434215?w=500&amp;h=820" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014434215?w=500&amp;h=820" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>是不是感同身受，这种情况就是对方用了TCP协议来聊天，要经过--在吗？--在--巴拉巴拉，才能成功的传递信息。<br>而如果对方使用UDP，则会有事直接说，不管我收没收到。（以后找我请用UDP协议，着急直接打电话！）</p>
 <h2 id="articleHeader4">HTTP</h2>
 <p>Http协议是建立在TCP协议基础之上的，当浏览器需要从服务器获取网页数据的时候，会发出一次Http请求。Http会通过TCP建立起一个到服务器的连接通道，当本次请求需要的数据完毕后，Http会立即将TCP连接断开，这个过程是很短的。所以Http连接是一种短连接，是一种无状态的连接。</p>
@@ -137,7 +137,7 @@ date: 2018-10-23 00:00:00
 </ul>
 </li>
 </ul>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014434218?w=500&amp;h=500" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014434218?w=500&amp;h=500" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 
                 
 {% endraw %}

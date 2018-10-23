@@ -102,7 +102,7 @@ date: 2018-10-22 00:00:00
 </li>
 </ul>
 <p>就这样，我们把一个简单的add函数拆解完毕，用图表示就是</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016231998?w=1380&amp;h=910" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016231998?w=1380&amp;h=910" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span></p>
 <p>看！抽象语法树(Abstract Syntax Tree)，的确是一种标准的树结构。</p>
 <p>那么，上面我们提到的Identifier、Blockstatement、ReturnStatement、BinaryExpression， 这一个个小部件的说明书去哪查？</p>
 <p><strong>请查看 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API#Node_objects" rel="nofollow noreferrer" target="_blank">AST对象文档</a></strong></p>

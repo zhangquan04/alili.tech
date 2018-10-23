@@ -82,7 +82,7 @@ date: 2018-10-22 00:00:00
 </tr>
 </tbody>
 </table>
-<p>好的，下来实现一个<a href="https://codepen.io/FEWY/pen/oPxbmj" rel="nofollow noreferrer" target="_blank">水滴扩散</a><button class="btn btn-xs btn-default ml10 preview" data-url="FEWY/pen/oPxbmj" data-typeid="3">点击预览</button>的效果    <br><strong>效果图</strong>    <br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214922?w=404&amp;h=250" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p>好的，下来实现一个<a href="https://codepen.io/FEWY/pen/oPxbmj" rel="nofollow noreferrer" target="_blank">水滴扩散</a><button class="btn btn-xs btn-default ml10 preview" data-url="FEWY/pen/oPxbmj" data-typeid="3">点击预览</button>的效果    <br><strong>效果图</strong>    <br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016214922?w=404&amp;h=250" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p><strong>实现思路</strong>  </p>
 <p>在一个 canvas 上先画出黑白色的图片，然后设置背景是一张彩色的图片，鼠标点击时，设置 canvas 的 <code>globalCompositeOperation</code> 属性值为 <code>destination-out</code>，根据鼠标在 canvas 中的 坐标，用一个不规则的图形逐渐增大，来擦除掉黑白色的图片，就可以慢慢显示彩色的背景了。</p>
 <p>也就是说我们需要三张图片 </p>

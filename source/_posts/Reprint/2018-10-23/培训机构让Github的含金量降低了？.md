@@ -16,13 +16,13 @@ date: 2018-10-23 00:00:00
 <h2 id="articleHeader1">2.现状</h2>
 <p><strong>先来引用掘金沸点的几张图片</strong></p>
 <p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbeRiR?w=2978&amp;h=1664" src="https://static.alili.tech/img/bVbeRiR?w=2978&amp;h=1664" alt="图片描述" title="图片描述" style="cursor: pointer; display: inline;"></span></p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbeRiX?w=1255&amp;h=786" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="图片描述" title="图片描述" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbeRiX?w=1255&amp;h=786" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="图片描述" title="图片描述" style="cursor: pointer;"></span></p>
 <p>（图片出自掘金的沸点：<a href="https://juejin.im/pin/5b57dea05188257d2b78daaf" rel="nofollow noreferrer" target="_blank">https://juejin.im/pin/5b57dea...</a> ）</p>
 <p>看到上图，没猜错就是全班同学做的班级作业，然后每一个人都上传到 Github 上面 。给人的感觉要么就是集体刷 star ，以打造自己简历的含金量；要么就是把 Github 当网盘用了，做好的东西就直接放里面保存。</p>
 <p><strong>再来一篇文章</strong></p>
 <p><a href="https://zhuanlan.zhihu.com/p/38791657" rel="nofollow noreferrer" target="_blank">中国内地 GitHub 造假呈指数级增长，其背后是……</a></p>
 <p>文章的其中一张图片</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbeRiY?w=720&amp;h=808" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="图片描述" title="图片描述" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbeRiY?w=720&amp;h=808" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="图片描述" title="图片描述" style="cursor: pointer;"></span></p>
 <p>这个还没有得到证实，当时看到挺震惊的，居然有人把 Github 造假职业化了。但后来也就习惯了，毕竟利益的驱动不小啊！</p>
 <blockquote>现在的状况，除了简历，还会在 Github 上面造假，不知道再过一段时间，是不是轮到了 Stackoverflow ， npm ，yarn 也有造假了！</blockquote>
 <h2 id="articleHeader2">3.关于培训机构</h2>

@@ -14,7 +14,7 @@ date: 2018-10-23 00:00:00
 <p>每每上手新的编辑器，我都会根据自己的开发习惯把它调较到理想状态，加上熟悉编辑器各种特性，这个过程通常需要几周的时间。接下来，我就从外观配置、风格检查、编码效率、功能增强等 4 方面来侃侃怎么配置 VSCode 来提高工作幸福感。</p>
 <h2 id="articleHeader0">外观配置</h2>
 <p>外观是最先考虑的部分，从配置的角度，无非是配色、图标、字体等，俗话说萝卜白菜各有所爱，我目前的配色、图标、字体从下图基本都能看出来，供大家参考：</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011982047?w=2872&amp;h=1754" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011982047?w=2872&amp;h=1754" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <ul>
 <li><p>配色：<a href="http://ethanschoonover.com/solarized" rel="nofollow noreferrer" target="_blank">Solarized Dark</a>，VSCode 已经内置，使用了至少 5 年以上的主题，Vim 下的配置完全相同；</p></li>
 <li><p>图标：<a href="https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons" rel="nofollow noreferrer" target="_blank">VSCode Great Icons</a>，给不同类型的文件配置不同的图标，非常直观；</p></li>

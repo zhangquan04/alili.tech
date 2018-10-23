@@ -32,11 +32,11 @@ date: 2018-10-23 00:00:00
 <p><strong>分类</strong></p>
 <p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994546?w=378&amp;h=660" src="https://static.alili.tech/img/remote/1460000015994546?w=378&amp;h=660" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p><strong>登录</strong></p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994547" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994547" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p><strong>购买</strong></p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994548" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994549" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994548" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994549" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p><strong>发布</strong></p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994550" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994550" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <h3 id="articleHeader3">代码目录结构</h3>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">

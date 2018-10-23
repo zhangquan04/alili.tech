@@ -32,7 +32,7 @@ date: 2018-10-23 00:00:00
 <h2 id="articleHeader1">登录篇</h2>
 <blockquote>首先我们不管什么权限，来实现最基础的登录功能。</blockquote>
 <p>随便找一个空白页面撸上两个input的框，一个是登录账号，一个是登录密码。再放置一个登录按钮。我们将登录按钮上绑上click事件，点击登录之后向服务端提交账号和密码进行验证。<br>这就是一个最简单的登录页面。如果你觉得还要写的更加完美点，你可以在向服务端提交之前对账号和密码做一次简单的校验。<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/login/index.vue" rel="nofollow noreferrer" target="_blank">详细代码</a></p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016613452?w=478&amp;h=285" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016613452?w=478&amp;h=285" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p><strong>click事件触发登录操作:</strong></p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
@@ -595,7 +595,7 @@ service.interceptors.response.use(
 </code></pre>
 <hr>
 <h3 id="articleHeader13">两步验证</h3>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016613454?w=1265&amp;h=574" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016613454?w=1265&amp;h=574" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>文章一开始也说了，后台的安全性是很重要的，简简单单的一个账号+密码的方式是很难保证安全性的。所以我司的后台项目都是用了两步验证的方式，之前我们也尝试过使用基于 <a href="https://github.com/google/google-authenticator" rel="nofollow noreferrer" target="_blank">google-authenticator</a> 或者<code>youbikey</code>这样的方式但难度和操作成本都比较大。后来还是准备借助腾讯爸爸，这年代谁不用微信。。。安全性腾讯爸爸也帮我做好了保障。<br><strong>楼主建议</strong>两步验证要支持多个渠道不要只微信或者QQ，前段时间QQ第三方登录就出了bug，官方两三天才修好的，害我背了锅/(ㄒoㄒ)/~~ 。</p>
 <p>这里的两部验证有点名不副实，其实就是账号密码验证过之后还需要一个绑定的第三方平台登录验证而已。<br>写起来也很简单，在原有登录得逻辑上改造一下就好。</p>
 <div class="widget-codetool" style="display:none;">
@@ -617,7 +617,7 @@ service.interceptors.response.use(
 }).<span class="hljs-keyword">catch</span>(err =&gt; {
   <span class="hljs-keyword">this</span>.$message.error(err); <span class="hljs-comment">//登录失败提示错误</span>
 });</code></pre>
-<p>登录成功之后不直接跳到首页而是让用户两步登录，选择登录得平台。<br>接下来就是所有第三方登录一样的地方通过 OAuth2.0 授权。这个各大平台大同小异，大家自行查阅文档，不展开了，就说一个微信授权比较坑的地方。<strong>注意</strong>你连参数的顺序都不能换，不然会验证不通过。<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/login/socialsignin.vue" rel="nofollow noreferrer" target="_blank">具体代码</a>，同时我也封装了<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/openWindow.js" rel="nofollow noreferrer" target="_blank">openWindow</a>方法大家自行看吧。<br>当第三方授权成功之后都会跳到一个你之前有一个传入redirect——uri的页面<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016613455" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>如微信还必须是你授权账号的一级域名。所以你授权的域名是vue-element-admin.com,你就必须重定向到vue-element-admin.com/xxx/下面，所以你需要写一个重定向的服务，如vue-element-admin.com/auth/redirect?a.com 跳到该页面时会再次重定向给a.com。</p>
+<p>登录成功之后不直接跳到首页而是让用户两步登录，选择登录得平台。<br>接下来就是所有第三方登录一样的地方通过 OAuth2.0 授权。这个各大平台大同小异，大家自行查阅文档，不展开了，就说一个微信授权比较坑的地方。<strong>注意</strong>你连参数的顺序都不能换，不然会验证不通过。<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/login/socialsignin.vue" rel="nofollow noreferrer" target="_blank">具体代码</a>，同时我也封装了<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/openWindow.js" rel="nofollow noreferrer" target="_blank">openWindow</a>方法大家自行看吧。<br>当第三方授权成功之后都会跳到一个你之前有一个传入redirect——uri的页面<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016613455" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>如微信还必须是你授权账号的一级域名。所以你授权的域名是vue-element-admin.com,你就必须重定向到vue-element-admin.com/xxx/下面，所以你需要写一个重定向的服务，如vue-element-admin.com/auth/redirect?a.com 跳到该页面时会再次重定向给a.com。</p>
 <p>所以我们后台也需要开一个authredirect页面：<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/login/authredirect.vue" rel="nofollow noreferrer" target="_blank">代码</a>。他的作用是第三方登录成功之后会默认跳到授权的页面，授权的页面会再次重定向回我们的后台，由于是spa，改变路由的体验不好，我们通过<code>window.opener.location.href</code>的方式改变hash，在login.js里面再监听hash的变化。当hash变化时，获取之前第三方登录成功返回的code与第一步账号密码登录之后返回的uid一同发送给服务端验证是否正确，如果正确，这时候就是真正的登录成功。</p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">

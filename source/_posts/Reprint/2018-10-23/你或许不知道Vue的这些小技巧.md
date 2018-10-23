@@ -569,7 +569,7 @@ date: 2018-10-23 00:00:00
 <h3 id="articleHeader13">看完的朋友可以点个喜欢/关注，您的支持是对我最大的鼓励。</h3>
 <p><strong><a href="http://obkoro1.com/" rel="nofollow noreferrer" target="_blank">个人blog</a></strong> and <strong><a href="https://juejin.im/user/58714f0eb123db4a2eb95372" rel="nofollow noreferrer" target="_blank">掘金个人主页</a></strong>，如需转载，请放上原文链接并署名。码字不易，<strong>感谢</strong>支持！</p>
 <p>如果喜欢本文的话，欢迎关注我的订阅号，漫漫技术路，期待未来共同学习成长。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014694068?w=344&amp;h=344" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014694068?w=344&amp;h=344" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>以上2018.6.3</p>
 <h3 id="articleHeader14">参考资料：</h3>
 <p><a href="https://cn.vuejs.org/v2/guide/" rel="nofollow noreferrer" target="_blank">Vue文档</a></p>

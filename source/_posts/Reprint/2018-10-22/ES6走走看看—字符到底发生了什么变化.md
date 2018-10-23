@@ -18,7 +18,7 @@ date: 2018-10-22 00:00:00
 <p>计算机内部处理的信息，都是一个些二进制值，每一个二进制位（bit）有0和1两种状态。<br>一个字节（byte）有八个二进制位，也就是说，一个字节一共可以用来表示256种不同的状态，每一个状态对应一个符号，就是256个符号，从<code>00000000</code>到<code>11111111</code>。转换成十六进制，一个字节就是<code>0x00</code>到<code>OxFF</code>。</p>
 <h3 id="articleHeader1">1.1 先来聊聊字符编码的历程</h3>
 <p>先祭出一张图，建议放大看</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgyR7?w=2903&amp;h=1212" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="图片描述" title="图片描述" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgyR7?w=2903&amp;h=1212" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="图片描述" title="图片描述" style="cursor: pointer;"></span></p>
 <p><b>（1） ASCII 码 </b></p>
 <p>上个世纪60年代，美国制定了一套字符编码，对英语字符与二进制位之间的关系，做了统一规定。这被称为 ASCII 码(美国信息交换标准代码)，一直沿用至今。</p>
 <p>ASCII 码一共规定了128个字符的编码,只占用了一个字节的后面7位，最前面的一位统一规定为0。</p>
@@ -30,9 +30,9 @@ date: 2018-10-22 00:00:00
 <p>英语用128个符号编码就够了，但是世界上可不只有英语这一种语言，先不说汉语，就是那些不说英语的欧洲国家，128个符号是不够的。</p>
 <p>一些欧洲国家就决定，利用字节中闲置的最高位编入新的符号，这些欧洲国家使用的编码体系，可以表示最多256个符号。大家你加你的，我加我的。因此，哪怕它们都使用256个符号的编码方式，代表的字母却不一样。</p>
 <p>1981年IBM PC ROM256个字符的字符集，即IBM扩展字符集，这128个扩充字符是由IBM制定的,并非标准的ASCII码.这些字符是用来表示框线、音标和其它欧洲非英语系的字母。如下图：</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgySA?w=586&amp;h=684" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="图片描述" title="图片描述" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgySA?w=586&amp;h=684" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="图片描述" title="图片描述" style="cursor: pointer;"></span></p>
 <p>在Windows 1.0（1985年11月发行）中，Microsoft没有完全放弃IBM扩展字符集，但它已退居第二重要位置。因为遵循了ANSI草案和ISO标准，纯Windows字符集被称作「ANSI字符集」。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgySD?w=622&amp;h=519" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="ANSI字符集的最初版本" title="ANSI字符集的最初版本" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgySD?w=622&amp;h=519" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="ANSI字符集的最初版本" title="ANSI字符集的最初版本" style="cursor: pointer;"></span></p>
 <p>由此可见扩展ASCII不再是国际标准。</p>
 <p>而对于亚洲国家的文字，使用的符号就更多了，汉字就多达10万左右（《中华辞海》共收汉字87019个，日本《今昔文字镜》收录汉字超15万）。一个字节只能表示256种符号，肯定是不够的，就必须使用多个字节表达一个符号。比如，简体中文常见的编码方式是 GB2312(中华人民共和国国家标准简体中文字符集)，使用两个字节表示一个汉字，所以理论上最多可以表示 256 x 256 = 65536 个符号。其实GB 2312标准共收录6763个汉字，它所收录的汉字已经覆盖中国大陆99.75%的使用频率。</p>
 <p><b> (3) Unicode </b></p>

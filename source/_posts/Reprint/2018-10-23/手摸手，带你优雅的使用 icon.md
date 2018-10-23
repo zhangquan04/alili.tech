@@ -110,7 +110,7 @@ date: 2018-10-23 00:00:00
       </div>
       </div><pre class="hljs javascript"><code style="word-break: break-word; white-space: initial;">&lt;i <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"iconfont icon-xxx"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span></code></pre>
 <p>效果图：</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213285?w=800&amp;h=146" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="image.png" title="image.png" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213285?w=800&amp;h=146" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image.png" title="image.png" style="cursor: pointer;"></span></p>
 <p>它的主要原理其实是和 <code>unicode</code> 一样的，它只是多做了一步，将原先<code>&amp;#xe604</code>这种写法换成了<code>.icon-QQ</code>，它在每个 class 的 before 属性中写了<code>unicode</code>,省去了人为写的麻烦。如 <code>.icon-QQ:before { content: "\e604"; }</code></p>
 <p>相对于<code>unicode</code> 它的修改更加的方便与直观。但也有一个大坑，之前楼主一个项目中用到了两组<code>font-class</code> 由于没有做好命名空间，所有的class都是放在<code>.iconfont</code> 命名空间下的，一上线引发了各种雪崩问题，修改了半天，所以使用<code>font-class</code>一定要注意命名空间的问题。</p>
 <h3 id="articleHeader5">symbol</h3>
@@ -270,7 +270,7 @@ Vue.component(<span class="hljs-string">'icon-svg'</span>, IconSvg)
 <h2 id="articleHeader7">进一步改造</h2>
 <p>但作为一个有逼格的前端开发，怎能就此满足呢!目前还是有一个致命的缺点的，就是现在所有的 <code>svg-sprite</code> 都是通过 iconfont 的 <code>iconfont.js</code> 生成的。</p>
 <ul><li>首先它是一段用js来生成svg的代码，所有图标 icon 都很<strong>不直观</strong>。</li></ul>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213287?w=1470&amp;h=404" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="如图所示" title="如图所示" style="cursor: pointer;"></span><br>你完全不知道哪个图标名对应什么图标，一脸尼克扬问号??? 每次增删改图标只能整体js文件一起替换。</p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213287?w=1470&amp;h=404" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="如图所示" title="如图所示" style="cursor: pointer;"></span><br>你完全不知道哪个图标名对应什么图标，一脸尼克扬问号??? 每次增删改图标只能整体js文件一起替换。</p>
 <ul>
 <li>其次它也做不到<strong>按需加载</strong>，不能根据我们使用了那些 svg 动态的生成 <code>svg-sprite</code>。</li>
 <li>
@@ -349,7 +349,7 @@ requireAll(req)" title="" data-original-title="复制"></span>
 <span class="hljs-keyword">const</span> req = <span class="hljs-built_in">require</span>.context(<span class="hljs-string">'./svg'</span>, <span class="hljs-literal">false</span>, /\.svg$/)
 requireAll(req)</code></pre>
 <p>之后我们增删改图标直接直接文件夹下对应的图标就好了，什么都不用管，就会自动生成 <code>svg symbol</code>了。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213289?w=1156&amp;h=138" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213289?w=1156&amp;h=138" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <h2 id="articleHeader10">更进一步优化自己的svg</h2>
 <p>首先我们来看一下 从 <code>阿里iconfont</code> 网站上导出的 svg 长什么样？</p>
 <p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213290?w=1482&amp;h=362" src="https://static.alili.tech/img/remote/1460000012213290?w=1482&amp;h=362" alt="" title="" style="cursor: pointer; display: inline;"></span></p>

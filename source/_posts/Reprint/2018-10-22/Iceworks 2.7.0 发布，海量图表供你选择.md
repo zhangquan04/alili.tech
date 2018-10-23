@@ -34,7 +34,7 @@ date: 2018-10-22 00:00:00
 <li><a href="https://g.alicdn.com/bizcharts-material/scaffold-screen-demo/0.0.3/index.html#/" rel="nofollow noreferrer" target="_blank">可视化大屏</a></li>
 <li><a href="https://g.alicdn.com/bizcharts-material/scaffold-screen-demo/0.0.3/index.html#/" rel="nofollow noreferrer" target="_blank">监控预警大屏-折线图</a></li>
 </ul>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016223010?w=1908&amp;h=1368" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016223010?w=1908&amp;h=1368" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span></p>
 <h3 id="articleHeader4">丰富的图表类区块</h3>
 <p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016223011?w=1908&amp;h=1368" src="https://static.alili.tech/img/remote/1460000016223011?w=1908&amp;h=1368" alt="image" title="image" style="cursor: pointer; display: inline;"></span></p>
 <hr>
