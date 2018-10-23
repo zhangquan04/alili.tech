@@ -63,16 +63,16 @@ date: 2018-10-23 00:00:00
 </ul>
 <p>还不懂的童鞋，去找别人的文章好好看看！</p>
 <p><strong>TCP和UDP的区别？</strong></p>
-<p>仔细阅读上面传输层里写的内容，懂了吗？（不懂？不懂背下来啊，混蛋！）<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014434214?w=255&amp;h=255" src="https://static.alili.tech/img/remote/1460000014434214?w=255&amp;h=255" alt="举个例子" title="举个例子" style="cursor: pointer; display: inline;"></span></p>
+<p>仔细阅读上面传输层里写的内容，懂了吗？（不懂？不懂背下来啊，混蛋！）<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000014434214?w=255&amp;h=255" src="https://static.alili.tech/img/remote/1460000014434214?w=255&amp;h=255" alt="举个例子" title="举个例子" style="cursor: pointer; display: inline;"></span></p>
 <p>我们微信聊天时候经常会有这种情况。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014434215?w=500&amp;h=820" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000014434215?w=500&amp;h=820" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>是不是感同身受，这种情况就是对方用了TCP协议来聊天，要经过--在吗？--在--巴拉巴拉，才能成功的传递信息。<br>而如果对方使用UDP，则会有事直接说，不管我收没收到。（以后找我请用UDP协议，着急直接打电话！）</p>
 <h2 id="articleHeader4">HTTP</h2>
 <p>Http协议是建立在TCP协议基础之上的，当浏览器需要从服务器获取网页数据的时候，会发出一次Http请求。Http会通过TCP建立起一个到服务器的连接通道，当本次请求需要的数据完毕后，Http会立即将TCP连接断开，这个过程是很短的。所以Http连接是一种短连接，是一种无状态的连接。</p>
 <p>所谓的无状态，是指浏览器每次向服务器发起请求的时候，不是通过一个连接，而是每次都建立一个新的连接。如果是一个连接的话，服务器进程中就能保持住这个连接并且在内存中记住一些信息状态。而每次请求结束后，连接就关闭，相关的内容就释放了，所以记不住任何状态，成为无状态连接。</p>
 <h3 id="articleHeader5">http传输流</h3>
 <p>无耻盗图</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014434216" src="https://static.alili.tech/img/remote/1460000014434216" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000014434216" src="https://static.alili.tech/img/remote/1460000014434216" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>发送端在层与层间传输数据时，没经过一层都会被加上首部信息，接收端每经过一层都会删除一条首部</p>
 <h3 id="articleHeader6">又来划重点了啊</h3>
 <p><strong>HTTP的英文全称？</strong></p>
@@ -107,7 +107,7 @@ date: 2018-10-23 00:00:00
 </ul>
 <p><strong>HTTP协议格式？</strong></p>
 <p>HTTP的请求和响应的消息协议是一样的，分为三个部分，起始行、消息头和消息体。这三个部分以CRLF作为分隔符。最后一个消息头有两个CRLF，用来表示消息头部的结束。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014434217" src="https://static.alili.tech/img/remote/1460000014434217" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000014434217" src="https://static.alili.tech/img/remote/1460000014434217" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>HTTP请求的起始行称为请求行，形如GET /index.html HTTP/1.1</p>
 <p>HTTP响应的起始行称为状态行，形如200 ok</p>
 <p>消息头部有很多键值对组成，多个键值对之间使用CRLF作为分隔符，也可以完全没有键值对。形如Content-Encoding: gzip<br>消息体是一个字符串，字符串的长度是由消息头部的Content-Length键指定的。如果没有Content-Length字段说明没有消息体，譬如GET请求就是没有消息体的，POST请求的消息体一般用来放置表单数据。GET请求的响应返回的页面内容也是放在消息体里面的。我们平时调用API返回的JSON内容都是放在消息体里面的。</p>
@@ -137,7 +137,7 @@ date: 2018-10-23 00:00:00
 </ul>
 </li>
 </ul>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014434218?w=500&amp;h=500" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000014434218?w=500&amp;h=500" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 
                 
 {% endraw %}

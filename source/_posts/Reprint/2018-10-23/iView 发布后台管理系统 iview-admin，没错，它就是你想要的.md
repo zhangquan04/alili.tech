@@ -9,7 +9,7 @@ date: 2018-10-23 00:00:00
 {% raw %}
 
                     
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603206" src="https://static.alili.tech/img/remote/1460000011603206" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603206" src="https://static.alili.tech/img/remote/1460000011603206" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <h2 id="articleHeader0">简介</h2>
 <p>iView Admin 是基于 Vue.js，搭配使用 <a href="https://github.com/iview/iview" rel="nofollow noreferrer" target="_blank">iView UI</a> 组件库形成的一套后台集成解决方案，由 TalkingData 前端可视化团队部分成员开发维护。iView Admin 遵守 iView 设计和开发约定，风格统一，设计考究，并且更多功能在不停开发中。</p>
 <p>没错，这就是大家期待已久的 admin 了，这么漂亮好用的系统，是不是可以给个 Star 鼓励一下开发者呢：<br><strong>iView GitHub：<a href="https://github.com/iview/iview" rel="nofollow noreferrer" target="_blank">https://github.com/iview/iview</a></strong><br><strong>iView Admin GitHub：<a href="https://github.com/iview/iview-admin" rel="nofollow noreferrer" target="_blank">https://github.com/iview/iview-admin</a></strong></p>
@@ -82,38 +82,38 @@ date: 2018-10-23 00:00:00
 </ul>
 <h2 id="articleHeader3">效果展示</h2>
 <ul>
-<li>登录<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603207?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>登录<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603207?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>标签导航<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603208?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>标签导航<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603208?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>权限管理<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603209?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>权限管理<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603209?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>可拖拽列表<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603210?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>可拖拽列表<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603210?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>文件上传<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603211?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>文件上传<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603211?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>数字渐变<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603212?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>数字渐变<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603212?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>文章发布<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603213?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>文章发布<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603213?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>工作流<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603214?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>工作流<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603214?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>可拖拽表格<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603215?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>可拖拽表格<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603215?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>可编辑表格<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603216?w=1545&amp;h=920" src="https://static.alili.tech/img/remote/1460000011603216?w=1545&amp;h=920" alt="image" title="image" style="cursor: pointer; display: inline;"></span>
+<li>可编辑表格<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603216?w=1545&amp;h=920" src="https://static.alili.tech/img/remote/1460000011603216?w=1545&amp;h=920" alt="image" title="image" style="cursor: pointer; display: inline;"></span>
 </li>
-<li>表格导出数据<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603217?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>表格导出数据<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603217?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>表格转图片<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603218?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>表格转图片<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603218?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>错误页面<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603219?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>错误页面<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603219?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>锁屏<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603220?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>锁屏<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603220?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>可收缩侧边栏<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603221?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>s</li>
-<li>主题切换<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603222?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>可收缩侧边栏<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603221?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>s</li>
+<li>主题切换<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603222?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
-<li>消息中心<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000011603223?w=1545&amp;h=920" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
+<li>消息中心<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000011603223?w=1545&amp;h=920" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span>
 </li>
 </ul>
 <h2 id="articleHeader4">文件结构</h2>

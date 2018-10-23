@@ -34,7 +34,7 @@ npm i puppeteer
 <span class="hljs-meta"># or <span class="hljs-meta-string">"yarn add puppeteer"</span></span></code></pre>
 <h3 id="articleHeader3">2.2 《<code>React.js</code>小书》简介</h3>
 <blockquote>
-<a href="http://huziketang.mangojuice.top/books/react/" rel="nofollow noreferrer" target="_blank">《<code>React.js</code>小书》</a>简介   <a href="http://huziketang.mangojuice.top/books/react/me/" rel="nofollow noreferrer" target="_blank">关于作者@胡子大哈</a><br>这是⼀本关于 React.js 的⼩书。<br>因为⼯作中⼀直在使⽤ <code>React.js</code>，也⼀直以来想总结⼀下⾃⼰关于 <code>React.js</code> 的⼀些<br>知识、经验。于是把⼀些想法慢慢整理书写下来，做成⼀本<strong>开源、免费、专业、简单</strong><br>的⼊⻔级别的⼩书，提供给社区。希望能够帮助到更多 <code>React.js</code> 刚⼊⻔朋友。<br>下图是《<code>React.js</code> 小书》部分截图：<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbf7AJ?w=1048&amp;h=811" src="https://static.alili.tech/img/bVbf7AJ?w=1048&amp;h=811" alt="《codeReact.js/code 小书》部分截图" title="《codeReact.js/code 小书》部分截图" style="cursor: pointer; display: inline;"></span>
+<a href="http://huziketang.mangojuice.top/books/react/" rel="nofollow noreferrer" target="_blank">《<code>React.js</code>小书》</a>简介   <a href="http://huziketang.mangojuice.top/books/react/me/" rel="nofollow noreferrer" target="_blank">关于作者@胡子大哈</a><br>这是⼀本关于 React.js 的⼩书。<br>因为⼯作中⼀直在使⽤ <code>React.js</code>，也⼀直以来想总结⼀下⾃⼰关于 <code>React.js</code> 的⼀些<br>知识、经验。于是把⼀些想法慢慢整理书写下来，做成⼀本<strong>开源、免费、专业、简单</strong><br>的⼊⻔级别的⼩书，提供给社区。希望能够帮助到更多 <code>React.js</code> 刚⼊⻔朋友。<br>下图是《<code>React.js</code> 小书》部分截图：<br><span class="img-wrap"><img src="https://static.alili.tech/img/bVbf7AJ?w=1048&amp;h=811" src="https://static.alili.tech/img/bVbf7AJ?w=1048&amp;h=811" alt="《codeReact.js/code 小书》部分截图" title="《codeReact.js/code 小书》部分截图" style="cursor: pointer; display: inline;"></span>
 </blockquote>
 <h3 id="articleHeader4">2.3 一些可能会用到的 <code>puppeteer API</code>
 </h3>
@@ -152,7 +152,7 @@ node src/puppeteer/reactMiniBook.js" title="" data-original-title="复制"></spa
 // 笔者这里是：
 node</span> src/puppeteer/reactMiniBook.js</code></pre>
 <p>即可生成如下图：每一小节（0-46小节）的<code>pdf</code></p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbf7wc?w=416&amp;h=725" src="https://static.alili.tech/img/bVbf7wc?w=416&amp;h=725" alt="生成的每一小节（0-46小节）的pdf.png" title="生成的每一小节（0-46小节）的pdf.png" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/bVbf7wc?w=416&amp;h=725" src="https://static.alili.tech/img/bVbf7wc?w=416&amp;h=725" alt="生成的每一小节（0-46小节）的pdf.png" title="生成的每一小节（0-46小节）的pdf.png" style="cursor: pointer; display: inline;"></span></p>
 <p>生成这些后，那么问题来了，就是查看时总不能看一小节，打开一小节来看，这样很不方便。<br>于是接下来就是合并这些<code>pdf</code>成为一个<code>pdf</code>文件。</p>
 <h2 id="articleHeader6">3、合并成一个PDF文件 <code>pdf-merge</code>
 </h2>

@@ -230,7 +230,7 @@ for (const match of string.matchAll(regex)) {
 </ul>
 <h3 id="articleHeader7">关于Fundebug</h3>
 <p><a href="https://www.fundebug.com" rel="nofollow noreferrer" target="_blank">Fundebug</a>专注于JavaScript、微信小程序、微信小游戏、支付宝小程序、React Native、Node.js和Java实时BUG监控。 自从2016年双十一正式上线，Fundebug累计处理了6亿+错误事件，得到了Google、360、金山软件等众多知名用户的认可。欢迎免费试用！</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbhe1G?w=400&amp;h=225" src="https://static.alili.tech/img/bVbhe1G?w=400&amp;h=225" alt="图片描述" title="图片描述" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/bVbhe1G?w=400&amp;h=225" src="https://static.alili.tech/img/bVbhe1G?w=400&amp;h=225" alt="图片描述" title="图片描述" style="cursor: pointer; display: inline;"></span></p>
 <h3 id="articleHeader8">版权声明</h3>
 <p>转载时请注明作者Fundebug以及本文地址：<br><a href="https://blog.fundebug.com/2018/08/30/ecmascript-regular-expression-new-features/" rel="nofollow noreferrer" target="_blank">https://blog.fundebug.com/2018/08/30/ecmascript-regular-expression-new-features/</a></p>
 

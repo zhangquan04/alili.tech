@@ -381,9 +381,9 @@ window.a // 1" title="" data-original-title="复制"></span>
       </div>
       </div><pre class="hljs dart"><code><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
 <span class="hljs-built_in">window</span>.a <span class="hljs-comment">// 1</span></code></pre>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgyJO?w=2378&amp;h=560" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="var 声明的a，在右侧 global 里面" title="var 声明的a，在右侧 global 里面" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/bVbgyJO?w=2378&amp;h=560" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="var 声明的a，在右侧 global 里面" title="var 声明的a，在右侧 global 里面" style="cursor: pointer;"></span></p>
 <p>另一方面规定，let命令、const命令、class命令声明的全局变量，不属于顶层对象的属性。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgyJP?w=2396&amp;h=666" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="图片描述" title="图片描述" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/bVbgyJP?w=2396&amp;h=666" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="图片描述" title="图片描述" style="cursor: pointer;"></span></p>
 <p>上图可见let 声明的变量，并没有在Window对象里，而是一个新的Script对象。</p>
 <p><b>扩展：如果需要在浏览器中跨frame或window访问代码，仍然可以用var在全局对象下定义变量。</b></p>
 <h2 id="articleHeader7">7、 块级函数</h2>

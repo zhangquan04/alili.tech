@@ -12,7 +12,7 @@ date: 2018-10-23 00:00:00
 <p>BetterScroll 是一款重点解决移动端各种滚动场景需求的开源插件（<a href="https://github.com/ustbhuangyi/better-scroll" rel="nofollow noreferrer" target="_blank">GitHub地址</a>），有下列功能支持滚动列表，下拉刷新，上拉刷新，轮播图，slider等功能。<br>为了满足这些功能，better-scroll通过使用惯性滚动、边界回弹、滚动条淡入淡出来确保滚动的流畅。同时还支持很多API和事件，具体支持的事件可以查看官网讲的非常详细。<br>由于它基于原生JavaScript 实现，不依赖任何框架，所以既可以原生 JavaScript 引用，也可以与目前前端 MVVM 框架结合使用，比如，其官网上的示例就是与 Vue 的结合。</p>
 <h2 id="articleHeader0">如何使用：</h2>
 <p>再讲如何使用的之前，我们先来了解一下他的滚动原理：在浏览器中的滚动中，当内容的高度高于外边容器的高度的时候也就出现了滚动条，我们可以通过使用滚动条来看到超出的部分.</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVY5fs?w=830&amp;h=632" src="https://static.alili.tech/img/bVY5fs?w=830&amp;h=632" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/bVY5fs?w=830&amp;h=632" src="https://static.alili.tech/img/bVY5fs?w=830&amp;h=632" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
 <p>better-scroll的原理正是基于这里，内容部分的宽度/高度必须大于外部宽度/高度。所以在使用<br>的时候外部容器的需要设置固定宽度，还有一个问题需要设置overflow:hidden,这是因为为了隐藏超出部分。然后就是什么时候对better-scroll进行初始化，这个有点麻烦，但是所幸，作者已经在vue框架下进行封装，我们只需要像个麻瓜一样往里边填东西就行了。但是有一点需要注意：滚动的元素只能是第一个容器的第一个元素。源码如下：</p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">

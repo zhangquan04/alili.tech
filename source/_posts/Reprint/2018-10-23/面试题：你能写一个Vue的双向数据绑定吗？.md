@@ -13,7 +13,7 @@ date: 2018-10-23 00:00:00
 <h2 id="articleHeader0">1&#x3001;&#x539F;&#x7406;</h2>
 <p>Vue&#x7684;&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x539F;&#x7406;&#x76F8;&#x4FE1;&#x5927;&#x5BB6;&#x4E5F;&#x90FD;&#x5341;&#x5206;&#x4E86;&#x89E3;&#x4E86;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;<code> Object&#x5BF9;&#x8C61;&#x7684;defineProperty&#x5C5E;&#x6027;&#xFF0C;&#x91CD;&#x5199;data&#x7684;set&#x548C;get&#x51FD;&#x6570;&#x6765;&#x5B9E;&#x73B0;&#x7684;</code>,&#x8FD9;&#x91CC;&#x5BF9;&#x539F;&#x7406;&#x4E0D;&#x505A;&#x8FC7;&#x591A;&#x63CF;&#x8FF0;&#xFF0C;&#x4E3B;&#x8981;&#x8FD8;&#x662F;&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x7684;&#x6E05;&#x6670;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x4F1A;&#x5B9E;&#x73B0;&#x6700;&#x57FA;&#x672C;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E3B;&#x8981;&#x5B9E;&#x73B0;v-model&#xFF0C;v-bind &#x548C;v-click&#x4E09;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x8865;&#x5145;&#x3002;</p>
 <p>&#x6DFB;&#x52A0;&#x7F51;&#x4E0A;&#x7684;&#x4E00;&#x5F20;&#x56FE;</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000014274845?w=730&amp;h=390" src="https://static.alili.techhttps://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="/img/remote/1460000014274845?w=730&amp;h=390" src="https://static.alili.techhttps://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <h2 id="articleHeader1">2&#x3001;&#x5B9E;&#x73B0;</h2>
 <p>&#x9875;&#x9762;&#x7ED3;&#x6784;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5982;&#x4E0B;</p>
 <div class="widget-codetool" style="display:none;">
@@ -399,7 +399,7 @@ myVue.prototype._complie = <span class="hljs-function"><span class="hljs-keyword
     }
   }</code></pre>
 <p>&#x81F3;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x5355;vue&#x7684;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x529F;&#x80FD;&#xFF0C;&#x5305;&#x62EC;v-bind, v-model, v-click&#x4E09;&#x4E2A;&#x6307;&#x4EE4;&#x3002;&#x6548;&#x679C;&#x5982;&#x4E0B;&#x56FE;</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000014274846" src="https://static.alili.techhttps://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="/img/remote/1460000014274846" src="https://static.alili.techhttps://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>&#x9644;&#x4E0A;&#x5168;&#x90E8;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x5230;150&#x884C;</p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">

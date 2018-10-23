@@ -19,7 +19,7 @@ date: 2018-10-22 00:00:00
 <p>小时候，当我们拿到一个螺丝刀和一台机器，人生中最令人怀念的梦幻时刻便开始了：</p>
 <p>我们把机器，拆成一个一个小零件，一个个齿轮与螺钉，用巧妙的机械原理衔接在一起...</p>
 <p>当我们把它重新照不同的方式组装起来，这时，机器重新又跑动了起来——世界在你眼中如获新生。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016231515?w=658&amp;h=658" src="https://static.alili.tech/img/remote/1460000016231515?w=658&amp;h=658" alt="image" title="image" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016231515?w=658&amp;h=658" src="https://static.alili.tech/img/remote/1460000016231515?w=658&amp;h=658" alt="image" title="image" style="cursor: pointer; display: inline;"></span></p>
 <p>通过抽象语法树解析，我们可以像童年时拆解玩具一样，透视Javascript这台机器的运转，并且重新按着你的意愿来组装。</p>
 <p><strong> 现在，我们拆解一个简单的add函数</strong></p>
 <div class="widget-codetool" style="display:none;">
@@ -102,7 +102,7 @@ date: 2018-10-22 00:00:00
 </li>
 </ul>
 <p>就这样，我们把一个简单的add函数拆解完毕，用图表示就是</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016231998?w=1380&amp;h=910" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016231998?w=1380&amp;h=910" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="image" title="image" style="cursor: pointer;"></span></p>
 <p>看！抽象语法树(Abstract Syntax Tree)，的确是一种标准的树结构。</p>
 <p>那么，上面我们提到的Identifier、Blockstatement、ReturnStatement、BinaryExpression， 这一个个小部件的说明书去哪查？</p>
 <p><strong>请查看 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API#Node_objects" rel="nofollow noreferrer" target="_blank">AST对象文档</a></strong></p>
@@ -980,7 +980,7 @@ recast.run(<span class="hljs-function"><span class="hljs-keyword">function</span
 <p>童年时，这个世界充满了新奇的玩具，再普通的东西在你眼中都如同至宝。如今，计算机语言就是你手中的大玩具，一段段AST对象的拆分组装，构建出我们所生活的网络世界。</p>
 <p>所以不得不说软件工程师是一个幸福的工作，你心中住的仍然是那个午后的少年，永远有无数新奇等你发现，永远有无数梦想等你构建。</p>
 <p>github地址：<a href="https://github.com/wanthering/exportific" rel="nofollow noreferrer" target="_blank">https://github.com/wanthering...</a></p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000016231517?w=658&amp;h=893" src="https://static.alili.tech/img/remote/1460000016231517?w=658&amp;h=893" alt="image" title="image" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016231517?w=658&amp;h=893" src="https://static.alili.tech/img/remote/1460000016231517?w=658&amp;h=893" alt="image" title="image" style="cursor: pointer; display: inline;"></span></p>
 
                 
 {% endraw %}

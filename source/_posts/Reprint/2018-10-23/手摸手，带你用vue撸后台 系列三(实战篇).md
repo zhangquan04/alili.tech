@@ -44,7 +44,7 @@ date: 2018-10-23 00:00:00
 <p><strong>这里开始我们会开始介绍一些结合Element的开发经验。</strong></p>
 <h2 id="articleHeader2">基于Element的动态换肤</h2>
 <p>有些产品就是这么残忍，能完成需求就不错了，还要让我们做动态换肤。Element官网上也提供了自定义主题的<a href="http://element.eleme.io/#/zh-CN/component/custom-theme" rel="nofollow noreferrer" target="_blank">方案</a><br>同时也提供了一个在线自定义主题的<a href="https://elementui.github.io/theme-preview/#/zh-CN" rel="nofollow noreferrer" target="_blank">demo</a></p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762203?w=1195&amp;h=431" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762203?w=1195&amp;h=431" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>是不是很酷，作者也说明了实现的方案 <a href="https://github.com/ElemeFE/element/issues/3054" rel="nofollow noreferrer" target="_blank">地址</a>,大概思路:</p>
 <ol>
 <li>先把默认主题文件中涉及到颜色的 CSS 值替换成关键词</li>
@@ -54,7 +54,7 @@ date: 2018-10-23 00:00:00
 </ol>
 <p>我看完觉得真的还是有点复杂的。有没有简单的方案呢？<br>让我们思考一下，让我们自己写动态换肤该怎么写呢？最常见的方法就是写两套主题，一套叫<code>day theme</code> ，一套叫<code>night theme</code>，<code>night theme</code>主题 都在一个<code>.night-theme</code>的命名空间下，我们动态的在<code>body</code>上<code>add .night-theme</code> ， <code>remove .night-theme</code>。这就是最简单的动态换肤。所以我们也能不能顺着这个思路，基于 element-ui 实现动态换肤呢？</p>
 <p>首先我们下载官方通过的 <a href="https://github.com/ElementUI/element-theme" rel="nofollow noreferrer" target="_blank">Theme generator</a> ,一个专门用来生成Element主题的工具。按照文档，我们生成了需要的主题。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762204?w=716&amp;h=342" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>之后就是我们要做的事情了，将这个主题的每个元素外面包裹一个class 来做命名空间。<br>我们这里用到了<code>gulp-css-wrap</code>这个神器，轻轻松松就完成了我们想要的结果</p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762204?w=716&amp;h=342" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>之后就是我们要做的事情了，将这个主题的每个元素外面包裹一个class 来做命名空间。<br>我们这里用到了<code>gulp-css-wrap</code>这个神器，轻轻松松就完成了我们想要的结果</p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
       <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
@@ -109,7 +109,7 @@ import 'assets/custom-theme/index.css'" title="" data-original-title="复制"></
       </div><pre class="hljs xl"><code><span class="hljs-comment">//main.js</span>
 <span class="hljs-keyword">import</span> 'assets/custom-<span class="hljs-built_in">theme</span>/index.css'</code></pre>
 <p>我们在换肤的地方<code>toggleClass(document.body, 'custom-theme')</code>一直toggle body 的 class就可以了。我们就简单实现了动态换肤效果。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762205?w=1216&amp;h=562" src="https://static.alili.tech/img/remote/1460000009762205?w=1216&amp;h=562" alt="" title="" style="cursor: pointer; display: inline;"></span><br>不过这种模式实现换肤也是有一个弊端的，它等于把这两个主题都打包在了项目里，如果你的项目主题需要七八种，这种模式就不适合了。我们就需要动态的加载css，下面就是最简单的动态添加css的例子，当然你可以封装一下，增加成功或者失败回调，判断是否加载过改资源等等就不展开了。</p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762205?w=1216&amp;h=562" src="https://static.alili.tech/img/remote/1460000009762205?w=1216&amp;h=562" alt="" title="" style="cursor: pointer; display: inline;"></span><br>不过这种模式实现换肤也是有一个弊端的，它等于把这两个主题都打包在了项目里，如果你的项目主题需要七八种，这种模式就不适合了。我们就需要动态的加载css，下面就是最简单的动态添加css的例子，当然你可以封装一下，增加成功或者失败回调，判断是否加载过改资源等等就不展开了。</p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
       <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
@@ -132,7 +132,7 @@ head.appendChild(style);</code></pre>
 <hr>
 <h2 id="articleHeader3">侧边栏</h2>
 <p>这里又有谈一下导航栏的问题，本项目里的侧边栏是根据 router.js 配置的路由并且根据权限动态生成的，这样就省去了写一遍路由还要手动再写一次侧边栏这种麻烦事，但也遇到了一个问题，路由可能会有多层嵌套，很多人反馈自己的侧边栏会有三级，甚至还有五级的。所以重构了一下侧边栏，使用了递归组件，这样不管你多少级，都能愉快的显示了。<a href="https://github.com/PanJiaChen/vue-element-admin/tree/master/src/views/layout/components/Sidebar" rel="nofollow noreferrer" target="_blank">代码</a></p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762206?w=173&amp;h=373" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><strong>侧边栏高亮问题:</strong> 很多人在群里问为什么自己的侧边栏不能跟着自己的路由高亮，其实很简单，element-ui官方已经给了default-active所以我们只要</p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762206?w=173&amp;h=373" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><strong>侧边栏高亮问题:</strong> 很多人在群里问为什么自己的侧边栏不能跟着自己的路由高亮，其实很简单，element-ui官方已经给了default-active所以我们只要</p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
       <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
@@ -142,7 +142,7 @@ head.appendChild(style);</code></pre>
       </div><pre class="hljs elixir"><code style="word-break: break-word; white-space: initial;"><span class="hljs-symbol">:default-active=<span class="hljs-string">"$route.path"</span></span></code></pre>
 <p>将<code>default-active</code>一直指向当前路由就可以了，就是这么简单。</p>
 <p><strong>点击侧边栏 刷新当前路由</strong></p>
-<p>在用 spa(单页面开发) 这种开发模式之前，大部分都是多页面后台，用户每次点击侧边栏都会重新请求这个页面，用户渐渐养成了点击侧边栏当前路由来刷新页面的习惯。但现在 spa 就不一样了，用户点击当前高亮的路由并不会刷新view，因为<code>vue-router</code>会拦截你的路由，它判断你<code>的url</code>并没有任何变化，所以它不会触发任何钩子或者是<code>view</code>的变化。<a href="https://github.com/vuejs/vue-router/issues/296" rel="nofollow noreferrer" target="_blank">issue地址</a>，社区也对该问题展开了激烈讨论。<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762207?w=795&amp;h=329" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>尤大本来也说要增加一个方法来强刷view，但后来他又改变了心意/(ㄒoㄒ)/~~。但需要就摆在这里，我们该怎么办呢？他说了不改变<code>current URL</code> 就不会触发任何东西，那我可不可以强行触发东西你？上有政策， 下有对策我们变着花来hack。方法也很简单，通过不断改变<code>url</code>的<code>query</code>来触发view的变化。我们监听侧边栏每个link 的 click事件，每次点击都给router push 一个不一样的query 来确保会重新刷新view。</p>
+<p>在用 spa(单页面开发) 这种开发模式之前，大部分都是多页面后台，用户每次点击侧边栏都会重新请求这个页面，用户渐渐养成了点击侧边栏当前路由来刷新页面的习惯。但现在 spa 就不一样了，用户点击当前高亮的路由并不会刷新view，因为<code>vue-router</code>会拦截你的路由，它判断你<code>的url</code>并没有任何变化，所以它不会触发任何钩子或者是<code>view</code>的变化。<a href="https://github.com/vuejs/vue-router/issues/296" rel="nofollow noreferrer" target="_blank">issue地址</a>，社区也对该问题展开了激烈讨论。<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762207?w=795&amp;h=329" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>尤大本来也说要增加一个方法来强刷view，但后来他又改变了心意/(ㄒoㄒ)/~~。但需要就摆在这里，我们该怎么办呢？他说了不改变<code>current URL</code> 就不会触发任何东西，那我可不可以强行触发东西你？上有政策， 下有对策我们变着花来hack。方法也很简单，通过不断改变<code>url</code>的<code>query</code>来触发view的变化。我们监听侧边栏每个link 的 click事件，每次点击都给router push 一个不一样的query 来确保会重新刷新view。</p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
       <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
@@ -172,7 +172,7 @@ head.appendChild(style);</code></pre>
 <p>经过好几个版本的迭代，element-ui 的table组件已经能满足大部分业务需求了。不过rowSpan colSpan表格行/列合并现在并不是支持(element-ui2.0版本之后开始支持)。官方对此功能的更新情况可以关注这个<a href="https://github.com/ElemeFE/element/issues/670" rel="nofollow noreferrer" target="_blank">issue</a>。</p>
 <p>这里我着重讲一下table表格几个常用的业务形态。</p>
 <h3 id="articleHeader5">Table 拖拽排序</h3>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762208?w=1067&amp;h=530" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>这里主要是基于<a href="https://github.com/RubaXa/Sortable" rel="nofollow noreferrer" target="_blank">Sortable</a></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762208?w=1067&amp;h=530" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>这里主要是基于<a href="https://github.com/RubaXa/Sortable" rel="nofollow noreferrer" target="_blank">Sortable</a></p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
       <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
@@ -206,7 +206,7 @@ let sortable = Sortable.create(el)" title="" data-original-title="复制"></span
 <hr>
 <h3 id="articleHeader6">Table 内联编辑</h3>
 <p>table内联编辑也是一个常见的需求。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762209?w=1055&amp;h=193" src="https://static.alili.tech/img/remote/1460000009762209?w=1055&amp;h=193" alt="" title="" style="cursor: pointer; display: inline;"></span><br>其实也很简单，当我们拿到 list 数据之后先洗一下数据，每一条数据里面插入一个edit[ true or false ]判断符，来表示当前行是否处于编辑状态。之后就是通过v-show动态切换不同的相应view就可以了。<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/example/table/inlineEditTable.vue" rel="nofollow noreferrer" target="_blank">完整代码</a></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762209?w=1055&amp;h=193" src="https://static.alili.tech/img/remote/1460000009762209?w=1055&amp;h=193" alt="" title="" style="cursor: pointer; display: inline;"></span><br>其实也很简单，当我们拿到 list 数据之后先洗一下数据，每一条数据里面插入一个edit[ true or false ]判断符，来表示当前行是否处于编辑状态。之后就是通过v-show动态切换不同的相应view就可以了。<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/example/table/inlineEditTable.vue" rel="nofollow noreferrer" target="_blank">完整代码</a></p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
       <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
@@ -290,7 +290,7 @@ this.list.splice(index, 1,this.updatedData); //通过splice 替换数据 触发�
 <span class="hljs-keyword">const</span> index = <span class="hljs-keyword">this</span>.<span class="hljs-built_in">list</span>.indexOf(row); <span class="hljs-comment">//找到修改的数据在list中的位置</span>
 <span class="hljs-keyword">this</span>.<span class="hljs-built_in">list</span>.splice(index, <span class="hljs-number">1</span>,<span class="hljs-keyword">this</span>.updatedData); <span class="hljs-comment">//通过splice 替换数据 触发视图更新</span></code></pre>
 <p>这样我们就完成了对table的增删改操作，列表view也自动响应发生了变化。这里在修改数据的时候还有一个小坑<strong>需要主要</strong>。<br> 当我们拿到需要修改行的数据时候不能直接将它直接赋值给dialog，不然会发生下面的问题。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762210?w=1120&amp;h=516" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>如上图所示，我们在dialog里面改变状态的时候，遮罩下面的table里面该行的状态也在那里跟着一只变化着。原因想必大家都猜到了。赋值的数据是一个objec引用类型共享一个内存区域的。所以我们就不能直接连等复制，需要重新指向一个新的引用，方案如下：</p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762210?w=1120&amp;h=516" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>如上图所示，我们在dialog里面改变状态的时候，遮罩下面的table里面该行的状态也在那里跟着一只变化着。原因想必大家都猜到了。赋值的数据是一个objec引用类型共享一个内存区域的。所以我们就不能直接连等复制，需要重新指向一个新的引用，方案如下：</p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
       <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
@@ -353,8 +353,8 @@ newArray = oldArray.slice(); //slice会clone返回一个新数组" title="" data
 <h2 id="articleHeader10">Upload 上传</h2>
 <p>Upload本身没什么好说的，文档写的蛮清楚了。这里主要说一下怎么将Upload组件和七牛直传结合在一起。</p>
 <p>这里我们选择api直传的方式，就是我们首先要通过后端(go,node,php都可以)<a href="https://developer.qiniu.com/sdk#official-sdk" rel="nofollow noreferrer" target="_blank">文档</a>生成七牛上传必要的token(上传凭证)和key(资源的最终名称)。<br>所以现在只要想办法讲token和key塞进post请求里面就可以了，好在官方也提供了这个方法。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762211?w=836&amp;h=38" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>。但怎么才能先异步的拿到token再将它塞入请求里呢？</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762212?w=855&amp;h=77" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>这时候我们又发现了before-upload    这个钩子还支持promise简直合我们的心意。<br>但我们写着写着怎样才能动态的改变之前的dataObj呢？通过看源码发现我们可以_self._data这样子拿到我们想要的数据。<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/qiniu/upload.vue" rel="nofollow noreferrer" target="_blank">线上代码</a></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762211?w=836&amp;h=38" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>。但怎么才能先异步的拿到token再将它塞入请求里呢？</p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762212?w=855&amp;h=77" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br>这时候我们又发现了before-upload    这个钩子还支持promise简直合我们的心意。<br>但我们写着写着怎样才能动态的改变之前的dataObj呢？通过看源码发现我们可以_self._data这样子拿到我们想要的数据。<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/qiniu/upload.vue" rel="nofollow noreferrer" target="_blank">线上代码</a></p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
       <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
@@ -571,7 +571,7 @@ newArray = oldArray.slice(); //slice会clone返回一个新数组" title="" data
   <span class="hljs-keyword">this</span>.html = converter.makeHtml(<span class="hljs-keyword">this</span>.content)<span class="hljs-comment">//转化</span>
 })</code></pre>
 <p>用法也很简单两行代码就完成了markdown to html，当然它还有很多个性画的配置，大家有需求自行研究吧。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762213?w=1040&amp;h=585" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762213?w=1040&amp;h=585" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <hr>
 <h2 id="articleHeader16">导出excel</h2>
 <p>这里先明确一点，如果你的业务需求对导出文件的格式没有什么要求，不建议导出成xlsx格式的，直接导出成csv的就好了，真的会简单很多。创建一个a标签，写上<code>data:text/csv;charset=utf-8</code>头，再把数据塞进去，<code>encodeURI(csvContent)</code>一下就好了，详情就不展开了，大家可以借鉴这个<a href="https://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side" rel="nofollow noreferrer" target="_blank">stackoverflow回答</a>。<br>我们重点说一下转xlsx，我们这里用到了<a href="https://github.com/SheetJS/js-xlsx" rel="nofollow noreferrer" target="_blank">js-xlsx</a>，一个功能很强大excel处理库，只是下载各种格式excel，还支持读取excel，但上手难度也非常大，相当的复杂，其中涉及不少二进制相关的东西。不过好在官方给了我们一个<a href="http://sheetjs.com/demos/writexlsx.html" rel="nofollow noreferrer" target="_blank">demo例子</a>,我们写不来还抄不来么，于是我们就借鉴官方的例子来改造了一下，具体原理就不详细说了，真的很复杂。。。<br>重点是我们怎么使用！首先我们封装一个<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/src/vendor/Export2Excel.js" rel="nofollow noreferrer" target="_blank">Export2Excel.js</a>，<br>它又依赖三个库</p>
@@ -752,7 +752,7 @@ watch: {
 <ol><li>通过路由path的方式</li></ol>
 <p>这种方式最简单暴力，我自己的项目中使用这种方式，通过约定路径中出现'edit'就判断为编辑模式。比较省力和方便，不过这是要在大家写路径的时候都按照规范来写的前提下。</p>
 <ol><li>通过meta来区分</li></ol>
-<p>比较推荐这种方式来区分。<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000009762214?w=1192&amp;h=86" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p>比较推荐这种方式来区分。<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000009762214?w=1192&amp;h=86" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
       <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>

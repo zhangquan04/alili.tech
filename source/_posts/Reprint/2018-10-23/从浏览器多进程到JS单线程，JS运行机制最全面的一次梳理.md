@@ -110,7 +110,7 @@ date: 2018-10-23 00:00:00
 - 工人之间共享空间 -&gt; 同一进程下的各个线程之间共享程序的内存空间（包括代码段、数据集、堆等）</code></pre>
 <p>然后再巩固下：</p>
 <p>如果是windows电脑中，可以打开任务管理器，可以看到有一个后台进程列表。对，那里就是查看进程的地方，而且可以看到每个进程的内存资源信息以及cpu占有率。</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012925877?w=900&amp;h=655" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000012925877?w=900&amp;h=655" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>所以，应该更容易理解了：<strong>进程是cpu资源分配的最小单位（系统会给它分配内存）</strong></p>
 <p>最后，再用较为官方的术语描述一遍：</p>
 <ul>
@@ -130,7 +130,7 @@ date: 2018-10-23 00:00:00
 <li>简单点理解，每打开一个Tab页，就相当于创建了一个独立的浏览器进程。</li>
 </ul>
 <p>关于以上几点的验证，<strong>请再第一张图</strong>：</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012925878?w=900&amp;h=539" src="https://static.alili.tech/img/remote/1460000012925878?w=900&amp;h=539" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000012925878?w=900&amp;h=539" src="https://static.alili.tech/img/remote/1460000012925878?w=900&amp;h=539" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>图中打开了<code>Chrome</code>浏览器的多个标签页，然后可以在<code>Chrome的任务管理器</code>中看到有多个进程（分别是每一个Tab页面有一个独立的进程，以及一个主进程）。<br>感兴趣的可以自行尝试下，如果再多打开一个Tab页，进程正常会+1以上</p>
 <p><strong>注意：</strong>在这里浏览器应该也有自己的优化机制，有时候打开多个tab页后，可以在Chrome任务管理器中看到，有些进程被合并了<br>（所以每一个Tab标签对应一个进程并不一定是绝对的）</p>
 <h3 id="articleHeader4">浏览器都包含哪些进程？</h3>
@@ -154,7 +154,7 @@ date: 2018-10-23 00:00:00
 </ol>
 <p>强化记忆：<strong>在浏览器中打开一个网页相当于新起了一个进程（进程内有自己的多线程）</strong></p>
 <p>当然，浏览器有时会将多个进程合并（譬如打开多个空白标签页后，会发现多个空白标签页被合并成了一个进程），如图</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012925879?w=900&amp;h=438" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000012925879?w=900&amp;h=438" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>另外，可以通过Chrome的<code>更多工具 -&gt; 任务管理器</code>自行验证</p>
 <h3 id="articleHeader5">浏览器多进程的优势</h3>
 <p>相比于单进程浏览器，多进程有如下优点：</p>
@@ -216,7 +216,7 @@ date: 2018-10-23 00:00:00
 </li>
 </ol>
 <p>看到这里，如果觉得累了，可以先休息下，这些概念需要被消化，毕竟后续将提到的事件循环机制就是基于<code>事件触发线程</code>的，所以如果仅仅是看某个碎片化知识，<br>可能会有一种似懂非懂的感觉。要完成的梳理一遍才能快速沉淀，不易遗忘。放张图巩固下吧：</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012925880?w=287&amp;h=577" src="https://static.alili.tech/img/remote/1460000012925880?w=287&amp;h=577" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000012925880?w=287&amp;h=577" src="https://static.alili.tech/img/remote/1460000012925880?w=287&amp;h=577" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>再说一点，为什么JS引擎是单线程的？额，这个问题其实应该没有标准答案，譬如，可能仅仅是因为由于多线程的复杂性，譬如多线程操作一般要加锁，因此最初设计时选择了单线程。。。</p>
 <h3 id="articleHeader7">Browser进程和浏览器内核（Renderer进程）的通信过程</h3>
 <p>看到这里，首先，应该对浏览器内的进程和线程都有一定理解了，那么接下来，再谈谈浏览器的Browser进程（控制进程）是如何和内核通信的，<br>这点也理解后，就可以将这部分的知识串联起来，从头到尾有一个完整的概念。</p>
@@ -234,7 +234,7 @@ date: 2018-10-23 00:00:00
 <li>Browser进程接收到结果并将结果绘制出来</li>
 </ul>
 <p>这里绘一张简单的图：（很简化）</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012925881?w=470&amp;h=325" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000012925881?w=470&amp;h=325" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>看完这一整套流程，应该对浏览器的运作有了一定理解了，这样有了知识架构的基础后，后续就方便往上填充内容。</p>
 <p>这块再往深处讲的话就涉及到浏览器内核源码解析了，不属于本文范围。</p>
 <p>如果这一块要深挖，建议去读一些浏览器内核源码解析文章，或者可以先看看参考下来源中的第一篇文章，写的不错</p>
@@ -320,7 +320,7 @@ date: 2018-10-23 00:00:00
 <p>所有详细步骤都已经略去，渲染完毕后就是<code>load</code>事件了，之后就是自己的JS逻辑处理了</p>
 <p>既然略去了一些详细的步骤，那么就提一些可能需要注意的细节把。</p>
 <p>这里重绘参考来源中的一张图：（参考来源第一篇）</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012934765?w=900&amp;h=352" src="https://static.alili.tech/img/remote/1460000012934765?w=900&amp;h=352" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000012934765?w=900&amp;h=352" src="https://static.alili.tech/img/remote/1460000012934765?w=900&amp;h=352" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <h3 id="articleHeader14">load事件与DOMContentLoaded事件的先后</h3>
 <p>上面提到，渲染完毕后会触发<code>load</code>事件，那么你能分清楚<code>load</code>事件与<code>DOMContentLoaded</code>事件的先后么？</p>
 <p>很简单，知道它们的定义就可以了：</p>
@@ -348,7 +348,7 @@ date: 2018-10-23 00:00:00
 <p>可以简单理解下：<strong>GPU中，各个复合图层是单独绘制的，所以互不影响</strong>，这也是为什么某些场景硬件加速效果一级棒</p>
 <p>可以<code>Chrome源码调试 -&gt; More Tools -&gt; Rendering -&gt; Layer borders</code>中看到，黄色的就是复合图层信息</p>
 <p>如下图。可以验证上述的说法</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012925882?w=900&amp;h=564" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000012925882?w=900&amp;h=564" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p><strong>如何变成复合图层（硬件加速）</strong></p>
 <p>将该元素变成一个复合图层，就是传说中的硬件加速技术</p>
 <ul>
@@ -395,11 +395,11 @@ date: 2018-10-23 00:00:00
 <li>一旦<code>执行栈</code>中的所有同步任务执行完毕（此时JS引擎空闲），系统就会读取<code>任务队列</code>，将可运行的异步任务添加到可执行栈中，开始执行。</li>
 </ul>
 <p>看图：</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012925883?w=610&amp;h=637" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000012925883?w=610&amp;h=637" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>看到这里，应该就可以理解了：为什么有时候setTimeout推入的事件不能准时执行？因为可能在它推入到事件列表时，主线程还不空闲，正在执行其它代码，<br>所以自然有误差。</p>
 <h3 id="articleHeader18">事件循环机制进一步补充</h3>
 <p>这里就直接引用一张图片来协助理解：（参考自Philip Roberts的演讲《<a href="http://vimeo.com/96425312" rel="nofollow noreferrer" target="_blank">Help, I'm stuck in an event-loop</a>》）</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012925884?w=636&amp;h=518" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000012925884?w=636&amp;h=518" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>上图大致描述就是：</p>
 <ul><li>主线程运行时会产生执行栈，</li></ul>
 <p>栈中的代码调用某些api时，它们会在事件队列中添加各种事件（当满足触发条件后，如ajax请求完毕）</p>
@@ -567,7 +567,7 @@ setTimeout</code></pre>
 <li>渲染完毕后，JS线程继续接管，开始下一个宏任务（从事件队列中获取）</li>
 </ul>
 <p>如图：</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012925885?w=392&amp;h=740" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000012925885?w=392&amp;h=740" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>另外，请注意下<code>Promise</code>的<code>polyfill</code>与官方版本的区别：</p>
 <ul>
 <li>官方版本中，是标准的microtask形式</li>

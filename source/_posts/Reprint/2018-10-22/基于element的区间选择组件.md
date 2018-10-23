@@ -12,7 +12,7 @@ date: 2018-10-22 00:00:00
 <p>公司的系统中，产品经理在设计时经常要求对某个字段进行区间阈值设置或者作为筛选条件。但是苦于element中没有非常契合的组件（slider组件并不支持两端均能设定），于是自己动手造了一个。</p>
 <h2 id="articleHeader0">成果</h2>
 <p>最终的展示效果如下：</p>
-<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgxrb?w=480&amp;h=216" src="https://static.alili.tech/img/bVbgxrb?w=480&amp;h=216" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/bVbgxrb?w=480&amp;h=216" src="https://static.alili.tech/img/bVbgxrb?w=480&amp;h=216" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
 <h2 id="articleHeader1">需求</h2>
 <p>这里以项目的需求为例，基本的需求如下：</p>
 <ol>
@@ -151,7 +151,7 @@ validateMax(rule, value, callback) {
 },</code></pre>
 <p>大概，你会想，这不就完了吗！so easy！<strong>现在真正的坑才开始</strong></p>
 <h2 id="articleHeader3">填坑（重点）</h2>
-<p>根据上面的写法，组件的基本功能实现了，但是有一个坑！如下：<br><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgxry?w=480&amp;h=216" src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="clipboard.png" title="clipboard.png" style="cursor: pointer;"></span></p>
+<p>根据上面的写法，组件的基本功能实现了，但是有一个坑！如下：<br><span class="img-wrap"><img src="https://static.alili.tech/img/bVbgxry?w=480&amp;h=216" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="clipboard.png" title="clipboard.png" style="cursor: pointer;"></span></p>
 <p>很显然，左侧值是小于右侧值的，但是校验提示仍然报错。究其原因，还是关联校验的问题。既然是关联交验，改变其中一个时应该会重新校验两个。很简单，在input改变时，重新校验表单不就OK了吗</p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
