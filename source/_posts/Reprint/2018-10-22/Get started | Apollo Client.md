@@ -148,7 +148,7 @@ render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App<
 {% endraw %}
 
 # 版权声明
-本文仅用于学习、研究和交流目的，欢迎非商业转载。转载请注明出处、完整链接。
+本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。
 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，
 原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！
 
@@ -157,3 +157,4 @@ render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App<
 
 ## 原文标题
 Get started | Apollo Client
+本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。
