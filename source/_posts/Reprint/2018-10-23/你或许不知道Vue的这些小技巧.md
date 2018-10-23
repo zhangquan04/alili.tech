@@ -9,7 +9,7 @@ date: 2018-10-23 00:00:00
 {% raw %}
 
                     
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015157249?w=950&amp;h=633" src="/img/remote/1460000015157249?w=950&amp;h=633" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015157249?w=950&amp;h=633" src="https://static.alili.tech/img/remote/1460000015157249?w=950&amp;h=633" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <h2 id="articleHeader0">前言</h2>
 <p>前天发过这篇，但是在segmentfault不知道为什么，帖子被隐藏了，没有在我的专栏里面，我在发一遍在自己的专栏里面，看过的小伙伴可以跳过~</p>
 <p>用Vue开发一个网页并不难，但是也经常会遇到一些问题，其实大部分的问题都在文档中有所提及，再不然我们通过谷歌也能成功搜索到问题的答案，为了帮助小伙伴们提前踩坑，在遇到问题的时候，心里大概有个谱知道该如何去解决问题。这篇文章是将自己知道的一些小技巧，结合查阅资料整理成的一篇文章，如果喜欢的话可以点波赞/关注，支持一下，希望大家看完本文可以有所收获。</p>
@@ -558,7 +558,7 @@ date: 2018-10-23 00:00:00
 </ul>
 <p><strong>安装之后</strong>：</p>
 <p>在chrome开发者工具中会看一个vue的一栏，如下对我们网页应用内数据变化，组件层级等信息能够有更准确快速的了解。</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015157250?w=1917&amp;h=324" src="/img/remote/1460000015157250?w=1917&amp;h=324" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015157250?w=1917&amp;h=324" src="https://static.alili.tech/img/remote/1460000015157250?w=1917&amp;h=324" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <hr>
 <h3 id="articleHeader11">前几个月也写过一篇类似的:</h3>
 <p><a href="https://juejin.im/post/5a587b46f265da3e3b7a7677" rel="nofollow noreferrer" target="_blank">Vue 实践过程中的几个问题</a></p>
@@ -569,7 +569,7 @@ date: 2018-10-23 00:00:00
 <h3 id="articleHeader13">看完的朋友可以点个喜欢/关注，您的支持是对我最大的鼓励。</h3>
 <p><strong><a href="http://obkoro1.com/" rel="nofollow noreferrer" target="_blank">个人blog</a></strong> and <strong><a href="https://juejin.im/user/58714f0eb123db4a2eb95372" rel="nofollow noreferrer" target="_blank">掘金个人主页</a></strong>，如需转载，请放上原文链接并署名。码字不易，<strong>感谢</strong>支持！</p>
 <p>如果喜欢本文的话，欢迎关注我的订阅号，漫漫技术路，期待未来共同学习成长。</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000014694068?w=344&amp;h=344" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000014694068?w=344&amp;h=344" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p>以上2018.6.3</p>
 <h3 id="articleHeader14">参考资料：</h3>
 <p><a href="https://cn.vuejs.org/v2/guide/" rel="nofollow noreferrer" target="_blank">Vue文档</a></p>

@@ -12,12 +12,12 @@ date: 2018-10-23 00:00:00
 <h2 id="articleHeader0">写作背景</h2>
 <p>笔者前年开始撰写的<a href="https://github.com/chyingp/nodejs-learning-guide" rel="nofollow noreferrer" target="_blank">《Node.js学习笔记》</a> github star 数突破了1000，算是个里程碑吧。</p>
 <p>从第一次提交（2016.11.03）到现在，1年半过去了。突然有些感慨，想要写点东西，谈谈这期间的收获、心路历程，以及如何学习Node.js。</p>
-<p><span class="img-wrap"><img data-src="/img/bVbbUnn?w=956&amp;h=110" src="/img/bVbbUnn?w=956&amp;h=110" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
-<p><span class="img-wrap"><img data-src="/img/bVbbUno?w=1094&amp;h=362" src="/img/bVbbUno?w=1094&amp;h=362" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbbUnn?w=956&amp;h=110" src="https://static.alili.tech/img/bVbbUnn?w=956&amp;h=110" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbbUno?w=1094&amp;h=362" src="https://static.alili.tech/img/bVbbUno?w=1094&amp;h=362" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
 <h2 id="articleHeader1">心路历程</h2>
 <p>笔者一直有做技术笔记的习惯，前几年零零散散的也写了不少Node.js的东西，只不过都存在evernote里。写着写着，觉得有必要系统地整理下，于是就有了这个项目。</p>
 <p>粗略统计了下，总共提交了约60篇教程，以及<a href="https://github.com/chyingp/nodejs-learning-guide/tree/master/examples" rel="nofollow noreferrer" target="_blank">将近300个范例脚本</a>。</p>
-<p><span class="img-wrap"><img data-src="/img/bVbbUnp?w=1630&amp;h=310" src="/img/bVbbUnp?w=1630&amp;h=310" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbbUnp?w=1630&amp;h=310" src="https://static.alili.tech/img/bVbbUnp?w=1630&amp;h=310" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
 <p>大部分的commit都集中2016年11、12月份，以及2017年上半年。这段时间其实项目组挺忙的，经常一周6天班，同时在两三个项目间来回切换。</p>
 <p>写作的过程挺枯燥的，也有点累人，尤其经常只能抽大半夜或周末的时间来码字，经常写技术文章的同学应该能体会。不管怎么说，一路坚持了下来，感觉还是有不少收获。</p>
 <p>1、技术积累。最初存在evernote里的只是零星的笔记，经过整理校对、进一步的思考以及延展性学习，零散的知识点逐渐串联成体系化的知识面。这比单单记住了数百个Node.js的API，以及枯燥的配置项更有用。</p>
@@ -40,7 +40,7 @@ date: 2018-10-23 00:00:00
 <li>问题三：server本地跑得好好的，怎么部署到云服务器上就访问不了，明明可以ping通，端口也启动了，为什么提示拒绝访问？</li>
 </ol>
 <p>正式回答问题前，先祭出一张网络分层架构图，请读者把它牢记在心。</p>
-<p><span class="img-wrap"><img data-src="/img/bVbbUnq?w=698&amp;h=474" src="/img/bVbbUnq?w=698&amp;h=474" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbbUnq?w=698&amp;h=474" src="https://static.alili.tech/img/bVbbUnq?w=698&amp;h=474" alt="clipboard.png" title="clipboard.png" style="cursor: pointer; display: inline;"></span></p>
 <p>互联网基于分层架构实现，包括应用层、传输层、网络层、链路层、物理层。其中，前端开发者比较熟悉的是应用层（HTTP协议），如果想学习Node服务端编程，那么，至少需要对传输层（TCP）、网络层（IP）也有一定的了解。</p>
 <p>对于网络的每个层次，Node.js基本都有对应的模块，比如https、http、net(TCP)、tls/crypto等。</p>
 <p>前面列举的几个问题，都是对网络知识、服务器知识了解的欠缺导致的，而不是于Node.js的API有多复杂、难以理解。</p>
@@ -54,7 +54,7 @@ date: 2018-10-23 00:00:00
 <p>编写《Node.js学习笔记》的过程收获了不少，也有不少感触，这里就不过多碎碎念。对于“如何学习Node.js”这个问题，其实有挺多东西想写，篇幅所限，后面的文章详细展开。</p>
 <h2 id="articleHeader4">相关链接</h2>
 <p><a href="https://github.com/chyingp/nodejs-learning-guide" rel="nofollow noreferrer" target="_blank">Nodejs学习笔记</a><br><a href="http://www.chyingp.com" rel="nofollow noreferrer" target="_blank">笔者个人博客</a></p>
-<p><span class="img-wrap"><img data-src="/img/bVbbUnr?w=300&amp;h=390" src="/img/bVbbUnr?w=300&amp;h=390" alt="图片描述" title="图片描述" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbbUnr?w=300&amp;h=390" src="https://static.alili.tech/img/bVbbUnr?w=300&amp;h=390" alt="图片描述" title="图片描述" style="cursor: pointer; display: inline;"></span></p>
 
                 
 {% endraw %}

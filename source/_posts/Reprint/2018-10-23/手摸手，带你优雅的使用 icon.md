@@ -14,10 +14,10 @@ date: 2018-10-23 00:00:00
 <h2 id="articleHeader1">演进史</h2>
 <p>首先我们来说一下前端 icon 的发展史。</p>
 <p><strong>远古时代</strong><br>在我刚开始实习时，大部分图标都是用 img 来实现的。渐渐发现一个页面的请求资源中图片 img 占了大部分，所以为了优化有了<code>image sprite</code> 就是所谓的雪碧图，就是将多个图片合成一个图片，然后利用 css 的 background-position 定位显示不同的 icon 图标。但这个也有一个很大的痛点，维护困难。每新增一个图标，都需要改动原始图片，还可能不小心出错影响到前面定位好的图片，而且一修改雪碧图，图片缓存就失效了，久而久之你不知道该怎么维护了。</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213281?w=528&amp;h=68" src="/img/remote/1460000012213281?w=528&amp;h=68" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213281?w=528&amp;h=68" src="https://static.alili.tech/img/remote/1460000012213281?w=528&amp;h=68" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p><strong>font 库</strong><br>后来渐渐地一个项目里几乎不会使用任何本地的图片了，而使用一些 font 库来实现页面图标。常见的如 <a href="http://fontawesome.io/" rel="nofollow noreferrer" target="_blank">Font Awesome</a> ，使用起来也非常的方便，但它有一个致命的缺点就是找起来真的很不方便，每次找一个图标特别的费眼睛，还有就是它的定制性也非常的不友善，它的图标库一共有675个图标，说少也不少，但还是会常常出现找不到你所需要图标的情况。当然对于没有啥特别 ui 追求的初创公司来说还是能忍一忍的。但随着公司的壮大，来了越来越多对前端指手画脚的人，丧心病狂的设计师，他们会说不！这icon这么丑，这简直是在侮辱他们高级设计师的称号啊！不过好在这时候有了<a href="http://iconfont.cn/" rel="nofollow noreferrer" target="_blank">iconfont</a> 。</p>
 <p><strong>iconfont</strong><br>一个阿里爸爸做的开源图库，人家还有专门的 <a href="https://github.com/thx/iconfont-plus/issues" rel="nofollow noreferrer" target="_blank">github issue</a>(虽然我的一个 issue 半年多了也没回应/(ㄒoㄒ)/~~)，但人家的图标数量还是很惊人的，不仅有几百个公司的开源图标库，还有各式各样的小图标，还支持自定义创建图标库，所以不管你是一家创业公司还是对设计很有要求的公司，它都能很好的帮助你解决管理图标的痛点。你想要的基本都有~</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213282?w=188&amp;h=158" src="/img/remote/1460000012213282?w=188&amp;h=158" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213282?w=188&amp;h=158" src="https://static.alili.tech/img/remote/1460000012213282?w=188&amp;h=158" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <h2 id="articleHeader2">iconfont 三种使用姿势</h2>
 <h3 id="articleHeader3">unicode</h3>
 <p>最开始我们使用了<code>unicode</code>的格式，它主要的特点是<br><strong>优势</strong></p>
@@ -83,9 +83,9 @@ date: 2018-10-23 00:00:00
       </div>
       </div><pre class="hljs cs"><code style="word-break: break-word; white-space: initial;">&lt;i <span class="hljs-keyword">class</span>=<span class="hljs-string">"iconfont"</span>&gt;&amp;<span class="hljs-meta">#xe604;&lt;/i&gt;</span></code></pre>
 <p>效果图：</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213283?w=800&amp;h=154" src="/img/remote/1460000012213283?w=800&amp;h=154" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213283?w=800&amp;h=154" src="https://static.alili.tech/img/remote/1460000012213283?w=800&amp;h=154" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>其实它的原理也很简单，就是通过 <code>@font-face</code> 引入自定义字体(其实就是一个字体库)，它里面规定了<code>&amp;#xe604</code> 这个对应的形状就长这企鹅样。其实类似于 '花裤衩'，在不同字体设定下长得是不同的一样。</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213284?w=175&amp;h=128" src="/img/remote/1460000012213284?w=175&amp;h=128" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213284?w=175&amp;h=128" src="https://static.alili.tech/img/remote/1460000012213284?w=175&amp;h=128" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>不过它的缺点也显而易见，<code>unicode</code>的书写不直观，语意不明确。光看<code>&amp;#xe604;</code>这个<code>unicode</code>你完全不知道它代表的是什么意思。这时候就有了 <code>font-class</code>。</p>
 <h3 id="articleHeader4">font-class</h3>
 <p>与unicode使用方式相比，具有如下特点：</p>
@@ -110,7 +110,7 @@ date: 2018-10-23 00:00:00
       </div>
       </div><pre class="hljs javascript"><code style="word-break: break-word; white-space: initial;">&lt;i <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"iconfont icon-xxx"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span></code></pre>
 <p>效果图：</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213285?w=800&amp;h=146" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="image.png" title="image.png" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213285?w=800&amp;h=146" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="image.png" title="image.png" style="cursor: pointer;"></span></p>
 <p>它的主要原理其实是和 <code>unicode</code> 一样的，它只是多做了一步，将原先<code>&amp;#xe604</code>这种写法换成了<code>.icon-QQ</code>，它在每个 class 的 before 属性中写了<code>unicode</code>,省去了人为写的麻烦。如 <code>.icon-QQ:before { content: "\e604"; }</code></p>
 <p>相对于<code>unicode</code> 它的修改更加的方便与直观。但也有一个大坑，之前楼主一个项目中用到了两组<code>font-class</code> 由于没有做好命名空间，所有的class都是放在<code>.iconfont</code> 命名空间下的，一上线引发了各种雪崩问题，修改了半天，所以使用<code>font-class</code>一定要注意命名空间的问题。</p>
 <h3 id="articleHeader5">symbol</h3>
@@ -167,7 +167,7 @@ date: 2018-10-23 00:00:00
     <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-xxx"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span></code></pre>
 <p>使用svg-icon的好处是我再也不用发送<code>woff|eot|ttf|</code> 这些很多个字体库请求了，我所有的svg都可以内联在html内。</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213286?w=760&amp;h=412" src="/img/remote/1460000012213286?w=760&amp;h=412" alt="" title="" style="cursor: pointer; display: inline;"></span><br>还有一个就是 svg 是一个真正的矢量，不管你再怎么的放缩它都不会失真模糊，而且svg可以控制的属性也更加的丰富，也能做出更加生动和复杂的图标。现在ui设计师平时都喜欢使用 sketch 来工作，只要轻松一键就能导出 svg 了，所以 svg 也更受设计师的青睐。<a href="https://css-tricks.com/icon-fonts-vs-svg/" rel="nofollow noreferrer" target="_blank">Inline SVG vs Icon Fonts </a> 这篇文章详细的比较了 <code>svg</code> 和 <code>icon-font</code>的优劣，大家可以去看看。PS：这里其实还用到了 <code>SVG Sprite</code> 技术。简单的理解就是类 svg 的似雪碧图，它在一个 svg 之中运用 symbol 标示了一个一个的 svg 图标，这样一个页面中我们遇到同样的 svg 就不用重复再画一个了，直接使用<code>&lt;use xlink:href="#icon-QQ" x="50" y="50" /&gt;</code> 就能使用了，具体的细节可以看这篇文章开头的文章 <a href="http://www.zhangxinxu.com/wordpress/2014/07/introduce-svg-sprite-technology/" rel="nofollow noreferrer" target="_blank">未来必热：SVG Sprite技术介绍</a>，在之后的文章中也会手摸手叫你自己如何制作 <code>SVG Sprite</code>。</p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213286?w=760&amp;h=412" src="https://static.alili.tech/img/remote/1460000012213286?w=760&amp;h=412" alt="" title="" style="cursor: pointer; display: inline;"></span><br>还有一个就是 svg 是一个真正的矢量，不管你再怎么的放缩它都不会失真模糊，而且svg可以控制的属性也更加的丰富，也能做出更加生动和复杂的图标。现在ui设计师平时都喜欢使用 sketch 来工作，只要轻松一键就能导出 svg 了，所以 svg 也更受设计师的青睐。<a href="https://css-tricks.com/icon-fonts-vs-svg/" rel="nofollow noreferrer" target="_blank">Inline SVG vs Icon Fonts </a> 这篇文章详细的比较了 <code>svg</code> 和 <code>icon-font</code>的优劣，大家可以去看看。PS：这里其实还用到了 <code>SVG Sprite</code> 技术。简单的理解就是类 svg 的似雪碧图，它在一个 svg 之中运用 symbol 标示了一个一个的 svg 图标，这样一个页面中我们遇到同样的 svg 就不用重复再画一个了，直接使用<code>&lt;use xlink:href="#icon-QQ" x="50" y="50" /&gt;</code> 就能使用了，具体的细节可以看这篇文章开头的文章 <a href="http://www.zhangxinxu.com/wordpress/2014/07/introduce-svg-sprite-technology/" rel="nofollow noreferrer" target="_blank">未来必热：SVG Sprite技术介绍</a>，在之后的文章中也会手摸手叫你自己如何制作 <code>SVG Sprite</code>。</p>
 <h2 id="articleHeader6">创建 icon-component 组件</h2>
 <p>我们有了图标，接下来就是如何在自己的项目中优雅的使用它了。<br>之后的代码都是基于 vue 的实例(ps: react 也很简单，原理都是类似的)</p>
 <div class="widget-codetool" style="display:none;">
@@ -270,7 +270,7 @@ Vue.component(<span class="hljs-string">'icon-svg'</span>, IconSvg)
 <h2 id="articleHeader7">进一步改造</h2>
 <p>但作为一个有逼格的前端开发，怎能就此满足呢!目前还是有一个致命的缺点的，就是现在所有的 <code>svg-sprite</code> 都是通过 iconfont 的 <code>iconfont.js</code> 生成的。</p>
 <ul><li>首先它是一段用js来生成svg的代码，所有图标 icon 都很<strong>不直观</strong>。</li></ul>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213287?w=1470&amp;h=404" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="如图所示" title="如图所示" style="cursor: pointer;"></span><br>你完全不知道哪个图标名对应什么图标，一脸尼克扬问号??? 每次增删改图标只能整体js文件一起替换。</p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213287?w=1470&amp;h=404" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="如图所示" title="如图所示" style="cursor: pointer;"></span><br>你完全不知道哪个图标名对应什么图标，一脸尼克扬问号??? 每次增删改图标只能整体js文件一起替换。</p>
 <ul>
 <li>其次它也做不到<strong>按需加载</strong>，不能根据我们使用了那些 svg 动态的生成 <code>svg-sprite</code>。</li>
 <li>
@@ -311,7 +311,7 @@ Vue.component(<span class="hljs-string">'icon-svg'</span>, IconSvg)
 <li>不能确保你使用的一些第三方类库会使用到 svg。</li>
 </ul>
 <p>所以最安全合理的做法是使用 webpack 的 <a href="https://webpack.js.org/configuration/module/#rule-exclude" rel="nofollow noreferrer" target="_blank">exclude</a> 和 <a href="https://webpack.js.org/configuration/module/#rule-include" rel="nofollow noreferrer" target="_blank">include</a> ，让<code>svg-sprite-loader</code>只处理你指定文件夹下面的 svg，<code>url-loaer</code>只处理除此文件夹之外的所以 svg，这样就完美解决了之前冲突的问题。<br>代码如下</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213288?w=490&amp;h=308" src="/img/remote/1460000012213288?w=490&amp;h=308" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213288?w=490&amp;h=308" src="https://static.alili.tech/img/remote/1460000012213288?w=490&amp;h=308" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>这样配置好了，只要引入svg之后填写类名就可以了</p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
@@ -349,14 +349,14 @@ requireAll(req)" title="" data-original-title="复制"></span>
 <span class="hljs-keyword">const</span> req = <span class="hljs-built_in">require</span>.context(<span class="hljs-string">'./svg'</span>, <span class="hljs-literal">false</span>, /\.svg$/)
 requireAll(req)</code></pre>
 <p>之后我们增删改图标直接直接文件夹下对应的图标就好了，什么都不用管，就会自动生成 <code>svg symbol</code>了。</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213289?w=1156&amp;h=138" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213289?w=1156&amp;h=138" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <h2 id="articleHeader10">更进一步优化自己的svg</h2>
 <p>首先我们来看一下 从 <code>阿里iconfont</code> 网站上导出的 svg 长什么样？</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213290?w=1482&amp;h=362" src="/img/remote/1460000012213290?w=1482&amp;h=362" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213290?w=1482&amp;h=362" src="https://static.alili.tech/img/remote/1460000012213290?w=1482&amp;h=362" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>没错虽然 iconfont 网站导出的 svg 内容已经算蛮精简的了，但你会发现其实还是与很多无用的信息，造成了不必要的冗余。就连 iconfont 网站导出的 svg 都这样，更不用说那些更在意 ui漂不漂亮不懂技术的设计师了(可能)导出的svg了。好在 <code>svg-sprite-loader</code>也考虑到了这点，它目前只会获取 svg 中 path 的内容，而其它的信息一概不会获取。生成 svg 如下图：</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213291?w=1146&amp;h=105" src="/img/remote/1460000012213291?w=1146&amp;h=105" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213291?w=1146&amp;h=105" src="https://static.alili.tech/img/remote/1460000012213291?w=1146&amp;h=105" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>但任何你在 path 中产生的冗余信息它就不会做处理了。如注释什么的</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000012213292?w=1512&amp;h=296" src="/img/remote/1460000012213292?w=1512&amp;h=296" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000012213292?w=1512&amp;h=296" src="https://static.alili.tech/img/remote/1460000012213292?w=1512&amp;h=296" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>这时候我们就要使用另一个很好用的东西了-- <a href="https://github.com/svg/svgo" rel="nofollow noreferrer" target="_blank">svgo</a></p>
 <blockquote>SVG files, especially exported from various editors, usually contain a lot of redundant and useless information such as editor metadata, comments, hidden elements, default or non-optimal values and other stuff that can be safely removed or converted without affecting SVG rendering result.</blockquote>
 <p>它支持几十种优化项，非常的强大，8k+的star 也足以说明了问题。</p>

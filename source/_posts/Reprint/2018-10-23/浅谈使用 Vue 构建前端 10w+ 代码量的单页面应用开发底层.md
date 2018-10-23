@@ -9,7 +9,7 @@ date: 2018-10-23 00:00:00
 {% raw %}
 
                     
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015472616?w=845&amp;h=622" src="/img/remote/1460000015472616?w=845&amp;h=622" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015472616?w=845&amp;h=622" src="https://static.alili.tech/img/remote/1460000015472616?w=845&amp;h=622" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <h2 id="articleHeader0">开始之前</h2>
 <p>随着业务的不断累积，目前我们 <code>ToC 端</code>主要项目，除去 <code>node_modules</code>， <code>build 配置文件</code>，<code>dist 静态资源文件</code>的代码量为 <code>137521</code> 行，后台管理系统下各个子应用代码，除去依赖等文件的总行数也达到 <code>100万</code> 多一点。</p>
 <blockquote>代码量意味不了什么，只能证明模块很多，但相同两个项目，在<code>运行时性能相同</code>情况下，<strong>你的 <code>10 万</code>行代码能容纳并维护 <code>150</code> 个模块，并且开发顺畅，我的项目中 <code>10 万</code>行代码却只能容纳 <code>100</code> 个模块，添加功能也好，维护起来也较为繁琐，这就很值得思考</strong>。</blockquote>
@@ -1673,7 +1673,7 @@ export default {
 <li><a href="https://bmfe.github.io/eros-docs/" rel="nofollow noreferrer" target="_blank">文档地址</a></li>
 </ul>
 <p>最后附上部分产品截图~</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015472617?w=970&amp;h=3648" src="/img/remote/1460000015472617?w=970&amp;h=3648" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015472617?w=970&amp;h=3648" src="https://static.alili.tech/img/remote/1460000015472617?w=970&amp;h=3648" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p>(逃~)</p>
 
                 

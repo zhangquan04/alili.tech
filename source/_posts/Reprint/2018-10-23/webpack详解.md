@@ -322,7 +322,7 @@ order.consumerInfoAsync(<span class="hljs-string">'user007'</span>, <span class=
 </li>
 </ul>
 <h4>Tapable详解</h4>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000013657047" src="/img/remote/1460000013657047" alt="Alt text" title="Alt text" style="cursor: pointer; display: inline;"></span><br>对于<code>Sync*</code>类型的钩子来说。</p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000013657047" src="https://static.alili.tech/img/remote/1460000013657047" alt="Alt text" title="Alt text" style="cursor: pointer; display: inline;"></span><br>对于<code>Sync*</code>类型的钩子来说。</p>
 <ul>
 <li>注册在该钩子下面的插件的执行顺序都是顺序执行。</li>
 <li>只能使用<code>tap</code>注册，不能使用<code>tapPromise</code>和<code>tapAsync</code>注册</li>

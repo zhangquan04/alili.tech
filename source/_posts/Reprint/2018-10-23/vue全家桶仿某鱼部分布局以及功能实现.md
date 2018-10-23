@@ -28,15 +28,15 @@ date: 2018-10-23 00:00:00
 </ul>
 <h3 id="articleHeader2">实现效果</h3>
 <p><strong>搜索</strong></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015994545?w=378&amp;h=660" src="/img/remote/1460000015994545?w=378&amp;h=660" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994545?w=378&amp;h=660" src="https://static.alili.tech/img/remote/1460000015994545?w=378&amp;h=660" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p><strong>分类</strong></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015994546?w=378&amp;h=660" src="/img/remote/1460000015994546?w=378&amp;h=660" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994546?w=378&amp;h=660" src="https://static.alili.tech/img/remote/1460000015994546?w=378&amp;h=660" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <p><strong>登录</strong></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015994547" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994547" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p><strong>购买</strong></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015994548" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br><span class="img-wrap"><img data-src="/img/remote/1460000015994549" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994548" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span><br><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994549" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <p><strong>发布</strong></p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015994550" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994550" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer;"></span></p>
 <h3 id="articleHeader3">代码目录结构</h3>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
@@ -286,7 +286,7 @@ createImage(files, e) {
   })
 },</code></pre>
 <hr>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015994551" src="/img/remote/1460000015994551" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/remote/1460000015994551" src="https://static.alili.tech/img/remote/1460000015994551" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <h2 id="articleHeader5">结语</h2>
 <p>**很多东西细节想聊出来，比如嵌套路由所踩的坑..等，但是最近忙于找工作，时间问题就写到这里，有兴趣或者正在学习vue的同学可以查看我的github源码。<a href="https://github.com/LLZUPUP/vue-fallowFish" rel="nofollow noreferrer" target="_blank">fallow-fish</a><br><br><br>如果对你有帮助，可以star我的项目给我一点点的鼓励，也希望有志同道和的可以加入一起讨论，我也会第一时间帮你解答。**</p>
 

@@ -11,7 +11,7 @@ date: 2018-10-23 00:00:00
                     
 <p>最近的一段时间一直在搞<code>TypeScript</code>，一个巨硬出品、赋予<code>JavaScript</code>语言静态类型和编译的语言。  <br>第一个完全使用<code>TypeScript</code>重构的纯<code>Node.js</code>项目已经上线并稳定运行了。  <br>第二个前后端的项目目前也在重构中，关于前端基于<code>webpack</code>的<code>TypeScript</code>套路之前也有提到过：<a href="https://segmentfault.com/a/1190000016163937">TypeScript在react项目中的实践</a>。  </p>
 <p>但是这些做完以后也总感觉缺了点儿什么 _（没有尽兴）_：</p>
-<p><span class="img-wrap"><img data-src="/img/bVbgkU9?w=1984&amp;h=270" src="/img/bVbgkU9?w=1984&amp;h=270" alt="old-project-screenshot.png" title="old-project-screenshot.png" style="cursor: pointer; display: inline;"></span><br>是的，依然有五分之一的<code>JavaScript</code>代码存在于项目中，作为一个<code>TypeScript</code>的示例项目，表现的很不纯粹。  <br>所以有没有可能将这些<code>JavaScript</code>代码也换成<code>TypeScript</code>呢？  <br>答案肯定是有的，首先需要分析这些代码都是什么：</p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgkU9?w=1984&amp;h=270" src="https://static.alili.tech/img/bVbgkU9?w=1984&amp;h=270" alt="old-project-screenshot.png" title="old-project-screenshot.png" style="cursor: pointer; display: inline;"></span><br>是的，依然有五分之一的<code>JavaScript</code>代码存在于项目中，作为一个<code>TypeScript</code>的示例项目，表现的很不纯粹。  <br>所以有没有可能将这些<code>JavaScript</code>代码也换成<code>TypeScript</code>呢？  <br>答案肯定是有的，首先需要分析这些代码都是什么：</p>
 <ul>
 <li>
 <code>Webpack</code>打包时的配置文件</li>
@@ -123,7 +123,7 @@ export default config" title="" data-original-title="复制"></span>
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> config</code></pre>
-<p><code>Configuration</code>是一个<code>Webpack</code>定义的接口（<code>interface</code>），用来规范一个对象的行为。  <br>在<code>VS Code</code>下按住<code>Command</code> + 单击可以直接跳转到具体的<code>webpack.d.ts</code>定义文件那里，可以看到详细的定义信息。  <br><span class="img-wrap"><img data-src="/img/bVbgkWT?w=1790&amp;h=1068" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="webpack-declare.png" title="webpack-declare.png" style="cursor: pointer;"></span><br>各种常用的规则都写在了这里，使用<code>TypeScript</code>的一个好处就是，当要实现一个功能时你不再需要去网站上查询应该要配置什么，可以直接翻看<code>d.ts</code>的定义。  <br>如果注释写得足够完善，基本可以当成文档来用了，而且在<code>VS Code</code>编辑器中还有动态的提示，以及一些错误的纠正，比如上述的<code>NODE_ENV</code>的获取，如果直接写<code>process.env.NODE_ENV || 'development'</code>是会抛出一个异常的，因为从<code>d.ts</code>中可以看到，关于<code>mode</code>只有三个有效值<code>production</code>、<code>developemnt</code>和<code>none</code>，而<code>process.env.NODE_ENV</code>显然只是一个字符串类型的变量。  <br><span class="img-wrap"><img data-src="/img/bVbgkVj?w=1082&amp;h=502" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="warning-tips.png" title="warning-tips.png" style="cursor: pointer;"></span><br>所以我们需要使用三元运算符保证传入的参数一定是我们想要的。  </p>
+<p><code>Configuration</code>是一个<code>Webpack</code>定义的接口（<code>interface</code>），用来规范一个对象的行为。  <br>在<code>VS Code</code>下按住<code>Command</code> + 单击可以直接跳转到具体的<code>webpack.d.ts</code>定义文件那里，可以看到详细的定义信息。  <br><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgkWT?w=1790&amp;h=1068" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="webpack-declare.png" title="webpack-declare.png" style="cursor: pointer;"></span><br>各种常用的规则都写在了这里，使用<code>TypeScript</code>的一个好处就是，当要实现一个功能时你不再需要去网站上查询应该要配置什么，可以直接翻看<code>d.ts</code>的定义。  <br>如果注释写得足够完善，基本可以当成文档来用了，而且在<code>VS Code</code>编辑器中还有动态的提示，以及一些错误的纠正，比如上述的<code>NODE_ENV</code>的获取，如果直接写<code>process.env.NODE_ENV || 'development'</code>是会抛出一个异常的，因为从<code>d.ts</code>中可以看到，关于<code>mode</code>只有三个有效值<code>production</code>、<code>developemnt</code>和<code>none</code>，而<code>process.env.NODE_ENV</code>显然只是一个字符串类型的变量。  <br><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgkVj?w=1082&amp;h=502" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="warning-tips.png" title="warning-tips.png" style="cursor: pointer;"></span><br>所以我们需要使用三元运算符保证传入的参数一定是我们想要的。  </p>
 <p>以及在编写的过程中，如果有一些自定义的<code>plugin</code>之类的，可能在使用的过程中会抛异常提示说某个对象不是有效的<code>Plugin</code>对象，一个很简单的方法，在对应的<code>plugin</code>后边添加一个<code>as webpack.Plugin</code>即可。  </p>
 <p><strong>在这里<code>TypeScript</code>所做的只是静态的检查，并不会对实际的代码执行造成任何影响，就算类型因为强行<code>as</code>而改变，也只是编译期的修改，在实际执行的<code>JavaScript</code>代码中还是弱类型的</strong>   </p>
 <p>在完成了上述的操作后，再执行<code>npm run XXX</code>就可以直接运行<code>TypeScript</code>版本的<code>Webpack</code>配置咯。</p>
@@ -159,7 +159,7 @@ export default config" title="" data-original-title="复制"></span>
       </div>
       </div><pre class="bash hljs"><code class="bash" style="word-break: break-word; white-space: initial;">Error: XXX.XXX is not a <span class="hljs-keyword">function</span></code></pre>
 <p>因为这确实有一个门槛问题，必须要写很多才能记住调用规则，各种<code>not</code>、<code>includes</code>的操作。  <br>但是接入了<code>TypeScript</code>以后，这些问题都迎刃而解了。  <br>也是前边提到的，所有的<code>TypeScript</code>模块都有其对应的<code>.d.ts</code>文件，用来告诉我们这个模块是做什么的，提供了什么可以使用。  <br>也就是说在测试用例编写时，我们可以通过动态提示来快速的书写断言，而不需要结合着文档去进行“翻译”。  </p>
-<p><span class="img-wrap"><img data-src="/img/bVbgkVl?w=1298&amp;h=152" src="/img/bVbgkVl?w=1298&amp;h=152" alt="chai-tips.png" title="chai-tips.png" style="cursor: pointer; display: inline;"></span><br><span class="img-wrap"><img data-src="/img/bVbgkVo?w=1086&amp;h=196" src="/img/bVbgkVo?w=1086&amp;h=196" alt="chai-warning.png" title="chai-warning.png" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgkVl?w=1298&amp;h=152" src="https://static.alili.tech/img/bVbgkVl?w=1298&amp;h=152" alt="chai-tips.png" title="chai-tips.png" style="cursor: pointer; display: inline;"></span><br><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgkVo?w=1086&amp;h=196" src="https://static.alili.tech/img/bVbgkVo?w=1086&amp;h=196" alt="chai-warning.png" title="chai-warning.png" style="cursor: pointer; display: inline;"></span></p>
 <h3 id="articleHeader6">使用方式</h3>
 <p>如果是之前有写过<code>mocha</code>和<code>chai</code>的童鞋，基本上修改文件后缀+安装对应的<code>@types</code>即可。  <br>可以直接跳到这里来：<a href="#%E5%BC%80%E5%A7%8B%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC">开始编写测试脚本</a>  <br>但是如果对测试用例感兴趣，但是并没有使用过的童鞋，可以看下边的一个基本步骤。</p>
 <h3 id="articleHeader7">安装依赖</h3>
@@ -283,10 +283,10 @@ mocha -r ts-node/register <span class="hljs-built_in">test</span>/number-comma.s
 }</code></pre>
 <p><em><code>npm test</code>可以直接调用，而不需要添加<code>run</code>命令符，类似的还有<code>start</code>、<code>build</code>等等</em>  </p>
 <p>一键执行以后就可以得到我们想要的结果了，再也不用担心一些代码的改动会影响到其他模块的逻辑了 <strong>（前提是认真写测试用例）</strong>  </p>
-<p><span class="img-wrap"><img data-src="/img/bVbgkVw?w=696&amp;h=248" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="mocha-results.png" title="mocha-results.png" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgkVw?w=696&amp;h=248" src="https://static.segmentfault.com/v-5bbf1b3b/global/img/squares.svg" alt="mocha-results.png" title="mocha-results.png" style="cursor: pointer;"></span></p>
 <h2 id="articleHeader9">小结</h2>
 <p>做完上边两步的操作以后，我们的项目就实现了100%的<code>TypeScript</code>化，在任何地方享受静态编译语法所带来的好处。  <br>附上更新后的代码含量截图：</p>
-<p><span class="img-wrap"><img data-src="/img/bVbgkVz?w=1982&amp;h=276" src="/img/bVbgkVz?w=1982&amp;h=276" alt="new-project-screenshot.png" title="new-project-screenshot.png" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img data-src="https://static.alili.tech/img/bVbgkVz?w=1982&amp;h=276" src="https://static.alili.tech/img/bVbgkVz?w=1982&amp;h=276" alt="new-project-screenshot.png" title="new-project-screenshot.png" style="cursor: pointer; display: inline;"></span></p>
 <p>最近针对<code>TypeScript</code>做了很多事情，从<code>Node.js</code>、<code>React</code>以及这次的<code>Webpack</code>与<code>Mocha+Chai</code>。  <br><code>TypeScript</code>因为其存在一个编译的过程，极大的降低了代码出bug的可能性，提高程序的稳定度。  <br>全面切换到<code>TypeScript</code>更是能够降低在两种语法之间互相切换时所带来的不必要的消耗，祝大家搬砖愉快。</p>
 <h3 id="articleHeader10">之前关于 TypeScript 的笔记</h3>
 <ul>
