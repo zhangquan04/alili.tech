@@ -107,7 +107,7 @@ pwa:
   priority: 5  
 
 addlink:
-  before_text: '<h1> 本文链接：</h1>' # text before the post link
+  before_text: '<h2> 本文链接：</h2>' # text before the post link
   after_text: '' # text after the post link
 
 
