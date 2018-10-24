@@ -116,7 +116,7 @@ recommended_posts:
   timeoutInMillis: 10000 #服务时长，超过此时长，则使用离线推荐模式
   internalLinks: 5 #内部文章数量
   externalLinks: 3 #外部文章数量
-  fixedNumber: false
+  fixedNumber: 8
   autoDisplay: true  #自动在文章底部显示推荐文章
   excludePattern: []
   titleHtml: <h1>相关文章</h1> #自定义标题

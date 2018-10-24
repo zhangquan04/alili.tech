@@ -9,7 +9,7 @@ date: 2018-10-24 08:17:53
 {% raw %}
 
                     
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015727282?w=500&amp;h=317" src="https://static.alili.tech/img/remote/1460000015727282?w=500&amp;h=317" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000015727282?w=500&amp;h=317" del-src="https://static.alili.tech/img/remote/1460000015727282?w=500&amp;h=317" alt="" title="" style="cursor: pointer; display: inline;"></span></p>
 <h2 id="articleHeader0">&#x524D;&#x8A00;</h2>
 <p>&#x8BF4;&#x5230;Vue&#x7684;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x80FD;&#x5F88;&#x591A;&#x4EBA;&#x53EA;&#x505C;&#x7559;&#x5728;&#x4E00;&#x4E9B;&#x5F88;&#x7B80;&#x5355;&#x5E38;&#x7528;&#x7684;&#x94A9;&#x5B50;(<code>created</code>,<code>mounted</code>)&#xFF0C;&#x800C;&#x4E14;&#x5BF9;&#x4E8E;&#x91CC;&#x9762;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x8BE5;&#x7528;&#x4EC0;&#x4E48;&#x94A9;&#x5B50;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x4ED4;&#x7EC6;&#x7684;&#x53BB;&#x7814;&#x7A76;&#x8FC7;&#xFF0C;&#x4E14;Vue&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x5728;&#x9762;&#x8BD5;&#x4E2D;&#x4E5F;&#x7B97;&#x662F;&#x6BD4;&#x8F83;&#x9AD8;&#x9891;&#x7684;&#x8003;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x5982;&#x4F55;&#x56DE;&#x7B54;&#x8FD9;&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x8BA9;&#x4EBA;&#x6709;&#x773C;&#x524D;&#x4E00;&#x4EAE;&#x7684;&#x611F;&#x89C9;&#x5462;...</p>
 <blockquote>&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;&#xFF1A;<a href="http://obkoro1.com/" rel="nofollow noreferrer" target="_blank">obkoro1.com</a>
@@ -562,7 +562,7 @@ new Router(</span><span class="hljs-template-variable">{
 <hr>
 <h2 id="articleHeader11">&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;&#xFF1A;</h2>
 <p>&#x5173;&#x4E8E;&#x7EC4;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x662F;&#x65F6;&#x5019;&#x653E;&#x51FA;&#x8FD9;&#x5F20;&#x56FE;&#x7247;&#x4E86;&#xFF1A;</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000015727283?w=1200&amp;h=2800" src="https://static.alili.tech/img/remote/1460000015727282?w=500&amp;h=317" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000015727283?w=1200&amp;h=2800" del-src="https://static.alili.tech/img/remote/1460000015727282?w=500&amp;h=317" alt="" title="" style="cursor: pointer;"></span></p>
 <p>&#x8FD9;&#x5F20;&#x56FE;&#x7247;&#x5DF2;&#x7ECF;&#x8BB2;&#x5F97;&#x5F88;&#x6E05;&#x695A;&#x4E86;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x8FD9;&#x90E8;&#x5206;&#x4E5F;&#x5F88;&#x6E05;&#x695A;&#x4E86;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x751F;&#x547D;&#x5468;&#x671F;&#x5E76;&#x4E0D;&#x4F1A;&#x7528;&#x5230;&#xFF0C;&#x8FD9;&#x91CC;&#x63D0;&#x4E00;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
 <ol>
 <li>
@@ -616,7 +616,7 @@ new Router(</span><span class="hljs-template-variable">{
 <h3 id="articleHeader14">&#x5E0C;&#x671B;&#x770B;&#x5B8C;&#x7684;&#x670B;&#x53CB;&#x53EF;&#x4EE5;&#x70B9;&#x4E2A;&#x559C;&#x6B22;/&#x5173;&#x6CE8;&#xFF0C;&#x60A8;&#x7684;&#x652F;&#x6301;&#x662F;&#x5BF9;&#x6211;&#x6700;&#x5927;&#x7684;&#x9F13;&#x52B1;&#x3002;</h3>
 <p><strong><a href="http://obkoro1.com/" rel="nofollow noreferrer" target="_blank">&#x4E2A;&#x4EBA;blog</a></strong> and <strong><a href="https://juejin.im/user/58714f0eb123db4a2eb95372" rel="nofollow noreferrer" target="_blank">&#x6398;&#x91D1;&#x4E2A;&#x4EBA;&#x4E3B;&#x9875;</a></strong>&#xFF0C;&#x5982;&#x9700;&#x8F6C;&#x8F7D;&#xFF0C;&#x8BF7;&#x653E;&#x4E0A;&#x539F;&#x6587;&#x94FE;&#x63A5;&#x5E76;&#x7F72;&#x540D;&#x3002;&#x7801;&#x5B57;&#x4E0D;&#x6613;&#xFF0C;<strong>&#x611F;&#x8C22;</strong>&#x652F;&#x6301;&#xFF01;</p>
 <p>&#x5982;&#x679C;&#x559C;&#x6B22;&#x672C;&#x6587;&#x7684;&#x8BDD;&#xFF0C;&#x6B22;&#x8FCE;&#x5173;&#x6CE8;&#x6211;&#x7684;&#x8BA2;&#x9605;&#x53F7;&#xFF0C;&#x6F2B;&#x6F2B;&#x6280;&#x672F;&#x8DEF;&#xFF0C;&#x671F;&#x5F85;&#x672A;&#x6765;&#x5171;&#x540C;&#x5B66;&#x4E60;&#x6210;&#x957F;&#x3002;</p>
-<p><span class="img-wrap"><img data-src="/img/remote/1460000014694068?w=344&amp;h=344" src="https://static.alili.tech/img/remote/1460000015727282?w=500&amp;h=317" alt="" title="" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000014694068?w=344&amp;h=344" del-src="https://static.alili.tech/img/remote/1460000015727282?w=500&amp;h=317" alt="" title="" style="cursor: pointer;"></span></p>
 <p>&#x4EE5;&#x4E0A;2018.7.21</p>
 <p>&#x53C2;&#x8003;&#x8D44;&#x6599;&#xFF1A;</p>
 <p>Vue&#x6587;&#x6863;</p>

@@ -526,7 +526,7 @@ Singleton.prototype.getName = <span class="hljs-function"><span class="hljs-keyw
 <h3 id="articleHeader22">6.1 &#x5B9A;&#x4E49;</h3>
 <p>&#x5BF9;&#x8C61;&#x7EE7;&#x627F;&#x5C5E;&#x6027;&#x7684;&#x4E00;&#x4E2A;&#x94FE;&#x6761;</p>
 <h3 id="articleHeader23">6.2&#x6784;&#x9020;&#x51FD;&#x6570;,&#x5B9E;&#x4F8B;&#x4E0E;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x7684;&#x5173;&#x7CFB;</h3>
-<p><span class="img-wrap"><img data-src="/img/bV8wcf?w=638&amp;h=241" src="https://static.alili.tech/img/bV8wcf?w=638&amp;h=241" alt="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" title="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/bV8wcf?w=638&amp;h=241" del-src="https://static.alili.tech/img/bV8wcf?w=638&amp;h=241" alt="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" title="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" style="cursor: pointer; display: inline;"></span></p>
 <div class="widget-codetool" style="display:none;">
       <div class="widget-codetool--inner">
       <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span>
@@ -536,7 +536,7 @@ var o3personTwo = new Person(&apos;personTwo&apos;)//personTwo&#x662F;&#x5B9E;&#
       </div>
       </div><pre class="hljs actionscript"><code><span class="hljs-keyword">var</span> Person = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(name)</span> </span>{ <span class="hljs-keyword">this</span>.name = name; }<span class="hljs-comment">//person&#x662F;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
 <span class="hljs-keyword">var</span> o3personTwo = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;personTwo&apos;</span>)<span class="hljs-comment">//personTwo&#x662F;&#x5B9E;&#x4F8B;</span></code></pre>
-<p><span class="img-wrap"><img data-src="/img/bV8wdm?w=534&amp;h=333" src="https://static.alili.tech/img/bV8wcf?w=638&amp;h=241" alt="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" title="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" style="cursor: pointer; display: inline;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/bV8wdm?w=534&amp;h=333" del-src="https://static.alili.tech/img/bV8wcf?w=638&amp;h=241" alt="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" title="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" style="cursor: pointer; display: inline;"></span></p>
 <p>&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;constructor&#x5C5E;&#x6027;&#x6307;&#x5411;&#x6784;&#x9020;&#x51FD;&#x6570;</p>
 <h3 id="articleHeader24">6.3 &#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x7684;&#x65B9;&#x6CD5;</h3>
 <p>1.&#x5B57;&#x9762;&#x91CF;</p>
@@ -620,7 +620,7 @@ var person1 = new Person(&apos;&#x5F20;&#x4E09;&apos;);" title="" data-original-
 }  </code></pre>
 <p>&#x66F4;&#x591A;&#x8BE6;&#x60C5;:<a href="https://www.cnblogs.com/chengzp/p/prototype.html" rel="nofollow noreferrer" target="_blank">&#x8BE6;&#x8C08;JavaScript&#x539F;&#x578B;&#x94FE;</a></p>
 <h3 id="articleHeader26">6.5 &#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x94FE;</h3>
-<p><span class="img-wrap"><img data-src="/img/bV8wf4?w=570&amp;h=709" src="https://static.alili.tech/img/bV8wcf?w=638&amp;h=241" alt="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" title="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" style="cursor: pointer;"></span></p>
+<p><span class="img-wrap"><img src="https://static.alili.tech/img/bV8wf4?w=570&amp;h=709" del-src="https://static.alili.tech/img/bV8wcf?w=638&amp;h=241" alt="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" title="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" style="cursor: pointer;"></span></p>
 <h2 id="articleHeader27">7.&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;</h2>
 <p>JS&#x662F;&#x4E00;&#x95E8;&#x5F31;&#x7C7B;&#x578B;&#x52A8;&#x6001;&#x8BED;&#x8A00;,&#x5C01;&#x88C5;&#x548C;&#x7EE7;&#x627F;&#x662F;&#x4ED6;&#x7684;&#x4E24;&#x5927;&#x7279;&#x6027;</p>
 <h3 id="articleHeader28">7.1&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;</h3>
