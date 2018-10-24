@@ -8,7 +8,7 @@ if (!!$.prototype.justifiedGallery) { // if justifiedGallery method is defined
 }
 
 $(document).ready(function () {
-
+  $("#menu > #nav").show();
   $("#menu-icon, #menu-icon-tablet").click(function () {
     if ($('#menu').css('visibility') == 'hidden') {
       $('#menu').css('visibility', 'visible');
