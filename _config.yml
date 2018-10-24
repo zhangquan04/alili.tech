@@ -80,7 +80,7 @@ baidusitemap:
   path: baidusitemap.xml
 
 #压缩
-#neat_enable: true
+# neat_enable: true
 
 
 baidu_url_submit:
@@ -131,6 +131,8 @@ nofollow:
 deploy:
 - type: git    #部署类型
   repository: https://git.coding.net/incomparable9527/incomparable9527.coding.me.git  #部署的仓库的SSH
+- type: git    #部署类型
+  repository: https://github.com/Fantasy9527/fantasy9527.github.io.git  #部署的仓库的SSH
   branch: master   #部署分支,一般使用master主分支
 - type: baidu_url_submitter # 百度
 - type: baidu_xz_url_submitter # 百度熊掌号
