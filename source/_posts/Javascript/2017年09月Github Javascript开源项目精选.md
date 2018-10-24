@@ -1,5 +1,5 @@
 ---
-title: 2017年09月Github Javascript趋势收集
+title: 2017年09月Github Javascript开源项目精选
 tags: Trending
 abbrlink: 53fea45f
 keywords: Github,Javascript,前端趋势,未来前端,技术趋势,解决方案
