@@ -1,8 +1,4 @@
- [{
- 		"name": "alili.tech源码",
- 		"url": "https://github.com/Fantasy9527/alili.tech",
- 		"desc": "如果发现描述不对,或者错字,欢迎提交PR修改.期待你的参与!!"
- 	},
+ [
  	{
  		"name": "微前端Base Demo",
  		"url": "https://github.com/Fantasy9527/microfrontend-base-demo",
