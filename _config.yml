@@ -126,6 +126,7 @@ nofollow:
 	exclude:
     - alili.tech
 
+
 # Deployment  站点部署到github要配置这里, 非常重要
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
@@ -134,5 +135,14 @@ deploy:
 - type: git    #部署类型
   repository: https://github.com/Fantasy9527/fantasy9527.github.io.git  #部署的仓库的SSH
   branch: master   #部署分支,一般使用master主分支
+# - type: ftpsync
+#   host: hyu5353320001.my3w.com
+#   user: hyu5353320001
+#   pass: Ftp31415926
+#   remote: /htdocs/
+#   ignore: ['/.git/']
+#   port: 21
+#   connections: 4
+#   verbose: true
 - type: baidu_url_submitter # 百度
 - type: baidu_xz_url_submitter # 百度熊掌号

@@ -5,8 +5,17 @@ title: 前端大收集
 
 ## 周报订阅
 
+
 |名称 |订阅地址 | 介绍 |
 | ----- | ----- | ------ |
+|**中文推送**|
+|Alili Weekly|https://alili.tech/tags/Weekly/| js相关|
+|稀土:掘金|http://gold.xitu.io/|国内十分用心的开发者技术分享、交流平台|
+|SegmentFault精选 |http://segmentfault.com/|国内开发者技术问答社区每周精选问答|
+|FE Weekly|http://www.feweekly.com/|每周一次，内容主要是英文的，不过有中文导读
+|EchoJs_News|http://www.echojs.com/|每天推送若干好文，都是英文的，JS技术类|
+| 碼天狗週刊 |http://weekly.codetengu.com/|台湾的，一份開發者導向的IT 技術週刊，適合所有患有資訊焦慮症、氣血循環不順以及性受挫的軟體工程師們。|
+|Github Issue Blog Reader|https://gitissue.com|Github Issue 博客聚合平台，每天更新内容，可及时关注阅读|
 |**英文推送**|
 |Html5 Weekly|http://html5weekly.com/| Html 技术类|
 |CSS Weekly|http://css-weekly.com/|
@@ -21,13 +30,6 @@ title: 前端大收集
 |Design News|https://news.layervault.com/|F2类资讯聚合|
 |Css Animations|http://cssanimation.rocks/|关于CSS动画的订阅
 |HACKDESIGN|http://hackdesign.org/|每周发布一个设计类课程|
-|**中文推送**|
-|稀土:掘金|http://gold.xitu.io/|国内十分用心的开发者技术分享、交流平台|
-|SegmentFault精选 |http://segmentfault.com/|国内开发者技术问答社区每周精选问答|
-|FE Weekly|http://www.feweekly.com/|每周一次，内容主要是英文的，不过有中文导读
-|EchoJs_News|http://www.echojs.com/|每天推送若干好文，都是英文的，JS技术类|
-| 碼天狗週刊 |http://weekly.codetengu.com/|台湾的，一份開發者導向的IT 技術週刊，適合所有患有資訊焦慮症、氣血循環不順以及性受挫的軟體工程師們。|
-|Github Issue Blog Reader|https://gitissue.com|Github Issue 博客聚合平台，每天更新内容，可及时关注阅读|
 
 
 ## 中文博客
