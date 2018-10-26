@@ -40,13 +40,13 @@
     <% } %>
     <!-- title -->
     <title><%= page.title ? page.title : (page.tag || config.title) %> | <%=config.subtitle %></title>
+    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
     <!-- styles -->
     <%- css('lib/font-awesome/css/font-awesome.min') %>
     <%- css('lib/meslo-LG/styles') %>
     <%- css('lib/justified-gallery/justifiedGallery.min.css') %>
     <%- css('css/style') %>
     <link rel="canonical" href="<%- page.permalink %>">
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
     <!-- rss -->
     <% if (theme.rss === '' && config.feed && config.feed.path) { %>
       <% theme.rss = config.feed.path %>

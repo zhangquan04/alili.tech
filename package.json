@@ -25,7 +25,6 @@
     "hexo-generator-json-content": "^3.0.1",
     "hexo-generator-sitemap": "^1.2.0",
     "hexo-generator-tag": "^0.2.0",
-    "hexo-github-card": "https://github.com/Fantasy9527/hexo-github-card.git",
     "hexo-html-minifier": "^0.0.1",
     "hexo-neat": "^1.0.4",
     "hexo-pagination": "^0.1.0",

@@ -84,7 +84,7 @@ baidusitemap:
 
 
 baidu_url_submit:
-  count: 10000 ## 提交最新的一个链接
+  count: 40 ## 提交最新的一个链接
   host: alili.tech ## 在百度站长平台中注册的域名
   token: QsL3LjB4I2GLWGbj ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
@@ -126,41 +126,41 @@ nofollow:
 	exclude:
     - alili.tech
 
-toJson:
-  enablePagination: ture # chunk the index.json array based on per_page in _config.yml
-  configs: false # donnot generate the global and theme config api.
-  pages:
-    selectors:
-      - title # string selector
-      - date
-      - updated
-      - comments
-      - excerpt
-      - more
-      - source
-      - permalink
-      - photos
-      - link
-    extracts: [content]
-  posts:
-    selectors:
-      - title
-      - date
-      - updated
-      - comments
-      - excerpt
-      - more
-      - source
-      - permalink
-      - photos
-      - link
-      - {path: tags, childrenSelectors: ['name', 'slug', 'permalink']} # object selector
-      - {path: categories, childrenSelectors: ['name', 'slug', 'permalink']}
-    extracts: [content]
-    raw: true
-    text: false
-  tags: true # using default config
-  categories: true
+# toJson:
+#   enablePagination: ture # chunk the index.json array based on per_page in _config.yml
+#   configs: false # donnot generate the global and theme config api.
+#   pages:
+#     selectors:
+#       - title # string selector
+#       - date
+#       - updated
+#       - comments
+#       - excerpt
+#       - more
+#       - source
+#       - permalink
+#       - photos
+#       - link
+#     extracts: [content]
+#   posts:
+#     selectors:
+#       - title
+#       - date
+#       - updated
+#       - comments
+#       - excerpt
+#       - more
+#       - source
+#       - permalink
+#       - photos
+#       - link
+#       - {path: tags, childrenSelectors: ['name', 'slug', 'permalink']} # object selector
+#       - {path: categories, childrenSelectors: ['name', 'slug', 'permalink']}
+#     extracts: [content]
+#     raw: true
+#     text: false
+#   tags: true # using default config
+#   categories: true
 
 # Deployment  站点部署到github要配置这里, 非常重要
 ## Docs: http://hexo.io/docs/deployment.html
