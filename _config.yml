@@ -96,7 +96,7 @@ pwa:
   manifest:
     path: /manifest.json
     body:
-      "name": "前端大爆炸!"
+      "name": "WEB BANG! BANG!! BANG!!!"
       "short_name": "前端大爆炸"
       "theme_color": "#1d1f21"
       "background_color": "#1d1f21"
