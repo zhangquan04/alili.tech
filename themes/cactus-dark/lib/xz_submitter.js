@@ -22,18 +22,31 @@ module.exports = function(args) {
 
     // 历史提交
     var history_target = "http://data.zz.baidu.com/urls?appid="+xz_appid+"&token="+xz_token+"&type=batch"
+
+
+    var MIP_target = "http://data.zz.baidu.com/urls?site=https://alili.tech&token=QsL3LjB4I2GLWGbj&type=mip"
+
+    var AMP_target = "http://data.zz.baidu.com/urls?site=https://alili.tech&token=QsL3LjB4I2GLWGbj&type=amp"
+
+    
     
     // 最新url,看熊掌号情况而定
     var new_ursl_arr = urls.split('\n');
     new_ursl_arr.length = xz_count
     var new_urls = new_ursl_arr.join('\n')
-    log.info('new urls \n',new_urls)
 
+    log.info('最新数据开始提交')
     sendData(new_target,new_urls,'最新数据提交完成')
 
     // 提交历史url 每天最多500w条
-    log.info("all urls \n" + urls)
+    log.info("历史数据开始提交")
     sendData(history_target,urls,"历史数据提交完成")
+
+    log.info("MIP 开始提交")
+    sendData(MIP_target,urls,"MIP提交成功")
+
+    log.info("AMP 开始提交")
+    sendData(AMP_target,urls,"AMP提交成功")
 
     function sendData(target,urls,message){
         var xhr = new XMLHttpRequest();

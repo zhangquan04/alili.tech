@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
     <meta name="wap-font-scale" content="no">
     <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34" />
     <meta name="sogou_site_verification" content="E8uWFBcf4a"/>
@@ -45,6 +45,8 @@
     <%- css('lib/meslo-LG/styles') %>
     <%- css('lib/justified-gallery/justifiedGallery.min.css') %>
     <%- css('css/style') %>
+    <link rel="canonical" href="<%- page.permalink %>">
+    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
     <!-- rss -->
     <% if (theme.rss === '' && config.feed && config.feed.path) { %>
       <% theme.rss = config.feed.path %>
