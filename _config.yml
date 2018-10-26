@@ -126,6 +126,41 @@ nofollow:
 	exclude:
     - alili.tech
 
+toJson:
+  enablePagination: ture # chunk the index.json array based on per_page in _config.yml
+  configs: false # donnot generate the global and theme config api.
+  pages:
+    selectors:
+      - title # string selector
+      - date
+      - updated
+      - comments
+      - excerpt
+      - more
+      - source
+      - permalink
+      - photos
+      - link
+    extracts: [content]
+  posts:
+    selectors:
+      - title
+      - date
+      - updated
+      - comments
+      - excerpt
+      - more
+      - source
+      - permalink
+      - photos
+      - link
+      - {path: tags, childrenSelectors: ['name', 'slug', 'permalink']} # object selector
+      - {path: categories, childrenSelectors: ['name', 'slug', 'permalink']}
+    extracts: [content]
+    raw: true
+    text: false
+  tags: true # using default config
+  categories: true
 
 # Deployment  站点部署到github要配置这里, 非常重要
 ## Docs: http://hexo.io/docs/deployment.html
