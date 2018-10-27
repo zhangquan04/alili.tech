@@ -25,4 +25,4 @@ date: 2016-05-27T14:31:51.000Z
 
 # 友情链接
 
-[在这里添加](https://github.com/Fantasy9527/alili.tech/blob/Blog/source/about/index.md)
+<!-- [在这里添加](https://github.com/Fantasy9527/alili.tech/blob/Blog/source/about/index.md) -->
