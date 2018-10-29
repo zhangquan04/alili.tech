@@ -1,5 +1,5 @@
 ---
-title: 让你的Hexo博客支持熊掌号URL自动推送,SEO从此无人可挡
+title: 让你的Hexo博客支持熊掌号URL自动推送,百度24小时收录
 tags: SEO
 keywords: 'Hexo,SEO,搜索引擎优化,百度,熊掌号,baidu,google,优化,曝光,推送'
 abbrlink: 9d64fe09
