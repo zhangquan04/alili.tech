@@ -1,5 +1,5 @@
 ---
-title: git push卡住解决办法
+title: Git push卡住解决办法
 tags: Git
 abbrlink: 629795fd
 keywords: git,push,解决方案
