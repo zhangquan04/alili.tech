@@ -185,13 +185,15 @@ nofollow:
 # Deployment  站点部署到github要配置这里, 非常重要
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
+- type: baidu_url_submitter # 百度
+- type: baidu_xz_url_submitter # 百度熊掌号
+
 - type: git    #部署类型
-  repository: https://git.coding.net/incomparable9527/incomparable9527.coding.me.git  #部署的仓库的SSH
-  message: Coding 部署成功
-- type: git    #部署类型
-  repository: https://github.com/Fantasy9527/alili.tech.git  #部署的仓库的SSH
-  branch: master   #部署分支,一般使用master主分支
-  message: Github 部署成功
+  repo:
+    github:  https://github.com/Fantasy9527/alili.tech.git  
+    coding:  https://git.coding.net/incomparable9527/incomparable9527.coding.me.git 
+  branch: master
+  # message: https://alili.tech 部署成功
 # - type: ftpsync
 #   host: hyu5353320001.my3w.com
 #   user: hyu5353320001
@@ -201,5 +203,3 @@ deploy:
 #   port: 21
 #   connections: 4
 #   verbose: true
-- type: baidu_url_submitter # 百度
-- type: baidu_xz_url_submitter # 百度熊掌号
