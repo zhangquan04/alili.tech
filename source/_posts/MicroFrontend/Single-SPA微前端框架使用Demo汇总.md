@@ -1,5 +1,5 @@
 ---
-title: Single-spa微前端Demo示例汇总
+title: Single-SPA微前端框架使用Demo汇总
 tags:
   - 微前端
   - MicroFrontend
