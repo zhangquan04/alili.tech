@@ -188,18 +188,11 @@ deploy:
 - type: baidu_url_submitter # 百度
 - type: baidu_xz_url_submitter # 百度熊掌号
 
+
 - type: git    #部署类型
   repo:
     github:  https://github.com/Fantasy9527/alili.tech.git  
     coding:  https://git.coding.net/incomparable9527/incomparable9527.coding.me.git 
   branch: master
-  # message: https://alili.tech 部署成功
-# - type: ftpsync
-#   host: hyu5353320001.my3w.com
-#   user: hyu5353320001
-#   pass: Ftp31415926
-#   remote: /htdocs/
-#   ignore: ['/.git/']
-#   port: 21
-#   connections: 4
-#   verbose: true
+
+- type: tencent_deploy # 腾讯服务器
