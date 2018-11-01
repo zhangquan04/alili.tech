@@ -137,4 +137,12 @@ var _mtac = {};
     s.parentNode.insertBefore(mta, s);
 })();
 
+Notification.requestPermission().then(function(permission) {
+  if(permission === 'granted'){
+      console.log('用户允许通知');
+  }else if(permission === 'denied'){
+      console.log('用户拒绝通知');
+  }
+});
+
 
