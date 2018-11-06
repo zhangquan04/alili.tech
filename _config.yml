@@ -188,7 +188,7 @@ deploy:
 - type: git    #部署类型
   repo:
     github:  https://github.com/Fantasy9527/alili.tech.git  
-    # coding:  https://git.coding.net/incomparable9527/incomparable9527.coding.me.git 
+    coding:  https://git.coding.net/incomparable9527/incomparable9527.coding.me.git 
   branch: master
 
 - type: tencent_deploy # 腾讯服务器
