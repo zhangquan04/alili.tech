@@ -3,7 +3,7 @@ title: 2018年11月Github Javascript开源项目精选
 date: 2018-11-06 0:00:00
 tags: Trending
 ---
-![](https://static.alili.tech/images/github_38.png)
+![](https://static.alili.tech/images/github_30.png)
 ##   [leonardomso / 33-js-concepts](https://github.com/leonardomso/33-js-concepts) : 
  
 16,878 stars this month
