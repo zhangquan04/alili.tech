@@ -1,8 +1,9 @@
 ---
-title: '使用Docker部署Spring-Boot+Vue博客系统' 
-date: 2018-11-06 15:28:31
+title: 使用Docker部署Spring-Boot+Vue博客系统
 reprint: true
 categories: reprint
+abbrlink: b265b7db
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

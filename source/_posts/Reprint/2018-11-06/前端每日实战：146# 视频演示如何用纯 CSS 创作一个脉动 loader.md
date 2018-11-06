@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：146# 视频演示如何用纯 CSS 创作一个脉动 loader' 
-date: 2018-11-06 15:28:31
+title: '前端每日实战：146# 视频演示如何用纯 CSS 创作一个脉动 loader'
 reprint: true
 categories: reprint
+abbrlink: 470c27fa
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'npm发布包的那些事' 
-date: 2018-11-06 15:28:31
+title: npm发布包的那些事
 reprint: true
 categories: reprint
+abbrlink: c2fc7512
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

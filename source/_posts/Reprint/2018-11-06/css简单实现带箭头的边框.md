@@ -1,8 +1,9 @@
 ---
-title: 'css简单实现带箭头的边框' 
-date: 2018-11-06 15:28:31
+title: css简单实现带箭头的边框
 reprint: true
 categories: reprint
+abbrlink: ddb6ae64
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

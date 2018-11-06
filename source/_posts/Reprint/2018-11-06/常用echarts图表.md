@@ -1,8 +1,9 @@
 ---
-title: '常用echarts图表' 
-date: 2018-11-06 15:28:30
+title: 常用echarts图表
 reprint: true
 categories: reprint
+abbrlink: b9c36d8a
+date: 2018-11-06 15:28:30
 ---
 
 {% raw %}

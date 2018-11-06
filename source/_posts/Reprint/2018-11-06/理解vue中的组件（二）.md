@@ -1,8 +1,9 @@
 ---
-title: '理解vue中的组件（二）' 
-date: 2018-11-06 15:28:30
+title: 理解vue中的组件（二）
 reprint: true
 categories: reprint
+abbrlink: ab1752ee
+date: 2018-11-06 15:28:30
 ---
 
 {% raw %}

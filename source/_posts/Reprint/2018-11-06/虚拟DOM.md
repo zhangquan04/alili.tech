@@ -1,8 +1,9 @@
 ---
-title: '虚拟DOM' 
-date: 2018-11-06 15:28:31
+title: 虚拟DOM
 reprint: true
 categories: reprint
+abbrlink: f78772e0
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

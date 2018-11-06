@@ -1,8 +1,9 @@
 ---
-title: '使用EOSJS和scatter在EOS区块链上开发dApp' 
-date: 2018-11-06 15:28:32
+title: 使用EOSJS和scatter在EOS区块链上开发dApp
 reprint: true
 categories: reprint
+abbrlink: 8478bdc
+date: 2018-11-06 15:28:32
 ---
 
 {% raw %}

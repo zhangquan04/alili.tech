@@ -1,8 +1,9 @@
 ---
-title: '简洁易用的基于Promise的jsonp库easy-jsonp，了解下' 
-date: 2018-11-06 15:28:31
+title: 简洁易用的基于Promise的jsonp库easy-jsonp，了解下
 reprint: true
 categories: reprint
+abbrlink: 2ef87562
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

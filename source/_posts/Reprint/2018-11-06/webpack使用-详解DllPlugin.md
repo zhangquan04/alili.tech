@@ -1,8 +1,9 @@
 ---
-title: 'webpack使用-详解DllPlugin' 
-date: 2018-11-06 15:28:30
+title: webpack使用-详解DllPlugin
 reprint: true
 categories: reprint
+abbrlink: f3392b53
+date: 2018-11-06 15:28:30
 ---
 
 {% raw %}

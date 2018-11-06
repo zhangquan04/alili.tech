@@ -1,8 +1,9 @@
 ---
-title: 'Vuido开发' 
-date: 2018-11-06 15:28:31
+title: Vuido开发
 reprint: true
 categories: reprint
+abbrlink: d8aea1e7
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '搞懂 Javascript 继承原理' 
-date: 2018-11-06 15:28:31
+title: 搞懂 Javascript 继承原理
 reprint: true
 categories: reprint
+abbrlink: d7791b4e
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

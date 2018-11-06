@@ -1,8 +1,9 @@
 ---
-title: 'github 上有趣又实用的前端项目（持续更新，欢迎补充）' 
-date: 2018-11-06 15:28:32
+title: github 上有趣又实用的前端项目（持续更新，欢迎补充）
 reprint: true
 categories: reprint
+abbrlink: 185775c5
+date: 2018-11-06 15:28:32
 ---
 
 {% raw %}

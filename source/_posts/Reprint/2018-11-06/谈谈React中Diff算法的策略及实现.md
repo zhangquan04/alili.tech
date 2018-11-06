@@ -1,8 +1,9 @@
 ---
-title: '谈谈React中Diff算法的策略及实现' 
-date: 2018-11-06 15:28:32
+title: 谈谈React中Diff算法的策略及实现
 reprint: true
 categories: reprint
+abbrlink: b35399aa
+date: 2018-11-06 15:28:32
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'Javascript-apply、call、bind' 
-date: 2018-11-06 15:28:31
+title: Javascript-apply、call、bind
 reprint: true
 categories: reprint
+abbrlink: c6eb39dc
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

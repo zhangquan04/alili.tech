@@ -1,8 +1,9 @@
 ---
-title: '判断ios和Android及PC端' 
-date: 2018-11-06 15:28:31
+title: 判断ios和Android及PC端
 reprint: true
 categories: reprint
+abbrlink: 3c0e25ac
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

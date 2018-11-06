@@ -1,8 +1,9 @@
 ---
-title: '前后端分离项目 — SpringSocial 绑定与解绑社交账号如微信、QQ' 
-date: 2018-11-06 15:28:31
+title: 前后端分离项目 — SpringSocial 绑定与解绑社交账号如微信、QQ
 reprint: true
 categories: reprint
+abbrlink: bc6556da
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

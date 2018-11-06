@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript循环遍历你会用哪些？' 
-date: 2018-11-06 15:28:31
+title: JavaScript循环遍历你会用哪些？
 reprint: true
 categories: reprint
+abbrlink: 57db5607
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

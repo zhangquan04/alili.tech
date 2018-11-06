@@ -1,8 +1,9 @@
 ---
-title: 'Javascript-函数节流与函数防抖' 
-date: 2018-11-06 15:28:31
+title: Javascript-函数节流与函数防抖
 reprint: true
 categories: reprint
+abbrlink: ffa82191
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'async语法升级踩坑小记' 
-date: 2018-11-06 15:28:31
+title: async语法升级踩坑小记
 reprint: true
 categories: reprint
+abbrlink: '31485486'
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

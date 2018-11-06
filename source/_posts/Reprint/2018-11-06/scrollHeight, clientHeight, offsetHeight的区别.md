@@ -1,8 +1,9 @@
 ---
-title: 'scrollHeight, clientHeight, offsetHeight的区别' 
-date: 2018-11-06 15:28:31
+title: 'scrollHeight, clientHeight, offsetHeight的区别'
 reprint: true
 categories: reprint
+abbrlink: a5a45d1f
+date: 2018-11-06 15:28:31
 ---
 
 {% raw %}

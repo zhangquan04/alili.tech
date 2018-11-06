@@ -1,8 +1,9 @@
 ---
-title: 'Javascript-伪数组' 
-date: 2018-11-06 15:28:32
+title: Javascript-伪数组
 reprint: true
 categories: reprint
+abbrlink: 9501e5ae
+date: 2018-11-06 15:28:32
 ---
 
 {% raw %}
