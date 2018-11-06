@@ -91,7 +91,10 @@ $(function () {
       var str = data.content;
       print(data.content, ".description .en", function () {
         print(data.translation, ".description .ch", function () {
-          print("---- " + data.author, ".description .author", function () {})
+          print("---- " + data.author, ".description .author", function () {
+            print("网站已经支持PWA,可尝试添加到桌面", ".description .ad-text", function () {})
+          })
+          
         })
       })
     })

@@ -1,9 +1,10 @@
 <section id="about">
   <% if (config.description) { %>
-    <div class="description">
-      <p class="en"></p>
-      <p class="ch"></p>
-      <p class="author"></p>
+    <div class="description coding">
+      <p class="en prompt"></p>
+      <p class="ch prompt"></p>
+      <p class="author prompt"></p>
+      <p class="prompt ad-text output new-output"></p>
     </div>
   <% } %>
   <p style="display: inline">
@@ -23,9 +24,11 @@
       </ul>.
     <% } %>
   </p>
+  
 </section>
 
 <section id="writing">
+  
   <span class="h1"><a href="<%- url_for("archives") %>">Writing</a></span>
   <ul class="post-list">
     <% site.posts.filter(function(item){return !item.reprint}).sort('date', 'desc').limit(theme.customize.post_count || 5).each(function(post, i){ %>

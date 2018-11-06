@@ -270,3 +270,88 @@ pre code
 .hljs-strong {
   font-weight: bold;
 }
+
+
+
+  @-webkit-keyframes cursor-blink {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@-moz-keyframes cursor-blink {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes cursor-blink {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+
+@media only screen and (max-width: 641px) {
+    .terminal .prompt {
+        font-size:.6em
+    }
+}
+
+.coding {
+   position: relative
+  .prompt {
+    color: #2bbc8a;
+    display: block;
+    font-family: AndaleMono,monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .1em;
+    white-space: pre-wrap;
+    text-shadow: 0 0 2px rgba(31,240,66,.75);
+    line-height: 1;
+    margin-bottom: .75em
+}
+  .new-output {
+    display: inline-block
+  }
+  .new-output:after {
+    display: inline-block;
+    vertical-align: -.15em;
+    width: .75em;
+    height: 1em;
+    margin-left: 5px;
+    background: #2bbc8a;
+    box-shadow: 1px 1px 1px rgba(31,240,66,.65),-1px -1px 1px rgba(31,240,66,.65),1px -1px 1px rgba(31,240,66,.65),-1px 1px 1px rgba(31,240,66,.65);
+    -webkit-animation: cursor-blink 1.25s steps(1) infinite;
+    -o-animation: cursor-blink 1.25s steps(1) infinite;
+    animation: cursor-blink 1.25s steps(1) infinite;
+    content: ''
+}
+
+  }
