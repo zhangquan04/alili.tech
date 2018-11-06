@@ -1,6 +1,6 @@
  [
  	{
- 		"name": "微前端Base Demo",
+ 		"name": "微前端Base module",
  		"url": "https://github.com/Fantasy9527/microfrontend-base-demo",
  		"desc": "微前端Base基础模块的示例代码"
  	},
@@ -15,12 +15,12 @@
  		"desc": "基于nodejs的阿里云API签名生成工具"
  	},
  	{
- 		"name": "webhook-builder",
+ 		"name": "Webhook-builder",
  		"url": "https://github.com/Fantasy9527/webhook-builder",
  		"desc": "webhook自动化部署"
  	},
  	{
- 		"name": "lotusjs-cli",
+ 		"name": "Lotusjs-cli",
  		"url": "https://fantasy9527.github.io/lotusjs-cli/",
  		"desc": "交互式前端通用脚手架管理工具"
  	}
