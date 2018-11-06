@@ -35,6 +35,7 @@
     "hexo-server": "^0.2.0",
     "hexo-tag-cloud": "2.0.*",
     "hexo-tag-echarts3": "https://github.com/Fantasy9527/hexo-tag-echarts3.git",
-    "hexo-uglify": "0.0.3"
+    "hexo-uglify": "0.0.3",
+    "xmlhttprequest": "^1.8.0"
   }
 }
