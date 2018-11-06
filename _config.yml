@@ -141,10 +141,10 @@ recommended_posts:
   excludePattern: []
   titleHtml: <h1>文章推荐</h1> #自定义标题
 
-# nofollow:
-# 	enable: true
-# 	exclude:
-#     - alili.tech
+nofollow:
+	enable: true
+	exclude:
+    - alili.tech
 
 # toJson:
 #   enablePagination: ture # chunk the index.json array based on per_page in _config.yml
