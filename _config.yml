@@ -90,7 +90,7 @@ baidu_url_submit:
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
   xz_appid: '1613049289050283'
   xz_token: 'PEQAd9p3kMBAzNjY'
-  xz_count: 35
+  xz_count: 30
 
 pwa:
   manifest:
@@ -185,10 +185,6 @@ recommended_posts:
 # Deployment  站点部署到github要配置这里, 非常重要
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-- type: baidu_url_submitter # 百度
-- type: baidu_xz_url_submitter # 百度熊掌号
-
-
 - type: git    #部署类型
   repo:
     github:  https://github.com/Fantasy9527/alili.tech.git  
@@ -196,3 +192,5 @@ deploy:
   branch: master
 
 - type: tencent_deploy # 腾讯服务器
+- type: baidu_url_submitter # 百度
+- type: baidu_xz_url_submitter # 百度熊掌号
