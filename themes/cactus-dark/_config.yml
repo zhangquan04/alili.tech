@@ -14,7 +14,7 @@ customize:
         enabled: true
         width: 50
         height: 50
-        url: /images/50x50.png
+        url: /images/logo.jpg
         gravatar: false
     favicon: 
       # eg. generate with http://realfavicongenerator.net/
