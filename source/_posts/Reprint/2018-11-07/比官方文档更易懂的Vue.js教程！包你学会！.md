@@ -1,8 +1,9 @@
 ---
-title: '比官方文档更易懂的Vue.js教程！包你学会！' 
-date: 2018-11-07 2:30:13
+title: 比官方文档更易懂的Vue.js教程！包你学会！
 reprint: true
 categories: reprint
+abbrlink: 28a68d42
+date: 2018-11-07 02:30:13
 ---
 
 {% raw %}

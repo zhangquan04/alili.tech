@@ -1,8 +1,9 @@
 ---
-title: '[vuejs 踩坑实战系列] 路由场景下父子组件的生命周期顺序来个刨根问底' 
-date: 2018-11-07 2:30:15
+title: '[vuejs 踩坑实战系列] 路由场景下父子组件的生命周期顺序来个刨根问底'
 reprint: true
 categories: reprint
+abbrlink: 466e2be8
+date: 2018-11-07 02:30:15
 ---
 
 {% raw %}

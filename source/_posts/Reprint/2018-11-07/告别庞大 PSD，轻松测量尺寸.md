@@ -1,8 +1,9 @@
 ---
-title: '告别庞大 PSD，轻松测量尺寸' 
-date: 2018-11-07 2:30:15
+title: 告别庞大 PSD，轻松测量尺寸
 reprint: true
 categories: reprint
+abbrlink: 214932b3
+date: 2018-11-07 02:30:15
 ---
 
 {% raw %}

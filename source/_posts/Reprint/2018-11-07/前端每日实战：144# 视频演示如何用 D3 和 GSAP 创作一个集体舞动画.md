@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：144# 视频演示如何用 D3 和 GSAP 创作一个集体舞动画' 
-date: 2018-11-07 2:30:13
+title: '前端每日实战：144# 视频演示如何用 D3 和 GSAP 创作一个集体舞动画'
 reprint: true
 categories: reprint
+abbrlink: ced39d61
+date: 2018-11-07 02:30:13
 ---
 
 {% raw %}

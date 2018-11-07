@@ -1,8 +1,9 @@
 ---
-title: 'webpack调优总结' 
-date: 2018-11-07 2:30:16
+title: webpack调优总结
 reprint: true
 categories: reprint
+abbrlink: 2ea30f8c
+date: 2018-11-07 02:30:16
 ---
 
 {% raw %}

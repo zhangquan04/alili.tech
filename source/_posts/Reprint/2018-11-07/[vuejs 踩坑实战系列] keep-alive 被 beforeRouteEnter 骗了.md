@@ -1,8 +1,9 @@
 ---
-title: '[vuejs 踩坑实战系列] keep-alive 被 beforeRouteEnter 骗了' 
-date: 2018-11-07 2:30:16
+title: '[vuejs 踩坑实战系列] keep-alive 被 beforeRouteEnter 骗了'
 reprint: true
 categories: reprint
+abbrlink: '17897695'
+date: 2018-11-07 02:30:16
 ---
 
 {% raw %}

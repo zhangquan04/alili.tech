@@ -1,8 +1,9 @@
 ---
-title: '总结下var、let 和 const 的区别' 
-date: 2018-11-07 2:30:16
+title: 总结下var、let 和 const 的区别
 reprint: true
 categories: reprint
+abbrlink: 427207fb
+date: 2018-11-07 02:30:16
 ---
 
 {% raw %}

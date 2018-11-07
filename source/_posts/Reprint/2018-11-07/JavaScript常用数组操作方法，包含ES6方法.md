@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript常用数组操作方法，包含ES6方法' 
-date: 2018-11-07 2:30:15
+title: JavaScript常用数组操作方法，包含ES6方法
 reprint: true
 categories: reprint
+abbrlink: 882dba7e
+date: 2018-11-07 02:30:15
 ---
 
 {% raw %}

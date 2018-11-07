@@ -1,8 +1,9 @@
 ---
-title: 'webpack4 系列文章' 
-date: 2018-11-07 2:30:15
+title: webpack4 系列文章
 reprint: true
 categories: reprint
+abbrlink: 24cbe3fe
+date: 2018-11-07 02:30:15
 ---
 
 {% raw %}

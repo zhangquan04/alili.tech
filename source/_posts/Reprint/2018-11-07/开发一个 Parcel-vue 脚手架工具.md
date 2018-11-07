@@ -1,8 +1,9 @@
 ---
-title: '开发一个 Parcel-vue 脚手架工具' 
-date: 2018-11-07 2:30:16
+title: 开发一个 Parcel-vue 脚手架工具
 reprint: true
 categories: reprint
+abbrlink: 74f94a1
+date: 2018-11-07 02:30:16
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '前端阶段性总结（三）：web安全' 
-date: 2018-11-07 2:30:16
+title: 前端阶段性总结（三）：web安全
 reprint: true
 categories: reprint
+abbrlink: 8ad249f
+date: 2018-11-07 02:30:16
 ---
 
 {% raw %}

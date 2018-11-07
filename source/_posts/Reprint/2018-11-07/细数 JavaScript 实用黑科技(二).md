@@ -1,8 +1,9 @@
 ---
-title: '细数 JavaScript 实用黑科技(二)' 
-date: 2018-11-07 2:30:13
+title: 细数 JavaScript 实用黑科技(二)
 reprint: true
 categories: reprint
+abbrlink: fb8c4939
+date: 2018-11-07 02:30:13
 ---
 
 {% raw %}

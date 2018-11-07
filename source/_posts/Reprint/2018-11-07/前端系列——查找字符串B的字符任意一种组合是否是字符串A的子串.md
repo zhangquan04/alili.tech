@@ -1,8 +1,9 @@
 ---
-title: '前端系列——查找字符串B的字符任意一种组合是否是字符串A的子串' 
-date: 2018-11-07 2:30:13
+title: 前端系列——查找字符串B的字符任意一种组合是否是字符串A的子串
 reprint: true
 categories: reprint
+abbrlink: ff1459e3
+date: 2018-11-07 02:30:13
 ---
 
 {% raw %}

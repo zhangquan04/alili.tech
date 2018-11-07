@@ -1,8 +1,9 @@
 ---
-title: '带入gRPC：gRPC及相关介绍' 
-date: 2018-11-07 2:30:16
+title: 带入gRPC：gRPC及相关介绍
 reprint: true
 categories: reprint
+abbrlink: '36990838'
+date: 2018-11-07 02:30:16
 ---
 
 {% raw %}

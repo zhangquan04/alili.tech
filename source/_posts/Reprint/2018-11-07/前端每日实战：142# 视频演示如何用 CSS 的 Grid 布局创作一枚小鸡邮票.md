@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：142# 视频演示如何用 CSS 的 Grid 布局创作一枚小鸡邮票' 
-date: 2018-11-07 2:30:14
+title: '前端每日实战：142# 视频演示如何用 CSS 的 Grid 布局创作一枚小鸡邮票'
 reprint: true
 categories: reprint
+abbrlink: 1de39bf4
+date: 2018-11-07 02:30:14
 ---
 
 {% raw %}

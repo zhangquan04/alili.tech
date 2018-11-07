@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：141# 视频演示如何用 CSS 的 Grid 布局创作一枚小狗邮票' 
-date: 2018-11-07 2:30:15
+title: '前端每日实战：141# 视频演示如何用 CSS 的 Grid 布局创作一枚小狗邮票'
 reprint: true
 categories: reprint
+abbrlink: ba962cf6
+date: 2018-11-07 02:30:15
 ---
 
 {% raw %}

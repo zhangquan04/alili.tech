@@ -1,8 +1,9 @@
 ---
-title: 'stylus编码规范' 
-date: 2018-11-07 2:30:14
+title: stylus编码规范
 reprint: true
 categories: reprint
+abbrlink: 5e6298dc
+date: 2018-11-07 02:30:14
 ---
 
 {% raw %}

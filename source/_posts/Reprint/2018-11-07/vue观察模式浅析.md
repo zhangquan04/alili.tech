@@ -1,8 +1,9 @@
 ---
-title: 'vue观察模式浅析' 
-date: 2018-11-07 2:30:16
+title: vue观察模式浅析
 reprint: true
 categories: reprint
+abbrlink: 5e3e3550
+date: 2018-11-07 02:30:16
 ---
 
 {% raw %}

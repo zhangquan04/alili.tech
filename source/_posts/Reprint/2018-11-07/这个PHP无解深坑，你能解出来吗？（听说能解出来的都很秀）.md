@@ -1,8 +1,9 @@
 ---
-title: '这个PHP无解深坑，你能解出来吗？（听说能解出来的都很秀）' 
-date: 2018-11-07 2:30:16
+title: 这个PHP无解深坑，你能解出来吗？（听说能解出来的都很秀）
 reprint: true
 categories: reprint
+abbrlink: e3ff8247
+date: 2018-11-07 02:30:16
 ---
 
 {% raw %}

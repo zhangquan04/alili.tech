@@ -1,8 +1,9 @@
 ---
-title: 'webpack启动代码源码解读' 
-date: 2018-11-07 2:30:12
+title: webpack启动代码源码解读
 reprint: true
 categories: reprint
+abbrlink: 510918a4
+date: 2018-11-07 02:30:12
 ---
 
 {% raw %}
