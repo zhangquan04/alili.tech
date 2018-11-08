@@ -23,5 +23,6 @@ date: 2016-05-27T14:31:51.000Z
 
 
 # 友情链接
-
+ - [颜海镜](https://yanhaijing.com/)
+ 
 [自行添加](https://github.com/Fantasy9527/alili.tech/blob/master/source/about/index.md)
