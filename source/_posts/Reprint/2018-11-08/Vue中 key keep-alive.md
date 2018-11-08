@@ -1,8 +1,9 @@
 ---
-title: 'Vue中 key keep-alive' 
-date: 2018-11-08 2:30:09
+title: Vue中 key keep-alive
 reprint: true
 categories: reprint
+abbrlink: 9da4289c
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'js浅拷贝与深拷贝方法' 
-date: 2018-11-08 2:30:09
+title: js浅拷贝与深拷贝方法
 reprint: true
 categories: reprint
+abbrlink: 2e32f070
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

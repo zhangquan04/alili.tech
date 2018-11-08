@@ -1,8 +1,9 @@
 ---
-title: '【响应式布局】initial containing block、viewport以及相关尺寸' 
-date: 2018-11-08 2:30:09
+title: 【响应式布局】initial containing block、viewport以及相关尺寸
 reprint: true
 categories: reprint
+abbrlink: 3dd1c6bb
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

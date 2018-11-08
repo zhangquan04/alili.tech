@@ -1,8 +1,9 @@
 ---
-title: '美团面试题：Java-线程池 ThreadPool 专题详解' 
-date: 2018-11-08 2:30:09
+title: 美团面试题：Java-线程池 ThreadPool 专题详解
 reprint: true
 categories: reprint
+abbrlink: 89bab0dd
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

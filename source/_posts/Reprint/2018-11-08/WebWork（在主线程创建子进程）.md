@@ -1,8 +1,9 @@
 ---
-title: 'WebWork（在主线程创建子进程）' 
-date: 2018-11-08 2:30:09
+title: WebWork（在主线程创建子进程）
 reprint: true
 categories: reprint
+abbrlink: 5f4cd16
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

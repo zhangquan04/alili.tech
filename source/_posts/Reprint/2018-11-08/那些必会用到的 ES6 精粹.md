@@ -1,8 +1,9 @@
 ---
-title: '那些必会用到的 ES6 精粹' 
-date: 2018-11-08 2:30:09
+title: 那些必会用到的 ES6 精粹
 reprint: true
 categories: reprint
+abbrlink: 79d6b9a4
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

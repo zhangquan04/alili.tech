@@ -1,8 +1,9 @@
 ---
-title: 'svgtofont.js 自动生成图标字体和彩色图标文件' 
-date: 2018-11-08 2:30:09
+title: svgtofont.js 自动生成图标字体和彩色图标文件
 reprint: true
 categories: reprint
+abbrlink: 6abbdd3b
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'vue中导出Excel表格' 
-date: 2018-11-08 2:30:09
+title: vue中导出Excel表格
 reprint: true
 categories: reprint
+abbrlink: 81cf3500
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

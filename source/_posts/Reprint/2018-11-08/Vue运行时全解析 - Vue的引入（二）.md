@@ -1,8 +1,9 @@
 ---
-title: 'Vue运行时全解析 - Vue的引入（二）' 
-date: 2018-11-08 2:30:09
+title: Vue运行时全解析 - Vue的引入（二）
 reprint: true
 categories: reprint
+abbrlink: fc659492
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

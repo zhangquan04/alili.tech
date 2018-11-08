@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：138# 视频演示如何用纯 CSS 创作一张 iPhone 价格信息图' 
-date: 2018-11-08 2:30:09
+title: '前端每日实战：138# 视频演示如何用纯 CSS 创作一张 iPhone 价格信息图'
 reprint: true
 categories: reprint
+abbrlink: 2c951dd
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

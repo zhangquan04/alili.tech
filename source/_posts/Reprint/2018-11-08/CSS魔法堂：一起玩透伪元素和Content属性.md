@@ -1,8 +1,9 @@
 ---
-title: 'CSS魔法堂：一起玩透伪元素和Content属性' 
-date: 2018-11-08 2:30:09
+title: CSS魔法堂：一起玩透伪元素和Content属性
 reprint: true
 categories: reprint
+abbrlink: f2cd9071
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

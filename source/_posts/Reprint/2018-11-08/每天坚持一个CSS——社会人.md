@@ -1,8 +1,9 @@
 ---
-title: '每天坚持一个CSS——社会人' 
-date: 2018-11-08 2:30:09
+title: 每天坚持一个CSS——社会人
 reprint: true
 categories: reprint
+abbrlink: f74c3b24
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

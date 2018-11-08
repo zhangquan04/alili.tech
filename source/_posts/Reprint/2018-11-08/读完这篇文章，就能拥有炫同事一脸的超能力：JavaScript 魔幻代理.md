@@ -1,8 +1,9 @@
 ---
-title: '读完这篇文章，就能拥有炫同事一脸的超能力：JavaScript 魔幻代理' 
-date: 2018-11-08 2:30:09
+title: 读完这篇文章，就能拥有炫同事一脸的超能力：JavaScript 魔幻代理
 reprint: true
 categories: reprint
+abbrlink: b5fbb155
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

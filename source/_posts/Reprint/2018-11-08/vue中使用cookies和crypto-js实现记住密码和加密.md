@@ -1,8 +1,9 @@
 ---
-title: 'vue中使用cookies和crypto-js实现记住密码和加密' 
-date: 2018-11-08 2:30:09
+title: vue中使用cookies和crypto-js实现记住密码和加密
 reprint: true
 categories: reprint
+abbrlink: 8cf05ebf
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

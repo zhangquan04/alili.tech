@@ -1,8 +1,9 @@
 ---
-title: 'Class：向传统类模式转变的构造函数' 
-date: 2018-11-08 2:30:09
+title: Class：向传统类模式转变的构造函数
 reprint: true
 categories: reprint
+abbrlink: '38193800'
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

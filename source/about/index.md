@@ -20,11 +20,8 @@ date: 2016-05-27T14:31:51.000Z
  - 城市：杭州
 ---
 
-<!-- # 个人简历 -->
-
-<!-- [个人简历](/about/resume.html) -->
 
 
 # 友情链接
 
-<!-- [在这里添加](https://github.com/Fantasy9527/alili.tech/blob/Blog/source/about/index.md) -->
+[自行添加](https://github.com/Fantasy9527/alili.tech/blob/master/source/about/index.md)

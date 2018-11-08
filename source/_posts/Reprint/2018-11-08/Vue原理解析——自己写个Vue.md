@@ -1,8 +1,9 @@
 ---
-title: 'Vue原理解析——自己写个Vue' 
-date: 2018-11-08 2:30:09
+title: Vue原理解析——自己写个Vue
 reprint: true
 categories: reprint
+abbrlink: d202ae2d
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

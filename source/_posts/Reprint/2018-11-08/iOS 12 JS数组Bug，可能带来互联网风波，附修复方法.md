@@ -1,8 +1,9 @@
 ---
-title: 'iOS 12 JS数组Bug，可能带来互联网风波，附修复方法' 
-date: 2018-11-08 2:30:09
+title: iOS 12 JS数组Bug，可能带来互联网风波，附修复方法
 reprint: true
 categories: reprint
+abbrlink: f23a1e50
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '你知道SVG Sprites是什么吗，还在用css sprite就太low了' 
-date: 2018-11-08 2:30:09
+title: 你知道SVG Sprites是什么吗，还在用css sprite就太low了
 reprint: true
 categories: reprint
+abbrlink: 50aab52f
+date: 2018-11-08 02:30:09
 ---
 
 {% raw %}
