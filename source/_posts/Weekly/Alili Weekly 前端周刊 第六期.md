@@ -6,7 +6,7 @@ tags:
 abbrlink: 2c2b79f6
 date: 2018-11-09 00:00:00
 ---
-![Alili Weekly 前端周刊 第六期](https://static.alili.tech/images/github_48.png)
+![Alili Weekly 前端周刊 第六期](https://static.alili.tech/images/github_49.png)
 ##   [Hello Vue: Vue快速入门教程](https://www.zcfy.cc/article/hello-vue-a-quick-tutorial-on-getting-started-with-vue)  
  
 Vue快速入门教程，此教程包括使用Kendo UI for Vue的组件。希望通过此教程能够成为你学习vue的一个很好的起点。这其中还包含一个可扩展的事例，如果你感兴趣可以深入学习下去。本教程针对的是第一次使用Vue资源管理器。我将向您展示... 
