@@ -85,10 +85,10 @@ flowchart:
     x: 0
     y: 0
     line-width: 3
-    line-length: 50
+    line-length: 25
     text-margin: 10
     font-size: 14
-    font-color: "#fff"
+    font-color: "#c9cacc"
     line-color: '#2bbc8a'
     element-color: '#2bbc8a'
     fill: "#1d1f21"
@@ -96,18 +96,7 @@ flowchart:
     no-text: 'no'
     arrow-end: block
     scale: 1
-    symbols:
-      # start: {font-color: "#fff", element-color: "2bbc8a", fill: "#000"}
-      end: {}
-    flowstate:
-      past: {fill: '#CCCCCC', font-size: 12}
-      current: {fill: "#1d1f21", font-color: red, font-weight: bold}
-      future: {fill: '#1d1f21'}
-      request: {fill: blue}
-      invalid: {fill: '#1d1f21'}
-      approved: {fill: '#1d1f21', font-size: 12, yes-text: APPROVED, no-text: n/a}
-      rejected: {fill: '#1d1f21', font-size: 12, yes-text: n/a, no-text: REJECTED}
-        
+
 
 #压缩
 # neat_enable: true
