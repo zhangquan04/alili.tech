@@ -72,7 +72,6 @@ pagination_dir: page
 # theme: hexo-theme-modernist
 theme: cactus-dark
 
-
 # 自动生成sitemap
 sitemap:
   path: sitemap.xml
