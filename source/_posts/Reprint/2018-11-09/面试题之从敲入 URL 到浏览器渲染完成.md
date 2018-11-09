@@ -1,8 +1,9 @@
 ---
-title: '面试题之从敲入 URL 到浏览器渲染完成' 
-date: 2018-11-09 2:30:06
+title: 面试题之从敲入 URL 到浏览器渲染完成
 reprint: true
 categories: reprint
+abbrlink: b38589f0
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

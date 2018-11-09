@@ -1,8 +1,9 @@
 ---
-title: 'vue自定义svg图标使用' 
-date: 2018-11-09 2:30:06
+title: vue自定义svg图标使用
 reprint: true
 categories: reprint
+abbrlink: b7bf11f5
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

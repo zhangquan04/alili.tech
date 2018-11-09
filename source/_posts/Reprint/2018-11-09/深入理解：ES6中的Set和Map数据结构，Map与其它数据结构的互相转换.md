@@ -1,8 +1,9 @@
 ---
-title: '深入理解：ES6中的Set和Map数据结构，Map与其它数据结构的互相转换' 
-date: 2018-11-09 2:30:06
+title: 深入理解：ES6中的Set和Map数据结构，Map与其它数据结构的互相转换
 reprint: true
 categories: reprint
+abbrlink: 66ba1d75
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

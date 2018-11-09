@@ -1,8 +1,9 @@
 ---
-title: '基于moment写一个滑动日历' 
-date: 2018-11-09 2:30:06
+title: 基于moment写一个滑动日历
 reprint: true
 categories: reprint
+abbrlink: 177bd834
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

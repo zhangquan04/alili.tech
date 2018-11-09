@@ -1,8 +1,9 @@
 ---
-title: 'vue轮播图插件之vue-awesome-swiper' 
-date: 2018-11-09 2:30:06
+title: vue轮播图插件之vue-awesome-swiper
 reprint: true
 categories: reprint
+abbrlink: 4fedc77b
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

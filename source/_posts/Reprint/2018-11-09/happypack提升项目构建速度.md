@@ -1,8 +1,9 @@
 ---
-title: 'happypack提升项目构建速度' 
-date: 2018-11-09 2:30:06
+title: happypack提升项目构建速度
 reprint: true
 categories: reprint
+abbrlink: 30124c04
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript中的==，===和Object.is()' 
-date: 2018-11-09 2:30:05
+title: JavaScript中的==，===和Object.is()
 reprint: true
 categories: reprint
+abbrlink: 8d4884ac
+date: 2018-11-09 02:30:05
 ---
 
 {% raw %}

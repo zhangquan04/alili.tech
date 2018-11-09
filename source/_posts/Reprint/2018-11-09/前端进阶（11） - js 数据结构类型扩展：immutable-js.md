@@ -1,8 +1,9 @@
 ---
-title: '前端进阶（11） - js 数据结构类型扩展：immutable-js' 
-date: 2018-11-09 2:30:06
+title: 前端进阶（11） - js 数据结构类型扩展：immutable-js
 reprint: true
 categories: reprint
+abbrlink: 65516a0c
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

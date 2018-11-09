@@ -1,8 +1,9 @@
 ---
-title: 'Docz 用 MDX 写 React UI 组件文档' 
-date: 2018-11-09 2:30:06
+title: Docz 用 MDX 写 React UI 组件文档
 reprint: true
 categories: reprint
+abbrlink: '6e968326'
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

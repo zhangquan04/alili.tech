@@ -1,8 +1,9 @@
 ---
-title: '前端进阶（12） - css 的弱化与 js 的强化' 
-date: 2018-11-09 2:30:05
+title: 前端进阶（12） - css 的弱化与 js 的强化
 reprint: true
 categories: reprint
+abbrlink: 3a722d1c
+date: 2018-11-09 02:30:05
 ---
 
 {% raw %}

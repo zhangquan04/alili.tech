@@ -1,8 +1,9 @@
 ---
-title: '你不曾察觉的隐患：危险的 target="_blank" 与 “opener”' 
-date: 2018-11-09 2:30:05
+title: 你不曾察觉的隐患：危险的 target="_blank" 与 “opener”
 reprint: true
 categories: reprint
+abbrlink: 3aa5de53
+date: 2018-11-09 02:30:05
 ---
 
 {% raw %}

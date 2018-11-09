@@ -1,8 +1,9 @@
 ---
-title: '实现一个vue的图片预览插件' 
-date: 2018-11-09 2:30:06
+title: 实现一个vue的图片预览插件
 reprint: true
 categories: reprint
+abbrlink: bfae2f17
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

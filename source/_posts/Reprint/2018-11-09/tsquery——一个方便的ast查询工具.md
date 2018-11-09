@@ -1,8 +1,9 @@
 ---
-title: 'tsquery——一个方便的ast查询工具' 
-date: 2018-11-09 2:30:06
+title: tsquery——一个方便的ast查询工具
 reprint: true
 categories: reprint
+abbrlink: fb7489e5
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

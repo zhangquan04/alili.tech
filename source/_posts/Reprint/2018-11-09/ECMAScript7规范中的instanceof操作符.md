@@ -1,8 +1,9 @@
 ---
-title: 'ECMAScript7规范中的instanceof操作符' 
-date: 2018-11-09 2:30:05
+title: ECMAScript7规范中的instanceof操作符
 reprint: true
 categories: reprint
+abbrlink: 1b485704
+date: 2018-11-09 02:30:05
 ---
 
 {% raw %}

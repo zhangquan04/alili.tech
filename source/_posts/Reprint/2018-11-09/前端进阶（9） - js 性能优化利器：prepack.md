@@ -1,8 +1,9 @@
 ---
-title: '前端进阶（9） - js 性能优化利器：prepack' 
-date: 2018-11-09 2:30:06
+title: 前端进阶（9） - js 性能优化利器：prepack
 reprint: true
 categories: reprint
+abbrlink: 7c9a6abc
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

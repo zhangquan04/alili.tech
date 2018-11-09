@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：136# 视频演示如何用 D3 和 GSAP 创作一个横条 loader' 
-date: 2018-11-09 2:30:06
+title: '前端每日实战：136# 视频演示如何用 D3 和 GSAP 创作一个横条 loader'
 reprint: true
 categories: reprint
+abbrlink: cf919b62
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

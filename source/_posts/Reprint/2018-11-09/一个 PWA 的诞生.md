@@ -1,8 +1,9 @@
 ---
-title: '一个 PWA 的诞生' 
-date: 2018-11-09 2:30:05
+title: 一个 PWA 的诞生
 reprint: true
 categories: reprint
+abbrlink: c1d2213
+date: 2018-11-09 02:30:05
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'node中的密码安全' 
-date: 2018-11-09 2:30:06
+title: node中的密码安全
 reprint: true
 categories: reprint
+abbrlink: 3426c7b1
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

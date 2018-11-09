@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript数组去重（12种方法，史上最全）' 
-date: 2018-11-09 2:30:06
+title: JavaScript数组去重（12种方法，史上最全）
 reprint: true
 categories: reprint
+abbrlink: 515a54e3
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

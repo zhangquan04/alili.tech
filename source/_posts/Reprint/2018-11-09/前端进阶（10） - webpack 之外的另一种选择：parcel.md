@@ -1,8 +1,9 @@
 ---
-title: '前端进阶（10） - webpack 之外的另一种选择：parcel' 
-date: 2018-11-09 2:30:06
+title: 前端进阶（10） - webpack 之外的另一种选择：parcel
 reprint: true
 categories: reprint
+abbrlink: b94dd8ab
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}

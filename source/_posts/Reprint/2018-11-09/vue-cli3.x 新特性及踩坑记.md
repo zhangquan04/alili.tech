@@ -1,8 +1,9 @@
 ---
-title: 'vue-cli3.x 新特性及踩坑记' 
-date: 2018-11-09 2:30:05
+title: vue-cli3.x 新特性及踩坑记
 reprint: true
 categories: reprint
+abbrlink: 193bf9da
+date: 2018-11-09 02:30:05
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'React Router V4 精讲' 
-date: 2018-11-09 2:30:05
+title: React Router V4 精讲
 reprint: true
 categories: reprint
+abbrlink: 90bfdcf6
+date: 2018-11-09 02:30:05
 ---
 
 {% raw %}

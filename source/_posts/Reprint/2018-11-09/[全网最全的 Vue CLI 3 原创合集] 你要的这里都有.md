@@ -1,8 +1,9 @@
 ---
-title: '[全网最全的 Vue CLI 3 原创合集] 你要的这里都有' 
-date: 2018-11-09 2:30:06
+title: '[全网最全的 Vue CLI 3 原创合集] 你要的这里都有'
 reprint: true
 categories: reprint
+abbrlink: d6053364
+date: 2018-11-09 02:30:06
 ---
 
 {% raw %}
