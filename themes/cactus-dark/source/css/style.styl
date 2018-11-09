@@ -35,8 +35,9 @@ body
     hyphens(auto)
     margin-bottom: 0.5rem;
     code
-      color: #f99157
-      font-weight: bold;
+      color: #2bbc8a
+      // font-weight: bold;
+      border: 1px dotted #2bbc8a;
 
 
   pre,
@@ -316,25 +317,12 @@ pre code
 }
 
 
-@media only screen and (max-width: 641px) {
-    .terminal .prompt {
-        font-size:.6em
-    }
-}
 
 .coding {
     position: relative;
      .prompt {
-        color: #2bbc8a;
         display: block;
-        font-family: AndaleMono, monospace;
-        // font-weight: 700;
-        // text-transform: uppercase;
-        // font-size: 12px;
-        // letter-spacing: .1em;
         white-space: pre-wrap;
-        text-shadow: 0 0 0 rgba(31, 240, 66, .75);
-        // line-height: 1;
         margin-bottom: .75em;
     }
 
@@ -355,9 +343,15 @@ pre code
         animation: cursor-blink 1.25s steps(1) infinite;
         content: ''
     }
-
     .ad-text {
         font-size: 12px;
+        display: none;
     }
+	@media (max-width: 680px){
+    .ad-text{ 
+      display:block
+      }
+}
+
 
 }

@@ -92,10 +92,8 @@ $(function () {
       print(data.content, ".description .en", function () {
         print(data.translation, ".description .ch", function () {
           print("---- " + data.author, ".description .author", function () {
-            document.querySelector('.ad-text').style.display='inline-block';
             print("p.s. 网站已经支持PWA,可尝试添加到桌面", ".description .ad-text", function () {})
           })
-          
         })
       })
     })
