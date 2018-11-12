@@ -1,5 +1,5 @@
 ---
-title: Code Review工具调研报告
+title: Code Review工具推荐以及使用报告
 tags:
   - Code Review
 abbrlink: cf2c83a
@@ -8,8 +8,8 @@ date: 2018-11-12 00:00:00
 
 随之团队的扩大，统一编码规范，提高编码质量，变得尤为重要。代码审查作为可以有效提高代码质量的方式之一,有必要在公司推行代码审查制度.
 让团队养成代码审查的习惯,提高代码质量,提前规避不必要的问题. 
-为了更加高效的代码审核,需要一款代码审查工具.所以才有了这份调研报告.
-下面是我在调研中,尝试使用的一些工具.以及一些使用上的评价与总结.
+为了更加高效的代码审核,需要一款代码审查工具.所以才有了这份使用报告.
+下面是我在使用中,尝试使用的一些工具.以及一些使用上的评价与总结.
 
 ### 1) [CodeStriker](http://codestriker.sourceforge.net/index.html "best code review tools for programmers ")
 
@@ -35,7 +35,7 @@ RhodeCode也是一个很好的工具,回顾你的代码并找出代码中的bug�
 - 安装维护 :★★★
 - 易学程度: ★★★★★
 
-> 总结: RhodeCode在调研使用过程中,还是比较优秀的.工具的安装部署使用docker也比较方便.使用上比较顺畅,可以作为使用的备选软件.
+> 总结: RhodeCode在使用使用过程中,还是比较优秀的.工具的安装部署使用docker也比较方便.使用上比较顺畅,可以作为使用的备选软件.
 
 ### 3) [Code Brag](http://codebrag.com/ "best code review tools for programmers ")
 
@@ -48,7 +48,7 @@ Codebrag是一个简单的和轻量级的工具,代码审查,让这一过程为�
 - 安装维护 :★★★★
 - 易学程度: ★★★★★
 
-> 总结: Codebrag 是一款开源工具,安装起来不算难.也有一定程度上的社交属性.在调研期间官网在国内打不开,软件的安装资源不是很好获取.
+> 总结: Codebrag 是一款开源工具,安装起来不算难.也有一定程度上的社交属性.在使用期间官网在国内打不开,软件的安装资源不是很好获取.
 
 ### 4) [Phabricator](http://phabricator.org/ "best code review tools for programmers ")
 
