@@ -11,7 +11,7 @@ date: 2018-11-09 00:00:00
  
 Vue快速入门教程，此教程包括使用Kendo UI for Vue的组件。希望通过此教程能够成为你学习vue的一个很好的起点。这其中还包含一个可扩展的事例，如果你感兴趣可以深入学习下去。本教程针对的是第一次使用Vue资源管理器。我将向您展示... 
 
-`VUE.JS` `移动` `应用` `JAVASCRIPT` `DOM` 
+`VUE.JS`,`移动`,`应用`,`JAVASCRIPT`,`DOM` 
 
 
 ---
@@ -19,7 +19,7 @@ Vue快速入门教程，此教程包括使用Kendo UI for Vue的组件。希望�
  
 今天我们很高兴地宣布Jest 23，这是我们迄今为止最大的主要版本！我们与100多名贡献者一起发布了大量功能和错误修复程序。感谢社区中的每个人让JavaScript测试更加轻松。我们也欢迎Babel 和Webpack加入Jest社区！从Mo... 
 
-`REACT.JS` `JAVASCRIPT` `WEBPACK` `DEBUG` `应用` 
+`REACT.JS`,`JAVASCRIPT`,`WEBPACK`,`DEBUG`,`应用` 
 
 
 ---
@@ -27,7 +27,7 @@ Vue快速入门教程，此教程包括使用Kendo UI for Vue的组件。希望�
  
 创建和管理React组件的各种方式，涌现的大量状态管理工具等等都是这些挑战的焦点。我们今天能做的就是在React（基于社区选择）中将最常用的做法引入桌面并讨论它们。其中，我们将学习React中的一些有用的主题和术语。这些主题包括：目录。常规... 
 
-`REACT.JS` `移动` `JAVASCRIPT` `应用` `ECMASCRIPT 6` 
+`REACT.JS`,`移动`,`JAVASCRIPT`,`应用`,`ECMASCRIPT 6` 
 
 
 ---
@@ -35,7 +35,7 @@ Vue快速入门教程，此教程包括使用Kendo UI for Vue的组件。希望�
  
 “微前端实践中，事实上所有的需求都是为「独立开发」以及「独立部署」这两大目标服务的，或者可以认为是两者的具体实现措施或者自然衍生结果。” 
 
-`奇舞推荐` `微前端` 
+`奇舞推荐`,`微前端` 
 
 
 ---
@@ -43,7 +43,7 @@ Vue快速入门教程，此教程包括使用Kendo UI for Vue的组件。希望�
  
 基础必读。 
 
-`奇舞推荐` `安全` 
+`奇舞推荐`,`安全` 
 
 
 ---
@@ -51,7 +51,7 @@ Vue快速入门教程，此教程包括使用Kendo UI for Vue的组件。希望�
  
 最近随着微信和支付宝小程序相继发布了各自的“云开发”，国内在 Serverless 的应用上又踏出了一大步。追溯 Serverless 的发展历程和未来方向，可以了解一下这篇来自 serverless.com 公司 CEO 的分享。 
 
-`奇舞推荐` `Serverless` 
+`奇舞推荐`,`Serverless` 
 
 
 ---
@@ -59,7 +59,7 @@ Vue快速入门教程，此教程包括使用Kendo UI for Vue的组件。希望�
  
 Google Chrome 实验室发布了一款新的 node debug 工具来提升开发者体验，本文将会全面介绍 ndb 这款 node 工具。 
 
-`Node` `调试` 
+`Node`,`调试` 
 
 
 ---
@@ -67,7 +67,7 @@ Google Chrome 实验室发布了一款新的 node debug 工具来提升开发者
  
 async_hooks模块是Node.js 8.0中增加的特性，旨在帮助开发者追踪 Node.js 创建的异步调用资源的生命周期情况。 
 
-`Node` `Async Hooks` 
+`Node`,`Async Hooks` 
 
 
 ---
@@ -75,7 +75,7 @@ async_hooks模块是Node.js 8.0中增加的特性，旨在帮助开发者追踪 
  
 如何在浏览器和 Node.js 中安全地运行上述这种不可信任的用户脚本。 
 
-`Node` `安全` 
+`Node`,`安全` 
 
 
 ---
