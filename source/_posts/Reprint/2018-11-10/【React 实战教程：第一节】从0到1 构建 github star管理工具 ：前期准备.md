@@ -1,8 +1,9 @@
 ---
-title: '【React 实战教程：第一节】从0到1 构建 github star管理工具 ：前期准备' 
-date: 2018-11-10 2:30:10
+title: 【React 实战教程：第一节】从0到1 构建 github star管理工具 ：前期准备
 reprint: true
 categories: reprint
+abbrlink: 1d9dfc45
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

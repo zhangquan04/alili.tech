@@ -1,8 +1,9 @@
 ---
-title: 'redux原来如此简单' 
-date: 2018-11-11 2:30:07
+title: redux原来如此简单
 reprint: true
 categories: reprint
+abbrlink: ca5a1e3
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

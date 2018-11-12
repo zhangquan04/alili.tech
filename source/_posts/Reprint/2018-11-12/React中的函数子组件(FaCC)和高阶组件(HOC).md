@@ -1,8 +1,9 @@
 ---
-title: 'React中的函数子组件(FaCC)和高阶组件(HOC)' 
-date: 2018-11-12 2:30:05
+title: React中的函数子组件(FaCC)和高阶组件(HOC)
 reprint: true
 categories: reprint
+abbrlink: 8a7902d6
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

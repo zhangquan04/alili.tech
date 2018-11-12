@@ -1,8 +1,9 @@
 ---
-title: '工程师手记：Cassandra在风控数据处理中的应用实践' 
-date: 2018-11-11 2:30:07
+title: 工程师手记：Cassandra在风控数据处理中的应用实践
 reprint: true
 categories: reprint
+abbrlink: 527b93d5
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '高效的Mobx模式（Part 1 - 构建可观察数据）' 
-date: 2018-11-12 2:30:05
+title: 高效的Mobx模式（Part 1 - 构建可观察数据）
 reprint: true
 categories: reprint
+abbrlink: f869b514
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

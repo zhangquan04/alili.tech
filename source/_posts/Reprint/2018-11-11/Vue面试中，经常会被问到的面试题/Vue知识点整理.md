@@ -1,8 +1,9 @@
 ---
-title: 'Vue面试中，经常会被问到的面试题/Vue知识点整理' 
-date: 2018-11-11 2:30:06
+title: Vue面试中，经常会被问到的面试题/Vue知识点整理
 reprint: true
 categories: reprint
+abbrlink: d394de18
+date: 2018-11-11 02:30:06
 ---
 
 {% raw %}

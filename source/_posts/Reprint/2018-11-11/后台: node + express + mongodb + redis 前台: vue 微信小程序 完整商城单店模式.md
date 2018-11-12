@@ -1,8 +1,9 @@
 ---
-title: '后台: node + express + mongodb + redis 前台: vue 微信小程序 完整商城单店模式' 
-date: 2018-11-11 2:30:07
+title: '后台: node + express + mongodb + redis 前台: vue 微信小程序 完整商城单店模式'
 reprint: true
 categories: reprint
+abbrlink: 37cb4244
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript 初学者教程（指南）' 
-date: 2018-11-11 2:30:06
+title: JavaScript 初学者教程（指南）
 reprint: true
 categories: reprint
+abbrlink: edda3a40
+date: 2018-11-11 02:30:06
 ---
 
 {% raw %}

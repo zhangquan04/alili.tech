@@ -1,8 +1,9 @@
 ---
-title: 'Vue.js动画笔记' 
-date: 2018-11-10 2:30:10
+title: Vue.js动画笔记
 reprint: true
 categories: reprint
+abbrlink: ea91dcd5
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

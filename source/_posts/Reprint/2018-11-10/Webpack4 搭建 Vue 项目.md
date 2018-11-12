@@ -1,8 +1,9 @@
 ---
-title: 'Webpack4 搭建 Vue 项目' 
-date: 2018-11-10 2:30:10
+title: Webpack4 搭建 Vue 项目
 reprint: true
 categories: reprint
+abbrlink: ed7f036f
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

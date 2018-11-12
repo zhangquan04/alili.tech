@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：129# 视频演示如何用纯 CSS 和 VanillaJS 创作一个条纹错觉动画' 
-date: 2018-11-12 2:30:05
+title: '前端每日实战：129# 视频演示如何用纯 CSS 和 VanillaJS 创作一个条纹错觉动画'
 reprint: true
 categories: reprint
+abbrlink: b411e50e
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

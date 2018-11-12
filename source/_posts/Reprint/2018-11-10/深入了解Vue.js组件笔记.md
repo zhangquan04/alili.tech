@@ -1,8 +1,9 @@
 ---
-title: '深入了解Vue.js组件笔记' 
-date: 2018-11-10 2:30:10
+title: 深入了解Vue.js组件笔记
 reprint: true
 categories: reprint
+abbrlink: d1cb9bff
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

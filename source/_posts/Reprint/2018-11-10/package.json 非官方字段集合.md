@@ -1,8 +1,9 @@
 ---
-title: 'package.json 非官方字段集合' 
-date: 2018-11-10 2:30:10
+title: package.json 非官方字段集合
 reprint: true
 categories: reprint
+abbrlink: a77ab9e3
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

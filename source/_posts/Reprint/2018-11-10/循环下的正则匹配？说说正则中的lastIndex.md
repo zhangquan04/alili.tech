@@ -1,8 +1,9 @@
 ---
-title: '循环下的正则匹配？说说正则中的lastIndex' 
-date: 2018-11-10 2:30:10
+title: 循环下的正则匹配？说说正则中的lastIndex
 reprint: true
 categories: reprint
+abbrlink: afda056b
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

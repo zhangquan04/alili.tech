@@ -1,8 +1,9 @@
 ---
-title: '使用TS+Sequelize实现更简洁的CRUD' 
-date: 2018-11-11 2:30:06
+title: 使用TS+Sequelize实现更简洁的CRUD
 reprint: true
 categories: reprint
+abbrlink: d0383db9
+date: 2018-11-11 02:30:06
 ---
 
 {% raw %}

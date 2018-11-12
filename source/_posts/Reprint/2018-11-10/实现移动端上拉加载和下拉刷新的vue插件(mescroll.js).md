@@ -1,8 +1,9 @@
 ---
-title: '实现移动端上拉加载和下拉刷新的vue插件(mescroll.js)' 
-date: 2018-11-10 2:30:09
+title: 实现移动端上拉加载和下拉刷新的vue插件(mescroll.js)
 reprint: true
 categories: reprint
+abbrlink: e694032e
+date: 2018-11-10 02:30:09
 ---
 
 {% raw %}

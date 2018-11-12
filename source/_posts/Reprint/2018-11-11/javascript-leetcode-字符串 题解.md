@@ -1,8 +1,9 @@
 ---
-title: 'javascript-leetcode-字符串 题解' 
-date: 2018-11-11 2:30:07
+title: javascript-leetcode-字符串 题解
 reprint: true
 categories: reprint
+abbrlink: 4c5d915e
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

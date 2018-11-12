@@ -1,8 +1,9 @@
 ---
-title: 'ECMAScript7规范中的ToPrimitive抽象操作' 
-date: 2018-11-11 2:30:07
+title: ECMAScript7规范中的ToPrimitive抽象操作
 reprint: true
 categories: reprint
+abbrlink: 21d6cb16
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

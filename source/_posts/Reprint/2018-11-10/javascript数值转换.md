@@ -1,8 +1,9 @@
 ---
-title: 'javascript数值转换' 
-date: 2018-11-10 2:30:10
+title: javascript数值转换
 reprint: true
 categories: reprint
+abbrlink: c29893f1
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

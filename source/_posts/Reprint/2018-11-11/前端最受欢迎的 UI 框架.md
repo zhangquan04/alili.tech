@@ -1,8 +1,9 @@
 ---
-title: '前端最受欢迎的 UI 框架' 
-date: 2018-11-11 2:30:06
+title: 前端最受欢迎的 UI 框架
 reprint: true
 categories: reprint
+abbrlink: e12f7816
+date: 2018-11-11 02:30:06
 ---
 
 {% raw %}

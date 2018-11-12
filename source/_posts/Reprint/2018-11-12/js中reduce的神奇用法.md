@@ -1,8 +1,9 @@
 ---
-title: 'js中reduce的神奇用法' 
-date: 2018-11-12 2:30:05
+title: js中reduce的神奇用法
 reprint: true
 categories: reprint
+abbrlink: 3ec7546c
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

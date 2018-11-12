@@ -1,8 +1,9 @@
 ---
-title: '基于 React Redux 的错误处理' 
-date: 2018-11-11 2:30:06
+title: 基于 React Redux 的错误处理
 reprint: true
 categories: reprint
+abbrlink: b641331c
+date: 2018-11-11 02:30:06
 ---
 
 {% raw %}

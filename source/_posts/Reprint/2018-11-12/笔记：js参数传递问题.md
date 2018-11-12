@@ -1,8 +1,9 @@
 ---
-title: '笔记：js参数传递问题' 
-date: 2018-11-12 2:30:05
+title: 笔记：js参数传递问题
 reprint: true
 categories: reprint
+abbrlink: 11ab453f
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '基于 Javascript 排序算法' 
-date: 2018-11-12 2:30:05
+title: 基于 Javascript 排序算法
 reprint: true
 categories: reprint
+abbrlink: ec056943
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

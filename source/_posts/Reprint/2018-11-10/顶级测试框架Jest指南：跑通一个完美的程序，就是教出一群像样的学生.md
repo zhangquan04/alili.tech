@@ -1,8 +1,9 @@
 ---
-title: '顶级测试框架Jest指南：跑通一个完美的程序，就是教出一群像样的学生' 
-date: 2018-11-10 2:30:09
+title: 顶级测试框架Jest指南：跑通一个完美的程序，就是教出一群像样的学生
 reprint: true
 categories: reprint
+abbrlink: c37e3434
+date: 2018-11-10 02:30:09
 ---
 
 {% raw %}

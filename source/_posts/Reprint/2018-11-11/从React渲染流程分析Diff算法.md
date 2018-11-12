@@ -1,8 +1,9 @@
 ---
-title: '从React渲染流程分析Diff算法' 
-date: 2018-11-11 2:30:07
+title: 从React渲染流程分析Diff算法
 reprint: true
 categories: reprint
+abbrlink: 7c3465c2
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

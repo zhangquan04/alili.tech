@@ -1,8 +1,9 @@
 ---
-title: 'Babel 插件原理的理解与深入' 
-date: 2018-11-10 2:30:10
+title: Babel 插件原理的理解与深入
 reprint: true
 categories: reprint
+abbrlink: 15644fc0
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

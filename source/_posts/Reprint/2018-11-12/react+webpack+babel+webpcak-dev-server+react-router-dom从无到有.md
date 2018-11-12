@@ -1,8 +1,9 @@
 ---
-title: 'react+webpack+babel+webpcak-dev-server+react-router-dom从无到有' 
-date: 2018-11-12 2:30:05
+title: react+webpack+babel+webpcak-dev-server+react-router-dom从无到有
 reprint: true
 categories: reprint
+abbrlink: '62407668'
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'vue响应式原理' 
-date: 2018-11-11 2:30:06
+title: vue响应式原理
 reprint: true
 categories: reprint
+abbrlink: 6c6ad520
+date: 2018-11-11 02:30:06
 ---
 
 {% raw %}

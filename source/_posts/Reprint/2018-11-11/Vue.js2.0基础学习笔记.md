@@ -1,8 +1,9 @@
 ---
-title: 'Vue.js2.0基础学习笔记' 
-date: 2018-11-11 2:30:07
+title: Vue.js2.0基础学习笔记
 reprint: true
 categories: reprint
+abbrlink: 85eff157
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

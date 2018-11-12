@@ -1,8 +1,9 @@
 ---
-title: 'Vue基于vuex、axios拦截器实现loading效果及axios的安装配置' 
-date: 2018-11-12 2:30:05
+title: Vue基于vuex、axios拦截器实现loading效果及axios的安装配置
 reprint: true
 categories: reprint
+abbrlink: 17427fb2
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

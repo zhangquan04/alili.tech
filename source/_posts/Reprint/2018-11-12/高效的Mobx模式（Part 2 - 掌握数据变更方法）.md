@@ -1,8 +1,9 @@
 ---
-title: '高效的Mobx模式（Part 2 - 掌握数据变更方法）' 
-date: 2018-11-12 2:30:05
+title: 高效的Mobx模式（Part 2 - 掌握数据变更方法）
 reprint: true
 categories: reprint
+abbrlink: 2e6d8964
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '前端进阶（7） - react、vue 组件开发利器：storybook' 
-date: 2018-11-10 2:30:10
+title: 前端进阶（7） - react、vue 组件开发利器：storybook
 reprint: true
 categories: reprint
+abbrlink: bf6de6a3
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'react 国际化了解一下' 
-date: 2018-11-10 2:30:09
+title: react 国际化了解一下
 reprint: true
 categories: reprint
+abbrlink: d7abaa10
+date: 2018-11-10 02:30:09
 ---
 
 {% raw %}

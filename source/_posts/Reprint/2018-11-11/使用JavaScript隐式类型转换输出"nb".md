@@ -1,8 +1,9 @@
 ---
-title: '使用JavaScript隐式类型转换输出"nb"' 
-date: 2018-11-11 2:30:07
+title: 使用JavaScript隐式类型转换输出"nb"
 reprint: true
 categories: reprint
+abbrlink: f950c0d7
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'React Autocomplete（自动完成输入）示例教程' 
-date: 2018-11-11 2:30:07
+title: React Autocomplete（自动完成输入）示例教程
 reprint: true
 categories: reprint
+abbrlink: 2b34ccbc
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '前端爬坑日记之vue内嵌iframe并跨域通信' 
-date: 2018-11-12 2:30:05
+title: 前端爬坑日记之vue内嵌iframe并跨域通信
 reprint: true
 categories: reprint
+abbrlink: 49baafed
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

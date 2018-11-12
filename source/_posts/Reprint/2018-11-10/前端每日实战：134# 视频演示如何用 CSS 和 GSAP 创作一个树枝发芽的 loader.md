@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：134# 视频演示如何用 CSS 和 GSAP 创作一个树枝发芽的 loader' 
-date: 2018-11-10 2:30:10
+title: '前端每日实战：134# 视频演示如何用 CSS 和 GSAP 创作一个树枝发芽的 loader'
 reprint: true
 categories: reprint
+abbrlink: 59ba80a0
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

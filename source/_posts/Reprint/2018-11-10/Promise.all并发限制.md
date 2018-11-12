@@ -1,8 +1,9 @@
 ---
-title: 'Promise.all并发限制' 
-date: 2018-11-10 2:30:10
+title: Promise.all并发限制
 reprint: true
 categories: reprint
+abbrlink: 51a9b
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

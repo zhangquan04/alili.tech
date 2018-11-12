@@ -1,8 +1,9 @@
 ---
-title: '适用于 deno 的多版本管理工具 dvm 发布' 
-date: 2018-11-12 2:30:05
+title: 适用于 deno 的多版本管理工具 dvm 发布
 reprint: true
 categories: reprint
+abbrlink: 6d84b7ab
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

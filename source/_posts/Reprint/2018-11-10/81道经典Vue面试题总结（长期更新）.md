@@ -1,8 +1,9 @@
 ---
-title: '81道经典Vue面试题总结（长期更新）' 
-date: 2018-11-10 2:30:11
+title: 81道经典Vue面试题总结（长期更新）
 reprint: true
 categories: reprint
+abbrlink: cee591b1
+date: 2018-11-10 02:30:11
 ---
 
 {% raw %}

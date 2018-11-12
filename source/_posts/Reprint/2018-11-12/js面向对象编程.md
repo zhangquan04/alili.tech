@@ -1,8 +1,9 @@
 ---
-title: 'js面向对象编程' 
-date: 2018-11-12 2:30:05
+title: js面向对象编程
 reprint: true
 categories: reprint
+abbrlink: 318077db
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'vue移动端下拉刷新、上拉加载' 
-date: 2018-11-11 2:30:07
+title: vue移动端下拉刷新、上拉加载
 reprint: true
 categories: reprint
+abbrlink: 8d66ec23
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'React源码阅读之：复合类型方案设计' 
-date: 2018-11-12 2:30:05
+title: React源码阅读之：复合类型方案设计
 reprint: true
 categories: reprint
+abbrlink: 993b8d89
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

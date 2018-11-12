@@ -1,8 +1,9 @@
 ---
-title: 'css自定义属性和聚光灯效果' 
-date: 2018-11-10 2:30:10
+title: css自定义属性和聚光灯效果
 reprint: true
 categories: reprint
+abbrlink: 9f6a27f7
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

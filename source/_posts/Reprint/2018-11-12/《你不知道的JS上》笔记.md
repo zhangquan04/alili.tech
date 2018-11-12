@@ -1,8 +1,9 @@
 ---
-title: '《你不知道的JS上》笔记' 
-date: 2018-11-12 2:30:05
+title: 《你不知道的JS上》笔记
 reprint: true
 categories: reprint
+abbrlink: 10c9f0c7
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

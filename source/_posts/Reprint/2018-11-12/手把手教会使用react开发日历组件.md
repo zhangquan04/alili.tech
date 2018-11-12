@@ -1,8 +1,9 @@
 ---
-title: '手把手教会使用react开发日历组件' 
-date: 2018-11-12 2:30:05
+title: 手把手教会使用react开发日历组件
 reprint: true
 categories: reprint
+abbrlink: 8f49361c
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

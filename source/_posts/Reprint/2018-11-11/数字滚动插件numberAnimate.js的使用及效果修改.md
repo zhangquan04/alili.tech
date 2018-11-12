@@ -1,8 +1,9 @@
 ---
-title: '数字滚动插件numberAnimate.js的使用及效果修改' 
-date: 2018-11-11 2:30:07
+title: 数字滚动插件numberAnimate.js的使用及效果修改
 reprint: true
 categories: reprint
+abbrlink: 3b1ac21d
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

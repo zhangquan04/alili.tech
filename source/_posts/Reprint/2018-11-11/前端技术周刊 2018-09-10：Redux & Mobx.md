@@ -1,8 +1,9 @@
 ---
-title: '前端技术周刊 2018-09-10：Redux & Mobx' 
-date: 2018-11-11 2:30:06
+title: 前端技术周刊 2018-09-10：Redux & Mobx
 reprint: true
 categories: reprint
+abbrlink: af9753d8
+date: 2018-11-11 02:30:06
 ---
 
 {% raw %}

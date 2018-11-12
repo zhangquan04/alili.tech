@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：133# 视频演示如何用 CSS 和 GSAP 创作有多个关键帧的连续动画' 
-date: 2018-11-10 2:30:10
+title: '前端每日实战：133# 视频演示如何用 CSS 和 GSAP 创作有多个关键帧的连续动画'
 reprint: true
 categories: reprint
+abbrlink: 5d7851a5
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

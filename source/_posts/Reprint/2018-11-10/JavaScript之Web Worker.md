@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript之Web Worker' 
-date: 2018-11-10 2:30:10
+title: JavaScript之Web Worker
 reprint: true
 categories: reprint
+abbrlink: e0672b87
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

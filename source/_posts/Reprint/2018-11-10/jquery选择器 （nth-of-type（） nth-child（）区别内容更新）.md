@@ -1,8 +1,9 @@
 ---
-title: 'jquery选择器 （nth-of-type（） nth-child（）区别内容更新）' 
-date: 2018-11-10 2:30:10
+title: jquery选择器 （nth-of-type（） nth-child（）区别内容更新）
 reprint: true
 categories: reprint
+abbrlink: 274cd12f
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

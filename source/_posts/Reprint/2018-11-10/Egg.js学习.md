@@ -1,8 +1,9 @@
 ---
-title: 'Egg.js学习' 
-date: 2018-11-10 2:30:10
+title: Egg.js学习
 reprint: true
 categories: reprint
+abbrlink: a45dec63
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

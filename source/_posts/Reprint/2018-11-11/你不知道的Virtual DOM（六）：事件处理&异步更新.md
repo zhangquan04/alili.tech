@@ -1,8 +1,9 @@
 ---
-title: '你不知道的Virtual DOM（六）：事件处理&异步更新' 
-date: 2018-11-11 2:30:07
+title: '你不知道的Virtual DOM 6 : 事件处理&异步更新'
 reprint: true
 categories: reprint
+abbrlink: fa438533
+date: 2018-11-11 02:30:07
 ---
 
 {% raw %}

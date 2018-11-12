@@ -1,8 +1,9 @@
 ---
-title: '配置webpack中dev.env.js、prod.env.js，解决不同命令下项目启动和打包到指定的环境' 
-date: 2018-11-12 2:30:05
+title: 配置webpack中dev.env.js、prod.env.js，解决不同命令下项目启动和打包到指定的环境
 reprint: true
 categories: reprint
+abbrlink: e17e1faa
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

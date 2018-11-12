@@ -1,8 +1,9 @@
 ---
-title: 'vue+vuex的应用笔记' 
-date: 2018-11-12 2:30:05
+title: vue+vuex的应用笔记
 reprint: true
 categories: reprint
+abbrlink: '2814e449'
+date: 2018-11-12 02:30:05
 ---
 
 {% raw %}

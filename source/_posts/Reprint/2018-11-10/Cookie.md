@@ -1,8 +1,9 @@
 ---
-title: 'Cookie' 
-date: 2018-11-10 2:30:10
+title: Cookie
 reprint: true
 categories: reprint
+abbrlink: 8d4cbf50
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}

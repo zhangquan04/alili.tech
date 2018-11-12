@@ -1,8 +1,9 @@
 ---
-title: '常见样式设计及DOM操作整理' 
-date: 2018-11-11 2:30:06
+title: 常见样式设计及DOM操作整理
 reprint: true
 categories: reprint
+abbrlink: b01c1896
+date: 2018-11-11 02:30:06
 ---
 
 {% raw %}

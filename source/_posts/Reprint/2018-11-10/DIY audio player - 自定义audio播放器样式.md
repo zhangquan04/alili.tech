@@ -1,8 +1,9 @@
 ---
-title: 'DIY audio player - 自定义audio播放器样式' 
-date: 2018-11-10 2:30:10
+title: DIY audio player - 自定义audio播放器样式
 reprint: true
 categories: reprint
+abbrlink: 1628a46f
+date: 2018-11-10 02:30:10
 ---
 
 {% raw %}
