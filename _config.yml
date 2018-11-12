@@ -104,7 +104,7 @@ flowchart:
 feed:
   type: atom
   path: atom.xml
-  limit: 20
+  limit: false
   hub:
   content:
   content_limit:
