@@ -1,5 +1,5 @@
 ---
-title: 卸载mac上的输入法
+title: 关闭Mac系统的SIP与卸载Mac上的输入法
 tags: mac
 abbrlink: 760c8e37
 keywords: Macbook,Pro,输入法,卸载,问题
@@ -10,7 +10,33 @@ mac电脑上,有的多余的输入法,发现竟然删不掉.每次切换输入�
 
 首先就是系统默认的输入法.
 
-## 系统输入法
+## 关闭 mac 系统的 SIP 
+- 重启系统，按住 Command + R 进入恢复模式。
+
+- 点击顶部菜单栏 实用工具 中的 终端 。
+
+- 输入以下命令来禁用 SIP 保护机制。
+
+```bash
+csrutil disable
+```
+
+- 执行后输出以下信息表示禁用成功。
+```bash
+Successfully disabled System Integrity Protection. Please restart the machine for the changes to take effect.
+```
+
+- 最后重启系统即可。
+
+
+## 重新打开 SIP 方法
+在恢复模式下的终端输入以下命令
+```bash
+csrutil enable
+```
+
+## 卸载系统输入法
+
 * 安装Xcode或下载“Property List Editor”，因为需要打开(.plist)格式文件 
 
 * 打开“终端”
