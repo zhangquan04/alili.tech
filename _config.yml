@@ -101,6 +101,14 @@ flowchart:
 #压缩
 # neat_enable: true
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit:
+  content_limit_delim: ' '
 
 baidu_url_submit:
   count: 35 ## 提交最新的一个链接

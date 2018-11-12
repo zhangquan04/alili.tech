@@ -34,7 +34,7 @@ customize:
     highlight: rainbow
     show_all_posts: false
 # RSS
-rss: false
+rss: true
 
 # Plugins
 plugins:
