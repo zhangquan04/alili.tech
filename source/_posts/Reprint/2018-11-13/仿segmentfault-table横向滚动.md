@@ -1,8 +1,9 @@
 ---
-title: '仿segmentfault-table横向滚动' 
-date: 2018-11-13 2:30:09
+title: 仿segmentfault-table横向滚动
 reprint: true
 categories: reprint
+abbrlink: 7f9e1a83
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

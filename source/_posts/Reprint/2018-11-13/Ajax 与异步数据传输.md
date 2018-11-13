@@ -1,8 +1,9 @@
 ---
-title: 'Ajax 与异步数据传输' 
-date: 2018-11-13 2:30:09
+title: Ajax 与异步数据传输
 reprint: true
 categories: reprint
+abbrlink: a25a6f68
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

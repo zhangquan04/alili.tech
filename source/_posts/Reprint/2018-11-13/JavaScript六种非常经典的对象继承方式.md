@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript六种非常经典的对象继承方式' 
-date: 2018-11-13 2:30:09
+title: JavaScript六种非常经典的对象继承方式
 reprint: true
 categories: reprint
+abbrlink: 65c5edce
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

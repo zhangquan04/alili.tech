@@ -1,8 +1,9 @@
 ---
-title: '试用React语法的多端框架Taro问题汇总' 
-date: 2018-11-13 2:30:09
+title: 试用React语法的多端框架Taro问题汇总
 reprint: true
 categories: reprint
+abbrlink: 191939fb
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

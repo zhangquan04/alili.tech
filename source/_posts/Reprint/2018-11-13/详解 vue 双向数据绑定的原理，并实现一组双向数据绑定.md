@@ -1,8 +1,9 @@
 ---
-title: '详解 vue 双向数据绑定的原理，并实现一组双向数据绑定' 
-date: 2018-11-13 2:30:09
+title: 详解 vue 双向数据绑定的原理，并实现一组双向数据绑定
 reprint: true
 categories: reprint
+abbrlink: ce0643cd
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '简单的分页组件(react)' 
-date: 2018-11-13 2:30:09
+title: 简单的分页组件(react)
 reprint: true
 categories: reprint
+abbrlink: 3e3d73af
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'Vue.js状态管理模式 Vuex' 
-date: 2018-11-13 2:30:09
+title: Vue.js状态管理模式 Vuex
 reprint: true
 categories: reprint
+abbrlink: '42494691'
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

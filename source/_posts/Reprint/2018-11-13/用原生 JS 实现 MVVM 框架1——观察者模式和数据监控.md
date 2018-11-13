@@ -1,8 +1,9 @@
 ---
-title: '用原生 JS 实现 MVVM 框架1——观察者模式和数据监控' 
-date: 2018-11-13 2:30:09
+title: 用原生 JS 实现 MVVM 框架1——观察者模式和数据监控
 reprint: true
 categories: reprint
+abbrlink: 4bb4bd4b
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

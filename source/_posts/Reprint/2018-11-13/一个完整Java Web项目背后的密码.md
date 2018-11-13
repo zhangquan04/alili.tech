@@ -1,8 +1,9 @@
 ---
-title: '一个完整Java Web项目背后的密码' 
-date: 2018-11-13 2:30:09
+title: 一个完整Java Web项目背后的密码
 reprint: true
 categories: reprint
+abbrlink: cefb6f8d
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

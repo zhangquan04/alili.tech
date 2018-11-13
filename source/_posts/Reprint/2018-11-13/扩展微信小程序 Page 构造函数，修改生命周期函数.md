@@ -1,8 +1,9 @@
 ---
-title: '扩展微信小程序 Page 构造函数，修改生命周期函数' 
-date: 2018-11-13 2:30:09
+title: 扩展微信小程序 Page 构造函数，修改生命周期函数
 reprint: true
 categories: reprint
+abbrlink: e33f3d95
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

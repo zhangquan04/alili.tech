@@ -1,8 +1,9 @@
 ---
-title: 'Async：简洁优雅的异步之道' 
-date: 2018-11-13 2:30:09
+title: Async：简洁优雅的异步之道
 reprint: true
 categories: reprint
+abbrlink: 36abf0e
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

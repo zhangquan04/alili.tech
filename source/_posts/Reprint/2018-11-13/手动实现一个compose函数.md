@@ -1,8 +1,9 @@
 ---
-title: '手动实现一个compose函数' 
-date: 2018-11-13 2:30:09
+title: 手动实现一个compose函数
 reprint: true
 categories: reprint
+abbrlink: e72090d9
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

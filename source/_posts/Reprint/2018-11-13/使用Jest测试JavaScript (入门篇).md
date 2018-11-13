@@ -1,8 +1,9 @@
 ---
-title: '使用Jest测试JavaScript (入门篇)' 
-date: 2018-11-13 2:30:09
+title: 使用Jest测试JavaScript (入门篇)
 reprint: true
 categories: reprint
+abbrlink: 624d0c17
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

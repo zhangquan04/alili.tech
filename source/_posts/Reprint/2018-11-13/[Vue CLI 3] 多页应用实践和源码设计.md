@@ -1,8 +1,9 @@
 ---
-title: '[Vue CLI 3] 多页应用实践和源码设计' 
-date: 2018-11-13 2:30:09
+title: '[Vue CLI 3] 多页应用实践和源码设计'
 reprint: true
 categories: reprint
+abbrlink: d0e854c9
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '一眼看穿👀JS继承' 
-date: 2018-11-13 2:30:09
+title: "一眼看穿\U0001F440JS继承"
 reprint: true
 categories: reprint
+abbrlink: 1a921f0c
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

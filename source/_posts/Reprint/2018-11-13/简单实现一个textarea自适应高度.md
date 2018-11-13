@@ -1,8 +1,9 @@
 ---
-title: '简单实现一个textarea自适应高度' 
-date: 2018-11-13 2:30:09
+title: 简单实现一个textarea自适应高度
 reprint: true
 categories: reprint
+abbrlink: 9afa6a0d
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

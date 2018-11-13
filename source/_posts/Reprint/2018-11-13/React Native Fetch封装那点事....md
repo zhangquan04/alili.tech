@@ -1,8 +1,9 @@
 ---
-title: 'React Native Fetch封装那点事...' 
-date: 2018-11-13 2:30:09
+title: React Native Fetch封装那点事...
 reprint: true
 categories: reprint
+abbrlink: 427b815b
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: 'Chrome 调试技巧' 
-date: 2018-11-13 2:30:09
+title: Chrome 调试技巧
 reprint: true
 categories: reprint
+abbrlink: f8120d2
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}

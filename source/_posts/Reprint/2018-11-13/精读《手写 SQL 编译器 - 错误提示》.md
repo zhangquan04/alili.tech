@@ -1,8 +1,9 @@
 ---
-title: '精读《手写 SQL 编译器 - 错误提示》' 
-date: 2018-11-13 2:30:09
+title: 精读《手写 SQL 编译器 - 错误提示》
 reprint: true
 categories: reprint
+abbrlink: 5ad581bf
+date: 2018-11-13 02:30:09
 ---
 
 {% raw %}
