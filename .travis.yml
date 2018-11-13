@@ -8,4 +8,5 @@ before_script:
   - ulimit -n 10000
 script:
   - hexo g
+  - hexo g
   - hexo d
