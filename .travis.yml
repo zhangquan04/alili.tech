@@ -5,6 +5,7 @@ before_script:
   - git config user.email "incomparable9527@foxmail.com"
   - sed -i'' "s~https://github.com/Fantasy9527/alili.tech.git~https://${ACCESS_TOKEN}@github.com/Fantasy9527/alili.tech.git~" _config.yml
   - sed -i'' "s~https://git.coding.net/incomparable9527/incomparable9527.coding.me.git~https://incomparable9527:${CODING_ACCESS_TOKEN}@git.dev.tencent.com/incomparable9527/incomparable9527.coding.me.git~" _config.yml
+  - npm i hexo-cli -g
   - which hexo
   - sed -i'' "s~#!/usr/bin/env node~#!/usr/bin/env node --max_old_space_size=2048~" node_modules/.bin/hexo
   - more node_modules/.bin/hexo
