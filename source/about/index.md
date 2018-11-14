@@ -19,7 +19,7 @@ date: 2016-05-27T14:31:51.000Z
 # 个人信息
 
  - Fan
- - 职业：前端开发工程师
+ - 职业: Front End Developer ---> Full Stack Developer
  - 城市：杭州
 ---
 

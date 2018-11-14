@@ -1,8 +1,9 @@
 ---
-title: '【译】通过例子解释 Debounce 和 Throttle' 
-date: 2018-11-14 2:30:09
+title: 【译】通过例子解释 Debounce 和 Throttle
 reprint: true
 categories: reprint
+abbrlink: 5d45639c
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

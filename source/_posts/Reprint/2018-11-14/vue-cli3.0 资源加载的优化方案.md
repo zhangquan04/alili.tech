@@ -1,8 +1,9 @@
 ---
-title: 'vue-cli3.0 资源加载的优化方案' 
-date: 2018-11-14 2:30:09
+title: vue-cli3.0 资源加载的优化方案
 reprint: true
 categories: reprint
+abbrlink: 500e4f5b
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '精读《手写 SQL 编译器 - 语法树》' 
-date: 2018-11-14 2:30:09
+title: 精读《手写 SQL 编译器 - 语法树》
 reprint: true
 categories: reprint
+abbrlink: c2055615
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '富文本解析-微信小程序 rich-text 组件' 
-date: 2018-11-14 2:30:09
+title: 富文本解析-微信小程序 rich-text 组件
 reprint: true
 categories: reprint
+abbrlink: 7cf5aa8b
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

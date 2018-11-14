@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript fetch接口' 
-date: 2018-11-14 2:30:09
+title: JavaScript fetch接口
 reprint: true
 categories: reprint
+abbrlink: 6808d2da
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

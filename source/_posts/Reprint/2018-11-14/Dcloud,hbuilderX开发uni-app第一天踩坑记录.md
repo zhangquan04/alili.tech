@@ -1,8 +1,9 @@
 ---
-title: 'Dcloud,hbuilderX开发uni-app第一天踩坑记录' 
-date: 2018-11-14 2:30:09
+title: 'Dcloud,hbuilderX开发uni-app第一天踩坑记录'
 reprint: true
 categories: reprint
+abbrlink: 494d0a60
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

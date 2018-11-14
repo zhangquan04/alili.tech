@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：118# 视频演示如何用纯 CSS 创作一个沙漏 loader' 
-date: 2018-11-14 2:30:09
+title: '前端每日实战：118# 视频演示如何用纯 CSS 创作一个沙漏 loader'
 reprint: true
 categories: reprint
+abbrlink: 81a55c97
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

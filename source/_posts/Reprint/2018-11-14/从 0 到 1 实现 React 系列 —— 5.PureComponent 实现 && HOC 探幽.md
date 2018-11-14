@@ -1,8 +1,9 @@
 ---
-title: '从 0 到 1 实现 React 系列 —— 5.PureComponent 实现 && HOC 探幽' 
-date: 2018-11-14 2:30:09
+title: 从 0 到 1 实现 React 系列 —— 5.PureComponent 实现 && HOC 探幽
 reprint: true
 categories: reprint
+abbrlink: 92dc08c6
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

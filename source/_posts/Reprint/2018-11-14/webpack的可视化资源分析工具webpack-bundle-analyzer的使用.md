@@ -1,8 +1,9 @@
 ---
-title: 'webpack的可视化资源分析工具webpack-bundle-analyzer的使用' 
-date: 2018-11-14 2:30:09
+title: webpack的可视化资源分析工具webpack-bundle-analyzer的使用
 reprint: true
 categories: reprint
+abbrlink: 386e6ff
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

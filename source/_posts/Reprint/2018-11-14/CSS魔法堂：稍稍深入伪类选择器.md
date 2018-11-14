@@ -1,8 +1,9 @@
 ---
-title: 'CSS魔法堂：稍稍深入伪类选择器' 
-date: 2018-11-14 2:30:09
+title: CSS魔法堂：稍稍深入伪类选择器
 reprint: true
 categories: reprint
+abbrlink: fc06162d
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

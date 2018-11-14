@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript七种非常经典的创建对象方式' 
-date: 2018-11-14 2:30:09
+title: JavaScript七种非常经典的创建对象方式
 reprint: true
 categories: reprint
+abbrlink: 628e286f
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

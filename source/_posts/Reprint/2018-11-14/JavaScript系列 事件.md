@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript系列 事件' 
-date: 2018-11-14 2:30:09
+title: JavaScript系列 事件
 reprint: true
 categories: reprint
+abbrlink: 26ffb9f8
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

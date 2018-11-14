@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript实现继承' 
-date: 2018-11-14 2:30:09
+title: JavaScript实现继承
 reprint: true
 categories: reprint
+abbrlink: 68a1ada0
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

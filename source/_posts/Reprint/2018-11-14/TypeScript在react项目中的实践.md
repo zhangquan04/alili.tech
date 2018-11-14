@@ -1,8 +1,9 @@
 ---
-title: 'TypeScript在react项目中的实践' 
-date: 2018-11-14 2:30:09
+title: TypeScript在react项目中的实践
 reprint: true
 categories: reprint
+abbrlink: c955a8e6
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

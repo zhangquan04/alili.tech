@@ -1,8 +1,9 @@
 ---
-title: 'webpack4.17.1起步' 
-date: 2018-11-14 2:30:09
+title: webpack4.17.1起步
 reprint: true
 categories: reprint
+abbrlink: 2f960d3d
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

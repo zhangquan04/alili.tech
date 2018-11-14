@@ -1,8 +1,9 @@
 ---
-title: '你不知道的Virtual DOM（三）：Virtual Dom更新优化' 
-date: 2018-11-14 2:30:09
+title: 你不知道的Virtual DOM（三）：Virtual Dom更新优化
 reprint: true
 categories: reprint
+abbrlink: 64ddd581
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

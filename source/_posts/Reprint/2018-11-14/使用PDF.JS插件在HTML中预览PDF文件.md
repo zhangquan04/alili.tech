@@ -1,8 +1,9 @@
 ---
-title: '使用PDF.JS插件在HTML中预览PDF文件' 
-date: 2018-11-14 2:30:09
+title: 使用PDF.JS插件在HTML中预览PDF文件
 reprint: true
 categories: reprint
+abbrlink: 551503ea
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}

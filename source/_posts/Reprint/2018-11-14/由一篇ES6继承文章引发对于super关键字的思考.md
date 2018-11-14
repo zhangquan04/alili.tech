@@ -1,8 +1,9 @@
 ---
-title: '由一篇ES6继承文章引发对于super关键字的思考' 
-date: 2018-11-14 2:30:09
+title: 由一篇ES6继承文章引发对于super关键字的思考
 reprint: true
 categories: reprint
+abbrlink: 8702d5b0
+date: 2018-11-14 02:30:09
 ---
 
 {% raw %}
