@@ -1,8 +1,9 @@
 ---
-title: 'setInterval与setTimeout' 
-date: 2018-11-15 2:30:08
+title: setInterval与setTimeout
 reprint: true
 categories: reprint
+abbrlink: 355c0120
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

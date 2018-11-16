@@ -1,8 +1,9 @@
 ---
-title: 'React key值的作用和使用' 
-date: 2018-11-15 2:30:08
+title: React key值的作用和使用
 reprint: true
 categories: reprint
+abbrlink: af80725b
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

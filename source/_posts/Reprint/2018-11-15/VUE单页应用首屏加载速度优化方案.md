@@ -1,8 +1,9 @@
 ---
-title: 'VUE单页应用首屏加载速度优化方案' 
-date: 2018-11-15 2:30:08
+title: VUE单页应用首屏加载速度优化方案
 reprint: true
 categories: reprint
+abbrlink: ea162dab
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

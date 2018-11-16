@@ -1,8 +1,9 @@
 ---
-title: 'koa源码阅读[3]-koa-send与它的衍生(static)' 
-date: 2018-11-15 2:30:08
+title: 'koa源码阅读[3]-koa-send与它的衍生(static)'
 reprint: true
 categories: reprint
+abbrlink: d1dd4ab0
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

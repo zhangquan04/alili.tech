@@ -1,8 +1,9 @@
 ---
-title: 'vue的table组件' 
-date: 2018-11-15 2:30:08
+title: vue的table组件
 reprint: true
 categories: reprint
+abbrlink: 204d7d90
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

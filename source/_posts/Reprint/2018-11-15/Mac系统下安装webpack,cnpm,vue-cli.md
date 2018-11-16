@@ -1,8 +1,9 @@
 ---
-title: 'Mac系统下安装webpack,cnpm,vue-cli' 
-date: 2018-11-15 2:30:08
+title: 'Mac系统下安装webpack,cnpm,vue-cli'
 reprint: true
 categories: reprint
+abbrlink: f123d921
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

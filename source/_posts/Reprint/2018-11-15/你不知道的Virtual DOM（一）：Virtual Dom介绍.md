@@ -1,8 +1,9 @@
 ---
-title: '你不知道的Virtual DOM（一）：Virtual Dom介绍' 
-date: 2018-11-15 2:30:08
+title: 你不知道的Virtual DOM（一）：Virtual Dom介绍
 reprint: true
 categories: reprint
+abbrlink: cef5e2ef
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

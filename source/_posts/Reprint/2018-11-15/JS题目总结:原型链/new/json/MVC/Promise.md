@@ -1,8 +1,9 @@
 ---
-title: 'JS题目总结:原型链/new/json/MVC/Promise' 
-date: 2018-11-15 2:30:08
+title: 'JS题目总结:原型链/new/json/MVC/Promise'
 reprint: true
 categories: reprint
+abbrlink: 8fbf884e
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

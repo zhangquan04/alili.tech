@@ -1,8 +1,9 @@
 ---
-title: '30 分钟理解 CORB 是什么' 
-date: 2018-11-15 2:30:08
+title: 30 分钟理解 CORB 是什么
 reprint: true
 categories: reprint
+abbrlink: 9f6733bb
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

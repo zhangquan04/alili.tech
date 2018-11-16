@@ -1,8 +1,9 @@
 ---
-title: 'JavaScript的几种循环方式' 
-date: 2018-11-15 2:30:08
+title: JavaScript的几种循环方式
 reprint: true
 categories: reprint
+abbrlink: 35cb092b
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

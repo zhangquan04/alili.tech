@@ -1,8 +1,9 @@
 ---
-title: 'Vuex的基本入门、使用场景及安装配置' 
-date: 2018-11-15 2:30:08
+title: Vuex的基本入门、使用场景及安装配置
 reprint: true
 categories: reprint
+abbrlink: 69b79a0b
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

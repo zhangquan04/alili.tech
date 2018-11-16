@@ -1,8 +1,9 @@
 ---
-title: '前端每日实战：116# 视频演示如何用 VanillaJS 开发一个监控网络连接状态的页面' 
-date: 2018-11-15 2:30:08
+title: '前端每日实战：116# 视频演示如何用 VanillaJS 开发一个监控网络连接状态的页面'
 reprint: true
 categories: reprint
+abbrlink: 18aabdcb
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

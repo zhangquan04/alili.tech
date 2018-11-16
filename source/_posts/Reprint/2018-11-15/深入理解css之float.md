@@ -1,8 +1,9 @@
 ---
-title: '深入理解css之float' 
-date: 2018-11-15 2:30:08
+title: 深入理解css之float
 reprint: true
 categories: reprint
+abbrlink: 83becf88
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '如何配置 vue-cli 3.0 的 vue.config.js' 
-date: 2018-11-15 2:30:08
+title: 如何配置 vue-cli 3.0 的 vue.config.js
 reprint: true
 categories: reprint
+abbrlink: de855b5d
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

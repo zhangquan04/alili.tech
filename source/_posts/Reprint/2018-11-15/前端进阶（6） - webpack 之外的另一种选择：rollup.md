@@ -1,8 +1,9 @@
 ---
-title: '前端进阶（6） - webpack 之外的另一种选择：rollup' 
-date: 2018-11-15 2:30:08
+title: 前端进阶（6） - webpack 之外的另一种选择：rollup
 reprint: true
 categories: reprint
+abbrlink: a2dfd9de
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

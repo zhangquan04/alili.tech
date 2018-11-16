@@ -1,8 +1,9 @@
 ---
-title: '深入理解ES6笔记（五）解构：使访问数据更便捷' 
-date: 2018-11-15 2:30:08
+title: 深入理解ES6笔记（五）解构：使访问数据更便捷
 reprint: true
 categories: reprint
+abbrlink: 2c51a5c3
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

@@ -1,8 +1,9 @@
 ---
-title: '现代JS中的流程控制：详解Callbacks 、Promises 、Async/Await' 
-date: 2018-11-15 2:30:08
+title: 现代JS中的流程控制：详解Callbacks 、Promises 、Async/Await
 reprint: true
 categories: reprint
+abbrlink: e3b69e2e
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

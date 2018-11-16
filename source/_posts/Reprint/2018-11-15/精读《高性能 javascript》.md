@@ -1,8 +1,9 @@
 ---
-title: '精读《高性能 javascript》' 
-date: 2018-11-15 2:30:08
+title: 精读《高性能 javascript》
 reprint: true
 categories: reprint
+abbrlink: 42b250ee
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}

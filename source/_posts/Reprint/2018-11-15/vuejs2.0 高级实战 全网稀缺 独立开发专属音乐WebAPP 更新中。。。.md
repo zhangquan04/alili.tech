@@ -1,8 +1,9 @@
 ---
-title: 'vuejs2.0 高级实战 全网稀缺 独立开发专属音乐WebAPP 更新中。。。' 
-date: 2018-11-15 2:30:08
+title: vuejs2.0 高级实战 全网稀缺 独立开发专属音乐WebAPP 更新中。。。
 reprint: true
 categories: reprint
+abbrlink: b588ec07
+date: 2018-11-15 02:30:08
 ---
 
 {% raw %}
