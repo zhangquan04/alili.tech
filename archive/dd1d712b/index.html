@@ -1,410 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="如何在 Arch Linux 中降级软件包 正如你了解的，Arch Linux 是一个滚动版本和 DIY（自己动手）发行版。因此，在经常更新时必须小心，特别是从 AUR 等第三方存储库安装或更新软件包。如果你不知道自己在做什么，那么最终很可能会破坏系统。你有责任使 Arch Linux 更加稳定。但是，我们都会犯错误，要时刻小心是很难的。有时候，你想更新到最新的版本，但你可能会被破损的包卡住。不要">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="如何在 Arch Linux 中降级软件包">
-<meta property="og:url" content="https://alili.tech/archive/dd1d712b/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="如何在 Arch Linux 中降级软件包 正如你了解的，Arch Linux 是一个滚动版本和 DIY（自己动手）发行版。因此，在经常更新时必须小心，特别是从 AUR 等第三方存储库安装或更新软件包。如果你不知道自己在做什么，那么最终很可能会破坏系统。你有责任使 Arch Linux 更加稳定。但是，我们都会犯错误，要时刻小心是很难的。有时候，你想更新到最新的版本，但你可能会被破损的包卡住。不要">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-23T18:30:04.185Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何在 Arch Linux 中降级软件包">
-<meta name="twitter:description" content="如何在 Arch Linux 中降级软件包 正如你了解的，Arch Linux 是一个滚动版本和 DIY（自己动手）发行版。因此，在经常更新时必须小心，特别是从 AUR 等第三方存储库安装或更新软件包。如果你不知道自己在做什么，那么最终很可能会破坏系统。你有责任使 Arch Linux 更加稳定。但是，我们都会犯错误，要时刻小心是很难的。有时候，你想更新到最新的版本，但你可能会被破损的包卡住。不要">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>如何在 Arch Linux 中降级软件包 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/dd1d712b/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/dd1d712b/",
-      "appid": "1613049289050283", 
-      "title": "如何在 Arch Linux 中降级软件包 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:49"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="如何在 Arch Linux 中降级软件包"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>如何在 Arch Linux 中降级软件包 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/dd1d712b/",
+				"appid": "1613049289050283", 
+				"title": "如何在 Arch Linux 中降级软件包 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-10-21T00:00:00"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/6b2dd12d/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/fbdefcbd/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2fdd1d712b%2f&text=%e5%a6%82%e4%bd%95%e5%9c%a8%20Arch%20Linux%20%e4%b8%ad%e9%99%8d%e7%ba%a7%e8%bd%af%e4%bb%b6%e5%8c%85"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2fdd1d712b%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2fdd1d712b%2f&text=%e5%a6%82%e4%bd%95%e5%9c%a8%20Arch%20Linux%20%e4%b8%ad%e9%99%8d%e7%ba%a7%e8%bd%af%e4%bb%b6%e5%8c%85"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2fdd1d712b%2f&title=%e5%a6%82%e4%bd%95%e5%9c%a8%20Arch%20Linux%20%e4%b8%ad%e9%99%8d%e7%ba%a7%e8%bd%af%e4%bb%b6%e5%8c%85"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2fdd1d712b%2f&is_video=false&description=%e5%a6%82%e4%bd%95%e5%9c%a8%20Arch%20Linux%20%e4%b8%ad%e9%99%8d%e7%ba%a7%e8%bd%af%e4%bb%b6%e5%8c%85"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%e5%a6%82%e4%bd%95%e5%9c%a8%20Arch%20Linux%20%e4%b8%ad%e9%99%8d%e7%ba%a7%e8%bd%af%e4%bb%b6%e5%8c%85&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2fdd1d712b%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2fdd1d712b%2f&title=%e5%a6%82%e4%bd%95%e5%9c%a8%20Arch%20Linux%20%e4%b8%ad%e9%99%8d%e7%ba%a7%e8%bd%af%e4%bb%b6%e5%8c%85"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fdd1d712b%2f&title=%e5%a6%82%e4%bd%95%e5%9c%a8%20Arch%20Linux%20%e4%b8%ad%e9%99%8d%e7%ba%a7%e8%bd%af%e4%bb%b6%e5%8c%85"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fdd1d712b%2f&title=%e5%a6%82%e4%bd%95%e5%9c%a8%20Arch%20Linux%20%e4%b8%ad%e9%99%8d%e7%ba%a7%e8%bd%af%e4%bb%b6%e5%8c%85"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fdd1d712b%2f&title=%e5%a6%82%e4%bd%95%e5%9c%a8%20Arch%20Linux%20%e4%b8%ad%e9%99%8d%e7%ba%a7%e8%bd%af%e4%bb%b6%e5%8c%85"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">如何在 Arch Linux 中降级软件包</h1><div class="meta"><div class="postdate"><time datetime="2018-10-21" itemprop="datePublished">2018-10-21</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\n            \x3ch1\x3e\x3ca href=\x22#如何在-arch-linux-中降级软件包\x22\x3e\x3c\/a\x3e如何在 Arch Linux 中降级软件包\x3c\/h1\x3e\n\x3cp\x3e正如你了解的，Arch Linux 是一个滚动版本和 DIY（自己动手）发行版。因此，在经常更新时必须小心，特别是从 AUR 等第三方存储库安装或更新软件包。如果你不知道自己在做什么，那么最终很可能会破坏系统。你有责任使 Arch Linux 更加稳定。但是，我们都会犯错误，要时刻小心是很难的。有时候，你想更新到最新的版本，但你可能会被破损的包卡住。不要惊慌！在这种情况下，你可以简单地回滚到旧的稳定包。这个简短的教程描述了如何在 Arch Linux 中以及它的变体，如 Antergos，Manjaro Linux 中降级一个包，\x3c\/p\x3e\n\x3ch3\x3e\x3ca href=\x22#在-arch-linux-中降级一个包\x22\x3e\x3c\/a\x3e在 Arch Linux 中降级一个包\x3c\/h3\x3e\n\x3cp\x3e在 Arch Linux 中，有一个名为 “downgrade” 的实用程序，可帮助你将安装的软件包降级为任何可用的旧版本。此实用程序将检查你的本地缓存和远程服务器（Arch Linux 仓库）以查找所需软件包的旧版本。你可以从该列表中选择任何一个旧的稳定的软件包并进行安装。\x3c\/p\x3e\n\x3cp\x3e该软件包在官方仓库中不可用，你需要添加非官方的 \x3cstrong\x3earchlinuxfr\x3c\/strong\x3e 仓库。\x3c\/p\x3e\n\x3cp\x3e为此，请编辑 \x3ccode\x3e\/etc\/pacman.conf\x3c\/code\x3e 文件：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs shell\x22\x3e\x3cspan class=\x22hljs-meta\x22\x3e$\x3c\/span\x3e\x3cspan class=\x22bash\x22\x3e sudo nano \/etc\/pacman.conf\x3c\/span\x3e\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e添加以下行：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs ini\x22\x3e\x3cspan class=\x22hljs-section\x22\x3e[archlinuxfr]\x3c\/span\x3e\n\x3cspan class=\x22hljs-attr\x22\x3eSigLevel\x3c\/span\x3e = Never\n\x3cspan class=\x22hljs-attr\x22\x3eServer\x3c\/span\x3e = http:\/\/repo.archlinux.fr\/\x3cspan class=\x22hljs-variable\x22\x3e$arch\x3c\/span\x3e\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e保存并关闭文件。\x3c\/p\x3e\n\x3cp\x3e使用以下命令来更新仓库：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs shell\x22\x3e\x3cspan class=\x22hljs-meta\x22\x3e$\x3c\/span\x3e\x3cspan class=\x22bash\x22\x3e sudo pacman -Sy\x3c\/span\x3e\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e然后在终端中使用以下命令安装 “Downgrade” 实用程序：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs shell\x22\x3e\x3cspan class=\x22hljs-meta\x22\x3e$\x3c\/span\x3e\x3cspan class=\x22bash\x22\x3e sudo pacman -S downgrade\x3c\/span\x3e\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e示例输出：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs css\x22\x3e\x3cspan class=\x22hljs-selector-tag\x22\x3eresolving\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3edependencies\x3c\/span\x3e...\n \x3cspan class=\x22hljs-selector-tag\x22\x3elooking\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3efor\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3econflicting\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3epackages\x3c\/span\x3e...\n\n\x3cspan class=\x22hljs-selector-tag\x22\x3ePackages\x3c\/span\x3e (1) \x3cspan class=\x22hljs-selector-tag\x22\x3edowngrade-5\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.3-1\x3c\/span\x3e\n\n\x3cspan class=\x22hljs-selector-tag\x22\x3eTotal\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3eDownload\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3eSize\x3c\/span\x3e: 0\x3cspan class=\x22hljs-selector-class\x22\x3e.01\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3eMiB\x3c\/span\x3e\n \x3cspan class=\x22hljs-selector-tag\x22\x3eTotal\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3eInstalled\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3eSize\x3c\/span\x3e: 0\x3cspan class=\x22hljs-selector-class\x22\x3e.10\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3eMiB\x3c\/span\x3e\n\n:: \x3cspan class=\x22hljs-selector-tag\x22\x3eProceed\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3ewith\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3einstallation\x3c\/span\x3e? \x3cspan class=\x22hljs-selector-attr\x22\x3e[Y\/n]\x3c\/span\x3e\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e“downgrade” 命令的典型用法是：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs inform7\x22\x3e$ sudo downgrade \x3cspan class=\x22hljs-comment\x22\x3e[PACKAGE, ...]\x3c\/span\x3e \x3cspan class=\x22hljs-comment\x22\x3e[-- \x3cspan class=\x22hljs-comment\x22\x3e[PACMAN OPTIONS]\x3c\/span\x3e]\x3c\/span\x3e\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e让我们假设你想要将 opera web 浏览器 降级到任何可用的旧版本。\x3c\/p\x3e\n\x3cp\x3e为此，运行：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs shell\x22\x3e\x3cspan class=\x22hljs-meta\x22\x3e$\x3c\/span\x3e\x3cspan class=\x22bash\x22\x3e sudo downgrade opera\x3c\/span\x3e\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e此命令将从本地缓存和远程镜像列出所有可用的 opera 包（新旧两种版本）。\x3c\/p\x3e\n\x3cp\x3e示例输出：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs css\x22\x3e\x3cspan class=\x22hljs-selector-tag\x22\x3eAvailable\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3epackages\x3c\/span\x3e:\n\n 1) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-37\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2178\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.43-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3elocal\x3c\/span\x3e)\n 2) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-37\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2178\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.43-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 3) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-37\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2178\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.32-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 4) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-36\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2130\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.65-2-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 5) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-36\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2130\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.65-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 6) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-36\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2130\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.46-2-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 7) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-36\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2130\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.46-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 8) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-36\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2130\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.32-2-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 9) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-36\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2130\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.32-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 10) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-35\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2066\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.92-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 11) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-35\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2066\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.82-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 12) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-35\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2066\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.68-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 13) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-35\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2066\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.37-2-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 14) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-34\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2036\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.50-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 15) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-34\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2036\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.47-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 16) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-34\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.2036\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.25-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 17) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-33\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1990\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.115-2-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 18) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-33\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1990\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.115-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 19) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-33\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1990\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.58-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 20) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-32\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1948\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.69-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 21) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-32\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1948\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.25-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 22) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-31\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1889\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.174-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 23) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-31\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1889\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.99-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 24) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-30\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1835\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.125-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 25) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-30\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1835\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.88-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 26) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-30\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1835\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.59-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 27) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-30\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1835\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.52-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 28) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-29\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1795\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.60-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 29) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-29\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1795\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.47-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 30) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-28\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1750\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.51-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 31) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-28\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1750\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.48-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 32) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-28\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1750\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.40-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 33) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-27\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1689\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.76-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 34) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-27\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1689\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.69-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 35) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-27\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1689\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.66-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 36) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-27\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1689\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.54-2-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 37) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-27\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1689\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.54-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 38) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-26\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1656\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.60-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 39) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-26\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.0\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1656\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.32-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 40) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-12\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.16\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1860-2-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n 41) \x3cspan class=\x22hljs-selector-tag\x22\x3eopera-12\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.16\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.1860-1-x86_64\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.pkg\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.tar\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.xz\x3c\/span\x3e (\x3cspan class=\x22hljs-selector-tag\x22\x3eremote\x3c\/span\x3e)\n\n\x3cspan class=\x22hljs-selector-tag\x22\x3eselect\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3ea\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3epackage\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3eby\x3c\/span\x3e \x3cspan class=\x22hljs-selector-tag\x22\x3enumber\x3c\/span\x3e:\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e只需输入你选择的包号码，然后按回车即可安装。\x3c\/p\x3e\n\x3cp\x3e就这样。当前安装的软件包将被降级为旧版本。\x3c\/p\x3e\n\x3cp\x3e另外阅读：\x3ca href=\x22https:\/\/www.ostechnix.com\/downgrade-packages-specific-date-arch-linux\/\x22\x3e在 Arch Linux 中如何将所有软件包降级到特定日期\x3c\/a\x3e\x3c\/p\x3e\n\x3ch3\x3e\x3ca href=\x22#那么如何避免已损坏的软件包并使-arch-linux-更加稳定\x22\x3e\x3c\/a\x3e那么，如何避免已损坏的软件包并使 Arch Linux 更加稳定？\x3c\/h3\x3e\n\x3cp\x3e在更新 Arch Linux 之前查看 \x3ca href=\x22https:\/\/www.archlinux.org\/news\/\x22\x3eArch Linux 新闻\x3c\/a\x3e和\x3ca href=\x22https:\/\/bbs.archlinux.org\/\x22\x3e论坛\x3c\/a\x3e，看看是否有任何已报告的问题。过去几周我一直在使用 Arch Linux 作为我的主要操作系统，以下是我在这段时间内发现的一些简单提示，以避免在 Arch Linux 中安装不稳定的软件包。\x3c\/p\x3e\n\x3col\x3e\n\x3cli\x3e避免部分升级。这意味着永远不要运行 \x3ccode\x3epacman -Sy \x26lt;软件包名称\x26gt;\x3c\/code\x3e。此命令将在安装软件包时部分升级你的系统。相反，优先使用 \x3ccode\x3epacman -Syu\x3c\/code\x3e 来更新系统，然后使用 \x3ccode\x3epackage -S \x26lt;软件包名称\x26gt;\x3c\/code\x3e 安装软件包。\x3c\/li\x3e\n\x3cli\x3e避免使用 \x3ccode\x3epacman -Syu -force\x3c\/code\x3e 命令。\x3ccode\x3e-force\x3c\/code\x3e 标志将忽略程序包和文件冲突，并且可能会以破损的程序包或损坏的系统结束。\x3c\/li\x3e\n\x3cli\x3e不要跳过依赖性检查。这意味着不要使用 \x3ccode\x3epacman -Rdd \x26lt;软件包名称\x26gt;\x3c\/code\x3e。此命令将在删除软件包时避免依赖性检查。如果你运行这个命令，另一个重要的包所需的关键依赖也可以被删除。最终，它会损坏你的 Arch Linux。\x3c\/li\x3e\n\x3cli\x3e定期备份重要数据和配置文件以避免数据丢失总是一个好习惯。\x3c\/li\x3e\n\x3cli\x3e安装第三方软件包和 AUR 等非官方软件包时要小心。不要安装那些正在经历重大发展的软件包。\x3c\/li\x3e\n\x3c\/ol\x3e\n\x3cp\x3e有关更多详细信息，请查看 \x3ca href=\x22https:\/\/wiki.archlinux.org\/index.php\/System_maintenance\x22\x3eArch Linux 维护指南\x3c\/a\x3e。\x3c\/p\x3e\n\x3cp\x3e我不是 Arch Linux 专家，我仍然在学习如何使它更稳定。如果你有任何技巧让 Arch Linux 保持稳定和安全，请在下面的评论部分保持稳定和安全告诉我，我将洗耳恭听。\x3c\/p\x3e\n\x3cp\x3e希望这可以有帮助。目前为止这就是全部了。我很快会再次在这里与另一篇有趣的文章。在此之前，请继续关注。\x3c\/p\x3e\n\x3cp\x3e干杯！\x3c\/p\x3e\n\x3chr\x3e\n\x3cp\x3evia: \x3ca href=\x22https:\/\/www.ostechnix.com\/downgrade-package-arch-linux\/\x22\x3ehttps:\/\/www.ostechnix.com\/downgrade-package-arch-linux\/\x3c\/a\x3e\x3c\/p\x3e\n\x3cp\x3e作者：\x3ca href=\x22https:\/\/www.ostechnix.com\/author\/sk\/\x22\x3eSK\x3c\/a\x3e 选题：\x3ca href=\x22https:\/\/github.com\/lujun9972\x22\x3elujun9972\x3c\/a\x3e 译者：\x3ca href=\x22https:\/\/github.com\/MjSeven\x22\x3eMjSeven\x3c\/a\x3e 校对：\x3ca href=\x22https:\/\/github.com\/wxy\x22\x3ewxy\x3c\/a\x3e\x3c\/p\x3e\n\x3cp\x3e本文由 \x3ca href=\x22https:\/\/github.com\/LCTT\/TranslateProject\x22\x3eLCTT\x3c\/a\x3e 原创编译，\x3ca href=\x22https:\/\/linux.cn\/\x22\x3eLinux中国\x3c\/a\x3e 荣誉推出\x3c\/p\x3e\n\n          \n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/2fcf66e9/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/bcdc328b/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/dd1d712b/&text=如何在 Arch Linux 中降级软件包"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/dd1d712b/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/dd1d712b/&text=如何在 Arch Linux 中降级软件包"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/dd1d712b/&title=如何在 Arch Linux 中降级软件包"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/dd1d712b/&is_video=false&description=如何在 Arch Linux 中降级软件包"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=如何在 Arch Linux 中降级软件包&body=Check out this article: https://alili.tech/archive/dd1d712b/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/dd1d712b/&title=如何在 Arch Linux 中降级软件包"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/dd1d712b/&title=如何在 Arch Linux 中降级软件包"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/dd1d712b/&title=如何在 Arch Linux 中降级软件包"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/dd1d712b/&title=如何在 Arch Linux 中降级软件包"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">如何在 Arch Linux 中降级软件包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.0.1.</span> <span class="toc-text">在 Arch Linux 中降级一个包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.0.2.</span> <span class="toc-text">那么，如何避免已损坏的软件包并使 Arch Linux 更加稳定？</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">2.</span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text"> 本文链接：</span></a></li></ol></li>
-    </div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        如何在 Arch Linux 中降级软件包
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-10-20T16:00:00.000Z" itemprop="datePublished">2018-10-21</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <h1><a href="#如何在-arch-linux-中降级软件包"></a>如何在 Arch Linux 中降级软件包</h1>
-<p>正如你了解的，Arch Linux 是一个滚动版本和 DIY（自己动手）发行版。因此，在经常更新时必须小心，特别是从 AUR 等第三方存储库安装或更新软件包。如果你不知道自己在做什么，那么最终很可能会破坏系统。你有责任使 Arch Linux 更加稳定。但是，我们都会犯错误，要时刻小心是很难的。有时候，你想更新到最新的版本，但你可能会被破损的包卡住。不要惊慌！在这种情况下，你可以简单地回滚到旧的稳定包。这个简短的教程描述了如何在 Arch Linux 中以及它的变体，如 Antergos，Manjaro Linux 中降级一个包，</p>
-<h3><a href="#在-arch-linux-中降级一个包"></a>在 Arch Linux 中降级一个包</h3>
-<p>在 Arch Linux 中，有一个名为 “downgrade” 的实用程序，可帮助你将安装的软件包降级为任何可用的旧版本。此实用程序将检查你的本地缓存和远程服务器（Arch Linux 仓库）以查找所需软件包的旧版本。你可以从该列表中选择任何一个旧的稳定的软件包并进行安装。</p>
-<p>该软件包在官方仓库中不可用，你需要添加非官方的 <strong>archlinuxfr</strong> 仓库。</p>
-<p>为此，请编辑 <code>/etc/pacman.conf</code> 文件：</p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> sudo nano /etc/pacman.conf</span>
-
-</code></pre><p>添加以下行：</p>
-<pre><code class="hljs ini"><span class="hljs-section">[archlinuxfr]</span>
-<span class="hljs-attr">SigLevel</span> = Never
-<span class="hljs-attr">Server</span> = http://repo.archlinux.fr/<span class="hljs-variable">$arch</span>
-
-</code></pre><p>保存并关闭文件。</p>
-<p>使用以下命令来更新仓库：</p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> sudo pacman -Sy</span>
-
-</code></pre><p>然后在终端中使用以下命令安装 “Downgrade” 实用程序：</p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> sudo pacman -S downgrade</span>
-
-</code></pre><p>示例输出：</p>
-<pre><code class="hljs css"><span class="hljs-selector-tag">resolving</span> <span class="hljs-selector-tag">dependencies</span>...
- <span class="hljs-selector-tag">looking</span> <span class="hljs-selector-tag">for</span> <span class="hljs-selector-tag">conflicting</span> <span class="hljs-selector-tag">packages</span>...
-
-<span class="hljs-selector-tag">Packages</span> (1) <span class="hljs-selector-tag">downgrade-5</span><span class="hljs-selector-class">.2</span><span class="hljs-selector-class">.3-1</span>
-
-<span class="hljs-selector-tag">Total</span> <span class="hljs-selector-tag">Download</span> <span class="hljs-selector-tag">Size</span>: 0<span class="hljs-selector-class">.01</span> <span class="hljs-selector-tag">MiB</span>
- <span class="hljs-selector-tag">Total</span> <span class="hljs-selector-tag">Installed</span> <span class="hljs-selector-tag">Size</span>: 0<span class="hljs-selector-class">.10</span> <span class="hljs-selector-tag">MiB</span>
-
-:: <span class="hljs-selector-tag">Proceed</span> <span class="hljs-selector-tag">with</span> <span class="hljs-selector-tag">installation</span>? <span class="hljs-selector-attr">[Y/n]</span>
-
-</code></pre><p>“downgrade” 命令的典型用法是：</p>
-<pre><code class="hljs inform7">$ sudo downgrade <span class="hljs-comment">[PACKAGE, ...]</span> <span class="hljs-comment">[-- <span class="hljs-comment">[PACMAN OPTIONS]</span>]</span>
-
-</code></pre><p>让我们假设你想要将 opera web 浏览器 降级到任何可用的旧版本。</p>
-<p>为此，运行：</p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> sudo downgrade opera</span>
-
-</code></pre><p>此命令将从本地缓存和远程镜像列出所有可用的 opera 包（新旧两种版本）。</p>
-<p>示例输出：</p>
-<pre><code class="hljs css"><span class="hljs-selector-tag">Available</span> <span class="hljs-selector-tag">packages</span>:
-
- 1) <span class="hljs-selector-tag">opera-37</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2178</span><span class="hljs-selector-class">.43-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">local</span>)
- 2) <span class="hljs-selector-tag">opera-37</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2178</span><span class="hljs-selector-class">.43-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 3) <span class="hljs-selector-tag">opera-37</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2178</span><span class="hljs-selector-class">.32-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 4) <span class="hljs-selector-tag">opera-36</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2130</span><span class="hljs-selector-class">.65-2-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 5) <span class="hljs-selector-tag">opera-36</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2130</span><span class="hljs-selector-class">.65-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 6) <span class="hljs-selector-tag">opera-36</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2130</span><span class="hljs-selector-class">.46-2-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 7) <span class="hljs-selector-tag">opera-36</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2130</span><span class="hljs-selector-class">.46-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 8) <span class="hljs-selector-tag">opera-36</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2130</span><span class="hljs-selector-class">.32-2-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 9) <span class="hljs-selector-tag">opera-36</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2130</span><span class="hljs-selector-class">.32-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 10) <span class="hljs-selector-tag">opera-35</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2066</span><span class="hljs-selector-class">.92-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 11) <span class="hljs-selector-tag">opera-35</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2066</span><span class="hljs-selector-class">.82-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 12) <span class="hljs-selector-tag">opera-35</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2066</span><span class="hljs-selector-class">.68-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 13) <span class="hljs-selector-tag">opera-35</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2066</span><span class="hljs-selector-class">.37-2-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 14) <span class="hljs-selector-tag">opera-34</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2036</span><span class="hljs-selector-class">.50-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 15) <span class="hljs-selector-tag">opera-34</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2036</span><span class="hljs-selector-class">.47-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 16) <span class="hljs-selector-tag">opera-34</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.2036</span><span class="hljs-selector-class">.25-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 17) <span class="hljs-selector-tag">opera-33</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1990</span><span class="hljs-selector-class">.115-2-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 18) <span class="hljs-selector-tag">opera-33</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1990</span><span class="hljs-selector-class">.115-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 19) <span class="hljs-selector-tag">opera-33</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1990</span><span class="hljs-selector-class">.58-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 20) <span class="hljs-selector-tag">opera-32</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1948</span><span class="hljs-selector-class">.69-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 21) <span class="hljs-selector-tag">opera-32</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1948</span><span class="hljs-selector-class">.25-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 22) <span class="hljs-selector-tag">opera-31</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1889</span><span class="hljs-selector-class">.174-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 23) <span class="hljs-selector-tag">opera-31</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1889</span><span class="hljs-selector-class">.99-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 24) <span class="hljs-selector-tag">opera-30</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1835</span><span class="hljs-selector-class">.125-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 25) <span class="hljs-selector-tag">opera-30</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1835</span><span class="hljs-selector-class">.88-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 26) <span class="hljs-selector-tag">opera-30</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1835</span><span class="hljs-selector-class">.59-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 27) <span class="hljs-selector-tag">opera-30</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1835</span><span class="hljs-selector-class">.52-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 28) <span class="hljs-selector-tag">opera-29</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1795</span><span class="hljs-selector-class">.60-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 29) <span class="hljs-selector-tag">opera-29</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1795</span><span class="hljs-selector-class">.47-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 30) <span class="hljs-selector-tag">opera-28</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1750</span><span class="hljs-selector-class">.51-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 31) <span class="hljs-selector-tag">opera-28</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1750</span><span class="hljs-selector-class">.48-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 32) <span class="hljs-selector-tag">opera-28</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1750</span><span class="hljs-selector-class">.40-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 33) <span class="hljs-selector-tag">opera-27</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1689</span><span class="hljs-selector-class">.76-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 34) <span class="hljs-selector-tag">opera-27</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1689</span><span class="hljs-selector-class">.69-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 35) <span class="hljs-selector-tag">opera-27</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1689</span><span class="hljs-selector-class">.66-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 36) <span class="hljs-selector-tag">opera-27</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1689</span><span class="hljs-selector-class">.54-2-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 37) <span class="hljs-selector-tag">opera-27</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1689</span><span class="hljs-selector-class">.54-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 38) <span class="hljs-selector-tag">opera-26</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1656</span><span class="hljs-selector-class">.60-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 39) <span class="hljs-selector-tag">opera-26</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1656</span><span class="hljs-selector-class">.32-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 40) <span class="hljs-selector-tag">opera-12</span><span class="hljs-selector-class">.16</span><span class="hljs-selector-class">.1860-2-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
- 41) <span class="hljs-selector-tag">opera-12</span><span class="hljs-selector-class">.16</span><span class="hljs-selector-class">.1860-1-x86_64</span><span class="hljs-selector-class">.pkg</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span> (<span class="hljs-selector-tag">remote</span>)
-
-<span class="hljs-selector-tag">select</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">package</span> <span class="hljs-selector-tag">by</span> <span class="hljs-selector-tag">number</span>:
-
-</code></pre><p>只需输入你选择的包号码，然后按回车即可安装。</p>
-<p>就这样。当前安装的软件包将被降级为旧版本。</p>
-<p>另外阅读：<a href="https://www.ostechnix.com/downgrade-packages-specific-date-arch-linux/" target="_blank" rel="noopener">在 Arch Linux 中如何将所有软件包降级到特定日期</a></p>
-<h3><a href="#那么如何避免已损坏的软件包并使-arch-linux-更加稳定"></a>那么，如何避免已损坏的软件包并使 Arch Linux 更加稳定？</h3>
-<p>在更新 Arch Linux 之前查看 <a href="https://www.archlinux.org/news/" target="_blank" rel="noopener">Arch Linux 新闻</a>和<a href="https://bbs.archlinux.org/" target="_blank" rel="noopener">论坛</a>，看看是否有任何已报告的问题。过去几周我一直在使用 Arch Linux 作为我的主要操作系统，以下是我在这段时间内发现的一些简单提示，以避免在 Arch Linux 中安装不稳定的软件包。</p>
-<ol>
-<li>避免部分升级。这意味着永远不要运行 <code>pacman -Sy &lt;软件包名称&gt;</code>。此命令将在安装软件包时部分升级你的系统。相反，优先使用 <code>pacman -Syu</code> 来更新系统，然后使用 <code>package -S &lt;软件包名称&gt;</code> 安装软件包。</li>
-<li>避免使用 <code>pacman -Syu -force</code> 命令。<code>-force</code> 标志将忽略程序包和文件冲突，并且可能会以破损的程序包或损坏的系统结束。</li>
-<li>不要跳过依赖性检查。这意味着不要使用 <code>pacman -Rdd &lt;软件包名称&gt;</code>。此命令将在删除软件包时避免依赖性检查。如果你运行这个命令，另一个重要的包所需的关键依赖也可以被删除。最终，它会损坏你的 Arch Linux。</li>
-<li>定期备份重要数据和配置文件以避免数据丢失总是一个好习惯。</li>
-<li>安装第三方软件包和 AUR 等非官方软件包时要小心。不要安装那些正在经历重大发展的软件包。</li>
-</ol>
-<p>有关更多详细信息，请查看 <a href="https://wiki.archlinux.org/index.php/System_maintenance" target="_blank" rel="noopener">Arch Linux 维护指南</a>。</p>
-<p>我不是 Arch Linux 专家，我仍然在学习如何使它更稳定。如果你有任何技巧让 Arch Linux 保持稳定和安全，请在下面的评论部分保持稳定和安全告诉我，我将洗耳恭听。</p>
-<p>希望这可以有帮助。目前为止这就是全部了。我很快会再次在这里与另一篇有趣的文章。在此之前，请继续关注。</p>
-<p>干杯！</p>
-<hr>
-<p>via: <a href="https://www.ostechnix.com/downgrade-package-arch-linux/" target="_blank" rel="noopener">https://www.ostechnix.com/downgrade-package-arch-linux/</a></p>
-<p>作者：<a href="https://www.ostechnix.com/author/sk/" target="_blank" rel="noopener">SK</a> 选题：<a href="https://github.com/lujun9972" target="_blank" rel="noopener">lujun9972</a> 译者：<a href="https://github.com/MjSeven" target="_blank" rel="noopener">MjSeven</a> 校对：<a href="https://github.com/wxy" target="_blank" rel="noopener">wxy</a></p>
-<p>本文由 <a href="https://github.com/LCTT/TranslateProject" target="_blank" rel="noopener">LCTT</a> 原创编译，<a href="https://linux.cn/" target="_blank" rel="noopener">Linux中国</a> 荣誉推出</p>
-
-          
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>原文链接: <a href="https://www.zcfy.cc/article/how-to-downgrade-a-package-in-arch-linux" target="_blank" rel="noopener">www.zcfy.cc</a><br>原文标题: 如何在 Arch Linux 中降级软件包<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/dd1d712b/">https://alili.tech/archive/dd1d712b/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>原文链接: <a href="https://www.zcfy.cc/article/how-to-downgrade-a-package-in-arch-linux">www.zcfy.cc</a> 原文标题: 如何在 Arch Linux 中降级软件包 本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2>本文链接：</h2><a href="https://alili.tech/archive/dd1d712b/" target="_blank">https://alili.tech/archive/dd1d712b/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">如何在 Arch Linux 中降级软件包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.0.1.</span> <span class="toc-text">在 Arch Linux 中降级一个包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.0.2.</span> <span class="toc-text">那么，如何避免已损坏的软件包并使 Arch Linux 更加稳定？</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">2.</span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text"> 本文链接：</span></a></li></ol></li>
-    </div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

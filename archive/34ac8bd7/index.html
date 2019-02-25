@@ -1,588 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="（扩展：什么是反模式 ） React 16.4包含一个针对getDerivedStateFromProps的错误修正，这会导致React组件中的一些现有错误更加得到重现。如果此版本暴露了您的应用程序使用反模式并且在修复后无法正常工作的情况，我们对此表示抱歉。在这篇文章中，我们将解释一些常见的反模式以及派生状态和我们的首选备选方案。 很长一段时间，生命周期componentWillReceivePr">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="你可能不需要派生状态">
-<meta property="og:url" content="https://alili.tech/archive/34ac8bd7/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="（扩展：什么是反模式 ） React 16.4包含一个针对getDerivedStateFromProps的错误修正，这会导致React组件中的一些现有错误更加得到重现。如果此版本暴露了您的应用程序使用反模式并且在修复后无法正常工作的情况，我们对此表示抱歉。在这篇文章中，我们将解释一些常见的反模式以及派生状态和我们的首选备选方案。 很长一段时间，生命周期componentWillReceivePr">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-23T18:30:04.184Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你可能不需要派生状态">
-<meta name="twitter:description" content="（扩展：什么是反模式 ） React 16.4包含一个针对getDerivedStateFromProps的错误修正，这会导致React组件中的一些现有错误更加得到重现。如果此版本暴露了您的应用程序使用反模式并且在修复后无法正常工作的情况，我们对此表示抱歉。在这篇文章中，我们将解释一些常见的反模式以及派生状态和我们的首选备选方案。 很长一段时间，生命周期componentWillReceivePr">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>你可能不需要派生状态 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/34ac8bd7/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/34ac8bd7/",
-      "appid": "1613049289050283", 
-      "title": "你可能不需要派生状态 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:49"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="你可能不需要派生状态"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>你可能不需要派生状态 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/34ac8bd7/",
+				"appid": "1613049289050283", 
+				"title": "你可能不需要派生状态 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-10-21T00:00:00"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/3707de70/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/e7b0e14f/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2f34ac8bd7%2f&text=%e4%bd%a0%e5%8f%af%e8%83%bd%e4%b8%8d%e9%9c%80%e8%a6%81%e6%b4%be%e7%94%9f%e7%8a%b6%e6%80%81"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2f34ac8bd7%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2f34ac8bd7%2f&text=%e4%bd%a0%e5%8f%af%e8%83%bd%e4%b8%8d%e9%9c%80%e8%a6%81%e6%b4%be%e7%94%9f%e7%8a%b6%e6%80%81"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2f34ac8bd7%2f&title=%e4%bd%a0%e5%8f%af%e8%83%bd%e4%b8%8d%e9%9c%80%e8%a6%81%e6%b4%be%e7%94%9f%e7%8a%b6%e6%80%81"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2f34ac8bd7%2f&is_video=false&description=%e4%bd%a0%e5%8f%af%e8%83%bd%e4%b8%8d%e9%9c%80%e8%a6%81%e6%b4%be%e7%94%9f%e7%8a%b6%e6%80%81"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%e4%bd%a0%e5%8f%af%e8%83%bd%e4%b8%8d%e9%9c%80%e8%a6%81%e6%b4%be%e7%94%9f%e7%8a%b6%e6%80%81&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2f34ac8bd7%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2f34ac8bd7%2f&title=%e4%bd%a0%e5%8f%af%e8%83%bd%e4%b8%8d%e9%9c%80%e8%a6%81%e6%b4%be%e7%94%9f%e7%8a%b6%e6%80%81"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f34ac8bd7%2f&title=%e4%bd%a0%e5%8f%af%e8%83%bd%e4%b8%8d%e9%9c%80%e8%a6%81%e6%b4%be%e7%94%9f%e7%8a%b6%e6%80%81"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f34ac8bd7%2f&title=%e4%bd%a0%e5%8f%af%e8%83%bd%e4%b8%8d%e9%9c%80%e8%a6%81%e6%b4%be%e7%94%9f%e7%8a%b6%e6%80%81"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f34ac8bd7%2f&title=%e4%bd%a0%e5%8f%af%e8%83%bd%e4%b8%8d%e9%9c%80%e8%a6%81%e6%b4%be%e7%94%9f%e7%8a%b6%e6%80%81"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">你可能不需要派生状态</h1><div class="meta"><div class="postdate"><time datetime="2018-10-21" itemprop="datePublished">2018-10-21</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\n            \x3cp\x3e（扩展：\x3ca href=\x22https:\/\/stackoverflow.com\/questions\/980601\/what-is-an-anti-pattern\x22\x3e什么是反模式\x3c\/a\x3e ）\x3c\/p\x3e\n\x3cp\x3eReact 16.4包含一个针对\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/05\/23\/react-v-16-4.html#bugfix-for-getderivedstatefromprops\x22\x3egetDerivedStateFromProps的错误修正\x3c\/a\x3e，这会导致React组件中的一些现有错误更加得到重现。如果此版本暴露了您的应用程序使用反模式并且在修复后无法正常工作的情况，我们对此表示抱歉。在这篇文章中，我们将解释一些常见的反模式以及派生状态和我们的首选备选方案。\x3c\/p\x3e\n\x3cp\x3e很长一段时间，生命周期componentWillReceiveProps是更新状态以响应没有额外渲染\x3ccode\x3eprops\x3c\/code\x3e更改的唯一方法。在版本16.3中，我们引入了替代生命周期\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/03\/29\/react-v-16-3.html#component-lifecycle-changes\x22\x3egetDerivedStateFromProps\x3c\/a\x3e，以更安全的方式解决相同的用例。同时，我们意识到人们对于如何使用这两种方法存在很多误解，并且我们发现了反模式，导致了一些微妙而混乱的错误。在16.4中的\x3ca href=\x22https:\/\/github.com\/facebook\/react\/issues\/12898\x22\x3egetDerivedStateFromProps\x3c\/a\x3e错误修正使派生状态更具可预测性，因此滥用它的结果更容易被注意到。\x3c\/p\x3e\n\x3cblockquote\x3e\n\x3cp\x3e注意\x3c\/p\x3e\n\x3cp\x3e本文中描述的所有反模式都适用于较早的componentWillReceiveProps和较新的getDerivedStateFromProps。\nThis blog post will cover the following topics:\x3c\/p\x3e\n\x3c\/blockquote\x3e\n\x3cul\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#when-to-use-derived-state\x22\x3e何时使用派生状态\x3c\/a\x3e\x3c\/li\x3e\n\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#common-bugs-when-using-derived-state\x22\x3e使用派生状态时的常见错误\x3c\/a\x3e\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#anti-pattern-unconditionally-copying-props-to-state\x22\x3e反模式：无条件复制props到state\x3c\/a\x3e\x3c\/li\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#anti-pattern-erasing-state-when-props-change\x22\x3e反模式：props改变时替换state\x3c\/a\x3e\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3c\/li\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#preferred-solutions\x22\x3e\n首选解决方案\x3c\/a\x3e\x3c\/li\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#what-about-memoization\x22\x3ememoization怎么样？\x3c\/a\x3e\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3ch2\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#when-to-use-derived-state\x22\x3e\x3c\/a\x3e何时使用派生状态\x3c\/h2\x3e\n\x3cp\x3egetDerivedStateFromProps仅用于一个目的。由于道具的变化，它使组件能够更新其内部状态。我们之前的博客文章提供了一些示例，例如\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/03\/27\/update-on-async-rendering.html#updating-state-based-on-props\x22\x3e基于变化的偏移props记录当前滚动方向\x3c\/a\x3e或\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/03\/27\/update-on-async-rendering.html#fetching-external-data-when-props-change\x22\x3e加载源props指定的外部数据\x3c\/a\x3e.。\x3c\/p\x3e\n\x3cp\x3e我们没有提供很多例子，因为作为一般规则，谨慎地使用派生状态。我们所看到的派生状态的所有问题都可以最终归结为（1）无条件地从porops更新state，或者（2）当props和state不匹配时更新状态。 （我们将在下面更详细地讨论）。\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3e如果您使用派生状态来仅根据当前道具记忆某些计算，则不需要派生状态。请\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#what-about-memoization\x22\x3e参阅memoization\x3c\/a\x3e。\x3c\/li\x3e\n\x3cli\x3e如果您无条件地更新派生状态，或者每当props和state不匹配时更新它，您的组件可能会过于频繁地重置其状态。请阅读以获得更多详情。\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3ch2\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#common-bugs-when-using-derived-state\x22\x3e\x3c\/a\x3e使用派生状态时的常见错误\x3c\/h2\x3e\n\x3cp\x3e术语\x3ca href=\x22https:\/\/reactjs.org\/docs\/forms.html#controlled-components\x22\x3e“controlled”\x3c\/a\x3e 和\x3ca href=\x22https:\/\/reactjs.org\/docs\/uncontrolled-components.html\x22\x3e“uncontrolled”\x3c\/a\x3e通常指形式输入，但它们也可以描述任何组件的数据所在的位置。作为道具传入的数据可以认为是\x3cstrong\x3econtrolled\x3c\/strong\x3e的（因为父组件控制着这些数据）。只存在于内部状态的数据可以被认为是\x3cstrong\x3euncontrolled\x3c\/strong\x3e的（因为父母不能直接改变它）。\x3c\/p\x3e\n\x3cp\x3e导出状态最常见的错误是混合这两个;当派生状态值也通过setState调用进行更新时，数据没有单一来源。\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/03\/27\/update-on-async-rendering.html#fetching-external-data-when-props-change\x22\x3e上面提到的外部数据加载示例\x3c\/a\x3e可能听起来很相似，但在几个重要方面它有所不同。在加载示例中，“源”道具和“加载”状态都有明确的事实来源。当源道具改变时，加载状态应该总是被覆盖。相反，只有在道具发生变化并由组件管理时才会覆盖该状态。\x3c\/p\x3e\n\x3cp\x3e当这些约束条件发生变化时，就会出现问题。这通常有两种形式。我们来看看两者。\x3c\/p\x3e\n\x3ch3\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#anti-pattern-unconditionally-copying-props-to-state\x22\x3e\x3c\/a\x3e反模式：无条件复制props到state\x3c\/h3\x3e\n\x3cp\x3e一个常见的误解是getDerivedStateFromProps和componentWillReceiveProps仅在props“更改”时调用。无论props是否与之前“不同”，这些生命周期都会在父组件再生时随时调用。因此，使用这些生命周期中的任何一个都无条件地覆盖状态一直是不安全的。这样做会导致状态更新丢失。\x3c\/p\x3e\n\x3cp\x3e我们来考虑一个例子来演示这个问题。以下是一个EmailInput组件，它可以在状态中“镜像”电子邮件道具：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs scala\x22\x3e\x3cspan class=\x22hljs-class\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3eclass\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eEmailInput\x3c\/span\x3e \x3cspan class=\x22hljs-keyword\x22\x3eextends\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eComponent\x3c\/span\x3e \x3c\/span\x3e{\n  state = { email: \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.props.email };\n\n  render() {\n    \x3cspan class=\x22hljs-keyword\x22\x3ereturn\x3c\/span\x3e \x26lt;input onChange={\x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.handleChange} value={\x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.state.email} \/\x26gt;;\n  }\n\n  handleChange = event =\x26gt; {\n    \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.setState({ email: event.target.value });\n  };\n\n  componentWillReceiveProps(nextProps) {\n    \x3cspan class=\x22hljs-comment\x22\x3e\/\/ This will erase any local state updates!\x3c\/span\x3e\n    \x3cspan class=\x22hljs-comment\x22\x3e\/\/ Do not do this.\x3c\/span\x3e\n    \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.setState({ email: nextProps.email });\n  }\n}\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e起初，这个组件可能看起来不错。 State被初始化为由props指定的值，并在我们输入时更新。但是如果我们的组件的父节点退出，我们输入的任何东西都会丢失！ （请参阅本演示\x3ca href=\x22https:\/\/codesandbox.io\/s\/m3w9zn1z8x\x22\x3e示例\x3c\/a\x3e。）即使我们要在重置之前比较nextProps.email！== this.state.email，也是如此。\x3c\/p\x3e\n\x3cp\x3e在这个简单的例子中，只有在电子邮件道具发生变化时才能修复shouldComponentUpdate以重新渲染。然而在实践中，组件通常接受多个道具;另一个改变道具仍然会导致重新投入和不适当的重置。函数和对象的道具通常也是内联创建的，这使得很难实现只有在发生重大变化时才可靠地返回true的shouldComponentUpdate。\x3ca href=\x22https:\/\/codesandbox.io\/s\/jl0w6r9w59\x22\x3e这是一个演示\x3c\/a\x3e，显示发生了什么情况。因此，shouldComponentUpdate最好用作性能优化，而不是确保派生状态的正确性。\x3c\/p\x3e\n\x3cp\x3e希望现在很清楚，为什么无条件复制道具来陈述它是一个坏主意。在审查可能的解决方案之前，让我们看看一个相关的问题模式：如果我们只在电子邮件道具更改时更新状态，该怎么办？\x3c\/p\x3e\n\x3ch3\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#anti-pattern-erasing-state-when-props-change\x22\x3e\x3c\/a\x3e反模式：props改变时擦除state\x3c\/h3\x3e\n\x3cp\x3e继续上面的例子，我们可以避免在props.email更改时仅通过更新来意外擦除状态：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs scala\x22\x3e\x3cspan class=\x22hljs-class\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3eclass\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eEmailInput\x3c\/span\x3e \x3cspan class=\x22hljs-keyword\x22\x3eextends\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eComponent\x3c\/span\x3e \x3c\/span\x3e{\n  state = {\n    email: \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.props.email\n  };\n\n  componentWillReceiveProps(nextProps) {\n    \x3cspan class=\x22hljs-comment\x22\x3e\/\/ Any time props.email changes, update state.\x3c\/span\x3e\n    \x3cspan class=\x22hljs-keyword\x22\x3eif\x3c\/span\x3e (nextProps.email !== \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.props.email) {\n      \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.setState({\n        email: nextProps.email\n      });\n    }\n  }\n\n  \x3cspan class=\x22hljs-comment\x22\x3e\/\/ ...\x3c\/span\x3e\n}\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cblockquote\x3e\n\x3cp\x3e提示\x3c\/p\x3e\n\x3cp\x3e尽管上面的示例显示了componentWillReceiveProps，但同样的反模式也适用于getDerivedStateFromProps。\x3c\/p\x3e\n\x3c\/blockquote\x3e\n\x3cp\x3e我们刚刚取得了很大的进步。现在我们的组件只会在props实际改变时才会清除我们输入的内容。\x3c\/p\x3e\n\x3cp\x3e仍然存在一个微妙的问题。想象一下使用上述输入组件的密码管理器应用程序。当使用同一封电子邮件在两个帐户的详细信息之间导航时，输入将无法重置。这是因为传递给组件的道具值对于两个帐户都是相同的！这对用户来说是一个惊喜，因为对一个帐户的未保存更改似乎会影响发生共享相同电子邮件的其他帐户。 （\x3ca href=\x22https:\/\/codesandbox.io\/s\/mz2lnkjkrx\x22\x3e请参阅此处的演示。\x3c\/a\x3e）\x3c\/p\x3e\n\x3cp\x3e这种设计从根本上说是有缺陷的，但它也是一个容易犯的错误。 （\x3ca href=\x22https:\/\/twitter.com\/brian_d_vaughn\/status\/959600888242307072\x22\x3e我自己做的！\x3c\/a\x3e）幸运的是，有两种方法可以更好地工作。两者的关键在于，对于任何一块数据，您都需要选择一个拥有它作为真相源的组件，并避免将其复制到其他组件中。让我们来看看每个选项。\x3c\/p\x3e\n\x3ch2\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#preferred-solutions\x22\x3e\x3c\/a\x3e首选方案\x3c\/h2\x3e\n\x3ch3\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#recommendation-fully-controlled-component\x22\x3e\x3c\/a\x3e建议：完全控制组件\x3c\/h3\x3e\n\x3cp\x3e避免上述问题的一种方法是完全从组件中删除状态。如果电子邮件地址仅作为props存在，那么我们不必担心与state的冲突。我们甚至可以将EmailInput转换为更轻量级的功能组件：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs javascript\x22\x3e\x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3efunction\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eEmailInput\x3c\/span\x3e(\x3cspan class=\x22hljs-params\x22\x3eprops\x3c\/span\x3e) \x3c\/span\x3e{\n  \x3cspan class=\x22hljs-keyword\x22\x3ereturn\x3c\/span\x3e \x3cspan class=\x22xml\x22\x3e\x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\x3cspan class=\x22hljs-name\x22\x3einput\x3c\/span\x3e \x3cspan class=\x22hljs-attr\x22\x3eonChange\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e{props.onChange}\x3c\/span\x3e \x3cspan class=\x22hljs-attr\x22\x3evalue\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e{props.email}\x3c\/span\x3e \/\x26gt;\x3c\/span\x3e;\n}\n\n\x3c\/span\x3e\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e这种方法简化了我们组件的实现，但是如果我们仍然想要存储草稿值，则父表单组件现在需要手动完成。 （\x3ca href=\x22https:\/\/codesandbox.io\/s\/7154w1l551\x22\x3e点击这里查看该模式的演示。\x3c\/a\x3e）\x3c\/p\x3e\n\x3ch3\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#recommendation-fully-uncontrolled-component-with-a-key\x22\x3e\x3c\/a\x3e建议：完全不受控制的组件\x3c\/h3\x3e\n\x3cp\x3e另一种选择是我们的组件完全拥有“草稿”电子邮件状态。在这种情况下，我们的组件仍然可以接受初始值的props，但它会忽略对该props的后续更改：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs scala\x22\x3e\x3cspan class=\x22hljs-class\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3eclass\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eEmailInput\x3c\/span\x3e \x3cspan class=\x22hljs-keyword\x22\x3eextends\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eComponent\x3c\/span\x3e \x3c\/span\x3e{\n  state = { email: \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.props.defaultEmail };\n\n  handleChange = event =\x26gt; {\n    \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.setState({ email: event.target.value });\n  };\n\n  render() {\n    \x3cspan class=\x22hljs-keyword\x22\x3ereturn\x3c\/span\x3e \x26lt;input onChange={\x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.handleChange} value={\x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.state.email} \/\x26gt;;\n  }\n}\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e为了在移动到不同的项目时重置该值（如在我们的密码管理器场景中），我们可以使用称为密钥的特殊React属性。当一个键改变时，React将\x3ca href=\x22https:\/\/reactjs.org\/docs\/reconciliation.html#keys\x22\x3e创建一个新的组件实例\x3c\/a\x3e，而不是更新当前的组件实例。密钥通常用于动态列表，但在这里也很有用。在我们的例子中，我们可以使用用户标识在任何时候选择新用户时重新创建电子邮件输入：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs stylus\x22\x3e\x26lt;EmailInput\n  defaultEmail={this\x3cspan class=\x22hljs-selector-class\x22\x3e.props\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.user\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.email\x3c\/span\x3e}\n  key={this\x3cspan class=\x22hljs-selector-class\x22\x3e.props\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.user\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.id\x3c\/span\x3e}\n\/\x26gt;\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e每次ID更改时，EmailInput都将被重新创建，其状态将重置为最新的defaultEmail值。 （\x3ca href=\x22https:\/\/codesandbox.io\/s\/6v1znlxyxn\x22\x3e点击这里查看该模式的演示。\x3c\/a\x3e）使用这种方法，您不必为每个输入添加密钥。相反，在整个表单上放置一个key可能更有意义。每次key更改时，表单中的所有组件都将以新的初始化状态重新创建。\x3c\/p\x3e\n\x3cp\x3e在大多数情况下，这是处理需要重置的状态的最佳方式。\x3c\/p\x3e\n\x3cblockquote\x3e\n\x3cp\x3e注意\x3c\/p\x3e\n\x3cp\x3e虽然这听起来很慢，但性能差异通常不显着。如果组件具有在更新上运行的重逻辑，则使用密钥甚至可以更快，因为该子树的差异被绕过。\x3c\/p\x3e\n\x3c\/blockquote\x3e\n\x3ch4\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#alternative-1-reset-uncontrolled-component-with-an-id-prop\x22\x3e\x3c\/a\x3e备选方案1：使用IDprops重置非受控组件\x3c\/h4\x3e\n\x3cp\x3e如果key由于某种原因不起作用（也许该组件的初始化非常昂贵），那么一个可行但麻烦的解决方案就是监视getDerivedStateFromProps中“userID”的更改：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs pf\x22\x3eclass EmailInput extends Component {\n  \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e = {\n    email: this.props.\x3cspan class=\x22hljs-keyword\x22\x3edefault\x3c\/span\x3eEmail,\n    prevPropsUserID: this.props.\x3cspan class=\x22hljs-keyword\x22\x3euser\x3c\/span\x3eID\n  };\n\n  static getDerivedStateFromProps(props, \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e) {\n    \/\/ Any time the current \x3cspan class=\x22hljs-keyword\x22\x3euser\x3c\/span\x3e changes,\n    \/\/ Reset \x3cspan class=\x22hljs-literal\x22\x3eany\x3c\/span\x3e parts of \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e that are tied \x3cspan class=\x22hljs-keyword\x22\x3eto\x3c\/span\x3e that \x3cspan class=\x22hljs-keyword\x22\x3euser\x3c\/span\x3e.\n    \/\/ In this simple example, that\x27s just the email.\n    if (props.\x3cspan class=\x22hljs-keyword\x22\x3euser\x3c\/span\x3eID !== \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.prevPropsUserID) {\n      return {\n        prevPropsUserID: props.\x3cspan class=\x22hljs-keyword\x22\x3euser\x3c\/span\x3eID,\n        email: props.\x3cspan class=\x22hljs-keyword\x22\x3edefault\x3c\/span\x3eEmail\n      };\n    }\n    return null;\n  }\n\n  \/\/ ...\n}\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e如果我们这样选择，这也提供了仅重置部件的内部状态的灵活性。 （点击这里查看该模式的演示。(\x3ca href=\x22https:\/\/codesandbox.io\/s\/rjyvp7l3rq)）\x22\x3ehttps:\/\/codesandbox.io\/s\/rjyvp7l3rq)）\x3c\/a\x3e\x3c\/p\x3e\n\x3cblockquote\x3e\n\x3cp\x3e注意\x3c\/p\x3e\n\x3cp\x3e尽管上面的示例显示了getDerivedStateFromProps，但可以使用与componentWillReceiveProps相同的技术。\x3c\/p\x3e\n\x3c\/blockquote\x3e\n\x3ch4\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#alternative-2-reset-uncontrolled-component-with-an-instance-method\x22\x3e\x3c\/a\x3e备选方案2：使用实例方法重置非受控组件\x3c\/h4\x3e\n\x3cp\x3e更为罕见的是，即使没有适当的ID用作密钥，您也可能需要重置状态。一种解决方法是每次重置时将密钥重置为随机值或自动增量编号。另一个可行的选择是公开一个实例方法来强制重置内部状态：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs scala\x22\x3e\x3cspan class=\x22hljs-class\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3eclass\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eEmailInput\x3c\/span\x3e \x3cspan class=\x22hljs-keyword\x22\x3eextends\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eComponent\x3c\/span\x3e \x3c\/span\x3e{\n  state = {\n    email: \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.props.defaultEmail\n  };\n\n  resetEmailForNewUser(newEmail) {\n    \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.setState({ email: newEmail });\n  }\n\n  \x3cspan class=\x22hljs-comment\x22\x3e\/\/ ...\x3c\/span\x3e\n}\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e父表单组件然后可以\x3ca href=\x22https:\/\/reactjs.org\/docs\/glossary.html#refs\x22\x3e使用ref来调用此方法。\x3c\/a\x3e （\x3ca href=\x22https:\/\/codesandbox.io\/s\/l70krvpykl\x22\x3e点击这里查看该模式的演示。\x3c\/a\x3e）\x3c\/p\x3e\n\x3cp\x3e在这种情况下，Refs可能会有用，但通常我们建议您谨慎使用它们。即使在演示中，这个必要的方法也是非理想的，因为两个渲染将会发生，而不是一个。\x3c\/p\x3e\n\x3chr\x3e\n\x3ch3\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#recap\x22\x3e\x3c\/a\x3e概括\x3c\/h3\x3e\n\x3cp\x3e总而言之，在设计组件时，决定其数据是受控制的还是不受控制的是非常重要的。\x3c\/p\x3e\n\x3cp\x3e而不是试图“镜像”状态下的道具值，控制组件，并合并父组件状态中的两个发散值。例如，不是接受“已提交”props.value并跟踪“草稿”状态值的孩子，而是让父组件管理state.draftValue和state.committedValue，并直接控制子组件的值。这使得数据流更加明确和可预测。\x3c\/p\x3e\n\x3cp\x3e对于不受控制的组件，如果您尝试在特定的道具（通常是ID）发生变化时重置状态，则可以选择以下几种方式：\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3e\x3cstrong\x3e推荐：要重置所有内部状态，请使用键属性。\x3c\/strong\x3e\x3c\/li\x3e\n\x3cli\x3e备选方案1：要只重置某些状态字段，请注意特殊属性（例如props.userID）的更改。.\x3c\/li\x3e\n\x3cli\x3e备选方案2：您也可以考虑使用参考回退到命令式实例方法。\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3ch2\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#what-about-memoization\x22\x3e\x3c\/a\x3ememoization怎么样？\x3c\/h2\x3e\n\x3cp\x3e我们还看到了派生状态，用于确保渲染中使用的昂贵值仅在输入发生变化时才会重新计算。这种技术被称为\x3ca href=\x22https:\/\/en.wikipedia.org\/wiki\/Memoization\x22\x3ememoization\x3c\/a\x3e。\x3c\/p\x3e\n\x3cp\x3e使用派生状态进行memoization并不一定是不好的，但它通常不是最好的解决方案。管理派生状态存在固有的复杂性，并且这种复杂性随着每个附加属性而增加。例如，如果我们向组件状态添加第二个派生字段，那么我们的实现将需要分别跟踪两者的更改。\x3c\/p\x3e\n\x3cp\x3e我们来看一个组件的例子，它带有一个prop - 一个项目列表 - 并呈现与用户输入的搜索查询匹配的项目。我们可以使用派生状态来存储过滤的列表：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs pf\x22\x3eclass Example extends Component {\n  \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e = {\n    filterText: \x3cspan class=\x22hljs-string\x22\x3e\x22\x22\x3c\/span\x3e,\n  };\n\n  \/\/ *******************************************************\n  \/\/ NOTE: this example is NOT the recommended approach.\n  \/\/ See the examples below \x3cspan class=\x22hljs-keyword\x22\x3efor\x3c\/span\x3e our recommendations instead.\n  \/\/ *******************************************************\n\n  static getDerivedStateFromProps(props, \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e) {\n    \/\/ Re-run the filter whenever the list array or filter text change.\n    \/\/ Note we need \x3cspan class=\x22hljs-keyword\x22\x3eto\x3c\/span\x3e store prevPropsList and prevFilterText \x3cspan class=\x22hljs-keyword\x22\x3eto\x3c\/span\x3e detect changes.\n    if (\n      props.list !== \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.prevPropsList ||\n      \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.prevFilterText !== \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.filterText\n    ) {\n      return {\n        prevPropsList: props.list,\n        prevFilterText: \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.filterText,\n        filteredList: props.list.filter(item =\x26gt; item.text.includes(\x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.filterText))\n      };\n    }\n    return null;\n  }\n\n  handleChange = event =\x26gt; {\n    this.\x3cspan class=\x22hljs-built_in\x22\x3eset\x3c\/span\x3eState({ filterText: event.target.value });\n  };\n\n  render() {\n    return (\n      \x3cspan class=\x22hljs-variable\x22\x3e\x26lt;Fragment\x26gt;\x3c\/span\x3e\n        \x3cspan class=\x22hljs-variable\x22\x3e\x26lt;input onChange={this.handleChange} value={this.state.filterText} \/\x26gt;\x3c\/span\x3e\n        \x3cspan class=\x22hljs-variable\x22\x3e\x26lt;ul\x26gt;\x3c\/span\x3e{this.\x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.filteredList.map(item =\x26gt; \x3cspan class=\x22hljs-variable\x22\x3e\x26lt;li\x26gt;\x3c\/span\x3e{item.text}\x26lt;\/li\x26gt;)}\x26lt;\/ul\x26gt;\n      \x26lt;\/Fragment\x26gt;\n    );\n  }\n}\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e这个实现避免了重新计算filteredList的次数。但它比它需要更复杂，因为它必须分别跟踪和检测道具和状态的变化，以便正确更新过滤列表。在这个例子中，我们可以通过使用PureComponent并将滤镜操作移动到渲染方法来简化：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs pf\x22\x3e\/\/ PureComponents only rerender if at least one \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e or prop value changes.\n\/\/ Change is determined by doing a shallow comparison of \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e and prop keys.\nclass Example extends PureComponent {\n  \/\/ State only needs \x3cspan class=\x22hljs-keyword\x22\x3eto\x3c\/span\x3e hold the current filter text value:\n  \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e = {\n    filterText: \x3cspan class=\x22hljs-string\x22\x3e\x22\x22\x3c\/span\x3e\n  };\n\n  handleChange = event =\x26gt; {\n    this.\x3cspan class=\x22hljs-built_in\x22\x3eset\x3c\/span\x3eState({ filterText: event.target.value });\n  };\n\n  render() {\n    \/\/ The render method \x3cspan class=\x22hljs-keyword\x22\x3eon\x3c\/span\x3e this PureComponent is called only if\n    \/\/ props.list or \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.filterText has changed.\n    const filteredList = this.props.list.filter(\n      item =\x26gt; item.text.includes(this.\x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.filterText)\n    )\n\n    return (\n      \x3cspan class=\x22hljs-variable\x22\x3e\x26lt;Fragment\x26gt;\x3c\/span\x3e\n        \x3cspan class=\x22hljs-variable\x22\x3e\x26lt;input onChange={this.handleChange} value={this.state.filterText} \/\x26gt;\x3c\/span\x3e\n        \x3cspan class=\x22hljs-variable\x22\x3e\x26lt;ul\x26gt;\x3c\/span\x3e{filteredList.map(item =\x26gt; \x3cspan class=\x22hljs-variable\x22\x3e\x26lt;li\x26gt;\x3c\/span\x3e{item.text}\x26lt;\/li\x26gt;)}\x26lt;\/ul\x26gt;\n      \x26lt;\/Fragment\x26gt;\n    );\n  }\n}\n\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e上面的方法比派生的状态版本更清洁和简单。偶尔，这将不够好 - 对于大型列表来说，过滤可能会很慢，并且如果另一个props发生变化，PureComponent不会阻止退回。为了解决这两个问题，我们可以添加一个memoize帮助器，以避免不必要地重新过滤我们的列表：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs javascript\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3eimport\x3c\/span\x3e memoize \x3cspan class=\x22hljs-keyword\x22\x3efrom\x3c\/span\x3e \x3cspan class=\x22hljs-string\x22\x3e\x22memoize-one\x22\x3c\/span\x3e;\n\n\x3cspan class=\x22hljs-class\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3eclass\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eExample\x3c\/span\x3e \x3cspan class=\x22hljs-keyword\x22\x3eextends\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3eComponent\x3c\/span\x3e \x3c\/span\x3e{\n  \x3cspan class=\x22hljs-comment\x22\x3e\/\/ State only needs to hold the current filter text value:\x3c\/span\x3e\n  state = { \x3cspan class=\x22hljs-attr\x22\x3efilterText\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x22\x22\x3c\/span\x3e };\n\n  \x3cspan class=\x22hljs-comment\x22\x3e\/\/ Re-run the filter whenever the list array or filter text changes:\x3c\/span\x3e\n  filter = memoize(\n    \x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3elist, filterText\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e list.filter(\x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-params\x22\x3eitem\x3c\/span\x3e =\x26gt;\x3c\/span\x3e item.text.includes(filterText))\n  );\n\n  handleChange = \x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-params\x22\x3eevent\x3c\/span\x3e =\x26gt;\x3c\/span\x3e {\n    \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.setState({ \x3cspan class=\x22hljs-attr\x22\x3efilterText\x3c\/span\x3e: event.target.value });\n  };\n\n  render() {\n    \x3cspan class=\x22hljs-comment\x22\x3e\/\/ Calculate the latest filtered list. If these arguments haven\x27t changed\x3c\/span\x3e\n    \x3cspan class=\x22hljs-comment\x22\x3e\/\/ since the last render, memoize-one will reuse the last return value.\x3c\/span\x3e\n    \x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e filteredList = \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.filter(\x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.props.list, \x3cspan class=\x22hljs-keyword\x22\x3ethis\x3c\/span\x3e.state.filterText);\n\n    \x3cspan class=\x22hljs-keyword\x22\x3ereturn\x3c\/span\x3e (\n      \x3cspan class=\x22xml\x22\x3e\x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\x3cspan class=\x22hljs-name\x22\x3eFragment\x3c\/span\x3e\x26gt;\x3c\/span\x3e\n        \x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\x3cspan class=\x22hljs-name\x22\x3einput\x3c\/span\x3e \x3cspan class=\x22hljs-attr\x22\x3eonChange\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e{this.handleChange}\x3c\/span\x3e \x3cspan class=\x22hljs-attr\x22\x3evalue\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e{this.state.filterText}\x3c\/span\x3e \/\x26gt;\x3c\/span\x3e\n        \x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\x3cspan class=\x22hljs-name\x22\x3eul\x3c\/span\x3e\x26gt;\x3c\/span\x3e{filteredList.map(item =\x26gt; \x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\x3cspan class=\x22hljs-name\x22\x3eli\x3c\/span\x3e\x26gt;\x3c\/span\x3e{item.text}\x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\/\x3cspan class=\x22hljs-name\x22\x3eli\x3c\/span\x3e\x26gt;\x3c\/span\x3e)}\x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\/\x3cspan class=\x22hljs-name\x22\x3eul\x3c\/span\x3e\x26gt;\x3c\/span\x3e\n      \x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\/\x3cspan class=\x22hljs-name\x22\x3eFragment\x3c\/span\x3e\x26gt;\x3c\/span\x3e\n    );\n  }\n}\n\n\x3c\/span\x3e\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e这非常简单，并且与派生状态版本一样好！\x3c\/p\x3e\n\x3cp\x3e在使用memoization时，记住一些约束：\x3c\/p\x3e\n\x3col\x3e\n\x3cli\x3e在大多数情况下，您需要将memoized函数附加到组件实例。这可以防止组件的多个实例重置彼此的memoized密钥。\x3c\/li\x3e\n\x3cli\x3e通常情况下，您需要使用具有有限缓存大小的memoization助手，以防止随着时间的推移内存泄漏。 （在上面的例子中，我们使用了memoize-one，因为它只缓存最近的参数和结果。）\x3c\/li\x3e\n\x3cli\x3e如果每次父组件呈现时重新创建props.list，本节中显示的实现都不会起作用。但在大多数情况下，这种设置是合适的。\x3c\/li\x3e\n\x3c\/ol\x3e\n\x3ch2\x3e\x3ca href=\x22https:\/\/reactjs.org\/blog\/2018\/06\/07\/you-probably-dont-need-derived-state.html\/#in-closing\x22\x3e\x3c\/a\x3e最后\x3c\/h2\x3e\n\x3cp\x3e在现实世界的应用程序中，组件通常包含受控和非受控行为的混合。这没关系！如果每个值都有明确的真相来源，则可以避免上述的反模式。\x3c\/p\x3e\n\x3cp\x3e值得重新思考的是，getDerivedStateFromProps（以及通常的派生状态）是一种高级功能，应该谨慎使用，因为这种复杂性。如果您的用例超出这些模式，请在\x3ca href=\x22https:\/\/github.com\/reactjs\/reactjs.org\/issues\/new\x22\x3eGitHub\x3c\/a\x3e 或 \x3ca href=\x22https:\/\/twitter.com\/reactjs\x22\x3eTwitter\x3c\/a\x3e!上与我们分享！\x3c\/p\x3e\n\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/reactjs\/reactjs.org\/tree\/master\/content\/blog\/2018-06-07-you-probably-dont-need-derived-state.md\x22\x3e编辑这个页面\x3c\/a\x3e\x3c\/p\x3e\n\n          \n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/aa138172/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/76370fbf/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/34ac8bd7/&text=你可能不需要派生状态"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/34ac8bd7/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/34ac8bd7/&text=你可能不需要派生状态"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/34ac8bd7/&title=你可能不需要派生状态"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/34ac8bd7/&is_video=false&description=你可能不需要派生状态"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=你可能不需要派生状态&body=Check out this article: https://alili.tech/archive/34ac8bd7/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/34ac8bd7/&title=你可能不需要派生状态"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/34ac8bd7/&title=你可能不需要派生状态"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/34ac8bd7/&title=你可能不需要派生状态"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/34ac8bd7/&title=你可能不需要派生状态"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">何时使用派生状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">使用派生状态时的常见错误</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">反模式：无条件复制props到state</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">反模式：props改变时擦除state</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">首选方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.1.</span> <span class="toc-text">建议：完全控制组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.</span> <span class="toc-text">建议：完全不受控制的组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.1.</span> <span class="toc-text">备选方案1：使用IDprops重置非受控组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.2.</span> <span class="toc-text">备选方案2：使用实例方法重置非受控组件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.3.</span> <span class="toc-text">概括</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">memoization怎么样？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        你可能不需要派生状态
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-10-20T16:00:00.000Z" itemprop="datePublished">2018-10-21</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <p>（扩展：<a href="https://stackoverflow.com/questions/980601/what-is-an-anti-pattern" target="_blank" rel="noopener">什么是反模式</a> ）</p>
-<p>React 16.4包含一个针对<a href="https://reactjs.org/blog/2018/05/23/react-v-16-4.html#bugfix-for-getderivedstatefromprops" target="_blank" rel="noopener">getDerivedStateFromProps的错误修正</a>，这会导致React组件中的一些现有错误更加得到重现。如果此版本暴露了您的应用程序使用反模式并且在修复后无法正常工作的情况，我们对此表示抱歉。在这篇文章中，我们将解释一些常见的反模式以及派生状态和我们的首选备选方案。</p>
-<p>很长一段时间，生命周期componentWillReceiveProps是更新状态以响应没有额外渲染<code>props</code>更改的唯一方法。在版本16.3中，我们引入了替代生命周期<a href="https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes" target="_blank" rel="noopener">getDerivedStateFromProps</a>，以更安全的方式解决相同的用例。同时，我们意识到人们对于如何使用这两种方法存在很多误解，并且我们发现了反模式，导致了一些微妙而混乱的错误。在16.4中的<a href="https://github.com/facebook/react/issues/12898" target="_blank" rel="noopener">getDerivedStateFromProps</a>错误修正使派生状态更具可预测性，因此滥用它的结果更容易被注意到。</p>
-<blockquote>
-<p>注意</p>
-<p>本文中描述的所有反模式都适用于较早的componentWillReceiveProps和较新的getDerivedStateFromProps。
-This blog post will cover the following topics:</p>
-</blockquote>
-<ul>
-<li><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#when-to-use-derived-state" target="_blank" rel="noopener">何时使用派生状态</a></li>
-<li><p><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#common-bugs-when-using-derived-state" target="_blank" rel="noopener">使用派生状态时的常见错误</a></p>
-<ul>
-<li><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#anti-pattern-unconditionally-copying-props-to-state" target="_blank" rel="noopener">反模式：无条件复制props到state</a></li>
-<li><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#anti-pattern-erasing-state-when-props-change" target="_blank" rel="noopener">反模式：props改变时替换state</a></li>
-</ul>
-</li>
-<li><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#preferred-solutions" target="_blank" rel="noopener">
-首选解决方案</a></li>
-<li><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#what-about-memoization" target="_blank" rel="noopener">memoization怎么样？</a></li>
-</ul>
-<h2><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#when-to-use-derived-state" target="_blank" rel="noopener"></a>何时使用派生状态</h2>
-<p>getDerivedStateFromProps仅用于一个目的。由于道具的变化，它使组件能够更新其内部状态。我们之前的博客文章提供了一些示例，例如<a href="https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#updating-state-based-on-props" target="_blank" rel="noopener">基于变化的偏移props记录当前滚动方向</a>或<a href="https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#fetching-external-data-when-props-change" target="_blank" rel="noopener">加载源props指定的外部数据</a>.。</p>
-<p>我们没有提供很多例子，因为作为一般规则，谨慎地使用派生状态。我们所看到的派生状态的所有问题都可以最终归结为（1）无条件地从porops更新state，或者（2）当props和state不匹配时更新状态。 （我们将在下面更详细地讨论）。</p>
-<ul>
-<li>如果您使用派生状态来仅根据当前道具记忆某些计算，则不需要派生状态。请<a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#what-about-memoization" target="_blank" rel="noopener">参阅memoization</a>。</li>
-<li>如果您无条件地更新派生状态，或者每当props和state不匹配时更新它，您的组件可能会过于频繁地重置其状态。请阅读以获得更多详情。</li>
-</ul>
-<h2><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#common-bugs-when-using-derived-state" target="_blank" rel="noopener"></a>使用派生状态时的常见错误</h2>
-<p>术语<a href="https://reactjs.org/docs/forms.html#controlled-components" target="_blank" rel="noopener">“controlled”</a> 和<a href="https://reactjs.org/docs/uncontrolled-components.html" target="_blank" rel="noopener">“uncontrolled”</a>通常指形式输入，但它们也可以描述任何组件的数据所在的位置。作为道具传入的数据可以认为是<strong>controlled</strong>的（因为父组件控制着这些数据）。只存在于内部状态的数据可以被认为是<strong>uncontrolled</strong>的（因为父母不能直接改变它）。</p>
-<p>导出状态最常见的错误是混合这两个;当派生状态值也通过setState调用进行更新时，数据没有单一来源。<a href="https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#fetching-external-data-when-props-change" target="_blank" rel="noopener">上面提到的外部数据加载示例</a>可能听起来很相似，但在几个重要方面它有所不同。在加载示例中，“源”道具和“加载”状态都有明确的事实来源。当源道具改变时，加载状态应该总是被覆盖。相反，只有在道具发生变化并由组件管理时才会覆盖该状态。</p>
-<p>当这些约束条件发生变化时，就会出现问题。这通常有两种形式。我们来看看两者。</p>
-<h3><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#anti-pattern-unconditionally-copying-props-to-state" target="_blank" rel="noopener"></a>反模式：无条件复制props到state</h3>
-<p>一个常见的误解是getDerivedStateFromProps和componentWillReceiveProps仅在props“更改”时调用。无论props是否与之前“不同”，这些生命周期都会在父组件再生时随时调用。因此，使用这些生命周期中的任何一个都无条件地覆盖状态一直是不安全的。这样做会导致状态更新丢失。</p>
-<p>我们来考虑一个例子来演示这个问题。以下是一个EmailInput组件，它可以在状态中“镜像”电子邮件道具：</p>
-<pre><code class="hljs scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailInput</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  state = { email: <span class="hljs-keyword">this</span>.props.email };
-
-  render() {
-    <span class="hljs-keyword">return</span> &lt;input onChange={<span class="hljs-keyword">this</span>.handleChange} value={<span class="hljs-keyword">this</span>.state.email} /&gt;;
-  }
-
-  handleChange = event =&gt; {
-    <span class="hljs-keyword">this</span>.setState({ email: event.target.value });
-  };
-
-  componentWillReceiveProps(nextProps) {
-    <span class="hljs-comment">// This will erase any local state updates!</span>
-    <span class="hljs-comment">// Do not do this.</span>
-    <span class="hljs-keyword">this</span>.setState({ email: nextProps.email });
-  }
-}
-
-</code></pre><p>起初，这个组件可能看起来不错。 State被初始化为由props指定的值，并在我们输入时更新。但是如果我们的组件的父节点退出，我们输入的任何东西都会丢失！ （请参阅本演示<a href="https://codesandbox.io/s/m3w9zn1z8x" target="_blank" rel="noopener">示例</a>。）即使我们要在重置之前比较nextProps.email！== this.state.email，也是如此。</p>
-<p>在这个简单的例子中，只有在电子邮件道具发生变化时才能修复shouldComponentUpdate以重新渲染。然而在实践中，组件通常接受多个道具;另一个改变道具仍然会导致重新投入和不适当的重置。函数和对象的道具通常也是内联创建的，这使得很难实现只有在发生重大变化时才可靠地返回true的shouldComponentUpdate。<a href="https://codesandbox.io/s/jl0w6r9w59" target="_blank" rel="noopener">这是一个演示</a>，显示发生了什么情况。因此，shouldComponentUpdate最好用作性能优化，而不是确保派生状态的正确性。</p>
-<p>希望现在很清楚，为什么无条件复制道具来陈述它是一个坏主意。在审查可能的解决方案之前，让我们看看一个相关的问题模式：如果我们只在电子邮件道具更改时更新状态，该怎么办？</p>
-<h3><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#anti-pattern-erasing-state-when-props-change" target="_blank" rel="noopener"></a>反模式：props改变时擦除state</h3>
-<p>继续上面的例子，我们可以避免在props.email更改时仅通过更新来意外擦除状态：</p>
-<pre><code class="hljs scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailInput</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  state = {
-    email: <span class="hljs-keyword">this</span>.props.email
-  };
-
-  componentWillReceiveProps(nextProps) {
-    <span class="hljs-comment">// Any time props.email changes, update state.</span>
-    <span class="hljs-keyword">if</span> (nextProps.email !== <span class="hljs-keyword">this</span>.props.email) {
-      <span class="hljs-keyword">this</span>.setState({
-        email: nextProps.email
-      });
-    }
-  }
-
-  <span class="hljs-comment">// ...</span>
-}
-
-</code></pre><blockquote>
-<p>提示</p>
-<p>尽管上面的示例显示了componentWillReceiveProps，但同样的反模式也适用于getDerivedStateFromProps。</p>
-</blockquote>
-<p>我们刚刚取得了很大的进步。现在我们的组件只会在props实际改变时才会清除我们输入的内容。</p>
-<p>仍然存在一个微妙的问题。想象一下使用上述输入组件的密码管理器应用程序。当使用同一封电子邮件在两个帐户的详细信息之间导航时，输入将无法重置。这是因为传递给组件的道具值对于两个帐户都是相同的！这对用户来说是一个惊喜，因为对一个帐户的未保存更改似乎会影响发生共享相同电子邮件的其他帐户。 （<a href="https://codesandbox.io/s/mz2lnkjkrx" target="_blank" rel="noopener">请参阅此处的演示。</a>）</p>
-<p>这种设计从根本上说是有缺陷的，但它也是一个容易犯的错误。 （<a href="https://twitter.com/brian_d_vaughn/status/959600888242307072" target="_blank" rel="noopener">我自己做的！</a>）幸运的是，有两种方法可以更好地工作。两者的关键在于，对于任何一块数据，您都需要选择一个拥有它作为真相源的组件，并避免将其复制到其他组件中。让我们来看看每个选项。</p>
-<h2><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#preferred-solutions" target="_blank" rel="noopener"></a>首选方案</h2>
-<h3><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#recommendation-fully-controlled-component" target="_blank" rel="noopener"></a>建议：完全控制组件</h3>
-<p>避免上述问题的一种方法是完全从组件中删除状态。如果电子邮件地址仅作为props存在，那么我们不必担心与state的冲突。我们甚至可以将EmailInput转换为更轻量级的功能组件：</p>
-<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">EmailInput</span>(<span class="hljs-params">props</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{props.onChange}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{props.email}</span> /&gt;</span>;
-}
-
-</span></code></pre><p>这种方法简化了我们组件的实现，但是如果我们仍然想要存储草稿值，则父表单组件现在需要手动完成。 （<a href="https://codesandbox.io/s/7154w1l551" target="_blank" rel="noopener">点击这里查看该模式的演示。</a>）</p>
-<h3><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#recommendation-fully-uncontrolled-component-with-a-key" target="_blank" rel="noopener"></a>建议：完全不受控制的组件</h3>
-<p>另一种选择是我们的组件完全拥有“草稿”电子邮件状态。在这种情况下，我们的组件仍然可以接受初始值的props，但它会忽略对该props的后续更改：</p>
-<pre><code class="hljs scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailInput</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  state = { email: <span class="hljs-keyword">this</span>.props.defaultEmail };
-
-  handleChange = event =&gt; {
-    <span class="hljs-keyword">this</span>.setState({ email: event.target.value });
-  };
-
-  render() {
-    <span class="hljs-keyword">return</span> &lt;input onChange={<span class="hljs-keyword">this</span>.handleChange} value={<span class="hljs-keyword">this</span>.state.email} /&gt;;
-  }
-}
-
-</code></pre><p>为了在移动到不同的项目时重置该值（如在我们的密码管理器场景中），我们可以使用称为密钥的特殊React属性。当一个键改变时，React将<a href="https://reactjs.org/docs/reconciliation.html#keys" target="_blank" rel="noopener">创建一个新的组件实例</a>，而不是更新当前的组件实例。密钥通常用于动态列表，但在这里也很有用。在我们的例子中，我们可以使用用户标识在任何时候选择新用户时重新创建电子邮件输入：</p>
-<pre><code class="hljs stylus">&lt;EmailInput
-  defaultEmail={this<span class="hljs-selector-class">.props</span><span class="hljs-selector-class">.user</span><span class="hljs-selector-class">.email</span>}
-  key={this<span class="hljs-selector-class">.props</span><span class="hljs-selector-class">.user</span><span class="hljs-selector-class">.id</span>}
-/&gt;
-
-</code></pre><p>每次ID更改时，EmailInput都将被重新创建，其状态将重置为最新的defaultEmail值。 （<a href="https://codesandbox.io/s/6v1znlxyxn" target="_blank" rel="noopener">点击这里查看该模式的演示。</a>）使用这种方法，您不必为每个输入添加密钥。相反，在整个表单上放置一个key可能更有意义。每次key更改时，表单中的所有组件都将以新的初始化状态重新创建。</p>
-<p>在大多数情况下，这是处理需要重置的状态的最佳方式。</p>
-<blockquote>
-<p>注意</p>
-<p>虽然这听起来很慢，但性能差异通常不显着。如果组件具有在更新上运行的重逻辑，则使用密钥甚至可以更快，因为该子树的差异被绕过。</p>
-</blockquote>
-<h4><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#alternative-1-reset-uncontrolled-component-with-an-id-prop" target="_blank" rel="noopener"></a>备选方案1：使用IDprops重置非受控组件</h4>
-<p>如果key由于某种原因不起作用（也许该组件的初始化非常昂贵），那么一个可行但麻烦的解决方案就是监视getDerivedStateFromProps中“userID”的更改：</p>
-<pre><code class="hljs pf">class EmailInput extends Component {
-  <span class="hljs-keyword">state</span> = {
-    email: this.props.<span class="hljs-keyword">default</span>Email,
-    prevPropsUserID: this.props.<span class="hljs-keyword">user</span>ID
-  };
-
-  static getDerivedStateFromProps(props, <span class="hljs-keyword">state</span>) {
-    // Any time the current <span class="hljs-keyword">user</span> changes,
-    // Reset <span class="hljs-literal">any</span> parts of <span class="hljs-keyword">state</span> that are tied <span class="hljs-keyword">to</span> that <span class="hljs-keyword">user</span>.
-    // In this simple example, that's just the email.
-    if (props.<span class="hljs-keyword">user</span>ID !== <span class="hljs-keyword">state</span>.prevPropsUserID) {
-      return {
-        prevPropsUserID: props.<span class="hljs-keyword">user</span>ID,
-        email: props.<span class="hljs-keyword">default</span>Email
-      };
-    }
-    return null;
-  }
-
-  // ...
-}
-
-</code></pre><p>如果我们这样选择，这也提供了仅重置部件的内部状态的灵活性。 （点击这里查看该模式的演示。(<a href="https://codesandbox.io/s/rjyvp7l3rq)）" target="_blank" rel="noopener">https://codesandbox.io/s/rjyvp7l3rq)）</a></p>
-<blockquote>
-<p>注意</p>
-<p>尽管上面的示例显示了getDerivedStateFromProps，但可以使用与componentWillReceiveProps相同的技术。</p>
-</blockquote>
-<h4><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#alternative-2-reset-uncontrolled-component-with-an-instance-method" target="_blank" rel="noopener"></a>备选方案2：使用实例方法重置非受控组件</h4>
-<p>更为罕见的是，即使没有适当的ID用作密钥，您也可能需要重置状态。一种解决方法是每次重置时将密钥重置为随机值或自动增量编号。另一个可行的选择是公开一个实例方法来强制重置内部状态：</p>
-<pre><code class="hljs scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailInput</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  state = {
-    email: <span class="hljs-keyword">this</span>.props.defaultEmail
-  };
-
-  resetEmailForNewUser(newEmail) {
-    <span class="hljs-keyword">this</span>.setState({ email: newEmail });
-  }
-
-  <span class="hljs-comment">// ...</span>
-}
-
-</code></pre><p>父表单组件然后可以<a href="https://reactjs.org/docs/glossary.html#refs" target="_blank" rel="noopener">使用ref来调用此方法。</a> （<a href="https://codesandbox.io/s/l70krvpykl" target="_blank" rel="noopener">点击这里查看该模式的演示。</a>）</p>
-<p>在这种情况下，Refs可能会有用，但通常我们建议您谨慎使用它们。即使在演示中，这个必要的方法也是非理想的，因为两个渲染将会发生，而不是一个。</p>
-<hr>
-<h3><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#recap" target="_blank" rel="noopener"></a>概括</h3>
-<p>总而言之，在设计组件时，决定其数据是受控制的还是不受控制的是非常重要的。</p>
-<p>而不是试图“镜像”状态下的道具值，控制组件，并合并父组件状态中的两个发散值。例如，不是接受“已提交”props.value并跟踪“草稿”状态值的孩子，而是让父组件管理state.draftValue和state.committedValue，并直接控制子组件的值。这使得数据流更加明确和可预测。</p>
-<p>对于不受控制的组件，如果您尝试在特定的道具（通常是ID）发生变化时重置状态，则可以选择以下几种方式：</p>
-<ul>
-<li><strong>推荐：要重置所有内部状态，请使用键属性。</strong></li>
-<li>备选方案1：要只重置某些状态字段，请注意特殊属性（例如props.userID）的更改。.</li>
-<li>备选方案2：您也可以考虑使用参考回退到命令式实例方法。</li>
-</ul>
-<h2><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#what-about-memoization" target="_blank" rel="noopener"></a>memoization怎么样？</h2>
-<p>我们还看到了派生状态，用于确保渲染中使用的昂贵值仅在输入发生变化时才会重新计算。这种技术被称为<a href="https://en.wikipedia.org/wiki/Memoization" target="_blank" rel="noopener">memoization</a>。</p>
-<p>使用派生状态进行memoization并不一定是不好的，但它通常不是最好的解决方案。管理派生状态存在固有的复杂性，并且这种复杂性随着每个附加属性而增加。例如，如果我们向组件状态添加第二个派生字段，那么我们的实现将需要分别跟踪两者的更改。</p>
-<p>我们来看一个组件的例子，它带有一个prop - 一个项目列表 - 并呈现与用户输入的搜索查询匹配的项目。我们可以使用派生状态来存储过滤的列表：</p>
-<pre><code class="hljs pf">class Example extends Component {
-  <span class="hljs-keyword">state</span> = {
-    filterText: <span class="hljs-string">""</span>,
-  };
-
-  // *******************************************************
-  // NOTE: this example is NOT the recommended approach.
-  // See the examples below <span class="hljs-keyword">for</span> our recommendations instead.
-  // *******************************************************
-
-  static getDerivedStateFromProps(props, <span class="hljs-keyword">state</span>) {
-    // Re-run the filter whenever the list array or filter text change.
-    // Note we need <span class="hljs-keyword">to</span> store prevPropsList and prevFilterText <span class="hljs-keyword">to</span> detect changes.
-    if (
-      props.list !== <span class="hljs-keyword">state</span>.prevPropsList ||
-      <span class="hljs-keyword">state</span>.prevFilterText !== <span class="hljs-keyword">state</span>.filterText
-    ) {
-      return {
-        prevPropsList: props.list,
-        prevFilterText: <span class="hljs-keyword">state</span>.filterText,
-        filteredList: props.list.filter(item =&gt; item.text.includes(<span class="hljs-keyword">state</span>.filterText))
-      };
-    }
-    return null;
-  }
-
-  handleChange = event =&gt; {
-    this.<span class="hljs-built_in">set</span>State({ filterText: event.target.value });
-  };
-
-  render() {
-    return (
-      <span class="hljs-variable">&lt;Fragment&gt;</span>
-        <span class="hljs-variable">&lt;input onChange={this.handleChange} value={this.state.filterText} /&gt;</span>
-        <span class="hljs-variable">&lt;ul&gt;</span>{this.<span class="hljs-keyword">state</span>.filteredList.map(item =&gt; <span class="hljs-variable">&lt;li&gt;</span>{item.text}&lt;/li&gt;)}&lt;/ul&gt;
-      &lt;/Fragment&gt;
-    );
-  }
-}
-
-</code></pre><p>这个实现避免了重新计算filteredList的次数。但它比它需要更复杂，因为它必须分别跟踪和检测道具和状态的变化，以便正确更新过滤列表。在这个例子中，我们可以通过使用PureComponent并将滤镜操作移动到渲染方法来简化：</p>
-<pre><code class="hljs pf">// PureComponents only rerender if at least one <span class="hljs-keyword">state</span> or prop value changes.
-// Change is determined by doing a shallow comparison of <span class="hljs-keyword">state</span> and prop keys.
-class Example extends PureComponent {
-  // State only needs <span class="hljs-keyword">to</span> hold the current filter text value:
-  <span class="hljs-keyword">state</span> = {
-    filterText: <span class="hljs-string">""</span>
-  };
-
-  handleChange = event =&gt; {
-    this.<span class="hljs-built_in">set</span>State({ filterText: event.target.value });
-  };
-
-  render() {
-    // The render method <span class="hljs-keyword">on</span> this PureComponent is called only if
-    // props.list or <span class="hljs-keyword">state</span>.filterText has changed.
-    const filteredList = this.props.list.filter(
-      item =&gt; item.text.includes(this.<span class="hljs-keyword">state</span>.filterText)
-    )
-
-    return (
-      <span class="hljs-variable">&lt;Fragment&gt;</span>
-        <span class="hljs-variable">&lt;input onChange={this.handleChange} value={this.state.filterText} /&gt;</span>
-        <span class="hljs-variable">&lt;ul&gt;</span>{filteredList.map(item =&gt; <span class="hljs-variable">&lt;li&gt;</span>{item.text}&lt;/li&gt;)}&lt;/ul&gt;
-      &lt;/Fragment&gt;
-    );
-  }
-}
-
-</code></pre><p>上面的方法比派生的状态版本更清洁和简单。偶尔，这将不够好 - 对于大型列表来说，过滤可能会很慢，并且如果另一个props发生变化，PureComponent不会阻止退回。为了解决这两个问题，我们可以添加一个memoize帮助器，以避免不必要地重新过滤我们的列表：</p>
-<pre><code class="hljs javascript"><span class="hljs-keyword">import</span> memoize <span class="hljs-keyword">from</span> <span class="hljs-string">"memoize-one"</span>;
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Example</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  <span class="hljs-comment">// State only needs to hold the current filter text value:</span>
-  state = { <span class="hljs-attr">filterText</span>: <span class="hljs-string">""</span> };
-
-  <span class="hljs-comment">// Re-run the filter whenever the list array or filter text changes:</span>
-  filter = memoize(
-    <span class="hljs-function">(<span class="hljs-params">list, filterText</span>) =&gt;</span> list.filter(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.text.includes(filterText))
-  );
-
-  handleChange = <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
-    <span class="hljs-keyword">this</span>.setState({ <span class="hljs-attr">filterText</span>: event.target.value });
-  };
-
-  render() {
-    <span class="hljs-comment">// Calculate the latest filtered list. If these arguments haven't changed</span>
-    <span class="hljs-comment">// since the last render, memoize-one will reuse the last return value.</span>
-    <span class="hljs-keyword">const</span> filteredList = <span class="hljs-keyword">this</span>.filter(<span class="hljs-keyword">this</span>.props.list, <span class="hljs-keyword">this</span>.state.filterText);
-
-    <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Fragment</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{this.handleChange}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{this.state.filterText}</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>{filteredList.map(item =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>{item.text}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>)}<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">Fragment</span>&gt;</span>
-    );
-  }
-}
-
-</span></code></pre><p>这非常简单，并且与派生状态版本一样好！</p>
-<p>在使用memoization时，记住一些约束：</p>
-<ol>
-<li>在大多数情况下，您需要将memoized函数附加到组件实例。这可以防止组件的多个实例重置彼此的memoized密钥。</li>
-<li>通常情况下，您需要使用具有有限缓存大小的memoization助手，以防止随着时间的推移内存泄漏。 （在上面的例子中，我们使用了memoize-one，因为它只缓存最近的参数和结果。）</li>
-<li>如果每次父组件呈现时重新创建props.list，本节中显示的实现都不会起作用。但在大多数情况下，这种设置是合适的。</li>
-</ol>
-<h2><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html/#in-closing" target="_blank" rel="noopener"></a>最后</h2>
-<p>在现实世界的应用程序中，组件通常包含受控和非受控行为的混合。这没关系！如果每个值都有明确的真相来源，则可以避免上述的反模式。</p>
-<p>值得重新思考的是，getDerivedStateFromProps（以及通常的派生状态）是一种高级功能，应该谨慎使用，因为这种复杂性。如果您的用例超出这些模式，请在<a href="https://github.com/reactjs/reactjs.org/issues/new" target="_blank" rel="noopener">GitHub</a> 或 <a href="https://twitter.com/reactjs" target="_blank" rel="noopener">Twitter</a>!上与我们分享！</p>
-<p><a href="https://github.com/reactjs/reactjs.org/tree/master/content/blog/2018-06-07-you-probably-dont-need-derived-state.md" target="_blank" rel="noopener">编辑这个页面</a></p>
-
-          
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>原文链接: <a href="https://www.zcfy.cc/article/you-probably-don-t-need-derived-state" target="_blank" rel="noopener">你可能不需要派生状态</a><br>原文标题: 你可能不需要派生状态<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/34ac8bd7/">https://alili.tech/archive/34ac8bd7/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>原文链接: <a href="https://www.zcfy.cc/article/you-probably-don-t-need-derived-state">你可能不需要派生状态</a> 原文标题: 你可能不需要派生状态 本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2>本文链接：</h2><a href="https://alili.tech/archive/34ac8bd7/" target="_blank">https://alili.tech/archive/34ac8bd7/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">何时使用派生状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">使用派生状态时的常见错误</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">反模式：无条件复制props到state</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">反模式：props改变时擦除state</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">首选方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.1.</span> <span class="toc-text">建议：完全控制组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.</span> <span class="toc-text">建议：完全不受控制的组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.1.</span> <span class="toc-text">备选方案1：使用IDprops重置非受控组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.2.</span> <span class="toc-text">备选方案2：使用实例方法重置非受控组件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.3.</span> <span class="toc-text">概括</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">memoization怎么样？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

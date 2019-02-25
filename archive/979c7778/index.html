@@ -1,404 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="SpriteJS &amp;#x662F;&amp;#x4E00;&amp;#x6B3E;&amp;#x7531;360&amp;#x5947;&amp;#x821E;&amp;#x56E2;&amp;#x5F00;&amp;#x6E90;&amp;#x7684;&amp;#x8DE8;&amp;#x7EC8;&amp;#x7AEF; canvas &amp;#x7ED8;&amp;#x56FE;&amp;#x6846;&amp;#x67B6;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x57FA;&amp;#x4E8E; can">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架">
-<meta property="og:url" content="https://alili.tech/archive/979c7778/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="SpriteJS &amp;#x662F;&amp;#x4E00;&amp;#x6B3E;&amp;#x7531;360&amp;#x5947;&amp;#x821E;&amp;#x56E2;&amp;#x5F00;&amp;#x6E90;&amp;#x7684;&amp;#x8DE8;&amp;#x7EC8;&amp;#x7AEF; canvas &amp;#x7ED8;&amp;#x56FE;&amp;#x6846;&amp;#x67B6;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x57FA;&amp;#x4E8E; can">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000015328065?w=500&h=500">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000015328066">
-<meta property="og:updated_time" content="2018-10-30T18:30:16.416Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架">
-<meta name="twitter:description" content="SpriteJS &amp;#x662F;&amp;#x4E00;&amp;#x6B3E;&amp;#x7531;360&amp;#x5947;&amp;#x821E;&amp;#x56E2;&amp;#x5F00;&amp;#x6E90;&amp;#x7684;&amp;#x8DE8;&amp;#x7EC8;&amp;#x7AEF; canvas &amp;#x7ED8;&amp;#x56FE;&amp;#x6846;&amp;#x67B6;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x57FA;&amp;#x4E8E; can">
-<meta name="twitter:image" content="https://static.alili.tech/img/remote/1460000015328065?w=500&h=500">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/979c7778/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/979c7778/",
-      "appid": "1613049289050283", 
-      "title": "[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:41"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/979c7778/",
+				"appid": "1613049289050283", 
+				"title": "[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-10-31T02:30:10"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/3288fe28/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/fa33c59a/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2f979c7778%2f&text=%5b%e5%bc%80%e6%ba%90%5d%20SpriteJS%20--%20%e4%b8%80%e6%ac%be%e7%ae%80%e5%8d%95%e7%9a%84%e8%b7%a8%e7%bb%88%e7%ab%af%20canvas%20%e7%bb%98%e5%9b%be%e6%a1%86%e6%9e%b6"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2f979c7778%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2f979c7778%2f&text=%5b%e5%bc%80%e6%ba%90%5d%20SpriteJS%20--%20%e4%b8%80%e6%ac%be%e7%ae%80%e5%8d%95%e7%9a%84%e8%b7%a8%e7%bb%88%e7%ab%af%20canvas%20%e7%bb%98%e5%9b%be%e6%a1%86%e6%9e%b6"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2f979c7778%2f&title=%5b%e5%bc%80%e6%ba%90%5d%20SpriteJS%20--%20%e4%b8%80%e6%ac%be%e7%ae%80%e5%8d%95%e7%9a%84%e8%b7%a8%e7%bb%88%e7%ab%af%20canvas%20%e7%bb%98%e5%9b%be%e6%a1%86%e6%9e%b6"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2f979c7778%2f&is_video=false&description=%5b%e5%bc%80%e6%ba%90%5d%20SpriteJS%20--%20%e4%b8%80%e6%ac%be%e7%ae%80%e5%8d%95%e7%9a%84%e8%b7%a8%e7%bb%88%e7%ab%af%20canvas%20%e7%bb%98%e5%9b%be%e6%a1%86%e6%9e%b6"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%5b%e5%bc%80%e6%ba%90%5d%20SpriteJS%20--%20%e4%b8%80%e6%ac%be%e7%ae%80%e5%8d%95%e7%9a%84%e8%b7%a8%e7%bb%88%e7%ab%af%20canvas%20%e7%bb%98%e5%9b%be%e6%a1%86%e6%9e%b6&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2f979c7778%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2f979c7778%2f&title=%5b%e5%bc%80%e6%ba%90%5d%20SpriteJS%20--%20%e4%b8%80%e6%ac%be%e7%ae%80%e5%8d%95%e7%9a%84%e8%b7%a8%e7%bb%88%e7%ab%af%20canvas%20%e7%bb%98%e5%9b%be%e6%a1%86%e6%9e%b6"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f979c7778%2f&title=%5b%e5%bc%80%e6%ba%90%5d%20SpriteJS%20--%20%e4%b8%80%e6%ac%be%e7%ae%80%e5%8d%95%e7%9a%84%e8%b7%a8%e7%bb%88%e7%ab%af%20canvas%20%e7%bb%98%e5%9b%be%e6%a1%86%e6%9e%b6"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f979c7778%2f&title=%5b%e5%bc%80%e6%ba%90%5d%20SpriteJS%20--%20%e4%b8%80%e6%ac%be%e7%ae%80%e5%8d%95%e7%9a%84%e8%b7%a8%e7%bb%88%e7%ab%af%20canvas%20%e7%bb%98%e5%9b%be%e6%a1%86%e6%9e%b6"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f979c7778%2f&title=%5b%e5%bc%80%e6%ba%90%5d%20SpriteJS%20--%20%e4%b8%80%e6%ac%be%e7%ae%80%e5%8d%95%e7%9a%84%e8%b7%a8%e7%bb%88%e7%ab%af%20canvas%20%e7%bb%98%e5%9b%be%e6%a1%86%e6%9e%b6"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a><ul><li><a href="#原文标题">原文标题</a></li><li><a href="#原文链接">原文链接</a></li></ul></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架</h1><div class="meta"><div class="postdate"><time datetime="2018-10-31" itemprop="datePublished">2018-10-31</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/spritejs\/spritejs\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eSpriteJS\x3c\/a\x3e \x26#x662F;\x26#x4E00;\x26#x6B3E;\x26#x7531;360\x26#x5947;\x26#x821E;\x26#x56E2;\x26#x5F00;\x26#x6E90;\x26#x7684;\x26#x8DE8;\x26#x7EC8;\x26#x7AEF; canvas \x26#x7ED8;\x26#x56FE;\x26#x6846;\x26#x67B6;\x26#xFF0C;\x26#x53EF;\x26#x4EE5;\x26#x57FA;\x26#x4E8E; canvas \x26#x5FEB;\x26#x901F;\x26#x7ED8;\x26#x5236;\x26#x7ED3;\x26#x6784;\x26#x5316; UI\x26#x3001;\x26#x52A8;\x26#x753B;\x26#x548C;\x26#x4EA4;\x26#x4E92;\x26#x6548;\x26#x679C;\x26#xFF0C;\x26#x5E76;\x26#x53D1;\x26#x5E03;\x26#x5230;\x26#x4EFB;\x26#x4F55;\x26#x62E5;\x26#x6709;canvas\x26#x73AF;\x26#x5883;\x26#x7684;\x26#x5E73;\x26#x53F0;\x26#x4E0A;\x26#xFF08;\x26#x6BD4;\x26#x5982;\x26#x6D4F;\x26#x89C8;\x26#x5668;\x26#x3001;\x26#x5C0F;\x26#x7A0B;\x26#x5E8F;\x26#x548C;node\x26#xFF09;\x26#x3002;\x3c\/p\x3e\x3cul\x3e\x3cli\x3e\x26#x5B98;\x26#x65B9;\x26#x7F51;\x26#x7AD9;\x26#xFF1A;\x3ca href=\x22http:\/\/spritejs.org\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttp:\/\/spritejs.org\x3c\/a\x3e\x3c\/li\x3e\x3cli\x3eGithub\x26#x5730;\x26#x5740;\x26#xFF1A;\x3ca href=\x22https:\/\/github.com\/spritejs\/spritejs\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/github.com\/spritejs\/s...\x3c\/a\x3e\x3c\/li\x3e\x3cli\x3eDEMO\x26#x793A;\x26#x4F8B;\x26#xFF1A;\x3ca href=\x22http:\/\/spritejs.org\/demo\/\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttp:\/\/spritejs.org\/demo\/\x3c\/a\x3e\x3c\/li\x3e\x3c\/ul\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000015328065?w=500\x26amp;h=500\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000015328065?w=500\x26amp;h=500\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3ch2 id=\x22articleHeader0\x22\x3e\x26#x4E3A;\x26#x4EC0;\x26#x4E48;\x26#x8981;\x26#x5F00;\x26#x53D1; SpriteJS\x3c\/h2\x3e\x3cp\x3e\x26#x6211;\x26#x4EEC;\x26#x77E5;\x26#x9053;\x26#xFF0C;canvas API\x26#x53EF;\x26#x4EE5;\x26#x5F88;\x26#x7075;\x26#x6D3B;\x26#x5730;\x26#x7ED8;\x26#x5236;\x26#x5404;\x26#x79CD;\x26#x77E2;\x26#x91CF;\x26#x56FE;\x26#x5F62;\x26#x5230;\x26#x753B;\x26#x5E03;\x26#x4E0A;\x26#xFF0C;\x26#x4F46;\x26#x662F; canvas API \x26#x672C;\x26#x8EAB;\x26#x6BD4;\x26#x8F83;\x26#x4F4E;\x26#x7EA7;\x26#xFF0C;\x26#x6BD4;\x26#x5982;\x26#x6211;\x26#x4EEC;\x26#x8981;\x26#x5728;\x26#x753B;\x26#x5E03;\x26#x4E2D;\x26#x592E;\x26#x7ED8;\x26#x5236;\x26#x4E00;\x26#x4E2A;\x26#x5E26;\x26#x6709;\x26#x5706;\x26#x89D2;\x26#x7684;\x26#x7EA2;\x26#x8272;\x26#x77E9;\x26#x5F62;\x26#xFF0C;\x26#x4F7F;\x26#x7528; canvas \x26#x539F;\x26#x751F;\x26#x7684; API\x26#xFF0C;\x26#x9700;\x26#x8981;\x26#x8FD9;\x26#x6837;\x26#xFF1A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22const canvas = document.getElementById(\x26apos;paper\x26apos;)\nconst context = canvas.getContext(\x26apos;2d\x26apos;)\n\nconst [x, y, w, h, r] = [200, 200, 200, 200, 50]\n\ncontext.fillStyle = \x26apos;red\x26apos;\ncontext.beginPath()\ncontext.moveTo(x \x2b r, y)\ncontext.arcTo(x \x2b w, y, x \x2b w, y \x2b h, r)\ncontext.arcTo(x \x2b w, y \x2b h, x, y \x2b h, r)\ncontext.arcTo(x, y \x2b h, x, y, r)\ncontext.arcTo(x, y, x \x2b w, y, r)\ncontext.closePath()\ncontext.fill()\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e canvas = \x3cspan class=\x22hljs-built_in\x22\x3edocument\x3c\/span\x3e.getElementById(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;paper\x26apos;\x3c\/span\x3e)\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e context = canvas.getContext(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;2d\x26apos;\x3c\/span\x3e)\n\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e [x, y, w, h, r] = [\x3cspan class=\x22hljs-number\x22\x3e200\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e200\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e200\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e200\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e50\x3c\/span\x3e]\n\ncontext.fillStyle = \x3cspan class=\x22hljs-string\x22\x3e\x26apos;red\x26apos;\x3c\/span\x3e\ncontext.beginPath()\ncontext.moveTo(x \x2b r, y)\ncontext.arcTo(x \x2b w, y, x \x2b w, y \x2b h, r)\ncontext.arcTo(x \x2b w, y \x2b h, x, y \x2b h, r)\ncontext.arcTo(x, y \x2b h, x, y, r)\ncontext.arcTo(x, y, x \x2b w, y, r)\ncontext.closePath()\ncontext.fill()\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x5982;\x26#x679C;\x26#x5B9E;\x26#x73B0;\x26#x76F8;\x26#x540C;\x26#x7684;\x26#x6548;\x26#x679C;\x26#xFF0C;\x26#x4F7F;\x26#x7528; SpriteJS \x26#x662F;\x26#x8FD9;\x26#x6837;\x26#x5199;\x26#xFF1A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22const scene = new spritejs.Scene(\x26apos;#container\x26apos;)\nconst layer = scene.layer()\n\nconst s = new spritejs.Sprite({\n  anchor: 0.5,\n  bgcolor: \x26apos;red\x26apos;,\n  pos: [300, 300],\n  size: [200, 200],\n  borderRadius: 50,\n})\n\nlayer.append(s)\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e scene = \x3cspan class=\x22hljs-keyword\x22\x3enew\x3c\/span\x3e spritejs.Scene(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;#container\x26apos;\x3c\/span\x3e)\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e layer = scene.layer()\n\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e s = \x3cspan class=\x22hljs-keyword\x22\x3enew\x3c\/span\x3e spritejs.Sprite({\n  \x3cspan class=\x22hljs-attr\x22\x3eanchor\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e0.5\x3c\/span\x3e,\n  \x3cspan class=\x22hljs-attr\x22\x3ebgcolor\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x26apos;red\x26apos;\x3c\/span\x3e,\n  \x3cspan class=\x22hljs-attr\x22\x3epos\x3c\/span\x3e: [\x3cspan class=\x22hljs-number\x22\x3e300\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e300\x3c\/span\x3e],\n  \x3cspan class=\x22hljs-attr\x22\x3esize\x3c\/span\x3e: [\x3cspan class=\x22hljs-number\x22\x3e200\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e200\x3c\/span\x3e],\n  \x3cspan class=\x22hljs-attr\x22\x3eborderRadius\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e50\x3c\/span\x3e,\n})\n\nlayer.append(s)\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3eSprite \x26#x4E3A;\x26#x56FE;\x26#x5F62;\x26#x521B;\x26#x5EFA;\x26#x7C7B;\x26#x4F3C;\x26#x4E8E; DOM \x26#x7684;\x26#x5BF9;\x26#x8C61;\x26#x6A21;\x26#x578B;\x26#xFF0C;\x26#x56E0;\x26#x6B64;\x26#x6211;\x26#x4EEC;\x26#x53EF;\x26#x4EE5;\x26#x50CF;\x26#x521B;\x26#x5EFA; DOM \x26#x5143;\x26#x7D20;\x26#x4E00;\x26#x6837;\x26#xFF0C;\x26#x521B;\x26#x5EFA; Sprite \x26#x5143;\x26#x7D20;\x26#xFF0C;\x26#x5E76;\x26#x5C06;\x26#x5B83;\x26#x4EEC; append \x26#x5230; layer \x26#x4E0A;\x26#xFF0C;\x26#x4ECE;\x26#x800C;\x26#x5C06;\x26#x5143;\x26#x7D20;\x26#x5448;\x26#x73B0;\x26#x5230;\x26#x753B;\x26#x5E03;\x26#x4E0A;\x26#x3002;SpriteJS \x26#x6709;\x26#x5982;\x26#x4E0B;\x26#x7279;\x26#x70B9;\x26#xFF1A;\x3c\/p\x3e\x3cul\x3e\x3cli\x3e\x26#x57FA;\x26#x4E8E; canvas \x26#x7ED8;\x26#x5236;\x26#x7684;\x26#x6587;\x26#x6863;\x26#x5BF9;\x26#x8C61;\x26#x6A21;\x26#x578B;\x3c\/li\x3e\x3cli\x3e\x26#x56DB;\x26#x79CD;\x26#x57FA;\x26#x672C;\x26#x7CBE;\x26#x7075;\x26#x7C7B;\x26#x578B;\x26#xFF1A;Sprite\x26#x3001;Path\x26#x3001;Label\x26#x3001;Group\x3c\/li\x3e\x3cli\x3e\x26#x652F;\x26#x6301;\x26#x57FA;\x26#x7840;\x26#x548C;\x26#x9AD8;\x26#x7EA7;\x26#x7684;\x26#x7CBE;\x26#x7075;\x26#x5C5E;\x26#x6027;\x26#xFF0C;\x26#x7CBE;\x26#x7075;\x26#x76D2;\x26#x6A21;\x26#x578B;\x26#x3001;\x26#x5C5E;\x26#x6027;\x26#x4E0E; CSS3 \x26#x5177;\x26#x6709;\x26#x9AD8;\x26#x5EA6;\x26#x4E00;\x26#x81F4;\x26#x6027;\x26#x3002;\x3c\/li\x3e\x3cli\x3e\x26#x7B80;\x26#x4FBF;\x26#x800C;\x26#x5F3A;\x26#x5927;\x26#x7684; Transition\x26#x3001;Animation API\x3c\/li\x3e\x3cli\x3e\x26#x652F;\x26#x6301;\x26#x96EA;\x26#x78A7;\x26#x56FE;\x26#x548C;\x26#x8D44;\x26#x6E90;\x26#x9884;\x26#x52A0;\x26#x8F7D;\x3c\/li\x3e\x3cli\x3e\x26#x53EF;\x26#x6269;\x26#x5C55;\x26#x7684;\x26#x4E8B;\x26#x4EF6;\x26#x673A;\x26#x5236;\x3c\/li\x3e\x3cli\x3e\x26#x9AD8;\x26#x6027;\x26#x80FD;\x26#x7684;\x26#x7F13;\x26#x5B58;\x26#x7B56;\x26#x7565;\x3c\/li\x3e\x3cli\x3e\x26#x5BF9; \x3ca href=\x22https:\/\/github.com\/d3\/d3\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eD3\x3c\/a\x3e\x26#x3001;\x3ca href=\x22https:\/\/github.com\/liabru\/matter-js\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eMatter-js\x3c\/a\x3e\x26#x3001;\x3ca href=\x22https:\/\/github.com\/a-jie\/Proton\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eProton\x3c\/a\x3e\x26#x548C;\x26#x5176;\x26#x4ED6;\x26#x7B2C;\x26#x4E09;\x26#x65B9;\x26#x5E93;\x26#x53CB;\x26#x597D;\x3c\/li\x3e\x3cli\x3e\x26#x8DE8;\x26#x5E73;\x26#x53F0;\x26#xFF0C;\x26#x652F;\x26#x6301;\x3ca href=\x22http:\/\/spritejs.org\/#\/zh-cn\/index?id=server-side-render\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x670D;\x26#x52A1;\x26#x7AEF;\x26#x6E32;\x26#x67D3;\x3c\/a\x3e\x26#x3001;\x3ca href=\x22https:\/\/github.com\/spritejs\/sprite-wxapp\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x5FAE;\x26#x4FE1;\x26#x5C0F;\x26#x7A0B;\x26#x5E8F;\x3c\/a\x3e\x3c\/li\x3e\x3c\/ul\x3e\x3ch2 id=\x22articleHeader1\x22\x3e\x26#x57FA;\x26#x672C;\x26#x4F7F;\x26#x7528;\x26#x4ECB;\x26#x7ECD;\x3c\/h2\x3e\x3cp\x3e\x26#x901A;\x26#x8FC7; NPM \x26#x6216;\x26#x8005;\x26#x76F4;\x26#x63A5;\x26#x52A0;\x26#x8F7D; CDN \x26#x7248;\x26#x672C;\x26#x5373;\x26#x53EF;\x26#x4F7F;\x26#x7528; SpriteJS\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22npm install spritejs \x26#x2014;save\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs sql\x22\x3e\x3ccode class=\x22shell\x22 style=\x22word-break:break-word;white-space:initial\x22\x3enpm \x3cspan class=\x22hljs-keyword\x22\x3einstall\x3c\/span\x3e spritejs \x26#x2014;\x3cspan class=\x22hljs-keyword\x22\x3esave\x3c\/span\x3e\x3c\/code\x3e\x3c\/pre\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22\x26lt;script src=\x26quot;\/\/lib.baomitu.com\/spritejs\/2.0.0-alpha.28\/spritejs.min.js\x26quot;\x26gt;\x26lt;\/script\x26gt;\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22xml hljs\x22\x3e\x3ccode class=\x22html\x22 style=\x22word-break:break-word;white-space:initial\x22\x3e\x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\x3cspan class=\x22hljs-name\x22\x3escript\x3c\/span\x3e \x3cspan class=\x22hljs-attr\x22\x3esrc\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;\/\/lib.baomitu.com\/spritejs\/2.0.0-alpha.28\/spritejs.min.js\x26quot;\x3c\/span\x3e\x26gt;\x3c\/span\x3e\x3cspan class=\x22undefined\x22\x3e\x3c\/span\x3e\x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\/\x3cspan class=\x22hljs-name\x22\x3escript\x3c\/span\x3e\x26gt;\x3c\/span\x3e\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x6CE8;\x26#xFF1A;\x26#x5728;\x26#x670D;\x26#x52A1;\x26#x7AEF;\x26#x4F7F;\x26#x7528;\x26#x9700;\x26#x8981;\x26#x5B89;\x26#x88C5; node-canvas\x3c\/p\x3e\x3cp\x3e\x26#x4E0B;\x26#x9762;\x26#x662F;\x26#x7B80;\x26#x5355;\x26#x7684;\x26#x7528;\x26#x6CD5;\x26#x793A;\x26#x4F8B;\x26#xFF0C;\x26#x5927;\x26#x5BB6;\x26#x4E5F;\x26#x53EF;\x26#x4EE5;\x26#x76F4;\x26#x63A5;\x26#x8BBF;\x26#x95EE; \x3ca href=\x22https:\/\/code.h5jun.com\/sedam\/edit?js,output\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eJSBin\x3c\/a\x3e \x26#x67E5;\x26#x770B;\x26#x6548;\x26#x679C;\x26#x3002;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22const {Scene, Sprite} = spritejs\n\nconst scene = new Scene(\x26apos;#demo-quickStart\x26apos;, {viewport: [770, 200], resolution: [3080, 800]})\n\nconst layer = scene.layer()\n\nconst robot = new Sprite(\x26apos;https:\/\/p5.ssl.qhimg.com\/t01c33383c0e168c3c4.png\x26apos;)\n\nrobot.attr({\n  anchor: [0, 0.5],\n  pos: [0, 0],\n})\n\nrobot.animate([\n  {pos: [0, 0]},\n  {pos: [0, 300]},\n  {pos: [2700, 300]},\n  {pos: [2700, 0]},\n], {\n  duration: 5000,\n  iterations: Infinity,\n  direction: \x26apos;alternate\x26apos;,\n})\n\nlayer.append(robot)\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22javascript\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e {Scene, Sprite} = spritejs\n\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e scene = \x3cspan class=\x22hljs-keyword\x22\x3enew\x3c\/span\x3e Scene(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;#demo-quickStart\x26apos;\x3c\/span\x3e, {\x3cspan class=\x22hljs-attr\x22\x3eviewport\x3c\/span\x3e: [\x3cspan class=\x22hljs-number\x22\x3e770\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e200\x3c\/span\x3e], \x3cspan class=\x22hljs-attr\x22\x3eresolution\x3c\/span\x3e: [\x3cspan class=\x22hljs-number\x22\x3e3080\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e800\x3c\/span\x3e]})\n\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e layer = scene.layer()\n\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e robot = \x3cspan class=\x22hljs-keyword\x22\x3enew\x3c\/span\x3e Sprite(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;https:\/\/p5.ssl.qhimg.com\/t01c33383c0e168c3c4.png\x26apos;\x3c\/span\x3e)\n\nrobot.attr({\n  \x3cspan class=\x22hljs-attr\x22\x3eanchor\x3c\/span\x3e: [\x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e0.5\x3c\/span\x3e],\n  \x3cspan class=\x22hljs-attr\x22\x3epos\x3c\/span\x3e: [\x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e],\n})\n\nrobot.animate([\n  {\x3cspan class=\x22hljs-attr\x22\x3epos\x3c\/span\x3e: [\x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e]},\n  {\x3cspan class=\x22hljs-attr\x22\x3epos\x3c\/span\x3e: [\x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e300\x3c\/span\x3e]},\n  {\x3cspan class=\x22hljs-attr\x22\x3epos\x3c\/span\x3e: [\x3cspan class=\x22hljs-number\x22\x3e2700\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e300\x3c\/span\x3e]},\n  {\x3cspan class=\x22hljs-attr\x22\x3epos\x3c\/span\x3e: [\x3cspan class=\x22hljs-number\x22\x3e2700\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e]},\n], {\n  \x3cspan class=\x22hljs-attr\x22\x3eduration\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e5000\x3c\/span\x3e,\n  \x3cspan class=\x22hljs-attr\x22\x3eiterations\x3c\/span\x3e: \x3cspan class=\x22hljs-literal\x22\x3eInfinity\x3c\/span\x3e,\n  \x3cspan class=\x22hljs-attr\x22\x3edirection\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x26apos;alternate\x26apos;\x3c\/span\x3e,\n})\n\nlayer.append(robot)\x3c\/code\x3e\x3c\/pre\x3e\x3ch2 id=\x22articleHeader2\x22\x3e\x26#x6587;\x26#x6863;\x3c\/h2\x3e\x3cul\x3e\x3cli\x3e\x26#x9F50;\x26#x5168;\x26#x7684;\x26#x4F7F;\x26#x7528;\x26#x6587;\x26#x6863;\x26#xFF1A;\x3ca href=\x22http:\/\/spritejs.org\/#\/zh-cn\/index\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x4E2D;\x26#x6587;\x3c\/a\x3e | \x3ca href=\x22http:\/\/spritejs.org\/#\/en\/index\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eEN\x3c\/a\x3e\x3c\/li\x3e\x3cli\x3e\x26#x5404;\x26#x79CD;\x26#x5404;\x26#x6837;\x26#x7684;\x3ca href=\x22http:\/\/spritejs.org\/#\/zh-cn\/examples\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x4F8B;\x26#x5B50;\x3c\/a\x3e\x3c\/li\x3e\x3cli\x3e\x26#x8BE6;\x26#x7EC6;\x26#x7684; \x3ca href=\x22http:\/\/spritejs.org\/#\/api\/\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eAPI \x26#x6587;\x26#x6863;\x3c\/a\x3e\x3c\/li\x3e\x3cli\x3e\x26#x539F;\x26#x535A;\x26#x6587; \x3ca href=\x22https:\/\/www.h5jun.com\/post\/spritejs.html\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eSpriteJS -- Canvas\x26#x52A8;\x26#x753B;\x26#x4ECE;\x26#x672A;\x26#x5982;\x26#x6B64;\x26#x7B80;\x26#x5355;\x3c\/a\x3e\x3c\/li\x3e\x3c\/ul\x3e\x3cp\x3e\x26#x8981;\x26#x6DF1;\x26#x5165;\x26#x4E86;\x26#x89E3; \x3ca href=\x22https:\/\/github.com\/spritejs\/spritejs\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eSpriteJS\x3c\/a\x3e \x26#x6216;\x26#x8005;\x26#x5E0C;\x26#x671B;\x26#x7ED9; \x3ca href=\x22https:\/\/github.com\/spritejs\/spritejs\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eSpriteJS\x3c\/a\x3e \x26#x8D21;\x26#x732E;\x26#x4EE3;\x26#x7801;\x26#xFF0C;\x26#x53EF;\x26#x4EE5;\x26#x5173;\x26#x6CE8;\x26#x6211;\x26#x4EEC;\x26#x7684; \x3ca href=\x22https:\/\/github.com\/spritejs\/spritejs\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eGitHub\x26#x4ED3;\x26#x5E93;\x3c\/a\x3e\x26#xFF0C;\x26#x5927;\x26#x5BB6;\x26#x7684;\x26#x5B9D;\x26#x8D35; star \x26#x662F;\x26#x5BF9;\x26#x6211;\x26#x4EEC;\x26#x6700;\x26#x5927;\x26#x7684;\x26#x9F13;\x26#x52B1;\x26#x548C;\x26#x652F;\x26#x6301;\x26#x3002;\x26#x5982;\x26#x679C;\x26#x5BF9; \x3ca href=\x22https:\/\/github.com\/spritejs\/spritejs\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eSpriteJS\x3c\/a\x3e \x26#x6709;\x26#x7591;\x26#x95EE;\x26#xFF0C;\x26#x6216;\x26#x8005;\x26#x9700;\x26#x8981;\x26#x4E86;\x26#x89E3;\x26#x8FDB;\x26#x4E00;\x26#x6B65;\x26#x7EC6;\x26#x8282;\x26#xFF0C;\x26#x53EF;\x26#x4EE5;\x26#x52A0;\x26#x5165; \x3ca href=\x22https:\/\/github.com\/spritejs\/spritejs\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eSpriteJS\x3c\/a\x3e \x26#x5B98;\x26#x65B9;QQ\x26#x7FA4;\x26#xFF1A;\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000015328066\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000015328066\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/e9e32d3a/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/5b850124/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/979c7778/&text=[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/979c7778/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/979c7778/&text=[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/979c7778/&title=[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/979c7778/&is_video=false&description=[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架&body=Check out this article: https://alili.tech/archive/979c7778/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/979c7778/&title=[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/979c7778/&title=[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/979c7778/&title=[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/979c7778/&title=[开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">为什么要开发 SpriteJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">基本使用介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">3.</span> <span class="toc-text">文档</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        [开源] SpriteJS -- 一款简单的跨终端 canvas 绘图框架
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-10-30T18:30:10.000Z" itemprop="datePublished">2018-10-31</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <p><a href="https://github.com/spritejs/spritejs" rel="nofollow noreferrer" target="_blank">SpriteJS</a> &#x662F;&#x4E00;&#x6B3E;&#x7531;360&#x5947;&#x821E;&#x56E2;&#x5F00;&#x6E90;&#x7684;&#x8DE8;&#x7EC8;&#x7AEF; canvas &#x7ED8;&#x56FE;&#x6846;&#x67B6;&#xFF0C;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E; canvas &#x5FEB;&#x901F;&#x7ED8;&#x5236;&#x7ED3;&#x6784;&#x5316; UI&#x3001;&#x52A8;&#x753B;&#x548C;&#x4EA4;&#x4E92;&#x6548;&#x679C;&#xFF0C;&#x5E76;&#x53D1;&#x5E03;&#x5230;&#x4EFB;&#x4F55;&#x62E5;&#x6709;canvas&#x73AF;&#x5883;&#x7684;&#x5E73;&#x53F0;&#x4E0A;&#xFF08;&#x6BD4;&#x5982;&#x6D4F;&#x89C8;&#x5668;&#x3001;&#x5C0F;&#x7A0B;&#x5E8F;&#x548C;node&#xFF09;&#x3002;</p><ul><li>&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#xFF1A;<a href="http://spritejs.org" rel="nofollow noreferrer" target="_blank">http://spritejs.org</a></li><li>Github&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/spritejs/spritejs" rel="nofollow noreferrer" target="_blank">https://github.com/spritejs/s...</a></li><li>DEMO&#x793A;&#x4F8B;&#xFF1A;<a href="http://spritejs.org/demo/" rel="nofollow noreferrer" target="_blank">http://spritejs.org/demo/</a></li></ul><p><span class="img-wrap"><img data-src="/img/remote/1460000015328065?w=500&amp;h=500" src="https://static.alili.tech/img/remote/1460000015328065?w=500&amp;h=500" alt="" title="" style="cursor:pointer;display:inline"></span></p><h2 id="articleHeader0">&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5F00;&#x53D1; SpriteJS</h2><p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;canvas API&#x53EF;&#x4EE5;&#x5F88;&#x7075;&#x6D3B;&#x5730;&#x7ED8;&#x5236;&#x5404;&#x79CD;&#x77E2;&#x91CF;&#x56FE;&#x5F62;&#x5230;&#x753B;&#x5E03;&#x4E0A;&#xFF0C;&#x4F46;&#x662F; canvas API &#x672C;&#x8EAB;&#x6BD4;&#x8F83;&#x4F4E;&#x7EA7;&#xFF0C;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x8981;&#x5728;&#x753B;&#x5E03;&#x4E2D;&#x592E;&#x7ED8;&#x5236;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x5706;&#x89D2;&#x7684;&#x7EA2;&#x8272;&#x77E9;&#x5F62;&#xFF0C;&#x4F7F;&#x7528; canvas &#x539F;&#x751F;&#x7684; API&#xFF0C;&#x9700;&#x8981;&#x8FD9;&#x6837;&#xFF1A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="const canvas = document.getElementById(&apos;paper&apos;)
-const context = canvas.getContext(&apos;2d&apos;)
-
-const [x, y, w, h, r] = [200, 200, 200, 200, 50]
-
-context.fillStyle = &apos;red&apos;
-context.beginPath()
-context.moveTo(x + r, y)
-context.arcTo(x + w, y, x + w, y + h, r)
-context.arcTo(x + w, y + h, x, y + h, r)
-context.arcTo(x, y + h, x, y, r)
-context.arcTo(x, y, x + w, y, r)
-context.closePath()
-context.fill()" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="javascript hljs"><code class="js"><span class="hljs-keyword">const</span> canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;paper&apos;</span>)
-<span class="hljs-keyword">const</span> context = canvas.getContext(<span class="hljs-string">&apos;2d&apos;</span>)
-
-<span class="hljs-keyword">const</span> [x, y, w, h, r] = [<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>]
-
-context.fillStyle = <span class="hljs-string">&apos;red&apos;</span>
-context.beginPath()
-context.moveTo(x + r, y)
-context.arcTo(x + w, y, x + w, y + h, r)
-context.arcTo(x + w, y + h, x, y + h, r)
-context.arcTo(x, y + h, x, y, r)
-context.arcTo(x, y, x + w, y, r)
-context.closePath()
-context.fill()</code></pre><p>&#x5982;&#x679C;&#x5B9E;&#x73B0;&#x76F8;&#x540C;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4F7F;&#x7528; SpriteJS &#x662F;&#x8FD9;&#x6837;&#x5199;&#xFF1A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="const scene = new spritejs.Scene(&apos;#container&apos;)
-const layer = scene.layer()
-
-const s = new spritejs.Sprite({
-  anchor: 0.5,
-  bgcolor: &apos;red&apos;,
-  pos: [300, 300],
-  size: [200, 200],
-  borderRadius: 50,
-})
-
-layer.append(s)" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="javascript hljs"><code class="js"><span class="hljs-keyword">const</span> scene = <span class="hljs-keyword">new</span> spritejs.Scene(<span class="hljs-string">&apos;#container&apos;</span>)
-<span class="hljs-keyword">const</span> layer = scene.layer()
-
-<span class="hljs-keyword">const</span> s = <span class="hljs-keyword">new</span> spritejs.Sprite({
-  <span class="hljs-attr">anchor</span>: <span class="hljs-number">0.5</span>,
-  <span class="hljs-attr">bgcolor</span>: <span class="hljs-string">&apos;red&apos;</span>,
-  <span class="hljs-attr">pos</span>: [<span class="hljs-number">300</span>, <span class="hljs-number">300</span>],
-  <span class="hljs-attr">size</span>: [<span class="hljs-number">200</span>, <span class="hljs-number">200</span>],
-  <span class="hljs-attr">borderRadius</span>: <span class="hljs-number">50</span>,
-})
-
-layer.append(s)</code></pre><p>Sprite &#x4E3A;&#x56FE;&#x5F62;&#x521B;&#x5EFA;&#x7C7B;&#x4F3C;&#x4E8E; DOM &#x7684;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x50CF;&#x521B;&#x5EFA; DOM &#x5143;&#x7D20;&#x4E00;&#x6837;&#xFF0C;&#x521B;&#x5EFA; Sprite &#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x4EEC; append &#x5230; layer &#x4E0A;&#xFF0C;&#x4ECE;&#x800C;&#x5C06;&#x5143;&#x7D20;&#x5448;&#x73B0;&#x5230;&#x753B;&#x5E03;&#x4E0A;&#x3002;SpriteJS &#x6709;&#x5982;&#x4E0B;&#x7279;&#x70B9;&#xFF1A;</p><ul><li>&#x57FA;&#x4E8E; canvas &#x7ED8;&#x5236;&#x7684;&#x6587;&#x6863;&#x5BF9;&#x8C61;&#x6A21;&#x578B;</li><li>&#x56DB;&#x79CD;&#x57FA;&#x672C;&#x7CBE;&#x7075;&#x7C7B;&#x578B;&#xFF1A;Sprite&#x3001;Path&#x3001;Label&#x3001;Group</li><li>&#x652F;&#x6301;&#x57FA;&#x7840;&#x548C;&#x9AD8;&#x7EA7;&#x7684;&#x7CBE;&#x7075;&#x5C5E;&#x6027;&#xFF0C;&#x7CBE;&#x7075;&#x76D2;&#x6A21;&#x578B;&#x3001;&#x5C5E;&#x6027;&#x4E0E; CSS3 &#x5177;&#x6709;&#x9AD8;&#x5EA6;&#x4E00;&#x81F4;&#x6027;&#x3002;</li><li>&#x7B80;&#x4FBF;&#x800C;&#x5F3A;&#x5927;&#x7684; Transition&#x3001;Animation API</li><li>&#x652F;&#x6301;&#x96EA;&#x78A7;&#x56FE;&#x548C;&#x8D44;&#x6E90;&#x9884;&#x52A0;&#x8F7D;</li><li>&#x53EF;&#x6269;&#x5C55;&#x7684;&#x4E8B;&#x4EF6;&#x673A;&#x5236;</li><li>&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x7F13;&#x5B58;&#x7B56;&#x7565;</li><li>&#x5BF9; <a href="https://github.com/d3/d3" rel="nofollow noreferrer" target="_blank">D3</a>&#x3001;<a href="https://github.com/liabru/matter-js" rel="nofollow noreferrer" target="_blank">Matter-js</a>&#x3001;<a href="https://github.com/a-jie/Proton" rel="nofollow noreferrer" target="_blank">Proton</a>&#x548C;&#x5176;&#x4ED6;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x53CB;&#x597D;</li><li>&#x8DE8;&#x5E73;&#x53F0;&#xFF0C;&#x652F;&#x6301;<a href="http://spritejs.org/#/zh-cn/index?id=server-side-render" rel="nofollow noreferrer" target="_blank">&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;</a>&#x3001;<a href="https://github.com/spritejs/sprite-wxapp" rel="nofollow noreferrer" target="_blank">&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;</a></li></ul><h2 id="articleHeader1">&#x57FA;&#x672C;&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;</h2><p>&#x901A;&#x8FC7; NPM &#x6216;&#x8005;&#x76F4;&#x63A5;&#x52A0;&#x8F7D; CDN &#x7248;&#x672C;&#x5373;&#x53EF;&#x4F7F;&#x7528; SpriteJS</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="npm install spritejs &#x2014;save" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs sql"><code class="shell" style="word-break:break-word;white-space:initial">npm <span class="hljs-keyword">install</span> spritejs &#x2014;<span class="hljs-keyword">save</span></code></pre><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="&lt;script src=&quot;//lib.baomitu.com/spritejs/2.0.0-alpha.28/spritejs.min.js&quot;&gt;&lt;/script&gt;" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="xml hljs"><code class="html" style="word-break:break-word;white-space:initial"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;//lib.baomitu.com/spritejs/2.0.0-alpha.28/spritejs.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre><p>&#x6CE8;&#xFF1A;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x4F7F;&#x7528;&#x9700;&#x8981;&#x5B89;&#x88C5; node-canvas</p><p>&#x4E0B;&#x9762;&#x662F;&#x7B80;&#x5355;&#x7684;&#x7528;&#x6CD5;&#x793A;&#x4F8B;&#xFF0C;&#x5927;&#x5BB6;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE; <a href="https://code.h5jun.com/sedam/edit?js,output" rel="nofollow noreferrer" target="_blank">JSBin</a> &#x67E5;&#x770B;&#x6548;&#x679C;&#x3002;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="const {Scene, Sprite} = spritejs
-
-const scene = new Scene(&apos;#demo-quickStart&apos;, {viewport: [770, 200], resolution: [3080, 800]})
-
-const layer = scene.layer()
-
-const robot = new Sprite(&apos;https://p5.ssl.qhimg.com/t01c33383c0e168c3c4.png&apos;)
-
-robot.attr({
-  anchor: [0, 0.5],
-  pos: [0, 0],
-})
-
-robot.animate([
-  {pos: [0, 0]},
-  {pos: [0, 300]},
-  {pos: [2700, 300]},
-  {pos: [2700, 0]},
-], {
-  duration: 5000,
-  iterations: Infinity,
-  direction: &apos;alternate&apos;,
-})
-
-layer.append(robot)" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="javascript hljs"><code class="javascript"><span class="hljs-keyword">const</span> {Scene, Sprite} = spritejs
-
-<span class="hljs-keyword">const</span> scene = <span class="hljs-keyword">new</span> Scene(<span class="hljs-string">&apos;#demo-quickStart&apos;</span>, {<span class="hljs-attr">viewport</span>: [<span class="hljs-number">770</span>, <span class="hljs-number">200</span>], <span class="hljs-attr">resolution</span>: [<span class="hljs-number">3080</span>, <span class="hljs-number">800</span>]})
-
-<span class="hljs-keyword">const</span> layer = scene.layer()
-
-<span class="hljs-keyword">const</span> robot = <span class="hljs-keyword">new</span> Sprite(<span class="hljs-string">&apos;https://p5.ssl.qhimg.com/t01c33383c0e168c3c4.png&apos;</span>)
-
-robot.attr({
-  <span class="hljs-attr">anchor</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>],
-  <span class="hljs-attr">pos</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
-})
-
-robot.animate([
-  {<span class="hljs-attr">pos</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>]},
-  {<span class="hljs-attr">pos</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">300</span>]},
-  {<span class="hljs-attr">pos</span>: [<span class="hljs-number">2700</span>, <span class="hljs-number">300</span>]},
-  {<span class="hljs-attr">pos</span>: [<span class="hljs-number">2700</span>, <span class="hljs-number">0</span>]},
-], {
-  <span class="hljs-attr">duration</span>: <span class="hljs-number">5000</span>,
-  <span class="hljs-attr">iterations</span>: <span class="hljs-literal">Infinity</span>,
-  <span class="hljs-attr">direction</span>: <span class="hljs-string">&apos;alternate&apos;</span>,
-})
-
-layer.append(robot)</code></pre><h2 id="articleHeader2">&#x6587;&#x6863;</h2><ul><li>&#x9F50;&#x5168;&#x7684;&#x4F7F;&#x7528;&#x6587;&#x6863;&#xFF1A;<a href="http://spritejs.org/#/zh-cn/index" rel="nofollow noreferrer" target="_blank">&#x4E2D;&#x6587;</a> | <a href="http://spritejs.org/#/en/index" rel="nofollow noreferrer" target="_blank">EN</a></li><li>&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;<a href="http://spritejs.org/#/zh-cn/examples" rel="nofollow noreferrer" target="_blank">&#x4F8B;&#x5B50;</a></li><li>&#x8BE6;&#x7EC6;&#x7684; <a href="http://spritejs.org/#/api/" rel="nofollow noreferrer" target="_blank">API &#x6587;&#x6863;</a></li><li>&#x539F;&#x535A;&#x6587; <a href="https://www.h5jun.com/post/spritejs.html" rel="nofollow noreferrer" target="_blank">SpriteJS -- Canvas&#x52A8;&#x753B;&#x4ECE;&#x672A;&#x5982;&#x6B64;&#x7B80;&#x5355;</a></li></ul><p>&#x8981;&#x6DF1;&#x5165;&#x4E86;&#x89E3; <a href="https://github.com/spritejs/spritejs" rel="nofollow noreferrer" target="_blank">SpriteJS</a> &#x6216;&#x8005;&#x5E0C;&#x671B;&#x7ED9; <a href="https://github.com/spritejs/spritejs" rel="nofollow noreferrer" target="_blank">SpriteJS</a> &#x8D21;&#x732E;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x5173;&#x6CE8;&#x6211;&#x4EEC;&#x7684; <a href="https://github.com/spritejs/spritejs" rel="nofollow noreferrer" target="_blank">GitHub&#x4ED3;&#x5E93;</a>&#xFF0C;&#x5927;&#x5BB6;&#x7684;&#x5B9D;&#x8D35; star &#x662F;&#x5BF9;&#x6211;&#x4EEC;&#x6700;&#x5927;&#x7684;&#x9F13;&#x52B1;&#x548C;&#x652F;&#x6301;&#x3002;&#x5982;&#x679C;&#x5BF9; <a href="https://github.com/spritejs/spritejs" rel="nofollow noreferrer" target="_blank">SpriteJS</a> &#x6709;&#x7591;&#x95EE;&#xFF0C;&#x6216;&#x8005;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x8FDB;&#x4E00;&#x6B65;&#x7EC6;&#x8282;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x5165; <a href="https://github.com/spritejs/spritejs" rel="nofollow noreferrer" target="_blank">SpriteJS</a> &#x5B98;&#x65B9;QQ&#x7FA4;&#xFF1A;</p><p><span class="img-wrap"><img data-src="/img/remote/1460000015328066" src="https://static.alili.tech/img/remote/1460000015328066" alt="" title="" style="cursor:pointer;display:inline"></span></p>
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<h2 id="原文标题"><a href="#原文标题" class="headerlink" title="原文标题"></a>原文标题</h2><p>[开源] SpriteJS – 一款简单的跨终端 canvas 绘图框架</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://segmentfault.com/a/1190000015328062" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015328062</a></p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/979c7778/">https://alili.tech/archive/979c7778/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2 id="原文标题">原文标题</h2><p>[开源] SpriteJS &ndash; 一款简单的跨终端 canvas 绘图框架</p><h2 id="原文链接">原文链接</h2><p><a href="https://segmentfault.com/a/1190000015328062">https://segmentfault.com/a/1190000015328062</a></p><h2>本文链接：</h2><a href="https://alili.tech/archive/979c7778/" target="_blank">https://alili.tech/archive/979c7778/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">为什么要开发 SpriteJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">基本使用介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">3.</span> <span class="toc-text">文档</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

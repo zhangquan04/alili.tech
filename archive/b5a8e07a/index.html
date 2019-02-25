@@ -1,559 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="&amp;#x53EA;&amp;#x770B;&amp;#x4E0D;&amp;#x8D5E;&amp;#xFF0C;&amp;#x6216;&amp;#x8005;&amp;#x53EA;&amp;#x6536;&amp;#x85CF;&amp;#x4E0D;&amp;#x8D5E;&amp;#x7684;&amp;#x90FD;&amp;#x662F;&amp;#x800D;&amp;#x6D41;&amp;#x6C13;&amp;#xFF0C;&amp;#x653E;&amp;#x5B66;&amp;#x522B;&amp;#x8D70;&amp;#xFF0C;&amp;#x6211;">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app">
-<meta property="og:url" content="https://alili.tech/archive/b5a8e07a/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="&amp;#x53EA;&amp;#x770B;&amp;#x4E0D;&amp;#x8D5E;&amp;#xFF0C;&amp;#x6216;&amp;#x8005;&amp;#x53EA;&amp;#x6536;&amp;#x85CF;&amp;#x4E0D;&amp;#x8D5E;&amp;#x7684;&amp;#x90FD;&amp;#x662F;&amp;#x800D;&amp;#x6D41;&amp;#x6C13;&amp;#xFF0C;&amp;#x653E;&amp;#x5B66;&amp;#x522B;&amp;#x8D70;&amp;#xFF0C;&amp;#x6211;">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://static.alili.tech/img/bVyFVF">
-<meta property="og:image" content="https://static.alili.tech/img/bVyFV9">
-<meta property="og:image" content="https://static.alili.tech/img/bVyGqh">
-<meta property="og:image" content="https://static.alili.tech/img/bVvQhq">
-<meta property="og:image" content="https://static.alili.tech/img/bVyF62">
-<meta property="og:updated_time" content="2018-10-28T18:30:15.459Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app">
-<meta name="twitter:description" content="&amp;#x53EA;&amp;#x770B;&amp;#x4E0D;&amp;#x8D5E;&amp;#xFF0C;&amp;#x6216;&amp;#x8005;&amp;#x53EA;&amp;#x6536;&amp;#x85CF;&amp;#x4E0D;&amp;#x8D5E;&amp;#x7684;&amp;#x90FD;&amp;#x662F;&amp;#x800D;&amp;#x6D41;&amp;#x6C13;&amp;#xFF0C;&amp;#x653E;&amp;#x5B66;&amp;#x522B;&amp;#x8D70;&amp;#xFF0C;&amp;#x6211;">
-<meta name="twitter:image" content="https://static.alili.tech/img/bVyFVF">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/b5a8e07a/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/b5a8e07a/",
-      "appid": "1613049289050283", 
-      "title": "一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:42"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="一步一步教你用 Vue.js &#43; Vuex 制作专门收藏微信公众号的 app"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>一步一步教你用 Vue.js &#43; Vuex 制作专门收藏微信公众号的 app | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/b5a8e07a/",
+				"appid": "1613049289050283", 
+				"title": "一步一步教你用 Vue.js &#43; Vuex 制作专门收藏微信公众号的 app | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-10-29T02:30:09"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/64f6ab7a/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/50b1ed1/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2fb5a8e07a%2f&text=%e4%b8%80%e6%ad%a5%e4%b8%80%e6%ad%a5%e6%95%99%e4%bd%a0%e7%94%a8%20Vue.js%20%2b%20Vuex%20%e5%88%b6%e4%bd%9c%e4%b8%93%e9%97%a8%e6%94%b6%e8%97%8f%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e7%9a%84%20app"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2fb5a8e07a%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2fb5a8e07a%2f&text=%e4%b8%80%e6%ad%a5%e4%b8%80%e6%ad%a5%e6%95%99%e4%bd%a0%e7%94%a8%20Vue.js%20%2b%20Vuex%20%e5%88%b6%e4%bd%9c%e4%b8%93%e9%97%a8%e6%94%b6%e8%97%8f%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e7%9a%84%20app"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2fb5a8e07a%2f&title=%e4%b8%80%e6%ad%a5%e4%b8%80%e6%ad%a5%e6%95%99%e4%bd%a0%e7%94%a8%20Vue.js%20%2b%20Vuex%20%e5%88%b6%e4%bd%9c%e4%b8%93%e9%97%a8%e6%94%b6%e8%97%8f%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e7%9a%84%20app"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2fb5a8e07a%2f&is_video=false&description=%e4%b8%80%e6%ad%a5%e4%b8%80%e6%ad%a5%e6%95%99%e4%bd%a0%e7%94%a8%20Vue.js%20%2b%20Vuex%20%e5%88%b6%e4%bd%9c%e4%b8%93%e9%97%a8%e6%94%b6%e8%97%8f%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e7%9a%84%20app"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%e4%b8%80%e6%ad%a5%e4%b8%80%e6%ad%a5%e6%95%99%e4%bd%a0%e7%94%a8%20Vue.js%20%2b%20Vuex%20%e5%88%b6%e4%bd%9c%e4%b8%93%e9%97%a8%e6%94%b6%e8%97%8f%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e7%9a%84%20app&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2fb5a8e07a%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2fb5a8e07a%2f&title=%e4%b8%80%e6%ad%a5%e4%b8%80%e6%ad%a5%e6%95%99%e4%bd%a0%e7%94%a8%20Vue.js%20%2b%20Vuex%20%e5%88%b6%e4%bd%9c%e4%b8%93%e9%97%a8%e6%94%b6%e8%97%8f%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e7%9a%84%20app"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fb5a8e07a%2f&title=%e4%b8%80%e6%ad%a5%e4%b8%80%e6%ad%a5%e6%95%99%e4%bd%a0%e7%94%a8%20Vue.js%20%2b%20Vuex%20%e5%88%b6%e4%bd%9c%e4%b8%93%e9%97%a8%e6%94%b6%e8%97%8f%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e7%9a%84%20app"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fb5a8e07a%2f&title=%e4%b8%80%e6%ad%a5%e4%b8%80%e6%ad%a5%e6%95%99%e4%bd%a0%e7%94%a8%20Vue.js%20%2b%20Vuex%20%e5%88%b6%e4%bd%9c%e4%b8%93%e9%97%a8%e6%94%b6%e8%97%8f%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e7%9a%84%20app"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fb5a8e07a%2f&title=%e4%b8%80%e6%ad%a5%e4%b8%80%e6%ad%a5%e6%95%99%e4%bd%a0%e7%94%a8%20Vue.js%20%2b%20Vuex%20%e5%88%b6%e4%bd%9c%e4%b8%93%e9%97%a8%e6%94%b6%e8%97%8f%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e7%9a%84%20app"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a><ul><li><a href="#原文标题">原文标题</a></li><li><a href="#原文链接">原文链接</a></li></ul></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">一步一步教你用 Vue.js &#43; Vuex 制作专门收藏微信公众号的 app</h1><div class="meta"><div class="postdate"><time datetime="2018-10-29" itemprop="datePublished">2018-10-29</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\x3cp\x3e\x26#x53EA;\x26#x770B;\x26#x4E0D;\x26#x8D5E;\x26#xFF0C;\x26#x6216;\x26#x8005;\x26#x53EA;\x26#x6536;\x26#x85CF;\x26#x4E0D;\x26#x8D5E;\x26#x7684;\x26#x90FD;\x26#x662F;\x26#x800D;\x26#x6D41;\x26#x6C13;\x26#xFF0C;\x26#x653E;\x26#x5B66;\x26#x522B;\x26#x8D70;\x26#xFF0C;\x26#x6211;\x26#x627E;\x26#x6211;\x26#x54E5;\x26#x6536;\x26#x62FE;\x26#x4F60;\x26#x4EEC;\x26#x3002;\x3c\/p\x3e\x3cblockquote\x3e\x3cp\x3e\x26#x9879;\x26#x76EE;\x26#x5730;\x26#x5740;\x26#xFF1A;\x3ca href=\x22https:\/\/github.com\/jrainlau\/wechat-subscriptor\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/github.com\/jrainlau\/wechat-subscriptor\x3c\/a\x3e\x3c\/p\x3e\x3c\/blockquote\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/bVyFVF\x22 src=\x22https:\/\/static.alili.tech\/img\/bVyFVF\x22 alt=\x22\x26#x56FE;\x26#x7247;\x26#x63CF;\x26#x8FF0;\x22 title=\x22\x26#x56FE;\x26#x7247;\x26#x63CF;\x26#x8FF0;\x22 style=\x22cursor:pointer\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/bVyFV9\x22 src=\x22https:\/\/static.alili.tech\/img\/bVyFV9\x22 alt=\x22\x26#x56FE;\x26#x7247;\x26#x63CF;\x26#x8FF0;\x22 title=\x22\x26#x56FE;\x26#x7247;\x26#x63CF;\x26#x8FF0;\x22 style=\x22cursor:pointer\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3ch2 id=\x22articleHeader0\x22\x3e\x26#x4E0B;\x26#x8F7D;\x26amp;\x26#x8FD0;\x26#x884C;\x3c\/h2\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22git clone git@github.com:jrainlau\/wechat-subscriptor.git\ncd wechat-subscriptor \x26amp;\x26amp; npm install\n\nnpm run dev   \/\/ run in dev mode\ncd backend-server \x26amp;\x26amp; node crawler.js   \/\/ turn on the crawler server\n\nopen `localhost:8080` in your broswer and enjoy it.\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs crmsh\x22\x3e\x3ccode\x3egit \x3cspan class=\x22hljs-keyword\x22\x3eclone\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3egit\x3c\/span\x3e@github.com:jrainlau\/wechat-subscriptor.git\ncd wechat-subscriptor \x26amp;\x26amp; npm install\n\nnpm run dev   \/\/ run \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e dev mode\ncd backend-server \x26amp;\x26amp; \x3cspan class=\x22hljs-keyword\x22\x3enode\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3ecrawler\x3c\/span\x3e.js   \/\/ turn on the crawler server\n\nopen `localhost:\x3cspan class=\x22hljs-number\x22\x3e8080\x3c\/span\x3e` \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e your broswer \x3cspan class=\x22hljs-keyword\x22\x3eand\x3c\/span\x3e enjoy it.\x3c\/code\x3e\x3c\/pre\x3e\x3ch2 id=\x22articleHeader1\x22\x3e\x26#x9879;\x26#x76EE;\x26#x4ECB;\x26#x7ECD;\x3c\/h2\x3e\x3cp\x3e\x26#x6211;\x26#x5728;\x26#x5FAE;\x26#x4FE1;\x26#x4E0A;\x26#x5173;\x26#x6CE8;\x26#x4E86;\x26#x4E0D;\x26#x5C11;\x26#x7684;\x26#x516C;\x26#x4F17;\x26#x53F7;\x26#xFF0C;\x26#x7ECF;\x26#x5E38;\x26#x6D4F;\x26#x89C8;\x26#x91CC;\x26#x9762;\x26#x7684;\x26#x5185;\x26#x5BB9;\x26#x3002;\x26#x4F46;\x26#x662F;\x26#x5F80;\x26#x5F80;\x26#x5728;\x26#x6211;\x26#x9605;\x26#x8BFB;\x26#x6587;\x26#x7AE0;\x26#x7684;\x26#x65F6;\x26#x5019;\x26#xFF0C;\x26#x603B;\x26#x662F;\x26#x88AB;\x26#x5404;\x26#x79CD;\x26#x5FAE;\x26#x4FE1;\x26#x6D88;\x26#x606F;\x26#x6253;\x26#x65AD;\x26#xFF0C;\x26#x4E0D;\x26#x5F97;\x26#x4E0D;\x26#x5207;\x26#x51FA;\x26#x53BB;\x26#xFF0C;\x26#x56DE;\x26#x590D;\x26#x6D88;\x26#x606F;\x26#xFF0C;\x26#x7136;\x26#x540E;\x26#x4E00;\x26#x8DEF;\x26#x70B9;\x26#x56DE;\x26#x516C;\x26#x4F17;\x26#x53F7;\x26#xFF0C;\x26#x91CD;\x26#x65B0;\x26#x6253;\x26#x5F00;\x26#x6587;\x26#x7AE0;\x26#xFF0C;\x26#x5468;\x26#x800C;\x26#x590D;\x26#x59CB;\x26#xFF0C;\x26#x4E0D;\x26#x80DC;\x26#x5176;\x26#x70E6;\x26#x3002;\x26#x540E;\x26#x6765;\x26#x60F3;\x26#x8D77;\x26#xFF0C;\x26#x5FAE;\x26#x4FE1;\x26#x8DDF;\x26#x641C;\x26#x72D7;\x26#x6709;\x26#x5408;\x26#x4F5C;\x26#xFF0C;\x26#x53EF;\x26#x4EE5;\x26#x901A;\x26#x8FC7;\x26#x641C;\x26#x72D7;\x26#x76F4;\x26#x63A5;\x26#x641C;\x26#x7D22;\x26#x516C;\x26#x4F17;\x26#x53F7;\x26#xFF0C;\x26#x90A3;\x26#x4E48;\x26#x4E3A;\x26#x4EC0;\x26#x4E48;\x26#x4E0D;\x26#x5229;\x26#x7528;\x26#x8FD9;\x26#x4E2A;\x26#x8D44;\x26#x6E90;\x26#x505A;\x26#x4E00;\x26#x4E2A;\x26#x4E13;\x26#x95E8;\x26#x6536;\x26#x85CF;\x26#x516C;\x26#x4F17;\x26#x53F7;\x26#x7684;\x26#x5E94;\x26#x7528;\x26#x5462;\x26#xFF1F;\x26#x8FD9;\x26#x4E2A;\x26#x5E94;\x26#x7528;\x26#x53EF;\x26#x4EE5;\x26#x65B9;\x26#x4FBF;\x26#x5730;\x26#x641C;\x26#x7D22;\x26#x516C;\x26#x4F17;\x26#x53F7;\x26#xFF0C;\x26#x7136;\x26#x540E;\x26#x628A;\x26#x5B83;\x26#x6536;\x26#x85CF;\x26#x8D77;\x26#x6765;\x26#xFF0C;\x26#x60F3;\x26#x770B;\x26#x7684;\x26#x65F6;\x26#x5019;\x26#x76F4;\x26#x63A5;\x26#x6253;\x26#x5F00;\x26#x5C31;\x26#x80FD;\x26#x770B;\x26#x3002;\x26#x597D;\x26#x5427;\x26#xFF0C;\x26#x5176;\x26#x5B9E;\x26#x4E5F;\x26#x4E0D;\x26#x96BE;\x26#xFF0C;\x26#x90A3;\x26#x5C31;\x26#x5F00;\x26#x59CB;\x26#x4ECE;\x26#x67B6;\x26#x6784;\x26#x5F00;\x26#x59CB;\x26#x6784;\x26#x601D;\x26#x3002;\x3c\/p\x3e\x3ch2 id=\x22articleHeader2\x22\x3e\x26#x6574;\x26#x4F53;\x26#x67B6;\x26#x6784;\x3c\/h2\x3e\x3cp\x3e\x26#x56FD;\x26#x9645;\x26#x60EF;\x26#x4F8B;\x26#xFF0C;\x26#x5148;\x26#x770B;\x26#x67B6;\x26#x6784;\x26#x56FE;\x26#xFF1A;\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/bVyGqh\x22 src=\x22https:\/\/static.alili.tech\/img\/bVyGqh\x22 alt=\x22\x26#x56FE;\x26#x7247;\x26#x63CF;\x26#x8FF0;\x22 title=\x22\x26#x56FE;\x26#x7247;\x26#x63CF;\x26#x8FF0;\x22 style=\x22cursor:pointer\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x26#x7136;\x26#x540E;\x26#x662F;\x26#x6280;\x26#x672F;\x26#x9009;\x26#x578B;\x26#xFF1A;\x3c\/p\x3e\x3col\x3e\x3cli\x3e\x3cp\x3e\x26#x5229;\x26#x7528;\x26#x641C;\x26#x72D7;\x26#x7684;API\x26#x4F5C;\x26#x4E3A;\x26#x67E5;\x26#x8BE2;\x26#x516C;\x26#x4F17;\x26#x53F7;\x26#x7684;\x26#x63A5;\x26#x53E3;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x7531;\x26#x4E8E;\x26#x5B58;\x26#x5728;\x26#x8DE8;\x26#x57DF;\x26#x95EE;\x26#x9898;\x26#xFF0C;\x26#x9042;\x26#x901A;\x26#x8FC7;\x3ccode\x3enode\x3c\/code\x3e\x26#x722C;\x26#x866B;\x26#x4F7F;\x26#x7528;\x26#x63A5;\x26#x53E3;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x4F7F;\x26#x7528;\x3ccode\x3evue\x3c\/code\x3e\x26#x8FDB;\x26#x884C;\x26#x5F00;\x26#x53D1;\x26#xFF0C;\x3ccode\x3evuex\x3c\/code\x3e\x26#x4F5C;\x26#x72B6;\x26#x6001;\x26#x7BA1;\x26#x7406;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x4F7F;\x26#x7528;\x3ccode\x3emui\x3c\/code\x3e\x26#x4F5C;\x26#x4E3A;UI\x26#x6846;\x26#x67B6;\x26#xFF0C;\x26#x65B9;\x26#x4FBF;\x26#x65E5;\x26#x540E;\x26#x6253;\x26#x5305;\x26#x6210;\x26#x624B;\x26#x673A;app\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x4F7F;\x26#x7528;\x3ccode\x3evue-cli\x3c\/code\x3e\x26#x521D;\x26#x59CB;\x26#x5316;\x26#x9879;\x26#x76EE;\x26#x5E76;\x26#x901A;\x26#x8FC7;\x3ccode\x3ewebpack\x3c\/code\x3e\x26#x8FDB;\x26#x884C;\x26#x6784;\x26#x5EFA;\x3c\/p\x3e\x3c\/li\x3e\x3c\/ol\x3e\x3cp\x3e\x26#x9996;\x26#x5148;\x26#x5206;\x26#x6790;\x26#x7EA2;\x26#x5708;\x26#x4E2D;\x26#x7684;\x3ccode\x3evuex\x3c\/code\x3e\x26#x90E8;\x26#x5206;\x26#x3002;\x26#x5B83;\x26#x662F;\x26#x6574;\x26#x4E2A;APP\x26#x7684;\x26#x6838;\x26#x5FC3;\x26#xFF0C;\x26#x4E5F;\x26#x662F;\x26#x6240;\x26#x6709;\x26#x6570;\x26#x636E;\x26#x7684;\x26#x5904;\x26#x7406;\x26#x4E2D;\x26#x5FC3;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x5BA2;\x26#x6237;\x26#x7AEF;\x26#x6240;\x26#x6709;\x26#x7EC4;\x26#x4EF6;\x26#x90FD;\x26#x662F;\x26#x5728;\x3ccode\x3eaction\x3c\/code\x3e\x26#x4E2D;\x26#x5B8C;\x26#x6210;\x26#x5BF9;\x26#x6D41;\x26#x5165;\x26#x6570;\x26#x636E;\x26#x7684;\x26#x5904;\x26#x7406;\x26#xFF08;\x26#x5982;\x26#x5F02;\x26#x6B65;\x26#x8BF7;\x26#x6C42;\x26#x7B49;\x26#xFF09;\x26#xFF0C;\x26#x7136;\x26#x540E;\x26#x901A;\x26#x8FC7;\x3ccode\x3eaction\x3c\/code\x3e\x26#x89E6;\x26#x53D1;\x3ccode\x3emutation\x3c\/code\x3e\x26#x4FEE;\x26#x6539;\x3ccode\x3estate\x3c\/code\x3e\x26#xFF0C;\x26#x540E;\x26#x7531;\x3ccode\x3estate\x3c\/code\x3e\x26#x7ECF;\x26#x8FC7;\x3ccode\x3egetter\x3c\/code\x3e\x26#x5206;\x26#x53D1;\x26#x7ED9;\x26#x5404;\x26#x7EC4;\x26#x4EF6;\x26#xFF0C;\x26#x6EE1;\x26#x8DB3;\x26#x201C;\x26#x5355;\x26#x9879;\x26#x6570;\x26#x636E;\x26#x6D41;\x26#x201D;\x26#x7684;\x26#x7279;\x26#x70B9;\x26#xFF0C;\x26#x540C;\x26#x65F6;\x26#x4E5F;\x26#x7B26;\x26#x5408;\x26#x5B98;\x26#x65B9;\x26#x63A8;\x26#x8350;\x26#x7684;\x26#x505A;\x26#x6CD5;\x26#xFF1A;\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/bVvQhq\x22 src=\x22https:\/\/static.alili.tech\/img\/bVvQhq\x22 alt=\x22vuex.png\x22 title=\x22vuex.png\x22 style=\x22cursor:pointer\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x26#x7406;\x26#x89E3;\x26#x5B8C;\x26#x6700;\x26#x91CD;\x26#x8981;\x26#x7684;\x3ccode\x3evuex\x3c\/code\x3e\x26#x4EE5;\x26#x540E;\x26#xFF0C;\x26#x5176;\x26#x4ED6;\x26#x90E8;\x26#x5206;\x26#x4E5F;\x26#x5C31;\x26#x987A;\x26#x5229;\x26#x6210;\x26#x7AE0;\x26#x4E86;\x26#x3002;\x26#x7BAD;\x26#x5934;\x26#x8868;\x26#x793A;\x26#x6570;\x26#x636E;\x26#x7684;\x26#x6D41;\x26#x52A8;\x26#xFF0C;\x3ccode\x3eLocalStorage\x3c\/code\x3e\x26#x8D1F;\x26#x8D23;\x26#x50A8;\x26#x5B58;\x26#x6536;\x26#x85CF;\x26#x5939;\x26#x7684;\x26#x5185;\x26#x5BB9;\x26#xFF0C;\x26#x65B9;\x26#x4FBF;\x26#x4E0B;\x26#x4E00;\x26#x6B21;\x26#x6253;\x26#x5F00;\x26#x5E94;\x26#x7528;\x26#x7684;\x26#x65F6;\x26#x5019;\x26#x5185;\x26#x5BB9;\x26#x4E0D;\x26#x4F1A;\x26#x4E22;\x26#x5931;\x26#xFF0C;node\x26#x670D;\x26#x52A1;\x26#x5668;\x26#x8D1F;\x26#x8D23;\x26#x6839;\x26#x636E;\x26#x5173;\x26#x952E;\x26#x5B57;\x26#x722C;\x26#x53D6;\x26#x641C;\x26#x72D7;API\x26#x63D0;\x26#x4F9B;\x26#x7684;\x26#x6570;\x26#x636E;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x662F;\x26#x4E0D;\x26#x662F;\x26#x5F88;\x26#x7B80;\x26#x5355;\x26#xFF1F;\x26#x4E0B;\x26#x9762;\x26#x8BA9;\x26#x6211;\x26#x4EEC;\x26#x4E00;\x26#x8D77;\x26#x6765;\x26#x5F00;\x26#x59CB;coding\x26#x5427;\x26#xFF01;\x3c\/p\x3e\x3ch2 id=\x22articleHeader3\x22\x3e\x26#x521D;\x26#x59CB;\x26#x5316;\x26#x9879;\x26#x76EE;\x3c\/h2\x3e\x3cp\x3e\x3ccode\x3enpm install vue-cli -g\x3c\/code\x3e\x26#x5B89;\x26#x88C5;\x26#x6700;\x26#x65B0;\x26#x7248;\x26#x7684;\x3ccode\x3evue-cli\x3c\/code\x3e\x26#xFF0C;\x26#x7136;\x26#x540E;\x3ccode\x3evue init webpack wechat-subscriptor\x3c\/code\x3e\x26#xFF0C;\x26#x6309;\x26#x63D0;\x26#x793A;\x26#x7ECF;\x26#x8FC7;\x26#x4E00;\x26#x6B65;\x26#x6B65;\x26#x8BBE;\x26#x7F6E;\x26#x5E76;\x26#x5B89;\x26#x88C5;\x26#x5B8C;\x26#x4F9D;\x26#x8D56;\x26#x5305;\x26#x4EE5;\x26#x540E;\x26#xFF0C;\x26#x8FDB;\x26#x5165;\x26#x9879;\x26#x76EE;\x26#x7684;\x26#x76EE;\x26#x5F55;\x26#x5E76;\x26#x7A0D;\x26#x4F5C;\x26#x6539;\x26#x52A8;\x26#xFF0C;\x26#x6700;\x26#x7EC8;\x26#x76EE;\x26#x5F55;\x26#x7ED3;\x26#x6784;\x26#x5982;\x26#x4E0B;\x26#xFF1A;\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/bVyF62\x22 src=\x22https:\/\/static.alili.tech\/img\/bVyF62\x22 alt=\x22\x26#x56FE;\x26#x7247;\x26#x63CF;\x26#x8FF0;\x22 title=\x22\x26#x56FE;\x26#x7247;\x26#x63CF;\x26#x8FF0;\x22 style=\x22cursor:pointer\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x26#x5177;\x26#x4F53;\x26#x7684;\x26#x5185;\x26#x5BB9;\x26#x8BF7;\x26#x76F4;\x26#x63A5;\x26#x6D4F;\x26#x89C8;\x3ca href=\x22https:\/\/github.com\/jrainlau\/wechat-subscriptor\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x9879;\x26#x76EE;\x3c\/a\x3e\x3c\/p\x3e\x3ch2 id=\x22articleHeader4\x22\x3e\x26#x670D;\x26#x52A1;\x26#x5668;\x26amp;\x26#x722C;\x26#x866B;\x3c\/h2\x3e\x3cp\x3e\x26#x8FDB;\x26#x5165;\x3ccode\x3e\/backend-server\x3c\/code\x3e\x26#x6587;\x26#x4EF6;\x26#x5939;\x26#x5E76;\x26#x65B0;\x26#x5EFA;\x26#x540D;\x26#x4E3A;\x3ccode\x3ecrawler-server.js\x3c\/code\x3e\x26#x7684;\x26#x6587;\x26#x4EF6;\x26#xFF0C;\x26#x4EE3;\x26#x7801;\x26#x5982;\x26#x4E0B;\x26#xFF1A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22\/*** crawler-server.js ***\/\n\n\x26apos;use strict\x26apos;\nconst http = require(\x26apos;http\x26apos;)\nconst url = require(\x26apos;url\x26apos;)\nconst util = require(\x26apos;util\x26apos;)\nconst superagent = require(\x26apos;superagent\x26apos;)\nconst cheerio = require(\x26apos;cheerio\x26apos;)\n\nconst onRequest = (req, res) =\x26gt; {\n    \/\/ CORS options\n    res.writeHead(200, {\x26apos;Content-Type\x26apos;: \x26apos;text\/plain\x26apos;, \x26apos;Access-Control-Allow-Origin\x26apos;: \x26apos;*\x26apos;})\n    let keyWord = encodeURI(url.parse(req.url, true).query.query)\n    \/\/ recieve keyword from the client side and use it to make requests\n    if (keyWord) {\n        let resultArr = []\n        superagent.get(\x26apos;http:\/\/weixin.sogou.com\/weixin?type=1\x26amp;query=\x26apos; \x2b keyWord \x2b \x26apos;\x26amp;ie=utf8\x26amp;_sug_=n\x26amp;_sug_type_=\x26apos;).end((err, response) =\x26gt; {\n            if (err) console.log(err)\n            let $ = cheerio.load(response.text)\n\n            $(\x26apos;.mt7 .wx-rb\x26apos;).each((index, item) =\x26gt; {\n                \/\/ define an object and update it\n                \/\/ then push to the result array\n                let resultObj = {\n                    title: \x26apos;\x26apos;,\n                    wxNum: \x26apos;\x26apos;,\n                    link: \x26apos;\x26apos;,\n                    pic: \x26apos;\x26apos;,\n                }\n\n                resultObj.title = $(item).find(\x26apos;h3\x26apos;).text()\n                resultObj.wxNum = $(item).find(\x26apos;label\x26apos;).text()\n                resultObj.link = $(item).attr(\x26apos;href\x26apos;)\n                resultObj.pic = $(item).find(\x26apos;img\x26apos;).attr(\x26apos;src\x26apos;)\n                resultArr.push(resultObj)\n            })\n            \n            res.write(JSON.stringify(resultArr))\n            res.end()\n        })\n    }\n}\n\nhttp.createServer(onRequest).listen(process.env.PORT || 8090)\nconsole.log(\x26apos;Server Start!\x26apos;)\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs javascript\x22\x3e\x3ccode\x3e\x3cspan class=\x22hljs-comment\x22\x3e\/*** crawler-server.js ***\/\x3c\/span\x3e\n\x3cspan class=\x22hljs-meta\x22\x3e\n\x26apos;use strict\x26apos;\x3c\/span\x3e\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e http = \x3cspan class=\x22hljs-built_in\x22\x3erequire\x3c\/span\x3e(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;http\x26apos;\x3c\/span\x3e)\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e url = \x3cspan class=\x22hljs-built_in\x22\x3erequire\x3c\/span\x3e(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;url\x26apos;\x3c\/span\x3e)\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e util = \x3cspan class=\x22hljs-built_in\x22\x3erequire\x3c\/span\x3e(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;util\x26apos;\x3c\/span\x3e)\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e superagent = \x3cspan class=\x22hljs-built_in\x22\x3erequire\x3c\/span\x3e(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;superagent\x26apos;\x3c\/span\x3e)\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e cheerio = \x3cspan class=\x22hljs-built_in\x22\x3erequire\x3c\/span\x3e(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;cheerio\x26apos;\x3c\/span\x3e)\n\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e onRequest = \x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3ereq, res\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e {\n    \x3cspan class=\x22hljs-comment\x22\x3e\/\/ CORS options\x3c\/span\x3e\n    res.writeHead(\x3cspan class=\x22hljs-number\x22\x3e200\x3c\/span\x3e, {\x3cspan class=\x22hljs-string\x22\x3e\x26apos;Content-Type\x26apos;\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x26apos;text\/plain\x26apos;\x3c\/span\x3e, \x3cspan class=\x22hljs-string\x22\x3e\x26apos;Access-Control-Allow-Origin\x26apos;\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x26apos;*\x26apos;\x3c\/span\x3e})\n    \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e keyWord = \x3cspan class=\x22hljs-built_in\x22\x3eencodeURI\x3c\/span\x3e(url.parse(req.url, \x3cspan class=\x22hljs-literal\x22\x3etrue\x3c\/span\x3e).query.query)\n    \x3cspan class=\x22hljs-comment\x22\x3e\/\/ recieve keyword from the client side and use it to make requests\x3c\/span\x3e\n    \x3cspan class=\x22hljs-keyword\x22\x3eif\x3c\/span\x3e (keyWord) {\n        \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e resultArr = []\n        superagent.get(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;http:\/\/weixin.sogou.com\/weixin?type=1\x26amp;query=\x26apos;\x3c\/span\x3e \x2b keyWord \x2b \x3cspan class=\x22hljs-string\x22\x3e\x26apos;\x26amp;ie=utf8\x26amp;_sug_=n\x26amp;_sug_type_=\x26apos;\x3c\/span\x3e).end(\x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3eerr, response\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e {\n            \x3cspan class=\x22hljs-keyword\x22\x3eif\x3c\/span\x3e (err) \x3cspan class=\x22hljs-built_in\x22\x3econsole\x3c\/span\x3e.log(err)\n            \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e $ = cheerio.load(response.text)\n\n            $(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;.mt7 .wx-rb\x26apos;\x3c\/span\x3e).each(\x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3eindex, item\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e {\n                \x3cspan class=\x22hljs-comment\x22\x3e\/\/ define an object and update it\x3c\/span\x3e\n                \x3cspan class=\x22hljs-comment\x22\x3e\/\/ then push to the result array\x3c\/span\x3e\n                \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e resultObj = {\n                    \x3cspan class=\x22hljs-attr\x22\x3etitle\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x26apos;\x26apos;\x3c\/span\x3e,\n                    \x3cspan class=\x22hljs-attr\x22\x3ewxNum\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x26apos;\x26apos;\x3c\/span\x3e,\n                    \x3cspan class=\x22hljs-attr\x22\x3elink\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x26apos;\x26apos;\x3c\/span\x3e,\n                    \x3cspan class=\x22hljs-attr\x22\x3epic\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x26apos;\x26apos;\x3c\/span\x3e,\n                }\n\n                resultObj.title = $(item).find(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;h3\x26apos;\x3c\/span\x3e).text()\n                resultObj.wxNum = $(item).find(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;label\x26apos;\x3c\/span\x3e).text()\n                resultObj.link = $(item).attr(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;href\x26apos;\x3c\/span\x3e)\n                resultObj.pic = $(item).find(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;img\x26apos;\x3c\/span\x3e).attr(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;src\x26apos;\x3c\/span\x3e)\n                resultArr.push(resultObj)\n            })\n            \n            res.write(\x3cspan class=\x22hljs-built_in\x22\x3eJSON\x3c\/span\x3e.stringify(resultArr))\n            res.end()\n        })\n    }\n}\n\nhttp.createServer(onRequest).listen(process.env.PORT || \x3cspan class=\x22hljs-number\x22\x3e8090\x3c\/span\x3e)\n\x3cspan class=\x22hljs-built_in\x22\x3econsole\x3c\/span\x3e.log(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;Server Start!\x26apos;\x3c\/span\x3e)\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x4E00;\x26#x4E2A;\x26#x7B80;\x26#x5355;\x26#x7684;\x26#x722C;\x26#x866B;\x26#xFF0C;\x26#x901A;\x26#x8FC7;\x26#x5BA2;\x26#x6237;\x26#x7AEF;\x26#x63D0;\x26#x4F9B;\x26#x7684;\x26#x5173;\x26#x952E;\x26#x8BCD;\x26#x5411;\x26#x641C;\x26#x72D7;\x26#x53D1;\x26#x9001;\x26#x8BF7;\x26#x6C42;\x26#xFF0C;\x26#x540E;\x26#x5229;\x26#x7528;\x3ccode\x3echeerio\x3c\/code\x3e\x26#x5206;\x26#x6790;\x26#x83B7;\x26#x53D6;\x26#x5173;\x26#x952E;\x26#x7684;\x26#x4FE1;\x26#x606F;\x26#x3002;\x26#x8FD9;\x26#x91CC;\x26#x8D34;\x26#x4E0A;\x26#x641C;\x26#x72D7;\x26#x516C;\x26#x4F17;\x26#x53F7;\x26#x641C;\x26#x7D22;\x26#x7684;\x26#x5730;\x26#x5740;\x26#xFF0C;\x26#x4F60;\x26#x53EF;\x26#x4EE5;\x26#x4EB2;\x26#x81EA;\x26#x8BD5;\x26#x4E00;\x26#x8BD5;\x26#xFF1A;\x3ca href=\x22http:\/\/weixin.sogou.com\/\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttp:\/\/weixin.sogou.com\/\x3c\/a\x3e\x3c\/p\x3e\x3cp\x3e\x26#x5F53;\x26#x5F00;\x26#x542F;\x26#x670D;\x26#x52A1;\x26#x5668;\x26#x4EE5;\x26#x540E;\x26#xFF0C;\x26#x53EA;\x26#x8981;\x26#x5E26;\x26#x4E0A;\x26#x53C2;\x26#x6570;\x26#x8BF7;\x26#x6C42;\x3ccode\x3elocalhost:8090\x3c\/code\x3e\x26#x5373;\x26#x53EF;\x26#x83B7;\x26#x53D6;\x26#x5185;\x26#x5BB9;\x26#x3002;\x3c\/p\x3e\x3ch2 id=\x22articleHeader5\x22\x3e\x26#x4F7F;\x26#x7528;\x3ccode\x3eVuex\x3c\/code\x3e\x26#x4F5C;\x26#x72B6;\x26#x6001;\x26#x7BA1;\x26#x7406;\x3c\/h2\x3e\x3cp\x3e\x26#x5148;\x26#x8D34;\x26#x4E0A;\x3ccode\x3evuex\x3c\/code\x3e\x26#x5B98;\x26#x65B9;\x26#x6587;\x26#x6863;\x26#xFF1A;\x3ca href=\x22http:\/\/vuex.vuejs.org\/en\/index.html\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttp:\/\/vuex.vuejs.org\/en\/index.html\x3c\/a\x3e\x26#xFF0C;\x26#x76F8;\x26#x4FE1;\x26#x6211;\x26#xFF0C;\x26#x4E0D;\x26#x8981;\x26#x770B;\x26#x4E2D;\x26#x6587;\x26#x7248;\x26#x7684;\x26#xFF0C;\x26#x4E0D;\x26#x7136;\x26#x4F60;\x26#x4F1A;\x26#x8E29;\x26#x5751;\x26#xFF0C;\x26#x82F1;\x26#x6587;\x26#x7248;\x26#x8DB3;\x26#x591F;\x26#x4E86;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x4ECE;\x26#x524D;\x26#x6587;\x26#x7684;\x26#x67B6;\x26#x6784;\x26#x56FE;\x26#x53EF;\x26#x4EE5;\x26#x77E5;\x26#x9053;\x26#xFF0C;\x26#x6240;\x26#x6709;\x26#x7684;\x26#x6570;\x26#x636E;\x26#x6D41;\x26#x901A;\x26#x90FD;\x26#x662F;\x26#x901A;\x26#x8FC7;\x3ccode\x3evuex\x3c\/code\x3e\x26#x8FDB;\x26#x884C;\x26#xFF0C;\x26#x901A;\x26#x8FC7;\x26#x4E0A;\x26#x9762;\x26#x7684;\x26#x6587;\x26#x6863;\x26#x4E86;\x26#x89E3;\x26#x4E86;\x26#x6709;\x26#x5173;\x3ccode\x3evuex\x3c\/code\x3e\x26#x7684;\x26#x7528;\x26#x6CD5;\x26#x4EE5;\x26#x540E;\x26#xFF0C;\x26#x6211;\x26#x4EEC;\x26#x8FDB;\x26#x5165;\x3ccode\x3e\/vuex\x3c\/code\x3e\x26#x6587;\x26#x4EF6;\x26#x5939;\x26#x6765;\x26#x6784;\x26#x5EFA;\x26#x6838;\x26#x5FC3;\x26#x7684;\x3ccode\x3estore.js\x3c\/code\x3e\x26#x4EE3;\x26#x7801;\x26#xFF1A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22\/*** store.js ***\/\n\nimport Vue from \x26apos;vue\x26apos;\nimport Vuex from \x26apos;vuex\x26apos;\n\nVue.use(Vuex)\n\nconst state = {\n  collectItems: [],\n  searchResult: {}\n}\n\nlocalStorage.getItem(\x26quot;collectItems\x26quot;)?\n state.collectItems = localStorage.getItem(\x26quot;collectItems\x26quot;).split(\x26apos;,\x26apos;):\n  false\n\nconst mutations = {\n  SET_RESULT (state, result) {\n    state.searchResult = result\n  },\n  COLLECT_IT (state, name) {\n    state.collectItems.push(name)\n    localStorage.setItem(\x26quot;collectItems\x26quot;, state.collectItems)\n  },\n  DELETE_COLLECTION (state, name) {\n    state.collectItems.splice(state.collectItems.indexOf(name), 1)\n    localStorage.setItem(\x26quot;collectItems\x26quot;, state.collectItems)\n  }\n}\n\nexport default new Vuex.Store({\n  state,\n  mutations\n})\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs pf\x22\x3e\x3ccode\x3e\/*** store.js ***\/\n\nimport Vue \x3cspan class=\x22hljs-keyword\x22\x3efrom\x3c\/span\x3e \x26apos;vue\x26apos;\nimport Vuex \x3cspan class=\x22hljs-keyword\x22\x3efrom\x3c\/span\x3e \x26apos;vuex\x26apos;\n\nVue.use(Vuex)\n\nconst \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e = {\n  collectItems: [],\n  searchResult: {}\n}\n\nlocalStorage.getItem(\x3cspan class=\x22hljs-string\x22\x3e\x26quot;collectItems\x26quot;\x3c\/span\x3e)?\n \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.collectItems = localStorage.getItem(\x3cspan class=\x22hljs-string\x22\x3e\x26quot;collectItems\x26quot;\x3c\/span\x3e).split(\x26apos;,\x26apos;):\n  false\n\nconst mutations = {\n  SET_RESULT (\x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e, result) {\n    \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.searchResult = result\n  },\n  COLLECT_IT (\x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e, name) {\n    \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.collectItems.push(name)\n    localStorage.\x3cspan class=\x22hljs-built_in\x22\x3eset\x3c\/span\x3eItem(\x3cspan class=\x22hljs-string\x22\x3e\x26quot;collectItems\x26quot;\x3c\/span\x3e, \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.collectItems)\n  },\n  DELETE_COLLECTION (\x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e, name) {\n    \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.collectItems.splice(\x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.collectItems.indexOf(name), \x3cspan class=\x22hljs-number\x22\x3e1\x3c\/span\x3e)\n    localStorage.\x3cspan class=\x22hljs-built_in\x22\x3eset\x3c\/span\x3eItem(\x3cspan class=\x22hljs-string\x22\x3e\x26quot;collectItems\x26quot;\x3c\/span\x3e, \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.collectItems)\n  }\n}\n\nexport \x3cspan class=\x22hljs-keyword\x22\x3edefault\x3c\/span\x3e new Vuex.Store({\n  \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e,\n  mutations\n})\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x4E0B;\x26#x9762;\x26#x6211;\x26#x4EEC;\x26#x5C06;\x26#x5BF9;\x26#x5F53;\x26#x4E2D;\x26#x7684;\x26#x4EE3;\x26#x7801;\x26#x91CD;\x26#x70B9;\x26#x5206;\x26#x6790;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x9996;\x26#x5148;\x26#x6211;\x26#x4EEC;\x26#x5B9A;\x26#x4E49;\x26#x4E86;\x26#x4E00;\x26#x4E2A;\x3ccode\x3estate\x3c\/code\x3e\x26#x5BF9;\x26#x8C61;\x26#xFF0C;\x26#x91CC;\x26#x9762;\x26#x7684;\x26#x4E24;\x26#x4E2A;\x26#x5C5E;\x26#x6027;\x26#x5BF9;\x26#x5E94;\x26#x7740;\x26#x6536;\x26#x85CF;\x26#x5939;\x26#x5185;\x26#x5BB9;\x26#xFF0C;\x26#x641C;\x26#x7D22;\x26#x7ED3;\x26#x679C;\x26#x3002;\x26#x6362;\x26#x53E5;\x26#x8BDD;\x26#x8BF4;\x26#xFF0C;\x26#x6574;\x26#x4E2A;APP\x26#x7684;\x26#x6570;\x26#x636E;\x26#x5C31;\x26#x662F;\x26#x5B58;\x26#x653E;\x26#x5728;\x3ccode\x3estate\x3c\/code\x3e\x26#x5BF9;\x26#x8C61;\x26#x91CC;\x26#xFF0C;\x26#x968F;\x26#x53D6;\x26#x968F;\x26#x7528;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x63A5;\x26#x7740;\x26#xFF0C;\x26#x6211;\x26#x4EEC;\x26#x518D;\x26#x5B9A;\x26#x4E49;\x26#x4E00;\x26#x4E2A;\x3ccode\x3emutations\x3c\/code\x3e\x26#x5BF9;\x26#x8C61;\x26#x3002;\x26#x6211;\x26#x4EEC;\x26#x53EF;\x26#x4EE5;\x26#x628A;\x3ccode\x3emutations\x3c\/code\x3e\x26#x7406;\x26#x89E3;\x26#x4E3A;\x26#x201C;\x26#x7528;\x26#x4E8E;\x26#x6539;\x26#x53D8;\x3ccode\x3estate\x3c\/code\x3e\x26#x72B6;\x26#x6001;\x26#x7684;\x26#x4E00;\x26#x7CFB;\x26#x5217;\x26#x65B9;\x26#x6CD5;\x26#x201D;\x26#x3002;\x26#x5728;\x3ccode\x3evuex\x3c\/code\x3e\x26#x7684;\x26#x6982;\x26#x5FF5;\x26#x91CC;\x26#xFF0C;\x3ccode\x3estate\x3c\/code\x3e\x26#x4EC5;\x26#x80FD;\x26#x901A;\x26#x8FC7;\x3ccode\x3emutation\x3c\/code\x3e\x26#x4FEE;\x26#x6539;\x26#xFF0C;\x26#x8FD9;\x26#x6837;\x26#x7684;\x26#x597D;\x26#x5904;\x26#x662F;\x26#x80FD;\x26#x591F;\x26#x66F4;\x26#x76F4;\x26#x89C2;\x26#x6E05;\x26#x6670;\x26#x5730;\x26#x96C6;\x26#x4E2D;\x26#x7BA1;\x26#x7406;\x26#x5E94;\x26#x7528;\x26#x7684;\x26#x72B6;\x26#x6001;\x26#xFF0C;\x26#x800C;\x26#x4E0D;\x26#x662F;\x26#x628A;\x26#x6570;\x26#x636E;\x26#x6254;\x26#x5F97;\x26#x5230;\x26#x5904;\x26#x90FD;\x26#x662F;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x901A;\x26#x8FC7;\x26#x4EE3;\x26#x7801;\x26#x4E0D;\x26#x96BE;\x26#x770B;\x26#x51FA;\x26#xFF0C;\x26#x4E09;\x26#x4E2A;\x3ccode\x3emutation\x3c\/code\x3e\x26#x7684;\x26#x4F5C;\x26#x7528;\x26#x5206;\x26#x522B;\x26#x662F;\x26#xFF1A;\x3c\/p\x3e\x3cul\x3e\x3cli\x3e\x3cp\x3e\x3ccode\x3eSET_RESULT\x3c\/code\x3e\x26#xFF1A;\x26#x628A;\x26#x641C;\x26#x7D22;\x26#x7ED3;\x26#x679C;\x26#x5B58;\x26#x5165;\x3ccode\x3estate\x3c\/code\x3e\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ccode\x3eCOLLECT_IT\x3c\/code\x3e\x26#xFF1A;\x26#x6DFB;\x26#x52A0;\x26#x5230;\x26#x6536;\x26#x85CF;\x26#x5939;\x26#x64CD;\x26#x4F5C;\x26#xFF08;\x26#x5305;\x26#x62EC;\x3ccode\x3elocalstorage\x3c\/code\x3e\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ccode\x3eDELETE_IT\x3c\/code\x3e\x26#xFF1A;\x26#x4ECE;\x26#x6536;\x26#x85CF;\x26#x5939;\x26#x79FB;\x26#x9664;\x26#x64CD;\x26#x4F5C;\x26#xFF08;\x26#x5305;\x26#x62EC;\x3ccode\x3elocalstorage\x3c\/code\x3e\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3c\/ul\x3e\x3ch2 id=\x22articleHeader6\x22\x3e\x26#x7EC4;\x26#x4EF6;\x26#x6570;\x26#x636E;\x26#x5904;\x26#x7406;\x3c\/h2\x3e\x3cp\x3e\x26#x6211;\x26#x4EEC;\x26#x7684;APP\x26#x4E00;\x26#x5171;\x26#x6709;\x26#x4E24;\x26#x4E2A;\x26#x7EC4;\x26#x4EF6;\x26#xFF0C;\x3ccode\x3eSearchBar.vue\x3c\/code\x3e\x26#x548C;\x3ccode\x3eSearchResult.vue\x3c\/code\x3e\x26#xFF0C;\x26#x5206;\x26#x522B;\x26#x5BF9;\x26#x5E94;\x26#x7740;\x26#x641C;\x26#x7D22;\x26#x90E8;\x26#x5206;\x26#x7EC4;\x26#x4EF6;\x26#x548C;\x26#x7ED3;\x26#x679C;\x26#x90E8;\x26#x5206;\x26#x7EC4;\x26#x4EF6;\x26#x3002;\x26#x5176;\x26#x4E2D;\x26#x641C;\x26#x7D22;\x26#x90E8;\x26#x5206;\x26#x7EC4;\x26#x4EF6;\x26#x5305;\x26#x542B;\x26#x7740;\x26#x6536;\x26#x85CF;\x26#x5939;\x26#x90E8;\x26#x5206;\x26#xFF0C;\x26#x6240;\x26#x4EE5;\x26#x4E5F;\x26#x53EF;\x26#x4EE5;\x26#x7406;\x26#x89E3;\x26#x4E3A;\x26#x6709;\x26#x4E09;\x26#x4E2A;\x26#x90E8;\x26#x5206;\x26#x3002;\x3c\/p\x3e\x3ch4\x3e\x26#x641C;\x26#x7D22;\x26#x90E8;\x26#x5206;\x26#x7EC4;\x26#x4EF6;\x3ccode\x3eSearchBar.vue\x3c\/code\x3e\x3c\/h4\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22\/*** SearchBar.vue ***\/\n\n\nvuex: {\n  getters: {\n    collectItem(state) {\n      return state.collectItems\n    }\n  },\n  actions: {\n    deleteCollection: ({ dispatch }, name) =\x26gt; {\n      dispatch(\x26apos;DELETE_COLLECTION\x26apos;, name)\n    },\n    searchFun: ({ dispatch }, keyword) =\x26gt; {\n      $.get(\x26apos;http:\/\/localhost:8090\x26apos;, { query: keyword }, (data) =\x26gt; {\n        dispatch(\x26apos;SET_RESULT\x26apos;, JSON.parse(data))\n      })\n    }\n  }\n}\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs typescript\x22\x3e\x3ccode\x3e\x3cspan class=\x22hljs-comment\x22\x3e\/*** SearchBar.vue ***\/\x3c\/span\x3e\n\n\nvuex: {\n  getters: {\n    collectItem(state) {\n      \x3cspan class=\x22hljs-keyword\x22\x3ereturn\x3c\/span\x3e state.collectItems\n    }\n  },\n  actions: {\n    deleteCollection: \x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3e{ dispatch }, name\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e {\n      dispatch(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;DELETE_COLLECTION\x26apos;\x3c\/span\x3e, name)\n    },\n    searchFun: \x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3e{ dispatch }, keyword\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e {\n      $.\x3cspan class=\x22hljs-keyword\x22\x3eget\x3c\/span\x3e(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;http:\/\/localhost:8090\x26apos;\x3c\/span\x3e, { query: keyword }, \x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3edata\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e {\n        dispatch(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;SET_RESULT\x26apos;\x3c\/span\x3e, \x3cspan class=\x22hljs-built_in\x22\x3eJSON\x3c\/span\x3e.parse(data))\n      })\n    }\n  }\n}\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x4EE3;\x26#x7801;\x26#x6709;\x26#x70B9;\x26#x957F;\x26#xFF0C;\x26#x8FD9;\x26#x91CC;\x26#x4EC5;\x26#x91CD;\x26#x70B9;\x26#x4ECB;\x26#x7ECD;\x3ccode\x3evuex\x3c\/code\x3e\x26#x90E8;\x26#x5206;\x26#xFF0C;\x26#x5B8C;\x26#x6574;\x26#x4EE3;\x26#x7801;\x26#x53EF;\x26#x4EE5;\x26#x53C2;\x26#x8003;\x3ca href=\x22https:\/\/github.com\/jrainlau\/wechat-subscriptor\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x9879;\x26#x76EE;\x3c\/a\x3e\x26#x3002;\x3c\/p\x3e\x3cul\x3e\x3cli\x3e\x3cp\x3e\x3ccode\x3egetters\x3c\/code\x3e\x26#x83B7;\x26#x53D6;\x3ccode\x3estore\x3c\/code\x3e\x26#x5F53;\x26#x4E2D;\x26#x7684;\x26#x6570;\x26#x636E;\x26#x4F5C;\x26#x4E88;\x26#x7EC4;\x26#x4EF6;\x26#x4F7F;\x26#x7528;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ccode\x3eactions\x3c\/code\x3e\x26#x7684;\x26#x4E24;\x26#x4E2A;\x26#x65B9;\x26#x6CD5;\x26#x8D1F;\x26#x8D23;\x26#x628A;\x26#x6570;\x26#x636E;\x26#x5206;\x26#x53D1;\x26#x5230;\x3ccode\x3estore\x3c\/code\x3e\x26#x4E2D;\x26#x4F9B;\x3ccode\x3emutation\x3c\/code\x3e\x26#x4F7F;\x26#x7528;\x3c\/p\x3e\x3c\/li\x3e\x3c\/ul\x3e\x3cp\x3e\x26#x770B;\x26#x5B98;\x26#x65B9;\x26#x7684;\x26#x4F8B;\x26#x5B50;\x26#xFF0C;\x26#x5728;\x26#x7EC4;\x26#x4EF6;\x26#x4E2D;\x26#x5411;\x3ccode\x3eaction\x3c\/code\x3e\x26#x4F20;\x26#x53C2;\x26#x4F3C;\x26#x4E4E;\x26#x5F88;\x26#x590D;\x26#x6742;\x26#xFF0C;\x26#x5176;\x26#x5B9E;\x26#x5B8C;\x26#x5168;\x26#x53EF;\x26#x4EE5;\x26#x901A;\x26#x8FC7;\x3ccode\x3emethods\x3c\/code\x3e\x26#x6765;\x26#x5904;\x26#x7406;\x26#x53C2;\x26#x6570;\x26#xFF0C;\x26#x5728;\x26#x89E6;\x26#x53D1;\x3ccode\x3eactions\x3c\/code\x3e\x26#x7684;\x26#x540C;\x26#x65F6;\x26#x628A;\x26#x53C2;\x26#x6570;\x26#x4F20;\x26#x8FDB;\x26#x53BB;\x26#x3002;\x3c\/p\x3e\x3ch4\x3e\x26#x7ED3;\x26#x679C;\x26#x90E8;\x26#x5206;\x26#x7EC4;\x26#x4EF6;\x3ccode\x3eSearchResult.vue\x3c\/code\x3e\x3c\/h4\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22\/*** SearchResult.vue ***\/\n\nvuex: {\n  getters: {\n    wordValue(state) {\n      return state.keyword\n    },\n    collectItems(state) {\n      return state.collectItems\n    },\n    searchResult(state) {\n      return state.searchResult\n    }\n  },\n  actions: {\n    collectIt: ({ dispatch }, name, collectArr) =\x26gt; {\n      for(let item of collectArr) {\n        if(item == name) return false\n      }\n      dispatch(\x26apos;COLLECT_IT\x26apos;, name)\n    }\n  }\n}\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs pf\x22\x3e\x3ccode\x3e\/*** SearchResult.vue ***\/\n\nvuex: {\n  getters: {\n    wordValue(\x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e) {\n      return \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.keyword\n    },\n    collectItems(\x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e) {\n      return \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.collectItems\n    },\n    searchResult(\x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e) {\n      return \x3cspan class=\x22hljs-keyword\x22\x3estate\x3c\/span\x3e.searchResult\n    }\n  },\n  actions: {\n    collectIt: ({ dispatch }, name, collectArr) =\x26gt; {\n      \x3cspan class=\x22hljs-keyword\x22\x3efor\x3c\/span\x3e(let item of collectArr) {\n        if(item == name) return false\n      }\n      dispatch(\x26apos;COLLECT_IT\x26apos;, name)\n    }\n  }\n}\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x7ED3;\x26#x679C;\x26#x90E8;\x26#x5206;\x26#x4E3B;\x26#x8981;\x26#x5728;\x26#x4E8E;\x26#x5C55;\x26#x793A;\x26#xFF0C;\x26#x9700;\x26#x8981;\x26#x89E6;\x26#x53D1;\x3ccode\x3eaction\x3c\/code\x3e\x26#x7684;\x26#x5730;\x26#x65B9;\x26#x4EC5;\x26#x4EC5;\x26#x662F;\x26#x6DFB;\x26#x52A0;\x26#x5230;\x26#x6536;\x26#x85CF;\x26#x5939;\x26#x8FD9;\x26#x4E00;\x26#x64CD;\x26#x4F5C;\x26#x3002;\x26#x9700;\x26#x8981;\x26#x6CE8;\x26#x610F;\x26#x7684;\x26#x5730;\x26#x65B9;\x26#x662F;\x26#x5E94;\x26#x5F53;\x26#x907F;\x26#x514D;\x26#x91CD;\x26#x590D;\x26#x6DFB;\x26#x52A0;\x26#xFF0C;\x26#x6240;\x26#x4EE5;\x26#x4F7F;\x26#x7528;\x26#x4E86;\x3ccode\x3efor...of\x3c\/code\x3e\x26#x5FAA;\x26#x73AF;\x26#xFF0C;\x26#x5F53;\x26#x6570;\x26#x7EC4;\x26#x4E2D;\x26#x5DF2;\x26#x6709;\x26#x5F53;\x26#x524D;\x26#x5143;\x26#x7D20;\x26#x7684;\x26#x65F6;\x26#x5019;\x26#x5C31;\x26#x4E0D;\x26#x518D;\x26#x6DFB;\x26#x52A0;\x26#x4E86;\x26#x3002;\x3c\/p\x3e\x3ch2 id=\x22articleHeader7\x22\x3e\x26#x5C3E;\x26#x58F0;\x3c\/h2\x3e\x3cp\x3e\x26#x5173;\x26#x952E;\x26#x7684;\x26#x903B;\x26#x8F91;\x26#x90E8;\x26#x5206;\x26#x4EE3;\x26#x7801;\x26#x5206;\x26#x6790;\x26#x5B8C;\x26#x6BD5;\x26#xFF0C;\x26#x8FD9;\x26#x4E2A;APP\x26#x4E5F;\x26#x5C31;\x26#x8FD9;\x26#x4E48;\x26#x4E00;\x26#x56DE;\x26#x4E8B;\x26#x513F;\x26#xFF0C;UI\x26#x90E8;\x26#x5206;\x26#x5C31;\x26#x4E0D;\x26#x7EC6;\x26#x8BF4;\x26#x4E86;\x26#xFF0C;\x26#x770B;\x26#x770B;\x26#x9879;\x26#x76EE;\x26#x6E90;\x26#x7801;\x26#x6216;\x26#x8005;\x26#x4F60;\x26#x81EA;\x26#x5DF1;DIY\x26#x5C31;\x26#x53EF;\x26#x4EE5;\x26#x3002;\x26#x81F3;\x26#x4E8E;\x26#x6253;\x26#x5305;\x26#x6210;APP\x26#xFF0C;\x26#x9996;\x26#x5148;\x26#x4F60;\x26#x8981;\x26#x4E0B;\x26#x8F7D;HBuilder\x26#xFF0C;\x26#x7136;\x26#x540E;\x26#x901A;\x26#x8FC7;\x26#x5B83;\x26#x76F4;\x26#x63A5;\x26#x6253;\x26#x5305;\x26#x5C31;\x26#x53EF;\x26#x4EE5;\x26#x4E86;\x26#xFF0C;\x26#x914D;\x26#x5957;\x26#x4F7F;\x26#x7528;\x3ccode\x3emui\x3c\/code\x3e\x26#x80FD;\x26#x591F;\x26#x4F53;\x26#x9A8C;\x26#x66F4;\x26#x597D;\x26#x7684;\x26#x6548;\x26#x679C;\x26#xFF0C;\x26#x4E0D;\x26#x77E5;\x26#x9053;\x26#x4E3A;\x26#x4EC0;\x26#x4E48;\x26#x90A3;\x26#x4E48;\x26#x591A;\x26#x4EBA;\x26#x9ED1;\x26#x5B83;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x641C;\x26#x72D7;\x26#x63D0;\x26#x4F9B;\x26#x7684;API\x26#x5F88;\x26#x5F3A;\x26#x5927;\x26#xFF0C;\x26#x4F46;\x26#x662F;\x26#x63D0;\x26#x9192;\x26#x4E00;\x26#x4E0B;\x26#xFF0C;\x26#x5343;\x26#x4E07;\x26#x4E0D;\x26#x8981;\x26#x64CD;\x26#x4F5C;\x26#x592A;\x26#x8FC7;\x26#x9891;\x26#x7E41;\x26#xFF0C;\x26#x4E0D;\x26#x7136;\x26#x4F60;\x26#x7684;IP\x26#x4F1A;\x26#x88AB;\x26#x5B83;\x26#x5C01;\x26#x6389;\x26#xFF0C;\x26#x6211;\x26#x7684;\x26#x5DF2;\x26#x7ECF;\x26#x88AB;\x26#x5C01;\x26#x4E86;\x26#x2026;\x26#x2026;\x3c\/p\x3e\x3cp\x3e\x3ccode\x3eWeex\x3c\/code\x3e\x26#x5DF2;\x26#x7ECF;\x26#x51FA;\x26#x6765;\x26#x4E86;\x26#xFF0C;\x26#x901A;\x26#x8FC7;\x26#x5B83;\x26#x53EF;\x26#x4EE5;\x26#x6784;\x26#x5EFA;Native\x26#x5E94;\x26#x7528;\x26#xFF0C;\x26#x60F3;\x26#x60F3;\x26#x4E5F;\x26#x662F;\x26#x6FC0;\x26#x52A8;\x26#x554A;\x26#xFF0C;\x26#x5F85;\x26#x5FC3;\x26#x8840;\x26#x6765;\x26#x6F6E;\x26#x5C31;\x26#x628A;\x26#x672C;\x26#x6587;\x26#x7684;\x26#x9879;\x26#x76EE;\x26#x505A;\x26#x6210;\x3ccode\x3eWeex\x3c\/code\x3e\x26#x7248;\x26#x672C;\x26#x7684;\x26#x73A9;\x26#x73A9;\x26#x2026;\x26#x2026;\x3c\/p\x3e\x3cp\x3e\x26#x6700;\x26#x540E;\x26#x7684;\x26#x6700;\x26#x540E;\x26#xFF0C;\x26#x611F;\x26#x8C22;\x26#x4F60;\x26#x7684;\x26#x9605;\x26#x8BFB;\x26#xFF0C;\x26#x5982;\x26#x679C;\x26#x89C9;\x26#x5F97;\x26#x6211;\x26#x7684;\x26#x6587;\x26#x7AE0;\x26#x4E0D;\x26#x9519;\x26#xFF0C;\x26#x6B22;\x26#x8FCE;\x26#x5173;\x26#x6CE8;\x26#x6211;\x26#x7684;\x26#x4E13;\x26#x680F;\x26#xFF0C;\x26#x4E0B;\x26#x6B21;\x26#x89C1;\x26#xFF01;\x3c\/p\x3e\n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/8fb3194/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/5c5d3d9c/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/b5a8e07a/&text=一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/b5a8e07a/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/b5a8e07a/&text=一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/b5a8e07a/&title=一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/b5a8e07a/&is_video=false&description=一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app&body=Check out this article: https://alili.tech/archive/b5a8e07a/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/b5a8e07a/&title=一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/b5a8e07a/&title=一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/b5a8e07a/&title=一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/b5a8e07a/&title=一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">下载&amp;运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">项目介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">3.</span> <span class="toc-text">整体架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader3"><span class="toc-number">4.</span> <span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader4"><span class="toc-number">5.</span> <span class="toc-text">服务器&amp;爬虫</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">6.</span> <span class="toc-text">使用Vuex作状态管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader6"><span class="toc-number">7.</span> <span class="toc-text">组件数据处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">7.0.1.</span> <span class="toc-text">搜索部分组件SearchBar.vue</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">7.0.2.</span> <span class="toc-text">结果部分组件SearchResult.vue</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader7"><span class="toc-number">8.</span> <span class="toc-text">尾声</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-10-28T18:30:09.000Z" itemprop="datePublished">2018-10-29</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <p>&#x53EA;&#x770B;&#x4E0D;&#x8D5E;&#xFF0C;&#x6216;&#x8005;&#x53EA;&#x6536;&#x85CF;&#x4E0D;&#x8D5E;&#x7684;&#x90FD;&#x662F;&#x800D;&#x6D41;&#x6C13;&#xFF0C;&#x653E;&#x5B66;&#x522B;&#x8D70;&#xFF0C;&#x6211;&#x627E;&#x6211;&#x54E5;&#x6536;&#x62FE;&#x4F60;&#x4EEC;&#x3002;</p><blockquote><p>&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/jrainlau/wechat-subscriptor" rel="nofollow noreferrer" target="_blank">https://github.com/jrainlau/wechat-subscriptor</a></p></blockquote><p><span class="img-wrap"><img data-src="/img/bVyFVF" src="https://static.alili.tech/img/bVyFVF" alt="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" title="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" style="cursor:pointer"></span></p><p><span class="img-wrap"><img data-src="/img/bVyFV9" src="https://static.alili.tech/img/bVyFV9" alt="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" title="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" style="cursor:pointer"></span></p><h2 id="articleHeader0">&#x4E0B;&#x8F7D;&amp;&#x8FD0;&#x884C;</h2><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="git clone git@github.com:jrainlau/wechat-subscriptor.git
-cd wechat-subscriptor &amp;&amp; npm install
-
-npm run dev   // run in dev mode
-cd backend-server &amp;&amp; node crawler.js   // turn on the crawler server
-
-open `localhost:8080` in your broswer and enjoy it." title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs crmsh"><code>git <span class="hljs-keyword">clone</span> <span class="hljs-title">git</span>@github.com:jrainlau/wechat-subscriptor.git
-cd wechat-subscriptor &amp;&amp; npm install
-
-npm run dev   // run <span class="hljs-keyword">in</span> dev mode
-cd backend-server &amp;&amp; <span class="hljs-keyword">node</span> <span class="hljs-title">crawler</span>.js   // turn on the crawler server
-
-open `localhost:<span class="hljs-number">8080</span>` <span class="hljs-keyword">in</span> your broswer <span class="hljs-keyword">and</span> enjoy it.</code></pre><h2 id="articleHeader1">&#x9879;&#x76EE;&#x4ECB;&#x7ECD;</h2><p>&#x6211;&#x5728;&#x5FAE;&#x4FE1;&#x4E0A;&#x5173;&#x6CE8;&#x4E86;&#x4E0D;&#x5C11;&#x7684;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x7ECF;&#x5E38;&#x6D4F;&#x89C8;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x4F46;&#x662F;&#x5F80;&#x5F80;&#x5728;&#x6211;&#x9605;&#x8BFB;&#x6587;&#x7AE0;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x603B;&#x662F;&#x88AB;&#x5404;&#x79CD;&#x5FAE;&#x4FE1;&#x6D88;&#x606F;&#x6253;&#x65AD;&#xFF0C;&#x4E0D;&#x5F97;&#x4E0D;&#x5207;&#x51FA;&#x53BB;&#xFF0C;&#x56DE;&#x590D;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x4E00;&#x8DEF;&#x70B9;&#x56DE;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x6587;&#x7AE0;&#xFF0C;&#x5468;&#x800C;&#x590D;&#x59CB;&#xFF0C;&#x4E0D;&#x80DC;&#x5176;&#x70E6;&#x3002;&#x540E;&#x6765;&#x60F3;&#x8D77;&#xFF0C;&#x5FAE;&#x4FE1;&#x8DDF;&#x641C;&#x72D7;&#x6709;&#x5408;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x641C;&#x72D7;&#x76F4;&#x63A5;&#x641C;&#x7D22;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x90A3;&#x4E48;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x8D44;&#x6E90;&#x505A;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x6536;&#x85CF;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x5E94;&#x7528;&#x5462;&#xFF1F;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5730;&#x641C;&#x7D22;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x5B83;&#x6536;&#x85CF;&#x8D77;&#x6765;&#xFF0C;&#x60F3;&#x770B;&#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;&#x6253;&#x5F00;&#x5C31;&#x80FD;&#x770B;&#x3002;&#x597D;&#x5427;&#xFF0C;&#x5176;&#x5B9E;&#x4E5F;&#x4E0D;&#x96BE;&#xFF0C;&#x90A3;&#x5C31;&#x5F00;&#x59CB;&#x4ECE;&#x67B6;&#x6784;&#x5F00;&#x59CB;&#x6784;&#x601D;&#x3002;</p><h2 id="articleHeader2">&#x6574;&#x4F53;&#x67B6;&#x6784;</h2><p>&#x56FD;&#x9645;&#x60EF;&#x4F8B;&#xFF0C;&#x5148;&#x770B;&#x67B6;&#x6784;&#x56FE;&#xFF1A;</p><p><span class="img-wrap"><img data-src="/img/bVyGqh" src="https://static.alili.tech/img/bVyGqh" alt="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" title="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" style="cursor:pointer"></span></p><p>&#x7136;&#x540E;&#x662F;&#x6280;&#x672F;&#x9009;&#x578B;&#xFF1A;</p><ol><li><p>&#x5229;&#x7528;&#x641C;&#x72D7;&#x7684;API&#x4F5C;&#x4E3A;&#x67E5;&#x8BE2;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x63A5;&#x53E3;</p></li><li><p>&#x7531;&#x4E8E;&#x5B58;&#x5728;&#x8DE8;&#x57DF;&#x95EE;&#x9898;&#xFF0C;&#x9042;&#x901A;&#x8FC7;<code>node</code>&#x722C;&#x866B;&#x4F7F;&#x7528;&#x63A5;&#x53E3;</p></li><li><p>&#x4F7F;&#x7528;<code>vue</code>&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#xFF0C;<code>vuex</code>&#x4F5C;&#x72B6;&#x6001;&#x7BA1;&#x7406;</p></li><li><p>&#x4F7F;&#x7528;<code>mui</code>&#x4F5C;&#x4E3A;UI&#x6846;&#x67B6;&#xFF0C;&#x65B9;&#x4FBF;&#x65E5;&#x540E;&#x6253;&#x5305;&#x6210;&#x624B;&#x673A;app</p></li><li><p>&#x4F7F;&#x7528;<code>vue-cli</code>&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;&#x5E76;&#x901A;&#x8FC7;<code>webpack</code>&#x8FDB;&#x884C;&#x6784;&#x5EFA;</p></li></ol><p>&#x9996;&#x5148;&#x5206;&#x6790;&#x7EA2;&#x5708;&#x4E2D;&#x7684;<code>vuex</code>&#x90E8;&#x5206;&#x3002;&#x5B83;&#x662F;&#x6574;&#x4E2A;APP&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x4E5F;&#x662F;&#x6240;&#x6709;&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;&#x4E2D;&#x5FC3;&#x3002;</p><p>&#x5BA2;&#x6237;&#x7AEF;&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#x90FD;&#x662F;&#x5728;<code>action</code>&#x4E2D;&#x5B8C;&#x6210;&#x5BF9;&#x6D41;&#x5165;&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;&#xFF08;&#x5982;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7B49;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;<code>action</code>&#x89E6;&#x53D1;<code>mutation</code>&#x4FEE;&#x6539;<code>state</code>&#xFF0C;&#x540E;&#x7531;<code>state</code>&#x7ECF;&#x8FC7;<code>getter</code>&#x5206;&#x53D1;&#x7ED9;&#x5404;&#x7EC4;&#x4EF6;&#xFF0C;&#x6EE1;&#x8DB3;&#x201C;&#x5355;&#x9879;&#x6570;&#x636E;&#x6D41;&#x201D;&#x7684;&#x7279;&#x70B9;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x7B26;&#x5408;&#x5B98;&#x65B9;&#x63A8;&#x8350;&#x7684;&#x505A;&#x6CD5;&#xFF1A;</p><p><span class="img-wrap"><img data-src="/img/bVvQhq" src="https://static.alili.tech/img/bVvQhq" alt="vuex.png" title="vuex.png" style="cursor:pointer"></span></p><p>&#x7406;&#x89E3;&#x5B8C;&#x6700;&#x91CD;&#x8981;&#x7684;<code>vuex</code>&#x4EE5;&#x540E;&#xFF0C;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#x4E5F;&#x5C31;&#x987A;&#x5229;&#x6210;&#x7AE0;&#x4E86;&#x3002;&#x7BAD;&#x5934;&#x8868;&#x793A;&#x6570;&#x636E;&#x7684;&#x6D41;&#x52A8;&#xFF0C;<code>LocalStorage</code>&#x8D1F;&#x8D23;&#x50A8;&#x5B58;&#x6536;&#x85CF;&#x5939;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x65B9;&#x4FBF;&#x4E0B;&#x4E00;&#x6B21;&#x6253;&#x5F00;&#x5E94;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#xFF0C;node&#x670D;&#x52A1;&#x5668;&#x8D1F;&#x8D23;&#x6839;&#x636E;&#x5173;&#x952E;&#x5B57;&#x722C;&#x53D6;&#x641C;&#x72D7;API&#x63D0;&#x4F9B;&#x7684;&#x6570;&#x636E;&#x3002;</p><p>&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x7B80;&#x5355;&#xFF1F;&#x4E0B;&#x9762;&#x8BA9;&#x6211;&#x4EEC;&#x4E00;&#x8D77;&#x6765;&#x5F00;&#x59CB;coding&#x5427;&#xFF01;</p><h2 id="articleHeader3">&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;</h2><p><code>npm install vue-cli -g</code>&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;&#x7684;<code>vue-cli</code>&#xFF0C;&#x7136;&#x540E;<code>vue init webpack wechat-subscriptor</code>&#xFF0C;&#x6309;&#x63D0;&#x793A;&#x7ECF;&#x8FC7;&#x4E00;&#x6B65;&#x6B65;&#x8BBE;&#x7F6E;&#x5E76;&#x5B89;&#x88C5;&#x5B8C;&#x4F9D;&#x8D56;&#x5305;&#x4EE5;&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x9879;&#x76EE;&#x7684;&#x76EE;&#x5F55;&#x5E76;&#x7A0D;&#x4F5C;&#x6539;&#x52A8;&#xFF0C;&#x6700;&#x7EC8;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p><p><span class="img-wrap"><img data-src="/img/bVyF62" src="https://static.alili.tech/img/bVyF62" alt="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" title="&#x56FE;&#x7247;&#x63CF;&#x8FF0;" style="cursor:pointer"></span></p><p>&#x5177;&#x4F53;&#x7684;&#x5185;&#x5BB9;&#x8BF7;&#x76F4;&#x63A5;&#x6D4F;&#x89C8;<a href="https://github.com/jrainlau/wechat-subscriptor" rel="nofollow noreferrer" target="_blank">&#x9879;&#x76EE;</a></p><h2 id="articleHeader4">&#x670D;&#x52A1;&#x5668;&amp;&#x722C;&#x866B;</h2><p>&#x8FDB;&#x5165;<code>/backend-server</code>&#x6587;&#x4EF6;&#x5939;&#x5E76;&#x65B0;&#x5EFA;&#x540D;&#x4E3A;<code>crawler-server.js</code>&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="/*** crawler-server.js ***/
-
-&apos;use strict&apos;
-const http = require(&apos;http&apos;)
-const url = require(&apos;url&apos;)
-const util = require(&apos;util&apos;)
-const superagent = require(&apos;superagent&apos;)
-const cheerio = require(&apos;cheerio&apos;)
-
-const onRequest = (req, res) =&gt; {
-    // CORS options
-    res.writeHead(200, {&apos;Content-Type&apos;: &apos;text/plain&apos;, &apos;Access-Control-Allow-Origin&apos;: &apos;*&apos;})
-    let keyWord = encodeURI(url.parse(req.url, true).query.query)
-    // recieve keyword from the client side and use it to make requests
-    if (keyWord) {
-        let resultArr = []
-        superagent.get(&apos;http://weixin.sogou.com/weixin?type=1&amp;query=&apos; + keyWord + &apos;&amp;ie=utf8&amp;_sug_=n&amp;_sug_type_=&apos;).end((err, response) =&gt; {
-            if (err) console.log(err)
-            let $ = cheerio.load(response.text)
-
-            $(&apos;.mt7 .wx-rb&apos;).each((index, item) =&gt; {
-                // define an object and update it
-                // then push to the result array
-                let resultObj = {
-                    title: &apos;&apos;,
-                    wxNum: &apos;&apos;,
-                    link: &apos;&apos;,
-                    pic: &apos;&apos;,
-                }
-
-                resultObj.title = $(item).find(&apos;h3&apos;).text()
-                resultObj.wxNum = $(item).find(&apos;label&apos;).text()
-                resultObj.link = $(item).attr(&apos;href&apos;)
-                resultObj.pic = $(item).find(&apos;img&apos;).attr(&apos;src&apos;)
-                resultArr.push(resultObj)
-            })
-            
-            res.write(JSON.stringify(resultArr))
-            res.end()
-        })
-    }
-}
-
-http.createServer(onRequest).listen(process.env.PORT || 8090)
-console.log(&apos;Server Start!&apos;)" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs javascript"><code><span class="hljs-comment">/*** crawler-server.js ***/</span>
-<span class="hljs-meta">
-&apos;use strict&apos;</span>
-<span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>)
-<span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>)
-<span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;util&apos;</span>)
-<span class="hljs-keyword">const</span> superagent = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;superagent&apos;</span>)
-<span class="hljs-keyword">const</span> cheerio = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cheerio&apos;</span>)
-
-<span class="hljs-keyword">const</span> onRequest = <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
-    <span class="hljs-comment">// CORS options</span>
-    res.writeHead(<span class="hljs-number">200</span>, {<span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/plain&apos;</span>, <span class="hljs-string">&apos;Access-Control-Allow-Origin&apos;</span>: <span class="hljs-string">&apos;*&apos;</span>})
-    <span class="hljs-keyword">let</span> keyWord = <span class="hljs-built_in">encodeURI</span>(url.parse(req.url, <span class="hljs-literal">true</span>).query.query)
-    <span class="hljs-comment">// recieve keyword from the client side and use it to make requests</span>
-    <span class="hljs-keyword">if</span> (keyWord) {
-        <span class="hljs-keyword">let</span> resultArr = []
-        superagent.get(<span class="hljs-string">&apos;http://weixin.sogou.com/weixin?type=1&amp;query=&apos;</span> + keyWord + <span class="hljs-string">&apos;&amp;ie=utf8&amp;_sug_=n&amp;_sug_type_=&apos;</span>).end(<span class="hljs-function">(<span class="hljs-params">err, response</span>) =&gt;</span> {
-            <span class="hljs-keyword">if</span> (err) <span class="hljs-built_in">console</span>.log(err)
-            <span class="hljs-keyword">let</span> $ = cheerio.load(response.text)
-
-            $(<span class="hljs-string">&apos;.mt7 .wx-rb&apos;</span>).each(<span class="hljs-function">(<span class="hljs-params">index, item</span>) =&gt;</span> {
-                <span class="hljs-comment">// define an object and update it</span>
-                <span class="hljs-comment">// then push to the result array</span>
-                <span class="hljs-keyword">let</span> resultObj = {
-                    <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&apos;</span>,
-                    <span class="hljs-attr">wxNum</span>: <span class="hljs-string">&apos;&apos;</span>,
-                    <span class="hljs-attr">link</span>: <span class="hljs-string">&apos;&apos;</span>,
-                    <span class="hljs-attr">pic</span>: <span class="hljs-string">&apos;&apos;</span>,
-                }
-
-                resultObj.title = $(item).find(<span class="hljs-string">&apos;h3&apos;</span>).text()
-                resultObj.wxNum = $(item).find(<span class="hljs-string">&apos;label&apos;</span>).text()
-                resultObj.link = $(item).attr(<span class="hljs-string">&apos;href&apos;</span>)
-                resultObj.pic = $(item).find(<span class="hljs-string">&apos;img&apos;</span>).attr(<span class="hljs-string">&apos;src&apos;</span>)
-                resultArr.push(resultObj)
-            })
-            
-            res.write(<span class="hljs-built_in">JSON</span>.stringify(resultArr))
-            res.end()
-        })
-    }
-}
-
-http.createServer(onRequest).listen(process.env.PORT || <span class="hljs-number">8090</span>)
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server Start!&apos;</span>)</code></pre><p>&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x722C;&#x866B;&#xFF0C;&#x901A;&#x8FC7;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x7684;&#x5173;&#x952E;&#x8BCD;&#x5411;&#x641C;&#x72D7;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF0C;&#x540E;&#x5229;&#x7528;<code>cheerio</code>&#x5206;&#x6790;&#x83B7;&#x53D6;&#x5173;&#x952E;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x91CC;&#x8D34;&#x4E0A;&#x641C;&#x72D7;&#x516C;&#x4F17;&#x53F7;&#x641C;&#x7D22;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4EB2;&#x81EA;&#x8BD5;&#x4E00;&#x8BD5;&#xFF1A;<a href="http://weixin.sogou.com/" rel="nofollow noreferrer" target="_blank">http://weixin.sogou.com/</a></p><p>&#x5F53;&#x5F00;&#x542F;&#x670D;&#x52A1;&#x5668;&#x4EE5;&#x540E;&#xFF0C;&#x53EA;&#x8981;&#x5E26;&#x4E0A;&#x53C2;&#x6570;&#x8BF7;&#x6C42;<code>localhost:8090</code>&#x5373;&#x53EF;&#x83B7;&#x53D6;&#x5185;&#x5BB9;&#x3002;</p><h2 id="articleHeader5">&#x4F7F;&#x7528;<code>Vuex</code>&#x4F5C;&#x72B6;&#x6001;&#x7BA1;&#x7406;</h2><p>&#x5148;&#x8D34;&#x4E0A;<code>vuex</code>&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;<a href="http://vuex.vuejs.org/en/index.html" rel="nofollow noreferrer" target="_blank">http://vuex.vuejs.org/en/index.html</a>&#xFF0C;&#x76F8;&#x4FE1;&#x6211;&#xFF0C;&#x4E0D;&#x8981;&#x770B;&#x4E2D;&#x6587;&#x7248;&#x7684;&#xFF0C;&#x4E0D;&#x7136;&#x4F60;&#x4F1A;&#x8E29;&#x5751;&#xFF0C;&#x82F1;&#x6587;&#x7248;&#x8DB3;&#x591F;&#x4E86;&#x3002;</p><p>&#x4ECE;&#x524D;&#x6587;&#x7684;&#x67B6;&#x6784;&#x56FE;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x6D41;&#x901A;&#x90FD;&#x662F;&#x901A;&#x8FC7;<code>vuex</code>&#x8FDB;&#x884C;&#xFF0C;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x6587;&#x6863;&#x4E86;&#x89E3;&#x4E86;&#x6709;&#x5173;<code>vuex</code>&#x7684;&#x7528;&#x6CD5;&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x8FDB;&#x5165;<code>/vuex</code>&#x6587;&#x4EF6;&#x5939;&#x6765;&#x6784;&#x5EFA;&#x6838;&#x5FC3;&#x7684;<code>store.js</code>&#x4EE3;&#x7801;&#xFF1A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="/*** store.js ***/
-
-import Vue from &apos;vue&apos;
-import Vuex from &apos;vuex&apos;
-
-Vue.use(Vuex)
-
-const state = {
-  collectItems: [],
-  searchResult: {}
-}
-
-localStorage.getItem(&quot;collectItems&quot;)?
- state.collectItems = localStorage.getItem(&quot;collectItems&quot;).split(&apos;,&apos;):
-  false
-
-const mutations = {
-  SET_RESULT (state, result) {
-    state.searchResult = result
-  },
-  COLLECT_IT (state, name) {
-    state.collectItems.push(name)
-    localStorage.setItem(&quot;collectItems&quot;, state.collectItems)
-  },
-  DELETE_COLLECTION (state, name) {
-    state.collectItems.splice(state.collectItems.indexOf(name), 1)
-    localStorage.setItem(&quot;collectItems&quot;, state.collectItems)
-  }
-}
-
-export default new Vuex.Store({
-  state,
-  mutations
-})" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs pf"><code>/*** store.js ***/
-
-import Vue <span class="hljs-keyword">from</span> &apos;vue&apos;
-import Vuex <span class="hljs-keyword">from</span> &apos;vuex&apos;
-
-Vue.use(Vuex)
-
-const <span class="hljs-keyword">state</span> = {
-  collectItems: [],
-  searchResult: {}
-}
-
-localStorage.getItem(<span class="hljs-string">&quot;collectItems&quot;</span>)?
- <span class="hljs-keyword">state</span>.collectItems = localStorage.getItem(<span class="hljs-string">&quot;collectItems&quot;</span>).split(&apos;,&apos;):
-  false
-
-const mutations = {
-  SET_RESULT (<span class="hljs-keyword">state</span>, result) {
-    <span class="hljs-keyword">state</span>.searchResult = result
-  },
-  COLLECT_IT (<span class="hljs-keyword">state</span>, name) {
-    <span class="hljs-keyword">state</span>.collectItems.push(name)
-    localStorage.<span class="hljs-built_in">set</span>Item(<span class="hljs-string">&quot;collectItems&quot;</span>, <span class="hljs-keyword">state</span>.collectItems)
-  },
-  DELETE_COLLECTION (<span class="hljs-keyword">state</span>, name) {
-    <span class="hljs-keyword">state</span>.collectItems.splice(<span class="hljs-keyword">state</span>.collectItems.indexOf(name), <span class="hljs-number">1</span>)
-    localStorage.<span class="hljs-built_in">set</span>Item(<span class="hljs-string">&quot;collectItems&quot;</span>, <span class="hljs-keyword">state</span>.collectItems)
-  }
-}
-
-export <span class="hljs-keyword">default</span> new Vuex.Store({
-  <span class="hljs-keyword">state</span>,
-  mutations
-})</code></pre><p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5C06;&#x5BF9;&#x5F53;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x91CD;&#x70B9;&#x5206;&#x6790;&#x3002;</p><p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;<code>state</code>&#x5BF9;&#x8C61;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x7740;&#x6536;&#x85CF;&#x5939;&#x5185;&#x5BB9;&#xFF0C;&#x641C;&#x7D22;&#x7ED3;&#x679C;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6574;&#x4E2A;APP&#x7684;&#x6570;&#x636E;&#x5C31;&#x662F;&#x5B58;&#x653E;&#x5728;<code>state</code>&#x5BF9;&#x8C61;&#x91CC;&#xFF0C;&#x968F;&#x53D6;&#x968F;&#x7528;&#x3002;</p><p>&#x63A5;&#x7740;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;<code>mutations</code>&#x5BF9;&#x8C61;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;<code>mutations</code>&#x7406;&#x89E3;&#x4E3A;&#x201C;&#x7528;&#x4E8E;&#x6539;&#x53D8;<code>state</code>&#x72B6;&#x6001;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x65B9;&#x6CD5;&#x201D;&#x3002;&#x5728;<code>vuex</code>&#x7684;&#x6982;&#x5FF5;&#x91CC;&#xFF0C;<code>state</code>&#x4EC5;&#x80FD;&#x901A;&#x8FC7;<code>mutation</code>&#x4FEE;&#x6539;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x597D;&#x5904;&#x662F;&#x80FD;&#x591F;&#x66F4;&#x76F4;&#x89C2;&#x6E05;&#x6670;&#x5730;&#x96C6;&#x4E2D;&#x7BA1;&#x7406;&#x5E94;&#x7528;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x628A;&#x6570;&#x636E;&#x6254;&#x5F97;&#x5230;&#x5904;&#x90FD;&#x662F;&#x3002;</p><p>&#x901A;&#x8FC7;&#x4EE3;&#x7801;&#x4E0D;&#x96BE;&#x770B;&#x51FA;&#xFF0C;&#x4E09;&#x4E2A;<code>mutation</code>&#x7684;&#x4F5C;&#x7528;&#x5206;&#x522B;&#x662F;&#xFF1A;</p><ul><li><p><code>SET_RESULT</code>&#xFF1A;&#x628A;&#x641C;&#x7D22;&#x7ED3;&#x679C;&#x5B58;&#x5165;<code>state</code></p></li><li><p><code>COLLECT_IT</code>&#xFF1A;&#x6DFB;&#x52A0;&#x5230;&#x6536;&#x85CF;&#x5939;&#x64CD;&#x4F5C;&#xFF08;&#x5305;&#x62EC;<code>localstorage</code>&#xFF09;</p></li><li><p><code>DELETE_IT</code>&#xFF1A;&#x4ECE;&#x6536;&#x85CF;&#x5939;&#x79FB;&#x9664;&#x64CD;&#x4F5C;&#xFF08;&#x5305;&#x62EC;<code>localstorage</code>&#xFF09;</p></li></ul><h2 id="articleHeader6">&#x7EC4;&#x4EF6;&#x6570;&#x636E;&#x5904;&#x7406;</h2><p>&#x6211;&#x4EEC;&#x7684;APP&#x4E00;&#x5171;&#x6709;&#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;<code>SearchBar.vue</code>&#x548C;<code>SearchResult.vue</code>&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x7740;&#x641C;&#x7D22;&#x90E8;&#x5206;&#x7EC4;&#x4EF6;&#x548C;&#x7ED3;&#x679C;&#x90E8;&#x5206;&#x7EC4;&#x4EF6;&#x3002;&#x5176;&#x4E2D;&#x641C;&#x7D22;&#x90E8;&#x5206;&#x7EC4;&#x4EF6;&#x5305;&#x542B;&#x7740;&#x6536;&#x85CF;&#x5939;&#x90E8;&#x5206;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x6709;&#x4E09;&#x4E2A;&#x90E8;&#x5206;&#x3002;</p><h4>&#x641C;&#x7D22;&#x90E8;&#x5206;&#x7EC4;&#x4EF6;<code>SearchBar.vue</code></h4><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="/*** SearchBar.vue ***/
-
-
-vuex: {
-  getters: {
-    collectItem(state) {
-      return state.collectItems
-    }
-  },
-  actions: {
-    deleteCollection: ({ dispatch }, name) =&gt; {
-      dispatch(&apos;DELETE_COLLECTION&apos;, name)
-    },
-    searchFun: ({ dispatch }, keyword) =&gt; {
-      $.get(&apos;http://localhost:8090&apos;, { query: keyword }, (data) =&gt; {
-        dispatch(&apos;SET_RESULT&apos;, JSON.parse(data))
-      })
-    }
-  }
-}" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs typescript"><code><span class="hljs-comment">/*** SearchBar.vue ***/</span>
-
-
-vuex: {
-  getters: {
-    collectItem(state) {
-      <span class="hljs-keyword">return</span> state.collectItems
-    }
-  },
-  actions: {
-    deleteCollection: <span class="hljs-function">(<span class="hljs-params">{ dispatch }, name</span>) =&gt;</span> {
-      dispatch(<span class="hljs-string">&apos;DELETE_COLLECTION&apos;</span>, name)
-    },
-    searchFun: <span class="hljs-function">(<span class="hljs-params">{ dispatch }, keyword</span>) =&gt;</span> {
-      $.<span class="hljs-keyword">get</span>(<span class="hljs-string">&apos;http://localhost:8090&apos;</span>, { query: keyword }, <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
-        dispatch(<span class="hljs-string">&apos;SET_RESULT&apos;</span>, <span class="hljs-built_in">JSON</span>.parse(data))
-      })
-    }
-  }
-}</code></pre><p>&#x4EE3;&#x7801;&#x6709;&#x70B9;&#x957F;&#xFF0C;&#x8FD9;&#x91CC;&#x4EC5;&#x91CD;&#x70B9;&#x4ECB;&#x7ECD;<code>vuex</code>&#x90E8;&#x5206;&#xFF0C;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://github.com/jrainlau/wechat-subscriptor" rel="nofollow noreferrer" target="_blank">&#x9879;&#x76EE;</a>&#x3002;</p><ul><li><p><code>getters</code>&#x83B7;&#x53D6;<code>store</code>&#x5F53;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4F5C;&#x4E88;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;</p></li><li><p><code>actions</code>&#x7684;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x8D1F;&#x8D23;&#x628A;&#x6570;&#x636E;&#x5206;&#x53D1;&#x5230;<code>store</code>&#x4E2D;&#x4F9B;<code>mutation</code>&#x4F7F;&#x7528;</p></li></ul><p>&#x770B;&#x5B98;&#x65B9;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x5411;<code>action</code>&#x4F20;&#x53C2;&#x4F3C;&#x4E4E;&#x5F88;&#x590D;&#x6742;&#xFF0C;&#x5176;&#x5B9E;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>methods</code>&#x6765;&#x5904;&#x7406;&#x53C2;&#x6570;&#xFF0C;&#x5728;&#x89E6;&#x53D1;<code>actions</code>&#x7684;&#x540C;&#x65F6;&#x628A;&#x53C2;&#x6570;&#x4F20;&#x8FDB;&#x53BB;&#x3002;</p><h4>&#x7ED3;&#x679C;&#x90E8;&#x5206;&#x7EC4;&#x4EF6;<code>SearchResult.vue</code></h4><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="/*** SearchResult.vue ***/
-
-vuex: {
-  getters: {
-    wordValue(state) {
-      return state.keyword
-    },
-    collectItems(state) {
-      return state.collectItems
-    },
-    searchResult(state) {
-      return state.searchResult
-    }
-  },
-  actions: {
-    collectIt: ({ dispatch }, name, collectArr) =&gt; {
-      for(let item of collectArr) {
-        if(item == name) return false
-      }
-      dispatch(&apos;COLLECT_IT&apos;, name)
-    }
-  }
-}" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs pf"><code>/*** SearchResult.vue ***/
-
-vuex: {
-  getters: {
-    wordValue(<span class="hljs-keyword">state</span>) {
-      return <span class="hljs-keyword">state</span>.keyword
-    },
-    collectItems(<span class="hljs-keyword">state</span>) {
-      return <span class="hljs-keyword">state</span>.collectItems
-    },
-    searchResult(<span class="hljs-keyword">state</span>) {
-      return <span class="hljs-keyword">state</span>.searchResult
-    }
-  },
-  actions: {
-    collectIt: ({ dispatch }, name, collectArr) =&gt; {
-      <span class="hljs-keyword">for</span>(let item of collectArr) {
-        if(item == name) return false
-      }
-      dispatch(&apos;COLLECT_IT&apos;, name)
-    }
-  }
-}</code></pre><p>&#x7ED3;&#x679C;&#x90E8;&#x5206;&#x4E3B;&#x8981;&#x5728;&#x4E8E;&#x5C55;&#x793A;&#xFF0C;&#x9700;&#x8981;&#x89E6;&#x53D1;<code>action</code>&#x7684;&#x5730;&#x65B9;&#x4EC5;&#x4EC5;&#x662F;&#x6DFB;&#x52A0;&#x5230;&#x6536;&#x85CF;&#x5939;&#x8FD9;&#x4E00;&#x64CD;&#x4F5C;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;&#x662F;&#x5E94;&#x5F53;&#x907F;&#x514D;&#x91CD;&#x590D;&#x6DFB;&#x52A0;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x4E86;<code>for...of</code>&#x5FAA;&#x73AF;&#xFF0C;&#x5F53;&#x6570;&#x7EC4;&#x4E2D;&#x5DF2;&#x6709;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4E0D;&#x518D;&#x6DFB;&#x52A0;&#x4E86;&#x3002;</p><h2 id="articleHeader7">&#x5C3E;&#x58F0;</h2><p>&#x5173;&#x952E;&#x7684;&#x903B;&#x8F91;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x5206;&#x6790;&#x5B8C;&#x6BD5;&#xFF0C;&#x8FD9;&#x4E2A;APP&#x4E5F;&#x5C31;&#x8FD9;&#x4E48;&#x4E00;&#x56DE;&#x4E8B;&#x513F;&#xFF0C;UI&#x90E8;&#x5206;&#x5C31;&#x4E0D;&#x7EC6;&#x8BF4;&#x4E86;&#xFF0C;&#x770B;&#x770B;&#x9879;&#x76EE;&#x6E90;&#x7801;&#x6216;&#x8005;&#x4F60;&#x81EA;&#x5DF1;DIY&#x5C31;&#x53EF;&#x4EE5;&#x3002;&#x81F3;&#x4E8E;&#x6253;&#x5305;&#x6210;APP&#xFF0C;&#x9996;&#x5148;&#x4F60;&#x8981;&#x4E0B;&#x8F7D;HBuilder&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x5B83;&#x76F4;&#x63A5;&#x6253;&#x5305;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x914D;&#x5957;&#x4F7F;&#x7528;<code>mui</code>&#x80FD;&#x591F;&#x4F53;&#x9A8C;&#x66F4;&#x597D;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;&#x90A3;&#x4E48;&#x591A;&#x4EBA;&#x9ED1;&#x5B83;&#x3002;</p><p>&#x641C;&#x72D7;&#x63D0;&#x4F9B;&#x7684;API&#x5F88;&#x5F3A;&#x5927;&#xFF0C;&#x4F46;&#x662F;&#x63D0;&#x9192;&#x4E00;&#x4E0B;&#xFF0C;&#x5343;&#x4E07;&#x4E0D;&#x8981;&#x64CD;&#x4F5C;&#x592A;&#x8FC7;&#x9891;&#x7E41;&#xFF0C;&#x4E0D;&#x7136;&#x4F60;&#x7684;IP&#x4F1A;&#x88AB;&#x5B83;&#x5C01;&#x6389;&#xFF0C;&#x6211;&#x7684;&#x5DF2;&#x7ECF;&#x88AB;&#x5C01;&#x4E86;&#x2026;&#x2026;</p><p><code>Weex</code>&#x5DF2;&#x7ECF;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;Native&#x5E94;&#x7528;&#xFF0C;&#x60F3;&#x60F3;&#x4E5F;&#x662F;&#x6FC0;&#x52A8;&#x554A;&#xFF0C;&#x5F85;&#x5FC3;&#x8840;&#x6765;&#x6F6E;&#x5C31;&#x628A;&#x672C;&#x6587;&#x7684;&#x9879;&#x76EE;&#x505A;&#x6210;<code>Weex</code>&#x7248;&#x672C;&#x7684;&#x73A9;&#x73A9;&#x2026;&#x2026;</p><p>&#x6700;&#x540E;&#x7684;&#x6700;&#x540E;&#xFF0C;&#x611F;&#x8C22;&#x4F60;&#x7684;&#x9605;&#x8BFB;&#xFF0C;&#x5982;&#x679C;&#x89C9;&#x5F97;&#x6211;&#x7684;&#x6587;&#x7AE0;&#x4E0D;&#x9519;&#xFF0C;&#x6B22;&#x8FCE;&#x5173;&#x6CE8;&#x6211;&#x7684;&#x4E13;&#x680F;&#xFF0C;&#x4E0B;&#x6B21;&#x89C1;&#xFF01;</p>
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<h2 id="原文标题"><a href="#原文标题" class="headerlink" title="原文标题"></a>原文标题</h2><p>一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://segmentfault.com/a/1190000005844155" target="_blank" rel="noopener">https://segmentfault.com/a/1190000005844155</a></p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/b5a8e07a/">https://alili.tech/archive/b5a8e07a/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2 id="原文标题">原文标题</h2><p>一步一步教你用 Vue.js + Vuex 制作专门收藏微信公众号的 app</p><h2 id="原文链接">原文链接</h2><p><a href="https://segmentfault.com/a/1190000005844155">https://segmentfault.com/a/1190000005844155</a></p><h2>本文链接：</h2><a href="https://alili.tech/archive/b5a8e07a/" target="_blank">https://alili.tech/archive/b5a8e07a/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">下载&amp;运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">项目介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">3.</span> <span class="toc-text">整体架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader3"><span class="toc-number">4.</span> <span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader4"><span class="toc-number">5.</span> <span class="toc-text">服务器&amp;爬虫</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">6.</span> <span class="toc-text">使用Vuex作状态管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader6"><span class="toc-number">7.</span> <span class="toc-text">组件数据处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">7.0.1.</span> <span class="toc-text">搜索部分组件SearchBar.vue</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">7.0.2.</span> <span class="toc-text">结果部分组件SearchResult.vue</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader7"><span class="toc-number">8.</span> <span class="toc-text">尾声</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

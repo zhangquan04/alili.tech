@@ -1,580 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="少年，我看你骨骼精奇，是万中无一的武学奇才，我这有本《图片流》秘籍，见与你有缘，就送于你了。 图片流 本文所说的图片流就是读取本地图片，并在页面使用文件流的方式显示出来。 首先，我们简单说下文件上传的几种方式, 然后依次来实现它们 上传方式 input 通过用户点击，创建&amp;lt;input type=&quot;file&quot; accept=&quot;image/*&quot;/&amp;gt;,并监听change事件获取file对象">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="少侠，留步，图片预览术">
-<meta property="og:url" content="https://alili.tech/archive/c59e1898/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="少年，我看你骨骼精奇，是万中无一的武学奇才，我这有本《图片流》秘籍，见与你有缘，就送于你了。 图片流 本文所说的图片流就是读取本地图片，并在页面使用文件流的方式显示出来。 首先，我们简单说下文件上传的几种方式, 然后依次来实现它们 上传方式 input 通过用户点击，创建&amp;lt;input type=&quot;file&quot; accept=&quot;image/*&quot;/&amp;gt;,并监听change事件获取file对象">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016276887">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016276888?w=1028&h=485">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016276889?w=601&h=190">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016276890?w=556&h=114">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016276891">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016276892?w=1778&h=369">
-<meta property="og:updated_time" content="2018-10-23T18:30:04.188Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少侠，留步，图片预览术">
-<meta name="twitter:description" content="少年，我看你骨骼精奇，是万中无一的武学奇才，我这有本《图片流》秘籍，见与你有缘，就送于你了。 图片流 本文所说的图片流就是读取本地图片，并在页面使用文件流的方式显示出来。 首先，我们简单说下文件上传的几种方式, 然后依次来实现它们 上传方式 input 通过用户点击，创建&amp;lt;input type=&quot;file&quot; accept=&quot;image/*&quot;/&amp;gt;,并监听change事件获取file对象">
-<meta name="twitter:image" content="https://static.alili.tech/img/remote/1460000016276887">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>少侠，留步，图片预览术 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/c59e1898/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/c59e1898/",
-      "appid": "1613049289050283", 
-      "title": "少侠，留步，图片预览术 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:48"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="少侠，留步，图片预览术"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>少侠，留步，图片预览术 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/c59e1898/",
+				"appid": "1613049289050283", 
+				"title": "少侠，留步，图片预览术 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-10-22T00:00:00"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/bc9bb1af/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/fc01489/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2fc59e1898%2f&text=%e5%b0%91%e4%be%a0%ef%bc%8c%e7%95%99%e6%ad%a5%ef%bc%8c%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88%e6%9c%af"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2fc59e1898%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2fc59e1898%2f&text=%e5%b0%91%e4%be%a0%ef%bc%8c%e7%95%99%e6%ad%a5%ef%bc%8c%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88%e6%9c%af"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2fc59e1898%2f&title=%e5%b0%91%e4%be%a0%ef%bc%8c%e7%95%99%e6%ad%a5%ef%bc%8c%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88%e6%9c%af"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2fc59e1898%2f&is_video=false&description=%e5%b0%91%e4%be%a0%ef%bc%8c%e7%95%99%e6%ad%a5%ef%bc%8c%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88%e6%9c%af"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%e5%b0%91%e4%be%a0%ef%bc%8c%e7%95%99%e6%ad%a5%ef%bc%8c%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88%e6%9c%af&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2fc59e1898%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2fc59e1898%2f&title=%e5%b0%91%e4%be%a0%ef%bc%8c%e7%95%99%e6%ad%a5%ef%bc%8c%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88%e6%9c%af"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fc59e1898%2f&title=%e5%b0%91%e4%be%a0%ef%bc%8c%e7%95%99%e6%ad%a5%ef%bc%8c%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88%e6%9c%af"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fc59e1898%2f&title=%e5%b0%91%e4%be%a0%ef%bc%8c%e7%95%99%e6%ad%a5%ef%bc%8c%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88%e6%9c%af"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fc59e1898%2f&title=%e5%b0%91%e4%be%a0%ef%bc%8c%e7%95%99%e6%ad%a5%ef%bc%8c%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88%e6%9c%af"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a><ul><li><a href="#原文链接">原文链接</a></li><li><a href="#原文标题">原文标题</a></li></ul></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">少侠，留步，图片预览术</h1><div class="meta"><div class="postdate"><time datetime="2018-10-22" itemprop="datePublished">2018-10-22</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\n                    \n\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016276887\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016276887\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor: pointer; display: inline;\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\n\x3cp\x3e少年，我看你骨骼精奇，是万中无一的武学奇才，我这有本《图片流》秘籍，见与你有缘，就送于你了。\x3c\/p\x3e\n\x3ch1 id=\x22articleHeader0\x22\x3e图片流\x3c\/h1\x3e\n\x3cp\x3e本文所说的图片流就是读取本地图片，并在页面使用文件流的方式显示出来。\x3c\/p\x3e\n\x3cp\x3e首先，我们简单说下文件上传的几种方式, 然后依次来实现它们\x3c\/p\x3e\n\x3ch2 id=\x22articleHeader1\x22\x3e上传方式\x3c\/h2\x3e\n\x3ch3 id=\x22articleHeader2\x22\x3einput\x3c\/h3\x3e\n\x3cp\x3e通过用户点击，创建\x3ccode\x3e\x26lt;input type=\x22file\x22 accept=\x22image\/*\x22\/\x26gt;\x3c\/code\x3e,并监听\x3ccode\x3echange\x3c\/code\x3e事件获取file对象，大体如下\x3c\/p\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22click = () =\x3e {\n    let input = document.createElement(\x27input\x27)\n    input.setAttribute(\x27type\x27, \x27file\x27)\n    input.setAttribute(\x27accept\x27, \x27image\/*\x27)\n    \n    input.onchange = event =\x3e {\n        let file = event.target.files[0]\n    }\n    \n    input.click()\n    \n} \x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3eclick = \x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-params\x22\x3e()\x3c\/span\x3e =\x26gt;\x3c\/span\x3e {\n    \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e input = \x3cspan class=\x22hljs-built_in\x22\x3edocument\x3c\/span\x3e.createElement(\x3cspan class=\x22hljs-string\x22\x3e\x27input\x27\x3c\/span\x3e)\n    input.setAttribute(\x3cspan class=\x22hljs-string\x22\x3e\x27type\x27\x3c\/span\x3e, \x3cspan class=\x22hljs-string\x22\x3e\x27file\x27\x3c\/span\x3e)\n    input.setAttribute(\x3cspan class=\x22hljs-string\x22\x3e\x27accept\x27\x3c\/span\x3e, \x3cspan class=\x22hljs-string\x22\x3e\x27image\/*\x27\x3c\/span\x3e)\n    \n    input.onchange = \x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-params\x22\x3eevent\x3c\/span\x3e =\x26gt;\x3c\/span\x3e {\n        \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e file = event.target.files[\x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e]\n    }\n    \n    input.click()\n    \n} \x3c\/code\x3e\x3c\/pre\x3e\n\x3ch3 id=\x22articleHeader3\x22\x3eDrag \x26amp;\x26amp; drop\x3c\/h3\x3e\n\x3cp\x3e使用HTML5的拖放API，监听元素的\x3ccode\x3edrop\x3c\/code\x3e事件，同样是获取file对象\x3c\/p\x3e\n\x3cp\x3e会创建一个DataTransfer对象,下面我们还会遇到它，稍后再说\x3c\/p\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22dragover = event =\x3e {\n   event.preventDefault()\n}\n\ndrop = event =\x3e {\n    event.preventDefault()\n    let files =  event.dataTransfer.files\n}\x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3edragover = \x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-params\x22\x3eevent\x3c\/span\x3e =\x26gt;\x3c\/span\x3e {\n   event.preventDefault()\n}\n\ndrop = \x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-params\x22\x3eevent\x3c\/span\x3e =\x26gt;\x3c\/span\x3e {\n    event.preventDefault()\n    \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e files =  event.dataTransfer.files\n}\x3c\/code\x3e\x3c\/pre\x3e\n\x3ch3 id=\x22articleHeader4\x22\x3epaste\x3c\/h3\x3e\n\x3cp\x3e给元素绑定粘贴事件，得益于\x3ccode\x3econtenteditable\x3c\/code\x3e我们可以给所有元素添加，涛声依旧，获取event中包含的file\x3c\/p\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22paste = (e) =\x3e {\n    e.preventDefault()\n    let file = e.clipboardData.files[0]\n}\x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3epaste = \x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3ee\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e {\n    e.preventDefault()\n    \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e file = e.clipboardData.files[\x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e]\n}\x3c\/code\x3e\x3c\/pre\x3e\n\x3ch4\x3eclipboardData\x3c\/h4\x3e\n\x3cp\x3epaste事件提供了一个\x3ccode\x3eclipboardData\x3c\/code\x3e属性，是一个\x3ccode\x3eDataTransfer\x3c\/code\x3e类型的对象，前面我们说到，拖放会产生一个\x3ccode\x3eDataTransfer\x3c\/code\x3e对象，没错，粘贴也是它。\x3c\/p\x3e\n\x3cp\x3e来来来，掀起了她的盖头来。\x3c\/p\x3e\n\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016276888?w=1028\x26amp;h=485\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016276888?w=1028\x26amp;h=485\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor: pointer; display: inline;\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\n\x3cp\x3e上面可以看到，\x3ccode\x3eclipboardData\x3c\/code\x3e有如下属性\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3edropEffect 默认是node\x3c\/li\x3e\n\x3cli\x3eeffectAllowed 默认是uninitialized\x3c\/li\x3e\n\x3cli\x3efiles 本地文件列表\x3c\/li\x3e\n\x3cli\x3eitems 剪切板中的各项数据\x3c\/li\x3e\n\x3cli\x3etypes 剪切板中的各项数据类型\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3cp\x3e我们只需要使用files即可，图片文件在它里面\x3c\/p\x3e\n\x3ch2 id=\x22articleHeader5\x22\x3e文件格式\x3c\/h2\x3e\n\x3ch3 id=\x22articleHeader6\x22\x3efile\x3c\/h3\x3e\n\x3cblockquote\x3e通常情况下， File 对象是来自用户在一个\x3ccode\x3e\x26lt;input\x26gt;\x3c\/code\x3e元素上选择文件后返回的 \x3ccode\x3eFileList\x3c\/code\x3e 对象,也可以是来自由拖放操作生成的\x3ccode\x3eDataTransfer\x3c\/code\x3e对象，继承于\x3ccode\x3eBlob\x3c\/code\x3e\n\x3c\/blockquote\x3e\n\x3cp\x3e庐山真面目，诺，就是这个样子。\x3c\/p\x3e\n\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016276889?w=601\x26amp;h=190\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016276889?w=601\x26amp;h=190\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor: pointer; display: inline;\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\n\x3cp\x3e可以看到有如下属性：\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3ename：文件名，该属性只读。\x3c\/li\x3e\n\x3cli\x3esize：文件大小，单位为字节，该属性只读。\x3c\/li\x3e\n\x3cli\x3etype：文件的 MIME 类型，如果分辨不出类型，则为空字符串，该属性只读。\x3c\/li\x3e\n\x3cli\x3elastModified：文件的上次修改时间，格式为时间戳。\x3c\/li\x3e\n\x3cli\x3elastModifiedDate：文件的上次修改时间，格式为 Date 对象实例。\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3cp\x3e我们不去深究file对象，只需要知道通过它可以访问本地的文件。\x3c\/p\x3e\n\x3ch3 id=\x22articleHeader7\x22\x3eblob\x3c\/h3\x3e\n\x3cblockquote\x3e一个 Blob对象表示一个不可变的, 原始数据的类似文件对象。Blob表示的数据不一定是一个JavaScript原生格式。 File 接口基于Blob，继承 blob功能并将其扩展为支持用户系统上的文件。\x3c\/blockquote\x3e\n\x3ch4\x3e创建blob对象\x3c\/h4\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22var aBlob = new Blob( array, options );\x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22 style=\x22word-break: break-word; white-space: initial;\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3evar\x3c\/span\x3e aBlob = \x3cspan class=\x22hljs-keyword\x22\x3enew\x3c\/span\x3e Blob( array, options );\x3c\/code\x3e\x3c\/pre\x3e\n\x3cul\x3e\n\x3cli\x3earray 是一个由ArrayBuffer, ArrayBufferView, Blob, DOMString 等对象构成的 Array ，或者其他类似对象的混合体，它将会被放进 Blob.\x3c\/li\x3e\n\x3cli\x3e\n\x3cp\x3eoptions 是一个可选的Blob熟悉字典，它可能会指定如下两种属性\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3etype，默认值为 “”，它代表了将会被放入到blob中的数组内容的MIME类型。\x3c\/li\x3e\n\x3cli\x3eendings，默认值为”transparent”，它代表包含行结束符n的字符串如何被输出。\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22var a = [\x26quot;hello\x26quot;, \x26quot;world\x26quot;];\nvar myBlob = new Blob(a, { \x26quot;type\x26quot; : \x26quot;text\/xml\x26quot; });\nconsole.log(myBlob);\x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3evar\x3c\/span\x3e a = [\x3cspan class=\x22hljs-string\x22\x3e\x22hello\x22\x3c\/span\x3e, \x3cspan class=\x22hljs-string\x22\x3e\x22world\x22\x3c\/span\x3e];\n\x3cspan class=\x22hljs-keyword\x22\x3evar\x3c\/span\x3e myBlob = \x3cspan class=\x22hljs-keyword\x22\x3enew\x3c\/span\x3e Blob(a, { \x3cspan class=\x22hljs-string\x22\x3e\x22type\x22\x3c\/span\x3e : \x3cspan class=\x22hljs-string\x22\x3e\x22text\/xml\x22\x3c\/span\x3e });\n\x3cspan class=\x22hljs-built_in\x22\x3econsole\x3c\/span\x3e.log(myBlob);\x3c\/code\x3e\x3c\/pre\x3e\n\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016276890?w=556\x26amp;h=114\x22 del-src=\x22https:\/\/static.alili.tech\/v-5bbf1b3b\/global\/img\/squares.svg\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor: pointer;\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\n\x3cp\x3e通过动态创建blob，我们可以实现纯前端下载\x3c\/p\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22const foo = {hello: \x26quot;world\x26quot;};\nconst blob = new Blob([JSON.stringify(foo)], {type: \x26quot;text\/plain\x26quot;});\nconst fileName = `${Date.now()}.doc`;\nconst link = document.createElement(\x27a\x27);\nlink.href = URL.createObjectURL(blob);\nlink.download = fileName;\nlink.click();\nURL.revokeObjectURL(link.href);\x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e foo = {\x3cspan class=\x22hljs-attr\x22\x3ehello\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x22world\x22\x3c\/span\x3e};\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e blob = \x3cspan class=\x22hljs-keyword\x22\x3enew\x3c\/span\x3e Blob([\x3cspan class=\x22hljs-built_in\x22\x3eJSON\x3c\/span\x3e.stringify(foo)], {\x3cspan class=\x22hljs-attr\x22\x3etype\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x22text\/plain\x22\x3c\/span\x3e});\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e fileName = \x3cspan class=\x22hljs-string\x22\x3e`\x3cspan class=\x22hljs-subst\x22\x3e${\x3cspan class=\x22hljs-built_in\x22\x3eDate\x3c\/span\x3e.now()}\x3c\/span\x3e.doc`\x3c\/span\x3e;\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e link = \x3cspan class=\x22hljs-built_in\x22\x3edocument\x3c\/span\x3e.createElement(\x3cspan class=\x22hljs-string\x22\x3e\x27a\x27\x3c\/span\x3e);\nlink.href = URL.createObjectURL(blob);\nlink.download = fileName;\nlink.click();\nURL.revokeObjectURL(link.href);\x3c\/code\x3e\x3c\/pre\x3e\n\x3ch4\x3eBlob URL\x3c\/h4\x3e\n\x3cp\x3eBlob URL是blob协议的URL，格式如下\x3c\/p\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22blob:http:\/\/localhost:1234\/946644c4-ca98-405e-918c-759e790d0330\x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22 style=\x22word-break: break-word; white-space: initial;\x22\x3eblob:http:\x3cspan class=\x22hljs-comment\x22\x3e\/\/localhost:1234\/946644c4-ca98-405e-918c-759e790d0330\x3c\/span\x3e\x3c\/code\x3e\x3c\/pre\x3e\n\x3cp\x3eBlob URL可以通过\x3ccode\x3eURL.createObjectURL(blob)\x3c\/code\x3e创建, 在每次调用createObjectURL()方法时，都会创建一个新的 URL 对象，即使你已经用相同的对象作为参数创建过。\x3c\/p\x3e\n\x3cp\x3e在不需要这些URL对象的时候， 通过\x3ccode\x3eURL.revokeObjectURL(objectURL)\x3c\/code\x3e 释放URL对象\x3c\/p\x3e\n\x3cp\x3e使用Blob URL进行显示本地图片，我们只需要把创建的URL赋值给img的src属性就可以了。\x3c\/p\x3e\n\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016276891\x22 del-src=\x22https:\/\/static.alili.tech\/v-5bbf1b3b\/global\/img\/squares.svg\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor: pointer;\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\n\x3ch3 id=\x22articleHeader8\x22\x3eFileReader\x3c\/h3\x3e\n\x3cp\x3eFileReader用来读取file或blob文件数据，基于文件大小不同，读取的过程为异步。\x3c\/p\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22let render = new FileReader()\nrender.onload = () =\x3e {\n    let src = render.result\n}\nrender.readAsDataURL(file)\x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22hljs openscad\x22\x3e\x3ccode\x3e\x3cspan class=\x22hljs-built_in\x22\x3elet\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3erender\x3c\/span\x3e = new FileReader()\n\x3cspan class=\x22hljs-built_in\x22\x3erender\x3c\/span\x3e.onload = () =\x26gt; {\n    \x3cspan class=\x22hljs-built_in\x22\x3elet\x3c\/span\x3e src = \x3cspan class=\x22hljs-built_in\x22\x3erender\x3c\/span\x3e.result\n}\n\x3cspan class=\x22hljs-built_in\x22\x3erender\x3c\/span\x3e.readAsDataURL(file)\x3c\/code\x3e\x3c\/pre\x3e\n\x3cp\x3eFileReader读取文件方法\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3ereadAsBinaryString    file    将文件读取为二进制编码\x3c\/li\x3e\n\x3cli\x3ereadAsBinaryArray    file    将文件读取为二进制数组\x3c\/li\x3e\n\x3cli\x3ereadAsText    file[, encoding]    按照格式将文件读取为文本，encode默认为UTF-8\x3c\/li\x3e\n\x3cli\x3ereadAsDataURL    file    将文件读取为DataUrl\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3ch3 id=\x22articleHeader9\x22\x3ebase64\x3c\/h3\x3e\n\x3cp\x3e使用FileReader进行文件的读取，就可以将图片读取成base64格式的了。\x3c\/p\x3e\n\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016276892?w=1778\x26amp;h=369\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016276892?w=1778\x26amp;h=369\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor: pointer; display: inline;\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\n\x3cp\x3e直接在FileReader实例的\x3ccode\x3eonload\x3c\/code\x3e函数里面将result赋值给src即可\x3c\/p\x3e\n\x3ch2 id=\x22articleHeader10\x22\x3e格式差异\x3c\/h2\x3e\n\x3cp\x3e其实主要是两种格式base64和blob，它们之间的差异如下\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3eBlob URL的长度一般比较短\x3c\/li\x3e\n\x3cli\x3eBlob URL可以方便的使用XMLHttpRequest获取源数据， base64不是所有浏览器都支持\x3c\/li\x3e\n\x3cli\x3eBlob URL 只能在当前应用内部使用\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3ch2 id=\x22articleHeader11\x22\x3e格式之间转换\x3c\/h2\x3e\n\x3ch3 id=\x22articleHeader12\x22\x3ecanvas转为blob对象\x3c\/h3\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22canvas.toBlob(function (blobObj) {\n    console.log(blobObj)\n})\x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3ecanvas.toBlob(\x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3efunction\x3c\/span\x3e (\x3cspan class=\x22hljs-params\x22\x3eblobObj\x3c\/span\x3e) \x3c\/span\x3e{\n    \x3cspan class=\x22hljs-built_in\x22\x3econsole\x3c\/span\x3e.log(blobObj)\n})\x3c\/code\x3e\x3c\/pre\x3e\n\x3ch3 id=\x22articleHeader13\x22\x3ecanvas转为base64\x3c\/h3\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22let imgSrc = canvas.toDataURL(\x27image\/png\x27)\x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22 style=\x22word-break: break-word; white-space: initial;\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e imgSrc = canvas.toDataURL(\x3cspan class=\x22hljs-string\x22\x3e\x27image\/png\x27\x3c\/span\x3e)\x3c\/code\x3e\x3c\/pre\x3e\n\x3ch3 id=\x22articleHeader14\x22\x3ebase64转为blob\x3c\/h3\x3e\n\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none;\x22\x3e\n      \x3cdiv class=\x22widget-codetool--inner\x22\x3e\n      \x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22全选\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22function dataURLtoBlob(dataurl) {\n  let arr = dataurl.split(\x26quot;,\x26quot;);\n  let mime = arr[0].match(\/:(.*?);\/)[1];\n  let bstr = atob(arr[1]);\n  let n = bstr.length;\n  let u8arr = new Uint8Array(n);\n\n  while (n--) {\n    u8arr[n] = bstr.charCodeAt(n);\n  }\n\n  return new Blob([u8arr], { type: mime });\n}\n\x22 title=\x22\x22 data-original-title=\x22复制\x22\x3e\x3c\/span\x3e\n      \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22放进笔记\x22\x3e\x3c\/span\x3e\n      \x3c\/div\x3e\n      \x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3e\x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3efunction\x3c\/span\x3e \x3cspan class=\x22hljs-title\x22\x3edataURLtoBlob\x3c\/span\x3e(\x3cspan class=\x22hljs-params\x22\x3edataurl\x3c\/span\x3e) \x3c\/span\x3e{\n  \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e arr = dataurl.split(\x3cspan class=\x22hljs-string\x22\x3e\x22,\x22\x3c\/span\x3e);\n  \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e mime = arr[\x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e].match(\x3cspan class=\x22hljs-regexp\x22\x3e\/:(.*?);\/\x3c\/span\x3e)[\x3cspan class=\x22hljs-number\x22\x3e1\x3c\/span\x3e];\n  \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e bstr = atob(arr[\x3cspan class=\x22hljs-number\x22\x3e1\x3c\/span\x3e]);\n  \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e n = bstr.length;\n  \x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e u8arr = \x3cspan class=\x22hljs-keyword\x22\x3enew\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eUint8Array\x3c\/span\x3e(n);\n\n  \x3cspan class=\x22hljs-keyword\x22\x3ewhile\x3c\/span\x3e (n--) {\n    u8arr[n] = bstr.charCodeAt(n);\n  }\n\n  \x3cspan class=\x22hljs-keyword\x22\x3ereturn\x3c\/span\x3e \x3cspan class=\x22hljs-keyword\x22\x3enew\x3c\/span\x3e Blob([u8arr], { \x3cspan class=\x22hljs-attr\x22\x3etype\x3c\/span\x3e: mime });\n}\n\x3c\/code\x3e\x3c\/pre\x3e\n\x3ch2 id=\x22articleHeader15\x22\x3e参考\x3c\/h2\x3e\n\x3cp\x3e\x3ca href=\x22https:\/\/segmentfault.com\/a\/1190000015026760\x22\x3e前端利用Blob对象创建指定文件并下载\x3c\/a\x3e\x3c\/p\x3e\n\x3cp\x3e\x3ca href=\x22https:\/\/juejin.im\/post\/5b626b68e51d451956055651\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eDataURL 与 File,Blob,canvas 对象之间的互相转换\x3c\/a\x3e\x3c\/p\x3e\n\x3ch2 id=\x22articleHeader16\x22\x3e结尾\x3c\/h2\x3e\n\x3cp\x3e文本完整代码，请戳\x3ca href=\x22https:\/\/github.com\/Ortonzhang\/simple-code\/tree\/master\/javascript\/img-stream\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3egithub\x3c\/a\x3e\x3c\/p\x3e\n\x3cp\x3e各位，周末快乐。\x3c\/p\x3e\n\n                \n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/c1a81f38/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/3643cbd8/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/c59e1898/&text=少侠，留步，图片预览术"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/c59e1898/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/c59e1898/&text=少侠，留步，图片预览术"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/c59e1898/&title=少侠，留步，图片预览术"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/c59e1898/&is_video=false&description=少侠，留步，图片预览术"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=少侠，留步，图片预览术&body=Check out this article: https://alili.tech/archive/c59e1898/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/c59e1898/&title=少侠，留步，图片预览术"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/c59e1898/&title=少侠，留步，图片预览术"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/c59e1898/&title=少侠，留步，图片预览术"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/c59e1898/&title=少侠，留步，图片预览术"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">图片流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">1.1.</span> <span class="toc-text">上传方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader2"><span class="toc-number">1.1.1.</span> <span class="toc-text">input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-number">1.1.2.</span> <span class="toc-text">Drag &amp;&amp; drop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader4"><span class="toc-number">1.1.3.</span> <span class="toc-text">paste</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">clipboardData</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">1.2.</span> <span class="toc-text">文件格式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader6"><span class="toc-number">1.2.1.</span> <span class="toc-text">file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader7"><span class="toc-number">1.2.2.</span> <span class="toc-text">blob</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">创建blob对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">Blob URL</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader8"><span class="toc-number">1.2.3.</span> <span class="toc-text">FileReader</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader9"><span class="toc-number">1.2.4.</span> <span class="toc-text">base64</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader10"><span class="toc-number">1.3.</span> <span class="toc-text">格式差异</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader11"><span class="toc-number">1.4.</span> <span class="toc-text">格式之间转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader12"><span class="toc-number">1.4.1.</span> <span class="toc-text">canvas转为blob对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader13"><span class="toc-number">1.4.2.</span> <span class="toc-text">canvas转为base64</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader14"><span class="toc-number">1.4.3.</span> <span class="toc-text">base64转为blob</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader15"><span class="toc-number">1.5.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader16"><span class="toc-number">1.6.</span> <span class="toc-text">结尾</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">2.</span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.1.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">2.2.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol></li></ol>
-    </div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        少侠，留步，图片预览术
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-10-21T16:00:00.000Z" itemprop="datePublished">2018-10-22</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016276887" alt="" title="" style="cursor: pointer; display: inline"></span></p>
-<p>少年，我看你骨骼精奇，是万中无一的武学奇才，我这有本《图片流》秘籍，见与你有缘，就送于你了。</p>
-<h1 id="articleHeader0">图片流</h1>
-<p>本文所说的图片流就是读取本地图片，并在页面使用文件流的方式显示出来。</p>
-<p>首先，我们简单说下文件上传的几种方式, 然后依次来实现它们</p>
-<h2 id="articleHeader1">上传方式</h2>
-<h3 id="articleHeader2">input</h3>
-<p>通过用户点击，创建<code>&lt;input type="file" accept="image/*"/&gt;</code>,并监听<code>change</code>事件获取file对象，大体如下</p>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="click = () => {
-    let input = document.createElement('input')
-    input.setAttribute('type', 'file')
-    input.setAttribute('accept', 'image/*')
-    
-    input.onchange = event => {
-        let file = event.target.files[0]
-    }
-    
-    input.click()
-    
-} " title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="javascript hljs"><code class="js">click = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-    <span class="hljs-keyword">let</span> input = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'input'</span>)
-    input.setAttribute(<span class="hljs-string">'type'</span>, <span class="hljs-string">'file'</span>)
-    input.setAttribute(<span class="hljs-string">'accept'</span>, <span class="hljs-string">'image/*'</span>)
-    
-    input.onchange = <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
-        <span class="hljs-keyword">let</span> file = event.target.files[<span class="hljs-number">0</span>]
-    }
-    
-    input.click()
-    
-} </code></pre>
-<h3 id="articleHeader3">Drag &amp;&amp; drop</h3>
-<p>使用HTML5的拖放API，监听元素的<code>drop</code>事件，同样是获取file对象</p>
-<p>会创建一个DataTransfer对象,下面我们还会遇到它，稍后再说</p>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="dragover = event => {
-   event.preventDefault()
-}
-
-drop = event => {
-    event.preventDefault()
-    let files =  event.dataTransfer.files
-}" title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="javascript hljs"><code class="js">dragover = <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
-   event.preventDefault()
-}
-
-drop = <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
-    event.preventDefault()
-    <span class="hljs-keyword">let</span> files =  event.dataTransfer.files
-}</code></pre>
-<h3 id="articleHeader4">paste</h3>
-<p>给元素绑定粘贴事件，得益于<code>contenteditable</code>我们可以给所有元素添加，涛声依旧，获取event中包含的file</p>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="paste = (e) => {
-    e.preventDefault()
-    let file = e.clipboardData.files[0]
-}" title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="javascript hljs"><code class="js">paste = <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
-    e.preventDefault()
-    <span class="hljs-keyword">let</span> file = e.clipboardData.files[<span class="hljs-number">0</span>]
-}</code></pre>
-<h4>clipboardData</h4>
-<p>paste事件提供了一个<code>clipboardData</code>属性，是一个<code>DataTransfer</code>类型的对象，前面我们说到，拖放会产生一个<code>DataTransfer</code>对象，没错，粘贴也是它。</p>
-<p>来来来，掀起了她的盖头来。</p>
-<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016276888?w=1028&amp;h=485" alt="" title="" style="cursor: pointer; display: inline"></span></p>
-<p>上面可以看到，<code>clipboardData</code>有如下属性</p>
-<ul>
-<li>dropEffect 默认是node</li>
-<li>effectAllowed 默认是uninitialized</li>
-<li>files 本地文件列表</li>
-<li>items 剪切板中的各项数据</li>
-<li>types 剪切板中的各项数据类型</li>
-</ul>
-<p>我们只需要使用files即可，图片文件在它里面</p>
-<h2 id="articleHeader5">文件格式</h2>
-<h3 id="articleHeader6">file</h3>
-<blockquote>通常情况下， File 对象是来自用户在一个<code>&lt;input&gt;</code>元素上选择文件后返回的 <code>FileList</code> 对象,也可以是来自由拖放操作生成的<code>DataTransfer</code>对象，继承于<code>Blob</code>
-</blockquote>
-<p>庐山真面目，诺，就是这个样子。</p>
-<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016276889?w=601&amp;h=190" alt="" title="" style="cursor: pointer; display: inline"></span></p>
-<p>可以看到有如下属性：</p>
-<ul>
-<li>name：文件名，该属性只读。</li>
-<li>size：文件大小，单位为字节，该属性只读。</li>
-<li>type：文件的 MIME 类型，如果分辨不出类型，则为空字符串，该属性只读。</li>
-<li>lastModified：文件的上次修改时间，格式为时间戳。</li>
-<li>lastModifiedDate：文件的上次修改时间，格式为 Date 对象实例。</li>
-</ul>
-<p>我们不去深究file对象，只需要知道通过它可以访问本地的文件。</p>
-<h3 id="articleHeader7">blob</h3>
-<blockquote>一个 Blob对象表示一个不可变的, 原始数据的类似文件对象。Blob表示的数据不一定是一个JavaScript原生格式。 File 接口基于Blob，继承 blob功能并将其扩展为支持用户系统上的文件。</blockquote>
-<h4>创建blob对象</h4>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="var aBlob = new Blob( array, options );" title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="javascript hljs"><code class="js" style="word-break: break-word; white-space: initial"><span class="hljs-keyword">var</span> aBlob = <span class="hljs-keyword">new</span> Blob( array, options );</code></pre>
-<ul>
-<li>array 是一个由ArrayBuffer, ArrayBufferView, Blob, DOMString 等对象构成的 Array ，或者其他类似对象的混合体，它将会被放进 Blob.</li>
-<li>
-<p>options 是一个可选的Blob熟悉字典，它可能会指定如下两种属性</p>
-<ul>
-<li>type，默认值为 “”，它代表了将会被放入到blob中的数组内容的MIME类型。</li>
-<li>endings，默认值为”transparent”，它代表包含行结束符n的字符串如何被输出。</li>
-</ul>
-</li>
-</ul>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="var a = [&quot;hello&quot;, &quot;world&quot;];
-var myBlob = new Blob(a, { &quot;type&quot; : &quot;text/xml&quot; });
-console.log(myBlob);" title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="javascript hljs"><code class="js"><span class="hljs-keyword">var</span> a = [<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>];
-<span class="hljs-keyword">var</span> myBlob = <span class="hljs-keyword">new</span> Blob(a, { <span class="hljs-string">"type"</span> : <span class="hljs-string">"text/xml"</span> });
-<span class="hljs-built_in">console</span>.log(myBlob);</code></pre>
-<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016276890?w=556&amp;h=114" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer"></span></p>
-<p>通过动态创建blob，我们可以实现纯前端下载</p>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="const foo = {hello: &quot;world&quot;};
-const blob = new Blob([JSON.stringify(foo)], {type: &quot;text/plain&quot;});
-const fileName = `${Date.now()}.doc`;
-const link = document.createElement('a');
-link.href = URL.createObjectURL(blob);
-link.download = fileName;
-link.click();
-URL.revokeObjectURL(link.href);" title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="javascript hljs"><code class="js"><span class="hljs-keyword">const</span> foo = {<span class="hljs-attr">hello</span>: <span class="hljs-string">"world"</span>};
-<span class="hljs-keyword">const</span> blob = <span class="hljs-keyword">new</span> Blob([<span class="hljs-built_in">JSON</span>.stringify(foo)], {<span class="hljs-attr">type</span>: <span class="hljs-string">"text/plain"</span>});
-<span class="hljs-keyword">const</span> fileName = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">Date</span>.now()}</span>.doc`</span>;
-<span class="hljs-keyword">const</span> link = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'a'</span>);
-link.href = URL.createObjectURL(blob);
-link.download = fileName;
-link.click();
-URL.revokeObjectURL(link.href);</code></pre>
-<h4>Blob URL</h4>
-<p>Blob URL是blob协议的URL，格式如下</p>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="blob:http://localhost:1234/946644c4-ca98-405e-918c-759e790d0330" title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="javascript hljs"><code class="js" style="word-break: break-word; white-space: initial">blob:http:<span class="hljs-comment">//localhost:1234/946644c4-ca98-405e-918c-759e790d0330</span></code></pre>
-<p>Blob URL可以通过<code>URL.createObjectURL(blob)</code>创建, 在每次调用createObjectURL()方法时，都会创建一个新的 URL 对象，即使你已经用相同的对象作为参数创建过。</p>
-<p>在不需要这些URL对象的时候， 通过<code>URL.revokeObjectURL(objectURL)</code> 释放URL对象</p>
-<p>使用Blob URL进行显示本地图片，我们只需要把创建的URL赋值给img的src属性就可以了。</p>
-<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016276891" del-src="https://static.alili.tech/v-5bbf1b3b/global/img/squares.svg" alt="" title="" style="cursor: pointer"></span></p>
-<h3 id="articleHeader8">FileReader</h3>
-<p>FileReader用来读取file或blob文件数据，基于文件大小不同，读取的过程为异步。</p>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="let render = new FileReader()
-render.onload = () => {
-    let src = render.result
-}
-render.readAsDataURL(file)" title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="hljs openscad"><code><span class="hljs-built_in">let</span> <span class="hljs-built_in">render</span> = new FileReader()
-<span class="hljs-built_in">render</span>.onload = () =&gt; {
-    <span class="hljs-built_in">let</span> src = <span class="hljs-built_in">render</span>.result
-}
-<span class="hljs-built_in">render</span>.readAsDataURL(file)</code></pre>
-<p>FileReader读取文件方法</p>
-<ul>
-<li>readAsBinaryString    file    将文件读取为二进制编码</li>
-<li>readAsBinaryArray    file    将文件读取为二进制数组</li>
-<li>readAsText    file[, encoding]    按照格式将文件读取为文本，encode默认为UTF-8</li>
-<li>readAsDataURL    file    将文件读取为DataUrl</li>
-</ul>
-<h3 id="articleHeader9">base64</h3>
-<p>使用FileReader进行文件的读取，就可以将图片读取成base64格式的了。</p>
-<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016276892?w=1778&amp;h=369" alt="" title="" style="cursor: pointer; display: inline"></span></p>
-<p>直接在FileReader实例的<code>onload</code>函数里面将result赋值给src即可</p>
-<h2 id="articleHeader10">格式差异</h2>
-<p>其实主要是两种格式base64和blob，它们之间的差异如下</p>
-<ul>
-<li>Blob URL的长度一般比较短</li>
-<li>Blob URL可以方便的使用XMLHttpRequest获取源数据， base64不是所有浏览器都支持</li>
-<li>Blob URL 只能在当前应用内部使用</li>
-</ul>
-<h2 id="articleHeader11">格式之间转换</h2>
-<h3 id="articleHeader12">canvas转为blob对象</h3>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="canvas.toBlob(function (blobObj) {
-    console.log(blobObj)
-})" title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="javascript hljs"><code class="js">canvas.toBlob(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">blobObj</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(blobObj)
-})</code></pre>
-<h3 id="articleHeader13">canvas转为base64</h3>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="let imgSrc = canvas.toDataURL('image/png')" title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="javascript hljs"><code class="js" style="word-break: break-word; white-space: initial"><span class="hljs-keyword">let</span> imgSrc = canvas.toDataURL(<span class="hljs-string">'image/png'</span>)</code></pre>
-<h3 id="articleHeader14">base64转为blob</h3>
-<div class="widget-codetool" style="display:none">
-      <div class="widget-codetool--inner">
-      <span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
-      <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="function dataURLtoBlob(dataurl) {
-  let arr = dataurl.split(&quot;,&quot;);
-  let mime = arr[0].match(/:(.*?);/)[1];
-  let bstr = atob(arr[1]);
-  let n = bstr.length;
-  let u8arr = new Uint8Array(n);
-
-  while (n--) {
-    u8arr[n] = bstr.charCodeAt(n);
-  }
-
-  return new Blob([u8arr], { type: mime });
-}
-" title="" data-original-title="复制"></span>
-      <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
-      </div>
-      </div><pre class="javascript hljs"><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dataURLtoBlob</span>(<span class="hljs-params">dataurl</span>) </span>{
-  <span class="hljs-keyword">let</span> arr = dataurl.split(<span class="hljs-string">","</span>);
-  <span class="hljs-keyword">let</span> mime = arr[<span class="hljs-number">0</span>].match(<span class="hljs-regexp">/:(.*?);/</span>)[<span class="hljs-number">1</span>];
-  <span class="hljs-keyword">let</span> bstr = atob(arr[<span class="hljs-number">1</span>]);
-  <span class="hljs-keyword">let</span> n = bstr.length;
-  <span class="hljs-keyword">let</span> u8arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint8Array</span>(n);
-
-  <span class="hljs-keyword">while</span> (n--) {
-    u8arr[n] = bstr.charCodeAt(n);
-  }
-
-  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Blob([u8arr], { <span class="hljs-attr">type</span>: mime });
-}
-</code></pre>
-<h2 id="articleHeader15">参考</h2>
-<p><a href="https://segmentfault.com/a/1190000015026760" target="_blank" rel="noopener">前端利用Blob对象创建指定文件并下载</a></p>
-<p><a href="https://juejin.im/post/5b626b68e51d451956055651" rel="nofollow noreferrer" target="_blank">DataURL 与 File,Blob,canvas 对象之间的互相转换</a></p>
-<h2 id="articleHeader16">结尾</h2>
-<p>文本完整代码，请戳<a href="https://github.com/Ortonzhang/simple-code/tree/master/javascript/img-stream" rel="nofollow noreferrer" target="_blank">github</a></p>
-<p>各位，周末快乐。</p>
-
-                
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://segmentfault.com/a/1190000016276884" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016276884</a></p>
-<h2 id="原文标题"><a href="#原文标题" class="headerlink" title="原文标题"></a>原文标题</h2><p>少侠，留步，图片预览术</p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/c59e1898/">https://alili.tech/archive/c59e1898/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2 id="原文链接">原文链接</h2><p><a href="https://segmentfault.com/a/1190000016276884">https://segmentfault.com/a/1190000016276884</a></p><h2 id="原文标题">原文标题</h2><p>少侠，留步，图片预览术</p><h2>本文链接：</h2><a href="https://alili.tech/archive/c59e1898/" target="_blank">https://alili.tech/archive/c59e1898/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">图片流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">1.1.</span> <span class="toc-text">上传方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader2"><span class="toc-number">1.1.1.</span> <span class="toc-text">input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-number">1.1.2.</span> <span class="toc-text">Drag &amp;&amp; drop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader4"><span class="toc-number">1.1.3.</span> <span class="toc-text">paste</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">clipboardData</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">1.2.</span> <span class="toc-text">文件格式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader6"><span class="toc-number">1.2.1.</span> <span class="toc-text">file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader7"><span class="toc-number">1.2.2.</span> <span class="toc-text">blob</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">创建blob对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">Blob URL</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader8"><span class="toc-number">1.2.3.</span> <span class="toc-text">FileReader</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader9"><span class="toc-number">1.2.4.</span> <span class="toc-text">base64</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader10"><span class="toc-number">1.3.</span> <span class="toc-text">格式差异</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader11"><span class="toc-number">1.4.</span> <span class="toc-text">格式之间转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader12"><span class="toc-number">1.4.1.</span> <span class="toc-text">canvas转为blob对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader13"><span class="toc-number">1.4.2.</span> <span class="toc-text">canvas转为base64</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader14"><span class="toc-number">1.4.3.</span> <span class="toc-text">base64转为blob</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader15"><span class="toc-number">1.5.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader16"><span class="toc-number">1.6.</span> <span class="toc-text">结尾</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">2.</span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.1.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">2.2.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol></li></ol>
-    </div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

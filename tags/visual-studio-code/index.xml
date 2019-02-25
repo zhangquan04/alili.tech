@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visual Studio Code on Alili</title>
+    <link>https://alili.tech/tags/visual-studio-code/</link>
+    <description>Recent content in Visual Studio Code on Alili</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 08 Jan 2019 19:33:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://alili.tech/tags/visual-studio-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visual Studio Code 下的 jsconfig.json</title>
+      <link>https://alili.tech/archive/ltucv5fyj9/</link>
+      <pubDate>Tue, 08 Jan 2019 19:33:33 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/ltucv5fyj9/</guid>
+      <description>今天聊聊 Visual Studio Code 的jsconfig.json配置小技巧.
+jsconfig.json 是什么? 如果你的项目中有一个 jsconfig.json文件的话,这个文件的配置可以对你的文件所在目录下的所有js代码做出个性化支持.
+ Tip: 如果你在项目中新加了这个文件,记得重启一下vscode哦~
+ 例子 exclude 属性 当vscode扫描项目代码的时候,如果遇到了node_module的话是会变得很慢的.
+如果想要编辑器的性能有一个提升的话,我们应该排除这个文件夹.
+{ &amp;quot;exclude&amp;quot;: [ &amp;quot;node_modules&amp;quot; ] }  include 属性 当然还有相对的include属性
+{ &amp;quot;include&amp;quot;: [ &amp;quot;src/**/*&amp;quot; ] }  webpack aliases 的支持 如果我们在我们的webpack里面配置的路径的别名,心细的小朋友就发现了. 我们的vscode不能根据别名路径导入的包跳转文件了.所以我们还需要jsconfig.json的支持.
+{ &amp;quot;compilerOptions&amp;quot;: { &amp;quot;baseUrl&amp;quot;: &amp;quot;.&amp;quot;, &amp;quot;paths&amp;quot;: { &amp;quot;@component&amp;quot;: [&amp;quot;./src/component&amp;quot;] } } }  jsconfig.json的配置是tsconfig.json的子集,
+以后有机会的话聊一聊tsconfig.json.
+今天就到这里~</description>
+    </item>
+    
+  </channel>
+</rss>

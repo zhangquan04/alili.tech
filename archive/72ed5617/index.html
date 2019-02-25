@@ -1,469 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="&amp;#x4E00;.&amp;#x6D6E;&amp;#x52A8;&amp;#x5E03;&amp;#x5C40;1.&amp;#x5148;&amp;#x8BA9;&amp;#x56FA;&amp;#x5B9A;&amp;#x5BBD;&amp;#x5EA6;&amp;#x7684;div&amp;#x6D6E;&amp;#x52A8;&amp;#xFF01;&amp;#x4F7F;&amp;#x5176;&amp;#x8131;&amp;#x79BB;&amp;#x6587;&amp;#x6863;&amp;#x6D41;&amp;#x3002;2.margin-l">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）">
-<meta property="og:url" content="https://alili.tech/archive/72ed5617/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="&amp;#x4E00;.&amp;#x6D6E;&amp;#x52A8;&amp;#x5E03;&amp;#x5C40;1.&amp;#x5148;&amp;#x8BA9;&amp;#x56FA;&amp;#x5B9A;&amp;#x5BBD;&amp;#x5EA6;&amp;#x7684;div&amp;#x6D6E;&amp;#x52A8;&amp;#xFF01;&amp;#x4F7F;&amp;#x5176;&amp;#x8131;&amp;#x79BB;&amp;#x6587;&amp;#x6863;&amp;#x6D41;&amp;#x3002;2.margin-l">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-03T18:30:16.992Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）">
-<meta name="twitter:description" content="&amp;#x4E00;.&amp;#x6D6E;&amp;#x52A8;&amp;#x5E03;&amp;#x5C40;1.&amp;#x5148;&amp;#x8BA9;&amp;#x56FA;&amp;#x5B9A;&amp;#x5BBD;&amp;#x5EA6;&amp;#x7684;div&amp;#x6D6E;&amp;#x52A8;&amp;#xFF01;&amp;#x4F7F;&amp;#x5176;&amp;#x8131;&amp;#x79BB;&amp;#x6587;&amp;#x6863;&amp;#x6D41;&amp;#x3002;2.margin-l">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法） | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/72ed5617/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/72ed5617/",
-      "appid": "1613049289050283", 
-      "title": "左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法） | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:36"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法） | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/72ed5617/",
+				"appid": "1613049289050283", 
+				"title": "左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法） | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-11-04T02:30:10"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/300deff0/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/7fc3c274/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2f72ed5617%2f&text=%e5%b7%a6%e4%be%a7%e5%9b%ba%e5%ae%9a%ef%bc%8c%e5%8f%b3%e4%be%a7%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84%e5%b8%83%e5%b1%80%e6%96%b9%e5%bc%8f%28%e6%96%b0%e5%a2%9e%e8%af%84%e8%ae%ba%e5%8c%ba%e5%a4%a7%e4%bd%ac%e6%95%99%e7%9a%84%e6%96%b9%e6%b3%95%ef%bc%89"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2f72ed5617%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2f72ed5617%2f&text=%e5%b7%a6%e4%be%a7%e5%9b%ba%e5%ae%9a%ef%bc%8c%e5%8f%b3%e4%be%a7%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84%e5%b8%83%e5%b1%80%e6%96%b9%e5%bc%8f%28%e6%96%b0%e5%a2%9e%e8%af%84%e8%ae%ba%e5%8c%ba%e5%a4%a7%e4%bd%ac%e6%95%99%e7%9a%84%e6%96%b9%e6%b3%95%ef%bc%89"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2f72ed5617%2f&title=%e5%b7%a6%e4%be%a7%e5%9b%ba%e5%ae%9a%ef%bc%8c%e5%8f%b3%e4%be%a7%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84%e5%b8%83%e5%b1%80%e6%96%b9%e5%bc%8f%28%e6%96%b0%e5%a2%9e%e8%af%84%e8%ae%ba%e5%8c%ba%e5%a4%a7%e4%bd%ac%e6%95%99%e7%9a%84%e6%96%b9%e6%b3%95%ef%bc%89"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2f72ed5617%2f&is_video=false&description=%e5%b7%a6%e4%be%a7%e5%9b%ba%e5%ae%9a%ef%bc%8c%e5%8f%b3%e4%be%a7%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84%e5%b8%83%e5%b1%80%e6%96%b9%e5%bc%8f%28%e6%96%b0%e5%a2%9e%e8%af%84%e8%ae%ba%e5%8c%ba%e5%a4%a7%e4%bd%ac%e6%95%99%e7%9a%84%e6%96%b9%e6%b3%95%ef%bc%89"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%e5%b7%a6%e4%be%a7%e5%9b%ba%e5%ae%9a%ef%bc%8c%e5%8f%b3%e4%be%a7%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84%e5%b8%83%e5%b1%80%e6%96%b9%e5%bc%8f%28%e6%96%b0%e5%a2%9e%e8%af%84%e8%ae%ba%e5%8c%ba%e5%a4%a7%e4%bd%ac%e6%95%99%e7%9a%84%e6%96%b9%e6%b3%95%ef%bc%89&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2f72ed5617%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2f72ed5617%2f&title=%e5%b7%a6%e4%be%a7%e5%9b%ba%e5%ae%9a%ef%bc%8c%e5%8f%b3%e4%be%a7%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84%e5%b8%83%e5%b1%80%e6%96%b9%e5%bc%8f%28%e6%96%b0%e5%a2%9e%e8%af%84%e8%ae%ba%e5%8c%ba%e5%a4%a7%e4%bd%ac%e6%95%99%e7%9a%84%e6%96%b9%e6%b3%95%ef%bc%89"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f72ed5617%2f&title=%e5%b7%a6%e4%be%a7%e5%9b%ba%e5%ae%9a%ef%bc%8c%e5%8f%b3%e4%be%a7%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84%e5%b8%83%e5%b1%80%e6%96%b9%e5%bc%8f%28%e6%96%b0%e5%a2%9e%e8%af%84%e8%ae%ba%e5%8c%ba%e5%a4%a7%e4%bd%ac%e6%95%99%e7%9a%84%e6%96%b9%e6%b3%95%ef%bc%89"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f72ed5617%2f&title=%e5%b7%a6%e4%be%a7%e5%9b%ba%e5%ae%9a%ef%bc%8c%e5%8f%b3%e4%be%a7%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84%e5%b8%83%e5%b1%80%e6%96%b9%e5%bc%8f%28%e6%96%b0%e5%a2%9e%e8%af%84%e8%ae%ba%e5%8c%ba%e5%a4%a7%e4%bd%ac%e6%95%99%e7%9a%84%e6%96%b9%e6%b3%95%ef%bc%89"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f72ed5617%2f&title=%e5%b7%a6%e4%be%a7%e5%9b%ba%e5%ae%9a%ef%bc%8c%e5%8f%b3%e4%be%a7%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84%e5%b8%83%e5%b1%80%e6%96%b9%e5%bc%8f%28%e6%96%b0%e5%a2%9e%e8%af%84%e8%ae%ba%e5%8c%ba%e5%a4%a7%e4%bd%ac%e6%95%99%e7%9a%84%e6%96%b9%e6%b3%95%ef%bc%89"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a><ul><li><a href="#原文标题">原文标题</a></li><li><a href="#原文链接">原文链接</a></li></ul></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）</h1><div class="meta"><div class="postdate"><time datetime="2018-11-04" itemprop="datePublished">2018-11-04</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\x3ch2 id=\x22articleHeader0\x22\x3e\x26#x4E00;.\x26#x6D6E;\x26#x52A8;\x26#x5E03;\x26#x5C40;\x3c\/h2\x3e\x3cp\x3e1.\x26#x5148;\x26#x8BA9;\x26#x56FA;\x26#x5B9A;\x26#x5BBD;\x26#x5EA6;\x26#x7684;div\x26#x6D6E;\x26#x52A8;\x26#xFF01;\x26#x4F7F;\x26#x5176;\x26#x8131;\x26#x79BB;\x26#x6587;\x26#x6863;\x26#x6D41;\x26#x3002;\x3cbr\x3e2.margin-left\x26#x7684;\x26#x503C;\x26#x7B49;\x26#x4E8E;\x26#x56FA;\x26#x5B9A;div\x26#x7684;\x26#x5BBD;\x26#x5EA6;\x26#x76F8;\x26#x7B49;\x26#x3002;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22   .aside{\n        float: left;\n        width: 200px;\n        background-color: red;\n    }\n    .content{\n        margin-left: 200px;\n        background-color: blue;\n    }\n    \n\x26lt;div class=\x26quot;aside\x26quot;\x26gt;\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n\x26lt;\/div\x26gt;\n\x26lt;div class=\x26quot;content\x26quot;\x26gt;\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n\x26lt;\/div\x26gt;\n\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs stylus\x22\x3e\x3ccode\x3e   .aside{\n        \x3cspan class=\x22hljs-attribute\x22\x3efloat\x3c\/span\x3e: left;\n        \x3cspan class=\x22hljs-attribute\x22\x3ewidth\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e200px\x3c\/span\x3e;\n        \x3cspan class=\x22hljs-attribute\x22\x3ebackground-color\x3c\/span\x3e: red;\n    }\n    .\x3cspan class=\x22hljs-attribute\x22\x3econtent\x3c\/span\x3e{\n        \x3cspan class=\x22hljs-attribute\x22\x3emargin-left\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e200px\x3c\/span\x3e;\n        \x3cspan class=\x22hljs-attribute\x22\x3ebackground-color\x3c\/span\x3e: blue;\n    }\n    \n\x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e class=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;aside\x26quot;\x3c\/span\x3e\x26gt;\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n\x26lt;\/div\x26gt;\n\x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e class=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;content\x26quot;\x3c\/span\x3e\x26gt;\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n\x26lt;\/div\x26gt;\n\x3c\/code\x3e\x3c\/pre\x3e\x3ch2 id=\x22articleHeader1\x22\x3e\x26#x4E8C;.margin\x26#x7684;\x26#x8D1F;\x26#x503C;(3\x26#x4E2A;div)\x3c\/h2\x3e\x3col\x3e\x3cli\x3e\x26#x662F;\x26#x56FA;\x26#x5B9A;\x26#x5BBD;\x26#x5EA6;\x26#x7684;div\x26#x8131;\x26#x79BB;\x26#x6587;\x26#x6863;\x26#x6D41;\x26#x3002;\x3c\/li\x3e\x3cli\x3e\x26#x5229;\x26#x7528;marin\x26#x8D1F;\x26#x503C;\x26#x53EF;\x26#x4EE5;\x26#x4F7F;\x26#x5F97;\x26#xFF0C;\x26#x540E;\x26#x9762;\x26#x7684;div\x26#x53EF;\x26#x4EE5;\x26#x4E0E;\x26#x524D;\x26#x9762;\x26#x7684;div \x26#x4FDD;\x26#x6301;\x26#x540C;\x26#x884C;\x26#x663E;\x26#x793A;\x26#x3002;\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x7ED9;\x26#x5305;\x26#x88F9;\x26#x5185;\x26#x5BB9;\x26#x7684;div\x26#x52A0;margin-left \x26#x53EF;\x26#x4EE5;\x26#x4F7F;\x26#x5F97;\x26#x4E0E;\x26#x5DE6;\x26#x8FB9;\x26#x7684;\x26#x6587;\x26#x5B57;\x26#x4E0D;\x26#x91CD;\x26#x53E0;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22.aside{\n    float: left;\n    margin-right: -200px;\n    width: 200px;\n    background-color: red;\n}\n.content{\n    float: right;\n}\n.content .inner{\n    margin-left: 200px;\n    background-color: blue;\n}\n\n \x26lt;div class=\x26quot;aside\x26quot;\x26gt;\n   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n\x26lt;\/div\x26gt;\n\x26lt;div class=\x26quot;content\x26quot;\x26gt;\n   \x26lt;div class=\x26quot;inner\x26quot;\x26gt;\n      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n   \x26lt;\/div\x26gt; \x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs stylus\x22\x3e\x3ccode\x3e.aside{\n    \x3cspan class=\x22hljs-attribute\x22\x3efloat\x3c\/span\x3e: left;\n    \x3cspan class=\x22hljs-attribute\x22\x3emargin-right\x3c\/span\x3e: -\x3cspan class=\x22hljs-number\x22\x3e200px\x3c\/span\x3e;\n    \x3cspan class=\x22hljs-attribute\x22\x3ewidth\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e200px\x3c\/span\x3e;\n    \x3cspan class=\x22hljs-attribute\x22\x3ebackground-color\x3c\/span\x3e: red;\n}\n.\x3cspan class=\x22hljs-attribute\x22\x3econtent\x3c\/span\x3e{\n    \x3cspan class=\x22hljs-attribute\x22\x3efloat\x3c\/span\x3e: right;\n}\n\x3cspan class=\x22hljs-selector-class\x22\x3e.content\x3c\/span\x3e .inner{\n    \x3cspan class=\x22hljs-attribute\x22\x3emargin-left\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e200px\x3c\/span\x3e;\n    \x3cspan class=\x22hljs-attribute\x22\x3ebackground-color\x3c\/span\x3e: blue;\n}\n\n \x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e class=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;aside\x26quot;\x3c\/span\x3e\x26gt;\n   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n\x26lt;\/div\x26gt;\n\x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e class=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;content\x26quot;\x3c\/span\x3e\x26gt;\n   \x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e class=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;inner\x26quot;\x3c\/span\x3e\x26gt;\n      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n   \x26lt;\/div\x26gt; \x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26lt;\/div\x26gt;\x3c\/p\x3e\x3c\/li\x3e\x3c\/ol\x3e\x3ch2 id=\x22articleHeader2\x22\x3e\x26#x4E09;.calc()\x26#x8BA1;\x26#x7B97;\x26#x5C5E;\x26#x6027;\x3c\/h2\x3e\x3cp\x3e\x3cstrong\x3e\x26#x6CE8;\x26#x610F;\x26#xFF1A;\x26#x4F7F;\x26#x7528;calc\x26#x8BA1;\x26#x7B97;\x26#x5C5E;\x26#x6027;\x26#x7684;\x26#x65F6;\x26#x5019; \x26#x8FD0;\x26#x7B97;\x26#x7B26;(- \x2b\x26#x7B49;\x26#x7B49;)\x26#x4E24;\x26#x8FB9;\x26#x5FC5;\x26#x987B;\x26#x6709;\x26#x7A7A;\x26#x683C;\x3c\/strong\x3e\x3c\/p\x3e\x3col\x3e\x3cli\x3e\x26#x6CE8;\x26#x610F;\x26#x4E24;\x26#x4E2A;div\x26#x5FC5;\x26#x987B;\x26#x4E00;\x26#x5DE6;\x26#x4E00;\x26#x53F3;\x26#x6D6E;\x26#x52A8;\x26#x3002;\x3c\/li\x3e\x3cli\x3e\x3cp\x3ecalc\x26#x7684;\x26#x5BBD;\x26#x5EA6;\x26#x5FC5;\x26#x987B;\x26#x8981;\x26#x51CF;\x26#x53BB;\x26#x7684;\x26#x5BBD;\x26#x5EA6;\x26#x8981;\x26#x4E0E;\x26#x56FA;\x26#x5B9A;\x26#x5BBD;\x26#x5EA6;\x26#x4FDD;\x26#x6301;\x26#x4E00;\x26#x81F4;\x26#x3002;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22  .aside{\n      float: left;\n      width: 200px;\n      background-color: red;\n  }\n  .content{\n      calc:(100% - 200px);\n      background-color: blue;\n  }\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs css\x22\x3e\x3ccode\x3e  \x3cspan class=\x22hljs-selector-class\x22\x3e.aside\x3c\/span\x3e{\n      \x3cspan class=\x22hljs-attribute\x22\x3efloat\x3c\/span\x3e: left;\n      \x3cspan class=\x22hljs-attribute\x22\x3ewidth\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e200px\x3c\/span\x3e;\n      \x3cspan class=\x22hljs-attribute\x22\x3ebackground-color\x3c\/span\x3e: red;\n  }\n  \x3cspan class=\x22hljs-selector-class\x22\x3e.content\x3c\/span\x3e{\n      \x3cspan class=\x22hljs-attribute\x22\x3ecalc\x3c\/span\x3e:(\x3cspan class=\x22hljs-number\x22\x3e100%\x3c\/span\x3e - \x3cspan class=\x22hljs-number\x22\x3e200px\x3c\/span\x3e);\n      \x3cspan class=\x22hljs-attribute\x22\x3ebackground-color\x3c\/span\x3e: blue;\n  }\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26lt;div class=\x26quot;aside\x26quot;\x26gt;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n   \x26lt;\/div\x26gt;\n \x26lt;div class=\x26quot;content\x26quot;\x26gt;\n     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.        \n  \x26lt;\/div\x26gt;\n\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs applescript\x22\x3e\x3ccode\x3e  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n   \x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\n \x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;content\x26quot;\x3c\/span\x3e\x26gt;\n     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.        \n  \x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\n\x3c\/code\x3e\x3c\/pre\x3e\x3c\/li\x3e\x3c\/ol\x3e\x3ch2 id=\x22articleHeader3\x22\x3e\x26#x56DB;.flex\x26#x5E03;\x26#x5C40;\x3c\/h2\x3e\x3col\x3e\x3cli\x3e\x26#x9700;\x26#x8981;\x26#x7ED9;\x26#x7236;\x26#x7EA7;div\x26#x8BBE;\x26#x7F6E;display: flex\x26#x5C5E;\x26#x6027;\x26#x3002;\x3c\/li\x3e\x3cli\x3e\x26#x56FA;\x26#x5B9A;\x26#x5BBD;\x26#x5EA6;\x26#x7684;div\x26#x8BBE;\x26#x7F6E;flex: 0 0 200px\x26#x5373;\x26#x53EF;\x26#x3002;\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x5185;\x26#x5BB9;\x26#x533A;\x26#x57DF;\x26#x7684;div\x26#x76F4;\x26#x63A5;\x26#x5199;\x26#x51FA;flex: 1\x26#x5373;\x26#x53EF;\x26#x3002;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22.container{\n    display: flex;\n}\n.aside{\n    flex: 0 0 200px;\n    background-color: red; \n}\n.content{\n    flex: 1;\n    background-color: blue;\n}\n\x26lt;div class=\x26quot;container\x26quot;\x26gt;\n    \x26lt;div class=\x26quot;aside\x26quot;\x26gt;\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n    \x26lt;\/div\x26gt;\n    \x26lt;div class=\x26quot;content\x26quot;\x26gt;\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n    \x26lt;\/div\x26gt;\n\x26lt;\/div\x26gt;\n\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs stylus\x22\x3e\x3ccode\x3e.container{\n    \x3cspan class=\x22hljs-attribute\x22\x3edisplay\x3c\/span\x3e: flex;\n}\n.aside{\n    \x3cspan class=\x22hljs-attribute\x22\x3eflex\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e \x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e \x3cspan class=\x22hljs-number\x22\x3e200px\x3c\/span\x3e;\n    \x3cspan class=\x22hljs-attribute\x22\x3ebackground-color\x3c\/span\x3e: red; \n}\n.\x3cspan class=\x22hljs-attribute\x22\x3econtent\x3c\/span\x3e{\n    \x3cspan class=\x22hljs-attribute\x22\x3eflex\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e1\x3c\/span\x3e;\n    \x3cspan class=\x22hljs-attribute\x22\x3ebackground-color\x3c\/span\x3e: blue;\n}\n\x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e class=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;container\x26quot;\x3c\/span\x3e\x26gt;\n    \x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e class=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;aside\x26quot;\x3c\/span\x3e\x26gt;\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n    \x26lt;\/div\x26gt;\n    \x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e class=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;content\x26quot;\x3c\/span\x3e\x26gt;\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n    \x26lt;\/div\x26gt;\n\x26lt;\/div\x26gt;\n\x3c\/code\x3e\x3c\/pre\x3e\x3c\/li\x3e\x3c\/ol\x3e\x3ch2 id=\x22articleHeader4\x22\x3e\x26#x4E94;.\x26#x5DE6;\x26#x4FA7;\x26#x6D6E;\x26#x52A8;\x26#xFF0C;\x26#x53F3;\x26#x4FA7;overflow:hidden\x3c\/h2\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22.aside{\n    width: 200px;\n    float: left;\n    background-color: red;\n}\n.content{\n    overflow: hidden;\n    background-color: blue;\n}\n\x26lt;div class=\x26quot;aside\x26quot;\x26gt;\n        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n    \x26lt;\/div\x26gt;\n    \x26lt;div class=\x26quot;content\x26quot;\x26gt;\n        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n    \x26lt;\/div\x26gt;\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs stylus\x22\x3e\x3ccode\x3e.aside{\n    \x3cspan class=\x22hljs-attribute\x22\x3ewidth\x3c\/span\x3e: \x3cspan class=\x22hljs-number\x22\x3e200px\x3c\/span\x3e;\n    \x3cspan class=\x22hljs-attribute\x22\x3efloat\x3c\/span\x3e: left;\n    \x3cspan class=\x22hljs-attribute\x22\x3ebackground-color\x3c\/span\x3e: red;\n}\n.\x3cspan class=\x22hljs-attribute\x22\x3econtent\x3c\/span\x3e{\n    \x3cspan class=\x22hljs-attribute\x22\x3eoverflow\x3c\/span\x3e: hidden;\n    \x3cspan class=\x22hljs-attribute\x22\x3ebackground-color\x3c\/span\x3e: blue;\n}\n\x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e class=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;aside\x26quot;\x3c\/span\x3e\x26gt;\n        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n    \x26lt;\/div\x26gt;\n    \x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e class=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;content\x26quot;\x3c\/span\x3e\x26gt;\n        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor \x3cspan class=\x22hljs-keyword\x22\x3ein\x3c\/span\x3e voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.\n    \x26lt;\/div\x26gt;\x3c\/code\x3e\x3c\/pre\x3e\x3ch2 id=\x22articleHeader5\x22\x3e\x26#x962E;\x26#x4E00;\x26#x5CF0;\x26#x8001;\x26#x5E08;\x26#x5199;\x26#x7684;\x26#x6559;\x26#x7A0B;\x26#x6743;\x26#x5A01;\x26#x4F20;\x26#x9001;\x26#x95E8;\x26#xFF1A;\x3ca href=\x22http:\/\/www.ruanyifeng.com\/blog\/2015\/07\/flex-grammar.html\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttp:\/\/www.ruanyifeng.com\/blo...\x3c\/a\x3e\x3c\/h2\x3e\n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/d17cc6d1/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/c268ea76/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/72ed5617/&text=左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/72ed5617/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/72ed5617/&text=左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/72ed5617/&title=左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/72ed5617/&is_video=false&description=左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）&body=Check out this article: https://alili.tech/archive/72ed5617/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/72ed5617/&title=左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/72ed5617/&title=左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/72ed5617/&title=左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/72ed5617/&title=左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">一.浮动布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">二.margin的负值(3个div)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">3.</span> <span class="toc-text">三.calc()计算属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader3"><span class="toc-number">4.</span> <span class="toc-text">四.flex布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader4"><span class="toc-number">5.</span> <span class="toc-text">五.左侧浮动，右侧overflow:hidden</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">6.</span> <span class="toc-text">阮一峰老师写的教程权威传送门：http://www.ruanyifeng.com/blo...</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-11-03T18:30:10.000Z" itemprop="datePublished">2018-11-04</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <h2 id="articleHeader0">&#x4E00;.&#x6D6E;&#x52A8;&#x5E03;&#x5C40;</h2><p>1.&#x5148;&#x8BA9;&#x56FA;&#x5B9A;&#x5BBD;&#x5EA6;&#x7684;div&#x6D6E;&#x52A8;&#xFF01;&#x4F7F;&#x5176;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;&#x3002;<br>2.margin-left&#x7684;&#x503C;&#x7B49;&#x4E8E;&#x56FA;&#x5B9A;div&#x7684;&#x5BBD;&#x5EA6;&#x76F8;&#x7B49;&#x3002;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="   .aside{
-        float: left;
-        width: 200px;
-        background-color: red;
-    }
-    .content{
-        margin-left: 200px;
-        background-color: blue;
-    }
-    
-&lt;div class=&quot;aside&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-&lt;/div&gt;
-" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs stylus"><code>   .aside{
-        <span class="hljs-attribute">float</span>: left;
-        <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
-        <span class="hljs-attribute">background-color</span>: red;
-    }
-    .<span class="hljs-attribute">content</span>{
-        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">200px</span>;
-        <span class="hljs-attribute">background-color</span>: blue;
-    }
-    
-&lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">&quot;aside&quot;</span>&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor <span class="hljs-keyword">in</span> voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-&lt;/div&gt;
-&lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">&quot;content&quot;</span>&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor <span class="hljs-keyword">in</span> voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-&lt;/div&gt;
-</code></pre><h2 id="articleHeader1">&#x4E8C;.margin&#x7684;&#x8D1F;&#x503C;(3&#x4E2A;div)</h2><ol><li>&#x662F;&#x56FA;&#x5B9A;&#x5BBD;&#x5EA6;&#x7684;div&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;&#x3002;</li><li>&#x5229;&#x7528;marin&#x8D1F;&#x503C;&#x53EF;&#x4EE5;&#x4F7F;&#x5F97;&#xFF0C;&#x540E;&#x9762;&#x7684;div&#x53EF;&#x4EE5;&#x4E0E;&#x524D;&#x9762;&#x7684;div &#x4FDD;&#x6301;&#x540C;&#x884C;&#x663E;&#x793A;&#x3002;</li><li><p>&#x7ED9;&#x5305;&#x88F9;&#x5185;&#x5BB9;&#x7684;div&#x52A0;margin-left &#x53EF;&#x4EE5;&#x4F7F;&#x5F97;&#x4E0E;&#x5DE6;&#x8FB9;&#x7684;&#x6587;&#x5B57;&#x4E0D;&#x91CD;&#x53E0;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text=".aside{
-    float: left;
-    margin-right: -200px;
-    width: 200px;
-    background-color: red;
-}
-.content{
-    float: right;
-}
-.content .inner{
-    margin-left: 200px;
-    background-color: blue;
-}
-
- &lt;div class=&quot;aside&quot;&gt;
-   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;
-   &lt;div class=&quot;inner&quot;&gt;
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-   &lt;/div&gt; " title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs stylus"><code>.aside{
-    <span class="hljs-attribute">float</span>: left;
-    <span class="hljs-attribute">margin-right</span>: -<span class="hljs-number">200px</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
-    <span class="hljs-attribute">background-color</span>: red;
-}
-.<span class="hljs-attribute">content</span>{
-    <span class="hljs-attribute">float</span>: right;
-}
-<span class="hljs-selector-class">.content</span> .inner{
-    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">200px</span>;
-    <span class="hljs-attribute">background-color</span>: blue;
-}
-
- &lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">&quot;aside&quot;</span>&gt;
-   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor <span class="hljs-keyword">in</span> voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-&lt;/div&gt;
-&lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">&quot;content&quot;</span>&gt;
-   &lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">&quot;inner&quot;</span>&gt;
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor <span class="hljs-keyword">in</span> voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-   &lt;/div&gt; </code></pre><p>&lt;/div&gt;</p></li></ol><h2 id="articleHeader2">&#x4E09;.calc()&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</h2><p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x4F7F;&#x7528;calc&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x7684;&#x65F6;&#x5019; &#x8FD0;&#x7B97;&#x7B26;(- +&#x7B49;&#x7B49;)&#x4E24;&#x8FB9;&#x5FC5;&#x987B;&#x6709;&#x7A7A;&#x683C;</strong></p><ol><li>&#x6CE8;&#x610F;&#x4E24;&#x4E2A;div&#x5FC5;&#x987B;&#x4E00;&#x5DE6;&#x4E00;&#x53F3;&#x6D6E;&#x52A8;&#x3002;</li><li><p>calc&#x7684;&#x5BBD;&#x5EA6;&#x5FC5;&#x987B;&#x8981;&#x51CF;&#x53BB;&#x7684;&#x5BBD;&#x5EA6;&#x8981;&#x4E0E;&#x56FA;&#x5B9A;&#x5BBD;&#x5EA6;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="  .aside{
-      float: left;
-      width: 200px;
-      background-color: red;
-  }
-  .content{
-      calc:(100% - 200px);
-      background-color: blue;
-  }" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs css"><code>  <span class="hljs-selector-class">.aside</span>{
-      <span class="hljs-attribute">float</span>: left;
-      <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
-      <span class="hljs-attribute">background-color</span>: red;
-  }
-  <span class="hljs-selector-class">.content</span>{
-      <span class="hljs-attribute">calc</span>:(<span class="hljs-number">100%</span> - <span class="hljs-number">200px</span>);
-      <span class="hljs-attribute">background-color</span>: blue;
-  }</code></pre><p>&lt;div class=&quot;aside&quot;&gt;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-   &lt;/div&gt;
- &lt;div class=&quot;content&quot;&gt;
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.        
-  &lt;/div&gt;
-" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs applescript"><code>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor <span class="hljs-keyword">in</span> voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-   &lt;/<span class="hljs-keyword">div</span>&gt;
- &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor <span class="hljs-keyword">in</span> voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.        
-  &lt;/<span class="hljs-keyword">div</span>&gt;
-</code></pre></li></ol><h2 id="articleHeader3">&#x56DB;.flex&#x5E03;&#x5C40;</h2><ol><li>&#x9700;&#x8981;&#x7ED9;&#x7236;&#x7EA7;div&#x8BBE;&#x7F6E;display: flex&#x5C5E;&#x6027;&#x3002;</li><li>&#x56FA;&#x5B9A;&#x5BBD;&#x5EA6;&#x7684;div&#x8BBE;&#x7F6E;flex: 0 0 200px&#x5373;&#x53EF;&#x3002;</li><li><p>&#x5185;&#x5BB9;&#x533A;&#x57DF;&#x7684;div&#x76F4;&#x63A5;&#x5199;&#x51FA;flex: 1&#x5373;&#x53EF;&#x3002;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text=".container{
-    display: flex;
-}
-.aside{
-    flex: 0 0 200px;
-    background-color: red; 
-}
-.content{
-    flex: 1;
-    background-color: blue;
-}
-&lt;div class=&quot;container&quot;&gt;
-    &lt;div class=&quot;aside&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-    &lt;/div&gt;
-    &lt;div class=&quot;content&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-    &lt;/div&gt;
-&lt;/div&gt;
-" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs stylus"><code>.container{
-    <span class="hljs-attribute">display</span>: flex;
-}
-.aside{
-    <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">200px</span>;
-    <span class="hljs-attribute">background-color</span>: red; 
-}
-.<span class="hljs-attribute">content</span>{
-    <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
-    <span class="hljs-attribute">background-color</span>: blue;
-}
-&lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">&quot;container&quot;</span>&gt;
-    &lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">&quot;aside&quot;</span>&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor <span class="hljs-keyword">in</span> voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-    &lt;/div&gt;
-    &lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">&quot;content&quot;</span>&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor <span class="hljs-keyword">in</span> voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre></li></ol><h2 id="articleHeader4">&#x4E94;.&#x5DE6;&#x4FA7;&#x6D6E;&#x52A8;&#xFF0C;&#x53F3;&#x4FA7;overflow:hidden</h2><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text=".aside{
-    width: 200px;
-    float: left;
-    background-color: red;
-}
-.content{
-    overflow: hidden;
-    background-color: blue;
-}
-&lt;div class=&quot;aside&quot;&gt;
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-    &lt;/div&gt;
-    &lt;div class=&quot;content&quot;&gt;
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor in voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-    &lt;/div&gt;" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs stylus"><code>.aside{
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
-    <span class="hljs-attribute">float</span>: left;
-    <span class="hljs-attribute">background-color</span>: red;
-}
-.<span class="hljs-attribute">content</span>{
-    <span class="hljs-attribute">overflow</span>: hidden;
-    <span class="hljs-attribute">background-color</span>: blue;
-}
-&lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">&quot;aside&quot;</span>&gt;
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor <span class="hljs-keyword">in</span> voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-    &lt;/div&gt;
-    &lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">&quot;content&quot;</span>&gt;
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore provident dolor <span class="hljs-keyword">in</span> voluptatum tempore non, placeat obcaecati totam ut delectus libero excepturi distinctio asperiores odit nobis soluta, esse aspernatur beatae.
-    &lt;/div&gt;</code></pre><h2 id="articleHeader5">&#x962E;&#x4E00;&#x5CF0;&#x8001;&#x5E08;&#x5199;&#x7684;&#x6559;&#x7A0B;&#x6743;&#x5A01;&#x4F20;&#x9001;&#x95E8;&#xFF1A;<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" rel="nofollow noreferrer" target="_blank">http://www.ruanyifeng.com/blo...</a></h2>
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<h2 id="原文标题"><a href="#原文标题" class="headerlink" title="原文标题"></a>原文标题</h2><p>左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://segmentfault.com/a/1190000016694777" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016694777</a></p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/72ed5617/">https://alili.tech/archive/72ed5617/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2 id="原文标题">原文标题</h2><p>左侧固定，右侧自适应的布局方式(新增评论区大佬教的方法）</p><h2 id="原文链接">原文链接</h2><p><a href="https://segmentfault.com/a/1190000016694777">https://segmentfault.com/a/1190000016694777</a></p><h2>本文链接：</h2><a href="https://alili.tech/archive/72ed5617/" target="_blank">https://alili.tech/archive/72ed5617/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">一.浮动布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">二.margin的负值(3个div)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">3.</span> <span class="toc-text">三.calc()计算属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader3"><span class="toc-number">4.</span> <span class="toc-text">四.flex布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader4"><span class="toc-number">5.</span> <span class="toc-text">五.左侧浮动，右侧overflow:hidden</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">6.</span> <span class="toc-text">阮一峰老师写的教程权威传送门：http://www.ruanyifeng.com/blo...</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

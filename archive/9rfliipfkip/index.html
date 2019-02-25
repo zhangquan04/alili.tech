@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="抽象语法树 AST 在计算机科学中，抽象语法树，或简称语法树，是源代码语法结构的一种抽象表示.
+这里介绍一个网站 https://astexplorer.net ,可以让你清晰的看到一段js,css以及其他语言被转换成语法树的样子.
+在我们的浏览器中,也会对我们的js代码解析成抽象语法书然后再进一步的分析以及下一步的操作.
+语法树就前端而言,被利用在各种地方,代码语法的检查，代码风格的检查，代码的"><meta name="keywords" content="Javascript"><meta property="og:locale" content="en_US"><meta property="og:title" content="幕后英雄Abstract syntax tree抽象语法树"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="抽象语法树 AST 在计算机科学中，抽象语法树，或简称语法树，是源代码语法结构的一种抽象表示.
+这里介绍一个网站 https://astexplorer.net ,可以让你清晰的看到一段js,css以及其他语言被转换成语法树的样子.
+在我们的浏览器中,也会对我们的js代码解析成抽象语法书然后再进一步的分析以及下一步的操作.
+语法树就前端而言,被利用在各种地方,代码语法的检查，代码风格的检查，代码的"><meta property="og:site_name" content="Alili"><title>幕后英雄Abstract syntax tree抽象语法树 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/9rfliipfkip/",
+				"appid": "1613049289050283", 
+				"title": "幕后英雄Abstract syntax tree抽象语法树 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2019-01-03T17:33:33"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/tpjnptof6l8/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/0bx7k43lrexg/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2f9rfliipfkip%2f&text=%e5%b9%95%e5%90%8e%e8%8b%b1%e9%9b%84Abstract%20syntax%20tree%e6%8a%bd%e8%b1%a1%e8%af%ad%e6%b3%95%e6%a0%91"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2f9rfliipfkip%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2f9rfliipfkip%2f&text=%e5%b9%95%e5%90%8e%e8%8b%b1%e9%9b%84Abstract%20syntax%20tree%e6%8a%bd%e8%b1%a1%e8%af%ad%e6%b3%95%e6%a0%91"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2f9rfliipfkip%2f&title=%e5%b9%95%e5%90%8e%e8%8b%b1%e9%9b%84Abstract%20syntax%20tree%e6%8a%bd%e8%b1%a1%e8%af%ad%e6%b3%95%e6%a0%91"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2f9rfliipfkip%2f&is_video=false&description=%e5%b9%95%e5%90%8e%e8%8b%b1%e9%9b%84Abstract%20syntax%20tree%e6%8a%bd%e8%b1%a1%e8%af%ad%e6%b3%95%e6%a0%91"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%e5%b9%95%e5%90%8e%e8%8b%b1%e9%9b%84Abstract%20syntax%20tree%e6%8a%bd%e8%b1%a1%e8%af%ad%e6%b3%95%e6%a0%91&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2f9rfliipfkip%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2f9rfliipfkip%2f&title=%e5%b9%95%e5%90%8e%e8%8b%b1%e9%9b%84Abstract%20syntax%20tree%e6%8a%bd%e8%b1%a1%e8%af%ad%e6%b3%95%e6%a0%91"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f9rfliipfkip%2f&title=%e5%b9%95%e5%90%8e%e8%8b%b1%e9%9b%84Abstract%20syntax%20tree%e6%8a%bd%e8%b1%a1%e8%af%ad%e6%b3%95%e6%a0%91"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f9rfliipfkip%2f&title=%e5%b9%95%e5%90%8e%e8%8b%b1%e9%9b%84Abstract%20syntax%20tree%e6%8a%bd%e8%b1%a1%e8%af%ad%e6%b3%95%e6%a0%91"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f9rfliipfkip%2f&title=%e5%b9%95%e5%90%8e%e8%8b%b1%e9%9b%84Abstract%20syntax%20tree%e6%8a%bd%e8%b1%a1%e8%af%ad%e6%b3%95%e6%a0%91"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#抽象语法树-ast">抽象语法树 AST</a><ul><li><a href="#举个例子">举个例子</a></li></ul></li><li><a href="#nodejs解析抽象语法树的工具">Nodejs解析抽象语法树的工具</a><ul><li><a href="#常用js解析工具">常用js解析工具</a></li><li><a href="#使用esprima举个例子">使用esprima举个例子</a></li></ul></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">幕后英雄Abstract syntax tree抽象语法树</h1><div class="meta"><div class="postdate"><time datetime="2019-01-03" itemprop="datePublished">2019-01-03</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag"><i class="fa fa-tag"></i> <a href="/tags/javascript">Javascript</a></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><h1 id="抽象语法树-ast">抽象语法树 AST</h1><p>在计算机科学中，抽象语法树，或简称语法树，是源代码语法结构的一种抽象表示.</p><p>这里介绍一个网站 <a href="https://astexplorer.net">https://astexplorer.net</a> ,可以让你清晰的看到一段js,css以及其他语言被转换成语法树的样子.</p><p>在我们的浏览器中,也会对我们的js代码解析成抽象语法书然后再进一步的分析以及下一步的操作.</p><p>语法树就前端而言,被利用在各种地方,代码语法的检查，代码风格的检查，代码的格式化，代码的高亮，代码错误提示，代码自动补全,比如:</p><ul><li>eslint</li><li>JSHint</li><li>babel</li><li>webpack</li><li>rollup</li><li>UglifyJS2</li></ul><p>等等等等&hellip; 根本数不过来.</p><h2 id="举个例子">举个例子</h2><p>一段代码被解析成语法树后的样子 目前业界对抽象语法树是有规范的, 感兴趣的朋友可以查看这个网址: <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API#Node_objects">SpiderMonkey</a></p><pre><code class="language-js">let str ='我是字符串';
+</code></pre><p>to AST</p><pre><code class="language-json">{
+  &quot;type&quot;: &quot;Program&quot;,
+  &quot;start&quot;: 0,
+  &quot;end&quot;: 17,
+  &quot;body&quot;: [
+    {
+      &quot;type&quot;: &quot;VariableDeclaration&quot;,
+      &quot;start&quot;: 0,
+      &quot;end&quot;: 17,
+      &quot;declarations&quot;: [
+        {
+          &quot;type&quot;: &quot;VariableDeclarator&quot;,
+          &quot;start&quot;: 4,
+          &quot;end&quot;: 16,
+          &quot;id&quot;: {
+            &quot;type&quot;: &quot;Identifier&quot;,
+            &quot;start&quot;: 4,
+            &quot;end&quot;: 7,
+            &quot;name&quot;: &quot;str&quot;
+          },
+          &quot;init&quot;: {
+            &quot;type&quot;: &quot;Literal&quot;,
+            &quot;start&quot;: 9,
+            &quot;end&quot;: 16,
+            &quot;value&quot;: &quot;我是字符串&quot;,
+            &quot;raw&quot;: &quot;'我是字符串'&quot;
+          }
+        }
+      ],
+      &quot;kind&quot;: &quot;let&quot;
+    }
+  ],
+  &quot;sourceType&quot;: &quot;module&quot;
+}
+</code></pre><h1 id="nodejs解析抽象语法树的工具">Nodejs解析抽象语法树的工具</h1><h2 id="常用js解析工具">常用js解析工具</h2><ul><li>esprima</li><li>traceur</li><li>acorn</li><li>shift</li></ul><h2 id="使用esprima举个例子">使用esprima举个例子</h2><pre><code class="language-bash"># node环境
+&gt; var esprima = require('esprima');
+&gt; var program = 'const answer = 42';
+
+&gt; esprima.tokenize(program);
+[ { type: 'Keyword', value: 'const' },
+  { type: 'Identifier', value: 'answer' },
+  { type: 'Punctuator', value: '=' },
+  { type: 'Numeric', value: '42' } ]
+  
+&gt; esprima.parseScript(program);
+{ type: 'Program',
+  body:
+   [ { type: 'VariableDeclaration',
+       declarations: [Object],
+       kind: 'const' } ],
+  sourceType: 'script' }
+</code></pre><h2>本文链接：</h2><a href="https://alili.tech/archive/9rfliipfkip/" target="_blank">https://alili.tech/archive/9rfliipfkip/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
+        notify:true,
+        verify:true
+    });</script></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

@@ -1,311 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="&amp;#x4E60;&amp;#x60EF;&amp;#xFF0C;&amp;#x540E;&amp;#x671F;&amp;#x82E5;&amp;#x6709;&amp;#x4FEE;&amp;#x6539;&amp;#x4F1A;&amp;#x5728;&amp;#x6B64;&amp;#x5904;&amp;#x4F5C;&amp;#x5168;&amp;#x5C40;&amp;#x8BF4;&amp;#x660E;&amp;#x3002;&amp;#x524D;&amp;#x8A00;&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x4E2A;">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="来来来，你可能没见过这么全的实战吧">
-<meta property="og:url" content="https://alili.tech/archive/97a551a4/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="&amp;#x4E60;&amp;#x60EF;&amp;#xFF0C;&amp;#x540E;&amp;#x671F;&amp;#x82E5;&amp;#x6709;&amp;#x4FEE;&amp;#x6539;&amp;#x4F1A;&amp;#x5728;&amp;#x6B64;&amp;#x5904;&amp;#x4F5C;&amp;#x5168;&amp;#x5C40;&amp;#x8BF4;&amp;#x660E;&amp;#x3002;&amp;#x524D;&amp;#x8A00;&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x4E2A;">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000015695807?w=1920&h=534">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000015695808?w=1920&h=1030">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000015695809?w=1920&h=1030">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000015695810">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000015695811?w=1920&h=1030">
-<meta property="og:updated_time" content="2018-10-26T18:30:21.862Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="来来来，你可能没见过这么全的实战吧">
-<meta name="twitter:description" content="&amp;#x4E60;&amp;#x60EF;&amp;#xFF0C;&amp;#x540E;&amp;#x671F;&amp;#x82E5;&amp;#x6709;&amp;#x4FEE;&amp;#x6539;&amp;#x4F1A;&amp;#x5728;&amp;#x6B64;&amp;#x5904;&amp;#x4F5C;&amp;#x5168;&amp;#x5C40;&amp;#x8BF4;&amp;#x660E;&amp;#x3002;&amp;#x524D;&amp;#x8A00;&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x4E2A;">
-<meta name="twitter:image" content="https://static.alili.tech/img/remote/1460000015695807?w=1920&h=534">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>来来来，你可能没见过这么全的实战吧 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/97a551a4/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/97a551a4/",
-      "appid": "1613049289050283", 
-      "title": "来来来，你可能没见过这么全的实战吧 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:44"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="来来来，你可能没见过这么全的实战吧"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>来来来，你可能没见过这么全的实战吧 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/97a551a4/",
+				"appid": "1613049289050283", 
+				"title": "来来来，你可能没见过这么全的实战吧 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-10-27T02:30:17"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/72ce7388/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/967a17d9/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2f97a551a4%2f&text=%e6%9d%a5%e6%9d%a5%e6%9d%a5%ef%bc%8c%e4%bd%a0%e5%8f%af%e8%83%bd%e6%b2%a1%e8%a7%81%e8%bf%87%e8%bf%99%e4%b9%88%e5%85%a8%e7%9a%84%e5%ae%9e%e6%88%98%e5%90%a7"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2f97a551a4%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2f97a551a4%2f&text=%e6%9d%a5%e6%9d%a5%e6%9d%a5%ef%bc%8c%e4%bd%a0%e5%8f%af%e8%83%bd%e6%b2%a1%e8%a7%81%e8%bf%87%e8%bf%99%e4%b9%88%e5%85%a8%e7%9a%84%e5%ae%9e%e6%88%98%e5%90%a7"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2f97a551a4%2f&title=%e6%9d%a5%e6%9d%a5%e6%9d%a5%ef%bc%8c%e4%bd%a0%e5%8f%af%e8%83%bd%e6%b2%a1%e8%a7%81%e8%bf%87%e8%bf%99%e4%b9%88%e5%85%a8%e7%9a%84%e5%ae%9e%e6%88%98%e5%90%a7"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2f97a551a4%2f&is_video=false&description=%e6%9d%a5%e6%9d%a5%e6%9d%a5%ef%bc%8c%e4%bd%a0%e5%8f%af%e8%83%bd%e6%b2%a1%e8%a7%81%e8%bf%87%e8%bf%99%e4%b9%88%e5%85%a8%e7%9a%84%e5%ae%9e%e6%88%98%e5%90%a7"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%e6%9d%a5%e6%9d%a5%e6%9d%a5%ef%bc%8c%e4%bd%a0%e5%8f%af%e8%83%bd%e6%b2%a1%e8%a7%81%e8%bf%87%e8%bf%99%e4%b9%88%e5%85%a8%e7%9a%84%e5%ae%9e%e6%88%98%e5%90%a7&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2f97a551a4%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2f97a551a4%2f&title=%e6%9d%a5%e6%9d%a5%e6%9d%a5%ef%bc%8c%e4%bd%a0%e5%8f%af%e8%83%bd%e6%b2%a1%e8%a7%81%e8%bf%87%e8%bf%99%e4%b9%88%e5%85%a8%e7%9a%84%e5%ae%9e%e6%88%98%e5%90%a7"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f97a551a4%2f&title=%e6%9d%a5%e6%9d%a5%e6%9d%a5%ef%bc%8c%e4%bd%a0%e5%8f%af%e8%83%bd%e6%b2%a1%e8%a7%81%e8%bf%87%e8%bf%99%e4%b9%88%e5%85%a8%e7%9a%84%e5%ae%9e%e6%88%98%e5%90%a7"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f97a551a4%2f&title=%e6%9d%a5%e6%9d%a5%e6%9d%a5%ef%bc%8c%e4%bd%a0%e5%8f%af%e8%83%bd%e6%b2%a1%e8%a7%81%e8%bf%87%e8%bf%99%e4%b9%88%e5%85%a8%e7%9a%84%e5%ae%9e%e6%88%98%e5%90%a7"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f97a551a4%2f&title=%e6%9d%a5%e6%9d%a5%e6%9d%a5%ef%bc%8c%e4%bd%a0%e5%8f%af%e8%83%bd%e6%b2%a1%e8%a7%81%e8%bf%87%e8%bf%99%e4%b9%88%e5%85%a8%e7%9a%84%e5%ae%9e%e6%88%98%e5%90%a7"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a><ul><li><a href="#原文标题">原文标题</a></li><li><a href="#原文链接">原文链接</a></li></ul></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">来来来，你可能没见过这么全的实战吧</h1><div class="meta"><div class="postdate"><time datetime="2018-10-27" itemprop="datePublished">2018-10-27</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\x3cblockquote\x3e\x26#x4E60;\x26#x60EF;\x26#xFF0C;\x26#x540E;\x26#x671F;\x26#x82E5;\x26#x6709;\x26#x4FEE;\x26#x6539;\x26#x4F1A;\x26#x5728;\x26#x6B64;\x26#x5904;\x26#x4F5C;\x26#x5168;\x26#x5C40;\x26#x8BF4;\x26#x660E;\x26#x3002;\x3c\/blockquote\x3e\x3ch2 id=\x22articleHeader0\x22\x3e\x26#x524D;\x26#x8A00;\x3c\/h2\x3e\x3cp\x3e\x26#x4F5C;\x26#x4E3A;\x26#x4E00;\x26#x4E2A;\x26#x81EA;\x26#x8BA4;\x26#x4E3A;\x26#x9AD8;\x26#x4EA7;\x26#x535A;\x26#x4E3B;\x26#xFF0C;\x26#x6211;\x26#x5DF2;\x26#x7ECF;\x26#x597D;\x26#x4E45;\x26#x6CA1;\x26#x53D1;\x26#x6587;\x26#x4E86;\x26#xFF0C;\x26#x4E4B;\x26#x524D;\x26#x5728;\x3ccode\x3esegmentfault\x3c\/code\x3e\x26#x4E0A;\x26#x9762;\x26#x53D1;\x26#x7684;\x26#x6587;\x26#x4E5F;\x26#x662F;\x26#x5220;\x26#x7684;\x26#x5DEE;\x26#x4E0D;\x26#x591A;\x26#x4E86;\x26#xFF0C;\x26#x8FD8;\x26#x662F;\x26#x602A;\x26#x6211;\x26#x4E00;\x26#x5F00;\x26#x59CB;\x26#x7ED9;\x26#x81EA;\x26#x5DF1;\x26#x6316;\x26#x5751;\x26#x4E71;\x26#x5B9A;\x26#x76EE;\x26#x6807;\x26#xFF0C;\x26#x7ED3;\x26#x679C;\x26#x90FD;\x26#x6EDE;\x26#x540E;\x26#x4E86;\x26#xFF0C;\x26#x800C;\x26#x4E14;\x26#x4E5F;\x26#x6CA1;\x26#x6709;\x26#x4EC0;\x26#x4E48;\x26#x52A8;\x26#x9759;\x26#xFF0C;\x26#x53CD;\x26#x601D;\x26#x4E86;\x26#x597D;\x26#x4E45;\x26#xFF0C;\x26#x51B3;\x26#x5B9A;\x26#x4E0D;\x26#x505A;\x26#x592A;\x26#x8FC7;\x26#x5B8F;\x26#x4F1F;\x26#x7684;\x26#x76EE;\x26#x6807;\x26#xFF0C;\x26#x4F46;\x26#x662F;\x26#x4E5F;\x26#x4E0D;\x26#x60F3;\x26#x7B80;\x26#x7565;\x26#x4E86;\x26#x4E8B;\x26#xFF0C;\x26#x6240;\x26#x4EE5;\x26#x5F52;\x26#x7ED3;\x26#x4E86;\x26#x672C;\x26#x7BC7;\x26#x5185;\x26#x5BB9;\x26#xFF0C;\x26#x505A;\x26#x4E86;\x26#x4E00;\x26#x4EFD;\x26#x6DB5;\x26#x76D6;\x26#x4E00;\x26#x4E9B;\x26#x524D;\x26#x7AEF;\x26#x5708;\x26#x5982;\x26#x4ECA;\x26#x6BD4;\x26#x8F83;\x26#x6D41;\x26#x884C;\x26#x7684;\x26#x6280;\x26#x672F;\x26#x5B9E;\x26#x6218;\x26#xFF0C;\x26#x5305;\x26#x62EC;(\x3ccode\x3eNode\x3c\/code\x3e, \x3ccode\x3eKoa\x3c\/code\x3e, \x3ccode\x3eExpress\x3c\/code\x3e, \x3ccode\x3ePug\x3c\/code\x3e, \x3ccode\x3eMongoDB\x3c\/code\x3e, \x3ccode\x3eSass\x3c\/code\x3e, \x3ccode\x3eGulp\x3c\/code\x3e, \x3ccode\x3eReact\x3c\/code\x3e, \x3ccode\x3eVue\x3c\/code\x3e, \x3ccode\x3eWebpack\x3c\/code\x3e, \x3ccode\x3eReact-Native\x3c\/code\x3e, \x3ccode\x3eWeapp\x3c\/code\x3e, \x3ccode\x3eElectron\x3c\/code\x3e)\x26#x7B49;\x26#x7B49;\x26#x7B49;\x26#x7B49;\x26#x7B49;\x26#xFF0C;\x26#x4E0D;\x26#x8FC7;\x26#x4E0D;\x26#x662F;\x26#x540C;\x26#x4E00;\x26#x4E2A;\x26#x5E94;\x26#x7528;\x26#x91CC;\x26#x90FD;\x26#x7528;\x26#x4E86;\x26#x54E6;...\x26#x4E0D;\x26#x8981;\x26#x8BEF;\x26#x4F1A;\x26#x6211;\x26#x778E;\x26#x641E;\x26#xFF0C;\x26#x6574;\x26#x4E2A;\x26#x9879;\x26#x76EE;\x26#x62C6;\x26#x5206;\x26#x4E86;\x26#x591A;\x26#x4E2A;\x26#x5E94;\x26#x7528;\x26#x4E5F;\x26#x5C31;\x26#x662F;\x26#x591A;\x26#x4E2A;\x26#x4E0D;\x26#x540C;\x26#x7684;\x26#x5305;\x26#xFF0C;\x26#x5206;\x26#x522B;\x26#x5E94;\x26#x7528;\x26#x4E86;\x26#x5176;\x26#x4E2D;\x26#x4E00;\x26#x4E9B;\x26#x6280;\x26#x672F;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x5FD8;\x26#x4E86;\x26#x8BF4;\x26#x505A;\x26#x4E2A;\x26#x4EC0;\x26#x4E48;\x26#x4E1C;\x26#x897F;\x26#x4E86;...\x26#x5927;\x26#x6982;\x26#x5C31;\x26#x662F;\x26#x4E00;\x26#x4E2A;\x26#x5206;\x26#x4EAB;\x26#x4EA4;\x26#x6D41;\x26#x7684;\x26#x793E;\x26#x533A;\x26#xFF0C;\x26#x5177;\x26#x4F53;\x26#x7684;\x26#x6837;\x26#x5B50;\x26#x4E0B;\x26#x9762;\x26#x6211;\x26#x5728;\x26#x7EC6;\x26#x8BF4;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x5728;\x26#x6211;\x26#x53D1;\x26#x6587;\x26#x7684;\x26#x4E4B;\x26#x524D;\x26#xFF0C;\x26#x6211;\x26#x5DF2;\x26#x7ECF;\x26#x628A;\x26#x7528;\x3ccode\x3eExpress\x3c\/code\x3e\x26#x642D;\x26#x5EFA;\x26#x7684;\x3ccode\x3eAPI\x3c\/code\x3e\x26#x670D;\x26#x52A1;\x26#x548C;\x26#x7528;\x3ccode\x3ePug\x3c\/code\x3e\x26#x6A21;\x26#x677F;\x26#x8F93;\x26#x51FA;\x26#x4F20;\x26#x7EDF;\x26#x7F51;\x26#x7AD9;\x26#x7684;\x26#x5F62;\x26#x5F0F;\x26#x4E24;\x26#x4E2A;\x26#x5305;\x26#x5B8C;\x26#x6210;\x26#x4E86;\x26#xFF0C;\x26#x53EF;\x26#x80FD;\x26#x4E4B;\x26#x540E;\x26#x4F1A;\x26#x4FEE;\x26#x4FEE;\x26#x8865;\x26#x8865;\x26#xFF0C;\x26#x4E0D;\x26#x8FC7;\x26#x5927;\x26#x6982;\x26#x610F;\x26#x601D;\x26#x5DF2;\x26#x7ECF;\x26#x51FA;\x26#x6765;\x26#x4E86;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x8FD8;\x26#x6709;\x26#x4E00;\x26#x70B9;...\x26#x672C;\x26#x7BC7;\x26#x53EA;\x26#x662F;\x26#x505A;\x26#x7EDF;\x26#x7B79;\x26#x6027;\x26#x7684;\x26#x8BF4;\x26#x660E;\x26#xFF0C;\x26#x6CA1;\x26#x6709;\x26#x6DB5;\x26#x76D6;\x26#x592A;\x26#x591A;\x26#x6280;\x26#x672F;\x26#x76F8;\x26#x5173;\x26#x7684;\x26#x5185;\x26#x5BB9;\x26#xFF0C;\x26#x6240;\x26#x4EE5;\x26#x6CA1;\x26#x6709;\x26#x53D1;\x26#x5728;\x26#x535A;\x26#x5BA2;\x26#x4E0A;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x9879;\x26#x76EE;\x26#x5730;\x26#x5740;\x26#xFF1A;\x3ca href=\x22https:\/\/github.com\/mintsweet\/practice\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x4F60;\x26#x6CA1;\x26#x6709;\x26#x89C1;\x26#x8FC7;\x26#x7684;\x26#x7EC8;\x26#x6781;\x26#x5B9E;\x26#x6218;\x3c\/a\x3e\x26#x3002;\x3c\/p\x3e\x3ch2 id=\x22articleHeader1\x22\x3e\x26#x7BA1;\x26#x7406;\x3c\/h2\x3e\x3cp\x3e\x26#x867D;\x26#x7136;\x26#x4E1C;\x26#x897F;\x26#x975E;\x26#x5E38;\x26#x7684;\x26#x591A;\x26#xFF0C;\x26#x4F46;\x26#x662F;\x26#x5F3A;\x26#x8FEB;\x26#x75C7;\x26#x7684;\x26#x6211;\x26#x5E76;\x26#x4E0D;\x26#x60F3;\x26#x7ED9;\x26#x5B83;\x26#x62C6;\x26#x5206;\x26#x6210;\x26#x5F88;\x26#x591A;\x26#x4ED3;\x26#x5E93;(\x26#x4E00;\x26#x4E2A;\x26#x4ED3;\x26#x5E93;\x26#x662F;\x26#x4E00;\x26#x4E2A;\x26#x5305;\x26#x7684;\x26#x5F62;\x26#x5F0F;)\x26#xFF0C;\x26#x6240;\x26#x6709;\x26#x5185;\x26#x5BB9;\x26#x6211;\x26#x90FD;\x26#x653E;\x26#x5728;\x26#x4E86;\x26#x4E00;\x26#x4E2A;\x26#x4ED3;\x26#x5E93;\x26#x91CC;(practice)\x26#xFF0C;\x26#x53EA;\x26#x662F;\x26#x4EE5;\x26#x6839;\x26#x6587;\x26#x4EF6;\x26#x5939;\x26#x505A;\x26#x533A;\x26#x5206;\x26#xFF0C;\x26#x7528;\x3ccode\x3eyarn\x3c\/code\x3e\x26#x7684;\x3ccode\x3eworkspace\x3c\/code\x3e\x26#x7684;\x26#x65B9;\x26#x5F0F;\x26#x6765;\x26#x7BA1;\x26#x7406;\x26#x6240;\x26#x6709;\x26#x7684;\x26#x5305;\x26#xFF0C;\x26#x5206;\x26#x522B;\x26#x662F;\x3ccode\x3eserver(API\x26#x6570;\x26#x636E;\x26#x670D;\x26#x52A1;)\x3c\/code\x3e\x26#x3001;\x3ccode\x3esite(\x26#x4F20;\x26#x7EDF;\x26#x6A21;\x26#x677F;\x26#x7F51;\x26#x7AD9;)\x3c\/code\x3e\x26#x3001; \x3ccode\x3emanage(\x26#x540E;\x26#x53F0;\x26#x7BA1;\x26#x7406;\x26#x7CFB;\x26#x7EDF;)\x3c\/code\x3e\x26#x3001;\x3ccode\x3eweapp(\x26#x5FAE;\x26#x4FE1;\x26#x5C0F;\x26#x7A0B;\x26#x5E8F;)\x3c\/code\x3e\x26#x3001;\x3ccode\x3espa(\x26#x79FB;\x26#x52A8;\x26#x7AEF;\x26#x5355;\x26#x9875;\x26#x5E94;\x26#x7528;)\x3c\/code\x3e\x26#x3001; \x3ccode\x3enative(\x26#x539F;\x26#x751F;APP)\x3c\/code\x3e\x26#x548C;\x3ccode\x3edesktop(\x26#x684C;\x26#x9762;\x26#x5E94;\x26#x7528;)\x3c\/code\x3e\x26#x3002;\x26#x7531;\x26#x4E8E;\x26#x6682;\x26#x65F6;\x26#x53EA;\x26#x5B8C;\x26#x6210;\x26#x4E86;\x3ccode\x3eserver\x3c\/code\x3e\x26#x548C;\x3ccode\x3esite\x3c\/code\x3e\x26#xFF0C;\x26#x6240;\x26#x4EE5;\x26#x5176;\x26#x4ED6;\x26#x76EE;\x26#x5F55;\x26#x5C31;\x26#x6682;\x26#x65F6;\x26#x5220;\x26#x9664;\x26#x4E86;\x26#xFF0C;\x26#x540E;\x26#x7EED;\x26#x5199;\x26#x7684;\x26#x65F6;\x26#x5019;\x26#x5728;\x26#x52A0;\x26#x56DE;\x26#x6765;\x26#x3002;\x3c\/p\x3e\x3ch2 id=\x22articleHeader2\x22\x3e\x26#x5173;\x26#x4E8E;\x3c\/h2\x3e\x3cp\x3e\x26#x6211;\x26#x8FD8;\x26#x662F;\x26#x8981;\x26#x8BE6;\x26#x7EC6;\x26#x7684;\x26#x8BF4;\x26#x4E00;\x26#x4E0B;\x26#x6574;\x26#x4E2A;\x26#x9879;\x26#x76EE;\x26#x548C;\x26#x8BA1;\x26#x5212;\x26#xFF0C;\x26#x4E0D;\x26#x7136;\x26#x5927;\x26#x5BB6;\x26#x53EF;\x26#x80FD;\x26#x4E5F;\x26#x4E0D;\x26#x77E5;\x26#x9053;\x26#x6211;\x26#x505A;\x26#x7684;\x26#x662F;\x26#x4E2A;\x26#x4EC0;\x26#x4E48;\x26#x4E1C;\x26#x897F;\x26#xFF0C;\x26#x5206;\x26#x522B;\x26#x7528;\x26#x4E0A;\x26#x8FF0;\x26#x7684;\x26#x6280;\x26#x672F;\x26#x505A;\x26#x4EC0;\x26#x4E48;\x26#x5730;\x26#x65B9;\x26#x3002;\x26#x6BCF;\x26#x4E2A;\x26#x5305;\x26#x4EA7;\x26#x751F;\x26#x7684;\x26#x5E94;\x26#x7528;\x26#x6211;\x26#x5C3D;\x26#x91CF;\x26#x591A;\x26#x8D34;\x26#x4E00;\x26#x4E0B;\x26#x56FE;\x26#x7247;\x26#xFF0C;\x26#x5438;\x26#x5F15;\x26#x4E00;\x26#x4E0B;\x26#x5927;\x26#x5BB6;\x26#x7684;\x26#x76EE;\x26#x5149;\x26#xFF0C;\x26#x563B;\x26#x563B;\x26#x3002;\x3c\/p\x3e\x3ch3 id=\x22articleHeader3\x22\x3eserver\x3c\/h3\x3e\x3cp\x3e\x26#x9996;\x26#x5148;\x26#x662F;\x3ccode\x3eAPI\x26#x670D;\x26#x52A1;\x3c\/code\x3e\x26#xFF0C;\x26#x6211;\x26#x4E00;\x26#x5F00;\x26#x59CB;\x26#x672C;\x26#x6765;\x26#x662F;\x26#x6253;\x26#x7B97;\x26#x7528;\x3ccode\x3eKoa\x3c\/code\x3e\x26#x5199;\x26#x7684;\x26#xFF0C;\x26#x4F46;\x26#x662F;\x26#x6211;\x26#x672C;\x26#x8EAB;\x26#x5BF9;\x3ccode\x3eExpress\x3c\/code\x3e\x26#x66F4;\x26#x719F;\x26#x6089;\x26#x4E00;\x26#x70B9;\x26#xFF0C;\x26#x4E3A;\x26#x4E86;\x26#x5FEB;\x26#x901F;\x26#x8FED;\x26#x4EE3;\x26#x5C31;\x26#x8FD8;\x26#x662F;\x26#x7528;\x26#x4E86;\x3ccode\x3eExpress\x3c\/code\x3e\x26#xFF0C;\x26#x4E0D;\x26#x8FC7;\x26#x4E5F;\x26#x51C6;\x26#x5907;\x26#x8FD9;\x26#x4E00;\x26#x6CE2;\x3ccode\x3eAPI\x3c\/code\x3e\x26#x6CA1;\x26#x6709;\x26#x95EE;\x26#x9898;\x26#x7684;\x26#x8BDD;\x26#x8FD8;\x26#x662F;\x26#x6362;\x26#x6210;\x3ccode\x3eKoa\x3c\/code\x3e\x26#x6765;\x26#x5199;\x26#xFF0C;\x26#x4E0D;\x26#x60F3;\x26#x540C;\x26#x4E00;\x26#x4E2A;\x26#x6280;\x26#x672F;\x26#x7528;\x26#x591A;\x26#x6B21;\x26#x561B;\x26#xFF0C;\x26#x8FD9;\x26#x91CC;\x26#x6211;\x26#x5C31;\x26#x8D34;\x26#x4E00;\x26#x4E2A;\x26#x6D4B;\x26#x8BD5;\x26#x8986;\x26#x76D6;\x26#x7387;\x26#x7684;\x26#x56FE;\x26#x5427;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000015695807?w=1920\x26amp;h=534\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000015695807?w=1920\x26amp;h=534\x22 alt=\x22\x26#x6D4B;\x26#x8BD5;\x26#x8986;\x26#x76D6;\x26#x7387;\x22 title=\x22\x26#x6D4B;\x26#x8BD5;\x26#x8986;\x26#x76D6;\x26#x7387;\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x26#x5176;\x26#x4E2D;\x26#x6CA1;\x26#x6709;\x26#x8DD1;\x26#x5230;\x26#x7684;\x26#x6D4B;\x26#x8BD5;\x26#x662F;\x26#x7531;\x26#x4E8E;\x26#x5F53;\x26#x65F6;\x26#x5728;\x26#x5904;\x26#x7406;\x26#x5F02;\x26#x5E38;\x26#x7684;\x26#x65F6;\x26#x5019;\x26#xFF0C;\x26#x6CA1;\x26#x6709;\x26#x7EDF;\x26#x4E00;\x26#x629B;\x26#x5230;\x26#x4E00;\x26#x4E2A;\x26#x5730;\x26#x65B9;\x26#xFF0C;\x26#x5BFC;\x26#x81F4;\x26#x5F88;\x26#x591A;\x26#x5F02;\x26#x5E38;\x26#x5904;\x26#x7406;\x26#x6D4B;\x26#x8BD5;\x26#x8DD1;\x26#x4E0D;\x26#x5230;\x26#xFF0C;\x26#x540E;\x26#x6765;\x26#x95EE;\x26#x4E86;\x26#x51E0;\x26#x4E2A;\x26#x524D;\x26#x8F88;\x26#x624D;\x26#x77E5;\x26#x9053;\x26#x8981;\x26#x628A;\x26#x5F02;\x26#x5E38;\x26#x62BD;\x26#x79BB;\x26#x4E86;\x26#xFF0C;\x26#x771F;\x26#x7B28;\x26#x5566;...\x26#x4E0D;\x26#x8FC7;\x26#x5927;\x26#x4F53;\x26#x8FD8;\x26#x662F;\x26#x8DD1;\x26#x5B8C;\x26#x4E86;\x26#x7684;\x26#xFF0C;\x26#x521D;\x26#x59CB;\x26#x5316;\x26#x5927;\x26#x6982;\x26#x4E09;\x26#x5341;\x26#x51E0;\x26#x4E2A;\x3ccode\x3eAPI\x3c\/code\x3e\x26#xFF0C;\x26#x4E5F;\x26#x5355;\x26#x72EC;\x26#x5199;\x26#x4E86;\x26#x4E00;\x26#x4EFD;\x3ca href=\x22https:\/\/github.com\/mintsweet\/practice\/blob\/master\/API.md\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eAPI\x26#x6587;\x26#x6863;\x3c\/a\x3e,\x26#xFF0C;\x26#x8BE6;\x26#x7EC6;\x26#x8BF4;\x26#x660E;\x26#x5927;\x26#x5BB6;\x26#x5C31;\x26#x770B;API\x26#x6587;\x26#x6863;\x26#x5427;\x26#x3002;\x3c\/p\x3e\x3ch3 id=\x22articleHeader4\x22\x3esite\x3c\/h3\x3e\x3cp\x3e\x26#x7136;\x26#x540E;\x26#x662F;\x26#x4F20;\x26#x7EDF;\x26#x7F51;\x26#x7AD9;\x26#x7684;\x26#x5F62;\x26#x5F0F;\x26#xFF0C;\x26#x4E5F;\x26#x5C31;\x26#x662F;\x26#x7C7B;\x26#x4F3C;\x26#x4E8E;\x3ccode\x3ejava(jsp)\x3c\/code\x3e\x26#x7684;\x26#x5F62;\x26#x5F0F;\x26#xFF0C;\x26#x672C;\x26#x6765;\x26#x8FD9;\x26#x79CD;\x26#x5F62;\x26#x5F0F;\x26#x6570;\x26#x636E;\x26#x5E94;\x26#x8BE5;\x26#x6765;\x26#x6E90;\x26#x4E8E;\x26#x6570;\x26#x636E;\x26#x5E93;\x26#x7684;\x26#xFF0C;\x26#x4F46;\x26#x662F;\x26#x4E3A;\x26#x4E86;\x26#x6211;\x26#x4E0A;\x26#x8FF0;\x26#x7684;\x3ccode\x3eAPI\x26#x670D;\x26#x52A1;\x3c\/code\x3e\x26#x7684;\x26#x516C;\x26#x5171;\x26#x6027;\x26#xFF0C;\x26#x6240;\x26#x4EE5;\x26#x8FD9;\x26#x4E2A;\x26#x5305;\x26#xFF0C;\x26#x5E76;\x26#x6CA1;\x26#x6709;\x26#x64CD;\x26#x4F5C;\x26#x6570;\x26#x636E;\x26#x5E93;\x26#x7684;\x26#x5185;\x26#x5BB9;\x26#xFF0C;\x26#x6240;\x26#x6709;\x26#x6570;\x26#x636E;\x26#x8FD8;\x26#x662F;\x26#x6765;\x26#x6E90;\x26#x4E8E;\x3ccode\x3eAPI\x26#x670D;\x26#x52A1;\x3c\/code\x3e\x26#xFF0C;\x26#x6280;\x26#x672F;\x26#x6808;\x26#x4E3A;\x3ccode\x3eExpress\x3c\/code\x3e\x26#x7ED3;\x26#x5408;\x3ccode\x3ePug\x3c\/code\x3e\x26#x5B8C;\x26#x6210;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x672C;\x26#x6765;\x26#x6211;\x26#x662F;\x26#x6253;\x26#x7B97;\x26#x505A;\x26#x5B8C;\x3ccode\x3eserver\x3c\/code\x3e\x26#x5C31;\x26#x53D1;\x26#x6587;\x26#x7684;\x26#xFF0C;\x26#x4F46;\x26#x662F;\x26#x8FD8;\x26#x662F;\x26#x6015;\x26#x6CA1;\x26#x6709;\x26#x6548;\x26#x679C;\x26#x56FE;\x26#xFF0C;\x26#x5927;\x26#x5BB6;\x26#x5174;\x26#x8DA3;\x26#x6B20;\x26#x4F73;\x26#xFF0C;\x26#x6240;\x26#x4EE5;\x26#x8FD8;\x26#x662F;\x26#x628A;\x26#x8FD9;\x26#x4E2A;\x26#x6574;\x26#x7AD9;\x26#x5F04;\x26#x51FA;\x26#x6765;\x26#x7ED9;\x26#x5927;\x26#x5BB6;\x26#x770B;\x26#x4E00;\x26#x4E0B;\x26#x5927;\x26#x6982;\x26#x662F;\x26#x4EC0;\x26#x4E48;\x26#x7C7B;\x26#x578B;\x26#x7684;\x26#x5E94;\x26#x7528;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000015695808?w=1920\x26amp;h=1030\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000015695808?w=1920\x26amp;h=1030\x22 alt=\x22\x26#x56FE;\x26#x4E00;\x22 title=\x22\x26#x56FE;\x26#x4E00;\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3cbr\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000015695809?w=1920\x26amp;h=1030\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000015695809?w=1920\x26amp;h=1030\x22 alt=\x22\x26#x56FE;\x26#x4E8C;\x22 title=\x22\x26#x56FE;\x26#x4E8C;\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3cbr\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000015695810\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000015695810\x22 alt=\x22\x26#x56FE;\x26#x4E09;\x22 title=\x22\x26#x56FE;\x26#x4E09;\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3cbr\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000015695811?w=1920\x26amp;h=1030\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000015695811?w=1920\x26amp;h=1030\x22 alt=\x22\x26#x56FE;\x26#x56DB;\x22 title=\x22\x26#x56FE;\x26#x56DB;\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x26#x672C;\x26#x6765;\x26#x60F3;\x26#x622A;\x26#x4E2A;\x3ccode\x3egif\x3c\/code\x3e\x26#xFF0C;\x26#x4F46;\x26#x662F;\x26#x597D;\x26#x50CF;\x26#x6709;\x26#x70B9;\x26#x5927;\x26#xFF0C;\x26#x8FD8;\x26#x662F;\x26#x7B97;\x26#x4E86;\x26#xFF0C;\x26#x9759;\x26#x6001;\x26#x56FE;\x26#x7247;\x26#x5927;\x26#x6982;\x26#x4E5F;\x26#x80FD;\x26#x770B;\x26#x51FA;\x26#x662F;\x26#x4E2A;\x26#x4EC0;\x26#x4E48;\x26#x4E1C;\x26#x4E1C;\x26#xFF0C;\x26#x7C7B;\x26#x4F3C;\x26#x4E8E;\x3ccode\x3e\x26#x6398;\x26#x91D1;\x3c\/code\x3e\x26#x3001;\x3ccode\x3ecnode\x3c\/code\x3e\x26#x6216;\x26#x8005;\x26#x662F;\x3ccode\x3esegmentfault\x3c\/code\x3e\x26#x7684;\x26#x793E;\x26#x533A;\x26#x7F51;\x26#x7AD9;\x26#xFF0C;\x26#x53EA;\x26#x662F;\x26#x529F;\x26#x80FD;\x26#x7B80;\x26#x5355;\x26#x4E86;\x26#x4E00;\x26#x4E9B;\x26#x800C;\x26#x4E14;\x26#x3002;\x26#x9875;\x26#x9762;\x26#x4E5F;\x26#x53C2;\x26#x7167;\x26#x4E86;\x26#x4E0D;\x26#x5C11;\x26#xFF0C;\x26#x8FD8;\x26#x8BF7;\x26#x89C1;\x26#x8C05;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x5728;\x26#x5199;\x3ccode\x3esite\x3c\/code\x3e\x26#x7684;\x26#x65F6;\x26#x5019;\x26#x867D;\x26#x7136;\x26#x5DF2;\x26#x7ECF;\x26#x5438;\x26#x53D6;\x26#x4E86;\x26#x4E86;\x26#x4E00;\x26#x4E9B;\x26#x7ECF;\x26#x9A8C;\x26#xFF0C;\x26#x4F46;\x26#x662F;\x26#x8FD8;\x26#x662F;\x26#x89C9;\x26#x5F97;\x26#x4E0D;\x26#x591F;\x26#x5B8C;\x26#x7F8E;\x26#xFF0C;\x26#x5F3A;\x26#x8FEB;\x26#x75C7;\x26#x54CE;\x26#xFF0C;\x26#x9664;\x26#x4E86;\x26#x672C;\x26#x8EAB;\x3ccode\x3eExpress\x3c\/code\x3e\x26#x548C;\x3ccode\x3ePug\x3c\/code\x3e\x26#x4EE5;\x26#x5916;\x26#xFF0C;\x26#x6837;\x26#x5F0F;\x26#x7528;\x26#x4E86;\x3ccode\x3eSass\x3c\/code\x3e\x26#xFF0C;\x26#x7F16;\x26#x8BD1;\x26#x7528;\x26#x4E86;\x3ccode\x3eGulp\x3c\/code\x3e\x26#xFF0C;\x26#x867D;\x26#x7136;\x26#x5C11;\x26#xFF0C;\x26#x4F46;\x26#x662F;\x26#x8FD8;\x26#x662F;\x26#x6D89;\x26#x53CA;\x26#x5230;\x26#x4E86;\x26#xFF0C;\x26#x4E0D;\x26#x8FC7;\x26#x6D4B;\x26#x8BD5;\x26#x6CA1;\x26#x6709;\x26#x5199;\x26#x8BF6;\x26#xFF0C;\x26#x5B9E;\x26#x5728;\x26#x662F;\x26#x65F6;\x26#x95F4;\x26#x592A;\x26#x5C11;\x26#xFF0C;\x26#x8111;\x26#x5B50;\x26#x592A;\x26#x75BC;\x26#xFF0C;\x26#x540E;\x26#x7EED;\x26#x518D;\x26#x8865;\x26#x6D4B;\x26#x8BD5;\x26#x5427;\x26#xFF0C;\x26#x6BD5;\x26#x7ADF;\x26#x6211;\x26#x8FD9;\x26#x4E2A;\x26#x5305;\x26#x662F;\x26#x4E2A;\x26#x5E94;\x26#x7528;\x26#x5305;....\x26#x89C1;\x26#x8C05;\x26#xFF01;\x3c\/p\x3e\x3ch2 id=\x22articleHeader5\x22\x3e\x26#x8BA1;\x26#x5212;\x3c\/h2\x3e\x3cp\x3e\x26#x8BB0;\x26#x4E8E;\x3ccode\x3e2018-07-19\x3c\/code\x3e\x26#xFF1A;\x26#x7531;\x26#x4E8E;\x26#x521A;\x26#x521A;\x26#x53D1;\x26#x9879;\x26#x76EE;\x26#xFF0C;\x26#x53EF;\x26#x80FD;\x26#x91CC;\x26#x9762;\x26#x7684;\x26#x6211;\x26#x6CA1;\x26#x6709;\x26#x5BDF;\x26#x89C9;\x26#x7684;\x3ccode\x3ebug\x3c\/code\x3e\x26#x4F1A;\x26#x9646;\x26#x7EED;\x26#x66B4;\x26#x9732;\x26#x51FA;\x26#x6765;\x26#xFF0C;\x26#x6240;\x26#x4EE5;\x26#x51C6;\x26#x5907;\x26#x8FD9;\x26#x4E00;\x26#x6BB5;\x26#x65F6;\x26#x95F4;\x26#x90FD;\x26#x7528;\x26#x6765;\x26#x5B8C;\x26#x5584;\x3ccode\x3eserver\x3c\/code\x3e\x26#x548C;\x3ccode\x3esite\x3c\/code\x3e\x26#xFF0C;\x26#x7B49;\x26#x5230;\x26#x8FD9;\x26#x4E24;\x26#x5305;\x26#x8D8B;\x26#x4E8E;\x26#x7A33;\x26#x5B9A;\x26#x4E4B;\x26#x540E;\x26#xFF0C;\x26#x5C31;\x26#x4F1A;\x26#x542F;\x26#x52A8;\x3ccode\x3emanage\x3c\/code\x3e\x26#x540E;\x26#x53F0;\x26#x7BA1;\x26#x7406;\x26#x7CFB;\x26#x7EDF;\x26#x7684;\x26#x5185;\x26#x5BB9;\x26#xFF0C;\x26#x6280;\x26#x672F;\x26#x6808;\x26#x4E3A;\x3ccode\x3eReact\x3c\/code\x3e\x26#x548C;\x3ccode\x3eAntd\x3c\/code\x3e\x26#xFF0C;\x26#x6211;\x26#x662F;\x26#x7279;\x26#x522B;\x26#x559C;\x26#x6B22;\x26#x8FD9;\x26#x4E24;\x26#x4E2A;\x26#x4E1C;\x26#x4E1C;\x26#x7684;\x26#xFF0C;\x26#x6240;\x26#x4EE5;\x26#x5176;\x26#x5B9E;\x26#x5185;\x26#x5FC3;\x26#x8FD8;\x26#x662F;\x26#x5E0C;\x26#x671B;\x26#x5FEB;\x26#x70B9;\x26#x7684;...\x3c\/p\x3e\x3ch2 id=\x22articleHeader6\x22\x3e\x26#x535A;\x26#x5BA2;\x3c\/h2\x3e\x3cp\x3e\x26#x7531;\x26#x4E8E;\x26#x672C;\x26#x8EAB;\x26#x5185;\x26#x5BB9;\x26#x8FD8;\x26#x662F;\x26#x6BD4;\x26#x8F83;\x26#x591A;\x26#x7684;\x26#xFF0C;\x26#x6240;\x26#x4EE5;\x26#x535A;\x26#x5BA2;\x26#x6211;\x26#x4E5F;\x26#x662F;\x26#x6BCF;\x26#x4E00;\x26#x7BC7;\x26#x5BF9;\x26#x5E94;\x26#x4E00;\x26#x4E2A;\x26#x5185;\x26#x5BB9;\x26#xFF0C;\x26#x8BE6;\x26#x7EC6;\x26#x7684;\x26#x5B9E;\x26#x73B0;\x26#x8FC7;\x26#x7A0B;\x26#x4F1A;\x26#x5728;\x26#x535A;\x26#x5BA2;\x26#x91CC;\x26#x9762;\x26#x4F53;\x26#x73B0;\x26#x51FA;\x26#x6765;\x26#xFF0C;\x26#x5982;\x26#x679C;\x26#x9519;\x26#x8BEF;\x26#x9664;\x26#x4E86;\x26#x5E2E;\x26#x5FD9;\x26#x6307;\x26#x6B63;\x26#x4E00;\x26#x4E0B;\x26#x8FD8;\x26#x8BF7;\x26#x591A;\x26#x591A;\x26#x5305;\x26#x6DB5;\x26#xFF0C;\x26#x73B0;\x26#x9636;\x26#x6BB5;\x26#x5B8C;\x26#x6210;\x26#x4E86;\x26#x4E24;\x26#x7BC7;\x26#xFF1A;\x3c\/p\x3e\x3col\x3e\x3cli\x3e\x3ca href=\x22https:\/\/github.com\/mintsweet\/blog\/issues\/2\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x7EC8;\x26#x6781;\x26#x5B9E;\x26#x6218;(\x26#x4E00;) - \x26#x641E;\x26#x4E2A; Node \x26#x7684;\x26#x6570;\x26#x636E;\x26#x670D;\x26#x52A1;\x3c\/a\x3e\x3c\/li\x3e\x3cli\x3e\x3ca href=\x22https:\/\/github.com\/mintsweet\/blog\/issues\/3\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x7EC8;\x26#x6781;\x26#x5B9E;\x26#x6218;(\x26#x4E8C;) - \x26#x7528; Pug \x26#x6A21;\x26#x677F;\x26#x8F93;\x26#x51FA;\x26#x4F20;\x26#x7EDF;\x26#x7F51;\x26#x7AD9;\x3c\/a\x3e\x3c\/li\x3e\x3c\/ol\x3e\x3ch2 id=\x22articleHeader7\x22\x3e\x26#x7ED3;\x26#x8BED;\x3c\/h2\x3e\x3cp\x3e\x26#x5176;\x26#x5B9E;\x26#x5F53;\x26#x65F6;\x26#x505A;\x26#x8FD9;\x26#x4E2A;\x26#x7684;\x26#x65F6;\x26#x5019;\x26#x76EE;\x26#x7684;\x26#x5F88;\x26#x7B80;\x26#x5355;\x26#xFF0C;\x26#x60F3;\x26#x8981;\x26#x66F4;\x26#x719F;\x26#x7EC3;\x26#x7684;\x26#x4F7F;\x26#x7528;\x26#x8FD9;\x26#x4E9B;\x26#x6280;\x26#x672F;\x26#x3001;\x26#x60F3;\x26#x8981;\x26#x5C0F;\x26#x661F;\x26#x661F;\x26#x7B49;\x26#x7B49;\x26#xFF0C;\x26#x505A;\x26#x7684;\x26#x65F6;\x26#x5019;\x26#x6536;\x26#x83B7;\x26#x771F;\x26#x7684;\x26#x5F88;\x26#x591A;\x26#xFF0C;\x26#x6709;\x26#x5F88;\x26#x591A;\x26#x975E;\x26#x5E38;\x26#x597D;\x26#x7684;\x26#x524D;\x26#x8F88;\x26#x5E2E;\x26#x6211;\x26#x7B54;\x26#x7591;\x26#x89E3;\x26#x60D1;\x26#xFF0C;\x26#x8BA9;\x26#x6211;\x26#x4E0D;\x26#x65AD;\x26#x7684;\x26#x63A8;\x26#x7FFB;\x26#x4E4B;\x26#x524D;\x26#x5199;\x26#x7684;\x26#x4EE3;\x26#x7801;\x26#xFF0C;\x26#x4E0D;\x26#x65AD;\x26#x7684;\x26#x4F18;\x26#x5316;\x26#x5B83;\x26#x4EEC;\x26#xFF08;PS:\x26#x73B0;\x26#x5728;\x26#x53EF;\x26#x80FD;\x26#x4E5F;\x26#x8FD8;\x26#x6709;\x26#x5F88;\x26#x591A;\x26#x7F3A;\x26#x9677;\x26#xFF09;\x26#xFF0C;\x26#x6211;\x26#x672C;\x26#x8EAB;\x26#x4E5F;\x26#x63D0;\x26#x5347;\x26#x4E86;\x26#x86EE;\x26#x591A;\x26#x7684;\x26#xFF0C;\x26#x540C;\x26#x65F6;\x26#x4E5F;\x26#x5E0C;\x26#x671B;\x26#x81EA;\x26#x5DF1;\x26#x7684;\x26#x535A;\x26#x5BA2;\x26#x6216;\x26#x8005;\x26#x662F;\x26#x4EE3;\x26#x7801;\x26#x80FD;\x26#x5E26;\x26#x7ED9;\x26#x66F4;\x26#x591A;\x26#x4EBA;\x26#x5E2E;\x26#x52A9;\x26#xFF01;\x26#xFF01;\x26#xFF01;\x3c\/p\x3e\n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/cbaa1f9d/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/37fc4d2c/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/97a551a4/&text=来来来，你可能没见过这么全的实战吧"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/97a551a4/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/97a551a4/&text=来来来，你可能没见过这么全的实战吧"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/97a551a4/&title=来来来，你可能没见过这么全的实战吧"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/97a551a4/&is_video=false&description=来来来，你可能没见过这么全的实战吧"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=来来来，你可能没见过这么全的实战吧&body=Check out this article: https://alili.tech/archive/97a551a4/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/97a551a4/&title=来来来，你可能没见过这么全的实战吧"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/97a551a4/&title=来来来，你可能没见过这么全的实战吧"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/97a551a4/&title=来来来，你可能没见过这么全的实战吧"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/97a551a4/&title=来来来，你可能没见过这么全的实战吧"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">3.</span> <span class="toc-text">关于</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-number">3.1.</span> <span class="toc-text">server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader4"><span class="toc-number">3.2.</span> <span class="toc-text">site</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">4.</span> <span class="toc-text">计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader6"><span class="toc-number">5.</span> <span class="toc-text">博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader7"><span class="toc-number">6.</span> <span class="toc-text">结语</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        来来来，你可能没见过这么全的实战吧
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-10-26T18:30:17.000Z" itemprop="datePublished">2018-10-27</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <blockquote>&#x4E60;&#x60EF;&#xFF0C;&#x540E;&#x671F;&#x82E5;&#x6709;&#x4FEE;&#x6539;&#x4F1A;&#x5728;&#x6B64;&#x5904;&#x4F5C;&#x5168;&#x5C40;&#x8BF4;&#x660E;&#x3002;</blockquote><h2 id="articleHeader0">&#x524D;&#x8A00;</h2><p>&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x81EA;&#x8BA4;&#x4E3A;&#x9AD8;&#x4EA7;&#x535A;&#x4E3B;&#xFF0C;&#x6211;&#x5DF2;&#x7ECF;&#x597D;&#x4E45;&#x6CA1;&#x53D1;&#x6587;&#x4E86;&#xFF0C;&#x4E4B;&#x524D;&#x5728;<code>segmentfault</code>&#x4E0A;&#x9762;&#x53D1;&#x7684;&#x6587;&#x4E5F;&#x662F;&#x5220;&#x7684;&#x5DEE;&#x4E0D;&#x591A;&#x4E86;&#xFF0C;&#x8FD8;&#x662F;&#x602A;&#x6211;&#x4E00;&#x5F00;&#x59CB;&#x7ED9;&#x81EA;&#x5DF1;&#x6316;&#x5751;&#x4E71;&#x5B9A;&#x76EE;&#x6807;&#xFF0C;&#x7ED3;&#x679C;&#x90FD;&#x6EDE;&#x540E;&#x4E86;&#xFF0C;&#x800C;&#x4E14;&#x4E5F;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x52A8;&#x9759;&#xFF0C;&#x53CD;&#x601D;&#x4E86;&#x597D;&#x4E45;&#xFF0C;&#x51B3;&#x5B9A;&#x4E0D;&#x505A;&#x592A;&#x8FC7;&#x5B8F;&#x4F1F;&#x7684;&#x76EE;&#x6807;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x4E0D;&#x60F3;&#x7B80;&#x7565;&#x4E86;&#x4E8B;&#xFF0C;&#x6240;&#x4EE5;&#x5F52;&#x7ED3;&#x4E86;&#x672C;&#x7BC7;&#x5185;&#x5BB9;&#xFF0C;&#x505A;&#x4E86;&#x4E00;&#x4EFD;&#x6DB5;&#x76D6;&#x4E00;&#x4E9B;&#x524D;&#x7AEF;&#x5708;&#x5982;&#x4ECA;&#x6BD4;&#x8F83;&#x6D41;&#x884C;&#x7684;&#x6280;&#x672F;&#x5B9E;&#x6218;&#xFF0C;&#x5305;&#x62EC;(<code>Node</code>, <code>Koa</code>, <code>Express</code>, <code>Pug</code>, <code>MongoDB</code>, <code>Sass</code>, <code>Gulp</code>, <code>React</code>, <code>Vue</code>, <code>Webpack</code>, <code>React-Native</code>, <code>Weapp</code>, <code>Electron</code>)&#x7B49;&#x7B49;&#x7B49;&#x7B49;&#x7B49;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E0D;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x91CC;&#x90FD;&#x7528;&#x4E86;&#x54E6;...&#x4E0D;&#x8981;&#x8BEF;&#x4F1A;&#x6211;&#x778E;&#x641E;&#xFF0C;&#x6574;&#x4E2A;&#x9879;&#x76EE;&#x62C6;&#x5206;&#x4E86;&#x591A;&#x4E2A;&#x5E94;&#x7528;&#x4E5F;&#x5C31;&#x662F;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x5305;&#xFF0C;&#x5206;&#x522B;&#x5E94;&#x7528;&#x4E86;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x6280;&#x672F;&#x3002;</p><p>&#x5FD8;&#x4E86;&#x8BF4;&#x505A;&#x4E2A;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;&#x4E86;...&#x5927;&#x6982;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5206;&#x4EAB;&#x4EA4;&#x6D41;&#x7684;&#x793E;&#x533A;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x6837;&#x5B50;&#x4E0B;&#x9762;&#x6211;&#x5728;&#x7EC6;&#x8BF4;&#x3002;</p><p>&#x5728;&#x6211;&#x53D1;&#x6587;&#x7684;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x5DF2;&#x7ECF;&#x628A;&#x7528;<code>Express</code>&#x642D;&#x5EFA;&#x7684;<code>API</code>&#x670D;&#x52A1;&#x548C;&#x7528;<code>Pug</code>&#x6A21;&#x677F;&#x8F93;&#x51FA;&#x4F20;&#x7EDF;&#x7F51;&#x7AD9;&#x7684;&#x5F62;&#x5F0F;&#x4E24;&#x4E2A;&#x5305;&#x5B8C;&#x6210;&#x4E86;&#xFF0C;&#x53EF;&#x80FD;&#x4E4B;&#x540E;&#x4F1A;&#x4FEE;&#x4FEE;&#x8865;&#x8865;&#xFF0C;&#x4E0D;&#x8FC7;&#x5927;&#x6982;&#x610F;&#x601D;&#x5DF2;&#x7ECF;&#x51FA;&#x6765;&#x4E86;&#x3002;</p><p>&#x8FD8;&#x6709;&#x4E00;&#x70B9;...&#x672C;&#x7BC7;&#x53EA;&#x662F;&#x505A;&#x7EDF;&#x7B79;&#x6027;&#x7684;&#x8BF4;&#x660E;&#xFF0C;&#x6CA1;&#x6709;&#x6DB5;&#x76D6;&#x592A;&#x591A;&#x6280;&#x672F;&#x76F8;&#x5173;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#x6CA1;&#x6709;&#x53D1;&#x5728;&#x535A;&#x5BA2;&#x4E0A;&#x3002;</p><p>&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/mintsweet/practice" rel="nofollow noreferrer" target="_blank">&#x4F60;&#x6CA1;&#x6709;&#x89C1;&#x8FC7;&#x7684;&#x7EC8;&#x6781;&#x5B9E;&#x6218;</a>&#x3002;</p><h2 id="articleHeader1">&#x7BA1;&#x7406;</h2><p>&#x867D;&#x7136;&#x4E1C;&#x897F;&#x975E;&#x5E38;&#x7684;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5F3A;&#x8FEB;&#x75C7;&#x7684;&#x6211;&#x5E76;&#x4E0D;&#x60F3;&#x7ED9;&#x5B83;&#x62C6;&#x5206;&#x6210;&#x5F88;&#x591A;&#x4ED3;&#x5E93;(&#x4E00;&#x4E2A;&#x4ED3;&#x5E93;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x7684;&#x5F62;&#x5F0F;)&#xFF0C;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x6211;&#x90FD;&#x653E;&#x5728;&#x4E86;&#x4E00;&#x4E2A;&#x4ED3;&#x5E93;&#x91CC;(practice)&#xFF0C;&#x53EA;&#x662F;&#x4EE5;&#x6839;&#x6587;&#x4EF6;&#x5939;&#x505A;&#x533A;&#x5206;&#xFF0C;&#x7528;<code>yarn</code>&#x7684;<code>workspace</code>&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7BA1;&#x7406;&#x6240;&#x6709;&#x7684;&#x5305;&#xFF0C;&#x5206;&#x522B;&#x662F;<code>server(API&#x6570;&#x636E;&#x670D;&#x52A1;)</code>&#x3001;<code>site(&#x4F20;&#x7EDF;&#x6A21;&#x677F;&#x7F51;&#x7AD9;)</code>&#x3001; <code>manage(&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;)</code>&#x3001;<code>weapp(&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;)</code>&#x3001;<code>spa(&#x79FB;&#x52A8;&#x7AEF;&#x5355;&#x9875;&#x5E94;&#x7528;)</code>&#x3001; <code>native(&#x539F;&#x751F;APP)</code>&#x548C;<code>desktop(&#x684C;&#x9762;&#x5E94;&#x7528;)</code>&#x3002;&#x7531;&#x4E8E;&#x6682;&#x65F6;&#x53EA;&#x5B8C;&#x6210;&#x4E86;<code>server</code>&#x548C;<code>site</code>&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x4ED6;&#x76EE;&#x5F55;&#x5C31;&#x6682;&#x65F6;&#x5220;&#x9664;&#x4E86;&#xFF0C;&#x540E;&#x7EED;&#x5199;&#x7684;&#x65F6;&#x5019;&#x5728;&#x52A0;&#x56DE;&#x6765;&#x3002;</p><h2 id="articleHeader2">&#x5173;&#x4E8E;</h2><p>&#x6211;&#x8FD8;&#x662F;&#x8981;&#x8BE6;&#x7EC6;&#x7684;&#x8BF4;&#x4E00;&#x4E0B;&#x6574;&#x4E2A;&#x9879;&#x76EE;&#x548C;&#x8BA1;&#x5212;&#xFF0C;&#x4E0D;&#x7136;&#x5927;&#x5BB6;&#x53EF;&#x80FD;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x6211;&#x505A;&#x7684;&#x662F;&#x4E2A;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;&#xFF0C;&#x5206;&#x522B;&#x7528;&#x4E0A;&#x8FF0;&#x7684;&#x6280;&#x672F;&#x505A;&#x4EC0;&#x4E48;&#x5730;&#x65B9;&#x3002;&#x6BCF;&#x4E2A;&#x5305;&#x4EA7;&#x751F;&#x7684;&#x5E94;&#x7528;&#x6211;&#x5C3D;&#x91CF;&#x591A;&#x8D34;&#x4E00;&#x4E0B;&#x56FE;&#x7247;&#xFF0C;&#x5438;&#x5F15;&#x4E00;&#x4E0B;&#x5927;&#x5BB6;&#x7684;&#x76EE;&#x5149;&#xFF0C;&#x563B;&#x563B;&#x3002;</p><h3 id="articleHeader3">server</h3><p>&#x9996;&#x5148;&#x662F;<code>API&#x670D;&#x52A1;</code>&#xFF0C;&#x6211;&#x4E00;&#x5F00;&#x59CB;&#x672C;&#x6765;&#x662F;&#x6253;&#x7B97;&#x7528;<code>Koa</code>&#x5199;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x672C;&#x8EAB;&#x5BF9;<code>Express</code>&#x66F4;&#x719F;&#x6089;&#x4E00;&#x70B9;&#xFF0C;&#x4E3A;&#x4E86;&#x5FEB;&#x901F;&#x8FED;&#x4EE3;&#x5C31;&#x8FD8;&#x662F;&#x7528;&#x4E86;<code>Express</code>&#xFF0C;&#x4E0D;&#x8FC7;&#x4E5F;&#x51C6;&#x5907;&#x8FD9;&#x4E00;&#x6CE2;<code>API</code>&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;&#x8BDD;&#x8FD8;&#x662F;&#x6362;&#x6210;<code>Koa</code>&#x6765;&#x5199;&#xFF0C;&#x4E0D;&#x60F3;&#x540C;&#x4E00;&#x4E2A;&#x6280;&#x672F;&#x7528;&#x591A;&#x6B21;&#x561B;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x5C31;&#x8D34;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x8986;&#x76D6;&#x7387;&#x7684;&#x56FE;&#x5427;&#x3002;</p><p><span class="img-wrap"><img data-src="/img/remote/1460000015695807?w=1920&amp;h=534" src="https://static.alili.tech/img/remote/1460000015695807?w=1920&amp;h=534" alt="&#x6D4B;&#x8BD5;&#x8986;&#x76D6;&#x7387;" title="&#x6D4B;&#x8BD5;&#x8986;&#x76D6;&#x7387;" style="cursor:pointer;display:inline"></span></p><p>&#x5176;&#x4E2D;&#x6CA1;&#x6709;&#x8DD1;&#x5230;&#x7684;&#x6D4B;&#x8BD5;&#x662F;&#x7531;&#x4E8E;&#x5F53;&#x65F6;&#x5728;&#x5904;&#x7406;&#x5F02;&#x5E38;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6CA1;&#x6709;&#x7EDF;&#x4E00;&#x629B;&#x5230;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#xFF0C;&#x5BFC;&#x81F4;&#x5F88;&#x591A;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x6D4B;&#x8BD5;&#x8DD1;&#x4E0D;&#x5230;&#xFF0C;&#x540E;&#x6765;&#x95EE;&#x4E86;&#x51E0;&#x4E2A;&#x524D;&#x8F88;&#x624D;&#x77E5;&#x9053;&#x8981;&#x628A;&#x5F02;&#x5E38;&#x62BD;&#x79BB;&#x4E86;&#xFF0C;&#x771F;&#x7B28;&#x5566;...&#x4E0D;&#x8FC7;&#x5927;&#x4F53;&#x8FD8;&#x662F;&#x8DD1;&#x5B8C;&#x4E86;&#x7684;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x5927;&#x6982;&#x4E09;&#x5341;&#x51E0;&#x4E2A;<code>API</code>&#xFF0C;&#x4E5F;&#x5355;&#x72EC;&#x5199;&#x4E86;&#x4E00;&#x4EFD;<a href="https://github.com/mintsweet/practice/blob/master/API.md" rel="nofollow noreferrer" target="_blank">API&#x6587;&#x6863;</a>,&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x5927;&#x5BB6;&#x5C31;&#x770B;API&#x6587;&#x6863;&#x5427;&#x3002;</p><h3 id="articleHeader4">site</h3><p>&#x7136;&#x540E;&#x662F;&#x4F20;&#x7EDF;&#x7F51;&#x7AD9;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7C7B;&#x4F3C;&#x4E8E;<code>java(jsp)</code>&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x672C;&#x6765;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x6570;&#x636E;&#x5E94;&#x8BE5;&#x6765;&#x6E90;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4E3A;&#x4E86;&#x6211;&#x4E0A;&#x8FF0;&#x7684;<code>API&#x670D;&#x52A1;</code>&#x7684;&#x516C;&#x5171;&#x6027;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x5305;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x6709;&#x6570;&#x636E;&#x8FD8;&#x662F;&#x6765;&#x6E90;&#x4E8E;<code>API&#x670D;&#x52A1;</code>&#xFF0C;&#x6280;&#x672F;&#x6808;&#x4E3A;<code>Express</code>&#x7ED3;&#x5408;<code>Pug</code>&#x5B8C;&#x6210;&#x3002;</p><p>&#x672C;&#x6765;&#x6211;&#x662F;&#x6253;&#x7B97;&#x505A;&#x5B8C;<code>server</code>&#x5C31;&#x53D1;&#x6587;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x6015;&#x6CA1;&#x6709;&#x6548;&#x679C;&#x56FE;&#xFF0C;&#x5927;&#x5BB6;&#x5174;&#x8DA3;&#x6B20;&#x4F73;&#xFF0C;&#x6240;&#x4EE5;&#x8FD8;&#x662F;&#x628A;&#x8FD9;&#x4E2A;&#x6574;&#x7AD9;&#x5F04;&#x51FA;&#x6765;&#x7ED9;&#x5927;&#x5BB6;&#x770B;&#x4E00;&#x4E0B;&#x5927;&#x6982;&#x662F;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#x7684;&#x5E94;&#x7528;&#x3002;</p><p><span class="img-wrap"><img data-src="/img/remote/1460000015695808?w=1920&amp;h=1030" src="https://static.alili.tech/img/remote/1460000015695808?w=1920&amp;h=1030" alt="&#x56FE;&#x4E00;" title="&#x56FE;&#x4E00;" style="cursor:pointer;display:inline"></span><br><span class="img-wrap"><img data-src="/img/remote/1460000015695809?w=1920&amp;h=1030" src="https://static.alili.tech/img/remote/1460000015695809?w=1920&amp;h=1030" alt="&#x56FE;&#x4E8C;" title="&#x56FE;&#x4E8C;" style="cursor:pointer;display:inline"></span><br><span class="img-wrap"><img data-src="/img/remote/1460000015695810" src="https://static.alili.tech/img/remote/1460000015695810" alt="&#x56FE;&#x4E09;" title="&#x56FE;&#x4E09;" style="cursor:pointer;display:inline"></span><br><span class="img-wrap"><img data-src="/img/remote/1460000015695811?w=1920&amp;h=1030" src="https://static.alili.tech/img/remote/1460000015695811?w=1920&amp;h=1030" alt="&#x56FE;&#x56DB;" title="&#x56FE;&#x56DB;" style="cursor:pointer;display:inline"></span></p><p>&#x672C;&#x6765;&#x60F3;&#x622A;&#x4E2A;<code>gif</code>&#xFF0C;&#x4F46;&#x662F;&#x597D;&#x50CF;&#x6709;&#x70B9;&#x5927;&#xFF0C;&#x8FD8;&#x662F;&#x7B97;&#x4E86;&#xFF0C;&#x9759;&#x6001;&#x56FE;&#x7247;&#x5927;&#x6982;&#x4E5F;&#x80FD;&#x770B;&#x51FA;&#x662F;&#x4E2A;&#x4EC0;&#x4E48;&#x4E1C;&#x4E1C;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;<code>&#x6398;&#x91D1;</code>&#x3001;<code>cnode</code>&#x6216;&#x8005;&#x662F;<code>segmentfault</code>&#x7684;&#x793E;&#x533A;&#x7F51;&#x7AD9;&#xFF0C;&#x53EA;&#x662F;&#x529F;&#x80FD;&#x7B80;&#x5355;&#x4E86;&#x4E00;&#x4E9B;&#x800C;&#x4E14;&#x3002;&#x9875;&#x9762;&#x4E5F;&#x53C2;&#x7167;&#x4E86;&#x4E0D;&#x5C11;&#xFF0C;&#x8FD8;&#x8BF7;&#x89C1;&#x8C05;&#x3002;</p><p>&#x5728;&#x5199;<code>site</code>&#x7684;&#x65F6;&#x5019;&#x867D;&#x7136;&#x5DF2;&#x7ECF;&#x5438;&#x53D6;&#x4E86;&#x4E86;&#x4E00;&#x4E9B;&#x7ECF;&#x9A8C;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x89C9;&#x5F97;&#x4E0D;&#x591F;&#x5B8C;&#x7F8E;&#xFF0C;&#x5F3A;&#x8FEB;&#x75C7;&#x54CE;&#xFF0C;&#x9664;&#x4E86;&#x672C;&#x8EAB;<code>Express</code>&#x548C;<code>Pug</code>&#x4EE5;&#x5916;&#xFF0C;&#x6837;&#x5F0F;&#x7528;&#x4E86;<code>Sass</code>&#xFF0C;&#x7F16;&#x8BD1;&#x7528;&#x4E86;<code>Gulp</code>&#xFF0C;&#x867D;&#x7136;&#x5C11;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x6D89;&#x53CA;&#x5230;&#x4E86;&#xFF0C;&#x4E0D;&#x8FC7;&#x6D4B;&#x8BD5;&#x6CA1;&#x6709;&#x5199;&#x8BF6;&#xFF0C;&#x5B9E;&#x5728;&#x662F;&#x65F6;&#x95F4;&#x592A;&#x5C11;&#xFF0C;&#x8111;&#x5B50;&#x592A;&#x75BC;&#xFF0C;&#x540E;&#x7EED;&#x518D;&#x8865;&#x6D4B;&#x8BD5;&#x5427;&#xFF0C;&#x6BD5;&#x7ADF;&#x6211;&#x8FD9;&#x4E2A;&#x5305;&#x662F;&#x4E2A;&#x5E94;&#x7528;&#x5305;....&#x89C1;&#x8C05;&#xFF01;</p><h2 id="articleHeader5">&#x8BA1;&#x5212;</h2><p>&#x8BB0;&#x4E8E;<code>2018-07-19</code>&#xFF1A;&#x7531;&#x4E8E;&#x521A;&#x521A;&#x53D1;&#x9879;&#x76EE;&#xFF0C;&#x53EF;&#x80FD;&#x91CC;&#x9762;&#x7684;&#x6211;&#x6CA1;&#x6709;&#x5BDF;&#x89C9;&#x7684;<code>bug</code>&#x4F1A;&#x9646;&#x7EED;&#x66B4;&#x9732;&#x51FA;&#x6765;&#xFF0C;&#x6240;&#x4EE5;&#x51C6;&#x5907;&#x8FD9;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x90FD;&#x7528;&#x6765;&#x5B8C;&#x5584;<code>server</code>&#x548C;<code>site</code>&#xFF0C;&#x7B49;&#x5230;&#x8FD9;&#x4E24;&#x5305;&#x8D8B;&#x4E8E;&#x7A33;&#x5B9A;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x542F;&#x52A8;<code>manage</code>&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6280;&#x672F;&#x6808;&#x4E3A;<code>React</code>&#x548C;<code>Antd</code>&#xFF0C;&#x6211;&#x662F;&#x7279;&#x522B;&#x559C;&#x6B22;&#x8FD9;&#x4E24;&#x4E2A;&#x4E1C;&#x4E1C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x5B9E;&#x5185;&#x5FC3;&#x8FD8;&#x662F;&#x5E0C;&#x671B;&#x5FEB;&#x70B9;&#x7684;...</p><h2 id="articleHeader6">&#x535A;&#x5BA2;</h2><p>&#x7531;&#x4E8E;&#x672C;&#x8EAB;&#x5185;&#x5BB9;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x535A;&#x5BA2;&#x6211;&#x4E5F;&#x662F;&#x6BCF;&#x4E00;&#x7BC7;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x5185;&#x5BB9;&#xFF0C;&#x8BE6;&#x7EC6;&#x7684;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x4F1A;&#x5728;&#x535A;&#x5BA2;&#x91CC;&#x9762;&#x4F53;&#x73B0;&#x51FA;&#x6765;&#xFF0C;&#x5982;&#x679C;&#x9519;&#x8BEF;&#x9664;&#x4E86;&#x5E2E;&#x5FD9;&#x6307;&#x6B63;&#x4E00;&#x4E0B;&#x8FD8;&#x8BF7;&#x591A;&#x591A;&#x5305;&#x6DB5;&#xFF0C;&#x73B0;&#x9636;&#x6BB5;&#x5B8C;&#x6210;&#x4E86;&#x4E24;&#x7BC7;&#xFF1A;</p><ol><li><a href="https://github.com/mintsweet/blog/issues/2" rel="nofollow noreferrer" target="_blank">&#x7EC8;&#x6781;&#x5B9E;&#x6218;(&#x4E00;) - &#x641E;&#x4E2A; Node &#x7684;&#x6570;&#x636E;&#x670D;&#x52A1;</a></li><li><a href="https://github.com/mintsweet/blog/issues/3" rel="nofollow noreferrer" target="_blank">&#x7EC8;&#x6781;&#x5B9E;&#x6218;(&#x4E8C;) - &#x7528; Pug &#x6A21;&#x677F;&#x8F93;&#x51FA;&#x4F20;&#x7EDF;&#x7F51;&#x7AD9;</a></li></ol><h2 id="articleHeader7">&#x7ED3;&#x8BED;</h2><p>&#x5176;&#x5B9E;&#x5F53;&#x65F6;&#x505A;&#x8FD9;&#x4E2A;&#x7684;&#x65F6;&#x5019;&#x76EE;&#x7684;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x60F3;&#x8981;&#x66F4;&#x719F;&#x7EC3;&#x7684;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x6280;&#x672F;&#x3001;&#x60F3;&#x8981;&#x5C0F;&#x661F;&#x661F;&#x7B49;&#x7B49;&#xFF0C;&#x505A;&#x7684;&#x65F6;&#x5019;&#x6536;&#x83B7;&#x771F;&#x7684;&#x5F88;&#x591A;&#xFF0C;&#x6709;&#x5F88;&#x591A;&#x975E;&#x5E38;&#x597D;&#x7684;&#x524D;&#x8F88;&#x5E2E;&#x6211;&#x7B54;&#x7591;&#x89E3;&#x60D1;&#xFF0C;&#x8BA9;&#x6211;&#x4E0D;&#x65AD;&#x7684;&#x63A8;&#x7FFB;&#x4E4B;&#x524D;&#x5199;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x65AD;&#x7684;&#x4F18;&#x5316;&#x5B83;&#x4EEC;&#xFF08;PS:&#x73B0;&#x5728;&#x53EF;&#x80FD;&#x4E5F;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x7F3A;&#x9677;&#xFF09;&#xFF0C;&#x6211;&#x672C;&#x8EAB;&#x4E5F;&#x63D0;&#x5347;&#x4E86;&#x86EE;&#x591A;&#x7684;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x5E0C;&#x671B;&#x81EA;&#x5DF1;&#x7684;&#x535A;&#x5BA2;&#x6216;&#x8005;&#x662F;&#x4EE3;&#x7801;&#x80FD;&#x5E26;&#x7ED9;&#x66F4;&#x591A;&#x4EBA;&#x5E2E;&#x52A9;&#xFF01;&#xFF01;&#xFF01;</p>
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<h2 id="原文标题"><a href="#原文标题" class="headerlink" title="原文标题"></a>原文标题</h2><p>来来来，你可能没见过这么全的实战吧</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://segmentfault.com/a/1190000015695804" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015695804</a></p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/97a551a4/">https://alili.tech/archive/97a551a4/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2 id="原文标题">原文标题</h2><p>来来来，你可能没见过这么全的实战吧</p><h2 id="原文链接">原文链接</h2><p><a href="https://segmentfault.com/a/1190000015695804">https://segmentfault.com/a/1190000015695804</a></p><h2>本文链接：</h2><a href="https://alili.tech/archive/97a551a4/" target="_blank">https://alili.tech/archive/97a551a4/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">3.</span> <span class="toc-text">关于</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-number">3.1.</span> <span class="toc-text">server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader4"><span class="toc-number">3.2.</span> <span class="toc-text">site</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">4.</span> <span class="toc-text">计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader6"><span class="toc-number">5.</span> <span class="toc-text">博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader7"><span class="toc-number">6.</span> <span class="toc-text">结语</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

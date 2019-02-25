@@ -1,445 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="&amp;#x524D;&amp;#x8A00;&amp;#x2003;&amp;#x8FD8;&amp;#x8BB0;&amp;#x5F97;&amp;#x9762;&amp;#x8BD5;&amp;#x65F6;&amp;#x88AB;&amp;#x95EE;&amp;#x8D77;&amp;quot;&amp;#x8BF7;&amp;#x8BF4;&amp;#x8BF4;display:none&amp;#x548C;visibility:hidden&amp;#x7684;&amp;#x533A;&amp;#x522B;&amp;quot;&amp;#x5417">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CSS魔法堂：display:none与visibility:hidden的恩怨情仇">
-<meta property="og:url" content="https://alili.tech/archive/874add44/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="&amp;#x524D;&amp;#x8A00;&amp;#x2003;&amp;#x8FD8;&amp;#x8BB0;&amp;#x5F97;&amp;#x9762;&amp;#x8BD5;&amp;#x65F6;&amp;#x88AB;&amp;#x95EE;&amp;#x8D77;&amp;quot;&amp;#x8BF7;&amp;#x8BF4;&amp;#x8BF4;display:none&amp;#x548C;visibility:hidden&amp;#x7684;&amp;#x533A;&amp;#x522B;&amp;quot;&amp;#x5417">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016570006?w=647&h=73">
-<meta property="og:updated_time" content="2018-11-02T18:30:20.546Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS魔法堂：display:none与visibility:hidden的恩怨情仇">
-<meta name="twitter:description" content="&amp;#x524D;&amp;#x8A00;&amp;#x2003;&amp;#x8FD8;&amp;#x8BB0;&amp;#x5F97;&amp;#x9762;&amp;#x8BD5;&amp;#x65F6;&amp;#x88AB;&amp;#x95EE;&amp;#x8D77;&amp;quot;&amp;#x8BF7;&amp;#x8BF4;&amp;#x8BF4;display:none&amp;#x548C;visibility:hidden&amp;#x7684;&amp;#x533A;&amp;#x522B;&amp;quot;&amp;#x5417">
-<meta name="twitter:image" content="https://static.alili.tech/img/remote/1460000016570006?w=647&h=73">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>CSS魔法堂：display:none与visibility:hidden的恩怨情仇 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/874add44/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/874add44/",
-      "appid": "1613049289050283", 
-      "title": "CSS魔法堂：display:none与visibility:hidden的恩怨情仇 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:39"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="CSS魔法堂：display:none与visibility:hidden的恩怨情仇"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>CSS魔法堂：display:none与visibility:hidden的恩怨情仇 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/874add44/",
+				"appid": "1613049289050283", 
+				"title": "CSS魔法堂：display:none与visibility:hidden的恩怨情仇 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-11-03T02:30:13"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/4874f1c2/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/a08bccf/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2f874add44%2f&text=CSS%e9%ad%94%e6%b3%95%e5%a0%82%ef%bc%9adisplay%3anone%e4%b8%8evisibility%3ahidden%e7%9a%84%e6%81%a9%e6%80%a8%e6%83%85%e4%bb%87"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2f874add44%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2f874add44%2f&text=CSS%e9%ad%94%e6%b3%95%e5%a0%82%ef%bc%9adisplay%3anone%e4%b8%8evisibility%3ahidden%e7%9a%84%e6%81%a9%e6%80%a8%e6%83%85%e4%bb%87"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2f874add44%2f&title=CSS%e9%ad%94%e6%b3%95%e5%a0%82%ef%bc%9adisplay%3anone%e4%b8%8evisibility%3ahidden%e7%9a%84%e6%81%a9%e6%80%a8%e6%83%85%e4%bb%87"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2f874add44%2f&is_video=false&description=CSS%e9%ad%94%e6%b3%95%e5%a0%82%ef%bc%9adisplay%3anone%e4%b8%8evisibility%3ahidden%e7%9a%84%e6%81%a9%e6%80%a8%e6%83%85%e4%bb%87"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=CSS%e9%ad%94%e6%b3%95%e5%a0%82%ef%bc%9adisplay%3anone%e4%b8%8evisibility%3ahidden%e7%9a%84%e6%81%a9%e6%80%a8%e6%83%85%e4%bb%87&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2f874add44%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2f874add44%2f&title=CSS%e9%ad%94%e6%b3%95%e5%a0%82%ef%bc%9adisplay%3anone%e4%b8%8evisibility%3ahidden%e7%9a%84%e6%81%a9%e6%80%a8%e6%83%85%e4%bb%87"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f874add44%2f&title=CSS%e9%ad%94%e6%b3%95%e5%a0%82%ef%bc%9adisplay%3anone%e4%b8%8evisibility%3ahidden%e7%9a%84%e6%81%a9%e6%80%a8%e6%83%85%e4%bb%87"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f874add44%2f&title=CSS%e9%ad%94%e6%b3%95%e5%a0%82%ef%bc%9adisplay%3anone%e4%b8%8evisibility%3ahidden%e7%9a%84%e6%81%a9%e6%80%a8%e6%83%85%e4%bb%87"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f874add44%2f&title=CSS%e9%ad%94%e6%b3%95%e5%a0%82%ef%bc%9adisplay%3anone%e4%b8%8evisibility%3ahidden%e7%9a%84%e6%81%a9%e6%80%a8%e6%83%85%e4%bb%87"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a><ul><li><a href="#原文标题">原文标题</a></li><li><a href="#原文链接">原文链接</a></li></ul></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">CSS魔法堂：display:none与visibility:hidden的恩怨情仇</h1><div class="meta"><div class="postdate"><time datetime="2018-11-03" itemprop="datePublished">2018-11-03</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\x3ch2 id=\x22articleHeader0\x22\x3e\x26#x524D;\x26#x8A00;\x3c\/h2\x3e\x3cp\x3e\x26#x2003;\x26#x8FD8;\x26#x8BB0;\x26#x5F97;\x26#x9762;\x26#x8BD5;\x26#x65F6;\x26#x88AB;\x26#x95EE;\x26#x8D77;\x26quot;\x26#x8BF7;\x26#x8BF4;\x26#x8BF4;display:none\x26#x548C;visibility:hidden\x26#x7684;\x26#x533A;\x26#x522B;\x26quot;\x26#x5417;\x26#xFF1F;\x26#x662F;\x26#x4E0D;\x26#x662F;\x26#x56DE;\x26#x7B54;\x26#x5B8C;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x4E0D;\x26#x5360;\x26#x7528;\x26#x539F;\x26#x6765;\x26#x7684;\x26#x4F4D;\x26#x7F6E;\x26#xFF0C;\x26#x800C;\x3ccode\x3evisibility:hidden\x3c\/code\x3e\x26#x4FDD;\x26#x7559;\x26#x539F;\x26#x6765;\x26#x7684;\x26#x4F4D;\x26#x7F6E;\x26#x540E;\x26#xFF0C;\x26#x9762;\x26#x8BD5;\x26#x5B98;\x26#x5C31;\x26#x4F1A;\x26#x5FC3;\x26#x4E00;\x26#x7B11;\x26#x5462;\x26#xFF1F;\x26#x5176;\x26#x5B9E;\x26#x4E0D;\x26#x6B62;\x26#x90A3;\x26#x4E48;\x26#x7B80;\x26#x5355;\x26#x5462;\x26#xFF01;\x26#x672C;\x26#x6587;\x26#x6211;\x26#x4EEC;\x26#x5C06;\x26#x4E00;\x26#x8D77;\x26#x6DF1;\x26#x7A76;\x26#x5B83;\x26#x4FE9;\x26#x7684;\x26#x6069;\x26#x6028;\x26#x60C5;\x26#x4EC7;\x26#xFF0C;\x26#x4E0B;\x26#x6B21;\x26#x9762;\x26#x8BD5;\x26#x65F6;\x26#x6211;\x26#x4EEC;\x26#x53EF;\x26#x4EE5;\x26#x56DE;\x26#x7B54;\x26#x5F97;\x26#x66F4;\x26#x51FA;\x26#x5F69;\x26#xFF01;\x3c\/p\x3e\x3ch2 id=\x22articleHeader1\x22\x3e\x26#x6DF1;\x26#x5165;\x3ccode\x3edisplay:none\x3c\/code\x3e\x3c\/h2\x3e\x3cp\x3e\x26#x2003;\x26#x6211;\x26#x4EEC;\x26#x90FD;\x26#x6E05;\x26#x695A;\x26#x5F53;\x26#x5143;\x26#x7D20;\x26#x8BBE;\x26#x7F6E;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x540E;\x26#xFF0C;\x26#x754C;\x26#x9762;\x26#x4E0A;\x26#x5C06;\x26#x4E0D;\x26#x4F1A;\x26#x663E;\x26#x793A;\x26#x8BE5;\x26#x5143;\x26#x7D20;\x26#xFF0C;\x26#x5E76;\x26#x4E14;\x26#x8BE5;\x26#x5143;\x26#x7D20;\x26#x4E0D;\x26#x5360;\x26#x5E03;\x26#x5C40;\x26#x7A7A;\x26#x95F4;\x26#xFF0C;\x26#x4F46;\x26#x6211;\x26#x4EEC;\x26#x4ECD;\x26#x7136;\x26#x53EF;\x26#x4EE5;\x26#x901A;\x26#x8FC7;JavaScript\x26#x64CD;\x26#x4F5C;\x26#x8BE5;\x26#x5143;\x26#x7D20;\x26#x3002;\x26#x4F46;\x26#x4E3A;\x26#x4EC0;\x26#x4E48;\x26#x4F1A;\x26#x8FD9;\x26#x6837;\x26#x5462;\x26#xFF1F;\x3cbr\x3e\x26#x2003;\x26#x8FD9;\x26#x4E2A;\x26#x6D89;\x26#x53CA;\x26#x5230;\x26#x6D4F;\x26#x89C8;\x26#x5668;\x26#x7684;\x26#x6E32;\x26#x67D3;\x26#x539F;\x26#x7406;\x26#xFF1A;\x26#x6D4F;\x26#x89C8;\x26#x5668;\x26#x4F1A;\x26#x89E3;\x26#x6790;HTML\x26#x6807;\x26#x7B7E;\x26#x751F;\x26#x6210;DOM Tree\x26#xFF0C;\x26#x89E3;\x26#x6790;CSS\x26#x751F;\x26#x6210;CSSOM\x26#xFF0C;\x26#x7136;\x26#x540E;\x26#x5C06;DOM Tree\x26#x548C;CSSOM\x26#x5408;\x26#x6210;\x26#x751F;\x26#x6210;Render Tree\x26#xFF0C;\x26#x5143;\x26#x7D20;\x26#x5728;Render Tree\x26#x4E2D;\x26#x5BF9;\x26#x5E94;0\x26#x6216;\x26#x591A;\x26#x4E2A;\x26#x76D2;\x26#x5B50;\x26#xFF0C;\x26#x7136;\x26#x540E;\x26#x6D4F;\x26#x89C8;\x26#x5668;\x26#x4EE5;\x26#x76D2;\x26#x5B50;\x26#x6A21;\x26#x578B;\x26#x7684;\x26#x4FE1;\x26#x606F;\x26#x5E03;\x26#x5C40;\x26#x548C;\x26#x6E32;\x26#x67D3;\x26#x754C;\x26#x9762;\x26#x3002;\x26#x800C;\x26#x8BBE;\x26#x7F6E;\x26#x4E3A;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x7684;\x26#x5143;\x26#x7D20;\x26#x5219;\x26#x5728;Render Tree\x26#x4E2D;\x26#x6CA1;\x26#x6709;\x26#x751F;\x26#x6210;\x26#x5BF9;\x26#x5E94;\x26#x7684;\x26#x76D2;\x26#x5B50;\x26#x6A21;\x26#x578B;\x26#xFF0C;\x26#x56E0;\x26#x6B64;\x26#x540E;\x26#x7EED;\x26#x7684;\x26#x5E03;\x26#x5C40;\x26#x3001;\x26#x6E32;\x26#x67D3;\x26#x5DE5;\x26#x4F5C;\x26#x81EA;\x26#x7136;\x26#x6CA1;\x26#x5B83;\x26#x4EC0;\x26#x4E48;\x26#x4E8B;\x26#x4E86;\x26#xFF0C;\x26#x81F3;\x26#x4E8E;DOM\x26#x64CD;\x26#x4F5C;\x26#x8FD8;\x26#x662F;\x26#x53EF;\x26#x4EE5;\x26#x7684;\x26#x3002;\x3cbr\x3e\x26#x2003;\x26#x4F46;\x26#x9664;\x26#x4E86;\x26#x4E0A;\x26#x9762;\x26#x7684;\x26#x77E5;\x26#x8BC6;\x26#x70B9;\x26#x5916;\x26#xFF0C;\x26#x8FD8;\x26#x6709;\x26#x4EE5;\x26#x4E0B;8\x26#x4E2A;\x26#x70B9;\x26#x6211;\x26#x4EEC;\x26#x9700;\x26#x8981;\x26#x6CE8;\x26#x610F;\x26#x7684;\x3cbr\x3e1.\x26#x539F;\x26#x751F;\x26#x9ED8;\x26#x8BA4;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x7684;\x26#x5143;\x26#x7D20;\x3cbr\x3e\x26#x5176;\x26#x5B9E;\x26#x6D4F;\x26#x89C8;\x26#x5668;\x26#x539F;\x26#x751F;\x26#x5143;\x26#x7D20;\x26#x4E2D;\x26#x6709;\x26#x4E0D;\x26#x5C11;\x26#x81EA;\x26#x5E26;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x7684;\x26#x5143;\x26#x7D20;\x26#xFF0C;\x26#x5982;\x3ccode\x3elink\x3c\/code\x3e,\x3ccode\x3escript\x3c\/code\x3e,\x3ccode\x3estyle\x3c\/code\x3e,\x3ccode\x3edialog\x3c\/code\x3e,\x3ccode\x3einput[type=hidden]\x3c\/code\x3e\x26#x7B49;.\x3c\/p\x3e\x3cp\x3e2.HTML5\x26#x4E2D;\x26#x65B0;\x26#x589E;hidden\x26#x5E03;\x26#x5C14;\x26#x5C5E;\x26#x6027;\x26#xFF0C;\x26#x8BA9;\x26#x5F00;\x26#x53D1;\x26#x8005;\x26#x81EA;\x26#x5B9A;\x26#x4E49;\x26#x5143;\x26#x7D20;\x26#x7684;\x26#x9690;\x26#x85CF;\x26#x6027;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22\/* \x26#x517C;\x26#x5BB9;\x26#x539F;\x26#x751F;\x26#x4E0D;\x26#x652F;\x26#x6301;hidden\x26#x5C5E;\x26#x6027;\x26#x7684;\x26#x6D4F;\x26#x89C8;\x26#x5668;  *\/\n[hidden]{\n  display: none;\n}\n\n\x26lt;span hidden\x26gt;Hide and Seek: You can\x26apos;t see me!\x26lt;\/span\x26gt;\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs scss\x22\x3e\x3ccode\x3e\x3cspan class=\x22hljs-comment\x22\x3e\/* \x26#x517C;\x26#x5BB9;\x26#x539F;\x26#x751F;\x26#x4E0D;\x26#x652F;\x26#x6301;hidden\x26#x5C5E;\x26#x6027;\x26#x7684;\x26#x6D4F;\x26#x89C8;\x26#x5668;  *\/\x3c\/span\x3e\n\x3cspan class=\x22hljs-selector-attr\x22\x3e[hidden]\x3c\/span\x3e{\n  \x3cspan class=\x22hljs-attribute\x22\x3edisplay\x3c\/span\x3e: none;\n}\n\n\x26lt;\x3cspan class=\x22hljs-selector-tag\x22\x3espan\x3c\/span\x3e hidden\x26gt;Hide and Seek: You can\x3cspan class=\x22hljs-string\x22\x3e\x26apos;t see me!\x26lt;\/span\x26gt;\x3c\/span\x3e\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e3.\x26#x7236;\x26#x5143;\x26#x7D20;\x26#x4E3A;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#xFF0C;\x26#x5B50;\x26#x5B59;\x26#x5143;\x26#x7D20;\x26#x4E5F;\x26#x96BE;\x26#x9003;\x26#x4E00;\x26#x52AB;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22.hidden{\n  display: none;\n}\n.visible{\n  display: block;\n}\n\n*** START ***\n\x26lt;div class=\x26quot;hidden\x26quot;\x26gt;\n  I\x26apos;m parent!\n  \x26lt;div class=\x26quot;visible\x26quot;\x26gt; I\x26apos;m son! \x26lt;\/div\x26gt;\n\x26lt;\/div\x26gt;\n*** END ***\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs applescript\x22\x3e\x3ccode\x3e.hidden{\n  display: none;\n}\n.visible{\n  display: block;\n}\n\n*** START ***\n\x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;hidden\x26quot;\x3c\/span\x3e\x26gt;\n  I\x26apos;m parent!\n  \x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;visible\x26quot;\x3c\/span\x3e\x26gt; I\x26apos;m son! \x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\n\x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\n*** END ***\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x6D4F;\x26#x89C8;\x26#x5668;\x26#x76F4;\x26#x63A5;\x26#x663E;\x26#x793A;\x26#x4E3A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22*** START ***\n*** END ***\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs asciidoc\x22\x3e\x3ccode\x3e\x3cspan class=\x22hljs-bullet\x22\x3e*** \x3c\/span\x3eSTART ***\n\x3cspan class=\x22hljs-bullet\x22\x3e*** \x3c\/span\x3eEND **\x3cspan class=\x22hljs-strong\x22\x3e*\x3c\/span\x3e\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e4.\x26#x65E0;\x26#x6CD5;\x26#x83B7;\x26#x53D6;\x26#x7126;\x26#x70B9;\x3cbr\x3e\x26#x672C;\x26#x6765;\x26#x65E0;\x26#x4E00;\x26#x76D2;\x26#xFF0C;\x26#x4F55;\x26#x5904;\x26#x60F9;\x26#x7126;\x26#x70B9;\x26#x5462;^_^\x26#x5373;\x26#x4F7F;\x26#x901A;\x26#x8FC7;tab\x26#x952E;\x26#x4E5F;\x26#x662F;\x26#x6CA1;\x26#x529E;\x26#x6CD5;\x26#x7684;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22\x26lt;!-- \x26#x771F;\x26#x5FC3;\x26#x4E0D;\x26#x4F1A;\x26#x83B7;\x26#x5F97;\x26#x7126;\x26#x70B9; --\x26gt;\n\x26lt;input type=\x26quot;hidden\x26quot;\x26gt;\n\x26lt;div tabindex=\x26quot;1\x26quot; style=\x26quot;display:none\x26quot;\x26gt;hidden\x26lt;\/div\x26gt;\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs xml\x22\x3e\x3ccode\x3e\x3cspan class=\x22hljs-comment\x22\x3e\x26lt;!-- \x26#x771F;\x26#x5FC3;\x26#x4E0D;\x26#x4F1A;\x26#x83B7;\x26#x5F97;\x26#x7126;\x26#x70B9; --\x26gt;\x3c\/span\x3e\n\x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\x3cspan class=\x22hljs-name\x22\x3einput\x3c\/span\x3e \x3cspan class=\x22hljs-attr\x22\x3etype\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;hidden\x26quot;\x3c\/span\x3e\x26gt;\x3c\/span\x3e\n\x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\x3cspan class=\x22hljs-name\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-attr\x22\x3etabindex\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;1\x26quot;\x3c\/span\x3e \x3cspan class=\x22hljs-attr\x22\x3estyle\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;display:none\x26quot;\x3c\/span\x3e\x26gt;\x3c\/span\x3ehidden\x3cspan class=\x22hljs-tag\x22\x3e\x26lt;\/\x3cspan class=\x22hljs-name\x22\x3ediv\x3c\/span\x3e\x26gt;\x3c\/span\x3e\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e5.\x26#x65E0;\x26#x6CD5;\x26#x54CD;\x26#x5E94;\x26#x4EFB;\x26#x4F55;\x26#x4E8B;\x26#x4EF6;\x26#xFF0C;\x26#x65E0;\x26#x8BBA;\x26#x662F;\x26#x6355;\x26#x83B7;\x26#x3001;\x26#x547D;\x26#x4E2D;\x26#x76EE;\x26#x6807;\x26#x548C;\x26#x5192;\x26#x6CE1;\x26#x9636;\x26#x6BB5;\x26#x5747;\x26#x4E0D;\x26#x53EF;\x26#x4EE5;\x3cbr\x3e\x26#x7531;\x26#x4E8E;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x7684;\x26#x5143;\x26#x7D20;\x26#x6839;\x26#x672C;\x26#x4E0D;\x26#x4F1A;\x26#x5728;\x26#x754C;\x26#x9762;\x26#x4E0A;\x26#x6E32;\x26#x67D3;\x26#xFF0C;\x26#x5C31;\x26#x662F;\x26#x8FDE;1\x26#x4E2A;\x26#x50CF;\x26#x7D20;\x26#x7684;\x26#x90FD;\x26#x4E0D;\x26#x5360;\x26#xFF0C;\x26#x56E0;\x26#x6B64;\x26#x81EA;\x26#x7136;\x26#x65E0;\x26#x6CD5;\x26#x901A;\x26#x8FC7;\x26#x9F20;\x26#x6807;\x26#x70B9;\x26#x51FB;\x26#x547D;\x26#x4E2D;\x26#xFF0C;\x26#x800C;\x26#x5143;\x26#x7D20;\x26#x4E5F;\x26#x65E0;\x26#x6CD5;\x26#x83B7;\x26#x53D6;\x26#x7126;\x26#x70B9;\x26#xFF0C;\x26#x90A3;\x26#x4E48;\x26#x4E5F;\x26#x4E0D;\x26#x80FD;\x26#x6210;\x26#x4E3A;\x26#x952E;\x26#x76D8;\x26#x4E8B;\x26#x4EF6;\x26#x7684;\x26#x547D;\x26#x4E2D;\x26#x76EE;\x26#x6807;\x26#xFF1B;\x26#x800C;\x26#x7236;\x26#x5143;\x26#x7D20;\x26#x7684;display\x26#x4E3A;none\x26#x65F6;\x26#xFF0C;\x26#x5B50;\x26#x5143;\x26#x7D20;\x26#x7684;display\x26#x5FC5;\x26#x5B9A;\x26#x4E3A;none\x26#xFF0C;\x26#x56E0;\x26#x6B64;\x26#x5143;\x26#x7D20;\x26#x4E5F;\x26#x6CA1;\x26#x6709;\x26#x673A;\x26#x4F1A;\x26#x4F4D;\x26#x4E8E;\x26#x4E8B;\x26#x4EF6;\x26#x6355;\x26#x83B7;\x26#x6216;\x26#x5192;\x26#x6CE1;\x26#x9636;\x26#x6BB5;\x26#x7684;\x26#x8DEF;\x26#x5F84;\x26#x8DEF;\x26#x5F84;\x26#x4E0A;\x26#xFF0C;\x26#x56E0;\x26#x6B64;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x7684;\x26#x5143;\x26#x7D20;\x26#x65E0;\x26#x6CD5;\x26#x54CD;\x26#x5E94;\x26#x4E8B;\x26#x4EF6;\x26#x3002;\x3c\/p\x3e\x3cp\x3e6.\x26#x4E0D;\x26#x803D;\x26#x8BEF;form\x26#x8868;\x26#x5355;\x26#x63D0;\x26#x4EA4;\x26#x6570;\x26#x636E;\x3cbr\x3e\x26#x867D;\x26#x7136;\x26#x6211;\x26#x4EEC;\x26#x65E0;\x26#x6CD5;\x26#x770B;\x26#x5230;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x7684;\x26#x5143;\x26#x7D20;\x26#xFF0C;\x26#x4F46;\x26#x5F53;\x26#x8868;\x26#x5355;\x26#x63D0;\x26#x4EA4;\x26#x65F6;\x26#x4F9D;\x26#x7136;\x26#x4F1A;\x26#x5C06;\x26#x9690;\x26#x85CF;\x26#x7684;input\x26#x5143;\x26#x7D20;\x26#x7684;\x26#x503C;\x26#x63D0;\x26#x4EA4;\x26#x4E0A;\x26#x53BB;\x26#x3002;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22\x26lt;form\x26gt;\n  \x26lt;input type=\x26quot;hidden\x26quot; name=\x26quot;id\x26quot;\x26gt;\n  \x26lt;input type=\x26quot;text\x26quot; name=\x26quot;gguid\x26quot; style=\x26quot;display:none\x26quot;\x26gt;\n\x26lt;\/form\x26gt;\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs stata\x22\x3e\x3ccode\x3e\x26lt;\x3cspan class=\x22hljs-keyword\x22\x3eform\x3c\/span\x3e\x26gt;\n  \x26lt;\x3cspan class=\x22hljs-keyword\x22\x3einput\x3c\/span\x3e \x3cspan class=\x22hljs-keyword\x22\x3etype\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;hidden\x26quot;\x3c\/span\x3e name=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;id\x26quot;\x3c\/span\x3e\x26gt;\n  \x26lt;\x3cspan class=\x22hljs-keyword\x22\x3einput\x3c\/span\x3e \x3cspan class=\x22hljs-keyword\x22\x3etype\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;text\x26quot;\x3c\/span\x3e name=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;gguid\x26quot;\x3c\/span\x3e style=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;display:none\x26quot;\x3c\/span\x3e\x26gt;\n\x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3eform\x3c\/span\x3e\x26gt;\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e7.CSS\x26#x4E2D;\x26#x7684;counter\x26#x4F1A;\x26#x5FFD;\x26#x7565;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x7684;\x26#x5143;\x26#x7D20;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22.start{\n  counter-reset: son 0;\n}\n.son{\n  counter-increment: son 1;\n}\n.son::before{\n  content: counter(son) \x26quot;. \x26quot;;\n}\n\n\x26lt;div class=\x26quot;start\x26quot;\x26gt;\n  \x26lt;div class=\x26quot;son\x26quot;\x26gt;son1\x26lt;\/div\x26gt;\n  \x26lt;div class=\x26quot;son\x26quot; style=\x26quot;display:none\x26quot;\x26gt;son2\x26lt;\/div\x26gt;\n  \x26lt;div class=\x26quot;son\x26quot;\x26gt;son3\x26lt;\/div\x26gt;\n\x26lt;\/div\x26gt;\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs applescript\x22\x3e\x3ccode\x3e.start{\n  counter-reset: son \x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e;\n}\n.son{\n  counter-increment: son \x3cspan class=\x22hljs-number\x22\x3e1\x3c\/span\x3e;\n}\n.son::\x3cspan class=\x22hljs-keyword\x22\x3ebefore\x3c\/span\x3e{\n  content: counter(son) \x3cspan class=\x22hljs-string\x22\x3e\x26quot;. \x26quot;\x3c\/span\x3e;\n}\n\n\x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;start\x26quot;\x3c\/span\x3e\x26gt;\n  \x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;son\x26quot;\x3c\/span\x3e\x26gt;son1\x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\n  \x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;son\x26quot;\x3c\/span\x3e style=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;display:none\x26quot;\x3c\/span\x3e\x26gt;son2\x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\n  \x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;son\x26quot;\x3c\/span\x3e\x26gt;son3\x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\n\x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x7ED3;\x26#x679C;\x26#x5C31;\x26#x662F;\x26#xFF1A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x221. son1\n2. son3\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs markdown\x22\x3e\x3ccode\x3e\x3cspan class=\x22hljs-bullet\x22\x3e1. \x3c\/span\x3eson1\n\x3cspan class=\x22hljs-bullet\x22\x3e2. \x3c\/span\x3eson3\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e8.Transition\x26#x5BF9;\x3ccode\x3edisplay\x3c\/code\x3e\x26#x7684;\x26#x53D8;\x26#x5316;\x26#x4E0D;\x26#x611F;\x26#x5192;\x3cbr\x3e\x26#x8BE6;\x26#x60C5;\x26#x8BF7;\x26#x53C2;\x26#x8003;\x3ca href=\x22https:\/\/www.cnblogs.com\/fsjohnhuang\/p\/9143035.html\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eCSS\x26#x9B54;\x26#x6CD5;\x26#x5802;\x26#xFF1A;Transition\x26#x5C31;\x26#x8FD9;\x26#x4E48;\x26#x597D;\x26#x73A9;\x3c\/a\x3e\x3c\/p\x3e\x3cp\x3e9.display\x26#x53D8;\x26#x5316;\x26#x65F6;\x26#x5C06;\x26#x89E6;\x26#x53D1;reflow\x3cbr\x3e\x26#x6487;\x26#x5F00;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#xFF0C;\x26#x6211;\x26#x4EEC;\x26#x770B;\x26#x770B;\x3ccode\x3edisplay:block\x3c\/code\x3e\x26#x8868;\x26#x793A;\x26#x5143;\x26#x7D20;\x26#x4F4D;\x26#x4E8E;BFC\x26#x4E2D;\x26#xFF0C;\x26#x800C;\x3ccode\x3edisplay:inline\x3c\/code\x3e\x26#x5219;\x26#x8868;\x26#x793A;\x26#x5143;\x26#x7D20;\x26#x4F4D;\x26#x4E8E;IFC\x26#x4E2D;\x26#xFF0C;\x26#x4E5F;\x26#x5C31;\x26#x662F;\x26#x8BF4;\x3ccode\x3edisplay\x3c\/code\x3e\x26#x7684;\x26#x7528;\x26#x4E8E;\x26#x5C31;\x26#x662F;\x26#x8BBE;\x26#x7F6E;\x26#x5143;\x26#x7D20;\x26#x6240;\x26#x5C5E;\x26#x7684;\x26#x5E03;\x26#x5C40;\x26#x4E0A;\x26#x4E0B;\x26#x6587;\x26#xFF0C;\x26#x82E5;\x26#x4FEE;\x26#x6539;\x3ccode\x3edisplay\x3c\/code\x3e\x26#x503C;\x26#x5219;\x26#x8868;\x26#x793A;\x26#x5143;\x26#x7D20;\x26#x91C7;\x26#x7528;\x26#x7684;\x26#x5E03;\x26#x5C40;\x26#x65B9;\x26#x5F0F;\x26#x5DF2;\x26#x53D1;\x26#x751F;\x26#x53D8;\x26#x5316;\x26#xFF0C;\x26#x4E0D;\x26#x89E6;\x26#x53D1;reflow\x26#x624D;\x26#x5947;\x26#x602A;\x26#x5462;\x26#xFF01;\x3c\/p\x3e\x3ch2 id=\x22articleHeader2\x22\x3e\x26#x6DF1;\x26#x5165;\x3ccode\x3evisibility\x3c\/code\x3e\x3c\/h2\x3e\x3cp\x3e\x26#x2003;visibility\x26#x6709;\x26#x4E24;\x26#x4E2A;\x26#x4E0D;\x26#x540C;\x26#x7684;\x26#x4F5C;\x26#x7528;\x3c\/p\x3e\x3col\x3e\x3cli\x3e\x26#x7528;\x26#x4E8E;\x26#x9690;\x26#x85CF;\x26#x8868;\x26#x683C;\x26#x7684;\x26#x884C;\x26#x548C;\x26#x5217;\x3c\/li\x3e\x3cli\x3e\x26#x7528;\x26#x4E8E;\x26#x5728;\x26#x4E0D;\x26#x89E6;\x26#x53D1;\x26#x5E03;\x26#x5C40;\x26#x7684;\x26#x60C5;\x26#x51B5;\x26#x4E0B;\x26#x9690;\x26#x85CF;\x26#x5143;\x26#x7D20;\x3c\/li\x3e\x3c\/ol\x3e\x3ch3 id=\x22articleHeader3\x22\x3e4\x26#x4E2A;\x26#x6709;\x26#x6548;\x26#x503C;\x3c\/h3\x3e\x3cp\x3e1.visible\x3cbr\x3e\x26#x2003;\x26#x6CA1;\x26#x4EC0;\x26#x4E48;\x26#x597D;\x26#x8BF4;\x26#x7684;\x26#xFF0C;\x26#x5C31;\x26#x662F;\x26#x5728;\x26#x754C;\x26#x9762;\x26#x4E0A;\x26#x663E;\x26#x793A;\x26#x3002;\x3cbr\x3e2.hidden\x3cbr\x3e\x26#x2003;\x26#x8BA9;\x26#x5143;\x26#x7D20;\x26#x5728;\x26#x89C1;\x26#x9762;\x26#x4E0A;\x26#x4E0D;\x26#x53EF;\x26#x89C6;\x26#xFF0C;\x26#x4F46;\x26#x4FDD;\x26#x7559;\x26#x5143;\x26#x7D20;\x26#x539F;\x26#x6765;\x26#x5360;\x26#x6709;\x26#x7684;\x26#x4F4D;\x26#x7F6E;\x26#x3002;\x3cbr\x3e3.collapse\x3cbr\x3e\x26#x2003;\x26#x7528;\x26#x4E8E;\x26#x8868;\x26#x683C;\x26#x5B50;\x26#x5143;\x26#x7D20;(\x26#x5982;\x3ccode\x3etr\x3c\/code\x3e,\x3ccode\x3etbody\x3c\/code\x3e,\x3ccode\x3ecol\x3c\/code\x3e,\x3ccode\x3ecolgroup\x3c\/code\x3e)\x26#x65F6;\x26#x6548;\x26#x679C;\x26#x548C;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x4E00;\x26#x6837;\x26#xFF0C;\x26#x7528;\x26#x4E8E;\x26#x5176;\x26#x4ED6;\x26#x5143;\x26#x7D20;\x26#x4E0A;\x26#x65F6;\x26#x5219;\x26#x6548;\x26#x679C;\x26#x4E0E;\x3ccode\x3evisibility:hidden\x3c\/code\x3e\x26#x4E00;\x26#x6837;\x26#x3002;\x26#x4E0D;\x26#x8FC7;\x26#x7531;\x26#x4E8E;\x26#x5404;\x26#x6D4F;\x26#x89C8;\x26#x5668;\x26#x5B9E;\x26#x73B0;\x26#x6548;\x26#x679C;\x26#x5747;\x26#x6709;\x26#x51FA;\x26#x5165;\x26#xFF0C;\x26#x56E0;\x26#x6B64;\x26#x4E00;\x26#x822C;\x26#x4E0D;\x26#x4F1A;\x26#x4F7F;\x26#x7528;\x26#x8FD9;\x26#x4E2A;\x26#x503C;\x26#x3002;\x3cbr\x3e4.inherit\x3cbr\x3e\x26#x2003;\x26#x7EE7;\x26#x627F;\x26#x7236;\x26#x5143;\x26#x7D20;\x26#x7684;\x3ccode\x3evisibility\x3c\/code\x3e\x26#x503C;\x26#x3002;\x3c\/p\x3e\x3ch2 id=\x22articleHeader4\x22\x3e\x26#x5BF9;\x26#x6BD4;\x26#x6E05;\x26#x695A;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x548C;\x3ccode\x3evisibility:hidden\x3c\/code\x3e\x3c\/h2\x3e\x3cp\x3e\x26#x2003;\x26#x4E0A;\x26#x9762;\x26#x6211;\x26#x4EEC;\x26#x5DF2;\x26#x7ECF;\x26#x5BF9;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x5217;\x26#x51FA;8\x26#x70B9;\x26#x6CE8;\x26#x610F;\x26#x4E8B;\x26#x9879;\x26#xFF0C;\x26#x90A3;\x26#x4E48;\x26#x6211;\x26#x4EEC;\x26#x4EC5;\x26#x9700;\x26#x5BF9;\x26#x7167;\x26#x5B83;\x26#x9010;\x26#x4E00;\x26#x5217;\x26#x51FA;\x3ccode\x3evisibility\x3c\/code\x3e\x26#x7684;\x26#x4E0D;\x26#x5C31;\x26#x6E05;\x26#x6670;\x26#x53EF;\x26#x89C1;\x26#x4E86;\x26#x5417;\x26#xFF1F;\x3cbr\x3e1.\x26#x7236;\x26#x5143;\x26#x7D20;\x26#x4E3A;\x3ccode\x3evisibility:hidden\x3c\/code\x3e\x26#xFF0C;\x26#x800C;\x26#x5B50;\x26#x5143;\x26#x7D20;\x26#x53EF;\x26#x4EE5;\x26#x8BBE;\x26#x7F6E;\x26#x4E3A;\x3ccode\x3evisibility:visible\x3c\/code\x3e\x26#x5E76;\x26#x4E14;\x26#x751F;\x26#x6548;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22div{\n  border: solid 2px blue;\n}\n.visible{\n  visibility: visible;\n}\n.hidden{\n  visibility: hidden;\n}\n\x26lt;div class=\x26quot;hidden\x26quot;\x26gt;\n  I\x26apos;m Parent.\n  \x26lt;div class=\x26quot;visible\x26quot;\x26gt;\n    I\x26apos;m Son.\n  \x26lt;\/div\x26gt;\n\x26lt;\/div\x26gt;\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs applescript\x22\x3e\x3ccode\x3e\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e{\n  border: solid \x3cspan class=\x22hljs-number\x22\x3e2\x3c\/span\x3epx blue;\n}\n.visible{\n  visibility: visible;\n}\n.hidden{\n  visibility: hidden;\n}\n\x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;hidden\x26quot;\x3c\/span\x3e\x26gt;\n  I\x26apos;m Parent.\n  \x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;visible\x26quot;\x3c\/span\x3e\x26gt;\n    I\x26apos;m Son.\n  \x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\n\x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x7ED3;\x26#x679C;\x26#xFF1A;\x3cbr\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000016570006?w=647\x26amp;h=73\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016570006?w=647\x26amp;h=73\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor:pointer\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e2.\x26#x548C;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x4E00;\x26#x6837;\x26#x65E0;\x26#x6CD5;\x26#x83B7;\x26#x5F97;\x26#x7126;\x26#x70B9;\x3c\/p\x3e\x3cp\x3e3.\x26#x53EF;\x26#x5728;\x26#x5192;\x26#x6CE1;\x26#x9636;\x26#x6BB5;\x26#x54CD;\x26#x5E94;\x26#x4E8B;\x26#x4EF6;\x3cbr\x3e\x26#x7531;\x26#x4E8E;\x26#x8BBE;\x26#x7F6E;\x26#x4E3A;\x3ccode\x3evisibility:hidden\x3c\/code\x3e\x26#x7684;\x26#x5143;\x26#x7D20;\x26#x5176;\x26#x5B50;\x26#x5143;\x26#x7D20;\x26#x53EF;\x26#x4EE5;\x26#x4E3A;\x3ccode\x3evisibility:visible\x3c\/code\x3e\x26#xFF0C;\x26#x56E0;\x26#x6B64;\x26#x9690;\x26#x85CF;\x26#x7684;\x26#x5143;\x26#x7D20;\x26#x6709;\x26#x53EF;\x26#x80FD;\x26#x4F4D;\x26#x4E8E;\x26#x4E8B;\x26#x4EF6;\x26#x5192;\x26#x6CE1;\x26#x7684;\x26#x8DEF;\x26#x5F84;\x26#x4E0A;\x26#x56E0;\x26#x6B64;\x26#x4E0B;\x26#x9762;\x26#x4EE3;\x26#x7801;\x26#x4E2D;\x26#xFF0C;\x26#x5C06;\x26#x9F20;\x26#x6807;\x26#x79FB;\x26#x81F3;\x3ccode\x3e.visible\x3c\/code\x3e\x26#x65F6;\x26#xFF0C;\x3ccode\x3e.hidden\x3c\/code\x3e\x26#x4F1A;\x26#x54CD;\x26#x5E94;\x3ccode\x3ehover\x3c\/code\x3e\x26#x4E8B;\x26#x4EF6;\x26#x663E;\x26#x793A;\x26#x3002;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22div{\n  border: solid 2px blue;\n}\n.visible{\n  visibility: visible;\n}\n.hidden{\n  visibility: hidden;\n}\n.hidden:hover{\n  visibility: visible;\n}\n\x26lt;div class=\x26quot;hidden\x26quot;\x26gt;\n  I\x26apos;m Parent.\n  \x26lt;div class=\x26quot;visible\x26quot;\x26gt;\n    I\x26apos;m Son.\n  \x26lt;\/div\x26gt;\n\x26lt;\/div\x26gt;\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22hljs applescript\x22\x3e\x3ccode\x3e\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e{\n  border: solid \x3cspan class=\x22hljs-number\x22\x3e2\x3c\/span\x3epx blue;\n}\n.visible{\n  visibility: visible;\n}\n.hidden{\n  visibility: hidden;\n}\n.hidden:hover{\n  visibility: visible;\n}\n\x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;hidden\x26quot;\x3c\/span\x3e\x26gt;\n  I\x26apos;m Parent.\n  \x26lt;\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e \x3cspan class=\x22hljs-built_in\x22\x3eclass\x3c\/span\x3e=\x3cspan class=\x22hljs-string\x22\x3e\x26quot;visible\x26quot;\x3c\/span\x3e\x26gt;\n    I\x26apos;m Son.\n  \x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\n\x26lt;\/\x3cspan class=\x22hljs-keyword\x22\x3ediv\x3c\/span\x3e\x26gt;\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e4.\x26#x548C;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x4E00;\x26#x6837;\x26#x4E0D;\x26#x59A8;\x26#x788D;form\x26#x8868;\x26#x5355;\x26#x7684;\x26#x63D0;\x26#x4EA4;\x3c\/p\x3e\x3cp\x3e5.CSS\x26#x4E2D;\x26#x7684;counter\x26#x4E0D;\x26#x4F1A;\x26#x5FFD;\x26#x7565;\x3c\/p\x3e\x3cp\x3e6.Transition\x26#x5BF9;\x3ccode\x3evisibility\x3c\/code\x3e\x26#x7684;\x26#x53D8;\x26#x5316;\x26#x6709;\x26#x6548;\x3c\/p\x3e\x3cp\x3e7.visibility\x26#x53D8;\x26#x5316;\x26#x4E0D;\x26#x4F1A;\x26#x89E6;\x26#x53D1;reflow\x3cbr\x3e\x26#x7531;\x26#x4E8E;\x26#x4ECE;visible\x26#x8BBE;\x26#x7F6E;\x26#x4E3A;hidden\x26#x65F6;\x26#xFF0C;\x26#x4E0D;\x26#x4F1A;\x26#x6539;\x26#x53D8;\x26#x5143;\x26#x7D20;\x26#x5E03;\x26#x5C40;\x26#x76F8;\x26#x5173;\x26#x7684;\x26#x5C5E;\x26#x6027;\x26#xFF0C;\x26#x56E0;\x26#x6B64;\x26#x4E0D;\x26#x4F1A;\x26#x89E6;\x26#x53D1;reflow\x26#xFF0C;\x26#x53EA;\x26#x662F;\x26#x9759;\x26#x9759;\x26#x5730;\x26#x548C;\x26#x5176;\x26#x4ED6;\x26#x6E32;\x26#x67D3;\x26#x53D8;\x26#x5316;\x26#x4E00;\x26#x8D77;\x26#x7B49;\x26#x5F85;\x26#x6D4F;\x26#x89C8;\x26#x5668;\x26#x5B9A;\x26#x65F6;\x26#x91CD;\x26#x7ED8;\x26#x754C;\x26#x9762;\x26#x3002;\x3c\/p\x3e\x3ch2 id=\x22articleHeader5\x22\x3e\x26#x603B;\x26#x7ED3;\x3c\/h2\x3e\x3cp\x3e\x26#x2003;\x26#x73B0;\x26#x5728;\x26#x6211;\x26#x4EEC;\x26#x5BF9;\x3ccode\x3edisplay:none\x3c\/code\x3e\x26#x548C;\x3ccode\x3evisibility:hidden\x3c\/code\x3e\x26#x5E94;\x26#x8BE5;\x26#x6709;\x26#x66F4;\x26#x6DF1;\x26#x5165;\x26#x7684;\x26#x4E86;\x26#x89E3;\x26#x4E86;\x26#xFF0C;\x26#x4E0B;\x26#x6B21;\x26#x9762;\x26#x8BD5;\x26#x65F6;\x26#x6211;\x26#x4EEC;\x26#x7684;\x26#x7B54;\x26#x6848;\x26#x4F1A;\x26#x66F4;\x26#x4E30;\x26#x5BCC;\x26#x51FA;\x26#x5F69;\x26#x54E6;\x26#xFF01;\x3cbr\x3e\x26#x2003;\x26#x5C0A;\x26#x91CD;\x26#x539F;\x26#x521B;\x26#xFF0C;\x26#x8F6C;\x26#x8F7D;\x26#x8BF7;\x26#x6CE8;\x26#x610F;\x26#x6765;\x26#x81EA;\x26#xFF1A;\x3ca href=\x22https:\/\/www.cnblogs.com\/fsjohnhuang\/p\/9727386.html\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/www.cnblogs.com\/fsjoh...\x3c\/a\x3e \x26#x80A5;\x26#x4ED4;John^_^\x3c\/p\x3e\x3ch2 id=\x22articleHeader6\x22\x3e\x26#x5F15;\x26#x7528;\x3c\/h2\x3e\x3cp\x3e\x3ca href=\x22https:\/\/css-tricks.com\/almanac\/properties\/v\/visibility\/\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/css-tricks.com\/almana...\x3c\/a\x3e\x3cbr\x3e\x3ca href=\x22https:\/\/juejin.im\/post\/5b406f40e51d45194832b759\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/juejin.im\/post\/5b406f...\x3c\/a\x3e\x3c\/p\x3e\n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/462a2d7d/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/6a7bdd09/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/874add44/&text=CSS魔法堂：display:none与visibility:hidden的恩怨情仇"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/874add44/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/874add44/&text=CSS魔法堂：display:none与visibility:hidden的恩怨情仇"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/874add44/&title=CSS魔法堂：display:none与visibility:hidden的恩怨情仇"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/874add44/&is_video=false&description=CSS魔法堂：display:none与visibility:hidden的恩怨情仇"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=CSS魔法堂：display:none与visibility:hidden的恩怨情仇&body=Check out this article: https://alili.tech/archive/874add44/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/874add44/&title=CSS魔法堂：display:none与visibility:hidden的恩怨情仇"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/874add44/&title=CSS魔法堂：display:none与visibility:hidden的恩怨情仇"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/874add44/&title=CSS魔法堂：display:none与visibility:hidden的恩怨情仇"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/874add44/&title=CSS魔法堂：display:none与visibility:hidden的恩怨情仇"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">深入display:none</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">3.</span> <span class="toc-text">深入visibility</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-number">3.1.</span> <span class="toc-text">4个有效值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader4"><span class="toc-number">4.</span> <span class="toc-text">对比清楚display:none和visibility:hidden</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader6"><span class="toc-number">6.</span> <span class="toc-text">引用</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        CSS魔法堂：display:none与visibility:hidden的恩怨情仇
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-11-02T18:30:13.000Z" itemprop="datePublished">2018-11-03</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <h2 id="articleHeader0">&#x524D;&#x8A00;</h2><p>&#x2003;&#x8FD8;&#x8BB0;&#x5F97;&#x9762;&#x8BD5;&#x65F6;&#x88AB;&#x95EE;&#x8D77;&quot;&#x8BF7;&#x8BF4;&#x8BF4;display:none&#x548C;visibility:hidden&#x7684;&#x533A;&#x522B;&quot;&#x5417;&#xFF1F;&#x662F;&#x4E0D;&#x662F;&#x56DE;&#x7B54;&#x5B8C;<code>display:none</code>&#x4E0D;&#x5360;&#x7528;&#x539F;&#x6765;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x800C;<code>visibility:hidden</code>&#x4FDD;&#x7559;&#x539F;&#x6765;&#x7684;&#x4F4D;&#x7F6E;&#x540E;&#xFF0C;&#x9762;&#x8BD5;&#x5B98;&#x5C31;&#x4F1A;&#x5FC3;&#x4E00;&#x7B11;&#x5462;&#xFF1F;&#x5176;&#x5B9E;&#x4E0D;&#x6B62;&#x90A3;&#x4E48;&#x7B80;&#x5355;&#x5462;&#xFF01;&#x672C;&#x6587;&#x6211;&#x4EEC;&#x5C06;&#x4E00;&#x8D77;&#x6DF1;&#x7A76;&#x5B83;&#x4FE9;&#x7684;&#x6069;&#x6028;&#x60C5;&#x4EC7;&#xFF0C;&#x4E0B;&#x6B21;&#x9762;&#x8BD5;&#x65F6;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x56DE;&#x7B54;&#x5F97;&#x66F4;&#x51FA;&#x5F69;&#xFF01;</p><h2 id="articleHeader1">&#x6DF1;&#x5165;<code>display:none</code></h2><p>&#x2003;&#x6211;&#x4EEC;&#x90FD;&#x6E05;&#x695A;&#x5F53;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;<code>display:none</code>&#x540E;&#xFF0C;&#x754C;&#x9762;&#x4E0A;&#x5C06;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x8BE5;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x4E14;&#x8BE5;&#x5143;&#x7D20;&#x4E0D;&#x5360;&#x5E03;&#x5C40;&#x7A7A;&#x95F4;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;JavaScript&#x64CD;&#x4F5C;&#x8BE5;&#x5143;&#x7D20;&#x3002;&#x4F46;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x8FD9;&#x6837;&#x5462;&#xFF1F;<br>&#x2003;&#x8FD9;&#x4E2A;&#x6D89;&#x53CA;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x6E32;&#x67D3;&#x539F;&#x7406;&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x89E3;&#x6790;HTML&#x6807;&#x7B7E;&#x751F;&#x6210;DOM Tree&#xFF0C;&#x89E3;&#x6790;CSS&#x751F;&#x6210;CSSOM&#xFF0C;&#x7136;&#x540E;&#x5C06;DOM Tree&#x548C;CSSOM&#x5408;&#x6210;&#x751F;&#x6210;Render Tree&#xFF0C;&#x5143;&#x7D20;&#x5728;Render Tree&#x4E2D;&#x5BF9;&#x5E94;0&#x6216;&#x591A;&#x4E2A;&#x76D2;&#x5B50;&#xFF0C;&#x7136;&#x540E;&#x6D4F;&#x89C8;&#x5668;&#x4EE5;&#x76D2;&#x5B50;&#x6A21;&#x578B;&#x7684;&#x4FE1;&#x606F;&#x5E03;&#x5C40;&#x548C;&#x6E32;&#x67D3;&#x754C;&#x9762;&#x3002;&#x800C;&#x8BBE;&#x7F6E;&#x4E3A;<code>display:none</code>&#x7684;&#x5143;&#x7D20;&#x5219;&#x5728;Render Tree&#x4E2D;&#x6CA1;&#x6709;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x76D2;&#x5B50;&#x6A21;&#x578B;&#xFF0C;&#x56E0;&#x6B64;&#x540E;&#x7EED;&#x7684;&#x5E03;&#x5C40;&#x3001;&#x6E32;&#x67D3;&#x5DE5;&#x4F5C;&#x81EA;&#x7136;&#x6CA1;&#x5B83;&#x4EC0;&#x4E48;&#x4E8B;&#x4E86;&#xFF0C;&#x81F3;&#x4E8E;DOM&#x64CD;&#x4F5C;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#x3002;<br>&#x2003;&#x4F46;&#x9664;&#x4E86;&#x4E0A;&#x9762;&#x7684;&#x77E5;&#x8BC6;&#x70B9;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4EE5;&#x4E0B;8&#x4E2A;&#x70B9;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;<br>1.&#x539F;&#x751F;&#x9ED8;&#x8BA4;<code>display:none</code>&#x7684;&#x5143;&#x7D20;<br>&#x5176;&#x5B9E;&#x6D4F;&#x89C8;&#x5668;&#x539F;&#x751F;&#x5143;&#x7D20;&#x4E2D;&#x6709;&#x4E0D;&#x5C11;&#x81EA;&#x5E26;<code>display:none</code>&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5982;<code>link</code>,<code>script</code>,<code>style</code>,<code>dialog</code>,<code>input[type=hidden]</code>&#x7B49;.</p><p>2.HTML5&#x4E2D;&#x65B0;&#x589E;hidden&#x5E03;&#x5C14;&#x5C5E;&#x6027;&#xFF0C;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x81EA;&#x5B9A;&#x4E49;&#x5143;&#x7D20;&#x7684;&#x9690;&#x85CF;&#x6027;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="/* &#x517C;&#x5BB9;&#x539F;&#x751F;&#x4E0D;&#x652F;&#x6301;hidden&#x5C5E;&#x6027;&#x7684;&#x6D4F;&#x89C8;&#x5668;  */
-[hidden]{
-  display: none;
-}
-
-&lt;span hidden&gt;Hide and Seek: You can&apos;t see me!&lt;/span&gt;" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs scss"><code><span class="hljs-comment">/* &#x517C;&#x5BB9;&#x539F;&#x751F;&#x4E0D;&#x652F;&#x6301;hidden&#x5C5E;&#x6027;&#x7684;&#x6D4F;&#x89C8;&#x5668;  */</span>
-<span class="hljs-selector-attr">[hidden]</span>{
-  <span class="hljs-attribute">display</span>: none;
-}
-
-&lt;<span class="hljs-selector-tag">span</span> hidden&gt;Hide and Seek: You can<span class="hljs-string">&apos;t see me!&lt;/span&gt;</span></code></pre><p>3.&#x7236;&#x5143;&#x7D20;&#x4E3A;<code>display:none</code>&#xFF0C;&#x5B50;&#x5B59;&#x5143;&#x7D20;&#x4E5F;&#x96BE;&#x9003;&#x4E00;&#x52AB;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text=".hidden{
-  display: none;
-}
-.visible{
-  display: block;
-}
-
-*** START ***
-&lt;div class=&quot;hidden&quot;&gt;
-  I&apos;m parent!
-  &lt;div class=&quot;visible&quot;&gt; I&apos;m son! &lt;/div&gt;
-&lt;/div&gt;
-*** END ***" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs applescript"><code>.hidden{
-  display: none;
-}
-.visible{
-  display: block;
-}
-
-*** START ***
-&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;
-  I&apos;m parent!
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;visible&quot;</span>&gt; I&apos;m son! &lt;/<span class="hljs-keyword">div</span>&gt;
-&lt;/<span class="hljs-keyword">div</span>&gt;
-*** END ***</code></pre><p>&#x6D4F;&#x89C8;&#x5668;&#x76F4;&#x63A5;&#x663E;&#x793A;&#x4E3A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="*** START ***
-*** END ***" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs asciidoc"><code><span class="hljs-bullet">*** </span>START ***
-<span class="hljs-bullet">*** </span>END **<span class="hljs-strong">*</span></code></pre><p>4.&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x7126;&#x70B9;<br>&#x672C;&#x6765;&#x65E0;&#x4E00;&#x76D2;&#xFF0C;&#x4F55;&#x5904;&#x60F9;&#x7126;&#x70B9;&#x5462;^_^&#x5373;&#x4F7F;&#x901A;&#x8FC7;tab&#x952E;&#x4E5F;&#x662F;&#x6CA1;&#x529E;&#x6CD5;&#x7684;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="&lt;!-- &#x771F;&#x5FC3;&#x4E0D;&#x4F1A;&#x83B7;&#x5F97;&#x7126;&#x70B9; --&gt;
-&lt;input type=&quot;hidden&quot;&gt;
-&lt;div tabindex=&quot;1&quot; style=&quot;display:none&quot;&gt;hidden&lt;/div&gt;" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs xml"><code><span class="hljs-comment">&lt;!-- &#x771F;&#x5FC3;&#x4E0D;&#x4F1A;&#x83B7;&#x5F97;&#x7126;&#x70B9; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display:none&quot;</span>&gt;</span>hidden<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><p>5.&#x65E0;&#x6CD5;&#x54CD;&#x5E94;&#x4EFB;&#x4F55;&#x4E8B;&#x4EF6;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x6355;&#x83B7;&#x3001;&#x547D;&#x4E2D;&#x76EE;&#x6807;&#x548C;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x5747;&#x4E0D;&#x53EF;&#x4EE5;<br>&#x7531;&#x4E8E;<code>display:none</code>&#x7684;&#x5143;&#x7D20;&#x6839;&#x672C;&#x4E0D;&#x4F1A;&#x5728;&#x754C;&#x9762;&#x4E0A;&#x6E32;&#x67D3;&#xFF0C;&#x5C31;&#x662F;&#x8FDE;1&#x4E2A;&#x50CF;&#x7D20;&#x7684;&#x90FD;&#x4E0D;&#x5360;&#xFF0C;&#x56E0;&#x6B64;&#x81EA;&#x7136;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x9F20;&#x6807;&#x70B9;&#x51FB;&#x547D;&#x4E2D;&#xFF0C;&#x800C;&#x5143;&#x7D20;&#x4E5F;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x7126;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x4E5F;&#x4E0D;&#x80FD;&#x6210;&#x4E3A;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x547D;&#x4E2D;&#x76EE;&#x6807;&#xFF1B;&#x800C;&#x7236;&#x5143;&#x7D20;&#x7684;display&#x4E3A;none&#x65F6;&#xFF0C;&#x5B50;&#x5143;&#x7D20;&#x7684;display&#x5FC5;&#x5B9A;&#x4E3A;none&#xFF0C;&#x56E0;&#x6B64;&#x5143;&#x7D20;&#x4E5F;&#x6CA1;&#x6709;&#x673A;&#x4F1A;&#x4F4D;&#x4E8E;&#x4E8B;&#x4EF6;&#x6355;&#x83B7;&#x6216;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x7684;&#x8DEF;&#x5F84;&#x8DEF;&#x5F84;&#x4E0A;&#xFF0C;&#x56E0;&#x6B64;<code>display:none</code>&#x7684;&#x5143;&#x7D20;&#x65E0;&#x6CD5;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#x3002;</p><p>6.&#x4E0D;&#x803D;&#x8BEF;form&#x8868;&#x5355;&#x63D0;&#x4EA4;&#x6570;&#x636E;<br>&#x867D;&#x7136;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x770B;&#x5230;<code>display:none</code>&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4F46;&#x5F53;&#x8868;&#x5355;&#x63D0;&#x4EA4;&#x65F6;&#x4F9D;&#x7136;&#x4F1A;&#x5C06;&#x9690;&#x85CF;&#x7684;input&#x5143;&#x7D20;&#x7684;&#x503C;&#x63D0;&#x4EA4;&#x4E0A;&#x53BB;&#x3002;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="&lt;form&gt;
-  &lt;input type=&quot;hidden&quot; name=&quot;id&quot;&gt;
-  &lt;input type=&quot;text&quot; name=&quot;gguid&quot; style=&quot;display:none&quot;&gt;
-&lt;/form&gt;" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs stata"><code>&lt;<span class="hljs-keyword">form</span>&gt;
-  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> name=<span class="hljs-string">&quot;id&quot;</span>&gt;
-  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">&quot;text&quot;</span> name=<span class="hljs-string">&quot;gguid&quot;</span> style=<span class="hljs-string">&quot;display:none&quot;</span>&gt;
-&lt;/<span class="hljs-keyword">form</span>&gt;</code></pre><p>7.CSS&#x4E2D;&#x7684;counter&#x4F1A;&#x5FFD;&#x7565;<code>display:none</code>&#x7684;&#x5143;&#x7D20;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text=".start{
-  counter-reset: son 0;
-}
-.son{
-  counter-increment: son 1;
-}
-.son::before{
-  content: counter(son) &quot;. &quot;;
-}
-
-&lt;div class=&quot;start&quot;&gt;
-  &lt;div class=&quot;son&quot;&gt;son1&lt;/div&gt;
-  &lt;div class=&quot;son&quot; style=&quot;display:none&quot;&gt;son2&lt;/div&gt;
-  &lt;div class=&quot;son&quot;&gt;son3&lt;/div&gt;
-&lt;/div&gt;" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs applescript"><code>.start{
-  counter-reset: son <span class="hljs-number">0</span>;
-}
-.son{
-  counter-increment: son <span class="hljs-number">1</span>;
-}
-.son::<span class="hljs-keyword">before</span>{
-  content: counter(son) <span class="hljs-string">&quot;. &quot;</span>;
-}
-
-&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;start&quot;</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;son&quot;</span>&gt;son1&lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;son&quot;</span> style=<span class="hljs-string">&quot;display:none&quot;</span>&gt;son2&lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;son&quot;</span>&gt;son3&lt;/<span class="hljs-keyword">div</span>&gt;
-&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre><p>&#x7ED3;&#x679C;&#x5C31;&#x662F;&#xFF1A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="1. son1
-2. son3" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs markdown"><code><span class="hljs-bullet">1. </span>son1
-<span class="hljs-bullet">2. </span>son3</code></pre><p>8.Transition&#x5BF9;<code>display</code>&#x7684;&#x53D8;&#x5316;&#x4E0D;&#x611F;&#x5192;<br>&#x8BE6;&#x60C5;&#x8BF7;&#x53C2;&#x8003;<a href="https://www.cnblogs.com/fsjohnhuang/p/9143035.html" rel="nofollow noreferrer" target="_blank">CSS&#x9B54;&#x6CD5;&#x5802;&#xFF1A;Transition&#x5C31;&#x8FD9;&#x4E48;&#x597D;&#x73A9;</a></p><p>9.display&#x53D8;&#x5316;&#x65F6;&#x5C06;&#x89E6;&#x53D1;reflow<br>&#x6487;&#x5F00;<code>display:none</code>&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x770B;<code>display:block</code>&#x8868;&#x793A;&#x5143;&#x7D20;&#x4F4D;&#x4E8E;BFC&#x4E2D;&#xFF0C;&#x800C;<code>display:inline</code>&#x5219;&#x8868;&#x793A;&#x5143;&#x7D20;&#x4F4D;&#x4E8E;IFC&#x4E2D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;<code>display</code>&#x7684;&#x7528;&#x4E8E;&#x5C31;&#x662F;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x6240;&#x5C5E;&#x7684;&#x5E03;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x82E5;&#x4FEE;&#x6539;<code>display</code>&#x503C;&#x5219;&#x8868;&#x793A;&#x5143;&#x7D20;&#x91C7;&#x7528;&#x7684;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;&#x5DF2;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x4E0D;&#x89E6;&#x53D1;reflow&#x624D;&#x5947;&#x602A;&#x5462;&#xFF01;</p><h2 id="articleHeader2">&#x6DF1;&#x5165;<code>visibility</code></h2><p>&#x2003;visibility&#x6709;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x4F5C;&#x7528;</p><ol><li>&#x7528;&#x4E8E;&#x9690;&#x85CF;&#x8868;&#x683C;&#x7684;&#x884C;&#x548C;&#x5217;</li><li>&#x7528;&#x4E8E;&#x5728;&#x4E0D;&#x89E6;&#x53D1;&#x5E03;&#x5C40;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9690;&#x85CF;&#x5143;&#x7D20;</li></ol><h3 id="articleHeader3">4&#x4E2A;&#x6709;&#x6548;&#x503C;</h3><p>1.visible<br>&#x2003;&#x6CA1;&#x4EC0;&#x4E48;&#x597D;&#x8BF4;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x754C;&#x9762;&#x4E0A;&#x663E;&#x793A;&#x3002;<br>2.hidden<br>&#x2003;&#x8BA9;&#x5143;&#x7D20;&#x5728;&#x89C1;&#x9762;&#x4E0A;&#x4E0D;&#x53EF;&#x89C6;&#xFF0C;&#x4F46;&#x4FDD;&#x7559;&#x5143;&#x7D20;&#x539F;&#x6765;&#x5360;&#x6709;&#x7684;&#x4F4D;&#x7F6E;&#x3002;<br>3.collapse<br>&#x2003;&#x7528;&#x4E8E;&#x8868;&#x683C;&#x5B50;&#x5143;&#x7D20;(&#x5982;<code>tr</code>,<code>tbody</code>,<code>col</code>,<code>colgroup</code>)&#x65F6;&#x6548;&#x679C;&#x548C;<code>display:none</code>&#x4E00;&#x6837;&#xFF0C;&#x7528;&#x4E8E;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x4E0A;&#x65F6;&#x5219;&#x6548;&#x679C;&#x4E0E;<code>visibility:hidden</code>&#x4E00;&#x6837;&#x3002;&#x4E0D;&#x8FC7;&#x7531;&#x4E8E;&#x5404;&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x73B0;&#x6548;&#x679C;&#x5747;&#x6709;&#x51FA;&#x5165;&#xFF0C;&#x56E0;&#x6B64;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x503C;&#x3002;<br>4.inherit<br>&#x2003;&#x7EE7;&#x627F;&#x7236;&#x5143;&#x7D20;&#x7684;<code>visibility</code>&#x503C;&#x3002;</p><h2 id="articleHeader4">&#x5BF9;&#x6BD4;&#x6E05;&#x695A;<code>display:none</code>&#x548C;<code>visibility:hidden</code></h2><p>&#x2003;&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5BF9;<code>display:none</code>&#x5217;&#x51FA;8&#x70B9;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x4EC5;&#x9700;&#x5BF9;&#x7167;&#x5B83;&#x9010;&#x4E00;&#x5217;&#x51FA;<code>visibility</code>&#x7684;&#x4E0D;&#x5C31;&#x6E05;&#x6670;&#x53EF;&#x89C1;&#x4E86;&#x5417;&#xFF1F;<br>1.&#x7236;&#x5143;&#x7D20;&#x4E3A;<code>visibility:hidden</code>&#xFF0C;&#x800C;&#x5B50;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;<code>visibility:visible</code>&#x5E76;&#x4E14;&#x751F;&#x6548;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="div{
-  border: solid 2px blue;
-}
-.visible{
-  visibility: visible;
-}
-.hidden{
-  visibility: hidden;
-}
-&lt;div class=&quot;hidden&quot;&gt;
-  I&apos;m Parent.
-  &lt;div class=&quot;visible&quot;&gt;
-    I&apos;m Son.
-  &lt;/div&gt;
-&lt;/div&gt;" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs applescript"><code><span class="hljs-keyword">div</span>{
-  border: solid <span class="hljs-number">2</span>px blue;
-}
-.visible{
-  visibility: visible;
-}
-.hidden{
-  visibility: hidden;
-}
-&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;
-  I&apos;m Parent.
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;visible&quot;</span>&gt;
-    I&apos;m Son.
-  &lt;/<span class="hljs-keyword">div</span>&gt;
-&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre><p>&#x7ED3;&#x679C;&#xFF1A;<br><span class="img-wrap"><img data-src="/img/remote/1460000016570006?w=647&amp;h=73" src="https://static.alili.tech/img/remote/1460000016570006?w=647&amp;h=73" alt="" title="" style="cursor:pointer"></span></p><p>2.&#x548C;<code>display:none</code>&#x4E00;&#x6837;&#x65E0;&#x6CD5;&#x83B7;&#x5F97;&#x7126;&#x70B9;</p><p>3.&#x53EF;&#x5728;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;<br>&#x7531;&#x4E8E;&#x8BBE;&#x7F6E;&#x4E3A;<code>visibility:hidden</code>&#x7684;&#x5143;&#x7D20;&#x5176;&#x5B50;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x4E3A;<code>visibility:visible</code>&#xFF0C;&#x56E0;&#x6B64;&#x9690;&#x85CF;&#x7684;&#x5143;&#x7D20;&#x6709;&#x53EF;&#x80FD;&#x4F4D;&#x4E8E;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x7684;&#x8DEF;&#x5F84;&#x4E0A;&#x56E0;&#x6B64;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5C06;&#x9F20;&#x6807;&#x79FB;&#x81F3;<code>.visible</code>&#x65F6;&#xFF0C;<code>.hidden</code>&#x4F1A;&#x54CD;&#x5E94;<code>hover</code>&#x4E8B;&#x4EF6;&#x663E;&#x793A;&#x3002;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="div{
-  border: solid 2px blue;
-}
-.visible{
-  visibility: visible;
-}
-.hidden{
-  visibility: hidden;
-}
-.hidden:hover{
-  visibility: visible;
-}
-&lt;div class=&quot;hidden&quot;&gt;
-  I&apos;m Parent.
-  &lt;div class=&quot;visible&quot;&gt;
-    I&apos;m Son.
-  &lt;/div&gt;
-&lt;/div&gt;" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="hljs applescript"><code><span class="hljs-keyword">div</span>{
-  border: solid <span class="hljs-number">2</span>px blue;
-}
-.visible{
-  visibility: visible;
-}
-.hidden{
-  visibility: hidden;
-}
-.hidden:hover{
-  visibility: visible;
-}
-&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;
-  I&apos;m Parent.
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;visible&quot;</span>&gt;
-    I&apos;m Son.
-  &lt;/<span class="hljs-keyword">div</span>&gt;
-&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre><p>4.&#x548C;<code>display:none</code>&#x4E00;&#x6837;&#x4E0D;&#x59A8;&#x788D;form&#x8868;&#x5355;&#x7684;&#x63D0;&#x4EA4;</p><p>5.CSS&#x4E2D;&#x7684;counter&#x4E0D;&#x4F1A;&#x5FFD;&#x7565;</p><p>6.Transition&#x5BF9;<code>visibility</code>&#x7684;&#x53D8;&#x5316;&#x6709;&#x6548;</p><p>7.visibility&#x53D8;&#x5316;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;reflow<br>&#x7531;&#x4E8E;&#x4ECE;visible&#x8BBE;&#x7F6E;&#x4E3A;hidden&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x5E03;&#x5C40;&#x76F8;&#x5173;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;reflow&#xFF0C;&#x53EA;&#x662F;&#x9759;&#x9759;&#x5730;&#x548C;&#x5176;&#x4ED6;&#x6E32;&#x67D3;&#x53D8;&#x5316;&#x4E00;&#x8D77;&#x7B49;&#x5F85;&#x6D4F;&#x89C8;&#x5668;&#x5B9A;&#x65F6;&#x91CD;&#x7ED8;&#x754C;&#x9762;&#x3002;</p><h2 id="articleHeader5">&#x603B;&#x7ED3;</h2><p>&#x2003;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5BF9;<code>display:none</code>&#x548C;<code>visibility:hidden</code>&#x5E94;&#x8BE5;&#x6709;&#x66F4;&#x6DF1;&#x5165;&#x7684;&#x4E86;&#x89E3;&#x4E86;&#xFF0C;&#x4E0B;&#x6B21;&#x9762;&#x8BD5;&#x65F6;&#x6211;&#x4EEC;&#x7684;&#x7B54;&#x6848;&#x4F1A;&#x66F4;&#x4E30;&#x5BCC;&#x51FA;&#x5F69;&#x54E6;&#xFF01;<br>&#x2003;&#x5C0A;&#x91CD;&#x539F;&#x521B;&#xFF0C;&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x610F;&#x6765;&#x81EA;&#xFF1A;<a href="https://www.cnblogs.com/fsjohnhuang/p/9727386.html" rel="nofollow noreferrer" target="_blank">https://www.cnblogs.com/fsjoh...</a> &#x80A5;&#x4ED4;John^_^</p><h2 id="articleHeader6">&#x5F15;&#x7528;</h2><p><a href="https://css-tricks.com/almanac/properties/v/visibility/" rel="nofollow noreferrer" target="_blank">https://css-tricks.com/almana...</a><br><a href="https://juejin.im/post/5b406f40e51d45194832b759" rel="nofollow noreferrer" target="_blank">https://juejin.im/post/5b406f...</a></p>
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<h2 id="原文标题"><a href="#原文标题" class="headerlink" title="原文标题"></a>原文标题</h2><p>CSS魔法堂：display:none与visibility:hidden的恩怨情仇</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://segmentfault.com/a/1190000016570003" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016570003</a></p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/874add44/">https://alili.tech/archive/874add44/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2 id="原文标题">原文标题</h2><p>CSS魔法堂：display:none与visibility:hidden的恩怨情仇</p><h2 id="原文链接">原文链接</h2><p><a href="https://segmentfault.com/a/1190000016570003">https://segmentfault.com/a/1190000016570003</a></p><h2>本文链接：</h2><a href="https://alili.tech/archive/874add44/" target="_blank">https://alili.tech/archive/874add44/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">深入display:none</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">3.</span> <span class="toc-text">深入visibility</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-number">3.1.</span> <span class="toc-text">4个有效值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader4"><span class="toc-number">4.</span> <span class="toc-text">对比清楚display:none和visibility:hidden</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader6"><span class="toc-number">6.</span> <span class="toc-text">引用</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

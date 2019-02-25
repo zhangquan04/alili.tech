@@ -1,357 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="自 iView 7.28 发布 3.0 后，今天我们又带来了一个重要的版本 3.1.0（版本代号：INSIDE），这个版本 iView 开始支持 TypeScript，可以算是一个新的里程碑。 如果觉得不错，请不要吝啬你的 Star 哦： 👉https://github.com/iview/iview 更新日志 先看一下 3.1.0 版本完整的更新日志：https://github.com/i">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3">
-<meta property="og:url" content="https://alili.tech/archive/c127c8b3/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="自 iView 7.28 发布 3.0 后，今天我们又带来了一个重要的版本 3.1.0（版本代号：INSIDE），这个版本 iView 开始支持 TypeScript，可以算是一个新的里程碑。 如果觉得不错，请不要吝啬你的 Star 哦： 👉https://github.com/iview/iview 更新日志 先看一下 3.1.0 版本完整的更新日志：https://github.com/i">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://static.alili.tech/img/bVbgnSF?w=1600&h=800">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016259043?w=1280&h=562">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016259044?w=1280&h=653">
-<meta property="og:updated_time" content="2018-10-23T18:30:04.187Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3">
-<meta name="twitter:description" content="自 iView 7.28 发布 3.0 后，今天我们又带来了一个重要的版本 3.1.0（版本代号：INSIDE），这个版本 iView 开始支持 TypeScript，可以算是一个新的里程碑。 如果觉得不错，请不要吝啬你的 Star 哦： 👉https://github.com/iview/iview 更新日志 先看一下 3.1.0 版本完整的更新日志：https://github.com/i">
-<meta name="twitter:image" content="https://static.alili.tech/img/bVbgnSF?w=1600&h=800">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/c127c8b3/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/c127c8b3/",
-      "appid": "1613049289050283", 
-      "title": "iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:48"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/c127c8b3/",
+				"appid": "1613049289050283", 
+				"title": "iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-10-22T00:00:00"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/8bc4dcb0/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/fa871c5d/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2fc127c8b3%2f&text=iView%20%e5%8f%91%e5%b8%83%203.1.0%20%e7%89%88%e6%9c%ac%ef%bc%8c%e6%94%af%e6%8c%81%20TypeScript%ef%bc%8c%e6%94%af%e6%8c%81%20Vue%20CLI%203"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2fc127c8b3%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2fc127c8b3%2f&text=iView%20%e5%8f%91%e5%b8%83%203.1.0%20%e7%89%88%e6%9c%ac%ef%bc%8c%e6%94%af%e6%8c%81%20TypeScript%ef%bc%8c%e6%94%af%e6%8c%81%20Vue%20CLI%203"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2fc127c8b3%2f&title=iView%20%e5%8f%91%e5%b8%83%203.1.0%20%e7%89%88%e6%9c%ac%ef%bc%8c%e6%94%af%e6%8c%81%20TypeScript%ef%bc%8c%e6%94%af%e6%8c%81%20Vue%20CLI%203"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2fc127c8b3%2f&is_video=false&description=iView%20%e5%8f%91%e5%b8%83%203.1.0%20%e7%89%88%e6%9c%ac%ef%bc%8c%e6%94%af%e6%8c%81%20TypeScript%ef%bc%8c%e6%94%af%e6%8c%81%20Vue%20CLI%203"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=iView%20%e5%8f%91%e5%b8%83%203.1.0%20%e7%89%88%e6%9c%ac%ef%bc%8c%e6%94%af%e6%8c%81%20TypeScript%ef%bc%8c%e6%94%af%e6%8c%81%20Vue%20CLI%203&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2fc127c8b3%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2fc127c8b3%2f&title=iView%20%e5%8f%91%e5%b8%83%203.1.0%20%e7%89%88%e6%9c%ac%ef%bc%8c%e6%94%af%e6%8c%81%20TypeScript%ef%bc%8c%e6%94%af%e6%8c%81%20Vue%20CLI%203"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fc127c8b3%2f&title=iView%20%e5%8f%91%e5%b8%83%203.1.0%20%e7%89%88%e6%9c%ac%ef%bc%8c%e6%94%af%e6%8c%81%20TypeScript%ef%bc%8c%e6%94%af%e6%8c%81%20Vue%20CLI%203"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fc127c8b3%2f&title=iView%20%e5%8f%91%e5%b8%83%203.1.0%20%e7%89%88%e6%9c%ac%ef%bc%8c%e6%94%af%e6%8c%81%20TypeScript%ef%bc%8c%e6%94%af%e6%8c%81%20Vue%20CLI%203"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fc127c8b3%2f&title=iView%20%e5%8f%91%e5%b8%83%203.1.0%20%e7%89%88%e6%9c%ac%ef%bc%8c%e6%94%af%e6%8c%81%20TypeScript%ef%bc%8c%e6%94%af%e6%8c%81%20Vue%20CLI%203"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a><ul><li><a href="#原文链接">原文链接</a></li><li><a href="#原文标题">原文标题</a></li></ul></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3</h1><div class="meta"><div class="postdate"><time datetime="2018-10-22" itemprop="datePublished">2018-10-22</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\n                    \n\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg src=\x22https:\/\/static.alili.tech\/img\/bVbgnSF?w=1600\x26amp;h=800\x22 src=\x22https:\/\/static.alili.tech\/img\/bVbgnSF?w=1600\x26amp;h=800\x22 alt=\x22图片描述\x22 title=\x22图片描述\x22 style=\x22cursor: pointer; display: inline;\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\n\x3cp\x3e自 iView 7.28 发布 3.0 后，今天我们又带来了一个重要的版本 3.1.0（版本代号：INSIDE），这个版本 iView 开始支持 \x3cstrong\x3eTypeScript\x3c\/strong\x3e，可以算是一个新的里程碑。\x3c\/p\x3e\n\x3cp\x3e如果觉得不错，请不要吝啬你的 Star 哦：\x3c\/p\x3e\n\x3cp\x3e👉\x3ca href=\x22https:\/\/github.com\/iview\/iview\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/github.com\/iview\/iview\x3c\/a\x3e\x3c\/p\x3e\n\x3ch2 id=\x22articleHeader0\x22\x3e更新日志\x3c\/h2\x3e\n\x3cp\x3e先看一下 3.1.0 版本完整的更新日志：\x3cbr\x3e\x3ca href=\x22https:\/\/github.com\/iview\/iview\/releases\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/github.com\/iview\/iview\/releases\x3c\/a\x3e\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3e支持 \x3cstrong\x3eTypeScript\x3c\/strong\x3e。\x3c\/li\x3e\n\x3cli\x3e增加 Vue CLI 3 插件。\x3ca href=\x22https:\/\/github.com\/iview\/vue-cli-plugin-iview\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3evue-cli-plugin-iview\x3c\/a\x3e\n\x3c\/li\x3e\n\x3cli\x3e文档增加 Nuxt.js 用法。\x3ca href=\x22https:\/\/dev.iviewui.com\/articles\/1024499044308881408\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e查看\x3c\/a\x3e\n\x3c\/li\x3e\n\x3cli\x3e文档更新\x3cstrong\x3e快速上手\x3c\/strong\x3e章节。\x3ca href=\x22https:\/\/www.iviewui.com\/docs\/guide\/start\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e查看\x3c\/a\x3e\n\x3c\/li\x3e\n\x3cli\x3e新增抽屉组件 Drawer。\x3c\/li\x3e\n\x3cli\x3eColorPicker 新增属性 \x3ccode\x3eeditable\x3c\/code\x3e，支持输入色值。\x3c\/li\x3e\n\x3cli\x3eTabs 新增属性 \x3ccode\x3ebeforeRemove\x3c\/code\x3e，返回 Promise 可中断关闭。\x3c\/li\x3e\n\x3cli\x3eInputNumber 新增属性 \x3ccode\x3eactive-change\x3c\/code\x3e，设置为 false 时，只会在失焦时更改数据。\x3c\/li\x3e\n\x3cli\x3eModal 新增属性 \x3ccode\x3ez-index\x3c\/code\x3e。\x3c\/li\x3e\n\x3cli\x3eModal 的 ESC 按键，现在只会关闭最顶层的模态框，当点击某个 Modal 区域时，它将置为最顶层。\x3c\/li\x3e\n\x3cli\x3e修复 DatePicker 在某些日期下，面板联动错误的 bug。\x3c\/li\x3e\n\x3cli\x3e修复 DatePicker 无法使用 \x3ccode\x3edisabled\x3c\/code\x3e 属性的 bug。\x3c\/li\x3e\n\x3cli\x3e修复 Select 开启 \x3ccode\x3etransfer\x3c\/code\x3e 属性后，在 3.0.1 版本下有时样式错误的 bug。\x3c\/li\x3e\n\x3cli\x3eMenuItem 设置 \x3ccode\x3etarget=\x22_blank\x22\x3c\/code\x3e 时，点击菜单不再高亮当前项。\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3ch3 id=\x22articleHeader1\x22\x3e完善的 TypeScript 支持\x3c\/h3\x3e\n\x3cp\x3e目前 iView 所有的组件，都增加了 d.ts 定义：\x3cbr\x3e\x3ca href=\x22https:\/\/github.com\/iview\/iview\/tree\/2.0\/types\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/github.com\/iview\/iview\/tree\/2.0\/types\x3c\/a\x3e\x3c\/p\x3e\n\x3cp\x3e对于喜欢写 TS 的用户来说，这是一项不错的福利。由于 Vue 本身的一些问题，目前 iView 在 \x3cstrong\x3etsx\x3c\/strong\x3e 的支持上还有一些问题，我们也会继续探讨支持 tsx 的解决方案，以及一些在 iView 使用 TypeScript 的方法和经验，之后都会第一时间发表在 iView 开发者社区 \x3ca href=\x22https:\/\/dev.iviewui.com\/\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/dev.iviewui.com\/\x3c\/a\x3e 。\x3c\/p\x3e\n\x3ch3 id=\x22articleHeader2\x22\x3e新增 Vue CLI 3 插件\x3c\/h3\x3e\n\x3cp\x3e要说起带 GUI 的工程构建工具，iView CLI 可要比 Vue CLI 3 早上一年多：）不过二者还是有质的区别的，iView CLI 是一个基于 Electron 编译的客户端软件，通过一个界面来生成工程文件。而 Vue CLI 3 是一整套的工程管理服务了。Vue CLI 3 可以说让开发和维护变的及其简单了，所以 iView 3.0 发布后，官方也没再继续维护 iView CLI。这次我们也开发了支持 Vue CLI 3 的 iView 插件：\x3ca href=\x22https:\/\/github.com\/iview\/vue-cli-plugin-iview\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3evue-cli-plugin-iview\x3c\/a\x3e。\x3c\/p\x3e\n\x3cp\x3eiView 文档也对工程构建的引导进行了修改，去掉了 iView CLI，而是推荐使用 Vue CLI 3。当你在使用 Vue CLI 3 管理你的项目时，你可以在插件中搜索 iview，然后安装第一个就可以了：\x3cbr\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016259043?w=1280\x26amp;h=562\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016259043?w=1280\x26amp;h=562\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor: pointer; display: inline;\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\n\x3cp\x3eiView 插件还支持一些简单的配置：\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3e选择全局使用还是按需使用 iView（默认全局）；\x3c\/li\x3e\n\x3cli\x3e选择使用的语言（默认是中文）；\x3c\/li\x3e\n\x3cli\x3e选择是否需要自定义主题（默认为否）。\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3cp\x3e完成不同的选择后，生成的配置文件也不同。\x3c\/p\x3e\n\x3cp\x3e如果有机会，下一个项目，不妨试试用 Vue CLI 3 来管理吧，你绝对会爱上它！\x3c\/p\x3e\n\x3ch3 id=\x22articleHeader3\x22\x3e新增抽屉组件 Drawer\x3c\/h3\x3e\n\x3cp\x3e众所周知，iView 官方提供的组件数量是同类开源产品里最多的了，3.0 我们增加了 5 个全新的组件，这个版本，又增加了一个社区呼声较高的\x3cstrong\x3e抽屉组件 Drawer\x3c\/strong\x3e。\x3c\/p\x3e\n\x3cp\x3e坦说的讲，抽屉组件和模态框 Modal 组件是很像的（包括代码也一样），只不过抽屉组件是从侧边打开的，并占满全屏：\x3c\/p\x3e\n\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016259044?w=1280\x26amp;h=653\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016259044?w=1280\x26amp;h=653\x22 alt=\x22对象编辑 - 用于承载编辑相关操作，需要点击关闭按钮关闭\x22 title=\x22对象编辑 - 用于承载编辑相关操作，需要点击关闭按钮关闭\x22 style=\x22cursor: pointer; display: inline;\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\n\x3cp\x3e本次更新，也对 Modal 进行了加强。3.0 开始，Modal 组件开始支持拖拽，这意味着同时可以显示多个 Modal，那层级就会是个问题。3.1.0 版本彻底解决了这个问题，如果你同时打开了多个 Modal（一般场景是打开了多个可拖拽的 Modal），现在是有层级关系的，新打开的，或者点击某个 Modal 的可视区域，它都将置为最顶层，而且按 \x3ccode\x3eESC\x3c\/code\x3e 键，只会关闭最顶层的一个 Modal，不会全部关闭了。而且新增加的 \x3ccode\x3ez-index\x3c\/code\x3e 的属性，可以自定义 Modal 初始的层级值了。\x3c\/p\x3e\n\x3cp\x3e如果你还没更新到 3.x，别等了，赶快更新吧，以后还有好多好东西等着你呢！\x3c\/p\x3e\n\x3ch2 id=\x22articleHeader4\x22\x3e特别鸣谢\x3c\/h2\x3e\n\x3cp\x3e特别感谢 \x3ca href=\x22https:\/\/github.com\/yangdan8\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e@yangdan8\x3c\/a\x3e 和 \x3ca href=\x22https:\/\/github.com\/lcx960324\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e@lcx960324\x3c\/a\x3e 在该版本对 iView 支持 TypeScript 的贡献！\x3c\/p\x3e\n\n                \n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/99750d9b/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/caa15126/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/c127c8b3/&text=iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/c127c8b3/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/c127c8b3/&text=iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/c127c8b3/&title=iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/c127c8b3/&is_video=false&description=iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3&body=Check out this article: https://alili.tech/archive/c127c8b3/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/c127c8b3/&title=iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/c127c8b3/&title=iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/c127c8b3/&title=iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/c127c8b3/&title=iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader1"><span class="toc-number">1.1.</span> <span class="toc-text">完善的 TypeScript 支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader2"><span class="toc-number">1.2.</span> <span class="toc-text">新增 Vue CLI 3 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-number">1.3.</span> <span class="toc-text">新增抽屉组件 Drawer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader4"><span class="toc-number">2.</span> <span class="toc-text">特别鸣谢</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">1.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">2.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-10-21T16:00:00.000Z" itemprop="datePublished">2018-10-22</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <p><span class="img-wrap"><img src="https://static.alili.tech/img/bVbgnSF?w=1600&amp;h=800" alt="图片描述" title="图片描述" style="cursor: pointer; display: inline"></span></p>
-<p>自 iView 7.28 发布 3.0 后，今天我们又带来了一个重要的版本 3.1.0（版本代号：INSIDE），这个版本 iView 开始支持 <strong>TypeScript</strong>，可以算是一个新的里程碑。</p>
-<p>如果觉得不错，请不要吝啬你的 Star 哦：</p>
-<p>👉<a href="https://github.com/iview/iview" rel="nofollow noreferrer" target="_blank">https://github.com/iview/iview</a></p>
-<h2 id="articleHeader0">更新日志</h2>
-<p>先看一下 3.1.0 版本完整的更新日志：<br><a href="https://github.com/iview/iview/releases" rel="nofollow noreferrer" target="_blank">https://github.com/iview/iview/releases</a></p>
-<ul>
-<li>支持 <strong>TypeScript</strong>。</li>
-<li>增加 Vue CLI 3 插件。<a href="https://github.com/iview/vue-cli-plugin-iview" rel="nofollow noreferrer" target="_blank">vue-cli-plugin-iview</a>
-</li>
-<li>文档增加 Nuxt.js 用法。<a href="https://dev.iviewui.com/articles/1024499044308881408" rel="nofollow noreferrer" target="_blank">查看</a>
-</li>
-<li>文档更新<strong>快速上手</strong>章节。<a href="https://www.iviewui.com/docs/guide/start" rel="nofollow noreferrer" target="_blank">查看</a>
-</li>
-<li>新增抽屉组件 Drawer。</li>
-<li>ColorPicker 新增属性 <code>editable</code>，支持输入色值。</li>
-<li>Tabs 新增属性 <code>beforeRemove</code>，返回 Promise 可中断关闭。</li>
-<li>InputNumber 新增属性 <code>active-change</code>，设置为 false 时，只会在失焦时更改数据。</li>
-<li>Modal 新增属性 <code>z-index</code>。</li>
-<li>Modal 的 ESC 按键，现在只会关闭最顶层的模态框，当点击某个 Modal 区域时，它将置为最顶层。</li>
-<li>修复 DatePicker 在某些日期下，面板联动错误的 bug。</li>
-<li>修复 DatePicker 无法使用 <code>disabled</code> 属性的 bug。</li>
-<li>修复 Select 开启 <code>transfer</code> 属性后，在 3.0.1 版本下有时样式错误的 bug。</li>
-<li>MenuItem 设置 <code>target="_blank"</code> 时，点击菜单不再高亮当前项。</li>
-</ul>
-<h3 id="articleHeader1">完善的 TypeScript 支持</h3>
-<p>目前 iView 所有的组件，都增加了 d.ts 定义：<br><a href="https://github.com/iview/iview/tree/2.0/types" rel="nofollow noreferrer" target="_blank">https://github.com/iview/iview/tree/2.0/types</a></p>
-<p>对于喜欢写 TS 的用户来说，这是一项不错的福利。由于 Vue 本身的一些问题，目前 iView 在 <strong>tsx</strong> 的支持上还有一些问题，我们也会继续探讨支持 tsx 的解决方案，以及一些在 iView 使用 TypeScript 的方法和经验，之后都会第一时间发表在 iView 开发者社区 <a href="https://dev.iviewui.com/" rel="nofollow noreferrer" target="_blank">https://dev.iviewui.com/</a> 。</p>
-<h3 id="articleHeader2">新增 Vue CLI 3 插件</h3>
-<p>要说起带 GUI 的工程构建工具，iView CLI 可要比 Vue CLI 3 早上一年多：）不过二者还是有质的区别的，iView CLI 是一个基于 Electron 编译的客户端软件，通过一个界面来生成工程文件。而 Vue CLI 3 是一整套的工程管理服务了。Vue CLI 3 可以说让开发和维护变的及其简单了，所以 iView 3.0 发布后，官方也没再继续维护 iView CLI。这次我们也开发了支持 Vue CLI 3 的 iView 插件：<a href="https://github.com/iview/vue-cli-plugin-iview" rel="nofollow noreferrer" target="_blank">vue-cli-plugin-iview</a>。</p>
-<p>iView 文档也对工程构建的引导进行了修改，去掉了 iView CLI，而是推荐使用 Vue CLI 3。当你在使用 Vue CLI 3 管理你的项目时，你可以在插件中搜索 iview，然后安装第一个就可以了：<br><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016259043?w=1280&amp;h=562" alt="" title="" style="cursor: pointer; display: inline"></span></p>
-<p>iView 插件还支持一些简单的配置：</p>
-<ul>
-<li>选择全局使用还是按需使用 iView（默认全局）；</li>
-<li>选择使用的语言（默认是中文）；</li>
-<li>选择是否需要自定义主题（默认为否）。</li>
-</ul>
-<p>完成不同的选择后，生成的配置文件也不同。</p>
-<p>如果有机会，下一个项目，不妨试试用 Vue CLI 3 来管理吧，你绝对会爱上它！</p>
-<h3 id="articleHeader3">新增抽屉组件 Drawer</h3>
-<p>众所周知，iView 官方提供的组件数量是同类开源产品里最多的了，3.0 我们增加了 5 个全新的组件，这个版本，又增加了一个社区呼声较高的<strong>抽屉组件 Drawer</strong>。</p>
-<p>坦说的讲，抽屉组件和模态框 Modal 组件是很像的（包括代码也一样），只不过抽屉组件是从侧边打开的，并占满全屏：</p>
-<p><span class="img-wrap"><img src="https://static.alili.tech/img/remote/1460000016259044?w=1280&amp;h=653" alt="对象编辑 - 用于承载编辑相关操作，需要点击关闭按钮关闭" title="对象编辑 - 用于承载编辑相关操作，需要点击关闭按钮关闭" style="cursor: pointer; display: inline"></span></p>
-<p>本次更新，也对 Modal 进行了加强。3.0 开始，Modal 组件开始支持拖拽，这意味着同时可以显示多个 Modal，那层级就会是个问题。3.1.0 版本彻底解决了这个问题，如果你同时打开了多个 Modal（一般场景是打开了多个可拖拽的 Modal），现在是有层级关系的，新打开的，或者点击某个 Modal 的可视区域，它都将置为最顶层，而且按 <code>ESC</code> 键，只会关闭最顶层的一个 Modal，不会全部关闭了。而且新增加的 <code>z-index</code> 的属性，可以自定义 Modal 初始的层级值了。</p>
-<p>如果你还没更新到 3.x，别等了，赶快更新吧，以后还有好多好东西等着你呢！</p>
-<h2 id="articleHeader4">特别鸣谢</h2>
-<p>特别感谢 <a href="https://github.com/yangdan8" rel="nofollow noreferrer" target="_blank">@yangdan8</a> 和 <a href="https://github.com/lcx960324" rel="nofollow noreferrer" target="_blank">@lcx960324</a> 在该版本对 iView 支持 TypeScript 的贡献！</p>
-
-                
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://segmentfault.com/a/1190000016259040" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016259040</a></p>
-<h2 id="原文标题"><a href="#原文标题" class="headerlink" title="原文标题"></a>原文标题</h2><p>iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3</p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/c127c8b3/">https://alili.tech/archive/c127c8b3/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2 id="原文链接">原文链接</h2><p><a href="https://segmentfault.com/a/1190000016259040">https://segmentfault.com/a/1190000016259040</a></p><h2 id="原文标题">原文标题</h2><p>iView 发布 3.1.0 版本，支持 TypeScript，支持 Vue CLI 3</p><h2>本文链接：</h2><a href="https://alili.tech/archive/c127c8b3/" target="_blank">https://alili.tech/archive/c127c8b3/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader1"><span class="toc-number">1.1.</span> <span class="toc-text">完善的 TypeScript 支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader2"><span class="toc-number">1.2.</span> <span class="toc-text">新增 Vue CLI 3 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-number">1.3.</span> <span class="toc-text">新增抽屉组件 Drawer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader4"><span class="toc-number">2.</span> <span class="toc-text">特别鸣谢</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">1.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">2.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

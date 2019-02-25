@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Alili</title>
+    <link>https://alili.tech/tags/git/</link>
+    <description>Recent content in Git on Alili</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 24 Jan 2019 19:33:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://alili.tech/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一个两年前.gitattributes文件导致的bug</title>
+      <link>https://alili.tech/archive/zift8zkisnf/</link>
+      <pubDate>Thu, 24 Jan 2019 19:33:33 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/zift8zkisnf/</guid>
+      <description>起因 一时兴起,我打开了我两年前写的一个前端项目开始代码审查. 这个项目我一个人写了两年,大概十几万行代码的样子.
+发现这个项目的git居然把所有的代码文件都识别成了二进制文件. 这个问题,之前困扰了我很久,却一直找不到原因.导致我的代码没有对比记录.
+ 再顽固的问题也有水落石出的一天
+ 说巧不巧,今天偏偏找到了问题的源头.
+.gitattributes 最后发现是因为.gitattributes文件有一行配置因为换行问题.导致所有text的文件都识别成了二进制文件.
+.gitattributes的作用 .gitattributes文件是一个简单的text文本文件，它的作用是重新定义指定文件的属性, 指定非文本文件的对比合并方式
+编写规则 pattern attr1 attr2 ...  示例 *.ttf binary *.woff binary *.eot binary *.otf binary * text=auto  上面这段代码表示,将一些字体文件指定为二进制文件,当提交代码的时候git不会diff这些文件的变动详情. 他只会告诉你,文件变动了,但是不会告诉你具体哪里变了.</description>
+    </item>
+    
+    <item>
+      <title>Git大小写不敏感导致的烦人问题</title>
+      <link>https://alili.tech/archive/rrc7ngyr5rp/</link>
+      <pubDate>Wed, 09 Jan 2019 19:33:33 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/rrc7ngyr5rp/</guid>
+      <description>因为同事把一个文件夹的小写改成了大写,导致我本地的提交不能直接push rebase 等一些列操作.恼的很~
+ error: The following untracked working tree files would be overwritten by checkout: xxx.js Please move or remove them before you can switch branches. Aborting  解决办法 设置为大小写敏感(问题解决后,一定要还原配置)
+git config core.ignorecase false  尽管设置大小写敏感之后,始终会影响其他分支的代码,所以不建议一直使用这个配置,当问题解决之后,还是要改回去.
+改回默认 git config core.ignorecase true # or git config --unset core.ignorecase  尾巴 平时编码的时候,还是千万不要直接重命名大小写,自己本地看起来没有什么问题.在别人问题上却是大问题.
+如果发生了类似问题的,应该在源头解决(谁机器上重命名的,谁改回去).如果不解决的,应该拖出去打~~</description>
+    </item>
+    
+    <item>
+      <title>Git删除所有提交记录解决方案</title>
+      <link>https://alili.tech/archive/ed854758/</link>
+      <pubDate>Tue, 30 Oct 2018 19:33:33 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/ed854758/</guid>
+      <description>如果你之前的项目提交了一些敏感数据,或者要清除以前提交的记录,给出下面解决方案.
+# 1. 检出一个新的分支 git checkout --orphan latest_branch # 2. 暂存所有文件 git add -A # 3. 提交刚刚暂存的文件 git commit -am &amp;quot;commit message&amp;quot; # 4. 删除最原始的分支 git branch -D master # 5. 重命名当的第分支 git branch -m master # 6. 提交你的记录到远程仓库 git push -f origin master  </description>
+    </item>
+    
+    <item>
+      <title>Git push卡住解决办法</title>
+      <link>https://alili.tech/archive/629795fd/</link>
+      <pubDate>Mon, 09 Apr 2018 19:33:33 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/629795fd/</guid>
+      <description>博客的每天英语是直接爬的扇贝英语,为了不直接请求代理接口(会相对比较慢). 所以每天我的程序每天会生成相应的数据文件,前端直接ajax获取就好了. 博客内容也会每天自动发布,达到每天更新名言名句的效果. 好久没管,发现很多git提交的内容没有push.手动直接push之后发现有800多个修改地方没有push.
+手动push的时候直接卡住了. 就像这样:
+[master 9447645] 1 file changed, 1 insertion(+) Counting objects: 20, done. Compressing objects: 100% (876/876), done. Writing objects: 100% (876/876)  网上找了个方法,解决了这个问题: 添加sendpack.sideband属性并置为false
+# 全局的： git config –global sendpack.sideband false # 仓库的： git config –local sendpack.sideband false  我只在我的本地仓库设置一下,然后再执行 git push就成功了</description>
+    </item>
+    
+    <item>
+      <title>Git系列之关于add命令的一些事</title>
+      <link>https://alili.tech/archive/638cc3cd/</link>
+      <pubDate>Sun, 10 Sep 2017 19:33:33 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/638cc3cd/</guid>
+      <description> 基本用法 通常是通过git add 的形式把添加到索引库中，
+可以是文件也可以是目录:
+git add &amp;lt;path&amp;gt;  如果有很多改动,可以用以下命令来一次添加所有改变的文件:
+ git add -A .  将所有修改添加到暂存区,包括添加新文件和编辑过的文件不包括删除的文件:
+$ git add .  表示添加所有内容:
+git add -A  表示添加编辑或者删除的文件，不包括新添加的文件:
+git add -u  如果不小心执行了以下命令:
+git add * -f(force) //添加被忽略的文件。  可以吃一个后悔药:
+git reset HEAD  </description>
+    </item>
+    
+  </channel>
+</rss>

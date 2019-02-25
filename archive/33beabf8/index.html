@@ -1,414 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="Node &amp;#x5E94;&amp;#x7528;&amp;#x4E3A;&amp;#x5355;&amp;#x7EBF;&amp;#x7A0B;&amp;#x5E94;&amp;#x7528;&amp;#xFF0C;JS &amp;#x867D;&amp;#x53EF;&amp;#x5229;&amp;#x7528;&amp;#x5F02;&amp;#x6B65; I/O &amp;#x907F;&amp;#x514D;&amp;#x7EBF;&amp;#x7A0B;&amp;#x963B;&amp;#x585E;&amp;#xFF0C;&amp;#x4F46;&amp;#x">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="探索 PM2 Cluster 模式下 Log4js 日志丢失">
-<meta property="og:url" content="https://alili.tech/archive/33beabf8/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="Node &amp;#x5E94;&amp;#x7528;&amp;#x4E3A;&amp;#x5355;&amp;#x7EBF;&amp;#x7A0B;&amp;#x5E94;&amp;#x7528;&amp;#xFF0C;JS &amp;#x867D;&amp;#x53EF;&amp;#x5229;&amp;#x7528;&amp;#x5F02;&amp;#x6B65; I/O &amp;#x907F;&amp;#x514D;&amp;#x7EBF;&amp;#x7A0B;&amp;#x963B;&amp;#x585E;&amp;#xFF0C;&amp;#x4F46;&amp;#x">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016127577?w=1409&h=401">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016127581?w=749&h=399">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016127578?w=1208&h=207">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016127579?w=247&h=391">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016127580?w=1163&h=121">
-<meta property="og:image" content="https://static.alili.tech/img/remote/1460000016127581?w=749&h=399">
-<meta property="og:updated_time" content="2018-10-25T18:30:18.207Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="探索 PM2 Cluster 模式下 Log4js 日志丢失">
-<meta name="twitter:description" content="Node &amp;#x5E94;&amp;#x7528;&amp;#x4E3A;&amp;#x5355;&amp;#x7EBF;&amp;#x7A0B;&amp;#x5E94;&amp;#x7528;&amp;#xFF0C;JS &amp;#x867D;&amp;#x53EF;&amp;#x5229;&amp;#x7528;&amp;#x5F02;&amp;#x6B65; I/O &amp;#x907F;&amp;#x514D;&amp;#x7EBF;&amp;#x7A0B;&amp;#x963B;&amp;#x585E;&amp;#xFF0C;&amp;#x4F46;&amp;#x">
-<meta name="twitter:image" content="https://static.alili.tech/img/remote/1460000016127577?w=1409&h=401">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>探索 PM2 Cluster 模式下 Log4js 日志丢失 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/33beabf8/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/33beabf8/",
-      "appid": "1613049289050283", 
-      "title": "探索 PM2 Cluster 模式下 Log4js 日志丢失 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:44"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="探索 PM2 Cluster 模式下 Log4js 日志丢失"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>探索 PM2 Cluster 模式下 Log4js 日志丢失 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/33beabf8/",
+				"appid": "1613049289050283", 
+				"title": "探索 PM2 Cluster 模式下 Log4js 日志丢失 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-10-26T02:30:12"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/6efcfba3/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/8e907017/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2f33beabf8%2f&text=%e6%8e%a2%e7%b4%a2%20PM2%20Cluster%20%e6%a8%a1%e5%bc%8f%e4%b8%8b%20Log4js%20%e6%97%a5%e5%bf%97%e4%b8%a2%e5%a4%b1"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2f33beabf8%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2f33beabf8%2f&text=%e6%8e%a2%e7%b4%a2%20PM2%20Cluster%20%e6%a8%a1%e5%bc%8f%e4%b8%8b%20Log4js%20%e6%97%a5%e5%bf%97%e4%b8%a2%e5%a4%b1"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2f33beabf8%2f&title=%e6%8e%a2%e7%b4%a2%20PM2%20Cluster%20%e6%a8%a1%e5%bc%8f%e4%b8%8b%20Log4js%20%e6%97%a5%e5%bf%97%e4%b8%a2%e5%a4%b1"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2f33beabf8%2f&is_video=false&description=%e6%8e%a2%e7%b4%a2%20PM2%20Cluster%20%e6%a8%a1%e5%bc%8f%e4%b8%8b%20Log4js%20%e6%97%a5%e5%bf%97%e4%b8%a2%e5%a4%b1"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%e6%8e%a2%e7%b4%a2%20PM2%20Cluster%20%e6%a8%a1%e5%bc%8f%e4%b8%8b%20Log4js%20%e6%97%a5%e5%bf%97%e4%b8%a2%e5%a4%b1&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2f33beabf8%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2f33beabf8%2f&title=%e6%8e%a2%e7%b4%a2%20PM2%20Cluster%20%e6%a8%a1%e5%bc%8f%e4%b8%8b%20Log4js%20%e6%97%a5%e5%bf%97%e4%b8%a2%e5%a4%b1"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f33beabf8%2f&title=%e6%8e%a2%e7%b4%a2%20PM2%20Cluster%20%e6%a8%a1%e5%bc%8f%e4%b8%8b%20Log4js%20%e6%97%a5%e5%bf%97%e4%b8%a2%e5%a4%b1"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f33beabf8%2f&title=%e6%8e%a2%e7%b4%a2%20PM2%20Cluster%20%e6%a8%a1%e5%bc%8f%e4%b8%8b%20Log4js%20%e6%97%a5%e5%bf%97%e4%b8%a2%e5%a4%b1"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f33beabf8%2f&title=%e6%8e%a2%e7%b4%a2%20PM2%20Cluster%20%e6%a8%a1%e5%bc%8f%e4%b8%8b%20Log4js%20%e6%97%a5%e5%bf%97%e4%b8%a2%e5%a4%b1"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a><ul><li><a href="#原文标题">原文标题</a></li><li><a href="#原文链接">原文链接</a></li></ul></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">探索 PM2 Cluster 模式下 Log4js 日志丢失</h1><div class="meta"><div class="postdate"><time datetime="2018-10-26" itemprop="datePublished">2018-10-26</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\x3cp\x3eNode \x26#x5E94;\x26#x7528;\x26#x4E3A;\x26#x5355;\x26#x7EBF;\x26#x7A0B;\x26#x5E94;\x26#x7528;\x26#xFF0C;JS \x26#x867D;\x26#x53EF;\x26#x5229;\x26#x7528;\x26#x5F02;\x26#x6B65; I\/O \x26#x907F;\x26#x514D;\x26#x7EBF;\x26#x7A0B;\x26#x963B;\x26#x585E;\x26#xFF0C;\x26#x4F46;\x26#x65E0;\x26#x6CD5;\x26#x5229;\x26#x7528;\x26#x591A;\x26#x6838; CPU \x26#x7684;\x26#x4F18;\x26#x52BF;\x26#x63D0;\x26#x5347;\x26#x8FD0;\x26#x884C;\x26#x6548;\x26#x7387;\x26#xFF0C;\x26#x63D0;\x26#x9AD8;\x26#x541E;\x26#x5410;\x26#x91CF;\x26#x4ECD;\x26#x9700;\x26#x591A;\x26#x7EBF;\x26#x7A0B;\x26#x3002;Node Cluster \x26#x53EF;\x26#x4EA7;\x26#x751F;\x26#x591A;\x26#x4E2A;\x26#x5DE5;\x26#x4F5C;\x26#x7EBF;\x26#x7A0B;\x26#x5171;\x26#x4EAB;\x26#x540C;\x26#x4E00; TCP \x26#x8FDE;\x26#x63A5;\x26#xFF0C;\x26#x4E3B;\x26#x7EBF;\x26#x7A0B;\x26#x901A;\x26#x8FC7; IPC \x26#x901A;\x26#x9053;\x26#x4E0E;\x26#x5DE5;\x26#x4F5C;\x26#x7EBF;\x26#x7A0B;\x26#x901A;\x26#x8BAF;\x26#xFF0C;\x26#x5E76;\x26#x4F7F;\x26#x7528; \x3ca href=\x22https:\/\/en.wikipedia.org\/wiki\/Round-robin_scheduling\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eRound-robin\x3c\/a\x3e \x26#x8D1F;\x26#x8F7D;\x26#x5747;\x26#x8861;\x26#x6781;\x26#x597D;\x26#x7684;\x26#x5904;\x26#x7406;\x26#x7EBF;\x26#x7A0B;\x26#x95F4;\x26#x538B;\x26#x529B;\x26#x3002;\x3c\/p\x3e\x3cp\x3ePM2 Cluster \x26#x4F7F;\x26#x5F97; Node \x26#x64CD;\x26#x4F5C;\x26#x96C6;\x26#x7FA4;\x26#x66F4;\x26#x52A0;\x26#x5BB9;\x26#x6613;\x26#xFF0C;PM2 \x26#x4F1A;\x26#x6839;\x26#x636E;\x26#x670D;\x26#x52A1;\x26#x5668; CPU \x26#x6838;\x26#x6570;\x26#x4EA7;\x26#x751F;\x26#x76F8;\x26#x5E94;\x26#x7684;\x26#x5DE5;\x26#x4F5C;\x26#x7EBF;\x26#x7A0B;\x26#xFF0C;\x26#x53EA;\x26#x9700;\x26#x6309;\x26#x5982;\x26#x4E0B;\x26#x65B9;\x26#x5F0F;\x26#x542F;\x26#x52A8;\x26#x5E94;\x26#x7528;\x26#xFF1A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22pm2 start app.js -i 0\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22bash hljs\x22\x3e\x3ccode class=\x22bash\x22 style=\x22word-break:break-word;white-space:initial\x22\x3epm2 start app.js -i 0\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000016127577?w=1409\x26amp;h=401\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016127577?w=1409\x26amp;h=401\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x26#x4F46; PM2 Cluster \x26#x4E0E; Log4js \x26#x76F8;\x26#x649E;\x26#x65F6;\x26#xFF0C;\x26#x7838;\x26#x51FA;\x26#x4E86;\x26#x5927;\x26#x5751;\x26#xFF0C;\x26#x672C;\x26#x4EBA;\x26#x8E29;\x26#x4E86;\x26#x8FDB;\x26#x53BB;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x8E29;\x26#x5751;\x26#x7ECF;\x26#x8FC7;\x26#xFF1A;\x26#x67D0;\x26#x65E5;\x26#x670D;\x26#x52A1;\x26#x7AEF;\x26#x540C;\x26#x5B66;\x26#x4E0A;\x26#x62A5;\x26#x4E86;\x26#x4E00;\x26#x7EBF;\x26#x4E0A;\x26#x8BF7;\x26#x6C42;\x26#x53C2;\x26#x6570;\x26#x5F02;\x26#x5E38;\x26#x65E5;\x26#x5FD7;\x26#xFF0C;\x26#x4E3A;\x26#x8FFD;\x26#x8E2A;\x26#x5F02;\x26#x5E38;\x26#x4EA7;\x26#x751F;\x26#x539F;\x26#x56E0;\x26#xFF0C;\x26#x6211;\x26#x5728;\x26#x6240;\x26#x6709;\x26#x7EBF;\x26#x4E0A;\x26#x670D;\x26#x52A1;\x26#x5668;\x26#x7FFB;\x26#x67E5;\x26#x5747;\x26#x672A;\x26#x5BFB;\x26#x5230;\x26#x76F8;\x26#x5173;\x26#x65E5;\x26#x5FD7;\x26#x3002;\x26#x670D;\x26#x52A1;\x26#x7AEF;\x26#x5F02;\x26#x5E38;\x26#x65E5;\x26#x5FD7;\x26#x5E76;\x26#x975E;\x26#x634F;\x26#x9020;\x26#xFF0C;\x26#x524D;\x26#x7AEF;\x26#x65E5;\x26#x5FD7;\x26#x4E22;\x26#x5931;\x26#x5E76;\x26#x975E;\x26#x5076;\x26#x7136;\x26#x3002;\x26#x4E3A;\x26#x7EDF;\x26#x8BA1;\x26#x65E5;\x26#x5FD7;\x26#x4E22;\x26#x5931;\x26#x7387;\x26#xFF0C;\x26#x5728;\x26#x7EBF;\x26#x4E0B;\x26#x73AF;\x26#x5883;\x26#x5B9A;\x26#x91CF;\x26#x53D1;\x26#x8D77; 100 \x26#x6761;\x26#x8BF7;\x26#x6C42;\x26#xFF0C;\x26#x7ED3;\x26#x679C;\x26#x4EC5;\x26#x4EA7;\x26#x751F; 25 \x26#x6761;\x26#x65E5;\x26#x5FD7;\x26#xFF0C;\x26#x591A;\x26#x6B21;\x26#x5B9E;\x26#x9A8C;\x26#x53D1;\x26#x73B0;\x26#x4E22;\x26#x5931;\x26#x7387;\x26#x7A33;\x26#x5B9A;\x26#x5728; 3\/4 \x26#x4EE4;\x26#x4EBA;\x26#x53D1;\x26#x6307;\x26#xFF01;\x26#x70ED;\x26#xFF08;\x26#x597D;\x26#xFF09;\x26#x7231;\x26#xFF08;\x26#x5947;\x26#xFF09;\x26#x6280;\x26#xFF08;\x26#x5FC3;\x26#xFF09;\x26#x672F;\x26#xFF08;\x26#x91CD;\x26#xFF09;\x26#x7684;\x26#x6211;\x26#x67E5;\x26#x9605;\x26#x4E86; Log4js \x26#x6E90;\x26#x7801;\x26#xFF1A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22configuration.addListener((config) =\x26gt; {\n    \/\/ clear out the listeners, because configure has been called.\n    listeners.length = 0;\n\n    disabled = config.disableClustering;\n    pm2 = config.pm2;\n    pm2InstanceVar = config.pm2InstanceVar || \x26apos;NODE_APP_INSTANCE\x26apos;;\n\n    debug(`clustering disabled ? ${disabled}`);\n    debug(`cluster.isMaster ? ${cluster.isMaster}`);\n    debug(`pm2 enabled ? ${pm2}`);\n    debug(`pm2InstanceVar = ${pm2InstanceVar}`);\n    debug(`process.env[${pm2InstanceVar}] = ${process.env[pm2InstanceVar]}`);\n\n    \/\/ just in case configure is called after shutdown.\n    if (pm2) {\n        process.removeListener(\x26apos;message\x26apos;, receiver);\n    }\n    if (cluster.removeListener) {\n        cluster.removeListener(\x26apos;message\x26apos;, receiver);\n    }\n\n    if (config.disableClustering) {\n        debug(\x26apos;Not listening for cluster messages, because clustering disabled.\x26apos;);\n    } else if (isPM2Master()) {\n        \/\/ PM2 cluster support\n        \/\/ PM2 runs everything as workers - install pm2-intercom for this to work.\n        \/\/ we only want one of the app instances to write logs.\n        debug(\x26apos;listening for PM2 broadcast messages\x26apos;);\n        process.on(\x26apos;message\x26apos;, receiver);\n    } else if (cluster.isMaster) {\n        debug(\x26apos;listening for cluster messages\x26apos;);\n        cluster.on(\x26apos;message\x26apos;, receiver);\n    } else {\n        debug(\x26apos;not listening for messages, because we are not a master process.\x26apos;);\n    }\n});\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3econfiguration.addListener(\x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3econfig\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e {\n    \x3cspan class=\x22hljs-comment\x22\x3e\/\/ clear out the listeners, because configure has been called.\x3c\/span\x3e\n    listeners.length = \x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e;\n\n    disabled = config.disableClustering;\n    pm2 = config.pm2;\n    pm2InstanceVar = config.pm2InstanceVar || \x3cspan class=\x22hljs-string\x22\x3e\x26apos;NODE_APP_INSTANCE\x26apos;\x3c\/span\x3e;\n\n    debug(\x3cspan class=\x22hljs-string\x22\x3e`clustering disabled ? \x3cspan class=\x22hljs-subst\x22\x3e${disabled}\x3c\/span\x3e`\x3c\/span\x3e);\n    debug(\x3cspan class=\x22hljs-string\x22\x3e`cluster.isMaster ? \x3cspan class=\x22hljs-subst\x22\x3e${cluster.isMaster}\x3c\/span\x3e`\x3c\/span\x3e);\n    debug(\x3cspan class=\x22hljs-string\x22\x3e`pm2 enabled ? \x3cspan class=\x22hljs-subst\x22\x3e${pm2}\x3c\/span\x3e`\x3c\/span\x3e);\n    debug(\x3cspan class=\x22hljs-string\x22\x3e`pm2InstanceVar = \x3cspan class=\x22hljs-subst\x22\x3e${pm2InstanceVar}\x3c\/span\x3e`\x3c\/span\x3e);\n    debug(\x3cspan class=\x22hljs-string\x22\x3e`process.env[\x3cspan class=\x22hljs-subst\x22\x3e${pm2InstanceVar}\x3c\/span\x3e] = \x3cspan class=\x22hljs-subst\x22\x3e${process.env[pm2InstanceVar]}\x3c\/span\x3e`\x3c\/span\x3e);\n\n    \x3cspan class=\x22hljs-comment\x22\x3e\/\/ just in case configure is called after shutdown.\x3c\/span\x3e\n    \x3cspan class=\x22hljs-keyword\x22\x3eif\x3c\/span\x3e (pm2) {\n        process.removeListener(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;message\x26apos;\x3c\/span\x3e, receiver);\n    }\n    \x3cspan class=\x22hljs-keyword\x22\x3eif\x3c\/span\x3e (cluster.removeListener) {\n        cluster.removeListener(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;message\x26apos;\x3c\/span\x3e, receiver);\n    }\n\n    \x3cspan class=\x22hljs-keyword\x22\x3eif\x3c\/span\x3e (config.disableClustering) {\n        debug(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;Not listening for cluster messages, because clustering disabled.\x26apos;\x3c\/span\x3e);\n    } \x3cspan class=\x22hljs-keyword\x22\x3eelse\x3c\/span\x3e \x3cspan class=\x22hljs-keyword\x22\x3eif\x3c\/span\x3e (isPM2Master()) {\n        \x3cspan class=\x22hljs-comment\x22\x3e\/\/ PM2 cluster support\x3c\/span\x3e\n        \x3cspan class=\x22hljs-comment\x22\x3e\/\/ PM2 runs everything as workers - install pm2-intercom for this to work.\x3c\/span\x3e\n        \x3cspan class=\x22hljs-comment\x22\x3e\/\/ we only want one of the app instances to write logs.\x3c\/span\x3e\n        debug(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;listening for PM2 broadcast messages\x26apos;\x3c\/span\x3e);\n        process.on(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;message\x26apos;\x3c\/span\x3e, receiver);\n    } \x3cspan class=\x22hljs-keyword\x22\x3eelse\x3c\/span\x3e \x3cspan class=\x22hljs-keyword\x22\x3eif\x3c\/span\x3e (cluster.isMaster) {\n        debug(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;listening for cluster messages\x26apos;\x3c\/span\x3e);\n        cluster.on(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;message\x26apos;\x3c\/span\x3e, receiver);\n    } \x3cspan class=\x22hljs-keyword\x22\x3eelse\x3c\/span\x3e {\n        debug(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;not listening for messages, because we are not a master process.\x26apos;\x3c\/span\x3e);\n    }\n});\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x8BF7;\x26#x6CE8;\x26#x610F;\x26#xFF1A;\x3c\/p\x3e\x3cblockquote\x3ePM2 runs everything as workers - install pm2-intercom for this to work.\x3c\/blockquote\x3e\x3cp\x3eLog4js \x26#x5728; Cluster \x26#x6A21;\x26#x5F0F;\x26#x4E0B;\x26#xFF0C;worker \x26#x5C06;\x26#x65E5;\x26#x5FD7;\x26#x53D1;\x26#x9001;\x26#x81F3; master\x26#xFF0C;master \x26#x5B9E;\x26#x73B0;\x26#x65E5;\x26#x5FD7;\x26#x5199;\x26#x5165;\x26#x6587;\x26#x4EF6;\x26#x3002;\x26#x4F46;\x26#x5728; PM2 Cluster \x26#x6A21;\x26#x5F0F;\x26#x4E0B;\x26#xFF0C;\x26#x6240;\x26#x6709;\x26#x8FDB;\x26#x7A0B;\x26#x7686;\x26#x4E3A; worker\x26#xFF1A;\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000016127581?w=749\x26amp;h=399\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016127581?w=749\x26amp;h=399\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x26#x4E8E;\x26#x662F;\x26#x6309;\x26#x7167; Log4js \x26#x6E90;\x26#x7801;\x26#x7684;\x26#x6307;\x26#x5F15;\x26#x5B89;\x26#x88C5; pm2-intercom \x26#x8FDB;\x26#x7A0B;\x26#x95F4;\x26#x901A;\x26#x8BAF;\x26#x6A21;\x26#x5757;\x26#xFF1A;\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000016127578?w=1208\x26amp;h=207\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016127578?w=1208\x26amp;h=207\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x26#x4ECD;\x26#x4E0D;\x26#x594F;\x26#x6548;\x26#xFF0C;\x26#x53C8;\x26#x6CE8;\x26#x610F;\x26#x5230; isPM2Master()\x26#xFF1A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22const isPM2Master = () =\x26gt; pm2 \x26amp;\x26amp; process.env[pm2InstanceVar] === \x26apos;0\x26apos;;\nconst isMaster = () =\x26gt; disabled || cluster.isMaster || isPM2Master();\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e isPM2Master = \x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-params\x22\x3e()\x3c\/span\x3e =\x26gt;\x3c\/span\x3e pm2 \x26amp;\x26amp; process.env[pm2InstanceVar] === \x3cspan class=\x22hljs-string\x22\x3e\x26apos;0\x26apos;\x3c\/span\x3e;\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e isMaster = \x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-params\x22\x3e()\x3c\/span\x3e =\x26gt;\x3c\/span\x3e disabled || cluster.isMaster || isPM2Master();\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3eisPM2Master \x26#x901A;\x26#x8FC7; Log4js configure \x26#x4E2D; pm2 \x26#x53CA; pm2InstanceVar \x26#x53C2;\x26#x6570;\x26#x786E;\x26#x5B9A;\x26#xFF0C;\x26#x4E8E;\x26#x662F;\x26#x4FEE;\x26#x6539; Log4js \x26#x914D;\x26#x7F6E;\x26#x5982;\x26#x4E0B;\x26#xFF1A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22Log4JS.configure({\n    \/\/ ...\n    pm2: true,\n    pm2InstanceVar: \x26apos;INSTANCE_ID\x26apos;\n});\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3eLog4JS.configure({\n    \x3cspan class=\x22hljs-comment\x22\x3e\/\/ ...\x3c\/span\x3e\n    pm2: \x3cspan class=\x22hljs-literal\x22\x3etrue\x3c\/span\x3e,\n    \x3cspan class=\x22hljs-attr\x22\x3epm2InstanceVar\x3c\/span\x3e: \x3cspan class=\x22hljs-string\x22\x3e\x26apos;INSTANCE_ID\x26apos;\x3c\/span\x3e\n});\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x7EC8;\x26#x4E8E;\x26#x89E3;\x26#x51B3;\x26#x4E86; PM2 Cluster \x26#x6A21;\x26#x5F0F;\x26#x4E0B; Log4js \x26#x65E5;\x26#x5FD7;\x26#x4E22;\x26#x5931;\x26#x95EE;\x26#x9898;\x26#x3002;\x3c\/p\x3e\x3chr\x3e\x3cp\x3e\x26#x8865;\x26#x5145;\x26#x4E00;\x26#x4E0B;\x26#xFF1A;\x3c\/p\x3e\x3cp\x3e\x26#x81EA;\x26#x884C;\x26#x5B9E;\x26#x73B0; Node Cluster\x26#xFF1A;\x3c\/p\x3e\x3cdiv class=\x22widget-codetool\x22 style=\x22display:none\x22\x3e\x3cdiv class=\x22widget-codetool--inner\x22\x3e\x3cspan class=\x22selectCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x5168;\x26#x9009;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22copyCode code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 data-clipboard-text=\x22const OS = require(\x26apos;os\x26apos;);\nconst Cluster = require(\x26apos;cluster\x26apos;);\nconst Koa = require(\x26apos;koa\x26apos;);\nconst App = new Koa();\nif (Cluster.isMaster) {\n    for (let i = 0; i \x26lt; OS.cpus().length; i\x2b\x2b) Cluster.fork();\n    console.log(\x26apos;master\x26apos;, process.pid);\n} else {\n    App.listen(3000);\n    console.log(\x26apos;worker\x26apos;, process.pid);\n}\x22 title=\x22\x22 data-original-title=\x22\x26#x590D;\x26#x5236;\x22\x3e\x3c\/span\x3e \x3cspan type=\x22button\x22 class=\x22saveToNote code-tool\x22 data-toggle=\x22tooltip\x22 data-placement=\x22top\x22 title=\x22\x22 data-original-title=\x22\x26#x653E;\x26#x8FDB;\x26#x7B14;\x26#x8BB0;\x22\x3e\x3c\/span\x3e\x3c\/div\x3e\x3c\/div\x3e\x3cpre class=\x22javascript hljs\x22\x3e\x3ccode class=\x22js\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e OS = \x3cspan class=\x22hljs-built_in\x22\x3erequire\x3c\/span\x3e(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;os\x26apos;\x3c\/span\x3e);\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e Cluster = \x3cspan class=\x22hljs-built_in\x22\x3erequire\x3c\/span\x3e(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;cluster\x26apos;\x3c\/span\x3e);\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e Koa = \x3cspan class=\x22hljs-built_in\x22\x3erequire\x3c\/span\x3e(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;koa\x26apos;\x3c\/span\x3e);\n\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e App = \x3cspan class=\x22hljs-keyword\x22\x3enew\x3c\/span\x3e Koa();\n\x3cspan class=\x22hljs-keyword\x22\x3eif\x3c\/span\x3e (Cluster.isMaster) {\n    \x3cspan class=\x22hljs-keyword\x22\x3efor\x3c\/span\x3e (\x3cspan class=\x22hljs-keyword\x22\x3elet\x3c\/span\x3e i = \x3cspan class=\x22hljs-number\x22\x3e0\x3c\/span\x3e; i \x26lt; OS.cpus().length; i\x2b\x2b) Cluster.fork();\n    \x3cspan class=\x22hljs-built_in\x22\x3econsole\x3c\/span\x3e.log(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;master\x26apos;\x3c\/span\x3e, process.pid);\n} \x3cspan class=\x22hljs-keyword\x22\x3eelse\x3c\/span\x3e {\n    App.listen(\x3cspan class=\x22hljs-number\x22\x3e3000\x3c\/span\x3e);\n    \x3cspan class=\x22hljs-built_in\x22\x3econsole\x3c\/span\x3e.log(\x3cspan class=\x22hljs-string\x22\x3e\x26apos;worker\x26apos;\x3c\/span\x3e, process.pid);\n}\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e\x26#x7AEF;\x26#x53E3; PID \x26#x4E0E;\x26#x63A7;\x26#x5236;\x26#x53F0;\x26#x663E;\x26#x793A;\x26#x7684; PID List \x26#x5173;\x26#x7CFB;\x26#xFF1A;\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000016127579?w=247\x26amp;h=391\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016127579?w=247\x26amp;h=391\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000016127580?w=1163\x26amp;h=121\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016127580?w=1163\x26amp;h=121\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3cp\x3e\x26#x4F7F;\x26#x7528; PM2 Cluster \x26#x542F;\x26#x52A8; Node \x26#x5E94;\x26#x7528;\x26#xFF0C;\x26#x7AEF;\x26#x53E3; PID \x26#x4E0E; PM2 \x26#x63A7;\x26#x5236;\x26#x53F0;\x26#x663E;\x26#x793A;\x26#x7684; PID List \x26#x5173;\x26#x7CFB;\x26#xFF1A;\x3c\/p\x3e\x3cp\x3e\x3cspan class=\x22img-wrap\x22\x3e\x3cimg data-src=\x22\/img\/remote\/1460000016127581?w=749\x26amp;h=399\x22 src=\x22https:\/\/static.alili.tech\/img\/remote\/1460000016127581?w=749\x26amp;h=399\x22 alt=\x22\x22 title=\x22\x22 style=\x22cursor:pointer;display:inline\x22\x3e\x3c\/span\x3e\x3c\/p\x3e\x3chr\x3e\x3cp\x3e\x26#x4F5C;\x26#x8005;\x26#xFF1A;\x26#x5446;\x26#x604B;\x26#x5C0F;\x26#x55B5;\x3c\/p\x3e\x3cp\x3e\x26#x6211;\x26#x7684;\x26#x540E;\x26#x82B1;\x26#x56ED;\x26#xFF1A;\x3ca href=\x22https:\/\/sunmengyuan.github.io\/garden\/\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/sunmengyuan.github.io...\x3c\/a\x3e\x3c\/p\x3e\x3cp\x3e\x26#x6211;\x26#x7684; github\x26#xFF1A;\x3ca href=\x22https:\/\/github.com\/sunmengyuan\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/github.com\/sunmengyuan\x3c\/a\x3e\x3c\/p\x3e\x3cp\x3e\x26#x539F;\x26#x6587;\x26#x94FE;\x26#x63A5;\x26#xFF1A;\x3ca href=\x22https:\/\/sunmengyuan.github.io\/garden\/2018\/08\/23\/cluster-log.html\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/sunmengyuan.github.io...\x3c\/a\x3e\x3c\/p\x3e\n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/dce0b689/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/6efcfba3/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/33beabf8/&text=探索 PM2 Cluster 模式下 Log4js 日志丢失"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/33beabf8/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/33beabf8/&text=探索 PM2 Cluster 模式下 Log4js 日志丢失"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/33beabf8/&title=探索 PM2 Cluster 模式下 Log4js 日志丢失"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/33beabf8/&is_video=false&description=探索 PM2 Cluster 模式下 Log4js 日志丢失"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=探索 PM2 Cluster 模式下 Log4js 日志丢失&body=Check out this article: https://alili.tech/archive/33beabf8/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/33beabf8/&title=探索 PM2 Cluster 模式下 Log4js 日志丢失"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/33beabf8/&title=探索 PM2 Cluster 模式下 Log4js 日志丢失"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/33beabf8/&title=探索 PM2 Cluster 模式下 Log4js 日志丢失"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/33beabf8/&title=探索 PM2 Cluster 模式下 Log4js 日志丢失"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">1.</span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">1.2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol></li></ol>
-    </div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        探索 PM2 Cluster 模式下 Log4js 日志丢失
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-10-25T18:30:12.000Z" itemprop="datePublished">2018-10-26</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <p>Node &#x5E94;&#x7528;&#x4E3A;&#x5355;&#x7EBF;&#x7A0B;&#x5E94;&#x7528;&#xFF0C;JS &#x867D;&#x53EF;&#x5229;&#x7528;&#x5F02;&#x6B65; I/O &#x907F;&#x514D;&#x7EBF;&#x7A0B;&#x963B;&#x585E;&#xFF0C;&#x4F46;&#x65E0;&#x6CD5;&#x5229;&#x7528;&#x591A;&#x6838; CPU &#x7684;&#x4F18;&#x52BF;&#x63D0;&#x5347;&#x8FD0;&#x884C;&#x6548;&#x7387;&#xFF0C;&#x63D0;&#x9AD8;&#x541E;&#x5410;&#x91CF;&#x4ECD;&#x9700;&#x591A;&#x7EBF;&#x7A0B;&#x3002;Node Cluster &#x53EF;&#x4EA7;&#x751F;&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x540C;&#x4E00; TCP &#x8FDE;&#x63A5;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x901A;&#x8FC7; IPC &#x901A;&#x9053;&#x4E0E;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x901A;&#x8BAF;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <a href="https://en.wikipedia.org/wiki/Round-robin_scheduling" rel="nofollow noreferrer" target="_blank">Round-robin</a> &#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x6781;&#x597D;&#x7684;&#x5904;&#x7406;&#x7EBF;&#x7A0B;&#x95F4;&#x538B;&#x529B;&#x3002;</p><p>PM2 Cluster &#x4F7F;&#x5F97; Node &#x64CD;&#x4F5C;&#x96C6;&#x7FA4;&#x66F4;&#x52A0;&#x5BB9;&#x6613;&#xFF0C;PM2 &#x4F1A;&#x6839;&#x636E;&#x670D;&#x52A1;&#x5668; CPU &#x6838;&#x6570;&#x4EA7;&#x751F;&#x76F8;&#x5E94;&#x7684;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#xFF0C;&#x53EA;&#x9700;&#x6309;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x542F;&#x52A8;&#x5E94;&#x7528;&#xFF1A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="pm2 start app.js -i 0" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="bash hljs"><code class="bash" style="word-break:break-word;white-space:initial">pm2 start app.js -i 0</code></pre><p><span class="img-wrap"><img data-src="/img/remote/1460000016127577?w=1409&amp;h=401" src="https://static.alili.tech/img/remote/1460000016127577?w=1409&amp;h=401" alt="" title="" style="cursor:pointer;display:inline"></span></p><p>&#x4F46; PM2 Cluster &#x4E0E; Log4js &#x76F8;&#x649E;&#x65F6;&#xFF0C;&#x7838;&#x51FA;&#x4E86;&#x5927;&#x5751;&#xFF0C;&#x672C;&#x4EBA;&#x8E29;&#x4E86;&#x8FDB;&#x53BB;&#x3002;</p><p>&#x8E29;&#x5751;&#x7ECF;&#x8FC7;&#xFF1A;&#x67D0;&#x65E5;&#x670D;&#x52A1;&#x7AEF;&#x540C;&#x5B66;&#x4E0A;&#x62A5;&#x4E86;&#x4E00;&#x7EBF;&#x4E0A;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x5F02;&#x5E38;&#x65E5;&#x5FD7;&#xFF0C;&#x4E3A;&#x8FFD;&#x8E2A;&#x5F02;&#x5E38;&#x4EA7;&#x751F;&#x539F;&#x56E0;&#xFF0C;&#x6211;&#x5728;&#x6240;&#x6709;&#x7EBF;&#x4E0A;&#x670D;&#x52A1;&#x5668;&#x7FFB;&#x67E5;&#x5747;&#x672A;&#x5BFB;&#x5230;&#x76F8;&#x5173;&#x65E5;&#x5FD7;&#x3002;&#x670D;&#x52A1;&#x7AEF;&#x5F02;&#x5E38;&#x65E5;&#x5FD7;&#x5E76;&#x975E;&#x634F;&#x9020;&#xFF0C;&#x524D;&#x7AEF;&#x65E5;&#x5FD7;&#x4E22;&#x5931;&#x5E76;&#x975E;&#x5076;&#x7136;&#x3002;&#x4E3A;&#x7EDF;&#x8BA1;&#x65E5;&#x5FD7;&#x4E22;&#x5931;&#x7387;&#xFF0C;&#x5728;&#x7EBF;&#x4E0B;&#x73AF;&#x5883;&#x5B9A;&#x91CF;&#x53D1;&#x8D77; 100 &#x6761;&#x8BF7;&#x6C42;&#xFF0C;&#x7ED3;&#x679C;&#x4EC5;&#x4EA7;&#x751F; 25 &#x6761;&#x65E5;&#x5FD7;&#xFF0C;&#x591A;&#x6B21;&#x5B9E;&#x9A8C;&#x53D1;&#x73B0;&#x4E22;&#x5931;&#x7387;&#x7A33;&#x5B9A;&#x5728; 3/4 &#x4EE4;&#x4EBA;&#x53D1;&#x6307;&#xFF01;&#x70ED;&#xFF08;&#x597D;&#xFF09;&#x7231;&#xFF08;&#x5947;&#xFF09;&#x6280;&#xFF08;&#x5FC3;&#xFF09;&#x672F;&#xFF08;&#x91CD;&#xFF09;&#x7684;&#x6211;&#x67E5;&#x9605;&#x4E86; Log4js &#x6E90;&#x7801;&#xFF1A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="configuration.addListener((config) =&gt; {
-    // clear out the listeners, because configure has been called.
-    listeners.length = 0;
-
-    disabled = config.disableClustering;
-    pm2 = config.pm2;
-    pm2InstanceVar = config.pm2InstanceVar || &apos;NODE_APP_INSTANCE&apos;;
-
-    debug(`clustering disabled ? ${disabled}`);
-    debug(`cluster.isMaster ? ${cluster.isMaster}`);
-    debug(`pm2 enabled ? ${pm2}`);
-    debug(`pm2InstanceVar = ${pm2InstanceVar}`);
-    debug(`process.env[${pm2InstanceVar}] = ${process.env[pm2InstanceVar]}`);
-
-    // just in case configure is called after shutdown.
-    if (pm2) {
-        process.removeListener(&apos;message&apos;, receiver);
-    }
-    if (cluster.removeListener) {
-        cluster.removeListener(&apos;message&apos;, receiver);
-    }
-
-    if (config.disableClustering) {
-        debug(&apos;Not listening for cluster messages, because clustering disabled.&apos;);
-    } else if (isPM2Master()) {
-        // PM2 cluster support
-        // PM2 runs everything as workers - install pm2-intercom for this to work.
-        // we only want one of the app instances to write logs.
-        debug(&apos;listening for PM2 broadcast messages&apos;);
-        process.on(&apos;message&apos;, receiver);
-    } else if (cluster.isMaster) {
-        debug(&apos;listening for cluster messages&apos;);
-        cluster.on(&apos;message&apos;, receiver);
-    } else {
-        debug(&apos;not listening for messages, because we are not a master process.&apos;);
-    }
-});" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="javascript hljs"><code class="js">configuration.addListener(<span class="hljs-function">(<span class="hljs-params">config</span>) =&gt;</span> {
-    <span class="hljs-comment">// clear out the listeners, because configure has been called.</span>
-    listeners.length = <span class="hljs-number">0</span>;
-
-    disabled = config.disableClustering;
-    pm2 = config.pm2;
-    pm2InstanceVar = config.pm2InstanceVar || <span class="hljs-string">&apos;NODE_APP_INSTANCE&apos;</span>;
-
-    debug(<span class="hljs-string">`clustering disabled ? <span class="hljs-subst">${disabled}</span>`</span>);
-    debug(<span class="hljs-string">`cluster.isMaster ? <span class="hljs-subst">${cluster.isMaster}</span>`</span>);
-    debug(<span class="hljs-string">`pm2 enabled ? <span class="hljs-subst">${pm2}</span>`</span>);
-    debug(<span class="hljs-string">`pm2InstanceVar = <span class="hljs-subst">${pm2InstanceVar}</span>`</span>);
-    debug(<span class="hljs-string">`process.env[<span class="hljs-subst">${pm2InstanceVar}</span>] = <span class="hljs-subst">${process.env[pm2InstanceVar]}</span>`</span>);
-
-    <span class="hljs-comment">// just in case configure is called after shutdown.</span>
-    <span class="hljs-keyword">if</span> (pm2) {
-        process.removeListener(<span class="hljs-string">&apos;message&apos;</span>, receiver);
-    }
-    <span class="hljs-keyword">if</span> (cluster.removeListener) {
-        cluster.removeListener(<span class="hljs-string">&apos;message&apos;</span>, receiver);
-    }
-
-    <span class="hljs-keyword">if</span> (config.disableClustering) {
-        debug(<span class="hljs-string">&apos;Not listening for cluster messages, because clustering disabled.&apos;</span>);
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPM2Master()) {
-        <span class="hljs-comment">// PM2 cluster support</span>
-        <span class="hljs-comment">// PM2 runs everything as workers - install pm2-intercom for this to work.</span>
-        <span class="hljs-comment">// we only want one of the app instances to write logs.</span>
-        debug(<span class="hljs-string">&apos;listening for PM2 broadcast messages&apos;</span>);
-        process.on(<span class="hljs-string">&apos;message&apos;</span>, receiver);
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (cluster.isMaster) {
-        debug(<span class="hljs-string">&apos;listening for cluster messages&apos;</span>);
-        cluster.on(<span class="hljs-string">&apos;message&apos;</span>, receiver);
-    } <span class="hljs-keyword">else</span> {
-        debug(<span class="hljs-string">&apos;not listening for messages, because we are not a master process.&apos;</span>);
-    }
-});</code></pre><p>&#x8BF7;&#x6CE8;&#x610F;&#xFF1A;</p><blockquote>PM2 runs everything as workers - install pm2-intercom for this to work.</blockquote><p>Log4js &#x5728; Cluster &#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;worker &#x5C06;&#x65E5;&#x5FD7;&#x53D1;&#x9001;&#x81F3; master&#xFF0C;master &#x5B9E;&#x73B0;&#x65E5;&#x5FD7;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x3002;&#x4F46;&#x5728; PM2 Cluster &#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x7686;&#x4E3A; worker&#xFF1A;</p><p><span class="img-wrap"><img data-src="/img/remote/1460000016127581?w=749&amp;h=399" src="https://static.alili.tech/img/remote/1460000016127581?w=749&amp;h=399" alt="" title="" style="cursor:pointer;display:inline"></span></p><p>&#x4E8E;&#x662F;&#x6309;&#x7167; Log4js &#x6E90;&#x7801;&#x7684;&#x6307;&#x5F15;&#x5B89;&#x88C5; pm2-intercom &#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x8BAF;&#x6A21;&#x5757;&#xFF1A;</p><p><span class="img-wrap"><img data-src="/img/remote/1460000016127578?w=1208&amp;h=207" src="https://static.alili.tech/img/remote/1460000016127578?w=1208&amp;h=207" alt="" title="" style="cursor:pointer;display:inline"></span></p><p>&#x4ECD;&#x4E0D;&#x594F;&#x6548;&#xFF0C;&#x53C8;&#x6CE8;&#x610F;&#x5230; isPM2Master()&#xFF1A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="const isPM2Master = () =&gt; pm2 &amp;&amp; process.env[pm2InstanceVar] === &apos;0&apos;;
-const isMaster = () =&gt; disabled || cluster.isMaster || isPM2Master();" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="javascript hljs"><code class="js"><span class="hljs-keyword">const</span> isPM2Master = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> pm2 &amp;&amp; process.env[pm2InstanceVar] === <span class="hljs-string">&apos;0&apos;</span>;
-<span class="hljs-keyword">const</span> isMaster = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> disabled || cluster.isMaster || isPM2Master();</code></pre><p>isPM2Master &#x901A;&#x8FC7; Log4js configure &#x4E2D; pm2 &#x53CA; pm2InstanceVar &#x53C2;&#x6570;&#x786E;&#x5B9A;&#xFF0C;&#x4E8E;&#x662F;&#x4FEE;&#x6539; Log4js &#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="Log4JS.configure({
-    // ...
-    pm2: true,
-    pm2InstanceVar: &apos;INSTANCE_ID&apos;
-});" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="javascript hljs"><code class="js">Log4JS.configure({
-    <span class="hljs-comment">// ...</span>
-    pm2: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">pm2InstanceVar</span>: <span class="hljs-string">&apos;INSTANCE_ID&apos;</span>
-});</code></pre><p>&#x7EC8;&#x4E8E;&#x89E3;&#x51B3;&#x4E86; PM2 Cluster &#x6A21;&#x5F0F;&#x4E0B; Log4js &#x65E5;&#x5FD7;&#x4E22;&#x5931;&#x95EE;&#x9898;&#x3002;</p><hr><p>&#x8865;&#x5145;&#x4E00;&#x4E0B;&#xFF1A;</p><p>&#x81EA;&#x884C;&#x5B9E;&#x73B0; Node Cluster&#xFF1A;</p><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="const OS = require(&apos;os&apos;);
-const Cluster = require(&apos;cluster&apos;);
-const Koa = require(&apos;koa&apos;);
-const App = new Koa();
-if (Cluster.isMaster) {
-    for (let i = 0; i &lt; OS.cpus().length; i++) Cluster.fork();
-    console.log(&apos;master&apos;, process.pid);
-} else {
-    App.listen(3000);
-    console.log(&apos;worker&apos;, process.pid);
-}" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="javascript hljs"><code class="js"><span class="hljs-keyword">const</span> OS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;os&apos;</span>);
-<span class="hljs-keyword">const</span> Cluster = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cluster&apos;</span>);
-<span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>);
-<span class="hljs-keyword">const</span> App = <span class="hljs-keyword">new</span> Koa();
-<span class="hljs-keyword">if</span> (Cluster.isMaster) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; OS.cpus().length; i++) Cluster.fork();
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;master&apos;</span>, process.pid);
-} <span class="hljs-keyword">else</span> {
-    App.listen(<span class="hljs-number">3000</span>);
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;worker&apos;</span>, process.pid);
-}</code></pre><p>&#x7AEF;&#x53E3; PID &#x4E0E;&#x63A7;&#x5236;&#x53F0;&#x663E;&#x793A;&#x7684; PID List &#x5173;&#x7CFB;&#xFF1A;</p><p><span class="img-wrap"><img data-src="/img/remote/1460000016127579?w=247&amp;h=391" src="https://static.alili.tech/img/remote/1460000016127579?w=247&amp;h=391" alt="" title="" style="cursor:pointer;display:inline"></span></p><p><span class="img-wrap"><img data-src="/img/remote/1460000016127580?w=1163&amp;h=121" src="https://static.alili.tech/img/remote/1460000016127580?w=1163&amp;h=121" alt="" title="" style="cursor:pointer;display:inline"></span></p><p>&#x4F7F;&#x7528; PM2 Cluster &#x542F;&#x52A8; Node &#x5E94;&#x7528;&#xFF0C;&#x7AEF;&#x53E3; PID &#x4E0E; PM2 &#x63A7;&#x5236;&#x53F0;&#x663E;&#x793A;&#x7684; PID List &#x5173;&#x7CFB;&#xFF1A;</p><p><span class="img-wrap"><img data-src="/img/remote/1460000016127581?w=749&amp;h=399" src="https://static.alili.tech/img/remote/1460000016127581?w=749&amp;h=399" alt="" title="" style="cursor:pointer;display:inline"></span></p><hr><p>&#x4F5C;&#x8005;&#xFF1A;&#x5446;&#x604B;&#x5C0F;&#x55B5;</p><p>&#x6211;&#x7684;&#x540E;&#x82B1;&#x56ED;&#xFF1A;<a href="https://sunmengyuan.github.io/garden/" rel="nofollow noreferrer" target="_blank">https://sunmengyuan.github.io...</a></p><p>&#x6211;&#x7684; github&#xFF1A;<a href="https://github.com/sunmengyuan" rel="nofollow noreferrer" target="_blank">https://github.com/sunmengyuan</a></p><p>&#x539F;&#x6587;&#x94FE;&#x63A5;&#xFF1A;<a href="https://sunmengyuan.github.io/garden/2018/08/23/cluster-log.html" rel="nofollow noreferrer" target="_blank">https://sunmengyuan.github.io...</a></p>
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<h2 id="原文标题"><a href="#原文标题" class="headerlink" title="原文标题"></a>原文标题</h2><p>探索 PM2 Cluster 模式下 Log4js 日志丢失</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://segmentfault.com/a/1190000016127574" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016127574</a></p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/33beabf8/">https://alili.tech/archive/33beabf8/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2 id="原文标题">原文标题</h2><p>探索 PM2 Cluster 模式下 Log4js 日志丢失</p><h2 id="原文链接">原文链接</h2><p><a href="https://segmentfault.com/a/1190000016127574">https://segmentfault.com/a/1190000016127574</a></p><h2>本文链接：</h2><a href="https://alili.tech/archive/33beabf8/" target="_blank">https://alili.tech/archive/33beabf8/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">1.</span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">1.2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol></li></ol>
-    </div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

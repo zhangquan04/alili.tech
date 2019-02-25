@@ -1,305 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="&amp;#x4E3A;&amp;#x4F55;&amp;#x5199;&amp;#x4F5C;&amp;#x6B64;&amp;#x8BFE;&amp;#x7A0B;stone &amp;#x4E3B;&amp;#x8981;&amp;#x8D1F;&amp;#x8D23;&amp;#x57FA;&amp;#x4E8E; Web &amp;#x7684;&amp;#x4F01;&amp;#x4E1A;&amp;#x5185;&amp;#x90E8;&amp;#x7BA1;&amp;#x7406;&amp;#x7CFB;&amp;#x7EDF;&amp;#x7684;&amp;#x5F">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="《JavaScript 闯关记》">
-<meta property="og:url" content="https://alili.tech/archive/a1c2684a/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="&amp;#x4E3A;&amp;#x4F55;&amp;#x5199;&amp;#x4F5C;&amp;#x6B64;&amp;#x8BFE;&amp;#x7A0B;stone &amp;#x4E3B;&amp;#x8981;&amp;#x8D1F;&amp;#x8D23;&amp;#x57FA;&amp;#x4E8E; Web &amp;#x7684;&amp;#x4F01;&amp;#x4E1A;&amp;#x5185;&amp;#x90E8;&amp;#x7BA1;&amp;#x7406;&amp;#x7CFB;&amp;#x7EDF;&amp;#x7684;&amp;#x5F">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-25T01:13:52.037Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《JavaScript 闯关记》">
-<meta name="twitter:description" content="&amp;#x4E3A;&amp;#x4F55;&amp;#x5199;&amp;#x4F5C;&amp;#x6B64;&amp;#x8BFE;&amp;#x7A0B;stone &amp;#x4E3B;&amp;#x8981;&amp;#x8D1F;&amp;#x8D23;&amp;#x57FA;&amp;#x4E8E; Web &amp;#x7684;&amp;#x4F01;&amp;#x4E1A;&amp;#x5185;&amp;#x90E8;&amp;#x7BA1;&amp;#x7406;&amp;#x7CFB;&amp;#x7EDF;&amp;#x7684;&amp;#x5F">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>《JavaScript 闯关记》 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/a1c2684a/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/a1c2684a/",
-      "appid": "1613049289050283", 
-      "title": "《JavaScript 闯关记》 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:45"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="《JavaScript 闯关记》"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>《JavaScript 闯关记》 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/a1c2684a/",
+				"appid": "1613049289050283", 
+				"title": "《JavaScript 闯关记》 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-10-25T09:08:15"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/7a3516ab/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/b846fef3/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2fa1c2684a%2f&text=%e3%80%8aJavaScript%20%e9%97%af%e5%85%b3%e8%ae%b0%e3%80%8b"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2fa1c2684a%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2fa1c2684a%2f&text=%e3%80%8aJavaScript%20%e9%97%af%e5%85%b3%e8%ae%b0%e3%80%8b"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2fa1c2684a%2f&title=%e3%80%8aJavaScript%20%e9%97%af%e5%85%b3%e8%ae%b0%e3%80%8b"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2fa1c2684a%2f&is_video=false&description=%e3%80%8aJavaScript%20%e9%97%af%e5%85%b3%e8%ae%b0%e3%80%8b"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%e3%80%8aJavaScript%20%e9%97%af%e5%85%b3%e8%ae%b0%e3%80%8b&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2fa1c2684a%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2fa1c2684a%2f&title=%e3%80%8aJavaScript%20%e9%97%af%e5%85%b3%e8%ae%b0%e3%80%8b"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fa1c2684a%2f&title=%e3%80%8aJavaScript%20%e9%97%af%e5%85%b3%e8%ae%b0%e3%80%8b"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fa1c2684a%2f&title=%e3%80%8aJavaScript%20%e9%97%af%e5%85%b3%e8%ae%b0%e3%80%8b"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fa1c2684a%2f&title=%e3%80%8aJavaScript%20%e9%97%af%e5%85%b3%e8%ae%b0%e3%80%8b"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a><ul><li><a href="#原文标题">原文标题</a></li><li><a href="#原文链接">原文链接</a></li></ul></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">《JavaScript 闯关记》</h1><div class="meta"><div class="postdate"><time datetime="2018-10-25" itemprop="datePublished">2018-10-25</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\x3ch2 id=\x22articleHeader0\x22\x3e\x26#x4E3A;\x26#x4F55;\x26#x5199;\x26#x4F5C;\x26#x6B64;\x26#x8BFE;\x26#x7A0B;\x3c\/h2\x3e\x3cp\x3e\x3ca href=\x22http:\/\/shijiajie.com\/about\/\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3estone\x3c\/a\x3e \x26#x4E3B;\x26#x8981;\x26#x8D1F;\x26#x8D23;\x26#x57FA;\x26#x4E8E; Web \x26#x7684;\x26#x4F01;\x26#x4E1A;\x26#x5185;\x26#x90E8;\x26#x7BA1;\x26#x7406;\x26#x7CFB;\x26#x7EDF;\x26#x7684;\x26#x5F00;\x26#x53D1;\x26#xFF0C;\x26#x867D;\x26#x7136;\x26#x80FD;\x26#x591F;\x26#x719F;\x26#x7EC3;\x26#x5730;\x26#x4F7F;\x26#x7528; JavaScript\x26#xFF0C;\x26#x4F46;\x26#x968F;\x26#x7740;\x26#x5BF9; JavaScript \x26#x7684;\x26#x7406;\x26#x89E3;\x26#x8D8A;\x26#x6765;\x26#x8D8A;\x26#x6DF1;\x26#xFF0C;\x26#x624D;\x26#x53D1;\x26#x73B0;\x26#x81EA;\x26#x5DF1;\x26#x5C1A;\x26#x672A;\x26#x638C;\x26#x63E1;\x26#x5176;\x26#x7CBE;\x26#x9AD3;\x26#x3002;\x3c\/p\x3e\x3cp\x3e2015\x26#x5E74;\x26#xFF0C;\x26#x516C;\x26#x53F8;\x26#x8BF7;\x26#x6765; \x3ca href=\x22http:\/\/weibo.com\/zhihuijiang\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x5927;\x26#x80E1;\x26#x5B50;\x26#x59DC;\x26#x5FD7;\x26#x8F89;\x3c\/a\x3e \x26#x4E3A;\x26#x6211;\x26#x4EEC;\x26#x57F9;\x26#x8BAD; \x3ca href=\x22http:\/\/ibagsoft.github.io\/js_dota\/\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eJS Dota\x3c\/a\x3e \x26#x8BFE;\x26#x7A0B;\x26#xFF0C;\x26#x8BA9;\x26#x6211;\x26#x5BF9; JavaScript \x26#x6709;\x26#x4E86;\x26#x5168;\x26#x65B0;\x26#x7684;\x26#x8BA4;\x26#x8BC6;\x26#xFF0C;\x26#x4ED6;\x26#x4E00;\x26#x6B65;\x26#x6B65;\x26#x5F15;\x26#x5BFC;\x26#x6211;\x26#x4EEC;\x26#x624B;\x26#x5199; jQuery\x26#x3001;Backbone \x26#x7B49; JavaScript \x26#x4E3B;\x26#x6D41;\x26#x6846;\x26#x67B6;\x26#xFF0C;\x26#x66F4;\x26#x662F;\x26#x6FC0;\x26#x53D1;\x26#x4E86;\x26#x6211;\x26#x5BF9; JavaScript \x26#x6D53;\x26#x539A;\x26#x7684;\x26#x5174;\x26#x8DA3;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x4FD7;\x26#x8BDD;\x26#x8BF4;\x26#x300C;\x26#x6559;\x26#x662F;\x26#x6700;\x26#x597D;\x26#x7684;\x26#x5B66;\x26#x300D;\x26#xFF0C;\x26#x6211;\x26#x662F;\x26#x516C;\x26#x53F8;\x26#x7684;\x26#x517C;\x26#x804C;\x26#x6559;\x26#x5458;\x26#xFF0C;\x26#x6B63;\x26#x597D;\x26#x501F;\x26#x6B64;\x26#x673A;\x26#x4F1A;\x26#x68B3;\x26#x7406;\x26#x81EA;\x26#x5DF1; JavaScript \x26#x77E5;\x26#x8BC6;\x26#x4F53;\x26#x7CFB;\x26#xFF0C;\x26#x6DF1;\x26#x5165;\x26#x7814;\x26#x7A76;\x26#x6BCF;\x26#x4E2A;\x26#x77E5;\x26#x8BC6;\x26#x70B9;\x26#xFF0C;\x26#x6574;\x26#x7406;\x26#x6210;\x26#x57F9;\x26#x8BAD;\x26#x8BFE;\x26#x7A0B;\x26#x5206;\x26#x4EAB;\x26#x7ED9;\x26#x5927;\x26#x5BB6;\x26#x3002;\x3c\/p\x3e\x3cp\x3e\x26#x672C;\x26#x8BFE;\x26#x7A0B;\x26#x4E4B;\x26#x6240;\x26#x4EE5;\x26#x53EB;\x26#x505A;\x26#x300A;JavaScript \x26#x95EF;\x26#x5173;\x26#x8BB0;\x26#x300B;\x26#xFF0C;\x26#x662F;\x26#x56E0;\x26#x4E3A;\x26#x90E8;\x26#x5206;\x26#x7AE0;\x26#x8282;\x26#x7CBE;\x26#x5FC3;\x26#x8BBE;\x26#x8BA1;\x26#x4E86;\x26#x6311;\x26#x6218;\x26#x5173;\x26#x5361;\x26#xFF0C;\x26#x901A;\x26#x8FC7;\x26#x63D0;\x26#x4F9B;\x26#x66F4;\x26#x591A;\x26#x7684;\x26#x5B9E;\x26#x6218;\x26#x673A;\x26#x4F1A;\x26#xFF0C;\x26#x8BA9;\x26#x5927;\x26#x5BB6;\x26#x53EF;\x26#x4EE5;\x26#x5FAA;\x26#x5E8F;\x26#x6E10;\x26#x8FDB;\x26#x5730;\x26#x3001;\x26#x6709;\x26#x76EE;\x26#x7684;\x26#x5730;\x26#x3001;\x26#x6709;\x26#x6311;\x26#x6218;\x26#x5730;\x26#x5F00;\x26#x5C55;\x26#x5B66;\x26#x4E60;\x26#x3002;\x3c\/p\x3e\x3ch2 id=\x22articleHeader1\x22\x3e\x26#x8BFE;\x26#x7A0B;\x26#x7ED3;\x26#x6784;\x26#x53CA;\x26#x76EE;\x26#x5F55;\x3c\/h2\x3e\x3cblockquote\x3e\x3cp\x3e\x26#x4EE5;\x26#x4E0B;\x26#x76EE;\x26#x5F55;\x26#x53EA;\x26#x662F;\x26#x521D;\x26#x6B65;\x26#x6784;\x26#x60F3;\x26#xFF0C;\x26#x8BFE;\x26#x7A0B;\x26#x7ED3;\x26#x6784;\x26#x53CA;\x26#x5185;\x26#x5BB9;\x26#x4F1A;\x26#x6839;\x26#x636E;\x26#x5B9E;\x26#x9645;\x26#x60C5;\x26#x51B5;\x26#x968F;\x26#x65F6;\x26#x8FDB;\x26#x884C;\x26#x8C03;\x26#x6574;\x26#x3002;\x3c\/p\x3e\x3c\/blockquote\x3e\x3ch3 id=\x22articleHeader2\x22\x3e\x26#x521D;\x26#x7EA7;\x3c\/h3\x3e\x3cul\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.1-Introduction\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x7B80;\x26#x4ECB;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.2-FirstExploration\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x521D;\x26#x63A2;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.3-Syntax\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x8BED;\x26#x6CD5;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.4-Variable\x26amp;Types\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x53D8;\x26#x91CF;\x26#x548C;\x26#x6570;\x26#x636E;\x26#x7C7B;\x26#x578B;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.5-Expression\x26amp;Operators\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x8868;\x26#x8FBE;\x26#x5F0F;\x26#x548C;\x26#x8FD0;\x26#x7B97;\x26#x7B26;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.6-Statements\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x8BED;\x26#x53E5;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.7-ObjectObjects\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x5BF9;\x26#x8C61;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.8-ArrayObjects\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x6570;\x26#x7EC4;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.9-FunctionObjects\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x51FD;\x26#x6570;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.10-RegExpObjects\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x6B63;\x26#x5219;\x26#x8868;\x26#x8FBE;\x26#x5F0F;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.11-PrimitiveWrapperObjects\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x57FA;\x26#x672C;\x26#x5305;\x26#x88C5;\x26#x7C7B;\x26#x578B;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/1.12-SingletonBuiltInObjects\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x5355;\x26#x4F53;\x26#x5185;\x26#x7F6E;\x26#x5BF9;\x26#x8C61;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3c\/ul\x3e\x3ch3 id=\x22articleHeader3\x22\x3e\x26#x4E2D;\x26#x7EA7;\x3c\/h3\x3e\x3cul\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/2.1-BOM\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eBOM\x26#xFF08;\x26#x6D4F;\x26#x89C8;\x26#x5668;\x26#x5BF9;\x26#x8C61;\x26#x6A21;\x26#x578B;\x26#xFF09;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/2.2-DOM\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eDOM\x26#xFF08;\x26#x6587;\x26#x6863;\x26#x5BF9;\x26#x8C61;\x26#x6A21;\x26#x578B;\x26#xFF09;\x26#x4E0A;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/2.2-DOM\/README2.md\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eDOM\x26#xFF08;\x26#x6587;\x26#x6863;\x26#x5BF9;\x26#x8C61;\x26#x6A21;\x26#x578B;\x26#xFF09;\x26#x4E0B;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/2.3-Event\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x4E8B;\x26#x4EF6;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/2.4-Scope\x26amp;Closure\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x4F5C;\x26#x7528;\x26#x57DF;\x26#x548C;\x26#x95ED;\x26#x5305;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/2.5-Prototype\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x539F;\x26#x578B;\x26#x53CA;\x26#x539F;\x26#x578B;\x26#x94FE;\x3c\/a\x3e\x26#xFF08;\x26#x5DF2;\x26#x5B8C;\x26#x6210;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/2.9-Challenge\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x7EFC;\x26#x5408;\x26#x6311;\x26#x6218;\x3c\/a\x3e\x26#xFF08;\x26#x6301;\x26#x7EED;\x26#x66F4;\x26#x65B0;...\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3c\/ul\x3e\x3ch3 id=\x22articleHeader4\x22\x3e\x26#x5B9E;\x26#x8DF5;\x3c\/h3\x3e\x3cul\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\/tree\/master\/3.1-Tetris\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x4FC4;\x26#x7F57;\x26#x65AF;\x26#x65B9;\x26#x5757;\x26#x6E38;\x26#x620F;\x3c\/a\x3e\x26#xFF08;\x26#x6784;\x26#x601D;\x26#x4E2D;\x26#x2026;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x4FC4;\x26#x7F57;\x26#x65AF;\x26#x65B9;\x26#x5757;\x26#x6E38;\x26#x620F;\x26#xFF08;vue\x26#x7248;\x26#xFF09;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x624B;\x26#x5199;zepto.js\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x8FC7;\x26#x573A;\x26#x52A8;\x26#x753B;\x26#x6548;\x26#x679C;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x8868;\x26#x5355;\x26#x9A8C;\x26#x8BC1;\x26#x63D2;\x26#x4EF6;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x26#x5168;\x26#x5C4F;\x26#x6EDA;\x26#x52A8;\x26#x63D2;\x26#x4EF6;\x3c\/p\x3e\x3c\/li\x3e\x3cli\x3e\x3cp\x3e\x3ca href=\x22http:\/\/www.imooc.com\/view\/50\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3e\x26#x7F51;\x26#x7AD9;\x26#x6027;\x26#x80FD;\x26#x4F18;\x26#x5316;\x3c\/a\x3e\x3c\/p\x3e\x3c\/li\x3e\x3c\/ul\x3e\x3ch2 id=\x22articleHeader5\x22\x3e\x26#x8BFE;\x26#x7A0B;\x26#x5185;\x26#x5BB9;\x26#x6765;\x26#x6E90;\x3c\/h2\x3e\x3cp\x3e\x26#x672C;\x26#x8BFE;\x26#x7A0B;\x26#x5185;\x26#x5BB9;\x26#x4E3B;\x26#x8981;\x26#x57FA;\x26#x4E8E;\x26#x4EE5;\x26#x4E0B;\x26#x4E66;\x26#x7C4D;\x26#x6574;\x26#x7406;\x26#xFF0C;\x26#x5982;\x26#x9700;\x26#x4E86;\x26#x89E3;\x26#x66F4;\x26#x591A;\x26#x7EC6;\x26#x8282;\x26#xFF0C;\x26#x53EF;\x26#x81EA;\x26#x884C;\x26#x67E5;\x26#x9605;\x26#x539F;\x26#x8457;\x26#x3002;\x3c\/p\x3e\x3cblockquote\x3e\x3cp\x3e\x26#x300A;\x26#x7F16;\x26#x5199;\x26#x53EF;\x26#x7EF4;\x26#x62A4;\x26#x7684; JavaScript\x26#x300B;\x3cbr\x3e\x3ca href=\x22https:\/\/book.douban.com\/subject\/21792530\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/book.douban.com\/subje...\x3c\/a\x3e\x3c\/p\x3e\x3cp\x3e\x26#x300A;JavaScript \x26#x8BED;\x26#x8A00;\x26#x7CBE;\x26#x7CB9;\x26#x300B;\x3cbr\x3e\x3ca href=\x22https:\/\/book.douban.com\/subject\/3590768\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/book.douban.com\/subje...\x3c\/a\x3e\x3c\/p\x3e\x3cp\x3e\x26#x300A;JavaScript DOM \x26#x7F16;\x26#x7A0B;\x26#x827A;\x26#x672F;\x26#x300B;\x3cbr\x3e\x3ca href=\x22https:\/\/book.douban.com\/subject\/6038371\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/book.douban.com\/subje...\x3c\/a\x3e\x3c\/p\x3e\x3cp\x3e\x26#x300A;JavaScript \x26#x6743;\x26#x5A01;\x26#x6307;\x26#x5357;(\x26#x7B2C;6\x26#x7248;)\x26#x300B;\x3cbr\x3e\x3ca href=\x22https:\/\/book.douban.com\/subject\/10549733\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/book.douban.com\/subje...\x3c\/a\x3e\x3c\/p\x3e\x3cp\x3e\x26#x300A;JavaScript \x26#x9AD8;\x26#x7EA7;\x26#x7A0B;\x26#x5E8F;\x26#x8BBE;\x26#x8BA1;(\x26#x7B2C;3\x26#x7248;)\x26#x300B;\x3cbr\x3e\x3ca href=\x22https:\/\/book.douban.com\/subject\/10546125\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/book.douban.com\/subje...\x3c\/a\x3e\x3c\/p\x3e\x3c\/blockquote\x3e\x3ch2 id=\x22articleHeader6\x22\x3e\x26#x52D8;\x26#x8BEF;\x26#x53CA;\x26#x63D0;\x26#x95EE;\x3c\/h2\x3e\x3cp\x3e\x26#x5982;\x26#x679C;\x26#x60A8;\x26#x5728;\x26#x5B66;\x26#x4E60;\x26#x672C;\x26#x8BFE;\x26#x7A0B;\x26#x65F6;\x26#x53D1;\x26#x73B0;\x26#x9519;\x26#x8BEF;\x26#xFF0C;\x26#x6216;\x26#x8005;\x26#x60F3;\x26#x63D0;\x26#x5173;\x26#x4E8E;\x26#x672C;\x26#x8BFE;\x26#x7A0B;\x26#x7684;\x26#x6280;\x26#x672F;\x26#x95EE;\x26#x9898;\x26#xFF0C;\x26#x53EF;\x26#x4EE5;\x26#x901A;\x26#x8FC7;\x26#x4EE5;\x26#x4E0B;\x26#x65B9;\x26#x5F0F;\x26#x8054;\x26#x7CFB;\x26#x6211;\x26#x3002;\x3c\/p\x3e\x3cblockquote\x3e\x3cp\x3e\x26#x5FAE;\x26#x4FE1;\x26#x516C;\x26#x4F17;\x26#x53F7;\x26#xFF1A;\x26#x52BC;\x26#x54E5;\x26#x820D;\x3cbr\x3eEmail\x26#xFF1A;stone0090\x3ca href=\x22\/u\/hotmail\x22\x3e@hotmail\x3c\/a\x3e .com\x3cbr\x3e\x26#x5FAE;\x26#x535A;\x26#xFF1A;\x3ca href=\x22http:\/\/weibo.com\/stone0090\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttp:\/\/weibo.com\/stone0090\x3c\/a\x3e\x3c\/p\x3e\x3c\/blockquote\x3e\x3cp\x3e\x26#x60A8;\x26#x8FD8;\x26#x53EF;\x26#x4EE5;\x26#x5728; \x3ca href=\x22https:\/\/github.com\/\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eGitHub\x3c\/a\x3e \x26#x4E0A; \x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3eStar\x3c\/a\x3e \x26#x8BE5;\x26#x8BFE;\x26#x7A0B;\x26#xFF0C;\x26#x83B7;\x26#x53D6;\x26#x6700;\x26#x65B0;\x26#x5185;\x26#x5BB9;\x26#x3002;\x3c\/p\x3e\x3cblockquote\x3e\x3cp\x3e\x3ca href=\x22https:\/\/github.com\/stone0090\/javascript-lessons\x22 rel=\x22nofollow noreferrer\x22 target=\x22_blank\x22\x3ehttps:\/\/github.com\/stone0090\/...\x3c\/a\x3e\x3c\/p\x3e\x3c\/blockquote\x3e\n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/87da424a/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/26c697c9/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/a1c2684a/&text=《JavaScript 闯关记》"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/a1c2684a/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/a1c2684a/&text=《JavaScript 闯关记》"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/a1c2684a/&title=《JavaScript 闯关记》"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/a1c2684a/&is_video=false&description=《JavaScript 闯关记》"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=《JavaScript 闯关记》&body=Check out this article: https://alili.tech/archive/a1c2684a/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/a1c2684a/&title=《JavaScript 闯关记》"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/a1c2684a/&title=《JavaScript 闯关记》"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/a1c2684a/&title=《JavaScript 闯关记》"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/a1c2684a/&title=《JavaScript 闯关记》"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">为何写作此课程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">课程结构及目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader2"><span class="toc-number">2.1.</span> <span class="toc-text">初级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-number">2.2.</span> <span class="toc-text">中级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader4"><span class="toc-number">2.3.</span> <span class="toc-text">实践</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">3.</span> <span class="toc-text">课程内容来源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader6"><span class="toc-number">4.</span> <span class="toc-text">勘误及提问</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        《JavaScript 闯关记》
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-10-25T01:08:15.000Z" itemprop="datePublished">2018-10-25</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <h2 id="articleHeader0">&#x4E3A;&#x4F55;&#x5199;&#x4F5C;&#x6B64;&#x8BFE;&#x7A0B;</h2><p><a href="http://shijiajie.com/about/" rel="nofollow noreferrer" target="_blank">stone</a> &#x4E3B;&#x8981;&#x8D1F;&#x8D23;&#x57FA;&#x4E8E; Web &#x7684;&#x4F01;&#x4E1A;&#x5185;&#x90E8;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x7684;&#x5F00;&#x53D1;&#xFF0C;&#x867D;&#x7136;&#x80FD;&#x591F;&#x719F;&#x7EC3;&#x5730;&#x4F7F;&#x7528; JavaScript&#xFF0C;&#x4F46;&#x968F;&#x7740;&#x5BF9; JavaScript &#x7684;&#x7406;&#x89E3;&#x8D8A;&#x6765;&#x8D8A;&#x6DF1;&#xFF0C;&#x624D;&#x53D1;&#x73B0;&#x81EA;&#x5DF1;&#x5C1A;&#x672A;&#x638C;&#x63E1;&#x5176;&#x7CBE;&#x9AD3;&#x3002;</p><p>2015&#x5E74;&#xFF0C;&#x516C;&#x53F8;&#x8BF7;&#x6765; <a href="http://weibo.com/zhihuijiang" rel="nofollow noreferrer" target="_blank">&#x5927;&#x80E1;&#x5B50;&#x59DC;&#x5FD7;&#x8F89;</a> &#x4E3A;&#x6211;&#x4EEC;&#x57F9;&#x8BAD; <a href="http://ibagsoft.github.io/js_dota/" rel="nofollow noreferrer" target="_blank">JS Dota</a> &#x8BFE;&#x7A0B;&#xFF0C;&#x8BA9;&#x6211;&#x5BF9; JavaScript &#x6709;&#x4E86;&#x5168;&#x65B0;&#x7684;&#x8BA4;&#x8BC6;&#xFF0C;&#x4ED6;&#x4E00;&#x6B65;&#x6B65;&#x5F15;&#x5BFC;&#x6211;&#x4EEC;&#x624B;&#x5199; jQuery&#x3001;Backbone &#x7B49; JavaScript &#x4E3B;&#x6D41;&#x6846;&#x67B6;&#xFF0C;&#x66F4;&#x662F;&#x6FC0;&#x53D1;&#x4E86;&#x6211;&#x5BF9; JavaScript &#x6D53;&#x539A;&#x7684;&#x5174;&#x8DA3;&#x3002;</p><p>&#x4FD7;&#x8BDD;&#x8BF4;&#x300C;&#x6559;&#x662F;&#x6700;&#x597D;&#x7684;&#x5B66;&#x300D;&#xFF0C;&#x6211;&#x662F;&#x516C;&#x53F8;&#x7684;&#x517C;&#x804C;&#x6559;&#x5458;&#xFF0C;&#x6B63;&#x597D;&#x501F;&#x6B64;&#x673A;&#x4F1A;&#x68B3;&#x7406;&#x81EA;&#x5DF1; JavaScript &#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#xFF0C;&#x6DF1;&#x5165;&#x7814;&#x7A76;&#x6BCF;&#x4E2A;&#x77E5;&#x8BC6;&#x70B9;&#xFF0C;&#x6574;&#x7406;&#x6210;&#x57F9;&#x8BAD;&#x8BFE;&#x7A0B;&#x5206;&#x4EAB;&#x7ED9;&#x5927;&#x5BB6;&#x3002;</p><p>&#x672C;&#x8BFE;&#x7A0B;&#x4E4B;&#x6240;&#x4EE5;&#x53EB;&#x505A;&#x300A;JavaScript &#x95EF;&#x5173;&#x8BB0;&#x300B;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x90E8;&#x5206;&#x7AE0;&#x8282;&#x7CBE;&#x5FC3;&#x8BBE;&#x8BA1;&#x4E86;&#x6311;&#x6218;&#x5173;&#x5361;&#xFF0C;&#x901A;&#x8FC7;&#x63D0;&#x4F9B;&#x66F4;&#x591A;&#x7684;&#x5B9E;&#x6218;&#x673A;&#x4F1A;&#xFF0C;&#x8BA9;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x5FAA;&#x5E8F;&#x6E10;&#x8FDB;&#x5730;&#x3001;&#x6709;&#x76EE;&#x7684;&#x5730;&#x3001;&#x6709;&#x6311;&#x6218;&#x5730;&#x5F00;&#x5C55;&#x5B66;&#x4E60;&#x3002;</p><h2 id="articleHeader1">&#x8BFE;&#x7A0B;&#x7ED3;&#x6784;&#x53CA;&#x76EE;&#x5F55;</h2><blockquote><p>&#x4EE5;&#x4E0B;&#x76EE;&#x5F55;&#x53EA;&#x662F;&#x521D;&#x6B65;&#x6784;&#x60F3;&#xFF0C;&#x8BFE;&#x7A0B;&#x7ED3;&#x6784;&#x53CA;&#x5185;&#x5BB9;&#x4F1A;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x968F;&#x65F6;&#x8FDB;&#x884C;&#x8C03;&#x6574;&#x3002;</p></blockquote><h3 id="articleHeader2">&#x521D;&#x7EA7;</h3><ul><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.1-Introduction" rel="nofollow noreferrer" target="_blank">&#x7B80;&#x4ECB;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.2-FirstExploration" rel="nofollow noreferrer" target="_blank">&#x521D;&#x63A2;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.3-Syntax" rel="nofollow noreferrer" target="_blank">&#x8BED;&#x6CD5;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.4-Variable&amp;Types" rel="nofollow noreferrer" target="_blank">&#x53D8;&#x91CF;&#x548C;&#x6570;&#x636E;&#x7C7B;&#x578B;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.5-Expression&amp;Operators" rel="nofollow noreferrer" target="_blank">&#x8868;&#x8FBE;&#x5F0F;&#x548C;&#x8FD0;&#x7B97;&#x7B26;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.6-Statements" rel="nofollow noreferrer" target="_blank">&#x8BED;&#x53E5;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.7-ObjectObjects" rel="nofollow noreferrer" target="_blank">&#x5BF9;&#x8C61;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.8-ArrayObjects" rel="nofollow noreferrer" target="_blank">&#x6570;&#x7EC4;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.9-FunctionObjects" rel="nofollow noreferrer" target="_blank">&#x51FD;&#x6570;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.10-RegExpObjects" rel="nofollow noreferrer" target="_blank">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.11-PrimitiveWrapperObjects" rel="nofollow noreferrer" target="_blank">&#x57FA;&#x672C;&#x5305;&#x88C5;&#x7C7B;&#x578B;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/1.12-SingletonBuiltInObjects" rel="nofollow noreferrer" target="_blank">&#x5355;&#x4F53;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li></ul><h3 id="articleHeader3">&#x4E2D;&#x7EA7;</h3><ul><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/2.1-BOM" rel="nofollow noreferrer" target="_blank">BOM&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF09;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM" rel="nofollow noreferrer" target="_blank">DOM&#xFF08;&#x6587;&#x6863;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF09;&#x4E0A;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/2.2-DOM/README2.md" rel="nofollow noreferrer" target="_blank">DOM&#xFF08;&#x6587;&#x6863;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF09;&#x4E0B;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/2.3-Event" rel="nofollow noreferrer" target="_blank">&#x4E8B;&#x4EF6;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/2.4-Scope&amp;Closure" rel="nofollow noreferrer" target="_blank">&#x4F5C;&#x7528;&#x57DF;&#x548C;&#x95ED;&#x5305;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/2.5-Prototype" rel="nofollow noreferrer" target="_blank">&#x539F;&#x578B;&#x53CA;&#x539F;&#x578B;&#x94FE;</a>&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09;</p></li><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/2.9-Challenge" rel="nofollow noreferrer" target="_blank">&#x7EFC;&#x5408;&#x6311;&#x6218;</a>&#xFF08;&#x6301;&#x7EED;&#x66F4;&#x65B0;...&#xFF09;</p></li></ul><h3 id="articleHeader4">&#x5B9E;&#x8DF5;</h3><ul><li><p><a href="https://github.com/stone0090/javascript-lessons/tree/master/3.1-Tetris" rel="nofollow noreferrer" target="_blank">&#x4FC4;&#x7F57;&#x65AF;&#x65B9;&#x5757;&#x6E38;&#x620F;</a>&#xFF08;&#x6784;&#x601D;&#x4E2D;&#x2026;&#xFF09;</p></li><li><p>&#x4FC4;&#x7F57;&#x65AF;&#x65B9;&#x5757;&#x6E38;&#x620F;&#xFF08;vue&#x7248;&#xFF09;</p></li><li><p>&#x624B;&#x5199;zepto.js</p></li><li><p>&#x8FC7;&#x573A;&#x52A8;&#x753B;&#x6548;&#x679C;</p></li><li><p>&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x63D2;&#x4EF6;</p></li><li><p>&#x5168;&#x5C4F;&#x6EDA;&#x52A8;&#x63D2;&#x4EF6;</p></li><li><p><a href="http://www.imooc.com/view/50" rel="nofollow noreferrer" target="_blank">&#x7F51;&#x7AD9;&#x6027;&#x80FD;&#x4F18;&#x5316;</a></p></li></ul><h2 id="articleHeader5">&#x8BFE;&#x7A0B;&#x5185;&#x5BB9;&#x6765;&#x6E90;</h2><p>&#x672C;&#x8BFE;&#x7A0B;&#x5185;&#x5BB9;&#x4E3B;&#x8981;&#x57FA;&#x4E8E;&#x4EE5;&#x4E0B;&#x4E66;&#x7C4D;&#x6574;&#x7406;&#xFF0C;&#x5982;&#x9700;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#xFF0C;&#x53EF;&#x81EA;&#x884C;&#x67E5;&#x9605;&#x539F;&#x8457;&#x3002;</p><blockquote><p>&#x300A;&#x7F16;&#x5199;&#x53EF;&#x7EF4;&#x62A4;&#x7684; JavaScript&#x300B;<br><a href="https://book.douban.com/subject/21792530" rel="nofollow noreferrer" target="_blank">https://book.douban.com/subje...</a></p><p>&#x300A;JavaScript &#x8BED;&#x8A00;&#x7CBE;&#x7CB9;&#x300B;<br><a href="https://book.douban.com/subject/3590768" rel="nofollow noreferrer" target="_blank">https://book.douban.com/subje...</a></p><p>&#x300A;JavaScript DOM &#x7F16;&#x7A0B;&#x827A;&#x672F;&#x300B;<br><a href="https://book.douban.com/subject/6038371" rel="nofollow noreferrer" target="_blank">https://book.douban.com/subje...</a></p><p>&#x300A;JavaScript &#x6743;&#x5A01;&#x6307;&#x5357;(&#x7B2C;6&#x7248;)&#x300B;<br><a href="https://book.douban.com/subject/10549733" rel="nofollow noreferrer" target="_blank">https://book.douban.com/subje...</a></p><p>&#x300A;JavaScript &#x9AD8;&#x7EA7;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;(&#x7B2C;3&#x7248;)&#x300B;<br><a href="https://book.douban.com/subject/10546125" rel="nofollow noreferrer" target="_blank">https://book.douban.com/subje...</a></p></blockquote><h2 id="articleHeader6">&#x52D8;&#x8BEF;&#x53CA;&#x63D0;&#x95EE;</h2><p>&#x5982;&#x679C;&#x60A8;&#x5728;&#x5B66;&#x4E60;&#x672C;&#x8BFE;&#x7A0B;&#x65F6;&#x53D1;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x6216;&#x8005;&#x60F3;&#x63D0;&#x5173;&#x4E8E;&#x672C;&#x8BFE;&#x7A0B;&#x7684;&#x6280;&#x672F;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x8054;&#x7CFB;&#x6211;&#x3002;</p><blockquote><p>&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#xFF1A;&#x52BC;&#x54E5;&#x820D;<br>Email&#xFF1A;stone0090<a href="/u/hotmail">@hotmail</a> .com<br>&#x5FAE;&#x535A;&#xFF1A;<a href="http://weibo.com/stone0090" rel="nofollow noreferrer" target="_blank">http://weibo.com/stone0090</a></p></blockquote><p>&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x5728; <a href="https://github.com/" rel="nofollow noreferrer" target="_blank">GitHub</a> &#x4E0A; <a href="https://github.com/stone0090/javascript-lessons" rel="nofollow noreferrer" target="_blank">Star</a> &#x8BE5;&#x8BFE;&#x7A0B;&#xFF0C;&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x5185;&#x5BB9;&#x3002;</p><blockquote><p><a href="https://github.com/stone0090/javascript-lessons" rel="nofollow noreferrer" target="_blank">https://github.com/stone0090/...</a></p></blockquote>
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<h2 id="原文标题"><a href="#原文标题" class="headerlink" title="原文标题"></a>原文标题</h2><p>《JavaScript 闯关记》</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://segmentfault.com/a/1190000006053917" target="_blank" rel="noopener">https://segmentfault.com/a/1190000006053917</a></p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/a1c2684a/">https://alili.tech/archive/a1c2684a/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2 id="原文标题">原文标题</h2><p>《JavaScript 闯关记》</p><h2 id="原文链接">原文链接</h2><p><a href="https://segmentfault.com/a/1190000006053917">https://segmentfault.com/a/1190000006053917</a></p><h2>本文链接：</h2><a href="https://alili.tech/archive/a1c2684a/" target="_blank">https://alili.tech/archive/a1c2684a/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">为何写作此课程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">课程结构及目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader2"><span class="toc-number">2.1.</span> <span class="toc-text">初级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-number">2.2.</span> <span class="toc-text">中级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader4"><span class="toc-number">2.3.</span> <span class="toc-text">实践</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-number">3.</span> <span class="toc-text">课程内容来源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader6"><span class="toc-number">4.</span> <span class="toc-text">勘误及提问</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol>
-    </li></div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>

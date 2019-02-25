@@ -1,390 +1,70 @@
-<!DOCTYPE html>
-<html mip lang="zh">
-<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="wap-font-scale" content="no">
-    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
-    <meta name="sogou_site_verification" content="E8uWFBcf4a">
-    <meta name="description" content="这是我们全栈React+GraphQL系列教程的第四部分，每一部分都是独立的且都会介绍一个新的关键的知识点。所以你可以单独的阅读任何一部分或者一整个系列教程，这完全取决于你。 以下使我们到目前为止所涉及的部分：  Part 1: 前端 Part 2: 服务器端 Part 3: 基本的 GraphQL Mutations Part 4: 良好的UI (你在此) Part 5: 输入类型和自定义解析">
-<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程,富应用开发,html5上传,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Tutorial: 用良好的用户界面加速GraphQL mutation">
-<meta property="og:url" content="https://alili.tech/archive/c0dd4948/index.html">
-<meta property="og:site_name" content="Alili">
-<meta property="og:description" content="这是我们全栈React+GraphQL系列教程的第四部分，每一部分都是独立的且都会介绍一个新的关键的知识点。所以你可以单独的阅读任何一部分或者一整个系列教程，这完全取决于你。 以下使我们到目前为止所涉及的部分：  Part 1: 前端 Part 2: 服务器端 Part 3: 基本的 GraphQL Mutations Part 4: 良好的UI (你在此) Part 5: 输入类型和自定义解析">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://p0.ssl.qhimg.com/t01134f4c61f4ef1016.gif">
-<meta property="og:image" content="https://p0.ssl.qhimg.com/t012fc7466e2c3a53fa.gif">
-<meta property="og:image" content="https://p0.ssl.qhimg.com/t015df62ef46b8ed7d3.gif">
-<meta property="og:image" content="https://p0.ssl.qhimg.com/t01b62dab10c3e19d94.gif">
-<meta property="og:updated_time" content="2018-10-23T18:30:04.184Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tutorial: 用良好的用户界面加速GraphQL mutation">
-<meta name="twitter:description" content="这是我们全栈React+GraphQL系列教程的第四部分，每一部分都是独立的且都会介绍一个新的关键的知识点。所以你可以单独的阅读任何一部分或者一整个系列教程，这完全取决于你。 以下使我们到目前为止所涉及的部分：  Part 1: 前端 Part 2: 服务器端 Part 3: 基本的 GraphQL Mutations Part 4: 良好的UI (你在此) Part 5: 输入类型和自定义解析">
-<meta name="twitter:image" content="https://p0.ssl.qhimg.com/t01134f4c61f4ef1016.gif">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
-          
-        
-    
-    <!-- title -->
-    <title>Tutorial: 用良好的用户界面加速GraphQL mutation | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
-    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
-    <link rel="manifest" href="/manifest.json">
-    <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="canonical" href="https://alili.tech/archive/c0dd4948/">
-    <!-- rss -->
-    
-    
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <!-- 熊掌号  -->
-    <script type="application/ld+json">
-  {
-      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-      "@id": "https://alili.tech/archive/c0dd4948/",
-      "appid": "1613049289050283", 
-      "title": "Tutorial: 用良好的用户界面加速GraphQL mutation | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
-      "images": [],
-      "pubDate": "2019-02-26T05:20:49"
-  } 
-</script>
-<script>
-  document.addEventListener("error", function (e) {
-    var elem = e.target;
-    if (elem.tagName.toLowerCase() == 'img') {
-      elem.style.display='none'
-    }
-  }, true);
-  </script>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="Tutorial: 用良好的用户界面加速GraphQL mutation"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css"><meta property="og:site_name" content="Alili"><title>Tutorial: 用良好的用户界面加速GraphQL mutation | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/c0dd4948/",
+				"appid": "1613049289050283", 
+				"title": "Tutorial: 用良好的用户界面加速GraphQL mutation | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2018-10-21T00:00:00"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/76370fbf/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="https://alili.tech/archive/32ffef6d/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2fc0dd4948%2f&text=Tutorial%3a%20%e7%94%a8%e8%89%af%e5%a5%bd%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e5%8a%a0%e9%80%9fGraphQL%20mutation"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2fc0dd4948%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2fc0dd4948%2f&text=Tutorial%3a%20%e7%94%a8%e8%89%af%e5%a5%bd%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e5%8a%a0%e9%80%9fGraphQL%20mutation"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2fc0dd4948%2f&title=Tutorial%3a%20%e7%94%a8%e8%89%af%e5%a5%bd%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e5%8a%a0%e9%80%9fGraphQL%20mutation"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2fc0dd4948%2f&is_video=false&description=Tutorial%3a%20%e7%94%a8%e8%89%af%e5%a5%bd%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e5%8a%a0%e9%80%9fGraphQL%20mutation"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=Tutorial%3a%20%e7%94%a8%e8%89%af%e5%a5%bd%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e5%8a%a0%e9%80%9fGraphQL%20mutation&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2fc0dd4948%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2fc0dd4948%2f&title=Tutorial%3a%20%e7%94%a8%e8%89%af%e5%a5%bd%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e5%8a%a0%e9%80%9fGraphQL%20mutation"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fc0dd4948%2f&title=Tutorial%3a%20%e7%94%a8%e8%89%af%e5%a5%bd%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e5%8a%a0%e9%80%9fGraphQL%20mutation"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fc0dd4948%2f&title=Tutorial%3a%20%e7%94%a8%e8%89%af%e5%a5%bd%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e5%8a%a0%e9%80%9fGraphQL%20mutation"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2fc0dd4948%2f&title=Tutorial%3a%20%e7%94%a8%e8%89%af%e5%a5%bd%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e5%8a%a0%e9%80%9fGraphQL%20mutation"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><a href="#版权声明">版权声明</a></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">Tutorial: 用良好的用户界面加速GraphQL mutation</h1><div class="meta"><div class="postdate"><time datetime="2018-10-21" itemprop="datePublished">2018-10-21</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><div id="raw"><p style="opacity: 0;">Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.想到哪,学到哪,写到哪. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js</p><script>$(function () {
+            var html = "\n\n            \x3chr\x3e\n\x3cp\x3e这是我们全栈React\x2bGraphQL系列教程的第四部分，每一部分都是独立的且都会介绍一个新的关键的知识点。所以你可以单独的阅读任何一部分或者一整个系列教程，这完全取决于你。\x3c\/p\x3e\n\x3cp\x3e以下使我们到目前为止所涉及的部分：\x3c\/p\x3e\n\x3cul\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/dev-blog.apollodata.com\/full-stack-react-graphql-tutorial-582ac8d24e3b\x22\x3ePart 1: 前端\x3c\/a\x3e\x3c\/li\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/dev-blog.apollodata.com\/react-graphql-tutorial-part-2-server-99d0528c7928\x22\x3ePart 2: 服务器端\x3c\/a\x3e\x3c\/li\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/dev-blog.apollodata.com\/react-graphql-tutorial-mutations-764d7ec23c15\x22\x3ePart 3: 基本的 GraphQL Mutations\x3c\/a\x3e\x3c\/li\x3e\n\x3cli\x3ePart 4: 良好的UI (你在此)\x3c\/li\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/medium.com\/p\/tutorial-graphql-input-types-and-client-caching-f11fa0421cfd\x22\x3ePart 5: 输入类型和自定义解析器\x3c\/a\x3e\x3c\/li\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/dev-blog.apollodata.com\/tutorial-graphql-subscriptions-server-side-e51c32dc2951\x22\x3ePart 6: 服务器订阅\x3c\/a\x3e\x3c\/li\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/dev-blog.apollodata.com\/tutorial-graphql-subscriptions-client-side-40e185e4be76\x22\x3ePart 7: 在客户端使用GraphQL订阅\x3c\/a\x3e\x3c\/li\x3e\n\x3cli\x3e\x3ca href=\x22https:\/\/dev-blog.apollodata.com\/tutorial-pagination-d1c3b3ee2823\x22\x3ePart 8: 分页\x3c\/a\x3e\x3c\/li\x3e\n\x3c\/ul\x3e\n\x3cp\x3e在这一部分，我们将继续深入学习GraphQL mutation在客户端是如何工作的，我们从\x3ca href=\x22https:\/\/dev-blog.apollodata.com\/react-graphql-tutorial-mutations-764d7ec23c15\x22\x3epart 3\x3c\/a\x3e 拿到一个列表视图和mutation。模拟500毫秒的网络延迟，然后从用户的角度使用存储更新用户界面使延迟几乎消失。\x3c\/p\x3e\n\x3cp\x3e到本教程结束时，您将知道良好的用户界面是如何使用存储更新来处理网络延迟。\x3c\/p\x3e\n\x3cblockquote\x3e\n\x3cp\x3e提示: 如果某些事情不能像预期的那样工作，您可以随时通过运行 \x3cem\x3egit checkout t4-end\x3c\/em\x3e 解决该问题\x3c\/p\x3e\n\x3c\/blockquote\x3e\n\x3chr\x3e\n\x3cp\x3e开始之前，让我们克隆教程git repo并安装依赖关系：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs jboss-cli\x22\x3egit clone https:\x3cspan class=\x22hljs-string\x22\x3e\/\/github.com\/apollographql\/graphql-tutorial.gitcd\x3c\/span\x3e graphql-tutorialgit checkout t4-startcd server \x26amp;\x26amp; npm install \x26amp;\x26amp; \x3cspan class=\x22hljs-keyword\x22\x3ecd\x3c\/span\x3e \x3cspan class=\x22hljs-string\x22\x3e..\/client\x3c\/span\x3e \x26amp;\x26amp; npm install \x26amp;\x26amp; \x3cspan class=\x22hljs-keyword\x22\x3ecd\x3c\/span\x3e \x3cspan class=\x22hljs-string\x22\x3e..\x3c\/span\x3e\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e为确保一切按预期工作，让我们分别在不同的终端中启动服务器和客户端：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs dos\x22\x3e\x3cspan class=\x22hljs-built_in\x22\x3ecd\x3c\/span\x3e servernpm \x3cspan class=\x22hljs-built_in\x22\x3estart\x3c\/span\x3e\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e在另一个终端：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs dos\x22\x3e\x3cspan class=\x22hljs-built_in\x22\x3ecd\x3c\/span\x3e clientnpm \x3cspan class=\x22hljs-built_in\x22\x3estart\x3c\/span\x3e\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e如果它正常工作，您现在应该在浏览器中看到第3部分末尾的ChannelsView：\x3c\/p\x3e\n\x3cp\x3e\x3cimg src=\x22https:\/\/p0.ssl.qhimg.com\/t01134f4c61f4ef1016.gif\x22 alt=\x22\x22\x3e\x3c\/p\x3e\n\x3ch4\x3eMutations和延迟\x3c\/h4\x3e\n\x3cp\x3e正如您在上图中看到的那样，您添加的任何新channel都会立即显示在列表中。 这很好，因为反应性有助于实现更好的用户体验。\x3c\/p\x3e\n\x3cp\x3e然而，如果你在第3部分中跟着教程学习的话，你可能还记得，这个更新实际上是\x3cstrong\x3e两次往返\x3c\/strong\x3e 现在！ 一个用于mutation请求，另一个用于在mutation完成后重新获取列表。 第二次往返当前是必需的，因为客户无法知道您刚刚添加的新项目应该在列表中。 GraphQL根本没有任何方式编码该信息，因为它将后端视为黑盒子：在数据输出中查询。 在我们解决这个问题之前，让我们看看为什么这是一个问题。\x3c\/p\x3e\n\x3cp\x3e为了了解如果网络速度较慢UX会是什么样子，我们将通过添加中间件来模拟Apollo网络接口中500毫秒的网络延迟。\x3c\/p\x3e\n\x3cp\x3e为此，请在声明networkInterface常量之后立即将以下行添加到client\/src\/App.js中。\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs autoit\x22\x3e\/\/ \x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e networkInterface = ...networkInterface.use([{  applyMiddleware(req, \x3cspan class=\x22hljs-keyword\x22\x3enext\x3c\/span\x3e) {    setTimeout(\x3cspan class=\x22hljs-keyword\x22\x3enext\x3c\/span\x3e, \x3cspan class=\x22hljs-number\x22\x3e500\x3c\/span\x3e)\x3cspan class=\x22hljs-comment\x22\x3e;\x3c\/span\x3e\n},}])\x3cspan class=\x22hljs-comment\x22\x3e;\x3c\/span\x3e\n\x3c\/code\x3e\x3c\/pre\x3e\x3chr\x3e\n\x3cp\x3e现在我们已经为每个请求添加了500毫秒的延迟，添加一个新channel感觉有点不同：\x3c\/p\x3e\n\x3cp\x3e\x3cimg src=\x22https:\/\/p0.ssl.qhimg.com\/t012fc7466e2c3a53fa.gif\x22 alt=\x22\x22\x3e\x3c\/p\x3e\n\x3cp\x3e从“tennis”这个词变暗到消失的时间，您看到的延迟是mutation完成其服务器往返所花费的时间。 从输入框中单词“tennis”消失直到它出现的时间的延迟是列表重新读取查询的延迟。\x3c\/p\x3e\n\x3cp\x3e尽管重新初始化让我们能够轻松快捷地建立此功能，但我们需要一个更好的解决方案，让用户体验到延迟的制作应用程序。 目前，这些用户的体验并不是很好：首先，他们在等待，没有任何反应; 然后，他们看到他们的输入完全消失，然后它终于出现在他们预期的地方。 \x3c\/p\x3e\n\x3cp\x3e特别是在移动网络上，几百毫秒的延迟并不罕见，我们需要一种方法来处理它。 我们可以做的第一件事是避免第二次往返重新获取列表。\x3c\/p\x3e\n\x3ch4\x3emutation完成后存储更新\x3c\/h4\x3e\n\x3cp\x3e对我们来说幸运的是，mutation已经返回了我们需要将新项目加入到列表中的所有信息。 我们只需告诉Apollo Client 如何为我们做这些！ \x3c\/p\x3e\n\x3cp\x3e对于基于客户端操作需要更新存储的mutation和其他情况，Apollo提供了一组功能强大的工具来执行必要的存储更新：readQuery，writeQuery，readFragment和writeFragment。 你可以阅读所有关于它们\x3ca href=\x22http:\/\/dev.apollodata.com\/core\/read-and-write.html\x22\x3e点这里\x3c\/a\x3e.\x3c\/p\x3e\n\x3cp\x3e因为在mutation后更新存储是一种常见的用例，所以Apollo Client通过mutate中暴露的update属性可以非常容易地使用这些函数。 \x3c\/p\x3e\n\x3cp\x3e要使用它，我们用下面的调用来替换AddChannel.js中的refetchQueries选项来更新：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs javascript\x22\x3e\x3cspan class=\x22hljs-keyword\x22\x3econst\x3c\/span\x3e handleKeyUp = \x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3eevt\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e {    \x3cspan class=\x22hljs-keyword\x22\x3eif\x3c\/span\x3e (evt.keyCode === \x3cspan class=\x22hljs-number\x22\x3e13\x3c\/span\x3e) {      evt.persist();\nmutate({         \x3cspan class=\x22hljs-attr\x22\x3evariables\x3c\/span\x3e: { \x3cspan class=\x22hljs-attr\x22\x3ename\x3c\/span\x3e: evt.target.value },        \x3cspan class=\x22hljs-attr\x22\x3eupdate\x3c\/span\x3e: \x3cspan class=\x22hljs-function\x22\x3e(\x3cspan class=\x22hljs-params\x22\x3estore, { data: { addChannel } }\x3c\/span\x3e) =\x26gt;\x3c\/span\x3e {            \x3cspan class=\x22hljs-comment\x22\x3e\/\/ Read the data from the cache for this query.            const data = store.readQuery({query: channelsListQuery });\x3c\/span\x3e\n\x3cspan class=\x22hljs-comment\x22\x3e\/\/ Add our channel from the mutation to the end.            data.channels.push(addChannel);\x3c\/span\x3e\n\x3cspan class=\x22hljs-comment\x22\x3e\/\/ Write the data back to the cache.            store.writeQuery({ query: channelsListQuery, data });\x3c\/span\x3e\n},      })      .then( \x3cspan class=\x22hljs-function\x22\x3e\x3cspan class=\x22hljs-params\x22\x3eres\x3c\/span\x3e =\x26gt;\x3c\/span\x3e {        evt.target.value = \x3cspan class=\x22hljs-string\x22\x3e\x27\x27\x3c\/span\x3e;\n});\n}  };\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e现在，只要mutation完成，我们就从存储中读取channelsListQuery的当前结果，将新channel追加到它里面，并告诉Apollo Client将其写回存储。 这就是我们必须做的！ 我们的ChannelsListWithData组件会自动更新新数据。\x3c\/p\x3e\n\x3cp\x3e如果您运行另一个mutation，您会注意到在输入消失并重新出现在列表末尾之间不再有任何延迟。 它几乎是瞬间的，这太棒了！\x3c\/p\x3e\n\x3cp\x3e\x3cimg src=\x22https:\/\/p0.ssl.qhimg.com\/t015df62ef46b8ed7d3.gif\x22 alt=\x22\x22\x3e\x3c\/p\x3e\n\x3cp\x3e初始mutation的潜伏期仍然存在，但幸运的是，还有一种方法可以解决这个问题！\x3c\/p\x3e\n\x3ch4\x3e良好的 UI\x3c\/h4\x3e\n\x3cp\x3eApollo Client可以利用一般称为乐观用户界面的技巧来模拟零延迟的服务器响应。 乐观的用户界面非常难以手动设置，但是由于Apollo同时管理存储和网络请求，使用乐观用户界面非常简单。\x3c\/p\x3e\n\x3cp\x3e您只需模拟零延迟服务器响应即可将optimisticResponse属性添加到mutate调用中。 optimisticResponse应该是您期望从服务器获得的响应。 我们已经知道我们期望的channel名称。 ID并不重要，所以我们只是采取一个随机值来确保没有冲突。 最后，我们还必须指定__typename以确保Apollo Client知道它是什么类型的对象：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs css\x22\x3e\x3cspan class=\x22hljs-selector-tag\x22\x3emutate\x3c\/span\x3e({   \x3cspan class=\x22hljs-attribute\x22\x3evariables\x3c\/span\x3e: { name: evt.target.value },  \x3cspan class=\x22hljs-selector-tag\x22\x3eoptimisticResponse\x3c\/span\x3e: {     \x3cspan class=\x22hljs-attribute\x22\x3eaddChannel\x3c\/span\x3e: {       name: evt.target.value,       id: Math.\x3cspan class=\x22hljs-built_in\x22\x3eround\x3c\/span\x3e(Math.random() * -\x3cspan class=\x22hljs-number\x22\x3e1000000\x3c\/span\x3e),       __typename: \x3cspan class=\x22hljs-string\x22\x3e\x27Channel\x27\x3c\/span\x3e,     },   },   \x3cspan class=\x22hljs-selector-tag\x22\x3eupdate\x3c\/span\x3e: ...})\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e如果将optimisticResponse添加到您的代码中，您会注意到在返回时间和项目出现在列表底部之间没有更多延迟。\x3c\/p\x3e\n\x3cp\x3e事实上，optimisticResponse速度非常快，即使在输入字段中删除项目之前，该项目也会出现在列表中。这是因为我们有一段代码在成功返回mutation时清除输入字段。现在我们拥有乐观的用户界面，这已经不再适合了。相反，让我们给用户一些关于哪些列表项已被服务器确认，哪些列表项没有被确认的视觉反馈。\x3c\/p\x3e\n\x3cp\x3e为了让用户知道channel尚未被服务器确认，我们需要以某种方式将该信息添加到该项目。与其修改服务器模式以跟踪某些客户端状态，我们将在此处使用一些小技巧来跟踪哪些项目是乐观的。\x3c\/p\x3e\n\x3cp\x3e我们知道所有服务器生成的ID都是正整数，但乐观的“生成”ID都是负数 - 多么幸运！ ;-)\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs qml\x22\x3e\x3cspan class=\x22hljs-attribute\x22\x3eid:\x3c\/span\x3e\x3cspan class=\x22hljs-string\x22\x3e Math.round\x3c\/span\x3e(\x3cspan class=\x22hljs-built_in\x22\x3eMath\x3c\/span\x3e.random() * \x3cspan class=\x22hljs-number\x22\x3e-1000000\x3c\/span\x3e),\n\x3c\/code\x3e\x3c\/pre\x3e\x3cblockquote\x3e\n\x3cp\x3eNote: 有更清晰的方法来跟踪您的用户界面中的乐观项目，但他们需要更多的设置，所以我们将在未来的教程中讲述这些。\x3c\/p\x3e\n\x3c\/blockquote\x3e\n\x3cp\x3e为了使乐观的channel在视觉上截然不同，我们在ChannelsListWithData.js中给他们一个额外的CSS类：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs lisp\x22\x3ereturn (                { channels.map( \x3cspan class=\x22hljs-name\x22\x3ech\x3c\/span\x3e =\x26gt;         ({ch.name})      )}      )\x3cspan class=\x22hljs-comment\x22\x3e;\x3c\/span\x3e\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e最后，我们只需要定义App.css中的那个类。 出于我们的目的，我们只是让文本变得更加灰色：\x3c\/p\x3e\n\x3cpre\x3e\x3ccode class=\x22hljs css\x22\x3e\x3cspan class=\x22hljs-selector-tag\x22\x3ediv\x3c\/span\x3e\x3cspan class=\x22hljs-selector-class\x22\x3e.optimistic\x3c\/span\x3e {  \x3cspan class=\x22hljs-attribute\x22\x3ecolor\x3c\/span\x3e: \x3cspan class=\x22hljs-built_in\x22\x3ergba\x3c\/span\x3e(255, 255, 255, 0.5);}\n\x3c\/code\x3e\x3c\/pre\x3e\x3cp\x3e就是这样！ 通过这些更改，addChannel mutation现在应该看起来好多了！\x3c\/p\x3e\n\x3cp\x3e\x3cimg src=\x22https:\/\/p0.ssl.qhimg.com\/t01b62dab10c3e19d94.gif\x22 alt=\x22\x22\x3e\x3c\/p\x3e\n\x3chr\x3e\n\x3ch4\x3e结论\x3c\/h4\x3e\n\x3cp\x3e因此，本教程系列中的第4部分已经完成了！ 您已经学会了如何使用存储更新和乐观的用户界面来隐藏用户的网络延迟。 结合本教程系列的第1,2和3部分，您现在已经熟悉使用Apollo编写具有卓越用户体验的简单React \x2b GraphQL应用程序的所有基础知识。\x3c\/p\x3e\n\x3cp\x3e在本系列的\x3ca href=\x22https:\/\/medium.com\/p\/tutorial-graphql-input-types-and-client-caching-f11fa0421cfd\x22\x3e下一节\x3c\/a\x3e 我们将向应用添加第二个视图，并学习如何使用缓存数据和预取以更快地显示预览和加载页面。 如果你不想错过未来的部分，一定要订阅！\x3c\/p\x3e\n\x3cblockquote\x3e\n\x3cp\x3e如果您喜欢本教程并希望继续学习Apollo和GraphQL，请务必点击下面的“关注”按钮，然后在Twitter上关注我们\x3ca href=\x22https:\/\/twitter.com\/apollographql\x22\x3e@apollographql\x3c\/a\x3e 和 \x3ca href=\x22https:\/\/twitter.com\/helferjs\x22\x3e@helferjs\x3c\/a\x3e.\x3c\/p\x3e\n\x3c\/blockquote\x3e\n\n          \n"
+            html = html.replace(/"{/g, "{")
+            html = html.replace(/{"/g, "{")
+            html = html.replace(/"}/g, "}")
+            html = html.replace(/}"/g, "}")
+            $('#raw').html(html);
 
-</head>
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/archive/c317b289/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
-        
-        
-        <li><a class="icon" href="/archive/aa138172/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none">Previous post</span>
-      <span id="i-next" class="info" style="display:none">Next post</span>
-      <span id="i-top" class="info" style="display:none">Back to top</span>
-      <span id="i-share" class="info" style="display:none">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/c0dd4948/&text=Tutorial: 用良好的用户界面加速GraphQL mutation"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/c0dd4948/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/c0dd4948/&text=Tutorial: 用良好的用户界面加速GraphQL mutation"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/c0dd4948/&title=Tutorial: 用良好的用户界面加速GraphQL mutation"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/c0dd4948/&is_video=false&description=Tutorial: 用良好的用户界面加速GraphQL mutation"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Tutorial: 用良好的用户界面加速GraphQL mutation&body=Check out this article: https://alili.tech/archive/c0dd4948/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/c0dd4948/&title=Tutorial: 用良好的用户界面加速GraphQL mutation"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/c0dd4948/&title=Tutorial: 用良好的用户界面加速GraphQL mutation"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/c0dd4948/&title=Tutorial: 用良好的用户界面加速GraphQL mutation"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/c0dd4948/&title=Tutorial: 用良好的用户界面加速GraphQL mutation"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-</ul>
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Mutations和延迟</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">mutation完成后存储更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">良好的 UI</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">结论</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text"> 本文链接：</span></a>
-    </li></ol></li></div>
-  </span>
-</div>
-    
-    <div class="content index width mx-auto px3 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="posttitle" itemprop="name headline">
-        Tutorial: 用良好的用户界面加速GraphQL mutation
-    </h1>
-    <div class="meta">
-      <div class="postdate">
-        <time datetime="2018-10-20T16:00:00.000Z" itemprop="datePublished">2018-10-21</time>
-    </div>
-      <div class="article-tag">
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_container_page_pv">
-              <span id="busuanzi_value_page_pv">0</span>
-            </span>
-          
-      </div>
-      
-    </div>
-  </header>
-  
-  <div class="content" itemprop="articleBody">
-    <hr>
-<p>这是我们全栈React+GraphQL系列教程的第四部分，每一部分都是独立的且都会介绍一个新的关键的知识点。所以你可以单独的阅读任何一部分或者一整个系列教程，这完全取决于你。</p>
-<p>以下使我们到目前为止所涉及的部分：</p>
-<ul>
-<li><a href="https://dev-blog.apollodata.com/full-stack-react-graphql-tutorial-582ac8d24e3b" target="_blank" rel="noopener">Part 1: 前端</a></li>
-<li><a href="https://dev-blog.apollodata.com/react-graphql-tutorial-part-2-server-99d0528c7928" target="_blank" rel="noopener">Part 2: 服务器端</a></li>
-<li><a href="https://dev-blog.apollodata.com/react-graphql-tutorial-mutations-764d7ec23c15" target="_blank" rel="noopener">Part 3: 基本的 GraphQL Mutations</a></li>
-<li>Part 4: 良好的UI (你在此)</li>
-<li><a href="https://medium.com/p/tutorial-graphql-input-types-and-client-caching-f11fa0421cfd" target="_blank" rel="noopener">Part 5: 输入类型和自定义解析器</a></li>
-<li><a href="https://dev-blog.apollodata.com/tutorial-graphql-subscriptions-server-side-e51c32dc2951" target="_blank" rel="noopener">Part 6: 服务器订阅</a></li>
-<li><a href="https://dev-blog.apollodata.com/tutorial-graphql-subscriptions-client-side-40e185e4be76" target="_blank" rel="noopener">Part 7: 在客户端使用GraphQL订阅</a></li>
-<li><a href="https://dev-blog.apollodata.com/tutorial-pagination-d1c3b3ee2823" target="_blank" rel="noopener">Part 8: 分页</a></li>
-</ul>
-<p>在这一部分，我们将继续深入学习GraphQL mutation在客户端是如何工作的，我们从<a href="https://dev-blog.apollodata.com/react-graphql-tutorial-mutations-764d7ec23c15" target="_blank" rel="noopener">part 3</a> 拿到一个列表视图和mutation。模拟500毫秒的网络延迟，然后从用户的角度使用存储更新用户界面使延迟几乎消失。</p>
-<p>到本教程结束时，您将知道良好的用户界面是如何使用存储更新来处理网络延迟。</p>
-<blockquote>
-<p>提示: 如果某些事情不能像预期的那样工作，您可以随时通过运行 <em>git checkout t4-end</em> 解决该问题</p>
-</blockquote>
-<hr>
-<p>开始之前，让我们克隆教程git repo并安装依赖关系：</p>
-<pre><code class="hljs jboss-cli">git clone https:<span class="hljs-string">//github.com/apollographql/graphql-tutorial.gitcd</span> graphql-tutorialgit checkout t4-startcd server &amp;&amp; npm install &amp;&amp; <span class="hljs-keyword">cd</span> <span class="hljs-string">../client</span> &amp;&amp; npm install &amp;&amp; <span class="hljs-keyword">cd</span> <span class="hljs-string">..</span>
-</code></pre><p>为确保一切按预期工作，让我们分别在不同的终端中启动服务器和客户端：</p>
-<pre><code class="hljs dos"><span class="hljs-built_in">cd</span> servernpm <span class="hljs-built_in">start</span>
-</code></pre><p>在另一个终端：</p>
-<pre><code class="hljs dos"><span class="hljs-built_in">cd</span> clientnpm <span class="hljs-built_in">start</span>
-</code></pre><p>如果它正常工作，您现在应该在浏览器中看到第3部分末尾的ChannelsView：</p>
-<p><img src="https://p0.ssl.qhimg.com/t01134f4c61f4ef1016.gif" alt=""></p>
-<h4>Mutations和延迟</h4>
-<p>正如您在上图中看到的那样，您添加的任何新channel都会立即显示在列表中。 这很好，因为反应性有助于实现更好的用户体验。</p>
-<p>然而，如果你在第3部分中跟着教程学习的话，你可能还记得，这个更新实际上是<strong>两次往返</strong> 现在！ 一个用于mutation请求，另一个用于在mutation完成后重新获取列表。 第二次往返当前是必需的，因为客户无法知道您刚刚添加的新项目应该在列表中。 GraphQL根本没有任何方式编码该信息，因为它将后端视为黑盒子：在数据输出中查询。 在我们解决这个问题之前，让我们看看为什么这是一个问题。</p>
-<p>为了了解如果网络速度较慢UX会是什么样子，我们将通过添加中间件来模拟Apollo网络接口中500毫秒的网络延迟。</p>
-<p>为此，请在声明networkInterface常量之后立即将以下行添加到client/src/App.js中。</p>
-<pre><code class="hljs autoit">// <span class="hljs-keyword">const</span> networkInterface = ...networkInterface.use([{  applyMiddleware(req, <span class="hljs-keyword">next</span>) {    setTimeout(<span class="hljs-keyword">next</span>, <span class="hljs-number">500</span>)<span class="hljs-comment">;</span>
-},}])<span class="hljs-comment">;</span>
-</code></pre><hr>
-<p>现在我们已经为每个请求添加了500毫秒的延迟，添加一个新channel感觉有点不同：</p>
-<p><img src="https://p0.ssl.qhimg.com/t012fc7466e2c3a53fa.gif" alt=""></p>
-<p>从“tennis”这个词变暗到消失的时间，您看到的延迟是mutation完成其服务器往返所花费的时间。 从输入框中单词“tennis”消失直到它出现的时间的延迟是列表重新读取查询的延迟。</p>
-<p>尽管重新初始化让我们能够轻松快捷地建立此功能，但我们需要一个更好的解决方案，让用户体验到延迟的制作应用程序。 目前，这些用户的体验并不是很好：首先，他们在等待，没有任何反应; 然后，他们看到他们的输入完全消失，然后它终于出现在他们预期的地方。 </p>
-<p>特别是在移动网络上，几百毫秒的延迟并不罕见，我们需要一种方法来处理它。 我们可以做的第一件事是避免第二次往返重新获取列表。</p>
-<h4>mutation完成后存储更新</h4>
-<p>对我们来说幸运的是，mutation已经返回了我们需要将新项目加入到列表中的所有信息。 我们只需告诉Apollo Client 如何为我们做这些！ </p>
-<p>对于基于客户端操作需要更新存储的mutation和其他情况，Apollo提供了一组功能强大的工具来执行必要的存储更新：readQuery，writeQuery，readFragment和writeFragment。 你可以阅读所有关于它们<a href="http://dev.apollodata.com/core/read-and-write.html" target="_blank" rel="noopener">点这里</a>.</p>
-<p>因为在mutation后更新存储是一种常见的用例，所以Apollo Client通过mutate中暴露的update属性可以非常容易地使用这些函数。 </p>
-<p>要使用它，我们用下面的调用来替换AddChannel.js中的refetchQueries选项来更新：</p>
-<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> handleKeyUp = <span class="hljs-function">(<span class="hljs-params">evt</span>) =&gt;</span> {    <span class="hljs-keyword">if</span> (evt.keyCode === <span class="hljs-number">13</span>) {      evt.persist();
-mutate({         <span class="hljs-attr">variables</span>: { <span class="hljs-attr">name</span>: evt.target.value },        <span class="hljs-attr">update</span>: <span class="hljs-function">(<span class="hljs-params">store, { data: { addChannel } }</span>) =&gt;</span> {            <span class="hljs-comment">// Read the data from the cache for this query.            const data = store.readQuery({query: channelsListQuery });</span>
-<span class="hljs-comment">// Add our channel from the mutation to the end.            data.channels.push(addChannel);</span>
-<span class="hljs-comment">// Write the data back to the cache.            store.writeQuery({ query: channelsListQuery, data });</span>
-},      })      .then( <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {        evt.target.value = <span class="hljs-string">''</span>;
-});
-}  };
-</code></pre><p>现在，只要mutation完成，我们就从存储中读取channelsListQuery的当前结果，将新channel追加到它里面，并告诉Apollo Client将其写回存储。 这就是我们必须做的！ 我们的ChannelsListWithData组件会自动更新新数据。</p>
-<p>如果您运行另一个mutation，您会注意到在输入消失并重新出现在列表末尾之间不再有任何延迟。 它几乎是瞬间的，这太棒了！</p>
-<p><img src="https://p0.ssl.qhimg.com/t015df62ef46b8ed7d3.gif" alt=""></p>
-<p>初始mutation的潜伏期仍然存在，但幸运的是，还有一种方法可以解决这个问题！</p>
-<h4>良好的 UI</h4>
-<p>Apollo Client可以利用一般称为乐观用户界面的技巧来模拟零延迟的服务器响应。 乐观的用户界面非常难以手动设置，但是由于Apollo同时管理存储和网络请求，使用乐观用户界面非常简单。</p>
-<p>您只需模拟零延迟服务器响应即可将optimisticResponse属性添加到mutate调用中。 optimisticResponse应该是您期望从服务器获得的响应。 我们已经知道我们期望的channel名称。 ID并不重要，所以我们只是采取一个随机值来确保没有冲突。 最后，我们还必须指定__typename以确保Apollo Client知道它是什么类型的对象：</p>
-<pre><code class="hljs css"><span class="hljs-selector-tag">mutate</span>({   <span class="hljs-attribute">variables</span>: { name: evt.target.value },  <span class="hljs-selector-tag">optimisticResponse</span>: {     <span class="hljs-attribute">addChannel</span>: {       name: evt.target.value,       id: Math.<span class="hljs-built_in">round</span>(Math.random() * -<span class="hljs-number">1000000</span>),       __typename: <span class="hljs-string">'Channel'</span>,     },   },   <span class="hljs-selector-tag">update</span>: ...})
-</code></pre><p>如果将optimisticResponse添加到您的代码中，您会注意到在返回时间和项目出现在列表底部之间没有更多延迟。</p>
-<p>事实上，optimisticResponse速度非常快，即使在输入字段中删除项目之前，该项目也会出现在列表中。这是因为我们有一段代码在成功返回mutation时清除输入字段。现在我们拥有乐观的用户界面，这已经不再适合了。相反，让我们给用户一些关于哪些列表项已被服务器确认，哪些列表项没有被确认的视觉反馈。</p>
-<p>为了让用户知道channel尚未被服务器确认，我们需要以某种方式将该信息添加到该项目。与其修改服务器模式以跟踪某些客户端状态，我们将在此处使用一些小技巧来跟踪哪些项目是乐观的。</p>
-<p>我们知道所有服务器生成的ID都是正整数，但乐观的“生成”ID都是负数 - 多么幸运！ ;-)</p>
-<pre><code class="hljs qml"><span class="hljs-attribute">id:</span><span class="hljs-string"> Math.round</span>(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">-1000000</span>),
-</code></pre><blockquote>
-<p>Note: 有更清晰的方法来跟踪您的用户界面中的乐观项目，但他们需要更多的设置，所以我们将在未来的教程中讲述这些。</p>
-</blockquote>
-<p>为了使乐观的channel在视觉上截然不同，我们在ChannelsListWithData.js中给他们一个额外的CSS类：</p>
-<pre><code class="hljs lisp">return (                { channels.map( <span class="hljs-name">ch</span> =&gt;         ({ch.name})      )}      )<span class="hljs-comment">;</span>
-</code></pre><p>最后，我们只需要定义App.css中的那个类。 出于我们的目的，我们只是让文本变得更加灰色：</p>
-<pre><code class="hljs css"><span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.optimistic</span> {  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgba</span>(255, 255, 255, 0.5);}
-</code></pre><p>就是这样！ 通过这些更改，addChannel mutation现在应该看起来好多了！</p>
-<p><img src="https://p0.ssl.qhimg.com/t01b62dab10c3e19d94.gif" alt=""></p>
-<hr>
-<h4>结论</h4>
-<p>因此，本教程系列中的第4部分已经完成了！ 您已经学会了如何使用存储更新和乐观的用户界面来隐藏用户的网络延迟。 结合本教程系列的第1,2和3部分，您现在已经熟悉使用Apollo编写具有卓越用户体验的简单React + GraphQL应用程序的所有基础知识。</p>
-<p>在本系列的<a href="https://medium.com/p/tutorial-graphql-input-types-and-client-caching-f11fa0421cfd" target="_blank" rel="noopener">下一节</a> 我们将向应用添加第二个视图，并学习如何使用缓存数据和预取以更快地显示预览和加载页面。 如果你不想错过未来的部分，一定要订阅！</p>
-<blockquote>
-<p>如果您喜欢本教程并希望继续学习Apollo和GraphQL，请务必点击下面的“关注”按钮，然后在Twitter上关注我们<a href="https://twitter.com/apollographql" target="_blank" rel="noopener">@apollographql</a> 和 <a href="https://twitter.com/helferjs" target="_blank" rel="noopener">@helferjs</a>.</p>
-</blockquote>
-
-          
-
-<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>原文链接: <a href="https://www.zcfy.cc/article/tutorial-speeding-up-graphql-mutations-with-optimistic-ui" target="_blank" rel="noopener">www.zcfy.cc</a><br>原文标题: Tutorial: 用良好的用户界面加速GraphQL mutation<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
-<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/c0dd4948/">https://alili.tech/archive/c0dd4948/</a> <p></p>
-  </div>
-</article>
-
-
-<!-- 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
- -->
-
-<div id="ad-box">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Alili Color -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1769617155450062" data-ad-slot="6920805491" data-ad-format="link" data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div class="blog-post-comments"></div>
-<script>
-    new Valine({
-        el: '.blog-post-comments', // 
-        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
-        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
-        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
-        avatar:'retro',
+            let postTitle =  $('.posttitle').text()
+            let postContentTitle =  $('#raw > h1').text()
+            if(postTitle === postContentTitle){
+                $('#raw > h1').hide()
+            }
+            $('button.preview').hide()
+        })</script></div><h1 id="版权声明">版权声明</h1><p>原文链接: <a href="https://www.zcfy.cc/article/tutorial-speeding-up-graphql-mutations-with-optimistic-ui">www.zcfy.cc</a> 原文标题: Tutorial: 用良好的用户界面加速GraphQL mutation 本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。</p><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，</p><p>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p><h2>本文链接：</h2><a href="https://alili.tech/archive/c0dd4948/" target="_blank">https://alili.tech/archive/c0dd4948/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
         notify:true,
         verify:true
-    });
-</script>
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/5ed53lrrg7e/">如何禁止浏览器自动填充<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/gij1sdp355j/">实践是检验程序员的唯一标准02：用户不想跟你说话并向你扔出一张图片 - 图片上传组件开发【开发篇】<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/y9eqaypgij/">123<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/4ho25kya1mg/">2018你成长了么？一份给你的前端技术清单<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/g2lx7wrrhy4/">Apache、Nginx 与 Node.js 之争 —— WordPress 与 Ghost 的性能大对决<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/dfejr0q89no/">CSS单位em是相对于父元素还是当前元素的字体大小？<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/cik25m3bh7m/">ES6 系列之 Babel 将 Generator 编译成了什么样子<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/vwkme203i7/">ES6 系列之异步处理实战<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/q2at4ffqrr/">Hola～ 一款基于Electron的聊天软件<aside class="dates">2019-02-15</aside></a></li><li><a href="/archive/t2mci6htsdn/">JavaScript 数组操作方法小结<aside class="dates">2019-02-15</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Mutations和延迟</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">mutation完成后存储更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">良好的 UI</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">结论</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number"></span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text"> 本文链接：</span></a>
-    </li></ol></li></div>
-
-
-    <div id="actions-footer" style="display:none">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
- </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/archives/">Archives</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a target="_blank" href="http://github.com/Fantasy9527">Github</a></li>
-        
-      </ul>
-    </nav>
-  </div>
- 
-
- <p>Copyright &copy; 2019 Fan <a href="http://www.miitbeian.gov.cn">浙ICP备18045521号 </a></p>
- 
-</footer>
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- Disqus Comments -->
-
-    <!-- <script type="text/javascript">
-        var disqus_shortname = 'alili-tech';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            if(window.location.host=="localhost:4000")return;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script> -->
-
-    <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <script>(function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-        </script>
-
-<!-- <script async src="/js/jquery.min.js"></script> -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1551129612351')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
-</html>
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>
