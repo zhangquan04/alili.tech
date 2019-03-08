@@ -6,10 +6,27 @@
     <description>Recent content in Trending on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 08 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/trending/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2019年03月Github Javascript开源项目精选</title>
+      <link>https://alili.tech/archive/a5ficy1jp7n/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/a5ficy1jp7n/</guid>
+      <description>pomber / git-history : 6,754 stars this month
+Quickly browse the history of a file from any git repository
+leon-ai / leon : 4,548 stars this month
+🧠 Leon is your open-source personal assistant.
+agalwood / Motrix : 3,478 stars this month
+A full-featured download manager.
+vuejs / vue : 3,064 stars this month
+🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.
+transloadit / uppy : 2,903 stars this month</description>
+    </item>
     
     <item>
       <title>2019年02月Github Javascript开源项目精选</title>

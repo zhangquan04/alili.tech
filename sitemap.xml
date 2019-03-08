@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alili.tech/archive/a5ficy1jp7n/</loc>
+    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/304a32r2py8/</loc>
     <lastmod>2019-03-02T02:30:07+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -52315,7 +52322,7 @@
   
   <url>
     <loc>https://alili.tech/</loc>
-    <lastmod>2019-03-02T02:30:07+00:00</lastmod>
+    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -52336,7 +52343,7 @@
   
   <url>
     <loc>https://alili.tech/archive/</loc>
-    <lastmod>2019-03-02T02:30:07+00:00</lastmod>
+    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -52531,7 +52538,7 @@
   
   <url>
     <loc>https://alili.tech/tags/trending/</loc>
-    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
