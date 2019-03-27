@@ -6,10 +6,28 @@
     <description>Recent content in Mongodb on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 18 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MongoDB - 备份与恢复</title>
+      <link>https://alili.tech/archive/7815p445rtf/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/7815p445rtf/</guid>
+      <description> 最近对自己的的爬虫数据库做了一次迁移,所以在这里记录一下mongodb的备份与恢复
+MongoDB数据备份 mongodump -h dbhost -d dbname -o dbdirectory   -h： MongDB所在服务器地址，例如：127.0.0.1，如果没有改的话一般是：127.0.0.1:27017
+ -d： 需要备份的数据库名字，例如：test
+ -o： 备份的数据存放位置，例如：/home/root/xxx，
+  MongoDB数据恢复 mongorestore -h &amp;lt;hostname&amp;gt;&amp;lt;:port&amp;gt; -d dbname &amp;lt;path&amp;gt;   &amp;ndash;host &amp;lt;:port&amp;gt;, -h &amp;lt;:port&amp;gt;： MongoDB所在服务器地址，默认为： localhost:27017
+ &amp;ndash;db , -d ： 需要备份的数据库名字，例如：test
+ &amp;ndash;drop： 先删除现有的数据,再恢复数据
+ ： 指定备份文件的目录
+ &amp;ndash;dir： 指定备份文件的目录,不能同时指定  和 &amp;ndash;dir 选项。
+  </description>
+    </item>
     
     <item>
       <title>MongoDB - 在Egg中使用MondoDB</title>
