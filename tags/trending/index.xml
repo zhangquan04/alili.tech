@@ -6,10 +6,23 @@
     <description>Recent content in Trending on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/trending/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2019年04月Github Javascript开源项目精选</title>
+      <link>https://alili.tech/archive/ol9qis0n8xe/</link>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/ol9qis0n8xe/</guid>
+      <description>vuejs / vue : 5,220 stars this month
+🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.
+alexfoxy / laxxx : 5,183 stars this month
+Simple &amp;amp; light weight (3kb minified &amp;amp; zipped) vanilla javascript plugin to create smooth &amp;amp; beautiful animations when you scrolllll! Harness the power of the most intuitive interaction and make your websites come alive!
+LisaDziuba / Awesome-Design-Tools : 5,084 stars this month</description>
+    </item>
     
     <item>
       <title>2019年03月Github Javascript开源项目精选</title>
