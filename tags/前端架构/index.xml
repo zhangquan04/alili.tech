@@ -6,10 +6,44 @@
     <description>Recent content in 前端架构 on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 31 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Apr 2019 22:17:36 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>前端微服务化进阶1 - 基于umi的子模块方案</title>
+      <link>https://alili.tech/archive/9xuojm75d2a/</link>
+      <pubDate>Sat, 13 Apr 2019 22:17:36 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/9xuojm75d2a/</guid>
+      <description>距离第一篇聊前端微服务的文章已经时隔大半年,很多人对此感兴趣.
+今天我们就聊一聊,我们如何基于umi来打造一个更完善的前端微服务的子模块.
+如果你用的是react以外的前端技术栈, 我的很多处理做法也可以应用在其他技术栈上.
+希望对你也有所帮助.
+优秀的umi框架 在前端中后台项目上,前端微服务化的需求相对是比较旺盛一些的.
+说到中后台,很多企业都是基于antd的组件来构建自己的项目.
+自去年的see conf之后,蚂蚁的一款可插拔的企业级 react 应用框架 umi发布了.
+这款框架与antd息息相关,antd结合umi使用那是相当的自然与流畅.
+可以说,基于umi与antd构建的项目非常的漂亮.这么优秀的框架,
+如果让他适用于我们的前端微服务架构,岂不美哉?
+umi也有相关的类似微服务方案: https://github.com/umijs/umi-example-monorepo
+如果你的所有项目都是用umi,这种方案也是满足的你需求的.
+如果你对自己的项目日后有
+更高的需求,
+更高的拓展性,
+更自由的技术栈选择,
+更加无差别的开发体验.
+请你往下看,以及关注后续的系列文章.
+基于umi插件机制做到前端微服务化 umi 提供了非常强大的插件机制,正是由于这一点,我们才可以让umi也可以接入到微服务架构中来
+umi插件 umi插件的基本介绍:
+https://umijs.org/zh/plugin/
+umi插件开发 这里介绍了如何开发一个简单的umi插件:
+https://umijs.org/zh/plugin/develop.html
+接入single-spa的umi插件 export default (api, opts) =&amp;gt; { // 以下的所有代码都写在这里面哦 };  定义一个动态的元素,当我们的base app 需要加载子模块的时候,会渲染出子模块需要渲染元素.
+我们的子模块找到了自己模块需要渲染的节点的时候,就会渲染出来.
+const domElementGetterStr = ` function domElementGetter() { let el = document.getElementById(&#39;submodule-page&#39;) if (!el) { el = document.createElement(&#39;div&#39;) el.id = &#39;submodule-page&#39; } let timer = null timer = setInterval(() =&amp;gt; { if (document.</description>
+    </item>
     
     <item>
       <title>Single-SPA微前端框架的使用Demo汇总</title>
