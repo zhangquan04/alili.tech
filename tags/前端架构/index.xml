@@ -27,7 +27,7 @@
 这款框架与antd息息相关,antd结合umi使用那是相当的自然与流畅.
 可以说,基于umi与antd构建的项目非常的漂亮.这么优秀的框架,如果让他适用于我们的前端微服务架构,岂不美哉?
 umi也有相关的类似微服务方案: https://github.com/umijs/umi-example-monorepo
-但是umi提供的方案,有很大的局限性.如果可以接入single-spa的微服务方案,擦出的火花足以燃烧前端大草原.
+但是umi提供的方案,有很大的局限性. 如果可以接入single-spa的微服务方案,嘿嘿嘿~~~
 基于umi插件机制做到前端微服务化 umi 提供了非常强大的插件机制,正是由于这一点,我们才可以让umi也可以接入到微服务架构中来
 umi插件 umi插件的基本介绍:
 https://umijs.org/zh/plugin/
