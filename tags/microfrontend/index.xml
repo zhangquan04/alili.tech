@@ -27,13 +27,13 @@
 这款框架与antd息息相关,antd结合umi使用那是相当的自然与流畅.
 可以说,基于umi与antd构建的项目非常的漂亮.这么优秀的框架,如果让他适用于我们的前端微服务架构,岂不美哉?
 umi也有相关的类似微服务方案: https://github.com/umijs/umi-example-monorepo
-但是umi提供的方案,有很大的局限性. 如果可以接入single-spa的微服务方案,嘿嘿嘿~~~
+但是umi提供的方案,有很大的局限性. 如果可以接入single-spa的微服务方案,独立开发,独立部署等等的前端微服务化红利, 会让你的项目日后有更大的发展空间.
 基于umi插件机制做到前端微服务化 umi 提供了非常强大的插件机制,正是由于这一点,我们才可以让umi也可以接入到微服务架构中来
 umi插件介绍 umi插件的基本介绍:
 https://umijs.org/zh/plugin/
 umi插件开发 这里介绍了如何开发一个简单的umi插件:
 https://umijs.org/zh/plugin/develop.html
-接入single-spa的umi插件 export default (api, opts) =&amp;gt; { // 以下的所有代码都写在这里面哦 };  定义一个动态的元素,当我们的base app 需要加载子模块的时候,会渲染出子模块需要渲染元素.
+接入single-spa的umi插件 export default (api, opts) =&amp;gt; { // 以下的所有代码都写在这里面哦 };  渲染入口处理方法 定义一个动态的元素,当我们的base app 需要加载子模块的时候,会渲染出子模块需要渲染元素.
 我们的子模块找到了自己模块需要渲染的节点的时候,就会渲染出来.
 const domElementGetterStr = ` function domElementGetter() { let el = document.getElementById(&#39;submodule-page&#39;) if (!el) { el = document.createElement(&#39;div&#39;) el.id = &#39;submodule-page&#39; } let timer = null timer = setInterval(() =&amp;gt; { if (document.</description>
     </item>
@@ -174,9 +174,7 @@ npm install micro-auto-config -g # 在项目根目录,用pm2启动该脚本,便�
 你的浏览器不支持视频  Single-SPA  一个用于前端微服务化的JavaScript前端解决方案
  使用Single-SPA之后,你可以这样做:
  (兼容各种技术栈)在同一个页面中使用多种技术框架(React, Vue, AngularJS, Angular, Ember等任意技术框架),并且不需要刷新页面. (无需重构现有代码)使用新的技术框架编写代码,现有项目中的代码无需重构. (更优的性能)每个独立模块的代码可做到按需加载,不浪费额外资源. 每个独立模块可独立运行.  下面是一个微前端的演示页面 (你可能需要科学的上网) https://single-spa.surge.sh/ &amp;gt; 以上是官方例子,但是官方例子中并没有解决一个问题.就是各种技术栈的路由实现方式大相径庭,如何做到路由之间的协同? 后续文章会讲解,如何解决这样的问题.
-单体应用对比前端微服务化 普通的前端单体应用 微前端架构 # Single-SPA的简单用法
-## 1.创建一个HTML文件
-&amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;quot;root&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script src=&amp;quot;single-spa-config.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  2.创建single-spa-config.js 文件 // single-spa-config.js import * as singleSpa from &#39;single-spa&#39;; // 加载react 项目的入口js文件 (模块加载) const loadingFunction = () =&amp;gt; import(&#39;./react/app.js&#39;); // 当url前缀为 /react的时候.返回 true (底层路由) const activityFunction = location =&amp;gt; location.</description>
+单体应用对比前端微服务化 普通的前端单体应用 微前端架构 Single-SPA的简单用法 1.创建一个HTML文件 &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;quot;root&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script src=&amp;quot;single-spa-config.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  2.创建single-spa-config.js 文件 // single-spa-config.js import * as singleSpa from &#39;single-spa&#39;; // 加载react 项目的入口js文件 (模块加载) const loadingFunction = () =&amp;gt; import(&#39;./react/app.js&#39;); // 当url前缀为 /react的时候.返回 true (底层路由) const activityFunction = location =&amp;gt; location.</description>
     </item>
     
     <item>
