@@ -29,7 +29,7 @@
 umi也有相关的类似微服务方案: https://github.com/umijs/umi-example-monorepo
 但是umi提供的方案,有很大的局限性. 如果可以接入single-spa的微服务方案,嘿嘿嘿~~~
 基于umi插件机制做到前端微服务化 umi 提供了非常强大的插件机制,正是由于这一点,我们才可以让umi也可以接入到微服务架构中来
-umi插件 umi插件的基本介绍:
+umi插件介绍 umi插件的基本介绍:
 https://umijs.org/zh/plugin/
 umi插件开发 这里介绍了如何开发一个简单的umi插件:
 https://umijs.org/zh/plugin/develop.html
