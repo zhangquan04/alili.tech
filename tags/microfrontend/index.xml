@@ -6,10 +6,25 @@
     <description>Recent content in Microfrontend on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 13 Apr 2019 22:17:36 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2019 22:17:36 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/microfrontend/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>前端微服务化进阶2 - 本地开发指南</title>
+      <link>https://alili.tech/archive/3xwbcv1w21i/</link>
+      <pubDate>Mon, 22 Apr 2019 22:17:36 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/3xwbcv1w21i/</guid>
+      <description>使用single-spa构建我们的微服务化的前端应用之后,其实有一个问题会一直困扰着我们, 就是如何有效的开发?如何与我们平时开发的前端应用一样简单,容易上手. 今天就以umi子模块为例,希望给到大家一个思路
+今天我就介绍一种方法,希望对大家有帮助.
+模块加载器 是否还记得我之前的模块加载器, https://alili.tech/archive/1a60cede/
+我们只需要将原来模块的加载器,封装成npm包.
+然后在我们开发子模块项目的时候,运行我们的加载器
+// umi src/app.js import bootstrap from &#39;@demo/demo-module-dev-loader&#39; //封装过后的npm包 import store from &#39;store&#39;; // 我们用于通讯的store文件 export async function render(oldRender) { if (process.env.NODE_ENV === &#39;development&#39;) { const main = oldRender(); const res = await window.fetch(&#39;./project.json&#39;); let currentProject = await res.json(); bootstrap({ main, store, prefix: currentProject.prefix }); } else { oldRender(); } }  module-dev-loader 我们的demo-module-dev-loader里一样会有一个 Bootstrap.js文件,我们对他进行一些小的修改.
+import * as singleSpa from &#39;single-spa&#39;; import { registerApp,registerLocal } from &#39;.</description>
+    </item>
     
     <item>
       <title>前端微服务化进阶1 - 基于umi的子模块方案</title>

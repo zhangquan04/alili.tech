@@ -1,0 +1,244 @@
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hugo 0.51"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="wap-font-scale" content="no"><meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34"><meta name="sogou_site_verification" content="E8uWFBcf4a"><meta name="author" content="Fan"><meta name="description" itemprop="description" content="使用single-spa构建我们的微服务化的前端应用之后,其实有一个问题会一直困扰着我们, 就是如何有效的开发?如何与我们平时开发的前端应用一样简单,容易上手. 今天就以umi子模块为例,希望给到大家一个思路
+今天我就介绍一种方法,希望对大家有帮助.
+模块加载器 是否还记得我之前的模块加载器, https://alili.tech/archive/1a60cede/
+我们只需要将原来模块的加载器,"><meta name="keywords" content="微前端,前端微服务化,前端自动化,解决方案,前端难题,Single,SPA"><meta property="og:locale" content="en_US"><meta property="og:title" content="前端微服务化进阶2 - 本地开发指南"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="使用single-spa构建我们的微服务化的前端应用之后,其实有一个问题会一直困扰着我们, 就是如何有效的开发?如何与我们平时开发的前端应用一样简单,容易上手. 今天就以umi子模块为例,希望给到大家一个思路
+今天我就介绍一种方法,希望对大家有帮助.
+模块加载器 是否还记得我之前的模块加载器, https://alili.tech/archive/1a60cede/
+我们只需要将原来模块的加载器,"><meta property="og:site_name" content="Alili"><title>前端微服务化进阶2 - 本地开发指南 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+			  var elem = e.target;
+			  if (elem.tagName.toLowerCase() == 'img') {
+				elem.style.display='none'
+			  }
+			}, true);</script><script type="application/ld+json">{
+				"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+				"@id": "https://alili.tech/archive/3xwbcv1w21i/",
+				"appid": "1613049289050283", 
+				"title": "前端微服务化进阶2 - 本地开发指南 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+				"images": [],
+				"pubDate": "2019-04-22T22:17:36"
+			}</script></head><body><div id="header-post"><a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a> <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a> <span id="menu"><span id="nav"><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></span><br><span id="actions"><ul><li><a class="icon" href="https://alili.tech/archive/9xuojm75d2a/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li><li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li><li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li></ul><span id="i-prev" class="info" style="display:none;">Previous post</span> <span id="i-next" class="info" style="display:none;">Next post</span> <span id="i-top" class="info" style="display:none;">Back to top</span> <span id="i-share" class="info" style="display:none;">Share post</span></span><br><div id="share" style="display: none"><ul><li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https%3a%2f%2falili.tech%2farchive%2f3xwbcv1w21i%2f&text=%e5%89%8d%e7%ab%af%e5%be%ae%e6%9c%8d%e5%8a%a1%e5%8c%96%e8%bf%9b%e9%98%b62%20-%20%e6%9c%ac%e5%9c%b0%e5%bc%80%e5%8f%91%e6%8c%87%e5%8d%97"><i class="fa fa-weibo" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2falili.tech%2farchive%2f3xwbcv1w21i%2f"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a class="icon" href="https://twitter.com/share?url=https%3a%2f%2falili.tech%2farchive%2f3xwbcv1w21i%2f&text=%e5%89%8d%e7%ab%af%e5%be%ae%e6%9c%8d%e5%8a%a1%e5%8c%96%e8%bf%9b%e9%98%b62%20-%20%e6%9c%ac%e5%9c%b0%e5%bc%80%e5%8f%91%e6%8c%87%e5%8d%97"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2falili.tech%2farchive%2f3xwbcv1w21i%2f&title=%e5%89%8d%e7%ab%af%e5%be%ae%e6%9c%8d%e5%8a%a1%e5%8c%96%e8%bf%9b%e9%98%b62%20-%20%e6%9c%ac%e5%9c%b0%e5%bc%80%e5%8f%91%e6%8c%87%e5%8d%97"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2falili.tech%2farchive%2f3xwbcv1w21i%2f&is_video=false&description=%e5%89%8d%e7%ab%af%e5%be%ae%e6%9c%8d%e5%8a%a1%e5%8c%96%e8%bf%9b%e9%98%b62%20-%20%e6%9c%ac%e5%9c%b0%e5%bc%80%e5%8f%91%e6%8c%87%e5%8d%97"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li><li><a class="icon" href="mailto:?subject=%e5%89%8d%e7%ab%af%e5%be%ae%e6%9c%8d%e5%8a%a1%e5%8c%96%e8%bf%9b%e9%98%b62%20-%20%e6%9c%ac%e5%9c%b0%e5%bc%80%e5%8f%91%e6%8c%87%e5%8d%97&body=Check out this article: https%3a%2f%2falili.tech%2farchive%2f3xwbcv1w21i%2f"><i class="fa fa-envelope" aria-hidden="true"></i></a></li><li><a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2falili.tech%2farchive%2f3xwbcv1w21i%2f&title=%e5%89%8d%e7%ab%af%e5%be%ae%e6%9c%8d%e5%8a%a1%e5%8c%96%e8%bf%9b%e9%98%b62%20-%20%e6%9c%ac%e5%9c%b0%e5%bc%80%e5%8f%91%e6%8c%87%e5%8d%97"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li><li><a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f3xwbcv1w21i%2f&title=%e5%89%8d%e7%ab%af%e5%be%ae%e6%9c%8d%e5%8a%a1%e5%8c%96%e8%bf%9b%e9%98%b62%20-%20%e6%9c%ac%e5%9c%b0%e5%bc%80%e5%8f%91%e6%8c%87%e5%8d%97"><i class="fa fa-reddit" aria-hidden="true"></i></a></li><li><a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f3xwbcv1w21i%2f&title=%e5%89%8d%e7%ab%af%e5%be%ae%e6%9c%8d%e5%8a%a1%e5%8c%96%e8%bf%9b%e9%98%b62%20-%20%e6%9c%ac%e5%9c%b0%e5%bc%80%e5%8f%91%e6%8c%87%e5%8d%97"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li><li><a class="icon" href="http://digg.com/submit?url=https%3a%2f%2falili.tech%2farchive%2f3xwbcv1w21i%2f&title=%e5%89%8d%e7%ab%af%e5%be%ae%e6%9c%8d%e5%8a%a1%e5%8c%96%e8%bf%9b%e9%98%b62%20-%20%e6%9c%ac%e5%9c%b0%e5%bc%80%e5%8f%91%e6%8c%87%e5%8d%97"><i class="fa fa-digg" aria-hidden="true"></i></a></li></ul></div><div id="toc"><nav id="TableOfContents"><ul><li><ul><li><a href="#模块加载器">模块加载器</a></li><li><a href="#module-dev-loader">module-dev-loader</a></li><li><a href="#registerlocal-方法展示">registerLocal 方法展示</a></li><li><a href="#umi插件">umi插件</a></li><li><a href="#webpack代理">webpack代理</a></li></ul></li><li><a href="#尾巴">尾巴</a></li><li><a href="#相关系列文章">相关系列文章</a></li></ul></nav></div></span></div><div class="content index width mx-auto px3 my3"><section id="wrapper" class="home"><article class="post" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="posttitle" itemprop="name headline">前端微服务化进阶2 - 本地开发指南</h1><div class="meta"><div class="postdate"><time datetime="2019-04-22" itemprop="datePublished">2019-04-22</time></div><div class="article-tag"><i class="fa fa-eye"></i> <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></div><div class="article-tag"><i class="fa fa-tag"></i> <a href="/tags/%E5%BE%AE%E5%89%8D%E7%AB%AF">微前端</a> <a href="/tags/microfrontend">MicroFrontend</a> <a href="/tags/%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84">前端架构</a></div><div class="article-tag-box"></div></div></header><div class="content" itemprop="articleBody"><p>使用<code>single-spa</code>构建我们的微服务化的前端应用之后,其实有一个问题会一直困扰着我们, 就是如何有效的开发?如何与我们平时开发的前端应用一样简单,容易上手. 今天就以umi子模块为例,希望给到大家一个思路</p><p>今天我就介绍一种方法,希望对大家有帮助.</p><h2 id="模块加载器">模块加载器</h2><p>是否还记得我之前的模块加载器, <a href="https://alili.tech/archive/1a60cede/">https://alili.tech/archive/1a60cede/</a></p><p>我们只需要将原来模块的加载器,封装成npm包.</p><p>然后在我们开发子模块项目的时候,运行我们的加载器</p><pre><code class="language-js">// umi src/app.js
+import bootstrap from '@demo/demo-module-dev-loader' //封装过后的npm包
+import store from 'store'; // 我们用于通讯的store文件
+
+export async function render(oldRender) {
+  if (process.env.NODE_ENV === 'development') {
+    const main = oldRender();
+    const res = await window.fetch('./project.json');
+    let currentProject = await res.json();
+    bootstrap({
+      main,
+      store,  
+      prefix: currentProject.prefix
+    });
+  } else {
+    oldRender();
+  }
+}
+
+</code></pre><h2 id="module-dev-loader">module-dev-loader</h2><p>我们的demo-module-dev-loader里一样会有一个 Bootstrap.js文件,我们对他进行一些小的修改.</p><pre><code class="language-js">import * as singleSpa from 'single-spa';
+import { registerApp,registerLocal } from './Register'
+
+export default   async  function bootstrap (local) {
+    // 拿到我们的项目配置文件,但是我们的本地是没有这个文件的.
+
+    // 我们需要通过webpack代理到我们的线上测试环境,来拿到这个文件
+    // 我们需要通过webpack代理到我们的线上测试环境,来拿到这个文件
+    // 我们需要通过webpack代理到我们的线上测试环境,来拿到这个文件
+
+    // 重要的事情说三遍
+    const projectConfig = await window.SystemJS.import('/project.config.js')
+    const res = await window.fetch('/project.json')
+    const currentProject = await res.json()
+    let {projects} = projectConfig;
+
+    // 移除当前项目,因为当前项目会使用registerLocal方法注册
+    projects = projects.filter(ele =&gt; ele.name !== currentProject.name)
+
+    // 注册我们的线上测试环境的
+    for (let index = 0; index &lt; projects.length; index++) {
+        const project = projects[index];
+        await registerApp({
+            name: project.name,
+            main: `${project.main}`,
+            store: project.store,
+            base: project.base,
+            prefix: project.prefix
+        });
+    }
+    // 重点!!!
+    // 注册本地正在开发的模块
+    local &amp;&amp; registerLocal(local)
+    singleSpa.start();
+}
+
+</code></pre><h2 id="registerlocal-方法展示">registerLocal 方法展示</h2><pre><code class="language-js">// Register.js
+// 在原来registerApp上做了一些删减,大概的原理是一模一样的
+export function registerLocal({base,main,prefix,store,name='local'}){
+  // 导入store模块
+let storeModule = {}, customProps = { globalEventDistributor: globalEventDistributor };
+
+storeModule = store &amp;&amp; { storeInstance: null };
+
+  // 注册应用于事件派发器
+  if (storeModule.storeInstance &amp;&amp; globalEventDistributor) {
+    // 取出 redux storeInstance
+    customProps.store = storeModule.storeInstance;
+    // 注册到全局
+    globalEventDistributor.registerStore(storeModule.storeInstance);
+  }
+
+  singleSpa.registerApplication(name, async ()=&gt; main, base ? (() =&gt; true) : hashPrefix({prefix}),customProps);
+}
+
+
+// 原来的registerApp方法,与以前一模一样,没有改动.
+// 为了方便对比registerLocal,所以列出来 供大家参考
+export async function registerApp(params) {
+// 导入store模块
+let storeModule = {}, customProps = { globalEventDistributor: globalEventDistributor };
+
+// 尝试导入store
+try {
+    storeModule = params.store ? await window.SystemJS.import(params.store) : { storeInstance: null };
+} catch (e) {
+    console.log(`Could not load store of app ${params.name}.`, e);
+    //如果失败则不注册该模块
+    return
+}
+  // 注册应用于事件派发器
+  if (storeModule.storeInstance &amp;&amp; globalEventDistributor) {
+    // 取出 redux storeInstance
+    customProps.store = storeModule.storeInstance;
+
+    // 注册到全局
+    globalEventDistributor.registerStore(storeModule.storeInstance);
+  }
+
+  singleSpa.registerApplication(params.name, async ()=&gt; await window.SystemJS.import(params.main), params.base ? (() =&gt; true) : hashPrefix(params), customProps);
+
+}
+
+
+
+</code></pre><h2 id="umi插件">umi插件</h2><p>我们的umi插件也需要修改</p><pre><code class="language-js">// 还是原来的元素加载方法
+  const domElementGetterStr = `
+      function domElementGetter() {
+        let el = document.getElementById('submodule-page')
+        if (!el) {
+          el = document.createElement('div')
+          el.id = 'submodule-page'
+        }
+        let timer = null
+        timer = setInterval(() =&gt; {
+          if (document.querySelector('#submoduleContent.submoduleContent') &amp;&amp; !document.querySelector('#submodule-page')) {
+                document.querySelector('#submoduleContent.submoduleContent').appendChild(el)
+                clearInterval(timer)
+          }
+        }, 100)
+
+        return el
+    }`
+
+
+// 在umi 导入single-spa-react模块
+// 并且封装我们的rootElement 组件,拿到我们的生命周期实例
+    api.addEntryCodeAhead(`
+    import singleSpaReact from 'single-spa-react';
+    let reactLifecycles;
+    reactLifecycles =  singleSpaReact({
+        React,
+        ReactDOM,
+        rootComponent: (spa) =&gt; window.g_plugins.apply('rootContainer', {
+        initialValue: React.createElement(require('./router').default),
+        }),
+        domElementGetter: ${options.base?`() =&gt; document.getElementById('root')`:domElementGetterStr}
+    });
+  `);
+
+
+      // 开发环境
+    if (process.env.NODE_ENV === 'development') {
+      // 替换我们的渲染函数为以下内容,直接返回子模块的声明周期
+      // 这样我们就可以在一开始写的的app.js里面的render函数,拿到这些返回的东西呢
+      // 通过我们修改过后的模块加载器,注册到single-spa中
+      api.modifyEntryRender(`
+      const bootstrap = [
+        reactLifecycles.bootstrap,
+        ];
+
+        const mount = [
+        reactLifecycles.mount,
+        ];
+
+        const unmount = [
+        reactLifecycles.unmount,
+        ];
+        return {
+          bootstrap,
+          mount,
+          unmount
+        }
+    `);
+
+    }
+
+// 经过以上的修改之后,我们的umi会失去热更新的功能,
+// 只能退而求其次,主动刷新浏览器,不过也不伤大雅
+// 编译完成之后,主动刷新浏览器
+  api.onDevCompileDone(() =&gt; {
+    api.refreshBrowser()
+  });
+</code></pre><h2 id="webpack代理">webpack代理</h2><p>别忘了修改代理配置,为了可以直接拿到所有的项目位置</p><pre><code class="language-js">{
+    devServer: {
+    proxy: {
+      '/project.config.js': {
+        // 你的测试环境地址
+        target: 'https://demo.xyz/',
+      }
+    }
+  },
+}
+</code></pre><h1 id="尾巴">尾巴</h1><p>所有的前端微服务化的关键点,今天算是全部写完了. 经过了大半年的思考与探索,为去年9月份的自问自答的:</p><p><a href="http://alili.tech/archive/ea599f7c/">前端微服务化解决方案1 - 思考</a> 我们即将面临以下问题:</p><ul><li>我们如何实现在一个页面里渲染多种技术栈?</li><li>不同技术栈的独立模块之间如何通讯?</li><li>如何通过路由渲染到正确的模块?</li><li>在不同技术栈之间的路由该如何正确触发?</li><li>项目代码别切割之后,通过何种方式合并到一起?</li><li>我们的每一个模块项目如何打包?</li><li>前端微服务化后我们该如何编写我们的代码?</li><li>独立团队之间该如何协作?</li></ul><p>现在已经全部得出了答案.</p><h1 id="相关系列文章">相关系列文章</h1><p><a href="https://alili.tech/tags/microfrontend/">https://alili.tech/tags/microfrontend/</a></p><h2>本文链接：</h2><a href="https://alili.tech/archive/3xwbcv1w21i/" target="_blank">https://alili.tech/archive/3xwbcv1w21i/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
+        el: '.blog-post-comments', 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', 
+        placeholder: '说点什么?', 
+        avatar:'robohash',
+        notify:true,
+        verify:true
+    });</script></section></div><footer id="footer"><div class="footer-left">Copyright © 2019 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+  if(location.host!=='alili.tech')return;
+  var ga = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-129382678-1';       
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(ga, s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129382678-1');
+})()</script><script>(function(){
+    if(location.host!=='alili.tech')return;
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>
