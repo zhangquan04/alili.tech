@@ -6,10 +6,27 @@
     <description>Recent content in Trending on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 08 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/trending/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2019年05月Github Javascript开源项目精选</title>
+      <link>https://alili.tech/archive/mrwjjr0ca4i/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/mrwjjr0ca4i/</guid>
+      <description>azl397985856 / leetcode : 4,760 stars this month
+LeetCode Solutions: A Record of My Problem Solving Journey.( leetcode题解，记录自己的leetcode解题之路。)
+sveltejs / svelte : 4,511 stars this month
+Cybernetically enhanced web apps
+vuejs / vue : 3,481 stars this month
+🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.
+LisaDziuba / Awesome-Design-Tools : 3,314 stars this month
+The best design tools for everything 👉
+Louiszhai / tool : 3,226 stars this month</description>
+    </item>
     
     <item>
       <title>2019年04月Github Javascript开源项目精选</title>
