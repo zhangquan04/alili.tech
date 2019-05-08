@@ -158,8 +158,9 @@ amd模块 在之前的文章,我们有提到我们的加载器,是基于System.j
  ps. 我们必须要解决这些问题,模块与模块之间的通讯太有必要了.
  打破壁垒 在github上single-spa-portal-example,给出来一解决方案.
 基于Redux实现前端微服务的消息总线(不会影响在编写代码的时候使用其他的状态管理工具).
-大概思路是这样的: 每一个模块,会对外提供一个 Store.js.这个文件 里面的内容,大致是这样的.
-import { createStore, combineReducers } from &#39;redux&#39; const initialState = { refresh: 0 } function render(state = initialState, action) { switch (action.type) { case &#39;REFRESH&#39;: return { ...state, refresh: state.refresh + 1 } default: return state } } // 向外输出 Reducer export const storeInstance = createStore(combineReducers({ namespace: () =&amp;gt; &#39;base&#39;, render }))  对于这样的代码,有没有很熟悉?</description>
+大概思路是这样的: 每一个模块,会对外提供一个 Store.js.
+这个文件里面的内容,大致是这样的.
+import { createStore, combineReducers } from &#39;redux&#39; const initialState = { refresh: 0 } function render(state = initialState, action) { switch (action.type) { case &#39;REFRESH&#39;: return { ...state, refresh: state.refresh + 1 } default: return state } } // 向外输出 Store export const storeInstance = createStore(combineReducers({ namespace: () =&amp;gt; &#39;base&#39;, render }))  对于这样的代码,有没有很熟悉?</description>
     </item>
     
     <item>
