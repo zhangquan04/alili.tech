@@ -6,10 +6,19 @@
     <description>Recent content on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 08 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2019 22:17:36 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>前端微服务化进阶3 - 组件多模块共享</title>
+      <link>https://alili.tech/archive/qh7x5i5szfh/</link>
+      <pubDate>Sun, 12 May 2019 22:17:36 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/qh7x5i5szfh/</guid>
+      <description>相关系列文章 https://alili.tech/tags/microfrontend/</description>
+    </item>
     
     <item>
       <title>2019年05月Github Javascript开源项目精选</title>
