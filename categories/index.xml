@@ -10,14 +10,5 @@
 	<atom:link href="https://alili.tech/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Reprint</title>
-      <link>https://alili.tech/categories/reprint/</link>
-      <pubDate>Sat, 02 Mar 2019 02:30:07 +0000</pubDate>
-      
-      <guid>https://alili.tech/categories/reprint/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
