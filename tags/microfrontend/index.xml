@@ -33,11 +33,7 @@
 react: https://react.docschina.org/docs/web-components.html
 vue : https://github.com/vuejs/vue-web-component-wrapper
 angular: https://www.angular.cn/guide/elements#transforming-components-to-custom-elements
- Web Components 包括以下四种技术
- Shadow DOM 一种可以在document下组合多个同级别并且可以项目作用的DOM树的方法，因此可以更好完善DOM的构成
-Custom Elements 一种可以允许开发者在document中定义并使用的新的dom元素类型，即自定义元素
-HTML Templates 模板没什么可说了，在标准实现之前其实我们一直都在用js来实现该方式
-HTML Imports 一种允许一个html文档在别的htmldocuments中包含和复用的方法
+关于Web Components 的详细介绍 https://developer.mozilla.org/zh-CN/docs/Web/Web_Components
 加载性能 如果一个页面依赖了很多跨框架的组件,必然出现网络方面的性能问题.
 我们会在请求的中间加一层node服务,当页面请求多个跨框架的组件的时候,我们的node就会合并成单个文件,并且保存在硬盘上.
 所以说,当这个页面被请求过之后,页面零散的组件便会合并在一起,第二次其他用户请求就不会有这种合并文件的处理,直接返回静态资源给客户端.
