@@ -6,10 +6,19 @@
     <description>Recent content in Trending on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/trending/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2019年08月Github Javascript开源项目精选</title>
+      <link>https://alili.tech/archive/qzbmhi76rl/</link>
+      <pubDate>Thu, 08 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/qzbmhi76rl/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>2019年07月Github Javascript开源项目精选</title>
