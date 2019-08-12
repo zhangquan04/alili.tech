@@ -6,29 +6,29 @@
     <description>Recent content in Trending on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 09 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/trending/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2019年08月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/ir0772ttr4/</link>
-      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      <link>https://alili.tech/archive/9kry2k4dd7u/</link>
+      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://alili.tech/archive/ir0772ttr4/</guid>
-      <description>chinese-poetry / chinese-poetry : 18,604 stars this month
+      <guid>https://alili.tech/archive/9kry2k4dd7u/</guid>
+      <description>chinese-poetry / chinese-poetry : 18,694 stars this month
 最全中华古诗词数据库, 唐宋两朝近一万四千古诗人, 接近5.5万首唐诗加26万宋诗. 两宋时期1564位词人，21050首词。
-crmeb / CRMEB : 952 stars this month
-开源微信公众号商城 小程序商城系统，带分销、拼团、秒杀、砍价、优惠券、积分等功能，前后端全部开源，更是一套方便二次开发的框架
-haotian-wang / google-access-helper : 2,586 stars this month
+haotian-wang / google-access-helper : 2,686 stars this month
 谷歌访问助手破解版
-aosabook / 500lines : 22,728 stars this month
+crmeb / CRMEB : 1,010 stars this month
+开源微信公众号商城 小程序商城系统，带分销、拼团、秒杀、砍价、优惠券、积分等功能，前后端全部开源，更是一套方便二次开发的框架
+amejiarosario / dsa.js-data-structures-algorithms-javascript : 4,136 stars this month
+Data Structures and Algorithms explained and implemented in JavaScript
+aosabook / 500lines : 22,761 stars this month
 500 Lines or Less
-cube-js / cube.js : 4,423 stars this month
-📊 Cube.js - Open Source Analytics Framework
-zeit / next.js : 39,819 stars this month
-The React Framework</description>
+cube-js / cube.js : 4,455 stars this month
+📊 Cube.</description>
     </item>
     
     <item>
