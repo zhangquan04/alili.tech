@@ -25,9 +25,10 @@ GitLab Runner 所有的Gitlab任务都会放在Gitlab Runner中执行.
 GitLab Runner的安装环境,根据你的需求而定,一个gitlab 可以注册的Runner是没有限制的.
 普通的前端项目直接安装在Linux中就可以了,如果是小程序或者RN这种项目,目前我是直接找了一台mac mini来安装Runner.
 GitLab Runner安装 安装Runner 非常简单, 这里晒出Gitlab的官方安装教程,你可以根据你的系统环境自行下载.
-安装Gitlab Runner
+安装Gitlab Runner 官方文档
 注册Runner Runner安装好之后,想要关联到你的Gitlab,需要注册Runner.
-这里给大家介绍群组的runner注册方式,个人项目的runner方式注册基本一致 注册Gitlab Runner
+这里给大家介绍群组的runner注册方式,个人项目的runner方式注册基本一致
+注册Gitlab Runner 官方文档
 大致流程为:
  打开Gitlab网站,选择群组-&amp;gt; 设置-&amp;gt; CI/CD -&amp;gt; 展开Runner -&amp;gt; 你会看到注册Runner的Token与Url 安装好Runner的机器上,运行 sudo gitlab-runner register 输入 你Gitlab的 URL 输入 Token 输入 Runner 的名字 选择 Runner 的类型,没有特殊需求直接选shell 完成  配置Runner Runner的配置文件会以执行的用户身份不同而不同
  当GitLab Runner以root身份执行时 /etc/gitlab-runner/config.toml 当GitLab Runner以非root身份执行时 ~/.gitlab-runner/config.toml  Runner的全局配置 这里我只说关键的两点</description>
