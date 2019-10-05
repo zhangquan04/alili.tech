@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Leetcode on Alili</title>
+    <title>Leetcode on Hello Alili</title>
     <link>https://alili.tech/tags/leetcode/</link>
-    <description>Recent content in Leetcode on Alili</description>
+    <description>Recent content in Leetcode on Hello Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 19 Jan 2019 00:00:00 +0000</lastBuildDate>

@@ -3,12 +3,12 @@
 这样我们就可以在代码审查中节约出很多时间,来做更多的其他更有意义的事情.
 git hooks 在git中提供了hook,就是在触发代码提交,push等一系列操作的时候,提供了触发其他程序的钩子.
 如何操作,本文不多赘述.
-有兴趣的"><meta name="keywords" content="Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="使用husky提升Code Review的效率"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="在code review的时候,代码风格是其中审查的指标之一.在审查代码风格其实是有一定工作量的.
+有兴趣的"><meta name="keywords" content="Hello Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.js, Angular.js, node.js"><meta property="og:locale" content="en_US"><meta property="og:title" content="使用husky提升Code Review的效率"><meta property="og:image" content="https://alili.tech/images/logo2.png"><meta property="og:description" content="在code review的时候,代码风格是其中审查的指标之一.在审查代码风格其实是有一定工作量的.
 为了减少代码审查的工作量,我们何不把代码风格在提交代码之前就规范掉?
 这样我们就可以在代码审查中节约出很多时间,来做更多的其他更有意义的事情.
 git hooks 在git中提供了hook,就是在触发代码提交,push等一系列操作的时候,提供了触发其他程序的钩子.
 如何操作,本文不多赘述.
-有兴趣的"><meta property="og:site_name" content="Alili"><title>使用husky提升Code Review的效率 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
+有兴趣的"><meta property="og:site_name" content="Hello Alili"><title>使用husky提升Code Review的效率 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title><link rel="shortcut icon" href="https://alili.tech/images/favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://alili.tech/lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="https://alili.tech/lib/justified-gallery/justifiedGallery.min.css"><link rel="stylesheet" href="https://alili.tech/css/style.css"><script src="https://alili.tech/lib/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://alili.tech/lib/jquery/jquery.min.js"></script><script>document.addEventListener("error", function (e) {
 			  var elem = e.target;
 			  if (elem.tagName.toLowerCase() == 'img') {
 				elem.style.display='none'

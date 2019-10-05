@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nodejs on Alili</title>
+    <title>Nodejs on Hello Alili</title>
     <link>https://alili.tech/tags/nodejs/</link>
-    <description>Recent content in Nodejs on Alili</description>
+    <description>Recent content in Nodejs on Hello Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 29 Nov 2018 20:32:05 +0000</lastBuildDate>

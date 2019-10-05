@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>React on Alili</title>
+    <title>React on Hello Alili</title>
     <link>https://alili.tech/tags/react/</link>
-    <description>Recent content in React on Alili</description>
+    <description>Recent content in React on Hello Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 05 Nov 2017 19:33:33 +0000</lastBuildDate>

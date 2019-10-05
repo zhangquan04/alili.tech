@@ -1188,12 +1188,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/",
-        "title": "Alili",
-        "tags": [],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/tags/angular/",
         "title": "Angular",
         "tags": [],
@@ -1250,6 +1244,12 @@
     {
         "uri": "https://alili.tech/tags/git/",
         "title": "Git",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/",
+        "title": "Hello Alili",
         "tags": [],
         "description": ""
     },

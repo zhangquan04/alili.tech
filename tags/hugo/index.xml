@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Alili</title>
+    <title>Hugo on Hello Alili</title>
     <link>https://alili.tech/tags/hugo/</link>
-    <description>Recent content in Hugo on Alili</description>
+    <description>Recent content in Hugo on Hello Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 20 Nov 2018 16:14:25 +0000</lastBuildDate>
@@ -37,7 +37,7 @@ language: node_js node_js: 10.13.0 install: - wget https://github.com/gohugoio/h
 在hugo中有支持一种特性叫做 Shortcodes.简单的来说就是一个可以传参的小模板.
 创建Shortcodes 创建 ./layouts/Shortcodes/echarts.html文件
 &amp;lt;div id=&amp;quot;echarts{{ .Get `height` }}&amp;quot; style=&amp;quot;width: 100%;height: {{.Get `height`}}px;margin: 0 auto&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script src=&amp;quot;https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; // 基于准备好的dom，初始化echarts实例 var myChart = echarts.init(document.getElementById(&#39;echarts{{ .Get `height` }}&#39;)); // 指定图表的配置项和数据 var option = JSON.parse({{ .Inner }}) // 使用刚指定的配置项和数据显示图表。 myChart.setOption(option); &amp;lt;/script&amp;gt;  使用 在 Shortcodes 插入echarts的配置数据,这样你就可以再页面中看到一个完整的图表了
-Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.每天碰到那么多问题,终归还是需要一个记录的地方. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.</description>
+Hello Alili | 前端大爆炸! - WEB BANG! BANG!! BANG!!! 前端大爆炸,一个前端技术博客.每天碰到那么多问题,终归还是需要一个记录的地方. 本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有， Hello Alili, 前端大爆炸, WEB BANG BANG BANG, web前端博客, 前端模块化, 前端工程化, 前端数据监控, 性能优化, 网页制作, 前端, js, html5, css, 踩坑小报告, 微前端, 树莓派, 前端开发, 区块链, 网络, Mongodb, Vue.</description>
     </item>
     
     <item>

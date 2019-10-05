@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Trending on Alili</title>
+    <title>Trending on Hello Alili</title>
     <link>https://alili.tech/tags/trending/</link>
-    <description>Recent content in Trending on Alili</description>
+    <description>Recent content in Trending on Hello Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 08 Sep 2019 00:00:00 +0000</lastBuildDate>
