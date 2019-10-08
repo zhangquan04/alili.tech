@@ -6,10 +6,30 @@
     <description>Recent content in Trending on Hello Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 08 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/trending/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2019年10月Github Javascript开源项目精选</title>
+      <link>https://alili.tech/archive/rg321p6ylve/</link>
+      <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/rg321p6ylve/</guid>
+      <description>qianguyihao/Web : 7,460 stars this month
+前端入门和进阶学习笔记，超详细的Web前端学习图文教程。从零开始学前端，做一名精致的前端工程师。持续更新&amp;hellip;
+goldbergyoni/nodebestpractices : 34,100 stars this month
+✅ The largest Node.js best practices list (September 2019)
+haotian-wang/google-access-helper : 4,936 stars this month
+谷歌访问助手破解版
+tabler/tabler : 19,502 stars this month
+Tabler is free and open-source HTML Dashboard UI Kit built on Bootstrap
+gatsbyjs/gatsby : 38,939 stars this month
+Build blazing fast, modern apps and websites with React
+hasura/graphql-engine : 12,212 stars this month
+Blazing fast, instant realtime GraphQL APIs on Postgres with fine grained access control, also trigger webhooks on database events.</description>
+    </item>
     
     <item>
       <title>2019年09月Github Javascript开源项目精选</title>
