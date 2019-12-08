@@ -6,10 +6,27 @@
     <description>Recent content in Trending on Hello Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 08 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/trending/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2019年12月Github Javascript开源项目精选</title>
+      <link>https://alili.tech/archive/hsxx9ggij17/</link>
+      <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/hsxx9ggij17/</guid>
+      <description>menzi11/BullshitGenerator : 11,207 stars this month
+Needs to generate some texts to test if my GUI rendering codes good or not. so I made this.
+algorithm-visualizer/algorithm-visualizer : 27,310 stars this month
+🎆Interactive Online Platform that Visualizes Algorithms from Code
+nodejs/node : 66,301 stars this month
+Node.js JavaScript runtime ✨🐢🚀✨
+jonasschmedtmann/complete-javascript-course : 2,578 stars this month
+Starter files, final projects and FAQ for my Complete JavaScript course
+30-seconds/30-seconds-of-code : 52,898 stars this month</description>
+    </item>
     
     <item>
       <title>2019年11月Github Javascript开源项目精选</title>
