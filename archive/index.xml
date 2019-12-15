@@ -6,65 +6,10 @@
     <description>Recent content in Archives on Hello Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 08 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Sep 2019 23:15:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/archive/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>2019年12月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/hsxx9ggij17/</link>
-      <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/hsxx9ggij17/</guid>
-      <description>menzi11/BullshitGenerator : 11,207 stars this month
-Needs to generate some texts to test if my GUI rendering codes good or not. so I made this.
-algorithm-visualizer/algorithm-visualizer : 27,310 stars this month
-🎆Interactive Online Platform that Visualizes Algorithms from Code
-nodejs/node : 66,301 stars this month
-Node.js JavaScript runtime ✨🐢🚀✨
-jonasschmedtmann/complete-javascript-course : 2,578 stars this month
-Starter files, final projects and FAQ for my Complete JavaScript course
-30-seconds/30-seconds-of-code : 52,898 stars this month</description>
-    </item>
-    
-    <item>
-      <title>2019年11月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/8t3kyloeosq/</link>
-      <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/8t3kyloeosq/</guid>
-      <description>vuejs/vue : 151,757 stars this month
-🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.
-mrdoob/three.js : 56,165 stars this month
-JavaScript 3D library.
-sveltejs/svelte : 25,984 stars this month
-Cybernetically enhanced web apps
-30-seconds/30-seconds-of-code : 51,182 stars this month
-A curated collection of useful JavaScript snippets that you can understand in 30 seconds or less.
-ly525/luban-h5 : 1,388 stars this month
-en: web design tool || mobile page builder/editor || mini webflow for mobile page.</description>
-    </item>
-    
-    <item>
-      <title>2019年10月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/rg321p6ylve/</link>
-      <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/rg321p6ylve/</guid>
-      <description>qianguyihao/Web : 7,460 stars this month
-前端入门和进阶学习笔记，超详细的Web前端学习图文教程。从零开始学前端，做一名精致的前端工程师。持续更新&amp;hellip;
-goldbergyoni/nodebestpractices : 34,100 stars this month
-✅ The largest Node.js best practices list (September 2019)
-haotian-wang/google-access-helper : 4,936 stars this month
-谷歌访问助手破解版
-tabler/tabler : 19,502 stars this month
-Tabler is free and open-source HTML Dashboard UI Kit built on Bootstrap
-gatsbyjs/gatsby : 38,939 stars this month
-Build blazing fast, modern apps and websites with React
-hasura/graphql-engine : 12,212 stars this month
-Blazing fast, instant realtime GraphQL APIs on Postgres with fine grained access control, also trigger webhooks on database events.</description>
-    </item>
     
     <item>
       <title>持续集成 - 使用Gilab CI进行前端项目的持续集成</title>
@@ -87,54 +32,6 @@ GitLab Runner安装 安装Runner 非常简单, 这里晒出Gitlab的官方安装
 大致流程为:
  打开Gitlab网站,选择群组-&amp;gt; 设置-&amp;gt; CI/CD -&amp;gt; 展开Runner -&amp;gt; 你会看到注册Runner的Token与Url 安装好Runner的机器上,运行 sudo gitlab-runner register 输入 你Gitlab的 URL 输入 Token 输入 Runner 的名字 选择 Runner 的类型,没有特殊需求直接选shell 完成  配置Runner Runner的配置文件会以执行的用户身份不同而不同
  当GitLab Runner以root身份执行时 /etc/gitlab-runner/config.toml 当GitLab Runner以非root身份执行时 ~/.gitlab-runner/config.toml  Runner的全局配置 这里我只说关键的两点</description>
-    </item>
-    
-    <item>
-      <title>2019年09月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/0pq4nik4yfhd/</link>
-      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/0pq4nik4yfhd/</guid>
-      <description>0wczar/airframe-react : 1,771 stars this month
-Free Open Source High Quality Dashboard based on Bootstrap 4 &amp;amp; React 16: http://dashboards.webkom.co/react/airframe
-yangshun/tech-interview-handbook : 35,048 stars this month
-💯 Materials to help you rock your next coding interview
-qianguyihao/Web : 6,631 stars this month
-前端入门和进阶学习笔记，超详细的Web前端学习图文教程。从零开始学前端，做一个Web全栈工程师。持续更新&amp;hellip;
-bilibili/flv.js : 16,195 stars this month
-HTML5 FLV Player
-nondanee/UnblockNeteaseMusic : 5,486 stars this month
-Revive unavailable songs for Netease Cloud Music
-haotian-wang/google-access-helper : 4,183 stars this month</description>
-    </item>
-    
-    <item>
-      <title>2019年08月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/qansmhd8zig/</link>
-      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/qansmhd8zig/</guid>
-      <description>chinese-poetry / chinese-poetry : 18,694 stars this month
-最全中华古诗词数据库, 唐宋两朝近一万四千古诗人, 接近5.5万首唐诗加26万宋诗. 两宋时期1564位词人，21050首词。
-haotian-wang / google-access-helper : 2,686 stars this month
-谷歌访问助手破解版
-crmeb / CRMEB : 1,010 stars this month
-开源微信公众号商城 小程序商城系统，带分销、拼团、秒杀、砍价、优惠券、积分等功能，前后端全部开源，更是一套方便二次开发的框架
-amejiarosario / dsa.js-data-structures-algorithms-javascript : 4,136 stars this month
-Data Structures and Algorithms explained and implemented in JavaScript
-aosabook / 500lines : 22,761 stars this month
-500 Lines or Less
-cube-js / cube.js : 4,455 stars this month
-📊 Cube.</description>
-    </item>
-    
-    <item>
-      <title>2019年07月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/y8ih64630n/</link>
-      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/y8ih64630n/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -172,22 +69,6 @@ angular: https://www.angular.cn/guide/elements#transforming-components-to-custom
     </item>
     
     <item>
-      <title>2019年06月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/terr0oi2tvn/</link>
-      <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/terr0oi2tvn/</guid>
-      <description>azl397985856 / leetcode : 5,137 stars this month
-LeetCode Solutions: A Record of My Problem Solving Journey.( leetcode题解，记录自己的leetcode解题之路。)
-metafizzy / zdog : 5,220 stars this month
-Flat, round, designer-friendly pseudo-3D engine for canvas &amp;amp; SVG
-algorithm-visualizer / algorithm-visualizer : 4,100 stars this month
-🎆Interactive Online Platform that Visualizes Algorithms from Code
-vuejs / vue : 3,248 stars this month
-🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.</description>
-    </item>
-    
-    <item>
       <title>前端微服务化进阶3 - 跨模块共享组件</title>
       <link>https://alili.tech/archive/qh7x5i5szfh/</link>
       <pubDate>Sun, 12 May 2019 22:17:36 +0000</pubDate>
@@ -203,23 +84,6 @@ vuejs / vue : 3,248 stars this month
 import React from &#39;react&#39;; import dynamic from &#39;umi/dynamic&#39;; import PageLoading from &#39;@/components/PageLoading&#39; export const Demo = dynamic(import( `../Demo`), {loading: () =&amp;gt; &amp;lt;PageLoading /&amp;gt;}) export default Demo;  对外提供获取动态组件的方法 在加载Base模块的时候,我们可以在window下暴露一个调用该模块动态组件的方法
 window.getDynamicComponent = async function(name) { let component = null; component = await import(`@/components/dynamic/${name}`); return component[name]; };  子模块调用公共组件 因为base模块提供了一个获取公共组件的全局方法, 我们就可以在任何模块任何需要调用公共组件的地方去是使用它了.
 // 获取组件 let component = await window.</description>
-    </item>
-    
-    <item>
-      <title>2019年05月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/mrwjjr0ca4i/</link>
-      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/mrwjjr0ca4i/</guid>
-      <description>azl397985856 / leetcode : 4,760 stars this month
-LeetCode Solutions: A Record of My Problem Solving Journey.( leetcode题解，记录自己的leetcode解题之路。)
-sveltejs / svelte : 4,511 stars this month
-Cybernetically enhanced web apps
-vuejs / vue : 3,481 stars this month
-🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.
-LisaDziuba / Awesome-Design-Tools : 3,314 stars this month
-The best design tools for everything 👉
-Louiszhai / tool : 3,226 stars this month</description>
     </item>
     
     <item>
@@ -264,19 +128,6 @@ const domElementGetterStr = ` function domElementGetter() { let el = document.ge
     </item>
     
     <item>
-      <title>2019年04月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/ol9qis0n8xe/</link>
-      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/ol9qis0n8xe/</guid>
-      <description>vuejs / vue : 5,220 stars this month
-🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.
-alexfoxy / laxxx : 5,183 stars this month
-Simple &amp;amp; light weight (3kb minified &amp;amp; zipped) vanilla javascript plugin to create smooth &amp;amp; beautiful animations when you scrolllll! Harness the power of the most intuitive interaction and make your websites come alive!
-LisaDziuba / Awesome-Design-Tools : 5,084 stars this month</description>
-    </item>
-    
-    <item>
       <title>记一次MongoDB迁移 - 备份与恢复</title>
       <link>https://alili.tech/archive/7815p445rtf/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
@@ -292,23 +143,6 @@ MongoDB数据备份 mongodump -h dbhost -d dbname -o dbdirectory   -h： MongDB�
  ： 指定备份文件的目录
  &amp;ndash;dir： 指定备份文件的目录,不能同时指定  和 &amp;ndash;dir 选项。
   </description>
-    </item>
-    
-    <item>
-      <title>2019年03月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/a5ficy1jp7n/</link>
-      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/a5ficy1jp7n/</guid>
-      <description>pomber / git-history : 6,754 stars this month
-Quickly browse the history of a file from any git repository
-leon-ai / leon : 4,548 stars this month
-🧠 Leon is your open-source personal assistant.
-agalwood / Motrix : 3,478 stars this month
-A full-featured download manager.
-vuejs / vue : 3,064 stars this month
-🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.
-transloadit / uppy : 2,903 stars this month</description>
     </item>
     
     <item>
@@ -365,23 +199,6 @@ JS Linter 进化史 本文主要介绍下 JS Linter 进化史中的三个里程�
 ESLint
 互联网企业数据安全体系建设 全球的趋势是越来越重视隐私，在安全领域中，数据安全这个子领域也重新被提到了一个新的高度，本文作者要讲的正是数据安全建设。
 数据,安全</description>
-    </item>
-    
-    <item>
-      <title>2019年02月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/0b92giccynog/</link>
-      <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/0b92giccynog/</guid>
-      <description>juliangarnier / anime : 4,246 stars this month
-JavaScript animation engine
-vuejs / vue : 3,563 stars this month
-🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.
-nukeop / nuclear : 3,654 stars this month
-Desktop music player for streaming from free sources
-myliang / x-spreadsheet : 3,351 stars this month
-A web-based JavaScript（canvas） spreadsheet
-facebook / react : 3,008 stars this month</description>
     </item>
     
     <item>
@@ -588,22 +405,6 @@ jsconfig.json 是什么? 如果你的项目中有一个 jsconfig.json文件的�
 { &amp;quot;compilerOptions&amp;quot;: { &amp;quot;baseUrl&amp;quot;: &amp;quot;.&amp;quot;, &amp;quot;paths&amp;quot;: { &amp;quot;@component&amp;quot;: [&amp;quot;./src/component&amp;quot;] } } }  jsconfig.json的配置是tsconfig.json的子集,
 以后有机会的话聊一聊tsconfig.json.
 今天就到这里~</description>
-    </item>
-    
-    <item>
-      <title>2019年01月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/gpjoaq9yztd/</link>
-      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/gpjoaq9yztd/</guid>
-      <description>GoogleChromeLabs / quicklink : 4,752 stars this month
-⚡️Faster subsequent page-loads by prefetching in-viewport links during idle time
-i0natan / nodebestpractices : 3,551 stars this month
-The largest Node.js best practices list (January 2019)
-leonardomso / 33-js-concepts : 3,354 stars this month
-📜 33 concepts every JavaScript developer should know.
-vuejs / vue : 3,087 stars this month
-🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.</description>
     </item>
     
     <item>
@@ -852,22 +653,6 @@ CSS,动画
       
       <guid>https://alili.tech/archive/unui11c01ml/</guid>
       <description>   $(function(){ let str = &#34;&#34; for(var i = 2;i=10){ count = &#34;0&#34;+ i; } str = str + &#39;&#39; } $(&#39;.imageBox&#39;).html(str) var images = document.querySelectorAll(&#34;.lazyload&#34;); lazyload(images); })   </description>
-    </item>
-    
-    <item>
-      <title>2018年12月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/zm2u9iewb9d/</link>
-      <pubDate>Sat, 08 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/zm2u9iewb9d/</guid>
-      <description>GitSquared / edex-ui : 5,808 stars this month
-A science fiction terminal emulator designed for large touchscreens that runs on all major OSs.
-vuejs / vue : 3,471 stars this month
-🖖 A progressive, incrementally-adoptable JavaScript framework for building UI on the web.
-leonardomso / 33-js-concepts : 3,471 stars this month
-📜 33 concepts every JavaScript developer should know.
-tensorspace-team / tensorspace : 3,205 stars this month
-Neural network 3D visualization framework, build interactive and intuitive model in browsers, support pre-trained deep learning models from TensorFlow, Keras, TensorFlow.</description>
     </item>
     
     <item>
@@ -1183,23 +968,6 @@ Node,调试
 犀利的 Async Hooks async_hooks模块是Node.js 8.0中增加的特性，旨在帮助开发者追踪 Node.js 创建的异步调用资源的生命周期情况。
 Node,Async Hooks
 如何安全地运行用户的 JavaScript 脚本 如何在浏览器和 Node.</description>
-    </item>
-    
-    <item>
-      <title>2018年11月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/e57d7fd7/</link>
-      <pubDate>Thu, 08 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/e57d7fd7/</guid>
-      <description>leonardomso / 33-js-concepts : 18,540 stars this month
-📜 33 concepts every JavaScript developer should know.
-GoogleChromeLabs / carlo : 6,053 stars this month
-Web rendering surface for Node applications
-stephentian / 33-js-concepts : 5,258 stars this month
-📜 每个 JavaScript 工程师都应懂的33个概念 @leonardomso
-30-seconds / 30-seconds-of-code : 3,785 stars this month
-Curated collection of useful JavaScript snippets that you can understand in 30 seconds or less.
-Tencent / omi : 3,734 stars this month</description>
     </item>
     
     <item>
@@ -1539,22 +1307,6 @@ ngrok 选择ngrok的原因很简单,配置方便,并且支持tcp协议. 支持tc
     </item>
     
     <item>
-      <title>2018年09月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/f2c7a3e5/</link>
-      <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/f2c7a3e5/</guid>
-      <description>felixrieseberg / windows95 : 11,905 stars this month
-💩🚀 Windows 95 in Electron. Runs on macOS, Linux, and Windows.
-trekhleb / javascript-algorithms : 3,745 stars this month
-Algorithms and data structures implemented in JavaScript with explanations and links to further readings
-antvis / f2 : 3,915 stars this month
-📱📈An elegant, interactive and flexible charting library for mobile.
-vuejs / vue : 3,579 stars this month
-🖖 A progressive, incrementally-adoptable JavaScript framework for building UI on the web.</description>
-    </item>
-    
-    <item>
       <title>前端微服务化解决方案8 - 二次构建</title>
       <link>https://alili.tech/archive/ce685b9f/</link>
       <pubDate>Fri, 07 Sep 2018 01:00:00 +0000</pubDate>
@@ -1713,59 +1465,12 @@ npm install micro-auto-config -g # 在项目根目录,用pm2启动该脚本,便�
     </item>
     
     <item>
-      <title>2018年08月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/c4353316/</link>
-      <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/c4353316/</guid>
-      <description>felixrieseberg / windows95 : 10,485 stars this month
-💩🚀 Windows 95 in Electron. Runs on macOS, Linux, and Windows.
-trekhleb / javascript-algorithms : 5,249 stars this month
-Algorithms and data structures implemented in JavaScript with explanations and links to further readings
-klauscfhq / taskbook : 4,754 stars this month
-📓 Tasks, boards &amp;amp; notes for the command-line habitat
-vuejs / vue : 3,740 stars this month
-🖖 A progressive, incrementally-adoptable JavaScript framework for building UI on the web.</description>
-    </item>
-    
-    <item>
       <title>Linux -  Centos 时区设置</title>
       <link>https://alili.tech/archive/3f6742b1/</link>
       <pubDate>Mon, 30 Jul 2018 20:32:05 +0000</pubDate>
       
       <guid>https://alili.tech/archive/3f6742b1/</guid>
       <description> timedatectl 命令 查看当前时区状态 $ timedatectl status Local time: Fri 2018-08-31 13:42:42 CST Universal time: Fri 2018-08-31 05:42:42 UTC RTC time: n/a Time zone: Asia/Shanghai (CST, +0800) NTP enabled: n/a NTP synchronized: yes RTC in local TZ: no DST active: n/a  设置时区为上海 $ timedatectl set-timezone Asia/Shanghai # 设置系统时区为上海  其他操作 $ timedatectl list-timezones # 列出所有时区 $ timedatectl set-local-rtc 1 # 将硬件时钟调整为与本地时钟一致, 0 为设置为 UTC 时间  </description>
-    </item>
-    
-    <item>
-      <title>2018年07月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/280d4016/</link>
-      <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/280d4016/</guid>
-      <description>vuejs / vue : 10,466 stars this month
-🖖 A progressive, incrementally-adoptable JavaScript framework for building UI on the web.
-facebook / react : 8,581 stars this month
-A declarative, efficient, and flexible JavaScript library for building user interfaces.
-trekhleb / javascript-algorithms : 5,758 stars this month
-Algorithms and data structures implemented in JavaScript with explanations and links to further readings
-Netflix / pollyjs : 5,719 stars this month</description>
-    </item>
-    
-    <item>
-      <title>2018年06月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/1effd0e5/</link>
-      <pubDate>Fri, 08 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/1effd0e5/</guid>
-      <description>trekhleb / javascript-algorithms : 20,629 stars this month
-Algorithms and data structures implemented in JavaScript with explanations and links to further readings
-klauscfhq / signale : 5,210 stars this month
-👋 Hackable console logger
-wiredjs / wired-elements : 4,991 stars this month
-Collection of elements that appear hand drawn. Great for wireframes.
-vuejs / vue : 3,987 stars this month
-🖖 A progressive, incrementally-adoptable JavaScript framework for building UI on the web.</description>
     </item>
     
     <item>
@@ -1837,22 +1542,6 @@ brew update # 就这样mac上就安装好了 brew install mongodb # 如果你需
     </item>
     
     <item>
-      <title>2018年05月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/45e861f0/</link>
-      <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/45e861f0/</guid>
-      <description>xx45 / dayjs : 7,739 stars this month
-⏰Fast 2KB immutable date library alternative to Moment.js with the same modern API
-vuejs / vuepress : 6,363 stars this month
-📝 Minimalistic Vue-powered static site generator
-RelaxedJS / ReLaXed : 4,305 stars this month
-Create PDF documents using web technologies
-vuejs / vue : 3,964 stars this month
-🖖 A progressive, incrementally-adoptable JavaScript framework for building UI on the web.</description>
-    </item>
-    
-    <item>
       <title>以太坊开发之搭建宠物商店</title>
       <link>https://alili.tech/archive/b75b18ec/</link>
       <pubDate>Sat, 21 Apr 2018 19:33:33 +0000</pubDate>
@@ -1919,22 +1608,6 @@ $ pm2 start verdaccio  配置 系统默认的配置文件在 /root/.config/verda
     </item>
     
     <item>
-      <title>2018年04月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/731af103/</link>
-      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/731af103/</guid>
-      <description>Meituan-Dianping / mpvue : 7,052 stars this month
-基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系。
-kamranahmedse / driver.js : 7,035 stars this month
-A light-weight, no-dependency, vanilla JavaScript engine to drive the user&amp;rsquo;s focus across the page
-tensorflow / tfjs : 5,005 stars this month
-A WebGL accelerated, browser based JavaScript library for training and deploying ML models.
-vuejs / vue : 4,280 stars this month
-🖖 A progressive, incrementally-adoptable JavaScript framework for building UI on the web.</description>
-    </item>
-    
-    <item>
       <title>Linux -  SSH连接远程服务器直接执行command时PATH不全解决方案</title>
       <link>https://alili.tech/archive/a5e195cc/</link>
       <pubDate>Thu, 15 Mar 2018 20:32:05 +0000</pubDate>
@@ -1943,21 +1616,6 @@ vuejs / vue : 4,280 stars this month
       <description>non-interactive mode下PATH不全 ssh username@desktop.domain &amp;lsquo;command&amp;rsquo;这种是典型的non-interactive shell，PATH不全.
 原因 Linux系统中一种常用的判断是否是交互shell的方式就是通过PS1变量，虽然还有其他的方式，不过现在.bashrc中是通过PS1来判断是否为interactive mode。
 # .bashrc文件 # If not running interactively, don&#39;t do anything [ -z &amp;quot;PS1&amp;quot; ] &amp;amp;&amp;amp; return  解决方案 将必要的export PATH的声明，全部移到[ -z &amp;ldquo;PS1&amp;rdquo; ] &amp;amp;&amp;amp; return 之前。保证在non-interactive mode下，PATH的设置也都会生效。</description>
-    </item>
-    
-    <item>
-      <title>2018年03月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/f3c703da/</link>
-      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/f3c703da/</guid>
-      <description>yangshun / front-end-interview-handbook : 10,617 stars this month
-🕸 Almost complete answers to &amp;ldquo;Front-end Job Interview Questions&amp;rdquo; which you can use to interview potential candidates, test yourself or completely ignore
-chaozh / awesome-blockchain-cn : 5,626 stars this month
-收集所有区块链(BlockChain)技术开发相关资料，包括Fabric和Ethereum开发资料
-automerge / automerge : 2,096 stars this month
-A JSON-like data structure that can be modified concurrently by different users, and merged again automatically.
-octref / polacode : 3,811 stars this month</description>
     </item>
     
     <item>
@@ -1973,20 +1631,6 @@ octref / polacode : 3,811 stars this month</description>
 #字体 yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y #依赖库 yum install pango.x86_64 libXcomposite.x86_64 libXcursor.x86_64 libXdamage.x86_64 libXext.x86_64 libXi.x86_64 libXtst.x86_64 cups-libs.x86_64 libXScrnSaver.x86_64 libXrandr.x86_64 GConf2.x86_64 alsa-lib.x86_64 atk.x86_64 gtk3.x86_64 -y  禁用沙箱模式 在Linux环境下,往往还会出现以下错误:
 https://github.com/GoogleChrome/puppeteer/issues/290
 (node:30559) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Failed to connect to chrome!</description>
-    </item>
-    
-    <item>
-      <title>2018年02月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/c5359329/</link>
-      <pubDate>Thu, 22 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/c5359329/</guid>
-      <description>yangshun / front-end-interview-handbook : 7,459 stars this month
-🕸 Almost complete answers to &amp;ldquo;Front-end Job Interview Questions&amp;rdquo; which you can use to interview potential candidates, test yourself or completely ignore
-automerge / automerge : 4,434 stars this month
-A JSON-like data structure that can be modified concurrently by different users, and merged again automatically.
-dawnlabs / carbon : 4,728 stars this month
-🎨 Create and share beautiful images of your source code</description>
     </item>
     
     <item>
@@ -2063,22 +1707,6 @@ var compression = require(&#39;compression&#39;); var express = require(&#39;exp
     </item>
     
     <item>
-      <title>2017年12月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/408ec5a5/</link>
-      <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/408ec5a5/</guid>
-      <description>thedaviddias / Front-End-Checklist : 7,455 stars this month
-🗂 The perfect Front-End Checklist for modern websites and meticulous developers
-parcel-bundler / parcel : 5,488 stars this month
-📦🚀 Blazing fast, zero configuration web application bundler
-moment / luxon : 4,510 stars this month
-⏱ A library for working with dates and times in JS
-vuejs / vue : 3,332 stars this month
-A progressive, incrementally-adoptable JavaScript framework for building UI on the web.</description>
-    </item>
-    
-    <item>
       <title>Apache,Nginx,Express,Egg.js 支持前端HTML5 History 模式</title>
       <link>https://alili.tech/archive/6eff5ac9/</link>
       <pubDate>Sat, 02 Dec 2017 22:30:05 +0000</pubDate>
@@ -2141,23 +1769,6 @@ mysqlServers: [ { host: &#39;localhost&#39;, port: 3306, user: &#39;root&#39;, p
       <guid>https://alili.tech/archive/b36fefc7/</guid>
       <description>打开【文件】&amp;gt;【首选项】&amp;gt;【工作区设置】，放入以下代码：
 // 将设置放入此文件中以覆盖默认值和用户设置。 { &amp;quot;files.exclude&amp;quot;: { // exclude .js and .js.map files, when in a TypeScript project &amp;quot;node_modules&amp;quot;: true, &amp;quot;**/*.js&amp;quot;: { &amp;quot;when&amp;quot;: &amp;quot;$(basename).ts&amp;quot;}, &amp;quot;**/*.js.map&amp;quot;: true } }  </description>
-    </item>
-    
-    <item>
-      <title>2017年11月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/1b9974b0/</link>
-      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/1b9974b0/</guid>
-      <description>frappe / charts : 6,574 stars this month
-Simple, responsive, modern SVG Charts with zero dependencies: https://frappe.github.io/charts
-vuejs / vue : 4,033 stars this month
-A progressive, incrementally-adoptable JavaScript framework for building UI on the web.
-facebook / react : 3,110 stars this month
-A declarative, efficient, and flexible JavaScript library for building user interfaces.
-GoogleChrome / puppeteer : 3,267 stars this month
-Headless Chrome Node API
-ant-design / ant-design-pro : 3,147 stars this month</description>
     </item>
     
     <item>
@@ -2233,23 +1844,6 @@ this.props.children  可是这样渲染出来的组件,父组件如何传递prop
     </item>
     
     <item>
-      <title>2017年09月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/53fea45f/</link>
-      <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/53fea45f/</guid>
-      <description>GoogleChrome / puppeteer : 12,857 stars this month
-Headless Chrome Node API
-vuejs / vue : 3,633 stars this month
-A progressive, incrementally-adoptable JavaScript framework for building UI on the web.
-denysdovhan / wtfjs : 3,387 stars this month
-A list of funny and tricky JavaScript examples
-mikeal / r2 : 3,105 stars this month
-HTTP client. Spiritual successor to request.
-colebemis / feather : 2,970 stars this month</description>
-    </item>
-    
-    <item>
       <title>MySQL的安全模式</title>
       <link>https://alili.tech/archive/49f93461/</link>
       <pubDate>Sat, 26 Aug 2017 23:36:00 +0000</pubDate>
@@ -2274,22 +1868,6 @@ mysql -u root -p  然后输入你的密码.
 然后执行以下命令:
 GRANT ALL PRIVILEGES ON *.* TO &#39;你的账户&#39;@&#39;%&#39; IDENTIFIED BY &#39;你的密码&#39; WITH GRANT OPTION;  执行成功后:
 FLUSH PRIVILEGES;  然后再尝试连接你的数据库,应该就可以了.</description>
-    </item>
-    
-    <item>
-      <title>2017年08月Github Javascript开源项目精选</title>
-      <link>https://alili.tech/archive/650c34ac/</link>
-      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/650c34ac/</guid>
-      <description>denysdovhan / wtfjs : 6,613 stars this month
-A list of funny and tricky JavaScript examples
-toddmotto / public-apis : 6,326 stars this month
-A collective list of public JSON APIs for use in web development.
-jaredreich / pell : 6,202 stars this month
-📝 the simplest and smallest (1kB) WYSIWYG text editor for web, with no dependencies
-wearehive / project-guidelines : 5,102 stars this month
-A set of best practices for JavaScript projects</description>
     </item>
     
     <item>

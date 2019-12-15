@@ -1,44 +1,8 @@
 [
     {
-        "uri": "https://alili.tech/archive/hsxx9ggij17/",
-        "title": "2019年12月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/8t3kyloeosq/",
-        "title": "2019年11月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/rg321p6ylve/",
-        "title": "2019年10月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/tisoqlkd0qa/",
         "title": "持续集成 - 使用Gilab CI进行前端项目的持续集成",
         "tags": ["持续集成"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/0pq4nik4yfhd/",
-        "title": "2019年09月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/qansmhd8zig/",
-        "title": "2019年08月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/y8ih64630n/",
-        "title": "2019年07月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -48,21 +12,9 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/terr0oi2tvn/",
-        "title": "2019年06月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/qh7x5i5szfh/",
         "title": "前端微服务化进阶3 - 跨模块共享组件",
         "tags": ["微前端", "MicroFrontend", "前端架构"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/mrwjjr0ca4i/",
-        "title": "2019年05月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -78,21 +30,9 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/ol9qis0n8xe/",
-        "title": "2019年04月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/7815p445rtf/",
         "title": "记一次MongoDB迁移 - 备份与恢复",
         "tags": ["MongoDB"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/a5ficy1jp7n/",
-        "title": "2019年03月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -105,12 +45,6 @@
         "uri": "https://alili.tech/archive/ixgdxkltl8/",
         "title": "Alili Weekly 前端周刊 第二十期",
         "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/0b92giccynog/",
-        "title": "2019年02月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -177,12 +111,6 @@
         "uri": "https://alili.tech/archive/ltucv5fyj9/",
         "title": "Visual Studio Code 下的 jsconfig.json",
         "tags": ["Visual Studio Code"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/gpjoaq9yztd/",
-        "title": "2019年01月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -267,12 +195,6 @@
         "uri": "https://alili.tech/archive/unui11c01ml/",
         "title": "记2018年最后一次前端分享(提供Slides)",
         "tags": ["Slides"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/zm2u9iewb9d/",
-        "title": "2018年12月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -375,12 +297,6 @@
         "uri": "https://alili.tech/archive/2c2b79f6/",
         "title": "Alili Weekly 前端周刊 第六期",
         "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/e57d7fd7/",
-        "title": "2018年11月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -504,12 +420,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/f2c7a3e5/",
-        "title": "2018年09月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/ce685b9f/",
         "title": "前端微服务化解决方案8 - 二次构建",
         "tags": ["微前端", "MicroFrontend", "前端架构"],
@@ -570,27 +480,9 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/c4353316/",
-        "title": "2018年08月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/3f6742b1/",
         "title": "Linux -  Centos 时区设置",
         "tags": ["Linux"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/280d4016/",
-        "title": "2018年07月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/1effd0e5/",
-        "title": "2018年06月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -630,12 +522,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/45e861f0/",
-        "title": "2018年05月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/b75b18ec/",
         "title": "以太坊开发之搭建宠物商店",
         "tags": ["区块链"],
@@ -666,33 +552,15 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/731af103/",
-        "title": "2018年04月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/a5e195cc/",
         "title": "Linux -  SSH连接远程服务器直接执行command时PATH不全解决方案",
         "tags": ["Linux"],
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/f3c703da/",
-        "title": "2018年03月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/e550825/",
         "title": "Centos7环境下启动puppeteer失败解决办法",
         "tags": ["puppeteer"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/c5359329/",
-        "title": "2018年02月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -732,12 +600,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/408ec5a5/",
-        "title": "2017年12月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/6eff5ac9/",
         "title": "Apache,Nginx,Express,Egg.js 支持前端HTML5 History 模式",
         "tags": ["Nodejs"],
@@ -765,12 +627,6 @@
         "uri": "https://alili.tech/archive/b36fefc7/",
         "title": "Visual Studio Code隐藏从ts生成的额外js与map文件",
         "tags": ["Nodejs"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/1b9974b0/",
-        "title": "2017年11月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -804,12 +660,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/53fea45f/",
-        "title": "2017年09月Github Javascript开源项目精选",
-        "tags": ["Trending"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/49f93461/",
         "title": "MySQL的安全模式",
         "tags": ["Database"],
@@ -819,12 +669,6 @@
         "uri": "https://alili.tech/archive/78cba2eb/",
         "title": "MySQL的Access denied for user问题",
         "tags": ["Database"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/650c34ac/",
-        "title": "2017年08月Github Javascript开源项目精选",
-        "tags": ["Trending"],
         "description": ""
     },
     {
@@ -1382,12 +1226,6 @@
     {
         "uri": "https://alili.tech/tags/travis/",
         "title": "Travis",
-        "tags": [],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/tags/trending/",
-        "title": "Trending",
         "tags": [],
         "description": ""
     },
