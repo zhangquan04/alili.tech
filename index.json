@@ -36,36 +36,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/nyhmtbanv2e/",
-        "title": "Alili Weekly 前端周刊 第二十一期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/ixgdxkltl8/",
-        "title": "Alili Weekly 前端周刊 第二十期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/9yqolmweou5/",
-        "title": "Alili Weekly 前端周刊 第十九期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/ggk866qh59i/",
-        "title": "Alili Weekly 前端周刊 第十八期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/nqs5fr7ddjn/",
-        "title": "Alili Weekly 前端周刊 第十七期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/zift8zkisnf/",
         "title": "一个两年前.gitattributes文件导致的bug",
         "tags": ["Git"],
@@ -78,21 +48,9 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/6kesofq8r0w/",
-        "title": "Alili Weekly 前端周刊 第十六期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/n15zv1hxje/",
         "title": "LintCode 买卖股票的最佳时机 II",
         "tags": ["Leetcode"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/k8ui524vul8/",
-        "title": "Alili Weekly 前端周刊 第十五期",
-        "tags": ["前端周刊", "Weekly"],
         "description": ""
     },
     {
@@ -114,12 +72,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/0bx7k43lrexg/",
-        "title": "Alili Weekly 前端周刊 第十四期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/9rfliipfkip/",
         "title": "幕后英雄Abstract syntax tree抽象语法树",
         "tags": ["Javascript"],
@@ -135,12 +87,6 @@
         "uri": "https://alili.tech/archive/izbidk3gu3s/",
         "title": "聊聊HTTP的X-Forwarded-For 和 X-Real-IP",
         "tags": ["HTTP"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/g0um565bsaq/",
-        "title": "Alili Weekly 前端周刊 第十三期",
-        "tags": ["前端周刊", "Weekly"],
         "description": ""
     },
     {
@@ -162,12 +108,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/vtkyf54oda/",
-        "title": "Alili Weekly 前端周刊 第十二期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/cr8ze8vvvbw/",
         "title": "推荐一个Angular Electron 开箱即用的项目工程模板",
         "tags": ["Electron", "Angular"],
@@ -186,21 +126,9 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/fva8fa69c4d/",
-        "title": "Alili Weekly 前端周刊 第十一期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/unui11c01ml/",
         "title": "记2018年最后一次前端分享(提供Slides)",
         "tags": ["Slides"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/dn3bpemyttp/",
-        "title": "Alili Weekly 前端周刊 第十期",
-        "tags": ["前端周刊", "Weekly"],
         "description": ""
     },
     {
@@ -213,12 +141,6 @@
         "uri": "https://alili.tech/archive/1479pecm0mbo/",
         "title": "让团队保持Code Review习惯的三大法宝",
         "tags": ["Code Review"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/lywhtrtg9dm/",
-        "title": "Alili Weekly 前端周刊 第九期",
-        "tags": ["前端周刊", "Weekly"],
         "description": ""
     },
     {
@@ -237,12 +159,6 @@
         "uri": "https://alili.tech/archive/f16eaj0p4la/",
         "title": "Angular模板的安全导航( ?. )",
         "tags": ["Angular"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/l1gp8abhpha/",
-        "title": "Alili Weekly 前端周刊 第八期",
-        "tags": ["前端周刊", "Weekly"],
         "description": ""
     },
     {
@@ -270,12 +186,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/vyetuiwpul/",
-        "title": "Alili Weekly 前端周刊 第七期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/obvozmdf/",
         "title": "博客构建工具Hugo的基本使用",
         "tags": ["Hugo"],
@@ -294,12 +204,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/2c2b79f6/",
-        "title": "Alili Weekly 前端周刊 第六期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/bbaf6d07/",
         "title": "如何通过 Code Review 帮助团队提升代码质量",
         "tags": ["Code Review"],
@@ -309,12 +213,6 @@
         "uri": "https://alili.tech/archive/b8bdc73c/",
         "title": "升级Mac 10.14 mojave后辅助功能空白无法添加问题",
         "tags": ["mac"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/4925322f/",
-        "title": "Alili Weekly 前端周刊 第五期",
-        "tags": ["前端周刊", "Weekly"],
         "description": ""
     },
     {
@@ -342,12 +240,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/26bbf768/",
-        "title": "Alili Weekly 前端周刊 第四期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/9d64fe09/",
         "title": "让你的Hexo博客支持熊掌号URL自动推送,百度24小时收录",
         "tags": ["SEO"],
@@ -357,12 +249,6 @@
         "uri": "https://alili.tech/archive/84622ce5/",
         "title": "Nodejs爬虫技巧-使用Puppeteer下载图片或文件",
         "tags": ["puppeteer"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/9196ee0d/",
-        "title": "Alili Weekly 前端周刊 第三期",
-        "tags": ["前端周刊", "Weekly"],
         "description": ""
     },
     {
@@ -378,12 +264,6 @@
         "description": ""
     },
     {
-        "uri": "https://alili.tech/archive/dc884d5f/",
-        "title": "Alili Weekly 前端周刊 第二期",
-        "tags": ["前端周刊", "Weekly"],
-        "description": ""
-    },
-    {
         "uri": "https://alili.tech/archive/33fa548c/",
         "title": "Nintendo Switch破解原理",
         "tags": ["Game"],
@@ -393,12 +273,6 @@
         "uri": "https://alili.tech/archive/69a6fd18/",
         "title": "使用Eggjs(koa) &amp; web3.js开发你的以太坊Dapp",
         "tags": ["区块链"],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/archive/ec9ea187/",
-        "title": "Alili Weekly 前端周刊 第一期",
-        "tags": ["前端周刊", "Weekly"],
         "description": ""
     },
     {
@@ -1262,18 +1136,6 @@
     {
         "uri": "https://alili.tech/tags/wechat/",
         "title": "Wechat",
-        "tags": [],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/tags/weekly/",
-        "title": "Weekly",
-        "tags": [],
-        "description": ""
-    },
-    {
-        "uri": "https://alili.tech/tags/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/",
-        "title": "前端周刊",
         "tags": [],
         "description": ""
     },
