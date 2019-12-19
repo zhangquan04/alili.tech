@@ -1,5 +1,11 @@
 [
     {
+        "uri": "https://alili.tech/archive/ja0kb23zw4o/",
+        "title": "FERR TO SHOT - 马",
+        "tags": ["FERR TO SHOT"],
+        "description": ""
+    },
+    {
         "uri": "https://alili.tech/archive/tisoqlkd0qa/",
         "title": "持续集成 - 使用Gilab CI进行前端项目的持续集成",
         "tags": ["持续集成"],
@@ -968,6 +974,12 @@
     {
         "uri": "https://alili.tech/tags/electron/",
         "title": "Electron",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/tags/ferr-to-shot/",
+        "title": "Ferr to Shot",
         "tags": [],
         "description": ""
     },

@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alili.tech/archive/ja0kb23zw4o/</loc>
+    <lastmod>2019-12-07T21:32:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/tisoqlkd0qa/</loc>
     <lastmod>2019-09-20T23:15:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1096,7 +1103,7 @@
   
   <url>
     <loc>https://alili.tech/archive/</loc>
-    <lastmod>2019-09-20T23:15:00+00:00</lastmod>
+    <lastmod>2019-12-07T21:32:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1136,6 +1143,13 @@
   </url>
   
   <url>
+    <loc>https://alili.tech/tags/ferr-to-shot/</loc>
+    <lastmod>2019-12-07T21:32:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/tags/game/</loc>
     <lastmod>2018-10-15T19:02:36+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1151,7 +1165,7 @@
   
   <url>
     <loc>https://alili.tech/</loc>
-    <lastmod>2019-09-20T23:15:00+00:00</lastmod>
+    <lastmod>2019-12-07T21:32:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
